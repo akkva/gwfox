@@ -1,4 +1,4 @@
-![p1](https://github.com/akkva/gwfox/blob/main/screenshot/p1.png)
+<img width="1000" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/5ae51a5f-c155-4f0c-ba6f-c1004e9a0b70">
 
 <div align="center">
   
@@ -27,5 +27,4 @@ win下全局 `文字提示` 定制需要[userChrome.js](https://github.com/MrOth
 书签工具栏从浏览器底部弹出：在 `about:config` 页面添加 `uc.tweak.popout_bookmarks_toolbar` 并设为 `true`
 
 [01.webm](https://github.com/akkva/gwfox/assets/150437642/41fe89e6-50ee-4296-b805-18a0b7969fc3)
-
 
