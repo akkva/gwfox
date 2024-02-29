@@ -14,12 +14,16 @@
 ## 注意事项
 工具栏按钮数量仅支持默认数量（左3右4）
 
-## Tooltip
+## 文字提示
 
 win下全局 `文字提示` 定制需要[userChrome.js](https://github.com/MrOtherGuy/fx-autoconfig)加载
 
 如有需要把 `tooltip` 文件夹里的内容合并到对应的目录
 
 `profile` →  `配置目录`  `program` →  `程序目录`
+
+## 样式调整
+
+书签工具栏从浏览器底部弹出：在 `about:config` 页面添加 `uc.tweak.popout_bookmarks_toolbar` 并设为 `true`
 
 
