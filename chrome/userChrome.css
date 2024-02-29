@@ -537,6 +537,11 @@ tab .tab-label {
   border-bottom-right-radius: 2px !important;
 }
 
+:root:not([firefoxviewhidden]) :is(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs {
+  padding-inline-start: 0 !important;
+  margin-inline-start: 4px !important;
+}
+
 /* popup */
 
 menupopup, panel[type="arrow"] {
