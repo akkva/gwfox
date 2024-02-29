@@ -1,0 +1,23 @@
+@media (-moz-bool-pref: "uc.tweak.popout_bookmarks_toolbar") {
+#PersonalToolbar {
+  position: fixed;
+  width: 100%;
+  height: 48px;
+  z-index: 3;    
+  bottom: -20px; 
+  opacity: 0;
+  transition: .2s;
+}
+
+#main-window:has(#PersonalToolbar:hover, #urlbar:focus-within) {
+#PersonalToolbar{
+  bottom: 0px;
+  opacity: 1;
+  transition: .2s;
+}
+}
+
+toolbarbutton.bookmark-item:not(.subviewbutton) {
+  margin: 5px 0 !important;
+}
+}
