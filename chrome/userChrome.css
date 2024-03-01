@@ -1120,6 +1120,7 @@ panel[type="arrow"] {
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin: 5px 0 !important;
 }
+
 @media (-moz-bool-pref: "uc.tweak.blur") {
 #PersonalToolbar {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
