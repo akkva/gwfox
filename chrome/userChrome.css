@@ -712,6 +712,10 @@ treechildren::-moz-tree-cell-text(selected) {
   color: light-dark(#000, #fff) !important;
 }
 
+.titleIcon {
+  background-color: transparent !important;
+}
+
 richlistbox {
   border: none !important;
 }
