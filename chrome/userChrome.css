@@ -257,6 +257,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   * { opacity: 78%; }
 }
 
+#urlbar[focused="true"] > #urlbar-background,
+#searchbar:focus-within {
+  box-shadow: none !important;
+}
+
 .urlbarView-row:is([type=bookmark], [pinned]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-type-icon {
   display: none !important;
 }
@@ -765,6 +770,7 @@ findbar {
   outline-color: var(--link-color) !important;
   outline-width: 2px !important;
   transition: all .3s cubic-bezier(1, 0, 0, 1) !important;
+  box-shadow: none !important;
 }
 
 .found-matches { width: 100% !important; }
