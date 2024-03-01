@@ -1,5 +1,3 @@
-@import "tweaks/popout_bookmarks_toolbar.css";
-
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 :root {
@@ -1048,6 +1046,93 @@ richlistitem {
 .titlebar-restore:-moz-window-inactive, .titlebar-max:-moz-window-inactive {
   background: url("resources/backdrop-dark.svg") no-repeat;
   background-size: contain;
+}
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.blur") {
+#appcontent {
+  clip-path: circle(100%);
+}
+
+.urlbarView, findbar {
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
+  backdrop-filter: blur(30px) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+}
+
+.dialogBox {
+  backdrop-filter: blur(30px) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+}
+
+window[role="dialog"] {
+  background: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
+}
+
+@media (-moz-platform: macos) {
+menupopup {
+  appearance: menupopup !important;
+}
+
+panel[type="arrow"] { 
+  appearance: menupopup !important;
+  --panel-background: transparent !important;
+  --arrowpanel-background: transparent !important;
+  --arrowpanel-border-radius: 0 !important;
+}
+
+.popup-internal-box,
+#PopupAutoComplete > .autocomplete-richlistbox,
+.menupopup-arrowscrollbox {
+  background: transparent !important;
+}
+}
+
+@media (prefers-color-scheme: dark) {
+.urlbarView, findbar, .dialogBox {
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1px !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+}
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.popout_bookmarks_toolbar") {
+#PersonalToolbar {
+  position: fixed;
+  width: 100%;
+  height: 48px !important;
+  z-index: 3;    
+  bottom: -20px; 
+  opacity: 0;
+  transition: .2s;
+}
+
+#main-window:has(#PersonalToolbar:hover) {
+#PersonalToolbar {
+  bottom: 0px;
+  opacity: 1;
+  transition: .2s;
+}
+}
+
+toolbarbutton.bookmark-item:not(.subviewbutton) {
+  margin: 5px 0 !important;
+}
+@media (-moz-bool-pref: "uc.tweak.blur") {
+#PersonalToolbar {
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
+  backdrop-filter: blur(30px) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+#PersonalToolbar {
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1px !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+}
 }
 }
 }
