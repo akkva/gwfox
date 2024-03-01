@@ -1125,6 +1125,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
 }
 
 @media (prefers-color-scheme: dark) {
