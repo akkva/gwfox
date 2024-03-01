@@ -24,7 +24,7 @@ win下全局 `文字提示` 定制需要[userChrome.js](https://github.com/MrOth
 
 ## 样式调整
 
-书签工具栏从浏览器底部弹出：在 `about:config` 页面添加 `uc.tweak.popout_bookmarks_toolbar` 并设为 `true`
+书签工具栏在底部弹出：在 `about:config` 页面添加 `uc.tweak.popout_bookmarks_toolbar` 并设为 `true`
 
 背景模糊：在 `about:config` 页面添加 `uc.tweak.blur` 并设为 `true` 
 
