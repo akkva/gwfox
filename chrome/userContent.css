@@ -24,6 +24,8 @@
   --newtab-primary-element-text-color: #fff !important;
 }
 
+.toggle-button { --toggle-dot-background-color-on-pressed: #fff !important; }
+
 @-moz-document url-prefix(about:) {
 body { background-color: #292929 !important; }
 * {
