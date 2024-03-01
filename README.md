@@ -26,5 +26,4 @@ win下全局 `文字提示` 定制需要[userChrome.js](https://github.com/MrOth
 
 书签工具栏从浏览器底部弹出：在 `about:config` 页面添加 `uc.tweak.popout_bookmarks_toolbar` 并设为 `true`
 
-[01.webm](https://github.com/akkva/gwfox/assets/150437642/18404f67-014c-4902-8e98-8cec18dfd80e)
-
+[01.webm](https://github.com/akkva/gwfox/assets/150437642/94e394d3-278a-4db5-8f1c-cc68d3d20438)
