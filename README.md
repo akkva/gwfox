@@ -26,6 +26,6 @@ win下全局 `文字提示` 定制需要[userChrome.js](https://github.com/MrOth
 
 书签工具栏从浏览器底部弹出：在 `about:config` 页面添加 `uc.tweak.popout_bookmarks_toolbar` 并设为 `true`
 
-背景模糊特效：在 `about:config` 页面添加 `uc.tweak.blur` 并设为 `true` 
+背景模糊：在 `about:config` 页面添加 `uc.tweak.blur` 并设为 `true` 
 
-<img width="1000" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/2a7e7336-06f0-47e4-a4e3-463e19e2c801">
+<img width="1000" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/2a7e7336-06f0-47e4-a4e3-463e19e2c801">
