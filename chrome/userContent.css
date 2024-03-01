@@ -203,4 +203,43 @@ input[type="radio"], .radio-check {
 .pinned:hover .icon {
   display: inline-block !important;
 }
+
+@media (-moz-bool-pref: "uc.tweak.blur") {
+
+* {--newtab-background-color-secondary: transparent !important;}
+
+.modal, .tile, .context-menu-button.icon {
+  backdrop-filter: blur(30px) !important;
+}
+
+.context-menu {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+}
+
+.customize-menu {
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
+  backdrop-filter: blur(30px) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+  margin: 7.5px 6px 0 0 !important;
+  height: 98% !important;
+}
+
+.top-site-outer .context-menu, .card-outer .context-menu {
+  backdrop-filter: blur(30px) !important;
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+.context-menu {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+  border: 1px solid rgba(235, 245, 255, .15) !important;
+}
+
+.customize-menu {
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1px !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+}
+}
+}
 }
