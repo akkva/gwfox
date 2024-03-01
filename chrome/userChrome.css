@@ -1055,6 +1055,7 @@ richlistitem {
 }
 
 @media (-moz-bool-pref: "uc.tweak.blur") {
+@media (-moz-platform: macos) {
 #appcontent {
   clip-path: circle(100%);
 }
@@ -1074,7 +1075,6 @@ window[role="dialog"] {
   background: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
 }
 
-@media (-moz-platform: macos) {
 menupopup {
   appearance: menupopup !important;
 }
@@ -1091,13 +1091,13 @@ panel[type="arrow"] {
 .menupopup-arrowscrollbox {
   background: transparent !important;
 }
-}
 
 @media (prefers-color-scheme: dark) {
 .urlbarView, findbar, .dialogBox {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+}
 }
 }
 }
@@ -1126,6 +1126,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 @media (-moz-bool-pref: "uc.tweak.blur") {
+@media (-moz-platform: macos) {
 #PersonalToolbar {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
   backdrop-filter: blur(30px) !important;
@@ -1139,6 +1140,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+}
 }
 }
 }
