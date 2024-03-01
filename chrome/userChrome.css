@@ -1061,6 +1061,8 @@ richlistitem {
 }
 }
 
+/* tweak */
+
 @media (-moz-bool-pref: "uc.tweak.blur") {
 @media (-moz-platform: macos) {
 #appcontent {
