@@ -1127,12 +1127,10 @@ panel[type="arrow"] {
   transition: .2s;
 }
 
-#main-window:has(#PersonalToolbar:hover) {
-#PersonalToolbar {
+#PersonalToolbar:hover {
   bottom: 0px;
   opacity: 1;
   transition: .2s;
-}
 }
 
 toolbarbutton.bookmark-item:not(.subviewbutton) {
