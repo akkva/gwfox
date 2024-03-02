@@ -170,7 +170,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #urlbar-input-container[pageproxystate=invalid] #urlbar-input {
-  mask-image: linear-gradient(to right, #fff, transparent 120%) !important;
+  mask-image: linear-gradient(to left, transparent, #fff 3ch);
 }
 
 .urlbarView {
