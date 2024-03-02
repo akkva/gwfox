@@ -447,7 +447,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 .toolbarbutton-1, .urlbar-page-action, #identity-box,
 .bookmark-item > .toolbarbutton-icon,
 #tracking-protection-icon-container {
-  filter: brightness(80%); 
+  filter: brightness(80%);
 }
 
 .toolbarbutton-1:active, .urlbar-page-action:active, #identity-box:active,
@@ -680,7 +680,7 @@ window[role="dialog"] {
 }
 
 #unified-extensions-panel #unified-extensions-view {
-  width: 100% !important; 
+  width: 100% !important;
 }
 
 /* misc */
@@ -748,7 +748,7 @@ richlistbox {
 
 findbar {
   position: absolute !important;
-  display: flex !important;  
+  display: flex !important;
   top: 0;
   right: 20px;
   width: 780px !important;
@@ -1018,7 +1018,7 @@ findbar { width: 860px !important; }
   --organizer-toolbar-background: #333 !important;
   --organizer-content-background: #333 !important;
   --organizer-hover-background: #2e2e2f !important;
-  --organizer-selected-background: #2e2e2f !important;  
+  --organizer-selected-background: #2e2e2f !important;
 }
 
 treecol {
@@ -1121,8 +1121,8 @@ panel[type="arrow"] {
   position: fixed;
   width: 100%;
   height: 48px !important;
-  z-index: 3;    
-  bottom: -20px; 
+  z-index: 3;
+  bottom: -20px;
   opacity: 0;
   transition: .2s;
 }
