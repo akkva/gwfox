@@ -400,6 +400,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   fill: light-dark(#454545, #fff) !important;
 }
 
+#star-button[starred] {
+  animation-name: urlbar-zoom-reset-pulse;
+  animation-duration: 250ms;
+}
+
 #appMenu-fullscreen-button2 .toolbarbutton-icon {
   background: none !important;
 }
