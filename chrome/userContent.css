@@ -52,7 +52,7 @@ body { background-color: #292929 !important; }
   outline: 2px solid #1280fd !important;
 }
 search-addons > search-textbox[focused] {
-  outline: 2px solid #1280fd !important; 
+  outline: 2px solid #1280fd !important;
 }
 #migrationWizardDialog {
   background: #292929 !important;
