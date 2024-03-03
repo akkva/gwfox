@@ -266,6 +266,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   display: none !important;
 }
 
+#urlbar[open] .urlbarView {
+  animation-name: urlbarView-action-slide-in;
+  animation-duration: 150ms;
+}
+
 /* button */
 
 .toggle-button { --toggle-dot-background-color-on-pressed: #fff !important; }
