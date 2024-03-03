@@ -571,6 +571,20 @@ menupopup, panel[type="arrow"] {
   --arrowpanel-color: light-dark(#000, #fff) !important;
 }
 
+@keyframes panel-grow {
+  0% {
+    transform: scaleX(.96) scaleY(.95);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+panelmultiview, popupnotification {
+  animation-name: panel-grow;
+  animation-duration: 150ms;
+}
+
 .panel-arrowcontent {
   border: none !important;
 }
