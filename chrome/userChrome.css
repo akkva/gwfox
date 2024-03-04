@@ -131,6 +131,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   --urlbar-height: 28px !important;
   --urlbar-container-height: 28px !important;
   --urlbar-toolbar-height: 28px !important;
+  --urlbar-box-bgcolor: var(--button-hover-bgcolor) !important;
   margin-bottom: -8px !important;
   max-width: 260px !important;
   left: 0 !important;
