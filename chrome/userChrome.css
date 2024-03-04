@@ -762,6 +762,18 @@ richlistbox {
   box-shadow: 0 0 .5px #00000018, 0 0 2px #00000012 !important;
 }
 
+.devtools-toolbox-side-iframe {
+  margin-block-end: 4px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 .5px #00000018, 0 0 2px #00000012 !important;
+&:first-child {
+  margin-inline-start: 4px !important;
+}
+&:last-child {
+  margin-inline-end: 4px !important;
+}
+}
+
 .devtools-side-splitter,
 .devtools-horizontal-splitter {
   display: none !important;
