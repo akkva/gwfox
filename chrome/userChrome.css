@@ -138,6 +138,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   top: 0 !important;
 }
 
+#urlbar-search-mode-indicator {
+  margin-top: 2px !important;
+  height: 22px !important;
+}
+
 #urlbar-background {
   height: 28px !important;
   border-radius: 6px !important;
