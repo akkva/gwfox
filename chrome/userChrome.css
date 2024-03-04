@@ -1096,7 +1096,7 @@ richlistitem {
 }
 
 .urlbarView, findbar {
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
 }
@@ -1107,7 +1107,7 @@ richlistitem {
 }
 
 window[role="dialog"] {
-  background: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
+  background: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
 }
 
 menupopup {
@@ -1161,7 +1161,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media (-moz-bool-pref: "uc.tweak.blur") {
 @media (-moz-platform: macos) {
 #PersonalToolbar {
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
   border-bottom-left-radius: 10px !important;
