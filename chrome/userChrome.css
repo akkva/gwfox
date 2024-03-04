@@ -1157,6 +1157,7 @@ panel[type="arrow"] {
   bottom: -20px;
   opacity: 0;
   transition: .2s;
+  padding-bottom: 0 !important;
 }
 
 #PersonalToolbar:hover {
