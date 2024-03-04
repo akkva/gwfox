@@ -449,7 +449,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #urlbar-engine-one-off-item-actions,
 .search-setting-button > .button-box > .button-icon,
 .toolbarbutton-1, .urlbar-page-action, #identity-box,
-#PersonalToolbar .bookmark-item, #tracking-protection-icon-container {
+#tracking-protection-icon-container {
   filter: brightness(80%);
 }
 
