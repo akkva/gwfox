@@ -668,7 +668,11 @@ toolbarseparator[orient="vertical"] {
 
 .dialogBox {
   margin-top: 80px !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25) !important;
+}
+
+#window-modal-dialog::backdrop {
+  background: none !important;
 }
 
 window[role="dialog"] {
