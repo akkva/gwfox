@@ -80,7 +80,6 @@
 }
 
 #nav-bar toolbarbutton {
-  position: relative;
   z-index: 8;
 }
 
@@ -614,21 +613,20 @@ menuitem, menu {
   appearance: none !important;
   border-radius: 4px !important;
   color: light-dark(#000, #fff) !important;
-  min-height: 28px !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+  height: 22px !important;
+}
+
+menu {
+  margin: 2px 0 !important;
 }
 
 menupopup > menuitem:is([selected="true"]):not([disabled="false"]) {
   background: none !important;
 }
 
-.bookmark-item {
-  margin: 2px !important;
-}
-
-toolbarbutton.bookmark-item {
-  margin: 0 !important;
+menupopup .bookmark-item {
+  margin: 2px 0 !important;
+  height: 22px !important;
 }
 
 menuitem[disabled="true"], menupopup menu[disabled="true"],
@@ -661,7 +659,7 @@ toolbarseparator, menuseparator::before {
 
 menupopup menuseparator {
   border: none !important;
-  margin: 4px 0 !important;
+  margin: 0 !important;
 }
 
 toolbarseparator[orient="vertical"] {
