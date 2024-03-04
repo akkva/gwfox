@@ -28,4 +28,4 @@ win下全局 `文字提示` 定制需要[userChrome.js](https://github.com/MrOth
 
 弹出菜单/面板背景模糊(macOS)：在 `about:config` 页面添加 `uc.tweak.blur` 并设为 `true` 
 
-<img width="1000" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/2a7e7336-06f0-47e4-a4e3-463e19e2c801">
+<img width="1000" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/7f37382d-2f2a-4f73-a78d-037e8ceb58cc">
