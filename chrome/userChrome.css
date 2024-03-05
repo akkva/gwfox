@@ -1252,7 +1252,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-#main-window:has(#urlbar[open], #nav-bar toolbarbutton[open], #TabsToolbar toolbarbutton[open], .urlbar-page-action[open], #identity-box > *[open], #identity-permission-box[open], #notification-popup-box[open], #tracking-protection-icon-container[open], .tab-throbber[busy]) {
+#main-window:has(#urlbar[open], #nav-bar toolbarbutton[open], #TabsToolbar toolbarbutton[open], .urlbar-page-action[open], #identity-box > *[open], #identity-permission-box[open], #notification-popup-box[open], #tracking-protection-icon-container[open], .tab-throbber[busy], #downloads-button[animate][notification="finish"]) {
 #nav-bar, #TabsToolbar {
   opacity: 1;
   top: 0;
