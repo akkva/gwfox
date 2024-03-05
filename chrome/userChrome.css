@@ -1253,7 +1253,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-#main-window:has(#urlbar[open]) {
+#main-window:has(#urlbar[open], #nav-bar toolbarbutton[open], #TabsToolbar toolbarbutton[open], .urlbar-page-action[open], #identity-box:active, #identity-permission-box[open], #notification-popup-box[open], #tracking-protection-icon-container[open]) {
 #nav-bar, #TabsToolbar {
   opacity: 1;
   top: 0;
