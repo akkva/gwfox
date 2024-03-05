@@ -1253,6 +1253,23 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
+#main-window:has(#urlbar[open]) {
+#nav-bar, #TabsToolbar {
+  opacity: 1;
+  top: 0;
+}
+
+.titlebar-buttonbox-container {
+  opacity: 1;
+  top: 18px;
+}
+
+#alltabs-button {
+  opacity: 1;
+  top: 8px;
+}
+}
+
 @media (-moz-bool-pref: "uc.tweak.blur") {
 @media (-moz-platform: macos) {
 #nav-bar {
