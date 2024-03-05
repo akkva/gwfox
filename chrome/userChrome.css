@@ -1202,7 +1202,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 @media (-moz-bool-pref: "uc.tweak.popout_toolbar") {
-
 #navigator-toolbox:-moz-window-inactive,
 .titlebar-buttonbox:-moz-window-inactive {
   visibility: hidden;
@@ -1253,7 +1252,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-#main-window:has(#urlbar[open], #nav-bar toolbarbutton[open], #TabsToolbar toolbarbutton[open], .urlbar-page-action[open], #identity-box > *[open], #identity-permission-box[open], #notification-popup-box[open], #tracking-protection-icon-container[open]) {
+#main-window:has(#urlbar[open], #nav-bar toolbarbutton[open], #TabsToolbar toolbarbutton[open], .urlbar-page-action[open], #identity-box > *[open], #identity-permission-box[open], #notification-popup-box[open], #tracking-protection-icon-container[open], .tab-throbber[busy]) {
 #nav-bar, #TabsToolbar {
   opacity: 1;
   top: 0;
