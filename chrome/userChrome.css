@@ -1220,7 +1220,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   transition: .2s;
 }
 
-#appcontent .browserStack {
+#browser {
   margin-top: -48px;
 }
 
