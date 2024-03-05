@@ -2,7 +2,7 @@
 
 <div align="center">
   
-本主题适用mac&win
+本主题适用mac&win，火狐V121+
 
 </div>
 
@@ -28,4 +28,11 @@ win下全局 `文字提示` 定制需要[userChrome.js](https://github.com/MrOth
 
 弹出菜单/面板背景模糊(macOS)：在 `about:config` 页面添加 `uc.tweak.blur` 并设为 `true` 
 
-<img width="1000" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/7f37382d-2f2a-4f73-a78d-037e8ceb58cc">
+<img width="1000" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/7f37382d-2f2a-4f73-a78d-037e8ceb58cc"><br>
+
+工具栏从顶部弹出：在 `about:config` 页面添加 `uc.tweak.popout_toolbar` 并设为 `true`
+
+<img width="1000" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/99725dd3-58bc-4532-adf5-f92274ce78b7">
+
+<img width="1000" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/c7622361-3a1a-4864-a9f9-1302161df5fe">
+
