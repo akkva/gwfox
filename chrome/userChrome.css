@@ -32,6 +32,7 @@
   --urlbarView-highlight-background: light-dark(rgba(155, 155, 155, .3), rgba(195, 195, 195, .3)) !important;
   --input-bgcolor: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   --input-border-color: transparent !important;
+  background-color: var(--bg1) !important;
 }
 
 :root[tabsintitlebar] #titlebar {
@@ -84,11 +85,15 @@
 }
 
 #TabsToolbar {
-  margin: 0 114px -45.5px 420px !important;
+  margin: 0 154px -45.5px 460px !important;
   padding: 0 !important;
   background: none !important;
   max-height: 42px !important;
   z-index: 8;
+}
+
+.titlebar-spacer {
+  display: none !important
 }
 
 :root:-moz-window-inactive #nav-bar {
@@ -363,10 +368,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #alltabs-button {
   position: absolute !important;
-  top: 14px;
+  top: 8px;
   left: 434px;
   z-index: 5;
   border-radius: 4px !important;
+  height: 36px !important;
 }
 
 #identity-box {
@@ -1002,8 +1008,6 @@ xul|search-textbox[focused],
   background-size: contain;
 }
 
-:root { background-color: var(--bg1) !important; }
-
 #nav-bar {
   padding: 13px 3px 8px 82px !important;
 
@@ -1020,7 +1024,7 @@ xul|search-textbox[focused],
 }
 
 #TabsToolbar #alltabs-button {
-  top: 15px;
+  top: 9px;
 }
 
 :root[tabsintitlebar][inFullscreen] #alltabs-button {
@@ -1159,7 +1163,7 @@ panel[type="arrow"] {
   position: fixed;
   width: 100%;
   height: 48px !important;
-  z-index: 3;
+  z-index: 1;
   bottom: -20px;
   opacity: 0;
   transition: .2s;
@@ -1191,6 +1195,75 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+}
+}
+}
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.popout_toolbar") {
+
+#navigator-toolbox:-moz-window-inactive,
+.titlebar-buttonbox:-moz-window-inactive {
+  visibility: hidden;
+}
+
+.titlebar-buttonbox-container {
+  position: fixed !important;
+  opacity: 1;
+  transition: .2s;
+}
+
+#alltabs-button {
+  position: fixed !important;
+  opacity: 1;
+  transition: .2s;
+}
+
+#appcontent .browserStack {
+  margin-top: -48px;
+}
+
+#nav-bar {
+  position: fixed;
+  z-index: 1;
+  opacity: 1;
+  top: 0;
+  transition: .2s;
+}
+
+#TabsToolbar {
+  position: relative;
+  opacity: 1;
+  top: 0;
+  transition: .2s;
+}
+
+#main-window:has(#browser:hover, #PersonalToolbar:hover) {
+#nav-bar, #TabsToolbar {
+  opacity: 0;
+  top: -40px;
+  transition: .2s;
+}
+
+.titlebar-buttonbox-container, #alltabs-button {
+  opacity: 0;
+  top: -25px;
+  transition: .2s;
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.blur") {
+@media (-moz-platform: macos) {
+#nav-bar {
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
+  backdrop-filter: blur(30px) !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+#nav-bar {
+  box-shadow: 0 0 5px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .5) !important;
 }
 }
 }
