@@ -1202,11 +1202,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 @media (-moz-bool-pref: "uc.tweak.popout_toolbar") {
-#navigator-toolbox:-moz-window-inactive,
-.titlebar-buttonbox:-moz-window-inactive {
-  visibility: hidden;
-}
-
 .titlebar-buttonbox-container {
   position: fixed !important;
   opacity: 1;
@@ -1250,6 +1245,18 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   top: -25px;
   transition: .2s;
 }
+}
+
+#nav-bar:-moz-window-inactive,
+#TabsToolbar:-moz-window-inactive {
+  opacity: 0;
+  top: -40px;
+}
+
+.titlebar-buttonbox-container:-moz-window-inactive,
+#alltabs-button:-moz-window-inactive {
+  opacity: 0;
+  top: -25px;
 }
 
 #main-window:has(#urlbar[open], #nav-bar toolbarbutton[open], #TabsToolbar toolbarbutton[open], .urlbar-page-action[open], #identity-box > *[open], #identity-permission-box[open], #notification-popup-box[open], #tracking-protection-icon-container[open], .tab-throbber[busy], #downloads-button[animate][notification="finish"]) {
