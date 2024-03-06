@@ -32,7 +32,11 @@
   --urlbarView-highlight-background: light-dark(rgba(155, 155, 155, .3), rgba(195, 195, 195, .3)) !important;
   --input-bgcolor: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   --input-border-color: transparent !important;
-  background-color: var(--bg1) !important;
+  background-color: #eaeaea !important;
+@media (prefers-color-scheme: dark) {
+  &:not(:-moz-window-inactive) {::selection { background: #416189 }}
+  background-color: #383838 !important;
+}
 }
 
 :root[tabsintitlebar] #titlebar {
@@ -451,7 +455,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 @media (prefers-color-scheme: dark) {
-&:not(:-moz-window-inactive) { ::selection { background: #416189 }
 .urlbarView-row[source="tabs"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon,
 #urlbar-engine-one-off-item-tabs,
 .urlbarView-row[source="history"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon,
@@ -484,7 +487,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #urlbar:hover .urlbar-page-action,
 .urlbar-page-action[open] {
   opacity: unset;
-}
 }
 }
 
