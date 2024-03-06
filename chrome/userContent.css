@@ -61,6 +61,12 @@ search-addons > search-textbox[focused] {
 }
 }
 
+@media (-moz-platform: windows) {
+@media (prefers-color-scheme: dark) {
+::selection { background: #416189 }
+}
+}
+
 @-moz-document url-prefix(about:) {
 .checkbox-check:not([native]) {
   appearance: none !important;
