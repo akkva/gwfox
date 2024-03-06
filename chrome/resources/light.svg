@@ -1,9 +1,9 @@
 <svg
-   viewBox="0 0 1000 1000"
+   viewBox="0 0 1000 900"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <g id="rect" transform="translate(0,147)">
+  <g id="rect" transform="translate(0,46)">
     <path
        d="M 317.9,852 H 3.7 L 411.8,148 819.9,852 H 507.7"
        id="path3"
