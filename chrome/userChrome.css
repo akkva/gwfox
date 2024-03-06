@@ -1114,7 +1114,7 @@ richlistitem {
 
 @media (-moz-bool-pref: "uc.tweak.blur") {
 @media (-moz-platform: macos) {
-#appcontent {
+#browser {
   clip-path: circle(100%);
 }
 
