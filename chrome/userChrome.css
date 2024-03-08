@@ -1566,6 +1566,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #sidebar-box {
   min-width: 190px !important;
+  margin-left: 5px !important;
 }
 
 #nav-bar toolbarspring {
