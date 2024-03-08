@@ -17,17 +17,17 @@
 - 重启火狐
 
 ## 注意事项
-默认样式工具栏按钮数量仅支持左3右4
+- 默认样式工具栏按钮数量仅支持左3右4
 
 ## 样式调整
 
-书签工具栏从底部弹出：在 `about:config` 页面添加 `uc.tweak.popout_bookmarks_toolbar` 并设为 `true`
+- 书签工具栏从底部弹出：在 `about:config` 页面添加 `uc.tweak.popout_bookmarks_toolbar` 并设为 `true`
 
-弹出菜单/面板背景模糊(macOS)：在 `about:config` 页面添加 `uc.tweak.blur` 并设为 `true` 
+- 弹出菜单/面板背景模糊(macOS)：在 `about:config` 页面添加 `uc.tweak.blur` 并设为 `true` 
 
 <img width="1000" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/7f37382d-2f2a-4f73-a78d-037e8ceb58cc"><br>
 
-工具栏从顶部弹出：在 `about:config` 页面添加 `uc.tweak.popout_toolbar` 并设为 `true`
+- 工具栏从顶部弹出：在 `about:config` 页面添加 `uc.tweak.popout_toolbar` 并设为 `true`
 
 <img width="1000" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/99725dd3-58bc-4532-adf5-f92274ce78b7">
 
