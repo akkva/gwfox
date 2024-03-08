@@ -31,5 +31,11 @@
 
 <img width="1000" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/99725dd3-58bc-4532-adf5-f92274ce78b7">
 
-<img width="1000" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/c7622361-3a1a-4864-a9f9-1302161df5fe">
+<img width="1000" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/c7622361-3a1a-4864-a9f9-1302161df5fe"><br>
+
+- 垂直标签页：在 `about:config` 页面添加 `uc.tweak.vertical_tabs` 并设为 `true`
+  - 安装Sidebery扩展，在设置-帮助里选择 `sidebery-data.json` 导入
+
+<img width="1000" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/4956e885-a94f-48a4-869b-b2f384aff7eb">
+
 
