@@ -20,7 +20,6 @@
 - 默认样式工具栏按钮数量仅支持左3右4
 
 ## 样式调整
-
 - 书签工具栏从底部弹出：在 `about:config` 页面添加 `uc.tweak.popout_bookmarks_toolbar` 并设为 `true`
 
 - 弹出菜单/面板背景模糊(macOS)：在 `about:config` 页面添加 `uc.tweak.blur` 并设为 `true` 
@@ -38,4 +37,9 @@
 
 <img width="1000" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/4956e885-a94f-48a4-869b-b2f384aff7eb">
 
-
+## 致谢
+- [ShyFox](https://github.com/Naezr/ShyFox)
+- [edge-frfox](https://github.com/bmFtZQ/Edge-FrFox)
+- [firefox-csshacks](https://github.com/MrOtherGuy/firefox-csshacks)
+- [zapsCoolPhotonTheme](https://github.com/zapSNH/zapsCoolPhotonTheme)
+- [White-Sur-Firefox-Theme-MacOS](https://github.com/easonwong-de/White-Sur-Firefox-Theme-MacOS)
