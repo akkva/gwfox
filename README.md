@@ -35,7 +35,7 @@
 - 垂直标签页：在 `about:config` 页面添加 `uc.tweak.vertical_tabs` 并设为 `true`
   - 安装Sidebery扩展，在设置-帮助里选择 `sidebery-data.json` 导入
 
-<img width="1000" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/4956e885-a94f-48a4-869b-b2f384aff7eb">
+<img width="1000" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/2b547598-fa77-49ce-bfa2-97e03997ac19">
 
 ## 致谢
 - [ShyFox](https://github.com/Naezr/ShyFox)
