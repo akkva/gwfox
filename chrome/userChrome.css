@@ -1542,6 +1542,22 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
+.devtools-toolbox-bottom-iframe {
+  margin: 0 6px 6px !important;
+}
+
+.devtools-toolbox-side-iframe {
+  margin-block-end: 6px !important;
+&:first-child {
+  margin-inline-start: 6px !important;
+  margin-top: 2px !important;
+}
+&:last-child {
+  margin-inline-end: 6px !important;
+  margin-top: 2px !important;
+}
+}
+
 #main-window:has(#sidebar-box[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]) {
 #sidebar-header {
   display: none
