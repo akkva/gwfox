@@ -1,0 +1,14 @@
+/* This example style is loaded globally as agent sheet. That means it will affect every document that is loaded including web sites so you really want to constrain your styles to apply only where you want. Thus, the default namespace is set to xul to make rules apply to xul elements. Should you want to apply rules to html elements, you need to use the namespace selector like: html|input */
+
+/* Default to xul namespace */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Allow selecting html elements with named namespace selector */
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* Demonstrates namespace selector - this would only affect tooltip elements that are html elements. But those don't exist so this does nothing. If you remove the "html|" prefix, then all your tooltips will be black */
+tooltip {
+  background: light-dark(#fff, #454545);
+  border: 1px solid rgba(125, 125, 125, .1);
+  border-radius: 0;
+}

@@ -1,0 +1,9 @@
+/* This example file is supposed to be loaded as author style sheet. Notice that we can use ::part() ::host() etc. selectors here while they are unavailable in user stylesheets. */
+
+/* Default to xul namespace */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Allow selecting html elements with named namespace selector */
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* Example - this creates a small dot to appear in the top left corner of devtools-button popup - but not in any other panel */
