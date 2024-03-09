@@ -1530,10 +1530,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   top: 12px;
 }
 
-#alltabs-button {
-  visibility1: visible !important;
-}
-
 #appcontent .browserStack {
   margin: 2px 6px 6px;
   box-shadow: 0 0 6px #00000030;
