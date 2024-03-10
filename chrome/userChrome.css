@@ -1540,10 +1540,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 .devtools-toolbox-bottom-iframe {
   margin: 0 6px 6px !important;
+  box-shadow: 0 0 6px #00000030 !important;
 }
 
 .devtools-toolbox-side-iframe {
   margin-block-end: 6px !important;
+  box-shadow: 0 0 6px #00000030 !important;
 &:first-child {
   margin-inline-start: 6px !important;
   margin-top: 2px !important;
