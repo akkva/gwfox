@@ -49,40 +49,6 @@
   top: 18px;
 }
 
-#back-button {
-  position: fixed !important;
-  left: 86px;
-  top: 12px;
-}
-
-#forward-button {
-  position: fixed !important;
-  left: 121px;
-  top: 12px;
-}
-
-#reload-button {
-  position: fixed !important;
-  left: 156px;
-  top: 12px;
-}
-
-#stop-button {
-  position: fixed !important;
-  left: 156px;
-  top: 12px;
-}
-
-#back-button > .toolbarbutton-icon,
-#forward-button > .toolbarbutton-icon,
-#reload-button > .toolbarbutton-icon,
-#stop-button > .toolbarbutton-icon {
-  height: 28px !important;
-  width: 32px !important;
-  padding: 5px !important;
-  border-radius: 6px !important;
-}
-
 #browser {
   #tabbrowser-tabpanels {
   background-color: var(--bg1) !important;
@@ -807,6 +773,44 @@ tree {
 :root#main-window {
   min-width: 1000px !important;
 }
+
+#back-button {
+  visibility: visible !important;
+  position: fixed !important;
+  left: 86px;
+  top: 12px;
+}
+
+#forward-button {
+  visibility: visible !important;
+  position: fixed !important;
+  left: 121px;
+  top: 12px;
+}
+
+#reload-button {
+  visibility: visible !important;
+  position: fixed !important;
+  left: 156px;
+  top: 12px;
+}
+
+#stop-button {
+  visibility: visible !important;
+  position: fixed !important;
+  left: 156px;
+  top: 12px;
+}
+
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon,
+#reload-button > .toolbarbutton-icon,
+#stop-button > .toolbarbutton-icon {
+  height: 28px !important;
+  width: 32px !important;
+  padding: 5px !important;
+  border-radius: 6px !important;
+}
 }
 
 treechildren::-moz-tree-row {
@@ -1284,6 +1288,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 @media (-moz-bool-pref: "uc.tweak.popout_toolbar") {
+@-moz-document url("chrome://browser/content/browser.xhtml") {
 .titlebar-buttonbox-container {
   position: fixed !important;
   opacity: 1;
@@ -1491,6 +1496,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 }
+}
 
 @media (-moz-bool-pref: "uc.tweak.vertical_tabs") {
 #TabsToolbar {
@@ -1500,34 +1506,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 .titlebar-buttonbox-container {
   visibility: visible !important;
   position: fixed !important;
-}
-
-#back-button {
-  visibility: visible !important;
-  position: fixed !important;
-  left: 86px;
-  top: 12px;
-}
-
-#forward-button {
-  visibility: visible !important;
-  position: fixed !important;
-  left: 121px;
-  top: 12px;
-}
-
-#reload-button {
-  visibility: visible !important;
-  position: fixed !important;
-  left: 156px;
-  top: 12px;
-}
-
-#stop-button {
-  visibility: visible !important;
-  position: fixed !important;
-  left: 156px;
-  top: 12px;
 }
 
 #appcontent .browserStack {
