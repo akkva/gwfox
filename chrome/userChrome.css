@@ -305,6 +305,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #reader-mode-button > .urlbar-icon,
 #translations-button > #translations-button-icon,
 #shopping-sidebar-button > .urlbar-icon , #identity-box,
+#scrollbutton-up:not([disabled=true]), #scrollbutton-down:not([disabled=true]),
 #tracking-protection-icon-container {
   fill: light-dark(#525252, #c9c9cb) !important;
   fill-opacity: 1 !important;
@@ -316,6 +317,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #reader-mode-button:active > .urlbar-icon,
 #translations-button:active > #translations-button-icon,
 #shopping-sidebar-button:active > .urlbar-icon , #identity-box:active,
+#scrollbutton-up:not([disabled=true]):active, #scrollbutton-down:not([disabled=true]):active,
 #tracking-protection-icon-container:active {
   fill: light-dark(#2d2d2d, #ececec) !important;
 }
