@@ -1,0 +1,20 @@
+<svg
+   viewBox="0 0 1000 900"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <g id="rect" transform="translate(0,46)">
+    <path
+       d="M 317.9,852 H 3.7 L 411.8,148 819.9,852 H 507.7"
+       id="path3"
+       style="display:inline;fill:#4f4f4f;fill-opacity:1" />
+    <path
+       d="M 779.8,852 H 996.3 L 642.3,243.5 291.3,852 h 216.5"
+       id="path2"
+       style="display:inline;fill:#595959;fill-opacity:1" />
+    <path
+       d="M 658.21641,852 H 820.82594 L 554.94152,395.12062 291.3,852 h 162.60953"
+       id="path1"
+       style="fill:#414141;fill-opacity:1" />
+  </g>
+</svg>
