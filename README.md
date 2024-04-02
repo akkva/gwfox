@@ -1,4 +1,4 @@
-<img width="1000" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/3d630426-f545-462a-a68b-2bc8d249539a">
+<img width="1000" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/0186ffb0-e563-460d-aeaa-c14d2de0c409">
 
 <div align="center">
   
@@ -23,4 +23,4 @@
 
 - 弹出菜单/面板背景模糊：在 `about:config` 页面添加 `uc.tweak.blur` 并设为 `true`
 
-<img width="1000" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/3d0cc8fe-c128-4ee2-9b45-249ddb6a48dc">
+<img width="1000" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/7f96d093-03b5-4f8a-afda-ba4e03b37eaa">
