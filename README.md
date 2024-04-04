@@ -28,7 +28,5 @@
 - 垂直标签页：在 `about:config` 页面添加 `uc.tweak.vertical_tabs` 并设为 `true`
   
   - 工具栏从顶部弹出：在 `about:config` 页面添加 `uc.tweak.popout_toolbar` 并设为 `true`
-  
-<img width="1005" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/ee1b758a-e37a-4494-9e50-e965ea8065fb">
-    
-<img width="1005" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/d8906531-8187-40c5-974f-6ee4d8a86e81">
+
+<img width="1181" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/e6835fe7-52ee-4370-ba14-83fa88ceb26d">
