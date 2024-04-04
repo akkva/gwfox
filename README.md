@@ -1,4 +1,4 @@
-<img width="1000" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/0186ffb0-e563-460d-aeaa-c14d2de0c409">
+<img width="1003" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/4102408a-2868-46f7-91f4-3c83b28e551c">
 
 <div align="center">
   
@@ -23,7 +23,7 @@
 
 - 弹出菜单/面板背景模糊：在 `about:config` 页面添加 `uc.tweak.blur` 并设为 `true`
 
-<img width="1000" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/7f96d093-03b5-4f8a-afda-ba4e03b37eaa">
+<img width="1003" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/5ba3e461-88f4-4e2f-99a1-add43ff8a44c">
 
 - 垂直标签页：在 `about:config` 页面添加 `uc.tweak.vertical_tabs` 并设为 `true`
   
