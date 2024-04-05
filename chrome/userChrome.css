@@ -997,12 +997,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-@media (-moz-bool-pref: "uc.tweak.vertical_tabs") {
-@-moz-document url("chrome://browser/content/browser.xhtml") {
-body {background: light-dark(#ffffff4d, #00000033) !important;}
-:root:-moz-window-inactive body {background: var(--bg1) !important;}
-}
-
+@media (-moz-bool-pref: "uc.tweak.rounded_corners"),
+       (-moz-bool-pref: "uc.tweak.vertical_tabs") {
 :root[tabsintitlebar]:not([lwtheme]) {
   appearance: menupopup !important;
   #navigator-toolbox {
@@ -1026,6 +1022,14 @@ body {background: light-dark(#ffffff4d, #00000033) !important;}
   content: none;
 }
   scrollbar-color: #00000000 #00000000
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.vertical_tabs") {
+@media not (-moz-bool-pref: "uc.tweak.rounded_corners") {
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+body {background: light-dark(#ffffff4d, #00000033) !important;}
+:root:-moz-window-inactive body {background: var(--bg1) !important;}
 }
 
 #browser, #nav-bar, #PersonalToolbar {
@@ -1179,7 +1183,6 @@ scrollbox {
   outline: none !important;
 }
 }
-}
 
 @media (-moz-bool-pref: "uc.tweak.popout_toolbar") {
 #browser {
@@ -1241,6 +1244,71 @@ scrollbox {
 #nav-bar {
   box-shadow: 0 0 5px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .5) !important;
 }
+}
+}
+}
+}
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.rounded_corners") {
+:root {--sidebar-background-color: light-dark(#ffffff4d, #00000033) !important;}
+#browser {
+  box-shadow: none;
+  #tabbrowser-tabpanels {
+  background-color: light-dark(#ffffff4d, #00000033) !important;
+}
+}
+
+#appcontent browser {
+  margin: 0 4px 4px;
+  border-radius: 8px;
+  clip-path: circle(100%);
+  box-shadow: 0 0 .5px #00000033, 0 0 2px #00000012;
+}
+
+#nav-bar, #PersonalToolbar {
+  background-color: light-dark(#ffffff4d, #00000033) !important;
+}
+
+.urlbarView {
+  margin-top: 12px !important;
+}
+
+.devtools-side-splitter,
+.devtools-horizontal-splitter {
+  display: none !important;
+}
+
+.devtools-toolbox-side-iframe {
+  &:first-child {margin-right: 0 !important;}
+  &:last-child {margin-left: 0 !important;}
+}
+
+:root:-moz-window-inactive, :root[inFullscreen="true"] {
+  --sidebar-background-color: var(--bg1) !important;
+  #nav-bar, #PersonalToolbar {
+  background-color: var(--bg1) !important;
+}
+
+#browser {
+  #tabbrowser-tabpanels {
+  background-color: var(--bg1) !important;
+}
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.popout_bookmarks_toolbar") {
+#PersonalToolbar {
+  width: calc(100% - 8px);
+  margin: 0 4px 4px !important;
+}
+
+@media (-moz-bool-pref: "uc.tweak.blur") {
+#PersonalToolbar {
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
 }
 }
 }
