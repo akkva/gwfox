@@ -23,7 +23,9 @@
 
 - 弹出菜单/面板背景模糊：在 `about:config` 页面添加 `uc.tweak.blur` 并设为 `true`
 
-<img width="1003" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/5ba3e461-88f4-4e2f-99a1-add43ff8a44c">
+- 页面圆角：在 `about:config` 页面添加 `uc.tweak.rounded_corners` 并设为 `true`
+
+<img width="1181" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/da7a3a59-88be-403d-ad48-3d6bf8fa1bc6">
 
 - 垂直标签页：在 `about:config` 页面添加 `uc.tweak.vertical_tabs` 并设为 `true`
   
