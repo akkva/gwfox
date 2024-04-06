@@ -25,13 +25,13 @@
 
 - 页面圆角：在 `about:config` 页面添加 `uc.tweak.rounded_corners` 并设为 `true`
 
-<img width="1181" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/da7a3a59-88be-403d-ad48-3d6bf8fa1bc6">
+<img width="1124" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/2aea8c2f-6680-49a3-a166-cd43c542fe87">
 
 - 垂直标签页：在 `about:config` 页面添加 `uc.tweak.vertical_tabs` 并设为 `true`
   
   - 工具栏从顶部弹出：在 `about:config` 页面添加 `uc.tweak.popout_toolbar` 并设为 `true`
 
-<img width="1181" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/e6835fe7-52ee-4370-ba14-83fa88ceb26d">
+<img width="1124" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/86449b4b-358d-4fad-b057-663c422350c4">
 
 <img width="1150" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/06ebe2de-7aad-4cef-a34e-2d42b2ba1fb0">
 
