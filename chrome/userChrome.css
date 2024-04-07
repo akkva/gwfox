@@ -33,6 +33,7 @@
   --urlbarView-highlight-color: light-dark(#000, #fff) !important;
   --input-bgcolor: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   --input-border-color: transparent !important;
+  scrollbar-color: #00000000 #00000000;
 }
 
 :root[tabsintitlebar] #titlebar {
@@ -1026,7 +1027,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   :root[inFullscreen="true"]&::before {
   content: none;
 }
-  scrollbar-color: #00000000 #00000000
 }
 }
 }
