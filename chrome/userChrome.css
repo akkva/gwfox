@@ -999,6 +999,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 @media (-moz-bool-pref: "uc.tweak.rounded_corners"),
        (-moz-bool-pref: "uc.tweak.vertical_tabs") {
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+:root#main-window {
+  background-color: transparent !important;
+  appearance: menupopup !important;
+}
 :root[tabsintitlebar]:not([lwtheme]) {
   appearance: menupopup !important;
   #navigator-toolbox {
@@ -1022,6 +1027,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   content: none;
 }
   scrollbar-color: #00000000 #00000000
+}
 }
 }
 
