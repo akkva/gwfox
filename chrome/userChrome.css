@@ -1032,7 +1032,7 @@ body {background: light-dark(#ffffff4d, #00000033) !important;}
 :root:-moz-window-inactive body {background: var(--bg1) !important;}
 }
 
-#browser, #nav-bar, #PersonalToolbar {
+#main-window:not([inDOMFullscreen]) #browser, #nav-bar, #PersonalToolbar {
   margin-left: 129px;
 }
 
@@ -1134,12 +1134,12 @@ body {background: light-dark(#ffffff4d, #00000033) !important;}
   height: calc(100vh - 90px) !important;
   width: 120px;
   left: 0;
-  --scrollbox: box;
+  --scrollbox: -webkit-box;
 }
 
 scrollbox {
   display: var(--scrollbox, inherit);
-  box-orient: vertical;
+  -webkit-box-orient: vertical;
   overflow: auto;
 }
 
