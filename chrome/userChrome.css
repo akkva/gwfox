@@ -200,13 +200,13 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #urlbar:hover .urlbar-page-action,
 .urlbar-page-action[open] {
   opacity: 1;
-  margin-inline-end: 0px !important;
+  margin-inline-end: 0 !important;
 }
 
 #main-window:has(#page-action-buttons > *[open]) {
 .urlbar-page-action {
   opacity: 1;
-  margin-inline-end: 0px !important;
+  margin-inline-end: 0 !important;
 }
 }
 
@@ -1259,6 +1259,23 @@ scrollbox {
 
 @media (-moz-bool-pref: "uc.tweak.rounded_corners") {
 :root {--sidebar-background-color: light-dark(#ffffff4d, #00000033) !important;}
+:root[BookmarksToolbarOverlapsBrowser] {
+#browser {
+  #tabbrowser-tabpanels {
+  margin-top: 28px !important; 
+}
+}
+
+.newTabBrowserPanel {
+  padding-top: 0 !important;
+}
+
+#sidebar-box {
+  margin-top: 28px !important;
+  padding-top: 0 !important;   
+}
+}
+
 #browser {
   box-shadow: none;
   #tabbrowser-tabpanels {
