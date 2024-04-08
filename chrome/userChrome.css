@@ -1193,7 +1193,7 @@ scrollbox {
 @media (-moz-bool-pref: "uc.tweak.popout_toolbar") {
 :root[BookmarksToolbarOverlapsBrowser] {
 #navigator-toolbox {
-  z-index: 9 !important;
+  z-index: unset !important;
 }
 }
 
