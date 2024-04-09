@@ -28,11 +28,14 @@
 <img width="1124" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/2aea8c2f-6680-49a3-a166-cd43c542fe87">
 
 - 垂直标签页：在 `about:config` 页面添加 `uc.tweak.vertical_tabs` 并设为 `true`
+
+  - 自动折叠标签页：在 `about:config` 页面添加 `uc.tweak.vertical_tabs_autocollapse` 并设为 `true`
   
   - 工具栏从顶部弹出：在 `about:config` 页面添加 `uc.tweak.popout_toolbar` 并设为 `true`
 
-<img width="1124" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/86449b4b-358d-4fad-b057-663c422350c4">
+<img width="1124" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/9bea4826-43fc-4bb6-9414-3a936ea18455">
 
-<img width="1150" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/06ebe2de-7aad-4cef-a34e-2d42b2ba1fb0">
+<img width="1124" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/ff94ce13-fef3-4c00-940a-7f56f90250be">
 
-<img width="1150" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/b86f7053-5353-42f0-a5b6-4cc5abb7d25a">
+<img width="1124" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/fa3148d6-9453-4220-af2d-cc0ad320b9fa">
+
