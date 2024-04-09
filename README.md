@@ -33,9 +33,8 @@
   
   - 工具栏从顶部弹出：在 `about:config` 页面添加 `uc.tweak.popout_toolbar` 并设为 `true`
 
+<img width="1124" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/fa3148d6-9453-4220-af2d-cc0ad320b9fa">
+
 <img width="1124" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/9bea4826-43fc-4bb6-9414-3a936ea18455">
 
 <img width="1124" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/ff94ce13-fef3-4c00-940a-7f56f90250be">
-
-<img width="1124" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/fa3148d6-9453-4220-af2d-cc0ad320b9fa">
-
