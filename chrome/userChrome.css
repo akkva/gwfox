@@ -1160,6 +1160,7 @@ scrollbox {
   margin: 3px !important;
   left: 4px;
   bottom: 5px;
+  display: flex !important;
 }
 
 #tabs-newtab-button:hover {
