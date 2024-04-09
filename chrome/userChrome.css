@@ -546,13 +546,13 @@ tab .tab-label {
 
 .tab-icon-overlay {
   :is(
-    :root[uidensity=compact],
-    #tabbrowser-tabs[secondarytext-unsupported],
-    :root:not([uidensity=compact]) #tabbrowser-tabs:not([secondarytext-unsupported]) .tabbrowser-tab:hover
+  :root[uidensity=compact],
+  #tabbrowser-tabs[secondarytext-unsupported],
+  :root:not([uidensity=compact]) #tabbrowser-tabs:not([secondarytext-unsupported]) .tabbrowser-tab:hover
   ) .tab-icon-stack[indicator-replaces-favicon] > :not(&),
   :root:not([uidensity=compact]) #tabbrowser-tabs:not([secondarytext-unsupported]) .tabbrowser-tab:not(:hover) &[indicator-replaces-favicon] {
-    opacity: 1 !important;
-  }
+  opacity: 1 !important;
+}
 }
 
 .tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-icon-image {
@@ -1176,6 +1176,90 @@ scrollbox {
 
 .tab-content[pinned] {
   padding-left: 8px !important;
+}
+
+@media (-moz-bool-pref: "uc.tweak.vertical_tabs_autocollapse") {
+#navigator-toolbox + #browser{--autocollapse-width: 92px;}
+#navigator-toolbox #tabbrowser-tabs{--autocollapse-width: 83px;}
+#navigator-toolbox #tabs-newtab-button{--autocollapse-width: 83px;}
+#navigator-toolbox #nav-bar{--autocollapse-width: 92px;}
+#navigator-toolbox #PersonalToolbar{--autocollapse-width: 92px;}
+#navigator-toolbox .tab-content{--autocollapse-margin: 0 20px 0 22.5px;}
+#navigator-toolbox:hover + #browser{--autocollapse-width: 160px;}
+#navigator-toolbox:hover #tabbrowser-tabs{--autocollapse-width: 151px;}
+#navigator-toolbox:hover #tabs-newtab-button{--autocollapse-width: 151px;}
+#navigator-toolbox:hover #nav-bar{--autocollapse-width: 160px;}
+#navigator-toolbox:hover #PersonalToolbar{--autocollapse-width: 160px;}
+#navigator-toolbox:hover .tab-content{--autocollapse-margin: 0 5px;}
+
+#main-window:not([inDOMFullscreen]) #browser, #nav-bar, #PersonalToolbar {
+  margin-left: var(--autocollapse-width);
+}
+
+:root:not([customizing]) #tabbrowser-tabs {
+  width: var(--autocollapse-width);
+  height: calc(100vh - 50px) !important;
+}
+
+.tabbrowser-tab > .tab-stack > .tab-content > .tab-close-button {
+  visibility: hidden;
+  margin-right: -10px !important;
+}
+
+.tabbrowser-tab:hover > .tab-stack > .tab-content > .tab-close-button {
+  visibility: visible;
+}
+
+#tabbrowser-tabs:hover .tab-close-button {
+  visibility: visible;
+}
+
+.tab-content {
+  margin: var(--autocollapse-margin);
+}
+
+#tabs-newtab-button {
+  position: unset !important;
+  width: var(--autocollapse-width);
+}
+
+#navigator-toolbox + #browser,
+#navigator-toolbox #nav-bar,
+#navigator-toolbox #tabbrowser-tabs,
+#navigator-toolbox .tab-content,
+#navigator-toolbox #tabs-newtab-button,
+#navigator-toolbox #PersonalToolbar {
+  transition: .2s;
+}
+
+#navigator-toolbox:hover + #browser,
+#navigator-toolbox:hover #nav-bar,
+#navigator-toolbox:hover #tabbrowser-tabs,
+#navigator-toolbox:hover .tab-content,
+#navigator-toolbox:hover #tabs-newtab-button,
+#navigator-toolbox:hover #PersonalToolbar {
+  transition: .2s;
+}
+
+#main-window:has(#nav-bar:hover, #PersonalToolbar:hover) {
+#browser, #nav-bar, #PersonalToolbar {
+  margin-left: 92px;
+}
+
+#tabbrowser-tabs {
+  width: 83px;
+}
+
+.tab-content {
+  margin:  0 20px 0 22.5px !important;
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.popout_bookmarks_toolbar") {
+#PersonalToolbar {
+  width: calc(100% - 92px)!important;
+}
+}
 }
 
 @media (-moz-bool-pref: "uc.tweak.popout_bookmarks_toolbar") {
