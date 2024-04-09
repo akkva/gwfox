@@ -1294,7 +1294,7 @@ scrollbox {
 }
 }
 
-#browser {
+#main-window #browser {
   margin-top: -52px;
   z-index: 8;
 }
