@@ -1179,6 +1179,18 @@ scrollbox {
   padding-left: 8px !important;
 }
 
+.tabbrowser-tab .tab-close-button {
+  margin-right: -6px !important;
+}
+
+.tabbrowser-tab:not([selected]) .tab-close-button {
+  display: none;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  display: flex !important;
+}
+
 @media (-moz-bool-pref: "uc.tweak.vertical_tabs_autocollapse") {
 #navigator-toolbox + #browser{--autocollapse-width: 92px;}
 #navigator-toolbox #tabbrowser-tabs{--autocollapse-width: 83px;}
@@ -1202,12 +1214,12 @@ scrollbox {
   height: calc(100vh - 50px) !important;
 }
 
-.tabbrowser-tab > .tab-stack > .tab-content > .tab-close-button {
+.tabbrowser-tab .tab-close-button {
   visibility: hidden;
-  margin-right: -10px !important;
+  margin-right: -11px !important;
 }
 
-.tabbrowser-tab:hover > .tab-stack > .tab-content > .tab-close-button {
+.tabbrowser-tab:hover .tab-close-button {
   visibility: visible;
 }
 
