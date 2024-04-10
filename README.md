@@ -25,7 +25,7 @@
 
 - 页面圆角：在 `about:config` 页面添加 `uc.tweak.rounded_corners` 并设为 `true`
 
-<img width="1124" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/2aea8c2f-6680-49a3-a166-cd43c542fe87">
+<img width="1124" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/3c9fa4e4-627a-4c1f-b4f9-4e3e9f215194">
 
 - 垂直标签页：在 `about:config` 页面添加 `uc.tweak.vertical_tabs` 并设为 `true`
 
