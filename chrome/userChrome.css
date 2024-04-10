@@ -910,7 +910,12 @@ xul|search-textbox[focused],
   clip-path: circle(100%);
 }
 
-.urlbarView, findbar {
+#statuspanel-label {
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.urlbarView, findbar, #statuspanel-label {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
@@ -943,7 +948,7 @@ panel[type="arrow"] {
 }
 
 @media (prefers-color-scheme: dark) {
-.urlbarView, findbar, .dialogBox {
+.urlbarView, findbar, .dialogBox, #statuspanel-label {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
@@ -1391,6 +1396,11 @@ scrollbox {
   border-radius: 8px;
   clip-path: circle(100%);
   box-shadow: 0 0 .5px #00000033, 0 0 2px #00000012;
+}
+
+#statuspanel-label {
+  margin: 4px !important;
+  border-bottom-left-radius: 8px !important;
 }
 
 #nav-bar, #PersonalToolbar {
