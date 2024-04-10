@@ -1417,6 +1417,13 @@ scrollbox {
   box-shadow: 0 0 .5px #00000033, 0 0 2px #00000012;
 }
 
+#tab-notification-deck {
+  position: fixed;
+  top: 52px;
+  right: 0;
+  z-index: 9;
+}
+
 #statuspanel-label {
   margin: 4px !important;
   border-bottom-left-radius: 8px !important;
