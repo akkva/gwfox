@@ -1043,11 +1043,13 @@ body {background: light-dark(#ffffff4d, #00000033) !important;}
 :root:-moz-window-inactive body {background: var(--bg1) !important;}
 }
 
-#main-window:not([inDOMFullscreen]) #browser, #nav-bar, #PersonalToolbar {
+#main-window:not([inDOMFullscreen]) #browser,
+#tab-notification-deck, #PersonalToolbar,
+.global-notificationbox, #nav-bar {
   margin-left: 129px;
 }
 
-#browser {
+#browser, #tab-notification-deck {
   box-shadow: 0 0 .5px light-dark(#00000038, #000000), 0 0 3px #00000033;
 }
 
@@ -1202,15 +1204,21 @@ scrollbox {
 #navigator-toolbox #tabs-newtab-button{--autocollapse-width: 83px;}
 #navigator-toolbox #nav-bar{--autocollapse-width: 92px;}
 #navigator-toolbox #PersonalToolbar{--autocollapse-width: 92px;}
+#navigator-toolbox #tab-notification-deck{--autocollapse-width: 92px;}
+#navigator-toolbox .global-notificationbox{--autocollapse-width: 92px;}
 #navigator-toolbox .tab-content{--autocollapse-margin: 0 20px 0 22.5px;}
 #navigator-toolbox:hover + #browser{--autocollapse-width: 160px;}
 #navigator-toolbox:hover #tabbrowser-tabs{--autocollapse-width: 151px;}
 #navigator-toolbox:hover #tabs-newtab-button{--autocollapse-width: 151px;}
 #navigator-toolbox:hover #nav-bar{--autocollapse-width: 160px;}
 #navigator-toolbox:hover #PersonalToolbar{--autocollapse-width: 160px;}
+#navigator-toolbox:hover #tab-notification-deck{--autocollapse-width: 160px;}
+#navigator-toolbox:hover .global-notificationbox{--autocollapse-width: 160px;}
 #navigator-toolbox:hover .tab-content{--autocollapse-margin: 0 5px;}
 
-#main-window:not([inDOMFullscreen]) #browser, #nav-bar, #PersonalToolbar {
+#main-window:not([inDOMFullscreen]) #browser,
+#tab-notification-deck, #PersonalToolbar,
+.global-notificationbox, #nav-bar {
   margin-left: var(--autocollapse-width);
 }
 
@@ -1246,7 +1254,9 @@ scrollbox {
 #navigator-toolbox #tabbrowser-tabs,
 #navigator-toolbox .tab-content,
 #navigator-toolbox #tabs-newtab-button,
-#navigator-toolbox #PersonalToolbar {
+#navigator-toolbox #PersonalToolbar,
+#navigator-toolbox #tab-notification-deck,
+#navigator-toolbox .global-notificationbox {
   transition: .2s;
 }
 
@@ -1255,7 +1265,9 @@ scrollbox {
 #navigator-toolbox:hover #tabbrowser-tabs,
 #navigator-toolbox:hover .tab-content,
 #navigator-toolbox:hover #tabs-newtab-button,
-#navigator-toolbox:hover #PersonalToolbar {
+#navigator-toolbox:hover #PersonalToolbar,
+#navigator-toolbox:hover #tab-notification-deck,
+#navigator-toolbox:hover .global-notificationbox {
   transition: .2s;
 }
 
@@ -1302,6 +1314,13 @@ scrollbox {
 #main-window #browser {
   margin-top: -52px;
   z-index: 8;
+}
+
+#tab-notification-deck {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9;
 }
 
 #nav-bar {
