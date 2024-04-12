@@ -1,4 +1,4 @@
-<img width="1003" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/4102408a-2868-46f7-91f4-3c83b28e551c">
+<img width="1095" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/7ac89c17-e544-4c5a-a7a7-6fd02cba4500">
 
 <div align="center">
   
@@ -25,7 +25,7 @@
 
 - 页面圆角：在 `about:config` 页面添加 `uc.tweak.rounded_corners` 并设为 `true`
 
-<img width="1124" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/1724a91c-9b58-4915-aa7d-56dfaafefa5a">
+<img width="1095" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/548d38e3-5461-45f0-b8f9-e813bb304387">
 
 - 垂直标签页：在 `about:config` 页面添加 `uc.tweak.vertical_tabs` 并设为 `true`
 
@@ -33,8 +33,8 @@
 
   - 自动折叠标签页：在 `about:config` 页面添加 `uc.tweak.vertical_tabs_autocollapse` 并设为 `true`
   
-<img width="1124" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/fa3148d6-9453-4220-af2d-cc0ad320b9fa">
+<img width="1095" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/1231c127-3057-48e7-9faa-c6f3d2b100a0">
 
-<img width="1124" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/9bea4826-43fc-4bb6-9414-3a936ea18455">
+<img width="1095" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/8fd0801a-7190-4351-9309-a5d2ec5a84b5">
 
-<img width="1124" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/ff94ce13-fef3-4c00-940a-7f56f90250be">
+<img width="1095" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/6dabd1fe-d20b-411d-a28b-e8c29d3c4d71">
