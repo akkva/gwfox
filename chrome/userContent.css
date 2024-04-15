@@ -164,6 +164,7 @@ body {
   box-shadow: none !important;
   transition: background .5s !important;
   margin-right: 0 !important;
+  z-index: 8;
 }
 
 .search-inner-wrapper:hover {
@@ -181,6 +182,43 @@ body {
   box-shadow: none !important;
   border-radius: 12px !important;
   background-color: transparent !important;
+}
+
+.search-wrapper input {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+}
+
+.contentSearchSuggestionTable {
+  border-radius: 6px !important;
+  box-shadow: 0 0 5px #00000020 !important;
+}
+
+.contentSearchSuggestionTable .contentSearchHeader {
+  display: none !important;
+}
+
+.contentSearchSuggestionTable .contentSearchHeader,
+.contentSearchSuggestionTable .contentSearchSettingsButton {
+  border-color: transparent !important;
+}
+
+.contentSearchSuggestionTable .contentSearchOneOffsTable {
+  border-top: none !important;
+  background-color: transparent !important;
+}
+
+.contentSearchSuggestionTable .contentSearchOneOffItem {
+  border: none !important;
+  border-radius: 6px !important;
+  margin: 5px !important;
+  width: 32px !important;
+}
+
+.search-button {
+  border-radius: 0 12px 12px 0 !important;
 }
 
 .icon-wrapper {
@@ -274,7 +312,7 @@ body {
   backdrop-filter: blur(30px) !important;
 }
 
-.context-menu {
+.context-menu, .contentSearchSuggestionTable {
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
 }
 
@@ -286,13 +324,13 @@ body {
   height: 98% !important;
 }
 
-.top-site-outer .context-menu, .card-outer .context-menu {
+.top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable {
   backdrop-filter: blur(30px) !important;
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
 }
 
 @media (prefers-color-scheme: dark) {
-.context-menu {
+.context-menu, .contentSearchSuggestionTable {
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
   border: 1px solid rgba(235, 245, 255, .15) !important;
 }
