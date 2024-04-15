@@ -185,6 +185,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 .contentSearchSuggestionTable {
   border-radius: 6px !important;
   box-shadow: 0 0 5px #00000020 !important;
+  background: light-dark(#fff, #454545) !important;
 }
 
 .contentSearchSuggestionTable .contentSearchHeader {
