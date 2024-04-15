@@ -1440,6 +1440,8 @@ scrollbox {
 }
 
 @media (-moz-bool-pref: "uc.tweak.mac_translucent") {
+@media (-moz-bool-pref: "uc.tweak.rounded_corners"),
+       (-moz-bool-pref: "uc.tweak.vertical_tabs") {
 @-moz-document url("chrome://browser/content/browser.xhtml") {
 :root#main-window {
   background-color: transparent !important;
@@ -1457,6 +1459,7 @@ scrollbox {
   border-radius: 10px;
   pointer-events: none;
   z-index: 10;
+}
 }
 }
 }
