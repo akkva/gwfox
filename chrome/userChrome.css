@@ -283,7 +283,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 /* button */
 
-.toggle-button { --toggle-dot-background-color-on-pressed: #fff !important; }
+.toggle-button {--toggle-dot-background-color-on-pressed: #fff !important;}
 #blocked-permissions-container, #picture-in-picture-button,
 #urlbar-go-button, #private-browsing-indicator-with-label,
 #reset-pbm-toolbar-button, #nav-bar toolbarspring,
@@ -1010,13 +1010,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   background-color: transparent !important;
   appearance: menupopup !important;
 }
-:root[tabsintitlebar]:not([lwtheme]) {
-  appearance: menupopup !important;
-  #navigator-toolbox {
-  &::after {
-  appearance: menupopup !important;
-}
-}
+:root[tabsintitlebar]:not([lwtheme], [macOSNativeFullscreen]) {
   &::before {
   content: "";
   position: absolute;
@@ -1028,9 +1022,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   border-radius: 10px;
   pointer-events: none;
   z-index: 10;
-}
-  :root[inFullscreen="true"]&::before {
-  content: none;
 }
 }
 }
