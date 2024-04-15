@@ -281,6 +281,23 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   animation-duration: 150ms;
 }
 
+#searchbar {
+  min-height: 28px !important;
+  background: var(--button-hover-bgcolor) !important;
+  border-radius: 6px !important;
+  border: none !important;
+}
+
+.search-go-button, .search-panel-header, .searchbar-separator {
+  display: none !important;
+}
+
+#PopupSearchAutoComplete {
+  --panel-background: var(--bg2) !important;
+  --panel-border-color: transparent !important;
+}
+
+
 /* button */
 
 .toggle-button { --toggle-dot-background-color-on-pressed: #fff !important; }
