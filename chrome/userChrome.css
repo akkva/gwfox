@@ -283,7 +283,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 /* button */
 
-.toggle-button {--toggle-dot-background-color-on-pressed: #fff !important;}
+.toggle-button { --toggle-dot-background-color-on-pressed: #fff !important; }
 #blocked-permissions-container, #picture-in-picture-button,
 #urlbar-go-button, #private-browsing-indicator-with-label,
 #reset-pbm-toolbar-button, #nav-bar toolbarspring,
