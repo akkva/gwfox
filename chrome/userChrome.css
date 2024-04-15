@@ -530,6 +530,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin: 0 !important;
 }
 
+.tabbrowser-tab .tab-close-button {
+  margin-right: -6px !important;
+}
+
 tab > stack {
   margin: 0 1px !important;
 }
@@ -1192,10 +1196,6 @@ scrollbox {
 
 .tab-content[pinned] {
   padding-left: 8px !important;
-}
-
-.tabbrowser-tab .tab-close-button {
-  margin-right: -6px !important;
 }
 
 .tabbrowser-tab:not([selected]) .tab-close-button {
