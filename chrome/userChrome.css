@@ -288,7 +288,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #urlbar-go-button, #private-browsing-indicator-with-label,
 #reset-pbm-toolbar-button, #nav-bar toolbarspring,
 #firefox-view-button, #fxa-toolbar-menu-button,
-#userContext-icons, #userContext-label {
+#userContext-icons, #userContext-label,
+#scrollbutton-up, #scrollbutton-down {
   display: none !important;
 }
 
@@ -1054,8 +1055,7 @@ body {background: light-dark(#ffffff4d, #00000033) !important;}
   z-index: 9;
 }
 
-#alltabs-button, #new-tab-button,
-#scrollbutton-up, #scrollbutton-down {
+#alltabs-button, #new-tab-button {
   display: none !important;
 }
 
