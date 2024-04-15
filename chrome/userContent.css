@@ -102,16 +102,7 @@ input[type="radio"], .radio-check {
 }
 
 @-moz-document url("about:newtab"), url("about:home") {
-body {
-  --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
-  background-image: url("resources/light.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  @media (prefers-color-scheme: dark) {
-  background-image: url("resources/dark.svg");
-}
-}
+body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;}
 
 .context-menu {
   border-radius: 6px !important;
@@ -208,6 +199,14 @@ body {
 .contentSearchSuggestionTable .contentSearchOneOffsTable {
   border-top: none !important;
   background-color: transparent !important;
+}
+
+.contentSearchSuggestionTable .contentSearchSuggestionRow.selected {
+  background: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+}
+
+.contentSearchSuggestionTable .contentSearchSuggestionRow.selected:active {
+  background: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
 }
 
 .contentSearchSuggestionTable .contentSearchOneOffItem {
