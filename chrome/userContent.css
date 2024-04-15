@@ -218,6 +218,21 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 
 .search-button {
   border-radius: 0 12px 12px 0 !important;
+  background-color: transparent !important;
+  transition: background .5s !important;
+}
+
+.search-button:hover {
+  background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .2)) !important;
+  transition: background .5s !important;
+}
+
+
+.search-button:focus {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .1)) !important;
+  transition: background .5s !important;
 }
 
 .icon-wrapper {
