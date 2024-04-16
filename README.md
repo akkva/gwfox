@@ -1,4 +1,4 @@
-<img width="1095" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/b77beb96-a294-413a-ba87-63f1c2627eda">
+<img width="1003" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/7951c38e-21a3-47f5-a790-5244c6841647">
 
 <div align="center">
   
