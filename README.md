@@ -7,6 +7,7 @@
 </div>
 
 ## 使用方法
+
 - 把下载的 `chrome` 文件夹放入火狐 `配置文件夹` 内
 
 - 在 `about:config` 页面中搜索 `toolkit.legacyUserProfileCustomizations.stylesheets`
@@ -15,6 +16,7 @@
 - 重启火狐
 
 ## 注意事项
+
 - 默认样式工具栏按钮数量仅支持左3右4
 
 ## 样式调整
@@ -40,6 +42,8 @@
   - 右键菜单主题样式： `widget.macos.native-context-menus` 切换为 `false`
   
   - 新标签页搜索不跳转地址栏： `browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar` 切换为 `false`
+
+## 样式截图
 
 <img width="1095" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/548d38e3-5461-45f0-b8f9-e813bb304387">
   
