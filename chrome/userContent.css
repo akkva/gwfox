@@ -30,8 +30,6 @@
   --newtab-primary-element-text-color: #fff !important;
 }
 
-.toggle-button { --toggle-dot-background-color-on-pressed: #fff !important; }
-
 @-moz-document url-prefix(about:) {
 body { background-color: #292929 !important; }
 
@@ -57,6 +55,8 @@ body { background-color: #292929 !important; }
 
 .toggle-button {
   --toggle-background-color-pressed: #1280fd !important;
+  --toggle-background-color-pressed-hover: #336feb !important;
+  --toggle-dot-background-color-on-pressed: #fff !important;
 }
 
 #searchInput[focused] { 
