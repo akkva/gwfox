@@ -10,7 +10,7 @@
 - 把下载的 `chrome` 文件夹放入火狐 `配置文件夹` 内
 
 - 在 `about:config` 页面中搜索 `toolkit.legacyUserProfileCustomizations.stylesheets`
-  - `svg.context-properties.content.enabled` 并设为 `true`
+  - `svg.context-properties.content.enabled` 切换为 `true`
 
 - 重启火狐
 
@@ -19,21 +19,29 @@
 
 ## 样式调整
 
-- 书签工具栏从底部弹出：在 `about:config` 页面添加 `uc.tweak.popout_bookmarks_toolbar` 并设为 `true`
+- 以下样式在 `about:config` 页面中添加布尔值 `true` 启用
 
-- 弹出菜单/面板背景模糊：在 `about:config` 页面添加 `uc.tweak.blur` 并设为 `true`
+  - 书签工具栏从底部弹出：`uc.tweak.popout_bookmarks_toolbar`
 
-- 页面圆角：在 `about:config` 页面添加 `uc.tweak.rounded_corners` 并设为 `true`
+  - 弹出菜单/面板背景模糊：`uc.tweak.blur`
 
-- 主窗口半透明：在 `about:config` 页面添加 `uc.tweak.mac_translucent` 并设为 `true` * <s>V126</s>
+  - 页面圆角：`uc.tweak.rounded_corners`
+
+  - 主窗口半透明：`uc.tweak.mac_translucent` * <s>V126</s>
+
+  - 垂直标签页：`uc.tweak.vertical_tabs`
+
+    - 工具栏从顶部弹出：`uc.tweak.popout_toolbar`
+
+    - 自动折叠标签页：`uc.tweak.vertical_tabs_autocollapse`
+
+- 可选项
+
+  - 右键菜单主题样式： `widget.macos.native-context-menus` 切换为 `false`
+  
+  - 新标签页搜索不跳转地址栏： `browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar` 切换为 `false`
 
 <img width="1095" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/548d38e3-5461-45f0-b8f9-e813bb304387">
-
-- 垂直标签页：在 `about:config` 页面添加 `uc.tweak.vertical_tabs` 并设为 `true`
-
-  - 工具栏从顶部弹出：在 `about:config` 页面添加 `uc.tweak.popout_toolbar` 并设为 `true`
-
-  - 自动折叠标签页：在 `about:config` 页面添加 `uc.tweak.vertical_tabs_autocollapse` 并设为 `true`
   
 <img width="1095" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/1231c127-3057-48e7-9faa-c6f3d2b100a0">
 
