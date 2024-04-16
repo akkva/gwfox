@@ -492,7 +492,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #browser {
-  box-shadow: 0 0 .5px #ffffff33, 0 0 2px #ffffff12;
+  box-shadow: 0 0 .5px #000000ff, 0 0 2px #00000033;
 }
 
 .swipe-nav-icon-circle-outline,
