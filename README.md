@@ -25,7 +25,7 @@
 
 - 页面圆角：在 `about:config` 页面添加 `uc.tweak.rounded_corners` 并设为 `true`
 
-- 主窗口半透明：在 `about:config` 页面添加 `uc.tweak.mac_translucent` 并设为 `true`
+- 主窗口半透明：在 `about:config` 页面添加 `uc.tweak.mac_translucent` 并设为 `true` * <s>V126<s/>
 
 <img width="1095" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/548d38e3-5461-45f0-b8f9-e813bb304387">
 
