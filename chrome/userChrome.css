@@ -950,6 +950,7 @@ xul|search-textbox[focused],
 
 window[role="dialog"] {
   background: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  appearance: -moz-mac-unified-toolbar-window !important;
 }
 
 menupopup {
