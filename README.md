@@ -47,7 +47,7 @@
 
 <img width="1095" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/6d0381f0-4a06-4277-8312-e75ec76268d0">
 
-<img width="1095" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/37a2a291-ed8e-42ce-968a-af2aa1028231">
+<img width="1095" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/6e563e46-8d47-494a-b2ea-e04b23dba453">
 
 <img width="1095" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/0dba378d-6c3f-4596-a4ca-e5096d1d0c88">
 
