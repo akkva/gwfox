@@ -1286,6 +1286,14 @@ scrollbox {
   border-bottom-left-radius: 0 !important;
   outline: none !important;
 }
+
+@media (prefers-color-scheme: dark) {
+#PersonalToolbar {
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1px !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+}
+}
 }
 
 @media (-moz-bool-pref: "uc.tweak.popout_toolbar") {
@@ -1496,6 +1504,12 @@ scrollbox {
 @-moz-document url("chrome://browser/content/browser.xhtml") {
 body {background: light-dark(#ffffff4d, #00000033) !important;}
 :root:-moz-window-inactive body {background: var(--bg1) !important;}
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.blur") {
+#PersonalToolbar {
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
 }
 }
 }
