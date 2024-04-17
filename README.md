@@ -45,10 +45,11 @@
 
 ## 样式截图
 
-<img width="1095" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/548d38e3-5461-45f0-b8f9-e813bb304387">
-  
-<img width="1095" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/1231c127-3057-48e7-9faa-c6f3d2b100a0">
+<img width="1095" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/6d0381f0-4a06-4277-8312-e75ec76268d0">
 
-<img width="1095" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/8fd0801a-7190-4351-9309-a5d2ec5a84b5">
+<img width="1095" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/37a2a291-ed8e-42ce-968a-af2aa1028231">
 
-<img width="1095" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/6dabd1fe-d20b-411d-a28b-e8c29d3c4d71">
+<img width="1095" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/0dba378d-6c3f-4596-a4ca-e5096d1d0c88">
+
+<img width="1095" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/e8fab315-31a4-4ee6-9b0f-57823856aec0">
+
