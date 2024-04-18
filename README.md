@@ -10,15 +10,13 @@
 
 - 把下载的 `chrome` 文件夹放入火狐 `配置文件夹` 内
 
-- 在 `about:config` 页面中搜索
+- 在 `about:config` 页面中搜索以下布尔值切换为 `true`
 
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
 
   - `svg.context-properties.content.enabled`
 
   - `widget.macos.titlebar-blend-mode.behind-window` V126+
-
-  - 切换为 `true`
 
 - 重启火狐
 
