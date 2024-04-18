@@ -1454,35 +1454,21 @@ scrollbox {
 @-moz-document url("chrome://browser/content/browser.xhtml") {
 :root#main-window {
   background-color: transparent !important;
-  appearance: menupopup !important;
-}
-:root[tabsintitlebar]:not([lwtheme], [macOSNativeFullscreen]) {
-  &::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  box-shadow: inset 0 0 0 1px light-dark(#00000000, #ffffff38) !important;
-  border-radius: 10px;
-  pointer-events: none;
-  z-index: 10;
-}
+  appearance: -moz-window-titlebar !important;
 }
 }
 }
 
 @media (-moz-bool-pref: "uc.tweak.rounded_corners") {
-:root {--sidebar-background-color: light-dark(#ffffff4d, #00000033) !important;}
+:root {--sidebar-background-color: transparent !important;}
 
 #nav-bar, #PersonalToolbar {
-  background-color: light-dark(#ffffff4d, #00000033) !important;
+  background-color: transparent !important;
 }
 
 #browser {
   #tabbrowser-tabpanels {
-  background-color: light-dark(#ffffff4d, #00000033) !important;
+  background-color: transparent !important;
 }
 }
 
@@ -1502,7 +1488,7 @@ scrollbox {
 
 @media (-moz-bool-pref: "uc.tweak.vertical_tabs") {
 @-moz-document url("chrome://browser/content/browser.xhtml") {
-body {background: light-dark(#ffffff4d, #00000033) !important;}
+body {background: transparent !important;}
 :root:-moz-window-inactive body {background: var(--bg1) !important;}
 }
 }
