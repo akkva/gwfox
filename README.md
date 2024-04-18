@@ -29,7 +29,7 @@
 
   - 页面圆角：`uc.tweak.rounded_corners`
 
-  - 主窗口半透明：`uc.tweak.mac_translucent` * <s>V126</s>
+  - 主窗口半透明：`uc.tweak.mac_translucent`
 
   - 垂直标签页：`uc.tweak.vertical_tabs`
 
