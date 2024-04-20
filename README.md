@@ -41,6 +41,8 @@
     - 工具栏从顶部弹出：`uc.tweak.popout_toolbar`
 
     - 自动折叠标签页：`uc.tweak.vertical_tabs_autocollapse`
+   
+  - Arc样式：`uc.tweak.arc_style`
 
 - 可选项
 
@@ -58,3 +60,4 @@
 
 <img width="1095" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/e8fab315-31a4-4ee6-9b0f-57823856aec0">
 
+<img width="1095" alt="p6" src="https://github.com/akkva/gwfox/assets/150437642/5f1a4861-459d-441d-ac0e-6495d0205f5a">
