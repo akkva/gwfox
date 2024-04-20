@@ -306,7 +306,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #reset-pbm-toolbar-button, #nav-bar toolbarspring,
 #firefox-view-button, #fxa-toolbar-menu-button,
 #userContext-icons, #userContext-label,
-#scrollbutton-up, #scrollbutton-down {
+#scrollbutton-up, #scrollbutton-down,
+#identity-permission-box:not([hasPermissions]) #permissions-granted-icon {
   display: none !important;
 }
 
@@ -1027,7 +1028,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 @media (-moz-bool-pref: "uc.tweak.vertical_tabs") {
-@media not (-moz-bool-pref: "uc.tweak.rounded_corners") {
 @-moz-document url("chrome://browser/content/browser.xhtml") {
 body { background: light-dark(#eaebeb, #464646) !important; }
 }
@@ -1374,9 +1374,9 @@ scrollbox {
 }
 }
 }
-}
 
 @media (-moz-bool-pref: "uc.tweak.rounded_corners") {
+@media not (-moz-bool-pref: "uc.tweak.vertical_tabs") {
 :root { --sidebar-background-color: var(--bg1) !important; }
 :root[BookmarksToolbarOverlapsBrowser] {
 #browser {
@@ -1447,10 +1447,371 @@ scrollbox {
 }
 }
 }
+}
+
+@media (-moz-bool-pref: "uc.tweak.arc_style") {
+@media not (-moz-bool-pref: "uc.tweak.vertical_tabs") {
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+body { background: var(--sidebar-background-color) !important; }
+}
+
+#main-window:not([inDOMFullscreen]) #browser,
+#tab-notification-deck,
+.global-notificationbox {
+  margin-left: 190px;
+}
+
+#browser > #appcontent {
+  margin-top: -84px;
+}
+
+#browser {
+  box-shadow: none;
+  #tabbrowser-tabpanels {
+  background-color: var(--sidebar-background-color) !important;
+}
+}
+
+#appcontent browser {
+  margin: 0 6px 6px;
+  border-radius: 8px;
+  clip-path: circle(100%);
+  box-shadow: 0 0 6px #00000026;
+}
+
+#tab-notification-deck {
+  position: fixed;
+  top: 52px;
+  right: 0;
+  z-index: 9;
+}
+
+#statuspanel-label {
+  margin: 6px !important;
+  border-bottom-left-radius: 8px !important;
+}
+
+#alltabs-button, #new-tab-button {
+  display: none;
+}
+
+#nav-bar, #PersonalToolbar, #TabsToolbar {
+  background-color: var(--sidebar-background-color) !important;
+}
+
+#nav-bar {
+  width: 195px !important;
+  padding-left: 78px !important;
+}
+
+#PersonalToolbar {
+  margin-left: 290px !important;
+}
+
+#urlbar {
+  margin-top: 34px !important;
+  margin-left: -187px !important;
+  max-width: 176px !important;
+  top: 5px !important;
+}
+
+#urlbar-background, #urlbar-input-container {
+  min-height: 36px !important;
+  border-radius: 12px !important;
+}
+
+#urlbar-input {
+  margin-bottom: 1px !important;
+}
+
+#urlbar-input-container[pageproxystate=invalid] #urlbar-input {
+  mask-image: linear-gradient(to left, transparent, #fff 10ch);
+}
+
+#urlbar[focused] > #urlbar-input-container {
+  outline: none !important;
+}
+
+#urlbar > #urlbar-background {
+  outline-style: solid !important;
+  outline-color: transparent !important;
+  outline-width: 18px !important;
+}
+
+#urlbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background {
+  outline-color: var(--link-color) !important;
+  outline-width: 2px !important;
+  outline-offset: -1px !important;
+  transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
+}
+
+#urlbar:is([breakout][breakout-extend]) {
+  top: 0 !important;
+  max-width: 345px !important;
+  animation-name: panel-grow;
+  animation-duration: 150ms;
+  
+#urlbar-input {
+  margin-bottom: 0 !important;
+}
+
+#identity-box {
+  margin-top: 5px !important;
+}
+
+#page-action-buttons {
+  margin-bottom: 0 !important;
+}
+
+#tracking-protection-icon-container {
+  margin-top: 5px !important;
+}
+}
+
+#urlbar:is([breakout][breakout-extend]) #urlbar-background {
+  background: var(--bg2) !important;
+  box-shadow: 0 0 15px #00000040 !important;
+}
+
+.urlbarView {
+  width: unset !important;
+  margin: 0 5px 5px 5px !important;
+  background: var(--bg2) !important;
+  border-radius: 0 !important;
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  animation-name: panel-grow !important;
+}
+
+#urlbar-background {
+  height: unset !important;
+}
+
+#urlbar[open] #urlbar-background {
+  transition: none !important;
+}
+
+#urlbar-input::placeholder {
+  font-size: 13px !important;
+}
+
+#identity-box {
+  height: 24px !important;
+  margin-top: 5px !important;
+}
+
+#page-action-buttons {
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+#tracking-protection-icon-container {
+  margin-top: 5px !important;
+}
+
+#downloads-button,
+#PanelUI-menu-button,
+#nav-bar-overflow-button,
+#unified-extensions-button {
+  position: fixed;
+  left: 21px;
+  bottom: 15px;
+  scale: .8;
+}
+
+#nav-bar-overflow-button {
+  left: 60px;
+}
+
+#unified-extensions-button {
+  left: 98px;
+}
+
+#downloads-button {
+  left: 137px;
+}
+
+#main-window[customizing] {
+#downloads-button,
+#PanelUI-menu-button,
+#nav-bar-overflow-button,
+#unified-extensions-button {
+  right: 0;
+  visibility: collapse;
+}
+}
+
+#statuspanel-label {
+  margin: 6px !important;
+  border-bottom-left-radius: 8px !important;
+}
+
+.devtools-side-splitter,
+.devtools-horizontal-splitter {
+  display: none !important;
+}
+
+.devtools-toolbox-side-iframe {
+  &:first-child {margin-right: 0 !important;}
+  &:last-child {margin-left: 0 !important;}
+}
+
+:root[tabsintitlebar][inFullscreen] {
+#urlbar {
+  margin-left: -114px !important;
+}
+}
+
+.titlebar-buttonbox-container {
+  visibility: visible;
+}
+
+#TabsToolbar {
+  z-index: unset;
+  visibility: hidden;
+}
+
+#tabbrowser-tabs .tab-text {
+  font-size: 14px !important;
+}
+
+.tab-background {
+  border-radius: 12px !important;
+  min-height: 36px !important;
+}
+
+.tabbrowser-tab[selected]:not([pinned]) { 
+  min-width: unset !important;
+}
+
+.tab-background:not([selected]) {
+  background: transparent !important;
+}
+
+.tab-background[selected] {
+  background: rgba(170, 170, 170, .4) !important;
+}
+
+@media (prefers-color-scheme: light) {
+.tab-background[selected] {
+  background: linear-gradient(#f0f0f4, #ecedf2) !important;
+  box-shadow: 0 1px 2px #00000026 !important;
+}
+
+.tabbrowser-tab:hover .tab-background[selected] {
+  background: linear-gradient(#f0f0f4, #ecedf2) !important;
+}
+}
+
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+  margin: 30px 6px 0 !important;
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+}
+
+:root:not([customizing]) #tabbrowser-tabs {
+  visibility: visible;
+  margin-top: 47px !important;
+  position: fixed !important;
+  height: calc(100vh - 130px) !important;
+  width: 182px;
+  left: 3px;
+  --scrollbox: -webkit-box;
+}
+
+scrollbox {
+  display: var(--scrollbox, inherit);
+  -webkit-box-orient: vertical;
+  overflow: auto;
+}
+
+#tabs-newtab-button > .toolbarbutton-icon {
+  background: none !important;
+}
+
+#tabs-newtab-button {
+  width: 182px;
+  border-radius: 12px !important;
+  margin: 4px 3px 3px 3px !important;
+  min-height: 36px !important;
+}
+
+#tabs-newtab-button:hover {
+  background: var(--button-hover-bgcolor) !important;
+}
+
+#tabs-newtab-button:active {
+  background: var(--button-active-bgcolor) !important;
+}
+
+.tabbrowser-tab[pinned] .tab-icon-image {
+  margin-right: 5.5px !important;
+}
+
+.tab-content[pinned] {
+  padding-left: 8px !important;
+}
+
+.tabbrowser-tab:not([selected]) .tab-close-button {
+  display: none;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  display: flex !important;
+}
+
+
+@media (-moz-bool-pref: "uc.tweak.blur") {
+.urlbarView { background: light-dark(#f8f9f8, #262925) !important; }
+#urlbar:is([breakout][breakout-extend]) #urlbar-background {
+  background: light-dark(#f8f9f8, #262925) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+#urlbar:is([breakout][breakout-extend]) #urlbar-background {
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1px !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+}
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.popout_bookmarks_toolbar") {
+#PersonalToolbar {
+  top: unset !important;
+  left: unset !important;
+  right: unset !important;
+  width: calc(100% - 196px) !important;
+  margin: 0 0 0 196px !important;
+  background-color: var(--sidebar-background-color) !important;
+}
+
+:root[inFullscreen="true"] {
+#PersonalToolbar {
+  opacity: 0 !important;
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.blur") {
+#PersonalToolbar {
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+  width: calc(100% - 202px) !important;
+  margin: 0 6px 6px 196px !important;
+}
+}
+}
+}
+}
 
 @media (-moz-bool-pref: "uc.tweak.mac_translucent") {
 @media (-moz-bool-pref: "uc.tweak.rounded_corners"),
-       (-moz-bool-pref: "uc.tweak.vertical_tabs") {
+       (-moz-bool-pref: "uc.tweak.vertical_tabs"),
+       (-moz-bool-pref: "uc.tweak.arc_style") {
 @-moz-document url("chrome://browser/content/browser.xhtml") {
 :root#main-window {
   background-color: transparent !important;
@@ -1459,7 +1820,9 @@ scrollbox {
 }
 }
 
-@media (-moz-bool-pref: "uc.tweak.rounded_corners") {
+@media (-moz-bool-pref: "uc.tweak.rounded_corners"),
+       (-moz-bool-pref: "uc.tweak.arc_style") {
+@media not (-moz-bool-pref: "uc.tweak.vertical_tabs") {
 :root {--sidebar-background-color: transparent !important;}
 
 #nav-bar, #PersonalToolbar {
@@ -1485,6 +1848,7 @@ scrollbox {
 }
 }
 }
+}
 
 @media (-moz-bool-pref: "uc.tweak.vertical_tabs") {
 @-moz-document url("chrome://browser/content/browser.xhtml") {
@@ -1496,6 +1860,14 @@ body {background: transparent !important;}
 @media (-moz-bool-pref: "uc.tweak.blur") {
 #PersonalToolbar {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.arc_style") {
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+body {background: transparent !important;}
+:root:-moz-window-inactive, :root[inFullscreen="true"] { body {background: var(--bg1) !important;}
+}
 }
 }
 }
