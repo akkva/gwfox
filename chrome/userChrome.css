@@ -1618,7 +1618,7 @@ body { background: var(--sidebar-background-color) !important; }
 #unified-extensions-button {
   position: fixed;
   left: 21px;
-  bottom: 15px;
+  bottom: 10px;
   scale: .8;
 }
 
