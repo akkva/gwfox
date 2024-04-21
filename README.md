@@ -1,6 +1,8 @@
-# gwfox
+# <p align="center">gwfox</p>
 
-本主题适用mac，火狐V126+
+<p align="center">适用macOS，火狐V126+</p>
+
+<img width="1003" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/1e40cb25-07cd-4ff0-b685-4659dd7c9331">
 
 ## 使用方法
 
@@ -47,8 +49,6 @@
   - 新标签页搜索不跳转地址栏： `browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar` 切换为 `false`
 
 ## 样式截图
-
-<img width="1095" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/ea02960b-7626-4d8c-85eb-5b92397de02c">
 
 <img width="1095" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/6d0381f0-4a06-4277-8312-e75ec76268d0">
 
