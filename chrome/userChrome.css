@@ -1700,9 +1700,12 @@ body { background: var(--sidebar-background-color) !important; }
 }
 
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
-  margin: 30px 6px 0 !important;
-  border-bottom-left-radius: 4px !important;
-  border-bottom-right-radius: 4px !important;
+  min-height: 5px !important;
+  max-width: 5px !important;
+  margin: 29px 0 0 14px !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-radius: 5px !important;
 }
 
 :root:not([customizing]) #tabbrowser-tabs {
