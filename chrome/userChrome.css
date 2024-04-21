@@ -1642,6 +1642,14 @@ body { background: var(--sidebar-background-color) !important; }
   right: 0;
   visibility: collapse;
 }
+
+.panel-arrow, #urlbar {
+  display: none !important;
+}
+
+#nav-bar {
+  margin-bottom: -37px !important;
+}
 }
 
 #statuspanel-label {
