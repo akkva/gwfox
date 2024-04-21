@@ -1,10 +1,6 @@
-<img width="1095" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/ea02960b-7626-4d8c-85eb-5b92397de02c">
+# gwfox
 
-<div align="center">
-  
-本主题适用mac, 火狐V121+
-
-</div>
+本主题适用mac，火狐V126+
 
 ## 使用方法
 
@@ -16,7 +12,7 @@
 
   - `svg.context-properties.content.enabled`
 
-  - `widget.macos.titlebar-blend-mode.behind-window` V126+
+  - `widget.macos.titlebar-blend-mode.behind-window`
 
 - 重启火狐
 
@@ -51,6 +47,8 @@
   - 新标签页搜索不跳转地址栏： `browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar` 切换为 `false`
 
 ## 样式截图
+
+<img width="1095" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/ea02960b-7626-4d8c-85eb-5b92397de02c">
 
 <img width="1095" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/6d0381f0-4a06-4277-8312-e75ec76268d0">
 
