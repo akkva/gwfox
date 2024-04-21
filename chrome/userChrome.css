@@ -587,10 +587,10 @@ tab .tab-label {
 }
 
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
-  min-height: 5px !important;
-  max-width: 5px !important;
-  margin: 11.5px 0 0 1.5px !important;
-  border-radius: 5px !important;
+  min-height: 18px !important;
+  max-width: 2px !important;
+  margin: 5px 0 0 0 !important;
+  border-radius: 2px !important;
 }
 
 :root:not([firefoxviewhidden]) :is(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs {
@@ -1232,10 +1232,6 @@ scrollbox {
   width: var(--autocollapse-width);
 }
 
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
-  margin: 11.5px 0 0 4px !important;
-}
-
 #navigator-toolbox + #browser,
 #navigator-toolbox #nav-bar,
 #navigator-toolbox #tabbrowser-tabs,
@@ -1703,7 +1699,7 @@ body { background: var(--sidebar-background-color) !important; }
 }
 
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
-  margin: 15.5px 0 0 1.5px !important;
+  margin: 9px 0 0 0 !important;
 }
 
 :root:not([customizing]) #tabbrowser-tabs {
