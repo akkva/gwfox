@@ -1481,8 +1481,8 @@ body { background: var(--sidebar-background-color) !important; }
 
 #tab-notification-deck {
   position: fixed;
-  top: 52px;
-  right: 0;
+  top: 6px;
+  right: 6px;
   z-index: 9;
 }
 
