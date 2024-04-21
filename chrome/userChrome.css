@@ -1699,21 +1699,6 @@ body { background: var(--sidebar-background-color) !important; }
   background: transparent !important;
 }
 
-.tab-background[selected] {
-  background: rgba(170, 170, 170, .4) !important;
-}
-
-@media (prefers-color-scheme: light) {
-.tab-background[selected] {
-  background: linear-gradient(#f0f0f4, #ecedf2) !important;
-  box-shadow: 0 1px 2px #00000026 !important;
-}
-
-.tabbrowser-tab:hover .tab-background[selected] {
-  background: linear-gradient(#f0f0f4, #ecedf2) !important;
-}
-}
-
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
   margin: 30px 6px 0 !important;
   border-bottom-left-radius: 4px !important;
@@ -1875,6 +1860,21 @@ body {background: transparent !important;}
 @-moz-document url("chrome://browser/content/browser.xhtml") {
 body {background: transparent !important;}
 :root:-moz-window-inactive, :root[inFullscreen="true"] { body {background: var(--bg1) !important;}
+}
+}
+
+.tab-background[selected] {
+  background: rgba(170, 170, 170, .4) !important;
+}
+
+@media (prefers-color-scheme: light) {
+.tab-background[selected] {
+  background: linear-gradient(#f0f0f4, #ecedf2) !important;
+  box-shadow: 0 1px 2px #00000026 !important;
+}
+
+.tabbrowser-tab:hover .tab-background[selected] {
+  background: linear-gradient(#f0f0f4, #ecedf2) !important;
 }
 }
 }
