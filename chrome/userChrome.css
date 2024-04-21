@@ -1857,6 +1857,7 @@ body {background: transparent !important;}
 }
 
 @media (-moz-bool-pref: "uc.tweak.arc_style") {
+@media not (-moz-bool-pref: "uc.tweak.vertical_tabs") {
 @-moz-document url("chrome://browser/content/browser.xhtml") {
 body {background: transparent !important;}
 :root:-moz-window-inactive, :root[inFullscreen="true"] { body {background: var(--bg1) !important;}
@@ -1875,6 +1876,7 @@ body {background: transparent !important;}
 
 .tabbrowser-tab:hover .tab-background[selected] {
   background: linear-gradient(#f0f0f4, #ecedf2) !important;
+}
 }
 }
 }
