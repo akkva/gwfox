@@ -1504,7 +1504,7 @@ body { background: var(--sidebar-background-color) !important; }
 }
 
 #PersonalToolbar {
-  margin-left: 290px !important;
+  visibility: hidden;
 }
 
 #urlbar {
@@ -1677,6 +1677,9 @@ body { background: var(--sidebar-background-color) !important; }
 }
 
 #TabsToolbar {
+  max-height: 5px !important;
+  margin-top: -24px !important;
+  margin-left: 190px !important;
   z-index: unset;
   visibility: hidden;
 }
@@ -1704,7 +1707,7 @@ body { background: var(--sidebar-background-color) !important; }
 
 :root:not([customizing]) #tabbrowser-tabs {
   visibility: visible;
-  margin-top: 47px !important;
+  margin-top: 70px !important;
   position: fixed !important;
   height: calc(100vh - 130px) !important;
   width: 182px;
@@ -1775,6 +1778,7 @@ scrollbox {
   top: unset !important;
   left: unset !important;
   right: unset !important;
+  visibility: visible;
   width: calc(100% - 196px) !important;
   margin: 0 0 0 196px !important;
   background-color: var(--sidebar-background-color) !important;
