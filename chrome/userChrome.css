@@ -1069,7 +1069,7 @@ body { background: light-dark(#eaebeb, #464646) !important; }
 }
 
 #TabsToolbar {
-  margin: 0 0 -45.5px 0 !important;
+  margin: -18px 0 0 0 !important;
 }
 
 #page-action-buttons {
@@ -1131,6 +1131,7 @@ body { background: light-dark(#eaebeb, #464646) !important; }
 
 :root:not([customizing]) #tabbrowser-tabs {
   position: fixed !important;
+  margin-top: 42px !important;
   height: calc(100vh - 90px) !important;
   width: 120px;
   left: 0;
