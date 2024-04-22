@@ -2,7 +2,7 @@
 
 <p align="center">适用macOS，火狐V126+</p>
 
-<img width="1003" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/1e40cb25-07cd-4ff0-b685-4659dd7c9331">
+<img width="1003" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/8e419a39-d0af-4141-b7af-12243b1f4dfa">
 
 ## 使用方法
 
