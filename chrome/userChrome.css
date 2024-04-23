@@ -1685,6 +1685,7 @@ body { background: light-dark(#f5f6f6, #383838) !important; }
 }
 
 #nav-bar {
+  width: unset !important;
   max-height: 52px !important;
   background: light-dark(#f5f6f6, #383838) !important;
 }
