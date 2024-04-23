@@ -1044,7 +1044,7 @@ body { background: light-dark(#eaebeb, #464646) !important; }
 }
 
 #main-window[customizing] {
-body { background: light-dark(#f5f6f6, #383838) !important; }
+body { background: var(--bg1) !important; }
 #nav-bar {
   margin-left: 92px !important;
   box-shadow: none !important;
@@ -1402,7 +1402,7 @@ scrollbox {
 #nav-bar {
   opacity: 1 !important;
   top: 0 !important;
-  background: light-dark(#f5f6f6, #383838) !important;
+  background: var(--bg1) !important;
 }
 }
 }
@@ -1671,7 +1671,7 @@ body { background: var(--sidebar-background-color) !important; }
 }
 
 #main-window[customizing] {
-body { background: light-dark(#f5f6f6, #383838) !important; }
+body { background: var(--bg1) !important; }
 #downloads-button,
 #PanelUI-menu-button,
 #nav-bar-overflow-button,
@@ -1687,7 +1687,7 @@ body { background: light-dark(#f5f6f6, #383838) !important; }
 #nav-bar {
   width: unset !important;
   max-height: 52px !important;
-  background: light-dark(#f5f6f6, #383838) !important;
+  background: var(--bg1) !important;
 }
 }
 
@@ -1718,8 +1718,7 @@ body { background: light-dark(#f5f6f6, #383838) !important; }
 
 #TabsToolbar {
   max-height: 5px !important;
-  margin-top: -24px !important;
-  margin-left: 190px !important;
+  margin: -24px 0 -45.5px 190px !important;
   z-index: unset;
   visibility: hidden;
 }
