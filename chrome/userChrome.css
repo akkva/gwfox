@@ -1676,8 +1676,8 @@ body { background: light-dark(#f5f6f6, #383838) !important; }
 #PanelUI-menu-button,
 #nav-bar-overflow-button,
 #unified-extensions-button {
-  right: 0;
-  visibility: collapse;
+  position: unset !important;
+  scale: 1;
 }
 
 .panel-arrow, #urlbar {
