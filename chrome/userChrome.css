@@ -1872,6 +1872,8 @@ scrollbox {
        (-moz-bool-pref: "uc.tweak.vertical_tabs"),
        (-moz-bool-pref: "uc.tweak.arc_style") {
 @-moz-document url("chrome://browser/content/browser.xhtml") {
+body {background: light-dark(#00000000, #00000033) !important;}
+:root:-moz-window-inactive body {background: var(--bg1) !important;}
 :root#main-window {
   background-color: transparent !important;
   appearance: -moz-window-titlebar !important;
@@ -1918,13 +1920,6 @@ scrollbox {
 }
 }
 
-@media (-moz-bool-pref: "uc.tweak.vertical_tabs") {
-@-moz-document url("chrome://browser/content/browser.xhtml") {
-body {background: transparent !important;}
-:root:-moz-window-inactive body {background: var(--bg1) !important;}
-}
-}
-
 @media (-moz-bool-pref: "uc.tweak.popout_bookmarks_toolbar") {
 @media (-moz-bool-pref: "uc.tweak.blur") {
 #PersonalToolbar {
@@ -1935,14 +1930,21 @@ body {background: transparent !important;}
 
 @media (-moz-bool-pref: "uc.tweak.arc_style") {
 @media not (-moz-bool-pref: "uc.tweak.vertical_tabs") {
-@-moz-document url("chrome://browser/content/browser.xhtml") {
-body {background: transparent !important;}
-:root:-moz-window-inactive, :root[inFullscreen="true"] { body {background: var(--bg1) !important;}
-}
-}
-
 #main-window[customizing] {
 #nav-bar, body { background: transparent !important; }
+}
+
+:root[inFullscreen="true"] {
+  --sidebar-background-color: transparent !important;
+  #nav-bar, #PersonalToolbar {
+  background-color: transparent !important;
+}
+
+#browser {
+  #tabbrowser-tabpanels {
+  background-color: transparent !important;
+}
+}
 }
 
 .tab-background[selected] {
