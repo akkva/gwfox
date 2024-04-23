@@ -1670,6 +1670,32 @@ body { background: var(--sidebar-background-color) !important; }
   left: 137px;
 }
 
+:root:not([customizing]) {
+#downloads-indicator-anchor {
+  list-style-image: url("chrome://browser/skin/update-badge.svg") !important;
+  transform: rotateX(180deg);
+  scale: .9;
+  opacity: .8;
+}
+
+#unified-extensions-button {
+  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric.svg") !important;
+  scale: .7;
+  opacity: .8;
+}
+
+#nav-bar-overflow-button {
+  list-style-image: url("chrome://browser/skin/topsites.svg") !important;
+  scale: .7;
+  opacity: .8;
+}
+
+#PanelUI-menu-button {
+  list-style-image: url("chrome://devtools/skin/images/browsers/firefox.svg") !important;
+  opacity: .8;
+}
+}
+
 #main-window[customizing] {
 body { background: var(--bg1) !important; }
 #downloads-button,
