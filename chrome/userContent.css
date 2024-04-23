@@ -28,6 +28,7 @@
   --newtab-background-color-secondary: #454545 !important;
   --newtab-primary-action-background: #1280fd !important;
   --newtab-primary-element-text-color: #fff !important;
+  --color-accent-primary: #1280fd !important;
 }
 
 @-moz-document url-prefix(about:) {
@@ -70,6 +71,13 @@ search-addons > search-textbox[focused] {
 #migrationWizardDialog {
   background: #292929 !important;
 }
+}
+}
+
+@-moz-document url-prefix("about:firefoxview") {
+* {--fxview-border: light-dark(#00000012, #ffffff12) !important;}
+.search-container {
+  border-color: light-dark(#00000012, #ffffff12) !important;
 }
 }
 
