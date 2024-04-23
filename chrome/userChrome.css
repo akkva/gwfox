@@ -1003,6 +1003,12 @@ panel[type="arrow"] {
 }
 }
 
+#main-window[customizing] {
+#PersonalToolbar {
+  display: none;
+}
+}
+
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin: 5px 0 !important;
 }
@@ -1035,6 +1041,26 @@ body { background: light-dark(#eaebeb, #464646) !important; }
 #tab-notification-deck, #PersonalToolbar,
 .global-notificationbox, #nav-bar {
   margin-left: 129px;
+}
+
+#main-window[customizing] {
+body { background: light-dark(#f5f6f6, #383838) !important; }
+#nav-bar {
+  margin-left: 92px !important;
+  box-shadow: none !important;
+}
+
+#PersonalToolbar {
+  margin-left: 0 !important;
+}
+
+#TabsToolbar {
+  visibility: collapse !important;
+}
+
+.titlebar-buttonbox-container {
+  visibility: visible !important;
+}
 }
 
 #browser, #tab-notification-deck {
@@ -1371,6 +1397,14 @@ scrollbox {
 }
 }
 }
+
+#main-window[customizing] {
+#nav-bar {
+  opacity: 1 !important;
+  top: 0 !important;
+  background: light-dark(#f5f6f6, #383838) !important;
+}
+}
 }
 }
 }
@@ -1506,6 +1540,8 @@ body { background: var(--sidebar-background-color) !important; }
 
 #PersonalToolbar {
   visibility: hidden;
+  position: fixed;
+  top: 0;
 }
 
 #urlbar {
@@ -1635,6 +1671,7 @@ body { background: var(--sidebar-background-color) !important; }
 }
 
 #main-window[customizing] {
+body { background: light-dark(#f5f6f6, #383838) !important; }
 #downloads-button,
 #PanelUI-menu-button,
 #nav-bar-overflow-button,
@@ -1648,7 +1685,8 @@ body { background: var(--sidebar-background-color) !important; }
 }
 
 #nav-bar {
-  margin-bottom: -37px !important;
+  max-height: 52px !important;
+  background: light-dark(#f5f6f6, #383838) !important;
 }
 }
 
@@ -1830,6 +1868,15 @@ scrollbox {
 }
 }
 
+#customization-panelWrapper > .panel-arrowcontent,
+#customization-container {
+  background-color: transparent !important;
+}
+
+#customization-panelWrapper > .panel-arrowbox > .panel-arrow[side="top"] {
+  display: none !important;
+}
+
 :root:-moz-window-inactive, :root[inFullscreen="true"] {
   --sidebar-background-color: var(--bg1) !important;
   #nav-bar, #PersonalToolbar {
@@ -1852,9 +1899,11 @@ body {background: transparent !important;}
 }
 }
 
+@media (-moz-bool-pref: "uc.tweak.popout_bookmarks_toolbar") {
 @media (-moz-bool-pref: "uc.tweak.blur") {
 #PersonalToolbar {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+}
 }
 }
 
@@ -1864,6 +1913,10 @@ body {background: transparent !important;}
 body {background: transparent !important;}
 :root:-moz-window-inactive, :root[inFullscreen="true"] { body {background: var(--bg1) !important;}
 }
+}
+
+#main-window[customizing] {
+#nav-bar, body { background: transparent !important; }
 }
 
 .tab-background[selected] {
