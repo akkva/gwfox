@@ -58,4 +58,4 @@
 
 <img width="1095" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/e8fab315-31a4-4ee6-9b0f-57823856aec0">
 
-<img width="1095" alt="p6" src="https://github.com/akkva/gwfox/assets/150437642/5f1a4861-459d-441d-ac0e-6495d0205f5a">
+<img width="1095" alt="p6" src="https://github.com/akkva/gwfox/assets/150437642/e1c0eee4-d313-4ed7-8a0d-79087ae4bd89">
