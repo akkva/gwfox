@@ -1197,6 +1197,7 @@ scrollbox {
 }
 
 .tab-content[pinned] {
+  margin-right: 5px;
   padding-left: 8px !important;
   background-image: url("resources/pinned.svg");
   background-repeat: no-repeat;
@@ -1261,10 +1262,12 @@ scrollbox {
 }
 
 .tab-content[pinned] {
+  margin-right: 12px;
   background-position: right -5px bottom 8px;
 }
 
 #navigator-toolbox:hover .tab-content[pinned] {
+  margin-right: 5px;
   background-position: right bottom 8px;
 }
 
@@ -1313,6 +1316,7 @@ scrollbox {
 }
 
 .tab-content[pinned] {
+  margin-right: 12px !important;
   background-position: right -5px bottom 8px;
 }
 }
@@ -1832,6 +1836,7 @@ scrollbox {
 }
 
 .tab-content[pinned] {
+  margin-right: 5px;
   padding-left: 8px !important;
   background-image: url("resources/pinned.svg");
   background-repeat: no-repeat;
