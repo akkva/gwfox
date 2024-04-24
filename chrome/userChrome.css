@@ -1198,6 +1198,16 @@ scrollbox {
 
 .tab-content[pinned] {
   padding-left: 8px !important;
+  background-image: url("resources/pinned.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom 8px;
+  -moz-context-properties: fill, fill-opacity;
+  fill: currentColor;
+  fill-opacity: .6;
+  & .tab-label-container {
+  margin-right: 6px;
+  mask-image: linear-gradient(to left, transparent, #fff 3ch);
+}
 }
 
 .tabbrowser-tab:not([selected]) .tab-close-button {
@@ -1216,7 +1226,7 @@ scrollbox {
 #navigator-toolbox #PersonalToolbar{--autocollapse-width: 92px;}
 #navigator-toolbox #tab-notification-deck{--autocollapse-width: 92px;}
 #navigator-toolbox .global-notificationbox{--autocollapse-width: 92px;}
-#navigator-toolbox .tab-content{--autocollapse-margin: 0 20px 0 22.5px;}
+#navigator-toolbox .tab-content{--autocollapse-margin: 0 15px 0 22.5px;}
 #navigator-toolbox:hover + #browser{--autocollapse-width: 160px;}
 #navigator-toolbox:hover #tabbrowser-tabs{--autocollapse-width: 151px;}
 #navigator-toolbox:hover #tabs-newtab-button{--autocollapse-width: 151px;}
@@ -1248,6 +1258,14 @@ scrollbox {
 
 #tabbrowser-tabs:hover .tab-close-button {
   visibility: visible;
+}
+
+.tab-content[pinned] {
+  background-position: right -5px bottom 8px;
+}
+
+#navigator-toolbox:hover .tab-content[pinned] {
+  background-position: right bottom 8px;
 }
 
 .tab-content {
@@ -1291,7 +1309,11 @@ scrollbox {
 }
 
 .tab-content {
-  margin:  0 20px 0 22.5px !important;
+  margin:  0 15px 0 22.5px !important;
+}
+
+.tab-content[pinned] {
+  background-position: right -5px bottom 8px;
 }
 }
 
@@ -1811,6 +1833,16 @@ scrollbox {
 
 .tab-content[pinned] {
   padding-left: 8px !important;
+  background-image: url("resources/pinned.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom 12px;
+  -moz-context-properties: fill, fill-opacity;
+  fill: currentColor;
+  fill-opacity: .6;
+  & .tab-label-container {
+  margin-right: 6px;
+  mask-image: linear-gradient(to left, transparent, #fff 3ch);
+}
 }
 
 .tabbrowser-tab:not([selected]) .tab-close-button {
