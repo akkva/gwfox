@@ -1,8 +1,4 @@
-# <p align="center">gwfox</p>
-
-<p align="center">适用macOS，火狐V126+</p>
-
-<img width="1003" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/8e419a39-d0af-4141-b7af-12243b1f4dfa">
+<img width="1095" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/b029f9c2-c189-4d1c-920d-a416a2ea041b">
 
 ## 使用方法
 
@@ -19,6 +15,8 @@
 - 重启火狐
 
 ## 注意事项
+
+- 本主题适用macOS，火狐V126+
 
 - 默认样式工具栏按钮数量仅支持左3右4
 
