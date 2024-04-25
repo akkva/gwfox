@@ -1,6 +1,6 @@
 <img width="1003" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/9435bcff-89c8-48b7-b67b-0f23a13e8c99">
 
-## 注意事项
+# gwfox
 
 - 本主题适用macOS，火狐V126+
 
