@@ -50,12 +50,10 @@
 
 ## 样式截图
 
-<img width="1095" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/6d0381f0-4a06-4277-8312-e75ec76268d0">
+<img width="1095" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/16955bc4-5d28-4f26-ba46-cb4fb90dac69">
 
-<img width="1095" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/6e563e46-8d47-494a-b2ea-e04b23dba453">
+<img width="1095" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/541e34c5-16ef-405b-abf2-3edc64c8654e">
 
-<img width="1095" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/0dba378d-6c3f-4596-a4ca-e5096d1d0c88">
+<img width="1095" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/5dd5ae83-530e-49cc-b74b-6200a8763226">
 
-<img width="1095" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/e8fab315-31a4-4ee6-9b0f-57823856aec0">
-
-<img width="1095" alt="p6" src="https://github.com/akkva/gwfox/assets/150437642/e1c0eee4-d313-4ed7-8a0d-79087ae4bd89">
+<img width="1095" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/74fd6ccd-d5ee-4a7e-8d2e-c5e64ba09049">
