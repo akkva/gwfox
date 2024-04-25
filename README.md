@@ -1,5 +1,11 @@
 <img width="1003" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/9435bcff-89c8-48b7-b67b-0f23a13e8c99">
 
+## 注意事项
+
+- 本主题适用macOS，火狐V126+
+
+- 默认样式工具栏按钮数量仅支持左3右4
+
 ## 使用方法
 
 - 把下载的 `chrome` 文件夹放入火狐 `配置文件夹` 内
@@ -13,12 +19,6 @@
   - `widget.macos.titlebar-blend-mode.behind-window`
 
 - 重启火狐
-
-## 注意事项
-
-- 本主题适用macOS，火狐V126+
-
-- 默认样式工具栏按钮数量仅支持左3右4
 
 ## 样式调整
 
