@@ -32,12 +32,6 @@
 
   - 主窗口半透明：`uc.tweak.mac_translucent`
 
-  - 垂直标签页：`uc.tweak.vertical_tabs`
-
-    - 工具栏从顶部弹出：`uc.tweak.popout_toolbar`
-
-    - 自动折叠标签页：`uc.tweak.vertical_tabs_autocollapse`
-   
   - Arc样式：`uc.tweak.arc_style`
 
 - 可选项
@@ -50,8 +44,4 @@
 
 <img width="1095" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/16955bc4-5d28-4f26-ba46-cb4fb90dac69">
 
-<img width="1095" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/541e34c5-16ef-405b-abf2-3edc64c8654e">
-
-<img width="1095" alt="p4" src="https://github.com/akkva/gwfox/assets/150437642/5dd5ae83-530e-49cc-b74b-6200a8763226">
-
-<img width="1095" alt="p5" src="https://github.com/akkva/gwfox/assets/150437642/74fd6ccd-d5ee-4a7e-8d2e-c5e64ba09049">
+<img width="1095" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/74fd6ccd-d5ee-4a7e-8d2e-c5e64ba09049">
