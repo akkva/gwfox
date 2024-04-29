@@ -1,5 +1,3 @@
-<img width="1003" alt="p1" src="https://github.com/akkva/gwfox/assets/150437642/9435bcff-89c8-48b7-b67b-0f23a13e8c99">
-
 # gwfox
 
 - 本主题适用macOS，火狐V126+
@@ -42,6 +40,4 @@
 
 ## 样式截图
 
-<img width="1095" alt="p2" src="https://github.com/akkva/gwfox/assets/150437642/16955bc4-5d28-4f26-ba46-cb4fb90dac69">
-
-<img width="1095" alt="p3" src="https://github.com/akkva/gwfox/assets/150437642/74fd6ccd-d5ee-4a7e-8d2e-c5e64ba09049">
+![p1](https://github.com/akkva/gwfox/assets/150437642/6345e70c-6714-458e-a342-fd5c1be0b3d6)
