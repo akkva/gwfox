@@ -40,6 +40,10 @@
   will-change: unset !important;
 }
 
+:root[macOSNativeFullscreen] #navigator-toolbox {
+  transform: none !important;
+}
+
 .titlebar-buttonbox-container {
   position: absolute !important;
   left: 7px;
@@ -1001,12 +1005,6 @@ panel[type="arrow"] {
   transition: .2s;
 }
 
-:root[inFullscreen="true"] {
-#PersonalToolbar {
-  opacity: 0;
-}
-}
-
 #main-window[customizing] {
 #PersonalToolbar {
   display: none;
@@ -1481,12 +1479,6 @@ scrollbox {
   background-color: var(--sidebar-background-color) !important;
 }
 
-:root[inFullscreen="true"] {
-#PersonalToolbar {
-  opacity: 0 !important;
-}
-}
-
 @media (-moz-bool-pref: "uc.tweak.blur") {
 #PersonalToolbar {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
@@ -1527,7 +1519,7 @@ body {background: light-dark(#00000000, #00000033) !important;}
   display: none !important;
 }
 
-:root:-moz-window-inactive, :root[inFullscreen="true"] {
+:root:-moz-window-inactive {
   --sidebar-background-color: var(--bg1) !important;
   #nav-bar, #PersonalToolbar {
   background-color: var(--bg1) !important;
@@ -1558,19 +1550,6 @@ body {background: light-dark(#00000000, #00000033) !important;}
 @media (-moz-bool-pref: "uc.tweak.arc_style") {
 #main-window[customizing] {
 #nav-bar, body { background: transparent !important; }
-}
-
-:root[inFullscreen="true"] {
-  --sidebar-background-color: transparent !important;
-  #nav-bar, #PersonalToolbar {
-  background-color: transparent !important;
-}
-
-#browser {
-  #tabbrowser-tabpanels {
-  background-color: transparent !important;
-}
-}
 }
 
 .tab-background[selected] {
