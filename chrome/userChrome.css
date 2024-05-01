@@ -1202,6 +1202,10 @@ body { background: var(--sidebar-background-color) !important; }
   top: 5px !important;
 }
 
+#urlbar-search-mode-indicator {
+  margin-top: 6px !important;
+}
+
 #urlbar-background, #urlbar-input-container {
   min-height: 36px !important;
   border-radius: 12px !important;
