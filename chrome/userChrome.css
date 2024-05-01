@@ -116,6 +116,28 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   padding: 4px 7px !important;
 }
 
+@media not (-moz-bool-pref: "uc.tweak.arc_style") {
+#main-window[customizing] {
+#nav-bar [id^=wrapper-customizableui-special-spring] {
+  display: none !important;
+}
+
+#TabsToolbar,
+#nav-bar-customization-target {
+  visibility: hidden;
+}
+
+#downloads-button, #alltabs-button,
+#PanelUI-menu-button, #back-button,
+#nav-bar-overflow-button, #forward-button,
+#unified-extensions-button, #reload-button,
+#tabbrowser-tabs, #urlbar, #new-tab-button,
+.titlebar-buttonbox-container, #tabs-newtab-button {
+  visibility: visible;
+}
+}
+}
+
 /* urlbar */
 
 #urlbar {
