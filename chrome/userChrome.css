@@ -386,6 +386,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   display: flex !important;
 }
 
+#downloads-indicator-progress-outer {
+  border: 1.5px solid light-dark(#525252, #c9c9cb) !important;
+  width: 17px !important;
+  height: 17px !important;
+}
+
 .webextension-browser-action {
   border-radius: 6px !important;
   margin-bottom: 4px !important;
