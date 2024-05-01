@@ -1106,6 +1106,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #statuspanel-label {
   margin: 4px !important;
   border-bottom-left-radius: 8px !important;
+#statuspanel:not([mirror]) > &:-moz-locale-dir(rtl),
+#statuspanel[mirror] > &:-moz-locale-dir(ltr) {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 8px !important;
+}
 }
 
 .urlbarView {
@@ -1174,6 +1179,11 @@ body { background: var(--sidebar-background-color) !important; }
 #statuspanel-label {
   margin: 6px !important;
   border-bottom-left-radius: 8px !important;
+#statuspanel:not([mirror]) > &:-moz-locale-dir(rtl),
+#statuspanel[mirror] > &:-moz-locale-dir(ltr) {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 8px !important;
+}
 }
 
 #alltabs-button, #new-tab-button {
@@ -1371,11 +1381,6 @@ body { background: var(--bg1) !important; }
   max-height: 52px !important;
   background: var(--bg1) !important;
 }
-}
-
-#statuspanel-label {
-  margin: 6px !important;
-  border-bottom-left-radius: 8px !important;
 }
 
 .devtools-side-splitter,
