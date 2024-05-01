@@ -1311,6 +1311,7 @@ body { background: var(--sidebar-background-color) !important; }
 
 #nav-bar-overflow-button {
   left: 60px;
+  display: flex !important;
 }
 
 #unified-extensions-button {
