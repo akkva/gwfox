@@ -360,6 +360,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   background-color: var(--button-active-bgcolor) !important;
 }
 
+#downloads-button {
+  display: flex !important;
+}
+
 .webextension-browser-action {
   border-radius: 6px !important;
   margin-bottom: 4px !important;
