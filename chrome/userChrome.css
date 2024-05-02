@@ -839,14 +839,57 @@ richlistbox {
 
 findbar {
   position: absolute !important;
-  display: flex !important;
   top: 0;
-  right: 20px;
-  width: 780px !important;
+  right: 15px;
+  width: calc(100% - 15px) !important;
+  height: 70px !important;
   border: none !important;
+  background: none !important;
+  flex-direction: row-reverse;
+  white-space: nowrap;
+}
+
+findbar::after {
+  content: "";
+  display: flex;
+  flex-grow: 100;
+}
+
+.findbar-closebutton {
+  position: fixed;
+  right: 30px;
+  margin-top: 7px !important;
+  background: none !important;
+  z-index: 1;
+}
+
+.findbar-closebutton > image {
+  padding: 5px;
+  max-height: 24px !important;
+  max-width: 24px !important;
+}
+
+.findbar-closebutton:hover > image{
+  background: var(--button-hover-bgcolor);
+  border-radius: 5px;
+}
+
+.findbar-closebutton:active > image{
+  background: var(--button-active-bgcolor);
+}
+
+.findbar-container {
+  height: 42px !important;
+  margin-right: 15px;
+  overflow-inline: visible !important;
+  flex-direction: row-reverse;
   border-radius: 8px !important;
-  box-shadow: 0 10px 10px hsl(0deg 0% 0% / .15) !important;
   background: var(--bg2) !important;
+  box-shadow: 0 10px 10px hsl(0deg 0% 0% / .15) !important;
+}
+
+findbar > .findbar-container > hbox {
+  margin-right: 30px;
 }
 
 .findbar-textbox, .findbar-textbox:-moz-window-inactive {
@@ -868,8 +911,6 @@ findbar {
   transition: all .3s cubic-bezier(1, 0, 0, 1) !important;
   box-shadow: none !important;
 }
-
-.found-matches { width: 100% !important; }
 
 #search-box, xul|search-textbox {
   appearance: none !important;
@@ -977,7 +1018,7 @@ xul|search-textbox[focused],
   border-radius: 0 !important;
 }
 
-.urlbarView, findbar, #statuspanel-label {
+.urlbarView, .findbar-container, #statuspanel-label {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
@@ -1011,7 +1052,7 @@ panel[type="arrow"] {
 }
 
 @media (prefers-color-scheme: dark) {
-.urlbarView, findbar, .dialogBox, #statuspanel-label {
+.urlbarView, .findbar-container, .dialogBox, #statuspanel-label {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
