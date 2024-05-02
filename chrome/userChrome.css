@@ -869,12 +869,12 @@ findbar::after {
   max-width: 24px !important;
 }
 
-.findbar-closebutton:hover > image{
+.findbar-closebutton:hover > image {
   background: var(--button-hover-bgcolor);
   border-radius: 5px;
 }
 
-.findbar-closebutton:active > image{
+.findbar-closebutton:active > image {
   background: var(--button-active-bgcolor);
 }
 
@@ -888,7 +888,7 @@ findbar::after {
   box-shadow: 0 10px 10px hsl(0deg 0% 0% / .15) !important;
 }
 
-findbar > .findbar-container > hbox {
+.findbar-container > hbox {
   margin-right: 30px;
 }
 
