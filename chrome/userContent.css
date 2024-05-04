@@ -1,6 +1,7 @@
 :root {
   --in-content-page-background: #fff !important;
   --newtab-background-color: #fff !important;
+  --in-content-box-border-color: light-dark(#d7d7db, #535353) !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -75,13 +76,17 @@ search-addons > search-textbox[focused] {
 }
 
 @-moz-document url-prefix("about:firefoxview") {
-* {--fxview-border: light-dark(#00000012, #ffffff12) !important;}
+* {--fxview-border: light-dark(#d7d7db, #535353) !important;}
 .search-container {
-  border-color: light-dark(#00000012, #ffffff12) !important;
+  border-color: light-dark(#d7d7db, #535353) !important;
 }
 }
 
 @-moz-document url-prefix(about:) {
+search-textbox {
+  border-color: light-dark(#d7d7db, #535353) !important;
+}
+
 .checkbox-check:not([native]) {
   appearance: none !important;
   background-color: transparent !important;
