@@ -1472,6 +1472,10 @@ body { background: var(--bg1) !important; }
   margin: 9px 0 0 0 !important;
 }
 
+#tabbrowser-tabs[movingtab] > #tabbrowser-arrowscrollbox > .tabbrowser-tab {
+  transform: none !important;
+}
+
 :root:not([customizing]) #tabbrowser-tabs {
   visibility: visible;
   margin-top: 70px !important;
