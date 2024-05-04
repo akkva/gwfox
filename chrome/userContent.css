@@ -32,7 +32,7 @@
   --color-accent-primary: #1280fd !important;
 }
 
-.home-section .section .sponsored-checkbox:hover {
+.home-section .section .sponsored-checkbox:checked:hover {
   background-color: #436ee3 !important;
 }
 
