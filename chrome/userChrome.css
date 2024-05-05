@@ -1315,6 +1315,10 @@ body { background: var(--sidebar-background-color) !important; }
   box-shadow: 0 0 15px #00000040 !important;
 }
 
+#urlbar:hover #tracking-protection-icon-container:not(:hover, :active, [open])::after {
+  top: 5px;
+}
+
 .urlbarView {
   width: unset !important;
   margin: 0 5px 5px 5px !important;
@@ -1341,8 +1345,19 @@ body { background: var(--sidebar-background-color) !important; }
 }
 
 #identity-box {
-  height: 24px !important;
-  margin-top: 5px !important;
+  height: 28px !important;
+  margin-top: 3px !important;
+  border-radius: 9px !important;
+}
+
+.urlbar-page-action {
+  height: 28px !important;
+  border-radius: 9px !important;
+  padding: 6px !important;
+}
+
+#notification-popup-box {
+  margin-top: 0 !important;
 }
 
 #page-action-buttons {
@@ -1351,7 +1366,9 @@ body { background: var(--sidebar-background-color) !important; }
 }
 
 #tracking-protection-icon-container {
-  margin-top: 5px !important;
+  margin-top: 3px !important;
+  height: 28px !important;
+  border-radius: 9px !important;
 }
 
 #downloads-button,
