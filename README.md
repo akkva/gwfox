@@ -32,4 +32,4 @@
 
 - 重启火狐
 
-[02.webm](https://github.com/akkva/gwfox/assets/150437642/999f1f9c-e19b-47c4-908c-8c1106b1abb6)
+[02.webm](https://github.com/akkva/gwfox/assets/150437642/e639b73e-50dc-4801-b1a7-0256d9db5107)
