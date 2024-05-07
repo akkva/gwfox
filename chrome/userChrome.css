@@ -1455,6 +1455,10 @@ scrollbox {
   list-style-image: url("resources/forward.svg") !important;
 }
 
+#page-action-buttons {
+  margin-right: 26px !important;
+}
+
 #urlbar {
   margin-top: -2px !important;
   margin-left: 0 !important;
@@ -1465,10 +1469,10 @@ scrollbox {
 #urlbar:is([breakout][breakout-extend]) {
   max-width: 385px !important;
   z-index: 9 !important;
-}
-
+  
 #page-action-buttons {
-  margin-right: 26px !important;
+  margin-right: 0 !important;
+}
 }
 
 #alltabs-button > .toolbarbutton-badge-stack {
@@ -1518,5 +1522,3 @@ scrollbox {
   margin-right: 153px !important;
 }
 }
-
-
