@@ -80,7 +80,7 @@
 
 #main-window:not([inDOMFullscreen]) #browser {
   transition: .2s;
-  margin-top: -82px;
+  margin-top: -79px;
   clip-path: circle(100%);
   #tabbrowser-tabpanels {
   background-color: transparent !important;
@@ -112,7 +112,7 @@
 :is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
   position: fixed !important;
   left: 72px;
-  top: 10px;
+  top: 8px;
 }
 }
 
@@ -221,7 +221,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   --urlbar-toolbar-height: 28px !important;
   --urlbar-box-bgcolor: var(--button-hover-bgcolor) !important;
   margin-bottom: -8px !important;
-  margin-top: 34px !important;
+  margin-top: 31px !important;
   margin-left: -211px !important;
   max-width: 201px !important;
   left: 0 !important;
@@ -698,7 +698,7 @@ tab .tab-label {
 
 :root:not([customizing]) #tabbrowser-tabs {
   visibility: visible;
-  margin-top: 68px !important;
+  margin-top: 65px !important;
   position: fixed !important;
   height: calc(100vh - 139px) !important;
   width: 207px;
@@ -828,6 +828,16 @@ scrollbox {
 #nav-bar-overflow-button {
   left: 71px;
   display: flex !important;
+}
+
+#reload-button,
+#stop-button {
+  margin-top: -2px !important;
+}
+
+#back-button,
+#forward-button {
+  margin-top: -3px !important;
 }
 }
 
@@ -1522,3 +1532,5 @@ scrollbox {
   margin-right: 153px !important;
 }
 }
+
+
