@@ -680,10 +680,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   min-height: 36px !important;
 }
 
-.tabbrowser-tab {
-  margin: 0 !important;
-}
-
 .tabbrowser-tab .tab-close-button {
   margin-right: -6px !important;
 }
@@ -696,7 +692,7 @@ tab .tab-label {
   font-size: 14px !important;
 }
 
-:root:not([customizing]) #tabbrowser-tabs {
+:root:not([customizing], [titlepreface=""]) #tabbrowser-tabs {
   visibility: visible;
   margin-top: 65px !important;
   position: fixed !important;
@@ -821,6 +817,15 @@ scrollbox {
   transform: none !important;
 }
 
+.tabbrowser-tab {
+  margin: 0 !important;
+}
+
+#tabbrowser-tabs {
+  padding-inline-start: 0 !important;
+  margin-inline-start: 4px !important;
+}
+
 #alltabs-button, #new-tab-button {
   display: none !important;
 }
@@ -839,11 +844,6 @@ scrollbox {
 #forward-button {
   margin-top: -3px !important;
 }
-}
-
-:root:not([firefoxviewhidden]) :is(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs {
-  padding-inline-start: 0 !important;
-  margin-inline-start: 4px !important;
 }
 
 /* popup */
@@ -1356,16 +1356,9 @@ xul|search-textbox[focused],
 }
 
 #tabbrowser-tabs {
-  margin-top: unset !important;
+  visibility: visible;
   margin-bottom: -4px !important;
-  position: unset !important;
-  height: unset !important;
-  width: unset !important;
-  --scrollbox: unset !important;
-}
-
-scrollbox {
-  overflow: unset !important;
+  border-inline-start: none !important;
 }
 
 .tab-background:not([selected]) {
@@ -1391,6 +1384,10 @@ scrollbox {
 .tabbrowser-tab:hover .tab-background[selected] {
   background: linear-gradient(#f0f0f4, #ecedf2) !important;
 }
+}
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+  margin-inline-start: 0 !important;
 }
 
 #tabbrowser-tabs[movingtab] {
@@ -1532,5 +1529,3 @@ scrollbox {
   margin-right: 153px !important;
 }
 }
-
-
