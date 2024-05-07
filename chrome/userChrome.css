@@ -204,7 +204,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   scale: 1;
 }
 
-.panel-arrow, #urlbar, #PersonalToolbar {
+.panel-arrow, #PersonalToolbar,
+#nav-bar [id^=wrapper-customizableui-special-spring] {
   display: none !important;
 }
 
