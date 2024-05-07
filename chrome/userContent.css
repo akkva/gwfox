@@ -2,6 +2,7 @@
   --in-content-page-background: #fff !important;
   --newtab-background-color: #fff !important;
   --in-content-box-border-color: light-dark(#d7d7db, #535353) !important;
+  --newtab-background-color-secondary: transparent !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,7 +27,6 @@
   --brand-color-accent-hover: #1280fd !important;
   --brand-color-accent-active: #417bde !important;
   --newtab-background-color: #292929 !important;
-  --newtab-background-color-secondary: #454545 !important;
   --newtab-primary-action-background: #1280fd !important;
   --newtab-primary-element-text-color: #fff !important;
   --color-accent-primary: #1280fd !important;
@@ -123,7 +123,6 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 
 .context-menu {
   border-radius: 6px !important;
-  box-shadow: 0 0 5px #00000020 !important;
   padding: 6px !important;
 }
 
@@ -201,8 +200,6 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 
 .contentSearchSuggestionTable {
   border-radius: 6px !important;
-  box-shadow: 0 0 5px #00000020 !important;
-  background: light-dark(#fff, #454545) !important;
 }
 
 .contentSearchSuggestionTable .contentSearchHeader {
@@ -259,7 +256,6 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 }
 
 .customize-menu {
-  background-color: light-dark(#fff, #454545) !important;
   border-radius: 8px !important;
 }
 
@@ -324,10 +320,6 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   background-color: light-dark(rgba(0, 0, 0, .1), rgba(255, 255, 255, .1)) !important;
 }
 
-.top-site-outer .context-menu, .card-outer .context-menu {
-  background-color: light-dark(#fff, #454545) !important;
-}
-
 .pinned .icon, .card-outer,
 .section-title-container, .logo {
   display: none !important;
@@ -336,9 +328,6 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 .pinned:hover .icon {
   display: inline-block !important;
 }
-
-@media (-moz-bool-pref: "uc.tweak.blur") {
-* {--newtab-background-color-secondary: transparent !important;}
 
 .modal, .tile, .context-menu-button.icon, .search-inner-wrapper {
   backdrop-filter: blur(30px) !important;
@@ -371,7 +360,6 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
-}
 }
 }
 }
