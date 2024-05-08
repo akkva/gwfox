@@ -91,7 +91,7 @@
   margin: 0 6px 6px;
   border-radius: 8px;
   clip-path: circle(100%);
-  box-shadow: 0 0 6px #00000026;
+  box-shadow: 1px 0 6px #00000026;
 }
 
 #navigator-toolbox {
@@ -1520,6 +1520,12 @@ xul|search-textbox[focused],
 :root[inDOMFullscreen][titlepreface=""] {
 #TabsToolbar {
   display: none;
+}
+}
+
+:root[titlepreface=""]:not([inDOMFullscreen]) {
+#appcontent browser {
+  box-shadow: 0 1.5px 6px #00000026 !important;
 }
 }
 
