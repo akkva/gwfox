@@ -1323,6 +1323,10 @@ xul|search-textbox[focused],
   transition: .2s;
 }
 
+#tab-notification-deck {
+  top: 52px;
+}
+
 #nav-bar {
   padding: 12px 3px 8px 112px !important;
   height: 54px !important;
@@ -1366,14 +1370,6 @@ xul|search-textbox[focused],
 :is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
   pointer-events: none;
   opacity: .5;
-}
-
-.tabbrowser-tab[pinned] {
-  padding-right: 5px !important;
-}
-
-#tabbrowser-tabs[haspinnedtabs] .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
-  margin-inline-start: -3.5px !important;
 }
 }
 
