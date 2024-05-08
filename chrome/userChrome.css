@@ -1362,6 +1362,13 @@ xul|search-textbox[focused],
   border-inline-start: none !important;
 }
 
+:has(#tabbrowser-tabs[overflow]) {
+:is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
+  pointer-events: none;
+  opacity: .5;
+}
+}
+
 .tab-background:not([selected]) {
   background: var(--button-hover-bgcolor) !important;
   transition: background .5s !important;
