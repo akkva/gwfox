@@ -1367,6 +1367,14 @@ xul|search-textbox[focused],
   pointer-events: none;
   opacity: .5;
 }
+
+.tabbrowser-tab[pinned] {
+  padding-right: 5px !important;
+}
+
+.tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+  margin-left: -3.5px !important;
+}
 }
 
 .tab-background:not([selected]) {
