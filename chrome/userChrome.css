@@ -51,10 +51,6 @@
 }
 }
 
-#navigator-toolbox {
-  z-index: unset !important;
-}
-
 .newTabBrowserPanel {
   padding-top: 0 !important;
 }
@@ -67,31 +63,26 @@
 
 .titlebar-buttonbox-container {
   position: absolute !important;
-  left: 0;
-  top: 16px;
+  left: 7px;
+  top: 18px;
   visibility: visible;
 }
 
-#main-window:not([inDOMFullscreen]) #browser,
-#tab-notification-deck,
-.global-notificationbox {
-  margin-left: 211px;
+#main-window:not([inDOMFullscreen]) {
+#appcontent browser {
+  margin: 0 6px 6px;
+  border-radius: 8px;
+  clip-path: circle(100%);
+  box-shadow: 0 1.5px 6px #00000026;
 }
 
-#main-window:not([inDOMFullscreen]) #browser {
+#browser {
   transition: .2s;
-  margin-top: -79px;
   clip-path: circle(100%);
   #tabbrowser-tabpanels {
   background-color: transparent !important;
 }
 }
-
-#main-window:not([inDOMFullscreen]) #appcontent browser {
-  margin: 0 6px 6px;
-  border-radius: 8px;
-  clip-path: circle(100%);
-  box-shadow: 1px 0 6px #00000026;
 }
 
 #navigator-toolbox {
@@ -100,9 +91,8 @@
 }
 
 #nav-bar {
-  padding: 12px 3px 8px 100px !important;
+  padding: 12px 3px 8px 112px !important;
   margin-top: -2px !important;
-  -moz-window-dragging: nodrag;
 
 :is([data-extensionid="userchrome-toggle@joolee.nl"]) .toolbarbutton-icon {
   list-style-image: url("resources/sidebars.svg");
@@ -111,16 +101,17 @@
 
 :is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
   position: fixed !important;
-  left: 72px;
-  top: 8px;
+  left: 84px;
+  top: 10px;
 }
 }
 
 #TabsToolbar {
-  margin: -24px 0 -45.5px 190px !important;
+  margin: 0 154px -45.5px 460px !important;
   padding: 0 !important;
   background: none !important;
-  max-height: 5px !important;
+  max-height: 42px !important;
+  z-index: 8;
   visibility: hidden;
 }
 
@@ -134,8 +125,8 @@
 
 #PersonalToolbar {
   position: fixed;
-  width: calc(100% - 223px);
-  margin: 0 6px 6px 217px !important;
+  width: calc(100% - 12px);
+  margin: 0 6px 6px 6px !important;
   height: 48px !important;
   z-index: 1;
   bottom: -32px;
@@ -187,11 +178,26 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   z-index: 8;
 }
 
+:root[inDOMFullscreen] #TabsToolbar {
+  display: none;
+}
+
 :root[inFullscreen="true"] {
 #nav-bar {
+  padding-left: 33px !important;
+  
 :is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
   left: 5px;
 }
+}
+
+#alltabs-button {
+  left: 351px;
+}
+
+#TabsToolbar {
+  margin-left: 381px !important;
+  margin-right: 153px !important;
 }
 }
 
@@ -222,11 +228,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   --urlbar-toolbar-height: 28px !important;
   --urlbar-box-bgcolor: var(--button-hover-bgcolor) !important;
   margin-bottom: -8px !important;
-  margin-top: 31px !important;
-  margin-left: -211px !important;
-  max-width: 201px !important;
+  margin-top: -2px !important;
+  margin-left: 0 !important;
+  max-width: 230px !important;
   left: 0 !important;
-  top: 5px !important;
+  top: 0 !important;
 }
 
 #urlbar-search-mode-indicator {
@@ -295,9 +301,14 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #urlbar:is([breakout][breakout-extend]) {
   top: 0 !important;
-  max-width: 345px !important;
+  max-width: 385px !important;
+  z-index: 9 !important;
   animation-name: panel-grow;
   animation-duration: 150ms;
+  
+#page-action-buttons {
+  margin-right: 0 !important;
+}
 }
 
 #urlbar:is([breakout][breakout-extend]) #urlbar-background {
@@ -307,7 +318,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 .urlbarView {
   margin: 0 5px 5px 5px !important;
-  background: light-dark(#f8f9f8, #2a2a2c) !important;
+  background: none !important;
   border-radius: 0 !important;
   border-bottom-left-radius: 12px !important;
   border-bottom-right-radius: 12px !important;
@@ -486,48 +497,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   fill: light-dark(#2d2d2d, #ececec) !important;
 }
 
-#downloads-button,
-#PanelUI-menu-button,
-#nav-bar-overflow-button,
-#unified-extensions-button {
-  position: fixed;
-  left: 32px;
-  bottom: 10px;
-  scale: .8;
-}
-
-#unified-extensions-button {
-  left: 109px;
-}
-
-#downloads-button {
-  left: 148px;
-}
-
-:root:not([customizing]) {
-#downloads-indicator-anchor {
-  list-style-image: url("chrome://browser/skin/update-badge.svg") !important;
-  transform: rotateX(180deg);
-  scale: .9;
-  opacity: .8;
-}
-
-#unified-extensions-button {
-  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric.svg") !important;
-  scale: .7;
-  opacity: .8;
-}
-
 #nav-bar-overflow-button {
-  list-style-image: url("chrome://browser/skin/topsites.svg") !important;
-  scale: .7;
-  opacity: .8;
-}
-
-#PanelUI-menu-button {
-  list-style-image: url("chrome://devtools/skin/images/browsers/firefox.svg") !important;
-  opacity: .8;
-}
+  margin-left: -4px !important;
 }
 
 #viewButton {
@@ -602,7 +573,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #page-action-buttons {
-  margin-right: 0 !important;
+  margin-right: 28px !important;
   margin-bottom: 0 !important;
 }
 
@@ -693,39 +664,68 @@ tab .tab-label {
   font-size: 14px !important;
 }
 
-:root:not([customizing], [titlepreface=""]) #tabbrowser-tabs {
+#tabbrowser-tabs {
   visibility: visible;
-  margin-top: 65px !important;
-  position: fixed !important;
-  height: calc(100vh - 139px) !important;
-  width: 207px;
+  margin-bottom: -4px !important;
   border-inline-start: none !important;
-  left: 1px;
-  -moz-window-dragging: drag;
-  --scrollbox: -webkit-box;
 }
 
-scrollbox {
-  display: var(--scrollbox, inherit);
-  -webkit-box-orient: vertical;
-  overflow: auto;
+:has(#tabbrowser-tabs[overflow]) {
+:is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
+  pointer-events: none;
+  opacity: .5;
+}
 }
 
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+  margin-inline-start: 0 !important;
+}
+
+#tabbrowser-tabs[movingtab] {
+  margin-bottom: -19px !important;
+}
+
+#alltabs-button > .toolbarbutton-badge-stack {
+  height: 28px !important;
+  width: 28px !important;
+  padding: 6px 0 0 6px !important;
+  border-radius: 9px !important;
+}
+
+#alltabs-button {
+  visibility: visible;
+  position: absolute !important;
+  top: 8px;
+  left: 430px;
+  z-index: 5;
+  height: 36px !important;
+}
+
+#new-tab-button > .toolbarbutton-icon,
 #tabs-newtab-button > .toolbarbutton-icon {
   background: none !important;
 }
 
+#new-tab-button,
 #tabs-newtab-button {
-  width: 207px;
-  border-radius: 12px !important;
-  margin: 4px 3px 3px 3px !important;
+  visibility: visible;
+  width: 36px;
+  margin: 4px 3px -3px 3px !important;
+  max-height: 36px !important;
   min-height: 36px !important;
+  border-radius: 12px !important;
 }
 
+#tabs-newtab-button {
+  margin: 4px 3px 3px 3px !important;
+}
+
+#new-tab-button:hover,
 #tabs-newtab-button:hover {
   background: var(--button-hover-bgcolor) !important;
 }
 
+#new-tab-button:active,
 #tabs-newtab-button:active {
   background: var(--button-active-bgcolor) !important;
 }
@@ -758,7 +758,8 @@ scrollbox {
 }
 
 .tab-background:not([selected]) {
-  background: transparent !important;
+  background: var(--button-hover-bgcolor) !important;
+  transition: background .5s !important;
 }
 
 .tab-background[selected] {
@@ -811,40 +812,6 @@ scrollbox {
   max-width: 2px !important;
   margin: 9px 0 0 0 !important;
   border-radius: 2px !important;
-}
-
-:root:not([titlepreface=""]) {
-#tabbrowser-tabs[movingtab] > #tabbrowser-arrowscrollbox > .tabbrowser-tab {
-  transform: none !important;
-}
-
-.tabbrowser-tab {
-  margin: 0 !important;
-}
-
-#tabbrowser-tabs {
-  padding-inline-start: 0 !important;
-  margin-inline-start: 4px !important;
-}
-
-#alltabs-button, #new-tab-button {
-  display: none !important;
-}
-
-#nav-bar-overflow-button {
-  left: 71px;
-  display: flex !important;
-}
-
-#reload-button,
-#stop-button {
-  margin-top: -2px !important;
-}
-
-#back-button,
-#forward-button {
-  margin-top: -3px !important;
-}
 }
 
 /* popup */
@@ -1070,7 +1037,7 @@ richlistbox {
 
 #tab-notification-deck {
   position: fixed;
-  top: 6px;
+  top: 52px;
   right: 6px;
   z-index: 9;
 }
@@ -1267,6 +1234,14 @@ xul|search-textbox[focused],
 
 /* icons */
 
+#back-button {
+  list-style-image: url("resources/back.svg") !important;
+}
+
+#forward-button {
+  list-style-image: url("resources/forward.svg") !important;
+}
+
 #reload-button {
   list-style-image: url("resources/reload.svg") !important;
 }
@@ -1306,244 +1281,203 @@ xul|search-textbox[focused],
 
 /* tweak */
 
-:root[titlepreface=""] {
-.titlebar-buttonbox-container {
-  left: 7px;
-  top: 18px;
+:root[BookmarksToolbarOverlapsBrowser][titlepreface=""] {
+#navigator-toolbox {
+  z-index: unset !important;
+}
 }
 
+:root[titlepreface=""]:not([inDOMFullscreen]) {
 #browser,
 #tab-notification-deck,
 .global-notificationbox {
-  margin-left: 0 !important;
+  margin-left: 211px;
 }
 
 #browser {
-  margin-top: 0 !important;
   transition: .2s;
+  margin-top: -79px;
 }
 
-#tab-notification-deck {
-  top: 52px;
-}
-
-#nav-bar {
-  padding: 12px 3px 8px 112px !important;
-  height: 54px !important;
-
-:is([data-extensionid="userchrome-toggle@joolee.nl"]) .toolbarbutton-icon {
-  list-style-image: url("resources/sidebars.svg");
-  scale: 1.15;
-}
-
-:is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
-  position: fixed !important;
-  left: 84px;
-  top: 10px;
+#appcontent browser {
+  box-shadow: 1px 0 6px #00000026;
 }
 }
 
+:root:not([titlepreface=""]) {
 #nav-bar .chromeclass-location {
   -moz-window-dragging: drag;
 }
-
-#PersonalToolbar {
-  width: calc(100% - 12px);
-  margin: 0 6px 6px 6px !important;
 }
 
+:root:not([customizing])[titlepreface=""] {
 #TabsToolbar {
-  margin: 0 154px -45.5px 460px !important;
-  padding: 0 !important;
-  background: none !important;
-  max-height: 42px !important;
-  z-index: 8;
+  margin: -24px 0 -45.5px 190px !important;
+  max-height: 5px !important;
 }
 
 #tabbrowser-tabs {
   visibility: visible;
-  margin-bottom: -4px !important;
+  margin-top: 65px !important;
+  position: fixed !important;
+  height: calc(100vh - 139px) !important;
+  width: 207px;
   border-inline-start: none !important;
-}
-
-:has(#tabbrowser-tabs[overflow]) {
-:is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
-  pointer-events: none;
-  opacity: .5;
-}
+  left: 1px;
+  -moz-window-dragging: drag;
+  --scrollbox: -webkit-box;
 }
 
 .tab-background:not([selected]) {
-  background: var(--button-hover-bgcolor) !important;
-  transition: background .5s !important;
+  background: transparent !important;
 }
 
-.tabbrowser-tab:hover .tab-background {
+.tabbrowser-tab:hover .tab-background:not([selected]) {
   background: var(--button-active-bgcolor) !important;
-  transition: background .5s !important;
-}
-
-.tab-background[selected] {
-  background: rgba(170, 170, 170, .4) !important;
-}
-
-@media (prefers-color-scheme: light) {
-.tab-background[selected] {
-  background: linear-gradient(#f0f0f4, #ecedf2) !important;
-  box-shadow: 0 1px 2px #00000026 !important;
-}
-
-.tabbrowser-tab:hover .tab-background[selected] {
-  background: linear-gradient(#f0f0f4, #ecedf2) !important;
-}
-}
-
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
-  margin-inline-start: 0 !important;
-}
-
-#tabbrowser-tabs[movingtab] {
-  margin-bottom: -19px !important;
-}
-
-#tabs-newtab-button {
-  width: 36px !important;
-  margin: 4px 3px 3px 3px !important;
-  max-height: 36px !important;
 }
 
 #new-tab-button {
-  visibility: visible;
-  width: 36px !important;
-  margin: 4px 3px -3px 3px !important;
-  max-height: 36px !important;
-  min-height: 36px !important;
-  border-radius: 12px !important;
+  display: none !important;
 }
 
-#new-tab-button > .toolbarbutton-icon {
-  background: none !important;
+#urlbar {
+  margin-top: 31px !important;
+  margin-left: -211px !important;
+  max-width: 201px !important;
+  top: 5px !important;
 }
 
-#new-tab-button:hover {
-  background: var(--button-hover-bgcolor) !important;
+#downloads-indicator-anchor {
+  list-style-image: url("chrome://browser/skin/update-badge.svg") !important;
+  transform: rotateX(180deg);
+  scale: .9;
+  opacity: .8;
 }
 
-#new-tab-button:active {
-  background: var(--button-active-bgcolor) !important;
+#unified-extensions-button {
+  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric.svg") !important;
+  scale: .7;
+  opacity: .8;
+}
+
+#nav-bar-overflow-button {
+  list-style-image: url("chrome://browser/skin/topsites.svg") !important;
+  scale: .7;
+  opacity: .8;
+}
+
+#PanelUI-menu-button {
+  list-style-image: url("chrome://devtools/skin/images/browsers/firefox.svg") !important;
+  opacity: .8;
+}
+}
+
+scrollbox {
+  display: var(--scrollbox, inherit);
+  -webkit-box-orient: vertical;
+  overflow: auto;
+}
+
+:root[titlepreface=""] {
+.titlebar-buttonbox-container {
+  left: 0;
+  top: 16px;
+}
+
+#tab-notification-deck {
+  top: 6px;
+}
+
+#nav-bar {
+  padding: 12px 3px 8px 100px !important;
+  height: 87px !important;
+
+:is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
+  left: 72px;
+  top: 8px;
+}
+}
+
+#urlbar:is([breakout][breakout-extend]) {
+  max-width: 345px !important;
+}
+
+#PersonalToolbar {
+  width: calc(100% - 223px);
+  margin: 0 6px 6px 217px !important;
+}
+
+#tabbrowser-tabs[movingtab] > #tabbrowser-arrowscrollbox > .tabbrowser-tab {
+  transform: none !important;
+}
+
+.tabbrowser-tab {
+  margin: 0 !important;
+}
+
+#tabbrowser-tabs {
+  padding-inline-start: 0 !important;
+  margin-inline-start: 4px !important;
+}
+
+#alltabs-button {
+  display: none !important;
+}
+
+#page-action-buttons {
+  margin-right: 0 !important;
 }
 
 #downloads-button,
 #PanelUI-menu-button,
 #nav-bar-overflow-button,
 #unified-extensions-button {
-  position: unset;
-  scale: 1;
-}
-
-#downloads-indicator-anchor {
-  list-style-image: url("chrome://browser/skin/downloads/downloads.svg") !important;
-  transform: none;
-  scale: 1;
-  opacity: 1;
+  position: fixed;
+  left: 32px;
+  bottom: 10px;
+  scale: .8;
 }
 
 #unified-extensions-button {
-  list-style-image: url("resources/extension.svg") !important;
-  scale: 1;
-  opacity: 1;
+  left: 109px;
+}
+
+#downloads-button {
+  left: 148px;
 }
 
 #nav-bar-overflow-button {
-  list-style-image: url("chrome://global/skin/icons/chevron.svg") !important;
-  scale: 1;
-  opacity: 1;
-  margin-left: -4px !important;
+  left: 71px;
+  display: flex !important;
 }
 
-#PanelUI-menu-button {
-  list-style-image: url("chrome://browser/skin/menu.svg") !important;
-  opacity: 1;
+#reload-button,
+#stop-button {
+  margin-top: -2px !important;
+}
+
+#back-button,
+#forward-button {
+  margin-top: -3px !important;
+}
+
+#tabs-newtab-button {
+  width: 207px;
 }
 
 #back-button {
-  list-style-image: url("resources/back.svg") !important;
+  list-style-image: url("chrome://browser/skin/back.svg") !important;
 }
 
 #forward-button {
-  list-style-image: url("resources/forward.svg") !important;
-}
-
-#page-action-buttons {
-  margin-right: 28px !important;
-}
-
-#urlbar {
-  margin-top: -2px !important;
-  margin-left: 0 !important;
-  max-width: 230px !important;
-  top: 0 !important;
-}
-
-#urlbar:is([breakout][breakout-extend]) {
-  max-width: 385px !important;
-  z-index: 9 !important;
-  
-#page-action-buttons {
-  margin-right: 0 !important;
-}
-}
-
-#alltabs-button > .toolbarbutton-badge-stack {
-  height: 28px !important;
-  width: 28px !important;
-  padding: 6px 0 0 6px !important;
-  border-radius: 9px !important;
-}
-
-#alltabs-button {
-  visibility: visible;
-  position: absolute !important;
-  top: 8px;
-  left: 430px;
-  z-index: 5;
-  height: 36px !important;
-}
-}
-
-:root[BookmarksToolbarOverlapsBrowser][titlepreface=""] {
-#navigator-toolbox {
-  z-index: 1 !important;
-}
-}
-
-:root[inDOMFullscreen][titlepreface=""] {
-#TabsToolbar {
-  display: none;
-}
-}
-
-:root[titlepreface=""]:not([inDOMFullscreen]) {
-#appcontent browser {
-  box-shadow: 0 1.5px 6px #00000026 !important;
+  list-style-image: url("chrome://browser/skin/forward.svg") !important;
 }
 }
 
 :root[inFullscreen][titlepreface=""] {
 #nav-bar {
-  padding-left: 33px !important;
-  
 :is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
   left: 5px;
 }
-}
-
-#alltabs-button {
-  left: 351px;
-}
-
-#TabsToolbar {
-  margin-left: 381px !important;
-  margin-right: 153px !important;
 }
 }
