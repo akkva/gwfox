@@ -44,6 +44,18 @@
   transform: none !important;
 }
 
+:root[chromehidden~="toolbar"] {
+.browser-toolbar {
+  display: none !important;
+}
+
+#appcontent browser {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+}
+
 :root[BookmarksToolbarOverlapsBrowser] {
 #browser {
   #tabbrowser-tabpanels {
