@@ -44,18 +44,6 @@
   transform: none !important;
 }
 
-:root[chromehidden~="toolbar"] {
-.browser-toolbar {
-  display: none !important;
-}
-
-#appcontent browser {
-  margin: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-}
-}
-
 :root[BookmarksToolbarOverlapsBrowser] {
 #browser {
   #tabbrowser-tabpanels {
@@ -1006,6 +994,20 @@ tree {
   min-width: 1000px !important;
   background-color: transparent !important;
   appearance: -moz-window-titlebar !important;
+}
+
+:root#main-window[chromehidden~="toolbar"] {
+  min-width: unset !important;
+
+.browser-toolbar {
+  display: none !important;
+}
+
+#appcontent browser {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
 }
 }
 
