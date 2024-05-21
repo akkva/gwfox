@@ -1453,15 +1453,16 @@ scrollbox {
 }
 
 #unified-extensions-button {
-  left: 109px;
+  left: 110px;
 }
 
 #downloads-button {
-  left: 148px;
+  left: 149px;
 }
 
 #nav-bar-overflow-button {
-  left: 71px;
+  left: 72px;
+  margin-left: 0 !important;
   display: flex !important;
 }
 
