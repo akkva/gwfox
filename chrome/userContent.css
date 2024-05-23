@@ -7,7 +7,7 @@
 
 @media (prefers-color-scheme: dark) {
 :root {
-  --in-content-page-background: #292929 !important;
+  --in-content-page-background: #282828 !important;
   --in-content-box-background: #333 !important;
   --in-content-table-background: #252525 !important;
   --checkbox-checked-bgcolor: #1280fd !important;
@@ -26,7 +26,7 @@
   --brand-color-accent: #1280fd !important;
   --brand-color-accent-hover: #1280fd !important;
   --brand-color-accent-active: #417bde !important;
-  --newtab-background-color: #292929 !important;
+  --newtab-background-color: #282828 !important;
   --newtab-primary-action-background: #1280fd !important;
   --newtab-primary-element-text-color: #fff !important;
   --color-accent-primary: #1280fd !important;
@@ -37,7 +37,7 @@
 }
 
 @-moz-document url-prefix(about:) {
-body { background-color: #292929 !important; }
+body { background-color: #282828 !important; }
 
 * {
   --toolbar-button-foreground-active: #1280fd !important;
@@ -48,7 +48,7 @@ body { background-color: #292929 !important; }
   --popup-button-background-active: #2b2b2b !important;
   --toolbar-button-background-hover: #383838 !important;
   --toolbar-button-background-active: #2b2b2b !important;
-  --fxview-background-color: #292929 !important;
+  --fxview-background-color: #282828 !important;
 }
 
 .search-container input[type="search"] {
@@ -57,7 +57,7 @@ body { background-color: #292929 !important; }
   border-radius: 2px !important;
 }
 
-* { --in-content-page-background: #292929 !important; }
+* { --in-content-page-background: #282828 !important; }
 
 .toggle-button {
   --toggle-background-color-pressed: #1280fd !important;
@@ -74,7 +74,7 @@ search-addons > search-textbox[focused] {
 }
 
 #migrationWizardDialog {
-  background: #292929 !important;
+  background: #282828 !important;
 }
 }
 }
