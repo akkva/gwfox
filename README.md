@@ -4,11 +4,11 @@
 
 - 本主题适用macOS，火狐V126+
 
-- 工具栏按钮数量仅支持左4右4
+- 默认样式工具栏按钮数量仅支持左4右4
 
 - 书签工具栏隐藏在底部
 
-- 两个样式一键切换(详见下方视频)
+- 支持三种样式切换(详见下方视频)
 
 ## 使用方法
 
@@ -32,4 +32,12 @@
 
 - 重启火狐
 
-[02.webm](https://github.com/akkva/gwfox/assets/150437642/e639b73e-50dc-4801-b1a7-0256d9db5107)
+## 样式调整
+  
+- 紧凑模式：添加布尔值 `uc.tweak.thin_navbar` 为 `true` 启用
+
+  - 支持扩展[Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour)导航工具栏变色
+ 
+    - 设置项 `一般` 仅需勾选 `动态更新...`, `自订` 全部关闭, `进阶` 调整 `首页背景色(暗色)`
+
+[01.webm](https://github.com/akkva/gwfox/assets/150437642/cccaca80-6fcb-4ea2-b1a7-4dfbe5618474)
