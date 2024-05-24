@@ -139,12 +139,23 @@
   border-bottom-left-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
   visibility: visible;
+  overflow: initial !important;
 }
 
 #PersonalToolbar:hover {
   bottom: 0px;
   opacity: 1;
   transition: .2s;
+}
+
+#PersonalToolbar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 8px;
+  background-color: transparent; 
 }
 
 toolbarbutton.bookmark-item:not(.subviewbutton) {
@@ -1614,6 +1625,16 @@ xul|search-textbox[focused],
 .titlebar-buttonbox-container {
   visibility: hidden;
 }
+}
+
+#tabbrowser-tabs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -8px;
+  width: 8px;
+  background-color: transparent;
 }
 
 @media (prefers-color-scheme: dark) {
