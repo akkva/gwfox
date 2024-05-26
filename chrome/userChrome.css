@@ -892,7 +892,8 @@ panelmultiview, popupnotification {
   background: transparent !important;
 }
 
-.menu-iconic-left {
+#tabContextMenu .menu-iconic-left,
+#contentAreaContextMenu .menu-iconic-left {
   display: none;
 }
 
