@@ -892,6 +892,10 @@ panelmultiview, popupnotification {
   background: transparent !important;
 }
 
+.menu-iconic-left {
+  display: none;
+}
+
 menuitem, menu {
   appearance: none !important;
   border-radius: 4px !important;
