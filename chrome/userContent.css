@@ -73,6 +73,10 @@ search-addons > search-textbox[focused] {
   outline: 2px solid #1280fd !important;
 }
 
+search-textbox {
+  border-color: light-dark(#d7d7db, #535353) !important;
+}
+
 #migrationWizardDialog {
   background: #282828 !important;
 }
@@ -86,11 +90,7 @@ search-addons > search-textbox[focused] {
 }
 }
 
-@-moz-document url-prefix(about:) {
-search-textbox {
-  border-color: light-dark(#d7d7db, #535353) !important;
-}
-
+@-moz-document url-prefix(about:preferences) {
 .checkbox-check:not([native]) {
   appearance: none !important;
   background-color: transparent !important;
@@ -147,6 +147,11 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 
 .icon.icon-settings, .wordmark {
   opacity: .8 !important;
+}
+
+.icon.icon-settings:hover {
+  background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
+  backdrop-filter: blur(30px) !important;
 }
 
 .search-wrapper {
@@ -327,6 +332,10 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 
 .pinned:hover .icon {
   display: inline-block !important;
+}
+
+.wallpaper-list .wallpaper-input:checked {
+  outline-color:  #1280fd !important;
 }
 
 .modal, .tile, .context-menu-button.icon, .search-inner-wrapper {
