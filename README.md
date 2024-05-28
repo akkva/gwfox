@@ -27,6 +27,8 @@
   - 右键菜单主题样式： `widget.macos.native-context-menus` 切换为 `false`
   
   - 新标签页搜索： `browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar` 切换为 `false`
+ 
+  - 新标签页壁纸： `browser.newtabpage.activity-stream.newtabWallpapers.enabled` 切换为 `true`
 
 - 安装扩展[Userchrome Toggle](https://addons.mozilla.org/firefox/addon/userchrome-toggle)(默认设置)固定到工具栏
 
