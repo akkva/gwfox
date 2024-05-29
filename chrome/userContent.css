@@ -207,10 +207,6 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   border-radius: 6px !important;
 }
 
-.contentSearchSuggestionTable .contentSearchHeader {
-  display: none !important;
-}
-
 .contentSearchSuggestionTable .contentSearchHeader,
 .contentSearchSuggestionTable .contentSearchSettingsButton {
   border-color: transparent !important;
@@ -325,6 +321,9 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   background-color: light-dark(rgba(0, 0, 0, .1), rgba(255, 255, 255, .1)) !important;
 }
 
+.contentSearchSuggestionTable .contentSearchHeader,
+.wallpaper-list, .wallpaper-attribution,
+.wallpapers-reset, .wallpapers-section,
 .pinned .icon, .card-outer,
 .section-title-container, .logo {
   display: none !important;
@@ -334,8 +333,8 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   display: inline-block !important;
 }
 
-.wallpaper-list .wallpaper-input:checked {
-  outline-color:  #1280fd !important;
+.modalOverlayOuter {
+  background: none !important;
 }
 
 .modal, .tile, .context-menu-button.icon, .search-inner-wrapper {
@@ -369,6 +368,39 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+}
+}
+
+@media (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabWallpapers.enabled") {
+body {
+  background-image: repeating-linear-gradient(-45deg, #f09597 0 250px, #f3d7d6 0 500px) !important;
+@media (prefers-color-scheme: dark) {
+  background-image: repeating-linear-gradient(-45deg, #eb4e69 0 250px, #282828 0 500px) !important;
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.newtab_wallpapers") {
+body {
+  background-image: url("resources/light.jpg") !important;
+@media (prefers-color-scheme: dark) {
+  background-image: url("resources/dark.jpg") !important;
+}
+}
+}
+
+.tile, .context-menu-button.icon,
+.search-inner-wrapper, .modal {
+  background-color: light-dark(rgba(255, 255, 255, .5), rgba(25, 25, 25, .5)) !important;
+}
+
+.tile:hover, .icon.icon-settings:hover,
+.search-inner-wrapper:hover, .search-button:hover {
+  background-color: light-dark(rgba(255, 255, 255, .6), rgba(25, 25, 25, .6)) !important;
+}
+
+.tile:active, .search-button:focus,
+.search-inner-wrapper:active {
+  background-color: light-dark(rgba(255, 255, 255, .4), rgba(25, 25, 25, .4)) !important;
 }
 }
 }
