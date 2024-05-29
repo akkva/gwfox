@@ -29,6 +29,10 @@
   - 右键菜单主题样式：`widget.macos.native-context-menus` 切换为 `false`
  
   - 新标签页壁纸：`browser.newtabpage.activity-stream.newtabWallpapers.enabled` 切换为 `true`
+ 
+    - 定制壁纸：把壁纸命名为 `light.jpg` 和 `dark.jpg` 放入 `resources` 文件夹内
+   
+    - 添加布尔值 `uc.tweak.newtab_wallpapers` 为 `true` 启用
 
 - 安装扩展[Userchrome Toggle](https://addons.mozilla.org/firefox/addon/userchrome-toggle)(默认设置)固定到工具栏
 
@@ -40,6 +44,6 @@
 
   - 支持扩展[Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour)导航工具栏变色
  
-    - 设置项 `一般` 仅需勾选 `动态更新...`, `自订` 全部关闭, `进阶` 调整 `首页背景色(暗色)`
+    - 设置项 `一般` 仅需勾选 `动态更新...`, `自订` 全部关闭, `进阶` 调整 `首页背景色`
 
 [01.webm](https://github.com/akkva/gwfox/assets/150437642/cccaca80-6fcb-4ea2-b1a7-4dfbe5618474)
