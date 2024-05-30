@@ -1804,22 +1804,21 @@ scrollbox {
 #nav-bar-overflow-button,
 #unified-extensions-button {
   position: fixed;
-  left: 32px;
+  left: 33px;
   bottom: 10px;
   scale: .8;
 }
 
 #unified-extensions-button {
-  left: 110px;
+  left: 111px;
 }
 
 #downloads-button {
-  left: 149px;
+  left: 152px;
 }
 
 #nav-bar-overflow-button {
-  left: 72px;
-  margin-left: 0 !important;
+  left: 75px;
   display: flex !important;
 }
 
