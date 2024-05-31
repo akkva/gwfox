@@ -5,6 +5,8 @@
   --newtab-background-color-secondary: transparent !important;
 }
 
+@media not print { :root { background: none !important; } }
+
 @media (prefers-color-scheme: dark) {
 :root {
   --in-content-page-background: #282828 !important;
