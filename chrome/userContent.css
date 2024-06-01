@@ -175,7 +175,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   order: 2;
   background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   border-radius: 12px !important;
-  box-shadow: none !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .1) !important;
   transition: background .5s !important;
   margin-right: 0 !important;
   z-index: 8;
@@ -267,7 +267,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   border-radius: 12px !important;
   width: 58px !important;
   height: 58px !important;
-  box-shadow: none !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .1) !important;
   border: none !important;
   transition: background .5s !important;
 }
@@ -324,8 +324,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 }
 
 .contentSearchSuggestionTable .contentSearchHeader,
-.wallpaper-list, .wallpaper-attribution,
-.wallpapers-reset, .wallpapers-section,
+.wallpaper-attribution,
 .pinned .icon, .card-outer,
 .section-title-container, .logo {
   display: none !important;
@@ -333,6 +332,10 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 
 .pinned:hover .icon {
   display: inline-block !important;
+}
+
+.wallpaper-list .wallpaper-input:checked {
+  outline-color:  #1280fd !important;
 }
 
 .modalOverlayOuter {
@@ -374,13 +377,6 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 }
 
 @media (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabWallpapers.enabled") {
-body {
-  background-image: repeating-linear-gradient(-45deg, #f09597 0 250px, #f3d7d6 0 500px) !important;
-@media (prefers-color-scheme: dark) {
-  background-image: repeating-linear-gradient(-45deg, #eb4e69 0 250px, #282828 0 500px) !important;
-}
-}
-
 @media (-moz-bool-pref: "uc.tweak.newtab_wallpapers") {
 body {
   background-image: url("resources/light.jpg") !important;
