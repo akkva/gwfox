@@ -46,4 +46,4 @@
  
     - 设置项 `一般` 仅需勾选 `动态更新...`, `自订` 全部关闭, `进阶` 调整 `首页背景色`
 
-[01.webm](https://github.com/akkva/gwfox/assets/150437642/cccaca80-6fcb-4ea2-b1a7-4dfbe5618474)
+[01.webm](https://github.com/akkva/gwfox/assets/150437642/c5b0d51b-de4f-4387-b88b-9a83f6770b2f)
