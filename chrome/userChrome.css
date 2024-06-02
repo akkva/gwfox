@@ -107,7 +107,7 @@
 }
 
 #TabsToolbar {
-  margin: 0 154px -45.5px 454px !important;
+  margin: 0 145px -45.5px 454px !important;
   padding: 0 !important;
   background: none !important;
   max-height: 42px !important;
@@ -208,7 +208,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #TabsToolbar {
   margin-left: 375px !important;
-  margin-right: 153px !important;
 }
 }
 
