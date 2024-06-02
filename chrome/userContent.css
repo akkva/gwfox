@@ -175,7 +175,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   order: 2;
   background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   border-radius: 12px !important;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, .1) !important;
+  box-shadow: none !important;
   transition: background .5s !important;
   margin-right: 0 !important;
   z-index: 8;
@@ -267,7 +267,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   border-radius: 12px !important;
   width: 58px !important;
   height: 58px !important;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, .1) !important;
+  box-shadow: none !important;
   border: none !important;
   transition: background .5s !important;
 }
@@ -377,6 +377,10 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 }
 
 @media (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabWallpapers.enabled") {
+.tile, .search-inner-wrapper {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .1) !important;
+}
+
 @media (-moz-bool-pref: "uc.tweak.newtab_wallpapers") {
 body {
   background-image: url("resources/light.jpg") !important;
