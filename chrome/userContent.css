@@ -398,7 +398,32 @@ body {
 }
 }
 
-.tile, .context-menu-button.icon,
+.tile, .context-menu-button.icon {
+  background-color: rgba(255, 255, 255, .5) !important;
+}
+
+.context-menu-button {
+  fill: #000 !important;
+}
+
+.lightWallpaper .top-site-outer .title {
+  color: #000 !important;
+}
+
+.darkWallpaper .top-site-outer .title {
+  color: #fff !important;
+}
+
+@media (prefers-color-scheme: dark) {
+.tile, .context-menu-button.icon {
+  background-color: rgba(25, 25, 25, .5) !important;
+}
+
+.context-menu-button {
+  fill: #fff !important;
+}
+}
+
 .search-inner-wrapper, .modal {
   background-color: light-dark(rgba(255, 255, 255, .5), rgba(25, 25, 25, .5)) !important;
 }
