@@ -1251,11 +1251,11 @@ xul|search-textbox[focused],
 /* icons */
 
 #back-button {
-  list-style-image: url("resources/back.svg") !important;
+  list-style-image: url("resources/left.svg") !important;
 }
 
 #forward-button {
-  list-style-image: url("resources/forward.svg") !important;
+  list-style-image: url("resources/right.svg") !important;
 }
 
 #reload-button {
@@ -1761,7 +1761,7 @@ scrollbox {
 :root[titlepreface=""] {
 .titlebar-buttonbox-container {
   left: 0;
-  top: 16px;
+  top: 15px;
 }
 
 #tab-notification-deck {
@@ -1774,7 +1774,7 @@ scrollbox {
 
 :is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
   left: 72px;
-  top: 8px;
+  top: 7px;
 }
 }
 
@@ -1975,13 +1975,10 @@ tab .tab-label {
 }
 
 #reload-button,
-#stop-button {
-  margin-top: -2px !important;
-}
-
+#stop-button,
 #back-button,
 #forward-button {
-  margin-top: -3px !important;
+  margin-top: -2px !important;
 }
 
 #tabs-newtab-button {
@@ -1989,11 +1986,11 @@ tab .tab-label {
 }
 
 #back-button {
-  list-style-image: url("chrome://browser/skin/back.svg") !important;
+  list-style-image: url("resources/back.svg") !important;
 }
 
 #forward-button {
-  list-style-image: url("chrome://browser/skin/forward.svg") !important;
+  list-style-image: url("resources/forward.svg") !important;
 }
 }
 
