@@ -829,6 +829,7 @@ panel[type="arrow"] {
   --panel-background: transparent !important;
   --arrowpanel-background: transparent !important;
   --arrowpanel-border-radius: 0 !important;
+  --panel-padding: 0 !important;
 }
 
 @keyframes panel-grow {
