@@ -292,6 +292,14 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 :has(#sidebar-box[hidden]) {
+#nav-bar {
+  height: 53px !important;
+}
+
+#urlbar {
+  margin-top: 1px !important;
+}
+
 .urlbarView {
   width: 170% !important;
   margin: 11px 0 0 -80px !important;
