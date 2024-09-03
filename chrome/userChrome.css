@@ -1370,10 +1370,6 @@ xul|search-textbox[focused],
   top: 6px;
 }
 
-findbar {
-  margin-top: -79px !important;
-}
-
 #nav-bar {
   padding: 12px 3px 8px 100px !important;
   height: 87px !important;
