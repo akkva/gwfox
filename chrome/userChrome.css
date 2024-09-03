@@ -62,12 +62,23 @@
   visibility: visible;
 }
 
+#tabbrowser-tabbox {
+  box-shadow: none !important;
+@media (-moz-bool-pref: "sidebar.revamp") {
+  box-shadow: none !important;
+}
+}
+
 #main-window:not([inDOMFullscreen]) {
-#appcontent browser {
+#tabbrowser-tabbox browser {
   margin: 0 6px 6px;
   border-radius: 8px;
   clip-path: circle(100%);
   box-shadow: 0 1.5px 6px #00000026;
+}
+
+#tabbrowser-tabpanels {
+  margin-top: 0;
   transition: .2s;
 }
 
@@ -986,7 +997,7 @@ tree {
   display: none !important;
 }
 
-#appcontent browser {
+#tabbrowser-tabbox browser {
   margin: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -1300,8 +1311,11 @@ xul|search-textbox[focused],
 }
 
 :has(#sidebar-box:not([hidden])):not([inDOMFullscreen]) {
-#appcontent browser {
+#tabbrowser-tabbox browser {
   box-shadow: 1px 0 6px #00000026;
+}
+
+#tabbrowser-tabpanels {
   margin-top: -79px;
   transition: .2s;
 }
