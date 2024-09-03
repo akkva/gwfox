@@ -1322,15 +1322,7 @@ xul|search-textbox[focused],
 }
 
 :root:not([customizing]):has(#sidebar-box:not([hidden])) {
-#TabsToolbar {
-  margin: -24px 0 -45.5px 190px !important;
-  max-height: 5px !important;
-}
-
-#tabbrowser-tabs {
-  visibility: collapse;
-}
-
+#tabbrowser-tabs,
 #new-tab-button {
   display: none !important;
 }
