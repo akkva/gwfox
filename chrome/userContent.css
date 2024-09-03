@@ -5,8 +5,6 @@
   --newtab-background-color-secondary: transparent !important;
 }
 
-@media not print { :root { background: none !important; } }
-
 @media (prefers-color-scheme: dark) {
 :root {
   --in-content-page-background: #282828 !important;
@@ -85,6 +83,8 @@ search-textbox {
 }
 }
 
+@-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html") { :root { background: none !important; } }
+
 @-moz-document url-prefix("about:firefoxview") {
 * {--fxview-border: light-dark(#d7d7db, #535353) !important;}
 .search-container {
@@ -92,7 +92,7 @@ search-textbox {
 }
 }
 
-@-moz-document url-prefix(about:preferences) {
+@-moz-document url-prefix("about:preferences") {
 .checkbox-check:not([native]) {
   appearance: none !important;
   background-color: transparent !important;
