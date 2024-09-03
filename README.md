@@ -1,14 +1,14 @@
-<img width="1095" alt="01" src="https://github.com/akkva/gwfox/assets/150437642/95f5c60a-e552-407d-822e-397b4fa21d10">
+<img width="1195" alt="01" src="https://github.com/user-attachments/assets/b92ce426-0ef5-4d41-b1ac-e3c21b4a60b3">
 
 # gwfox
 
-- 本主题适用macOS，火狐V126+
+- 本主题适用macOS，火狐V130+
 
-- 默认样式工具栏按钮数量仅支持左4右4
+- 工具栏按钮数量仅支持左4右4
 
 - 书签工具栏隐藏在底部
 
-- 支持三种样式切换(详见下方视频)
+- 两种样式一键切换(详见下方视频)
 
 ## 使用方法
 
@@ -22,28 +22,22 @@
 
   - `widget.macos.titlebar-blend-mode.behind-window`
  
+  - `browser.tabs.allow_transparent_browser`
+ 
 - 可选项
 
   - 新标签页搜索：`browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar` 、
 
   - 右键菜单主题样式：`widget.macos.native-context-menus` 切换为 `false`
  
-  - 新标签页壁纸：`browser.newtabpage.activity-stream.newtabWallpapers.enabled` 切换为 `true`
- 
-    - 定制壁纸：把壁纸命名为 `light.jpg` 和 `dark.jpg` 放入 `resources` 文件夹内
-   
+  - 定制标签页壁纸：把壁纸命名为 `light.jpg` 和 `dark.jpg` 放入 `resources` 文件夹内
+    
     - 添加布尔值 `uc.tweak.newtab_wallpapers` 为 `true` 启用
 
-- 安装扩展[Userchrome Toggle](https://addons.mozilla.org/firefox/addon/userchrome-toggle)(默认设置)固定到工具栏
+- 安装扩展[Sidebery](https://addons.mozilla.org/firefox/addon/sidebery)固定到工具栏
+
+  - 在设置-帮助里选择 `sidebery-data.json` 导入
 
 - 重启火狐
 
-## 样式调整
-  
-- 紧凑模式：添加布尔值 `uc.tweak.thin_navbar` 为 `true` 启用
-
-  - 支持扩展[Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour)导航工具栏变色
- 
-    - 设置项 `一般` 仅需勾选 `动态更新...`, `自订` 全部关闭, `进阶` 调整 `首页背景色`
-
-[01.webm](https://github.com/akkva/gwfox/assets/150437642/c5b0d51b-de4f-4387-b88b-9a83f6770b2f)
+[01.webm](https://github.com/user-attachments/assets/7271bfca-3181-4d2b-aa77-7a38f37d12e9)
