@@ -30,6 +30,7 @@
   --newtab-primary-action-background: #1280fd !important;
   --newtab-primary-element-text-color: #fff !important;
   --color-accent-primary: #1280fd !important;
+  --color-gray-80: #333 !important;
 }
 
 .home-section .section .sponsored-checkbox:checked:hover {
