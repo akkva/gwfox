@@ -19,8 +19,6 @@
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
 
   - `svg.context-properties.content.enabled`
-
-  - `widget.macos.titlebar-blend-mode.behind-window`
  
   - `browser.tabs.allow_transparent_browser`
  
