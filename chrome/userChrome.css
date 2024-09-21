@@ -978,7 +978,6 @@ window[role="dialog"] {
 /* misc */
 
 @-moz-document url("chrome://browser/content/browser.xhtml") {
-body {background: light-dark(#00000000, #00000033) !important;}
 :root:-moz-window-inactive body {background: var(--bg1) !important;}
 
 tree {
@@ -995,7 +994,7 @@ tree {
 :root#main-window {
   min-width: 1000px !important;
   background-color: transparent !important;
-  appearance: -moz-window-titlebar !important;
+  appearance: -moz-sidebar !important;
 }
 
 :root#main-window[chromehidden~="toolbar"] {
@@ -1268,6 +1267,15 @@ xul|search-textbox[focused],
 
 #stop-button {
   list-style-image: url("resources/stop.svg") !important;
+}
+
+#alltabs-button {
+  list-style-image: url("resources/down.svg") !important;
+  
+> .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  width: unset !important;
+  margin: unset !important;
+}
 }
 
 #new-tab-button, #tabs-newtab-button {
