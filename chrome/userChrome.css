@@ -1076,12 +1076,6 @@ richlistbox {
 }
 
 @media (prefers-color-scheme: dark) {
-#urlbar:is([breakout][breakout-extend]) #urlbar-background {
-  outline: 1px solid rgba(235, 235, 235, .2) !important;
-  outline-offset: -1px !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
-}
-
 .findbar-container, .dialogBox, #statuspanel-label {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
@@ -1251,6 +1245,11 @@ xul|search-textbox[focused],
   background-color: transparent !important;
 }
 
+#sidebar-box {
+  width: 207px !important;
+  margin: 5px 0 40px 5px !important;
+}
+
 /* icons */
 
 #back-button {
@@ -1298,6 +1297,12 @@ xul|search-textbox[focused],
   height: 48px !important;
 }
 
+.tab-icon-image[src="chrome://branding/content/icon32.png"],
+.tab-icon-image[src="chrome://browser/skin/privatebrowsing/favicon.svg"] {
+  content: url("chrome://devtools/skin/images/browsers/firefox.svg");
+  opacity: .65;
+}
+
 .textbox-search-sign {
   display: inherit !important;
   width: 16px !important;
@@ -1305,11 +1310,6 @@ xul|search-textbox[focused],
   opacity: .8 !important;
   -moz-context-properties: fill;
   fill: currentColor;
-}
-
-#sidebar-box {
-  width: 207px !important;
-  margin: 5px 0 40px 5px !important;
 }
 
 /* tweak */
@@ -1539,6 +1539,14 @@ xul|search-textbox[focused],
 
 #forward-button {
   list-style-image: url("resources/forward.svg") !important;
+}
+
+@media (prefers-color-scheme: dark) {
+#urlbar:is([breakout][breakout-extend]) #urlbar-background {
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1px !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+}
 }
 }
 
