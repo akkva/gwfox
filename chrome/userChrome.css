@@ -251,7 +251,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-top: 1px !important;
   margin-bottom: -8px !important;
   margin-left: 0 !important;
-  max-width: 230px !important;
+  width: 230px !important;
   left: 0 !important;
   top: 0 !important;
 }
@@ -317,9 +317,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #urlbar:is([breakout][breakout-extend]) {
-  top: 200px !important;
-  left: 200px !important;
-  max-width: 845px !important;
+  position: fixed !important;
+  top: 20vh !important;
+  left: 15vw !important;
+  width: 65vw !important;
   animation-name: panel-grow;
   animation-duration: 150ms;
 
@@ -1437,7 +1438,7 @@ xul|search-textbox[focused],
 #urlbar {
   margin-top: 31px !important;
   margin-left: -205px !important;
-  max-width: 201px !important;
+  width: 201px !important;
   top: 5px !important;
 }
 
@@ -1463,9 +1464,10 @@ xul|search-textbox[focused],
 }
 
 #urlbar:is([breakout][breakout-extend]) {
-  top: 200px !important;
-  left: 400px !important;
-  max-width: 845px !important;
+  position: fixed !important;
+  top: 15vh !important;
+  left: 35vw !important;
+  width: 65vw !important;
 
 #identity-box, #tracking-protection-icon-container {
   margin-top: 10px !important;
