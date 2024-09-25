@@ -217,6 +217,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #TabsToolbar {
   margin-left: 375px !important;
 }
+
+:has(#urlbar:is([breakout][breakout-extend])) {
+#TabsToolbar {
+  margin-left: 145px !important;
+}
+}
 }
 
 :root[customizing] {
@@ -262,12 +268,14 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   transition: background .5s !important;
 }
 
-#urlbar:hover #urlbar-background,
-#urlbar[open] #urlbar-background {
+#urlbar:hover #urlbar-background {
   background: var(--button-active-bgcolor) !important;
-  border: none !important;
   box-shadow: none !important;
   transition: background .5s !important;
+}
+
+#urlbar[open] #urlbar-background {
+  transition: none !important;
 }
 
 .urlbar-input-container {
@@ -291,47 +299,82 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   mask-image: linear-gradient(to left, transparent, #fff 10ch);
 }
 
-:has(#sidebar-box[hidden]) {
-#nav-bar {
-  height: 53px !important;
-}
-
-#urlbar {
-  margin-top: 1px !important;
-}
-
-.urlbarView {
-  width: 170% !important;
-  margin: 11px 0 0 -80px !important;
-  border-radius: 6px !important;
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
-  backdrop-filter: blur(30px) !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
-}
-
-@media (prefers-color-scheme: dark) {
-.urlbarView {
-  outline: 1px solid rgba(235, 235, 235, .2) !important;
-  outline-offset: -1px !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
-}
-}
-
-#urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
+#urlbar[focused] > .urlbar-input-container {
   outline: none !important;
 }
 
-#urlbar > .urlbar-input-container {
+#urlbar > #urlbar-background {
   outline-style: solid !important;
   outline-color: transparent !important;
   outline-width: 18px !important;
 }
 
-#urlbar[focused] > .urlbar-input-container {
+#urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
   outline-color: var(--link-color) !important;
   outline-width: 2px !important;
   outline-offset: -1px !important;
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
+}
+
+#urlbar:is([breakout][breakout-extend]) {
+  top: 200px !important;
+  left: 200px !important;
+  max-width: 845px !important;
+  animation-name: panel-grow;
+  animation-duration: 150ms;
+
+#urlbar-input,
+#urlbar-input::placeholder {
+  font-size: 21px !important;
+}
+
+.urlbar-input-container {
+  height: 50px !important;
+& > :is(box, image) {
+  margin-top: 10px !important;
+}
+}
+
+.urlbarView-row-inner {
+   flex-wrap: nowrap !important;
+}
+  
+.urlbarView-no-wrap {
+   max-width: 50% !important;
+}
+
+#urlbar-search-mode-indicator {
+  margin-top: 13px !important;
+}
+
+#page-action-buttons {
+  margin-right: 0 !important;
+}
+}
+
+#urlbar:is([breakout][breakout-extend]) #urlbar-background {
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  backdrop-filter: blur(30px) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+}
+
+:has(#urlbar:is([breakout][breakout-extend])) {
+#sidebar-box {
+  margin-top: -45px !important;
+  transition: .2s;
+}
+
+#TabsToolbar {
+  margin-left: 224px !important;
+  transition: .2s;
+}
+
+#alltabs-button {
+  display: none !important;
+} 
+
+#urlbar-background {
+  height: unset !important;
 }
 }
 
@@ -341,6 +384,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 .urlbarView-body-inner {
   border: 0 !important;
+  border-top: 1px solid rgba(105, 105, 105, .2) !important;
 }
 
 .search-one-offs {
@@ -436,11 +480,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 .urlbarView-row:is([type=bookmark], [pinned]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-type-icon {
   display: none !important;
-}
-
-#urlbar[open] .urlbarView {
-  animation-name: panel-grow;
-  animation-duration: 200ms;
 }
 
 #searchbar {
@@ -1248,6 +1287,13 @@ xul|search-textbox[focused],
 #sidebar-box {
   width: 207px !important;
   margin: 5px 0 40px 5px !important;
+  transition: .2s;
+}
+
+:has(#sidebar-box[hidden]) {
+#nav-bar {
+  height: 53px !important;
+}
 }
 
 /* icons */
@@ -1405,17 +1451,6 @@ xul|search-textbox[focused],
   border-radius: 12px !important;
 }
 
-#urlbar:hover #urlbar-background {
-  background: var(--button-active-bgcolor) !important;
-  border: none !important;
-  box-shadow: none !important;
-  transition: background .5s !important;
-}
-
-#urlbar[open] #urlbar-background {
-  transition: none !important;
-}
-
 .urlbar-input-container {
   height: unset !important;
   min-height: 36px !important;
@@ -1427,53 +1462,14 @@ xul|search-textbox[focused],
   font-size: 13px !important;
 }
 
-#urlbar[focused] > .urlbar-input-container {
-  outline: none !important;
-}
-
-#urlbar > #urlbar-background {
-  outline-style: solid !important;
-  outline-color: transparent !important;
-  outline-width: 18px !important;
-}
-
-#urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
-  outline-color: var(--link-color) !important;
-  outline-width: 2px !important;
-  outline-offset: -1px !important;
-  transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
-}
-
 #urlbar:is([breakout][breakout-extend]) {
-  top: 0 !important;
-  max-width: 345px !important;
-  z-index: 9 !important;
-  animation-name: panel-grow;
-  animation-duration: 150ms;
-  
-#page-action-buttons {
-  margin-right: 0 !important;
-}
-}
+  top: 200px !important;
+  left: 400px !important;
+  max-width: 845px !important;
 
-#urlbar:is([breakout][breakout-extend]) #urlbar-background {
-  background: light-dark(#f8f9f8, #2a2a2c) !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+#identity-box, #tracking-protection-icon-container {
+  margin-top: 10px !important;
 }
-
-.urlbarView {
-  margin: 0 5px 5px 5px !important;
-  background: none !important;
-  border-radius: 0 !important;
-  border-bottom-left-radius: 12px !important;
-  border-bottom-right-radius: 12px !important;
-  box-shadow: none !important;
-  border: none !important;
-  outline: none !important;
-}
-
-#urlbar[open] .urlbarView {
-  animation-name: unset;
 }
 
 .urlbar-page-action {
