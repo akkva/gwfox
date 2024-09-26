@@ -343,11 +343,15 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   background: none !important;
 }
 
+.modal {
+  border-radius: 6px !important;
+}
+
 .modal, .tile, .context-menu-button.icon, .search-inner-wrapper {
   backdrop-filter: blur(30px) !important;
 }
 
-.context-menu, .contentSearchSuggestionTable {
+.modal, .context-menu, .contentSearchSuggestionTable {
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
 }
 
@@ -373,7 +377,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 }
 
 @media (prefers-color-scheme: dark) {
-.context-menu, .contentSearchSuggestionTable {
+.modal, .context-menu, .contentSearchSuggestionTable {
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
   border: 1px solid rgba(235, 245, 255, .15) !important;
 }
