@@ -33,7 +33,6 @@
   --urlbarView-highlight-color: light-dark(#000, #fff) !important;
   --input-bgcolor: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   --input-border-color: transparent !important;
-  scrollbar-color: #00000000 #00000000;
 }
 
 :root[tabsintitlebar] #titlebar {
@@ -337,11 +336,20 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 .urlbarView-row-inner {
-   flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
 }
   
 .urlbarView-no-wrap {
-   max-width: 50% !important;
+  max-width: 50% !important;
+  flex-basis: 0 !important;
+}
+
+.urlbarView-row[has-url] .urlbarView-url {
+  margin-left: 0 !important;
+}
+
+.urlbarView-row[has-url] .urlbarView-title-separator {
+  display: block !important;
 }
 
 #urlbar-search-mode-indicator {
