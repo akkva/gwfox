@@ -1422,6 +1422,12 @@ xul|search-textbox[focused],
 #navigator-toolbox {
   z-index: unset !important;
 }
+
+:has(#urlbar:is([breakout][breakout-extend]), #urlbar[usertyping]) {
+#sidebar-box {
+  margin-top: -17px !important;
+}
+}
 }
 
 :has(#sidebar-box:not([hidden])):not([inDOMFullscreen]) {
@@ -1474,6 +1480,10 @@ xul|search-textbox[focused],
 
 #tab-notification-deck {
   top: 6px;
+}
+
+#navigator-toolbox {
+  z-index: unset !important;
 }
 
 #nav-bar {
