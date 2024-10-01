@@ -58,7 +58,6 @@
   position: absolute !important;
   left: 7px;
   top: 18px;
-  visibility: visible;
 }
 
 #tabbrowser-tabbox {
@@ -116,7 +115,6 @@
   background: none !important;
   max-height: 42px !important;
   z-index: 8;
-  visibility: hidden;
 }
 
 .titlebar-spacer {
@@ -142,7 +140,6 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
   border-bottom-left-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
-  visibility: visible;
   overflow: initial !important;
 }
 
@@ -253,6 +250,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   width: 230px !important;
   left: 0 !important;
   top: 0 !important;
+}
+
+#urlbar-container {
+  -moz-window-dragging: drag;
 }
 
 #urlbar-search-mode-indicator {
@@ -775,7 +776,6 @@ tab .tab-label {
 }
 
 #tabbrowser-tabs {
-  visibility: visible;
   margin-bottom: -1px !important;
   border-inline-start: none !important;
 }
@@ -796,7 +796,6 @@ tab .tab-label {
 }
 
 #alltabs-button {
-  visibility: visible;
   position: absolute !important;
   top: 8px;
   left: 424px;
@@ -811,7 +810,6 @@ tab .tab-label {
 
 #new-tab-button,
 #tabs-newtab-button {
-  visibility: visible;
   width: 30px;
   margin: 4px 3px -3px 3px !important;
   max-height: 30px !important;
@@ -1497,6 +1495,10 @@ xul|search-textbox[focused],
 
 #urlbar-search-mode-indicator {
   margin-top: 6px !important;
+}
+
+#urlbar-container {
+  -moz-window-dragging: no-drag !important;
 }
 
 #urlbar-background {
