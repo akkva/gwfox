@@ -372,6 +372,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   background-color: light-dark(rgba(255, 255, 255, .95), rgba(55, 55, 55, .95)) !important;
   margin: 0 !important;
   width: 100% !important;
+  height: 100% !important;
   inset-inline-start: 0 !important;
   padding: 10px !important;
 }
