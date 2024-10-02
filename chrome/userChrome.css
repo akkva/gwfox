@@ -4,6 +4,7 @@
   --bg1: light-dark(#f5f6f6, #383838);
   --bg2: light-dark(#fff, #454545);
   --bg3: light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1));
+  --outline-color: light-dark(#7db0f7, #2c749f);
   --button-bgcolor: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
   --button-hover-bgcolor: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   --button-active-bgcolor: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
@@ -310,8 +311,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
-  outline-color: var(--link-color) !important;
-  outline-width: 2px !important;
+  outline-color: var(--outline-color) !important;
+  outline-width: 3px !important;
   outline-offset: -1px !important;
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
@@ -1281,8 +1282,8 @@ findbar::after {
 
 .findbar-textbox[focused],
 .findbar-textbox:focus {
-  outline-color: var(--link-color) !important;
-  outline-width: 2px !important;
+  outline-color: var(--outline-color) !important;
+  outline-width: 3px !important;
   transition: all .3s cubic-bezier(1, 0, 0, 1) !important;
   box-shadow: none !important;
 }
@@ -1298,7 +1299,7 @@ findbar::after {
 }
 
 #search-box[focused], xul|search-textbox[focused] {
-  outline: 2px solid var(--link-color) !important;
+  outline: 3px solid var(--outline-color) !important;
   outline-offset: -1px;
   transition: outline 100ms ease-out;
 }
@@ -1316,8 +1317,8 @@ xul|search-textbox,
 #search-box[focused],
 xul|search-textbox[focused],
 [type="text"]:focus-visible {
-  outline-color: var(--link-color) !important;
-  outline-width: 2px !important;
+  outline-color: var(--outline-color) !important;
+  outline-width: 3px !important;
   outline-offset: -1px !important;
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
@@ -1480,6 +1481,10 @@ xul|search-textbox[focused],
 
 #tab-notification-deck {
   top: 6px;
+}
+
+findbar {
+  top: 15px;
 }
 
 #navigator-toolbox {
