@@ -1,13 +1,14 @@
 :root {
-  --in-content-page-background: #fff !important;
-  --newtab-background-color: #fff !important;
+  --in-content-page-background: light-dark(#fff, #282828) !important;
+  --newtab-background-color: light-dark(#fff, #282828) !important;
   --in-content-box-border-color: light-dark(#d7d7db, #535353) !important;
   --newtab-background-color-secondary: transparent !important;
+  --in-content-focus-outline-color: light-dark(#7db0f7, #2c749f) !important;
+  --focus-outline-color: light-dark(#7db0f7, #2c749f) !important;
 }
 
 @media (prefers-color-scheme: dark) {
 :root {
-  --in-content-page-background: #282828 !important;
   --in-content-box-background: #333 !important;
   --in-content-table-background: #252525 !important;
   --checkbox-checked-bgcolor: #1280fd !important;
@@ -17,8 +18,6 @@
   --in-content-primary-button-background-hover: #1280fd !important;
   --in-content-primary-button-background-active: #417bde !important;
   --in-content-primary-button-text-color: #fff !important;
-  --in-content-focus-outline-color: #1280fd !important;
-  --focus-outline-color: #1280fd !important;
   --link-color: #1280fd !important;
   --link-color-hover: #1280fd !important;
   --link-color-active: #417bde !important;
@@ -26,7 +25,6 @@
   --brand-color-accent: #1280fd !important;
   --brand-color-accent-hover: #1280fd !important;
   --brand-color-accent-active: #417bde !important;
-  --newtab-background-color: #282828 !important;
   --newtab-primary-action-background: #1280fd !important;
   --newtab-primary-element-text-color: #fff !important;
   --color-accent-primary: #1280fd !important;
@@ -52,12 +50,6 @@ body { background-color: #282828 !important; }
   --fxview-background-color: #282828 !important;
 }
 
-.search-container input[type="search"] {
-  background: #333 !important;
-  outline: 2px solid #1280fd !important;
-  border-radius: 2px !important;
-}
-
 * { --in-content-page-background: #282828 !important; }
 
 .toggle-button {
@@ -66,30 +58,42 @@ body { background-color: #282828 !important; }
   --toggle-dot-background-color-on-pressed: #fff !important;
 }
 
-#searchInput[focused] { 
-  outline: 2px solid #1280fd !important;
-}
-
-search-addons > search-textbox[focused] {
-  outline: 2px solid #1280fd !important;
-}
-
-search-textbox {
-  border-color: light-dark(#d7d7db, #535353) !important;
-}
-
 #migrationWizardDialog {
   background: #282828 !important;
 }
 }
 }
 
+.search-container input[type="search"] {
+  background: light-dark(#eeeeef, #373737) !important;
+  border-color: transparent !important;
+
+&:is(:focus-visible, [focused]) {
+  outline: 3px solid var(--focus-outline-color) !important;
+}
+}
+
+#searchInput[focused] { 
+  outline: 3px solid var(--focus-outline-color) !important;
+}
+
+search-addons > search-textbox[focused] {
+  outline: 3px solid var(--focus-outline-color) !important;
+}
+
+search-textbox {
+  background: light-dark(#eeeeef, #373737) !important;
+  border-color: transparent !important;
+}
+
 @-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html") { :root { background: none !important; } }
 
 @-moz-document url-prefix("about:firefoxview") {
-* {--fxview-border: light-dark(#d7d7db, #535353) !important;}
-.search-container {
-  border-color: light-dark(#d7d7db, #535353) !important;
+* {--fxview-border: transparent !important;}
+
+.card-container {
+  background: light-dark(#eeeeef, #373737) !important;
+  box-shadow: none !important;
 }
 }
 
@@ -144,7 +148,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 }
 
 .topsite-form .form-wrapper input[type=text]:focus {
-  outline: 2px solid #1280fd !important;
+  outline: 3px solid var(--focus-outline-color) !important;
   outline-offset: -1px !important;
 }
 
@@ -336,7 +340,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 }
 
 .wallpaper-list .wallpaper-input:checked {
-  outline-color:  #1280fd !important;
+  outline-color: #1280fd !important;
 }
 
 .modalOverlayOuter {
