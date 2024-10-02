@@ -36,7 +36,7 @@
   --input-border-color: transparent !important;
 }
 
-:root[tabsintitlebar] #titlebar {
+:root[tabsintitlebar]:has(#sidebar-box[hidden]) #titlebar {
   will-change: unset !important;
 }
 
@@ -1481,10 +1481,6 @@ xul|search-textbox[focused],
 
 #tab-notification-deck {
   top: 6px;
-}
-
-findbar {
-  top: 15px;
 }
 
 #navigator-toolbox {
