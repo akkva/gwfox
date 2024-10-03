@@ -1402,6 +1402,10 @@ xul|search-textbox[focused],
   opacity: .65;
 }
 
+#identity-box[pageproxystate="valid"].chromeUI #identity-icon {
+  list-style-image: url("chrome://devtools/skin/images/browsers/firefox.svg") !important;
+}
+
 .textbox-search-sign {
   display: inherit !important;
   width: 16px !important;
