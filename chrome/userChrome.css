@@ -1104,6 +1104,16 @@ tree {
 }
 }
 
+@-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
+#aboutDialogContainer {
+  background: #282828 !important;
+}
+
+#bottomBox {
+  background: #333 !important;
+}
+}
+
 treechildren::-moz-tree-row {
   outline: none !important;
   border-radius: 2px !important;
