@@ -147,9 +147,22 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   border-bottom: 1px solid light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1)) !important;
 }
 
+.topsite-form .form-wrapper input[type=text] {
+  border: none !important;
+  background: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+}
+
 .topsite-form .form-wrapper input[type=text]:focus {
   outline: 3px solid var(--focus-outline-color) !important;
   outline-offset: -1px !important;
+}
+
+.divider, .actions {
+  border-top: 1px solid light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1)) !important;
+}
+
+.selector, .actions button {
+  border: 1px solid light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1)) !important;
 }
 
 .icon.icon-settings, .wordmark {
@@ -310,16 +323,21 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 }
 
 .edit-topsites-wrapper .top-site-inner > .top-site-button > .tile {
-  border: 1px solid light-dark(rgba(155, 155, 155, .4), rgba(195, 195, 195, .4)) !important;
+  border: none !important;
   border-radius: 18px !important;
-  box-shadow: 0 0 5px #00000020 !important;
+  box-shadow: none !important;
   width: 96px !important;
   height: 96px !important;
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
 }
 
 .edit-topsites-wrapper .icon-wrapper {
   width: 64px !important;
   height: 64px !important;
+}
+
+.edit-topsites-wrapper * {
+  text-decoration: none !important;
 }
 
 .context-menu-button.icon {
@@ -331,7 +349,8 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 .contentSearchSuggestionTable .contentSearchHeader,
 .wallpaper-attribution,
 .pinned .icon, .card-outer,
-.section-title-container, .logo {
+.section-title-container, .logo,
+.customize-menu .close-button-wrapper {
   display: none !important;
 }
 
@@ -363,7 +382,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
-  margin: 7.5px 6px 0 0 !important;
+  margin: 11px 11px 0 0 !important;
   height: 98% !important;
 }
 
