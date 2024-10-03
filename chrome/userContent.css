@@ -157,7 +157,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   outline-offset: -1px !important;
 }
 
-.divider, .actions {
+.divider, .edit-topsites-wrapper .actions {
   border-top: 1px solid light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1)) !important;
 }
 
@@ -362,7 +362,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   outline-color: #1280fd !important;
 }
 
-.modalOverlayOuter {
+.modal-overlay, .modalOverlayOuter {
   background: none !important;
 }
 
