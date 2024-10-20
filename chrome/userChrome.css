@@ -1180,8 +1180,8 @@ richlistbox {
 @media (prefers-color-scheme: dark) {
 #main-window:not([inDOMFullscreen]) {
 #tabbrowser-tabbox browser {
-  box-shadow: 0 1.5px 6px #0000004D !important;
-  outline: 1px groove #4c5254 !important;
+  box-shadow: 0 0 0 1px #0000004D, 0 1.5px 6px #0000004D !important;
+  outline: 1px solid #4c5254 !important;
   outline-offset: -.5px !important;
 }
 }
