@@ -1178,6 +1178,14 @@ richlistbox {
 }
 
 @media (prefers-color-scheme: dark) {
+#main-window:not([inDOMFullscreen]) {
+#tabbrowser-tabbox browser {
+  box-shadow: 0 1.5px 6px #0000004D !important;
+  outline: 1px groove #4c5254 !important;
+  outline-offset: -.5px !important;
+}
+}
+
 .findbar-container, .dialogBox, #statuspanel-label {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
