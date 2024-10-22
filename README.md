@@ -1,5 +1,3 @@
-<img width="1195" alt="01" src="https://github.com/user-attachments/assets/b92ce426-0ef5-4d41-b1ac-e3c21b4a60b3">
-
 # gwfox
 
 - 本主题适用macOS，火狐V130+
@@ -8,7 +6,7 @@
 
 - 书签工具栏隐藏在底部
 
-- 两种样式一键切换(详见下方视频)
+- 两种样式一键切换(侧栏支持拉伸)
 
 ## 使用方法
 
@@ -38,4 +36,10 @@
 
 - 重启火狐
 
-[01.webm](https://github.com/user-attachments/assets/7271bfca-3181-4d2b-aa77-7a38f37d12e9)
+## 样式截图
+
+<img width="1096" alt="01" src="https://github.com/user-attachments/assets/68318bc6-3f17-4b29-a29a-33870310ca3a">
+<br><br>
+<img width="1096" alt="02" src="https://github.com/user-attachments/assets/881772d1-546e-423e-90af-c2b9756f4dcd">
+<br><br>
+<img width="1096" alt="03" src="https://github.com/user-attachments/assets/9b8a479e-6267-44a9-8059-9d24f3fcefb4">
