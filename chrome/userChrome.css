@@ -1356,7 +1356,8 @@ xul|search-textbox[focused],
 }
 
 #sidebar-box {
-  width: 207px !important;
+  max-width: 207px !important;
+  min-width: 67px !important;
   margin: 5px 0 40px 5px !important;
   transition: .2s;
 }
@@ -1677,6 +1678,73 @@ xul|search-textbox[focused],
 #nav-bar {
 :is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
   left: 5px;
+  visibility: visible !important;
 }
+}
+}
+
+:has(#sidebar-box[style*="width: 67px"]:not([hidden])) {
+#sidebar-box {
+  margin-bottom: 65px !important;
+}
+
+#urlbar {
+  width: 62px !important;
+}
+
+#PanelUI-menu-button {
+  left: 13px;
+}
+
+#nav-bar-overflow-button {
+  left: 40px;
+}
+
+#unified-extensions-button {
+  left: 9px;
+  bottom: 40px;
+}
+
+#downloads-button {
+  left: 36px;
+  bottom: 40px;
+}
+
+#back-button, #forward-button,
+#reload-button, #stop-button,
+:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
+  visibility: hidden !important;
+}
+
+#tracking-protection-icon-container::after {
+  border: 0 !important;
+}
+
+#urlbar:not([breakout][breakout-extend]) {
+#tracking-protection-icon-container,
+#identity-permission-box,
+#notification-popup-box,
+#identity-icon-label {
+  display: none !important;
+}
+
+#identity-box[pageproxystate="invalid"] {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+
+#identity-box {
+  margin-left: 16px !important;
+  margin-right: 16px !important;
+}
+
+#identity-icon {
+  list-style-image: url(chrome://global/skin/icons/search-glass.svg) !important;
+}
+}
+
+#PersonalToolbar {
+  width: calc(100% - 83px) !important;
+  margin: 0 6px 6px 77px !important;
 }
 }
