@@ -86,7 +86,38 @@ search-textbox {
   border-color: transparent !important;
 }
 
-@-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html") { :root { background: none !important; } }
+@-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html") { 
+:root { background: none !important; }
+#root.root {
+@media (max-width: 67px) {
+--tabs-indent: 0 !important;
+
+.top-horizontal-box {
+  order: 3 !important;
+}
+
+.fav {
+  margin-left: 22px !important;
+  margin-right: 22px !important;
+}
+
+.close {
+  width: 16px !important;
+  height: 16px !important;
+  margin-top: 8px !important;
+  margin-right: 38px !important;
+}
+
+.Tab .audio {
+  margin-left: 12px !important;
+}
+
+.PinnedTabsBar {
+  margin-left: 7px !important;
+} 
+}
+}
+}
 
 @-moz-document url-prefix("about:firefoxview") {
 * {--fxview-border: transparent !important;}
