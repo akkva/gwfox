@@ -903,6 +903,13 @@ tab .tab-label {
 }
 
 .tab-icon-overlay {
+  &:is([soundplaying], [muted], [activemedia-blocked]) {
+  background-color: transparent !important;
+  border: none !important;
+  &:not([pinned]) {
+  background-size: 16px !important;   
+}
+}
   :is(
   :root[uidensity=compact],
   #tabbrowser-tabs[secondarytext-unsupported],
