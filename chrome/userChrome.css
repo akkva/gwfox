@@ -465,14 +465,14 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-inline-end: 0 !important;
 }
 
-#main-window:has(#page-action-buttons > *[open]) {
+:has(#page-action-buttons > *[open]) {
 .urlbar-page-action {
   opacity: 1;
   margin-inline-end: 0 !important;
 }
 }
 
-#main-window:has(#identity-permission-box > *[open]) {
+:has(#identity-permission-box > *[open]) {
 #identity-permission-box {
   opacity: 1;
   margin-inline-start: 0 !important;
@@ -1583,6 +1583,11 @@ xul|search-textbox[focused],
   top: 15vh !important;
   left: 35vw !important;
   width: 65vw !important;
+  
+#urlbar-input,
+#urlbar-input::placeholder {
+  font-size: 21px !important;
+}
   
 #urlbar-search-mode-indicator {
   margin-top: 13px !important;
