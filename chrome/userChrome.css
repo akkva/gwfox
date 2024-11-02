@@ -141,7 +141,7 @@
   padding-bottom: 0 !important;
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
   backdrop-filter: blur(30px) !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
   border-bottom-left-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
   overflow: initial !important;
@@ -262,6 +262,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #urlbar-background {
   height: 30px !important;
+  border: none !important;
   border-radius: 6px !important;
   background: var(--button-hover-bgcolor) !important;
   transition: background .5s !important;
@@ -364,7 +365,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #urlbar[breakout][breakout-extend] #urlbar-background {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
   backdrop-filter: blur(30px) !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
 }
 
 :has(#urlbar[breakout][breakout-extend]) {
@@ -399,7 +400,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #urlbar-background {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
   backdrop-filter: blur(30px) !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
   height: 50px !important;
 }
 
@@ -428,7 +429,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #urlbar[focused] #urlbar-background {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .45), 0 0 0 .5px rgba(0, 0, 0, .25) !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
 }
 }
 
@@ -1061,7 +1062,7 @@ toolbarseparator[orient="vertical"] {
 .dialogBox {
   margin-top: 80px !important;
   backdrop-filter: blur(30px) !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
 }
 
 #window-modal-dialog::backdrop {
@@ -1204,7 +1205,7 @@ richlistbox {
 .findbar-container, #statuspanel-label {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
   backdrop-filter: blur(30px) !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1216,16 +1217,12 @@ richlistbox {
 }
 }
 
-.findbar-container, .dialogBox, #statuspanel-label {
-  outline: 1px solid rgba(235, 235, 235, .2) !important;
-  outline-offset: -1px !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
-}
-
+#urlbar[breakout][breakout-extend] #urlbar-background,
+.findbar-container, .dialogBox, #statuspanel-label,
 #PersonalToolbar {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
 }
 
 #identity-box:hover {
@@ -1266,9 +1263,9 @@ richlistbox {
 findbar {
   position: absolute !important;
   top: 0;
-  right: 15px;
+  right: 10px;
   width: calc(100% - 15px) !important;
-  height: 70px !important;
+  height: 90px !important;
   border: none !important;
   background: none !important;
   flex-direction: row-reverse;
@@ -1283,7 +1280,7 @@ findbar::after {
 
 .findbar-closebutton {
   position: fixed;
-  right: 30px;
+  right: 36px;
   margin-top: 7px !important;
   background: none !important;
   z-index: 1;
@@ -1306,7 +1303,7 @@ findbar::after {
 
 .findbar-container {
   height: 42px !important;
-  margin-right: 15px;
+  margin-right: 25px;
   overflow-inline: visible !important;
   flex-direction: row-reverse;
   border-radius: 8px !important;
@@ -1610,7 +1607,7 @@ xul|search-textbox[focused],
 #urlbar-background {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
   backdrop-filter: blur(30px) !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
   min-height: 50px !important;
 }
 
@@ -1631,7 +1628,7 @@ xul|search-textbox[focused],
 }
 
 #urlbar[focused] #urlbar-background {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .45), 0 0 0 .5px rgba(0, 0, 0, .25) !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
 }
 }
 
@@ -1698,14 +1695,6 @@ xul|search-textbox[focused],
 
 #forward-button {
   list-style-image: url("resources/forward.svg") !important;
-}
-
-@media (prefers-color-scheme: dark) {
-#urlbar[breakout][breakout-extend] #urlbar-background {
-  outline: 1px solid rgba(235, 235, 235, .2) !important;
-  outline-offset: -1px !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
-}
 }
 
 :has(#sidebar-box[style*="width: 67px"]) {
