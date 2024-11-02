@@ -24,7 +24,8 @@
   --in-content-button-background-active: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
   --link-color: light-dark(#4481f2, #1280fd) !important;
   --toolbar-field-focus-background-color: light-dark(rgba(155, 155, 155, .25), rgba(195, 195, 195, .25)) !important;
-  --urlbarView-result-button-hover-background-color: light-dark(rgba(155, 155, 155, .1), rgba(195, 195, 195, .1)) !important;
+  --urlbarView-result-button-hover-color: light-dark(rgba(0, 0, 0, .8), rgba(255, 255, 255, .8)) !important;
+  --urlbarView-result-button-hover-background-color: light-dark(rgba(155, 155, 155, .5), rgba(195, 195, 195, .5)) !important;
   --toolbarbutton-icon-fill-attention: light-dark(#4481f2, #1280fd) !important;
   --arrowpanel-background: light-dark(#fff, #383838) !important;
   --focus-outline-color: transparent !important;
