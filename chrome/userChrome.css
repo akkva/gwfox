@@ -1583,6 +1583,10 @@ xul|search-textbox[focused],
   left: 35vw !important;
   width: 65vw !important;
   
+#urlbar-search-mode-indicator {
+  margin-top: 13px !important;
+}
+  
 .urlbar-input-container {
   height: 50px !important;
 & > :is(box, image) {
