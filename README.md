@@ -1,12 +1,10 @@
 # gwfox
 
-- 本主题适用macOS，火狐V130+
+- 本主题适用macOS，火狐V133+
 
 - 工具栏按钮数量仅支持左4右4
 
 - 书签工具栏隐藏在底部
-
-- 两种样式一键切换(侧栏支持拉伸)
 
 ## 使用方法
 
@@ -38,8 +36,9 @@
 
 ## 样式截图
 
-<img width="1096" alt="01" src="https://github.com/user-attachments/assets/68318bc6-3f17-4b29-a29a-33870310ca3a">
+<img width="1096" alt="01" src="https://github.com/user-attachments/assets/d1074214-ba0a-48b3-83cb-6257565fcbe4">
 <br><br>
-<img width="1096" alt="02" src="https://github.com/user-attachments/assets/881772d1-546e-423e-90af-c2b9756f4dcd">
+<img width="1096" alt="02" src="https://github.com/user-attachments/assets/a581b6ba-0d10-4204-9ff5-9ba50c01709b">
 <br><br>
-<img width="1096" alt="03" src="https://github.com/user-attachments/assets/9b8a479e-6267-44a9-8059-9d24f3fcefb4">
+<img width="1096" alt="03" src="https://github.com/user-attachments/assets/99a6b842-f31c-497f-bd67-354b7dfe988d">
+
