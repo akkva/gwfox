@@ -5,6 +5,8 @@
   --newtab-background-color-secondary: transparent !important;
   --in-content-focus-outline-color: light-dark(#7db0f7, #2c749f) !important;
   --focus-outline-color: light-dark(#7db0f7, #2c749f) !important;
+  --bs1: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15);
+  --bs2: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -159,6 +161,15 @@ input[type="radio"], .radio-check {
 @-moz-document url("about:newtab"), url("about:home") {
 body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;}
 
+@keyframes panel-grow {
+  0% {
+    transform: scaleX(.96) scaleY(.95);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+
 .context-menu {
   border-radius: 6px !important;
   padding: 6px !important;
@@ -227,7 +238,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   box-shadow: none !important;
   transition: background .5s !important;
   margin-right: 0 !important;
-  z-index: 8;
+  z-index: 1;
 }
 
 .search-inner-wrapper:hover {
@@ -400,6 +411,8 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 .modal {
   border-radius: 6px !important;
   border: none !important;
+  animation-name: panel-grow;
+  animation-duration: 250ms;
 }
 
 .modal, .tile, .context-menu-button.icon, .search-inner-wrapper {
@@ -407,13 +420,13 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 }
 
 .modal, .context-menu, .contentSearchSuggestionTable {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+  box-shadow: var(--bs1) !important;
 }
 
 .customize-menu {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
   backdrop-filter: blur(30px) !important;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+  box-shadow: var(--bs1) !important;
   margin: 11px 11px 0 0 !important;
   height: 98% !important;
 }
@@ -434,14 +447,14 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 
 @media (prefers-color-scheme: dark) {
 .modal, .context-menu, .contentSearchSuggestionTable {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+  box-shadow: var(--bs2) !important;
   border: 1px solid rgba(235, 245, 255, .15) !important;
 }
 
 .customize-menu {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+  box-shadow: var(--bs2) !important;
 }
 }
 
