@@ -45,6 +45,7 @@
   --input-border-color: transparent !important;
   --browser-area-z-index-toolbox: 4 !important;
   --tabstrip-min-height: unset !important;
+  --tab-icon-overlay-fill: light-dark(rgba(0, 0, 0, .7), rgba(225, 225, 225, .8)) !important;
 }
 
 :root[macOSNativeFullscreen] #navigator-toolbox {
@@ -887,7 +888,6 @@ tab .tab-label {
   border: none !important;
   &:not([pinned]) {
   background-size: 16px !important;
-  fill: currentColor !important;
 }
 }
   :is(
