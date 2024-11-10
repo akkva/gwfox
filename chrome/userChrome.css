@@ -886,7 +886,8 @@ tab .tab-label {
   background-color: transparent !important;
   border: none !important;
   &:not([pinned]) {
-  background-size: 16px !important;   
+  background-size: 16px !important;
+  fill: currentColor !important;
 }
 }
   :is(
