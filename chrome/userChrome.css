@@ -44,6 +44,7 @@
   --input-bgcolor: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   --input-border-color: transparent !important;
   --browser-area-z-index-toolbox: 4 !important;
+  --tabstrip-min-height: unset !important;
 }
 
 :root[macOSNativeFullscreen] #navigator-toolbox {
@@ -76,7 +77,7 @@
 
 #tabbrowser-tabpanels {
   margin-top: 0;
-  transition: margin .2s !important;
+  transition: .25s !important;
 }
 
 #browser {
@@ -89,6 +90,10 @@
 
 #navigator-toolbox {
   background: none !important;
+  border: none !important;
+}
+
+.browser-toolbar {
   border: none !important;
 }
 
@@ -132,7 +137,7 @@
   z-index: 1;
   bottom: -32px;
   opacity: 0;
-  transition: .2s;
+  transition: .25s;
   padding-bottom: 0 !important;
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
   backdrop-filter: blur(30px) !important;
@@ -145,7 +150,7 @@
 #PersonalToolbar:hover {
   bottom: 0px;
   opacity: 1;
-  transition: .2s;
+  transition: .25s;
 }
 
 #PersonalToolbar::before {
@@ -237,7 +242,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   top: 10.5px !important;
   max-width: 219px !important;
   margin-top: 0 !important;
-  transition: margin .3s !important;
+  transition: margin-top .25s !important;
 }
 
 #urlbar-container {
@@ -367,12 +372,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 :has(#urlbar[breakout][breakout-extend]) {
 #sidebar-box {
   margin-top: -33px !important;
-  transition: margin .2s !important;
+  transition: margin-top .25s !important;
 }
 
 #tabbrowser-tabs {
   margin-left: -223px !important;
-  transition: margin .2s !important;
+  transition: margin-left .25s !important;
 }
 
 #urlbar-background {
@@ -773,7 +778,7 @@ tab .tab-label {
   --tab-min-width: 88px !important;
   margin-bottom: -1px !important;
   border-inline-start: none !important;
-  transition: margin .2s !important;
+  transition: margin-left .25s !important;
 }
 
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
@@ -1361,7 +1366,7 @@ xul|search-textbox[focused],
   max-width: 207px !important;
   min-width: 67px !important;
   margin: 19.5px 0 40px 5px !important;
-  transition: margin .2s !important;
+  transition: margin-top .25s !important;
 }
 
 /* icons */
@@ -1436,7 +1441,7 @@ xul|search-textbox[focused],
 
 #tabbrowser-tabpanels {
   margin-top: -61.5px;
-  transition: margin .2s !important;
+  transition: .25s !important;
 }
 }
 
@@ -1582,7 +1587,7 @@ xul|search-textbox[focused],
 
 #sidebar-box {
   margin-top: -33px !important;
-  transition: margin .2s !important;
+  transition: margin-top .25s !important;
 }
 
 #urlbar[focused] #urlbar-background {
@@ -1726,7 +1731,7 @@ xul|search-textbox[focused],
 }
 
 :has(#sidebar-box[style*="width: 67px"]) {
-  #nav-bar {
+#nav-bar {
 :is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
   left: 25px;
   visibility: visible !important;
