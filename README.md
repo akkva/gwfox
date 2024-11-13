@@ -1,6 +1,6 @@
 # gwfox
 
-- 本主题适用macOS，火狐V133+
+- 本主题适用Mac/Win*，火狐V133+
 
 - 工具栏按钮数量仅支持左4右4
 
@@ -18,12 +18,10 @@
  
   - `browser.tabs.allow_transparent_browser`
  
+  - `widget.windows.mica` *
+ 
 - 可选项
 
-  - 新标签页搜索：`browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar` 、
-
-  - 右键菜单主题样式：`widget.macos.native-context-menus` 切换为 `false`
- 
   - 定制标签页壁纸：把壁纸命名为 `light.jpg` 和 `dark.jpg` 放入 `resources` 文件夹内
     
     - 添加布尔值 `uc.tweak.newtab_wallpapers` 为 `true` 启用
