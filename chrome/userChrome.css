@@ -91,7 +91,12 @@
 
 #navigator-toolbox {
   background: none !important;
+}
+
+@media (-moz-platform: macos) {
+#navigator-toolbox {
   border: none !important;
+}
 }
 
 .browser-toolbar {
@@ -1198,9 +1203,7 @@ richlistbox {
 @media (prefers-color-scheme: dark) {
 #main-window:not([inDOMFullscreen]) {
 #tabbrowser-tabbox browser {
-  box-shadow: 0 0 0 1px #0000004D, 0 1.5px 6px #0000004D !important;
-  outline: 1px solid #4c5254 !important;
-  outline-offset: -.5px !important;
+  box-shadow: 0 1.5px 6px #0000004d !important;
 }
 }
 
@@ -1743,6 +1746,284 @@ xul|search-textbox[focused],
   left: 25px;
   visibility: visible !important;
 }
+}
+}
+}
+
+/* win */
+
+@media (-moz-platform: windows) {
+:root {
+--bg1: light-dark(#e8e8e8, #202020);
+--bg2: light-dark(#f8f8f8, #2c2c2c);
+}
+:root:-moz-window-inactive {--sidebar-background-color: transparent !important;}
+body {background: var(--bg1) !important;}
+
+:root#main-window {
+  appearance: none !important;
+}
+
+:root[inFullscreen] {
+.titlebar-buttonbox-container {
+  display: none !important;
+}
+
+#urlbar {
+  visibility: hidden;
+}
+
+#nav-bar {
+:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
+  visibility: hidden;
+}
+}
+
+#navigator-toolbox:hover {
+#urlbar {
+  visibility: visible;
+}
+
+#nav-bar {
+:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
+  visibility: visible;
+}
+}
+}
+}
+
+#webextpanels-window {
+  background: none !important;
+}
+
+#sidebar-box {
+  margin-top: 40px !important;
+}
+
+richlistitem[selected] {
+  background: none !important;
+}
+
+#downloadsListBox {
+  overflow-x: hidden;
+  border: 0 !important;
+}
+
+#nav-bar {
+  border-bottom: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+}
+
+toolbarbutton:-moz-window-inactive {
+  opacity: 50% !important;
+}
+
+.titlebar-buttonbox-container {
+  left: 15px;
+  top: 19.5px;
+}
+
+.titlebar-buttonbox {
+  opacity: 1 !important;
+}
+
+.titlebar-button {
+  padding: 0 4px !important;
+  stroke: none !important;
+  background-color: transparent !important;
+&:-moz-window-inactive {
+  list-style-image: url("resources/titlebar-backdrop.svg") !important;
+@media (prefers-color-scheme: dark) {
+  list-style-image: url("resources/titlebar-backdrop-dark.svg") !important;
+}
+}
+}
+
+.titlebar-close {
+  order: -1;
+  list-style-image: url("resources/titlebar-close.svg") !important;  
+.titlebar-buttonbox:hover & {
+  list-style-image: url("resources/titlebar-close-hover.svg") !important;
+&:active {
+  list-style-image: url("resources/titlebar-close-active.svg") !important;
+@media (prefers-color-scheme: dark) {
+  list-style-image: url("resources/titlebar-close-active-dark.svg") !important;
+}
+}
+}
+}
+
+.titlebar-min {
+  list-style-image: url("resources/titlebar-min.svg") !important;  
+.titlebar-buttonbox:hover & {
+  list-style-image: url("resources/titlebar-min-hover.svg") !important;
+&:active {
+  list-style-image: url("resources/titlebar-min-active.svg") !important;
+@media (prefers-color-scheme: dark) {
+  list-style-image: url("resources/titlebar-min-active-dark.svg") !important;
+}
+}
+}
+}
+
+.titlebar-max {
+  list-style-image: url("resources/titlebar-max.svg") !important;  
+.titlebar-buttonbox:hover & {
+  list-style-image: url("resources/titlebar-max-hover.svg") !important;
+&:active {
+  list-style-image: url("resources/titlebar-max-active.svg") !important;
+@media (prefers-color-scheme: dark) {
+  list-style-image: url("resources/titlebar-max-active-dark.svg") !important;
+}
+}
+}
+}
+
+.titlebar-restore {
+  list-style-image: url("resources/titlebar-max.svg") !important;  
+.titlebar-buttonbox:hover & {
+  list-style-image: url("resources/titlebar-restore-hover.svg") !important;
+&:active {
+  list-style-image: url("resources/titlebar-restore-active.svg") !important;
+@media (prefers-color-scheme: dark) {
+  list-style-image: url("resources/titlebar-restore-active-dark.svg") !important;
+}
+}
+}
+}
+
+#main-window:not([inDOMFullscreen]) {
+#tabbrowser-tabbox browser {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+}
+
+#urlbar-container {
+  -moz-window-dragging: no-drag !important;
+}
+
+menupopup, panel[type="arrow"] {
+  --panel-background: var(--bg2) !important;
+  --arrowpanel-background: var(--bg2) !important;
+  --panel-shadow: var(--bs1) !important;
+  appearance: none !important;
+  padding: 2px 20px 35px !important;
+  margin: -5px -25px 0 !important;
+}
+
+.popup-internal-box,
+#PopupAutoComplete > .autocomplete-richlistbox,
+.menupopup-arrowscrollbox {
+  background: var(--bg2) !important;
+}
+
+#contentAreaContextMenu .menu-iconic-left {
+  display: unset;
+}
+
+#PersonalToolbar {
+  width: 100%;
+  margin: 0 !important;
+}
+
+#statuspanel-label {
+  margin: 0 !important;
+}
+
+#PersonalToolbar, window[role="dialog"],
+.findbar-container, #statuspanel-label, .dialogBox,
+#urlbar[breakout][breakout-extend] #urlbar-background {
+  background: var(--bg2) !important;
+}
+
+:has(#urlbar[breakout][breakout-extend]) {
+#sidebar-box {
+  margin-top: -13px !important;
+}
+}
+
+:has(#urlbar[usertyping]) {
+#urlbar-background {
+  background: var(--bg2) !important;
+}
+}
+
+:has(#sidebar-box:not([hidden])):not([inDOMFullscreen]) {
+#tabbrowser-tabbox browser {
+  margin: 0 6px 6px !important;
+  border-radius: 8px !important;
+  box-shadow: 1px 0 6px #00000026 !important;
+}
+
+#tabbrowser-tabpanels {
+  margin-top: -40.5px;
+}
+}
+
+:root:not([customizing]):has(#sidebar-box:not([hidden])) {
+body {background: transparent !important;}
+
+#navigator-toolbox {
+  border: none !important;
+}
+
+#nav-bar {
+  padding: 49px 3px 0 100px !important;
+}
+
+#statuspanel-label {
+  margin: 6px !important;
+}
+
+.titlebar-buttonbox-container {
+  left: 8px;
+  top: 16.5px;
+}
+
+:has(#urlbar[usertyping]) {
+#sidebar-box {
+  margin-top: -13px !important;
+}
+
+#urlbar-background {
+  background: var(--bg2) !important;
+}
+}
+}
+
+@media (prefers-color-scheme: dark) {
+&:not(:-moz-window-inactive) {::selection { background: #416189 }}
+* {
+  --organizer-pane-background: #2d2d2d !important;
+  --organizer-toolbar-background: #333 !important;
+  --organizer-content-background: #333 !important;
+  --organizer-hover-background: #2e2e2f !important;
+  --organizer-selected-background: #2e2e2f !important;
+}
+
+#urlbar[breakout][breakout-extend] #urlbar-background,
+.findbar-container, .dialogBox, #statuspanel-label,
+#PersonalToolbar {
+  outline: 1px solid rgba(235, 235, 235, .1) !important;
+}
+
+menupopup, panel[type="arrow"] {
+  --panel-border-color: rgba(255, 255, 255, .1) !important;
+  --arrowpanel-border-color: rgba(255, 255, 255, .1) !important;
+}
+
+.panel-arrowcontent {
+  border: 1px solid rgba(255, 255, 255, .1) !important;
+}
+
+treecol {
+  background-color: #333 !important;
+}
+
+richlistitem {
+  color: #fff !important;
 }
 }
 }
