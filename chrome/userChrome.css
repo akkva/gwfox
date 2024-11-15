@@ -443,10 +443,13 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   padding: 8px !important;
 }
 
-.urlbar-page-action:not(#star-button-box) {
+.urlbar-page-action {
   height: 28px !important;
   border-radius: 6px !important;
   padding: 6px !important;
+}
+
+.urlbar-page-action:not(#star-button-box) {
   margin-inline-end: calc(-16px - 2 * var(--urlbar-icon-padding));
   opacity: 0;
   transition: .2s;
