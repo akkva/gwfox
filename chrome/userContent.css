@@ -56,7 +56,8 @@ body { background-color: #282828 !important; }
 
 .toggle-button {
   --toggle-background-color-pressed: #1280fd !important;
-  --toggle-background-color-pressed-hover: #336feb !important;
+  --toggle-background-color-pressed-hover: #1280fd !important;
+  --toggle-background-color-pressed-active: #417bde !important;
   --toggle-dot-background-color-on-pressed: #fff !important;
 }
 
