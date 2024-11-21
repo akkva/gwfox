@@ -1759,6 +1759,7 @@ xul|search-textbox[focused],
 :root {
 --bg1: light-dark(#e8e8e8, #202020);
 --bg2: light-dark(#f8f8f8, #2c2c2c);
+--bs: 0 10px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15);
 }
 :root:-moz-window-inactive {--sidebar-background-color: transparent !important;}
 body {background: var(--bg1) !important;}
@@ -1910,9 +1911,9 @@ toolbarbutton:-moz-window-inactive {
 menupopup, panel[type="arrow"] {
   --panel-background: var(--bg2) !important;
   --arrowpanel-background: var(--bg2) !important;
-  --panel-shadow: var(--bs1) !important;
+  --panel-shadow: var(--bs) !important;
   appearance: none !important;
-  padding: 2px 20px 35px !important;
+  padding: 2px 20px 20px !important;
   margin: -5px -25px 0 !important;
 }
 
@@ -2027,6 +2028,11 @@ treecol {
 
 richlistitem {
   color: #fff !important;
+}
+
+#editBookmarkPanel .expander-up,
+#editBookmarkPanel .expander-down {
+  border: none !important;
 }
 }
 }
