@@ -1936,6 +1936,11 @@ menupopup, panel[type="arrow"] {
   margin: 0 !important;
 }
 
+.devtools-side-splitter,
+.devtools-horizontal-splitter {
+  display: unset !important;
+}
+
 #PersonalToolbar, window[role="dialog"],
 .findbar-container, #statuspanel-label, .dialogBox,
 #urlbar[breakout][breakout-extend] #urlbar-background {
@@ -1979,6 +1984,19 @@ body {background: transparent !important;}
 
 #statuspanel-label {
   margin: 6px !important;
+}
+
+#sidebar-box {
+  margin-right: 6px !important;
+}
+
+.devtools-side-splitter,
+.devtools-horizontal-splitter {
+  display: none !important;
+}
+
+#tabbrowser-tabbox browser {
+  margin-left: 0 !important;
 }
 
 .titlebar-buttonbox-container {
