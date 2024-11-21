@@ -523,7 +523,7 @@ body {
 }
 
 .tile, .search-inner-wrapper {
-&:hover { background-color: light-dark(#f8f8f8, #2c2c2c) !important; }
+&:hover { background-color: light-dark(#ededed, #242424) !important; }
 }
 
 .lightWallpaper .tile, .lightWallpaper .context-menu-button.icon {
