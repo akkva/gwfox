@@ -68,7 +68,7 @@
 }
 }
 
-#main-window:not([inDOMFullscreen]) {
+:root:not([inDOMFullscreen]) {
 #tabbrowser-tabbox browser {
   margin: 0 6px 6px;
   border-radius: 8px;
@@ -1204,7 +1204,7 @@ richlistbox {
 }
 
 @media (prefers-color-scheme: dark) {
-#main-window:not([inDOMFullscreen]) {
+:root:not([inDOMFullscreen]) {
 #tabbrowser-tabbox browser {
   box-shadow: 0 1.5px 6px #0000004d !important;
 }
@@ -1447,7 +1447,8 @@ xul|search-textbox[focused],
 }
 }
 
-:has(#sidebar-box:not([hidden])):not([inDOMFullscreen]) {
+:root:not([inDOMFullscreen]) {
+:has(#sidebar-box:not([hidden])) {
 #tabbrowser-tabbox browser {
   box-shadow: 1px 0 6px #00000026;
 }
@@ -1455,6 +1456,7 @@ xul|search-textbox[focused],
 #tabbrowser-tabpanels {
   margin-top: -61.5px;
   transition: .25s !important;
+}
 }
 }
 
@@ -1895,7 +1897,7 @@ toolbarbutton:-moz-window-inactive {
 }
 }
 
-#main-window:not([inDOMFullscreen]) {
+:has(#sidebar-box[hidden]) {
 #tabbrowser-tabbox browser {
   margin: 0 !important;
   border-radius: 0 !important;
@@ -1959,15 +1961,11 @@ menupopup, panel[type="arrow"] {
 }
 }
 
-:has(#sidebar-box:not([hidden])):not([inDOMFullscreen]) {
-#tabbrowser-tabbox browser {
-  margin: 0 6px 6px !important;
-  border-radius: 8px !important;
-  box-shadow: 1px 0 6px #00000026 !important;
-}
-
+:root:not([inDOMFullscreen]) {
+:has(#sidebar-box:not([hidden])) {
 #tabbrowser-tabpanels {
   margin-top: -40.5px;
+}
 }
 }
 
