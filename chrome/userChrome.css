@@ -1984,18 +1984,9 @@ body {background: transparent !important;}
   margin: 6px !important;
 }
 
-#sidebar-box {
-  margin-right: 6px !important;
-}
-
 .devtools-side-splitter,
 .devtools-horizontal-splitter {
   display: none !important;
-}
-
-#statuspanel-label,
-#tabbrowser-tabbox browser {
-  margin-left: 0 !important;
 }
 
 .titlebar-buttonbox-container {
