@@ -1995,6 +1995,7 @@ body {background: transparent !important;}
   display: none !important;
 }
 
+#statuspanel-label,
 #tabbrowser-tabbox browser {
   margin-left: 0 !important;
 }
