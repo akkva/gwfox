@@ -221,7 +221,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 :root[customizing] {
-#downloads-button,
 #PanelUI-menu-button,
 #nav-bar-overflow-button,
 #unified-extensions-button {
@@ -377,7 +376,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 :has(#urlbar[breakout][breakout-extend]) {
 #sidebar-box {
-  margin-top: -33px !important;
+  margin-top: -24px !important;
   transition: margin-top .25s !important;
 }
 
@@ -620,10 +619,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #viewButton[open] {
   background-color: var(--button-active-bgcolor) !important;
-}
-
-#downloads-button {
-  display: flex !important;
 }
 
 #downloads-indicator-progress-outer {
@@ -1378,8 +1373,12 @@ xul|search-textbox[focused],
 #sidebar-box {
   max-width: 207px !important;
   min-width: 67px !important;
-  margin: 19.5px 0 40px 5px !important;
+  margin: 19.5px 0 0 5px !important;
   transition: margin-top .25s !important;
+}
+
+#sidebar-box:-moz-window-inactive {
+  opacity: .5 !important;
 }
 
 /* icons */
@@ -1469,24 +1468,21 @@ xul|search-textbox[focused],
 #downloads-indicator-anchor {
   list-style-image: url("chrome://browser/skin/update-badge.svg") !important;
   transform: rotateX(180deg);
-  scale: .9;
   opacity: .8;
 }
 
 #unified-extensions-button {
-  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric.svg") !important;
-  scale: .7;
+  list-style-image: url("chrome://devtools/skin/images/more.svg") !important;
   opacity: .8;
 }
 
 #nav-bar-overflow-button {
-  list-style-image: url("chrome://browser/skin/topsites.svg") !important;
-  scale: .7;
-  opacity: .8;
+  list-style-image: url("resources/newtab.svg") !important;
+  opacity: .95;
 }
 
 #PanelUI-menu-button {
-  list-style-image: url("chrome://devtools/skin/images/browsers/firefox.svg") !important;
+  list-style-image: url("chrome://devtools/skin/images/whatsnew.svg") !important;
   opacity: .8;
 }
 
@@ -1601,7 +1597,7 @@ xul|search-textbox[focused],
 }
 
 #sidebar-box {
-  margin-top: -33px !important;
+  margin-top: -24px !important;
   transition: margin-top .25s !important;
 }
 
@@ -1628,28 +1624,40 @@ xul|search-textbox[focused],
   display: none !important;
 }
 
-#downloads-button,
 #PanelUI-menu-button,
 #nav-bar-overflow-button,
 #unified-extensions-button {
   position: fixed;
-  left: 33px;
-  bottom: 10px;
-  scale: .8;
+  left: 10px;
+  bottom: 9px;
+  scale: .9;
   z-index: 8;
 }
 
 #unified-extensions-button {
-  left: 111px;
-}
-
-#downloads-button {
-  left: 152px;
+  bottom: 49px;
+  left: 179px;
+  opacity: 0;
 }
 
 #nav-bar-overflow-button {
-  left: 75px;
+  left: 181px;
   display: flex !important;
+  scale: 1;
+}
+
+:has(#nav-bar-overflow-button:hover) {
+  #unified-extensions-button {
+  opacity: .8;
+}
+}
+
+#unified-extensions-button:hover {
+  opacity: .8;
+}
+
+#unified-extensions-button:-moz-window-inactive:not(:hover) {
+  opacity: 0 !important;
 }
 
 #reload-button,
@@ -1672,30 +1680,18 @@ xul|search-textbox[focused],
 }
 
 :has(#sidebar-box[style*="width: 67px"]) {
-#sidebar-box {
-  margin-bottom: 65px !important;
-}
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   width: 62px !important;
 }
 
 #PanelUI-menu-button {
-  left: 13px !important;
+  left: 25px !important;
 }
 
-#nav-bar-overflow-button {
-  left: 40px !important;
-}
-
+#nav-bar-overflow-button,
 #unified-extensions-button {
-  left: 9px !important;
-  bottom: 40px !important;
-}
-
-#downloads-button {
-  left: 36px !important;
-  bottom: 40px !important;
+  display: none !important;
 }
 
 #back-button, #forward-button,
