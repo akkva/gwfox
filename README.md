@@ -29,14 +29,15 @@
 - 安装扩展[Sidebery](https://addons.mozilla.org/firefox/addon/sidebery)固定到工具栏
 
   - 在设置-帮助里选择 `sidebery-data.json` 导入
+    
+    - 如果导入后异常，请先在通用-已用数据-删除全部数据后重新导入
 
 - 重启火狐
 
 ## 样式截图
 
-<img width="1096" alt="01" src="https://github.com/user-attachments/assets/d1074214-ba0a-48b3-83cb-6257565fcbe4">
+<img width="1112" alt="01" src="https://github.com/user-attachments/assets/5379744b-3460-462c-9f7b-45de9367cbf4">
 <br><br>
-<img width="1096" alt="02" src="https://github.com/user-attachments/assets/a581b6ba-0d10-4204-9ff5-9ba50c01709b">
+<img width="1112" alt="02" src="https://github.com/user-attachments/assets/a413aa48-0d03-4ddd-afd6-6ecf37d29f64">
 <br><br>
-<img width="1096" alt="03" src="https://github.com/user-attachments/assets/99a6b842-f31c-497f-bd67-354b7dfe988d">
-
+<img width="1112" alt="03" src="https://github.com/user-attachments/assets/a5fd3d7d-4b38-48cb-a054-424c44304555">
