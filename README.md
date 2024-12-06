@@ -36,8 +36,8 @@
 
 ## 样式截图
 
-<img width="1112" alt="01" src="https://github.com/user-attachments/assets/5379744b-3460-462c-9f7b-45de9367cbf4">
+<img width="1009" alt="01" src="https://github.com/user-attachments/assets/984114df-d40c-40ed-a355-fe7507983302">
 <br><br>
-<img width="1112" alt="02" src="https://github.com/user-attachments/assets/a413aa48-0d03-4ddd-afd6-6ecf37d29f64">
+<img width="1009" alt="02" src="https://github.com/user-attachments/assets/350360b4-78c3-4248-a0ef-9f0a5f3f09ed">
 <br><br>
-<img width="1112" alt="03" src="https://github.com/user-attachments/assets/a5fd3d7d-4b38-48cb-a054-424c44304555">
+<img width="1009" alt="03" src="https://github.com/user-attachments/assets/f2f6ae7e-9606-4b21-b61e-31f83d625d81">
