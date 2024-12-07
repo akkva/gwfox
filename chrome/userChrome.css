@@ -61,6 +61,10 @@
   top: 17.5px;
 }
 
+#browser:not(.browser-toolbox-background) {
+  background-color: transparent !important;
+}
+
 #tabbrowser-tabbox {
   box-shadow: none !important;
 @media (-moz-bool-pref: "sidebar.revamp") {
@@ -1478,7 +1482,7 @@ xul|search-textbox[focused],
 
 #nav-bar-overflow-button {
   list-style-image: url("resources/newtab.svg") !important;
-  opacity: .95;
+  opacity: .8;
 }
 
 #PanelUI-menu-button {
@@ -1902,7 +1906,7 @@ toolbarbutton:-moz-window-inactive {
 }
 }
 
-#urlbar-container {
+.urlbar-input-container > box {
   -moz-window-dragging: no-drag !important;
 }
 
