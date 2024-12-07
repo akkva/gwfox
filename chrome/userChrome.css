@@ -1951,7 +1951,7 @@ menupopup, panel[type="arrow"] {
 
 :has(#urlbar[breakout][breakout-extend]) {
 #sidebar-box {
-  margin-top: -13px !important;
+  margin-top: -4px !important;
 }
 }
 
@@ -1996,7 +1996,7 @@ body {background: transparent !important;}
 
 :has(#urlbar[usertyping]) {
 #sidebar-box {
-  margin-top: -13px !important;
+  margin-top: -4px !important;
 }
 
 #urlbar-background {
