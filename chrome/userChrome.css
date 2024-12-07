@@ -677,11 +677,13 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   width: 19px !important;
 }
 
+#nav-bar {
 #downloads-button > .toolbarbutton-badge-stack {
   height: 30px !important;
   width: 30px !important;
   border-radius: 6px !important;
   padding: 6.5px 5.5px 5.5px 6.5px !important;
+}
 }
 
 #page-action-buttons {
