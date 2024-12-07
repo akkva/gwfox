@@ -20,6 +20,8 @@
  
   - `widget.windows.mica` *
  
+  - `browser.urlbar.scotchBonnet.enableOverride` 切换为 `false`
+ 
 - 可选项
 
   - 定制标签页壁纸：把壁纸命名为 `light.jpg` 和 `dark.jpg` 放入 `resources` 文件夹内
@@ -36,8 +38,8 @@
 
 ## 样式截图
 
-<img width="1009" alt="01" src="https://github.com/user-attachments/assets/984114df-d40c-40ed-a355-fe7507983302">
+<img width="1123" alt="01" src="https://github.com/user-attachments/assets/5af8b45c-e5ab-4984-8667-a3d7c8ee2753">
 <br><br>
-<img width="1009" alt="02" src="https://github.com/user-attachments/assets/350360b4-78c3-4248-a0ef-9f0a5f3f09ed">
+<img width="1123" alt="02" src="https://github.com/user-attachments/assets/f2b1e024-2e45-478e-9345-4615321974fc">
 <br><br>
-<img width="1009" alt="03" src="https://github.com/user-attachments/assets/f2f6ae7e-9606-4b21-b61e-31f83d625d81">
+<img width="1123" alt="03" src="https://github.com/user-attachments/assets/61268c75-eed4-46ac-b788-848e0d2841bd">
