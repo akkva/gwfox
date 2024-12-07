@@ -20,6 +20,8 @@
   --button-text-color-primary: #fff !important;
   --button-primary-color: #fff !important;
   --color-accent-primary: light-dark(#2b87fb, #3078ef) !important;
+  --color-accent-primary-hover: light-dark(#227cfb, #2566e1) !important;
+  --color-accent-primary-active: light-dark(#1c66e8, #225cca) !important;
   --button-primary-bgcolor: light-dark(#2b87fb, #3078ef) !important;
   --button-primary-hover-bgcolor: light-dark(#227cfb, #2566e1) !important;
   --button-primary-active-bgcolor: light-dark(#1c66e8, #225cca) !important;
@@ -239,6 +241,21 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #nav-bar {
   max-height: 52px !important;
+}
+}
+
+:root[privatebrowsingmode] {
+body {
+  background: rgba(128, 0, 215, .5) !important;
+}
+
+#customization-container,
+#browser {
+  background: transparent !important;
+}
+
+#tabbrowser-tabs {
+  margin-inline-start: 4px !important;
 }
 }
 
@@ -558,7 +575,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 .toggle-button { --toggle-dot-background-color-on-pressed: #fff !important; }
 #blocked-permissions-container, #picture-in-picture-button,
-#urlbar-go-button, #private-browsing-indicator-with-label,
+#urlbar-go-button, .private-browsing-indicator-with-label,
 #reset-pbm-toolbar-button, #nav-bar toolbarspring,
 #firefox-view-button, #fxa-toolbar-menu-button,
 #userContext-icons, #userContext-label,
@@ -1112,7 +1129,6 @@ tree {
 
 :root#main-window {
   min-width: 1000px !important;
-  background-color: transparent !important;
   appearance: -moz-sidebar !important;
 }
 
