@@ -38,8 +38,20 @@
 
 ## 样式截图
 
-<img width="1123" alt="01" src="https://github.com/user-attachments/assets/5af8b45c-e5ab-4984-8667-a3d7c8ee2753">
+<picture>
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/320fbe7b-2858-4061-9f02-96c28f08c995">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/46f765c3-ae09-4f47-b45f-6f25055e7eb4">
+<img width="1130" alt="01">
+</picture>
 <br><br>
-<img width="1123" alt="02" src="https://github.com/user-attachments/assets/f2b1e024-2e45-478e-9345-4615321974fc">
+<picture>
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/32e05b50-a36a-47d8-baec-9bb7c26bb2ad">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/8c5b1aaa-8b91-4293-a4bf-2bddf5afbdc1">
+<img width="1130" alt="02">
+</picture>
 <br><br>
-<img width="1123" alt="03" src="https://github.com/user-attachments/assets/61268c75-eed4-46ac-b788-848e0d2841bd">
+<picture>
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/e4bc04d7-06f5-460c-aa16-c2ef3876e39b">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/0da426ee-ae06-42c5-8371-138ee59b7900">
+<img width="1130" alt="03">
+</picture>
