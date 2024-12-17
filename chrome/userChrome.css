@@ -443,6 +443,11 @@ body {
   box-shadow: var(--bs1) !important;
 }
 
+.urlbar-revert-button {
+  margin-top: 10px !important;
+  margin-right: 5px !important;
+}
+
 #tabbrowser-tabs {
   margin-left: -223px !important;
 }
