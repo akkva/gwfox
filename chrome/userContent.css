@@ -131,7 +131,13 @@ input[type="radio"], .radio-check {
 }
 
 @-moz-document url("about:newtab"), url("about:home") {
-body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;}
+body {
+  --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
+  background-image: url("resources/light.jpg") !important;
+@media (prefers-color-scheme: dark) {
+  background-image: url("resources/dark.jpg") !important;
+}
+}
 
 @keyframes panel-grow {
   0% {
@@ -184,8 +190,9 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 }
 
 .icon.icon-settings:hover {
-  background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
+  background-color: light-dark(rgba(255, 255, 255, .8), rgba(15, 15, 15, .6)) !important;
   backdrop-filter: blur(30px) !important;
+  opacity: 1 !important;
 }
 
 .search-wrapper {
@@ -205,21 +212,16 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 
 .search-inner-wrapper {
   order: 2;
-  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+  background-color: light-dark(rgba(255, 255, 255, .8), rgba(15, 15, 15, .6)) !important;
   border-radius: 12px !important;
-  box-shadow: none !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
   transition: background .5s !important;
   margin-right: 0 !important;
   z-index: 1;
 }
 
-.search-inner-wrapper:hover {
-  background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
-  transition: background .5s !important;
-}
-
 .search-inner-wrapper:active {
-  background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
+  background-color: light-dark(rgba(255, 255, 255, .4), rgba(15, 15, 15, .7)) !important;
   transition: background .5s !important;
 }
 
@@ -286,31 +288,51 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 }
 
 .icon-wrapper {
-  width: 28px !important;
-  height: 28px !important;
+  width: 32px !important;
+  height: 32px !important;
 }
 
 .customize-menu {
   border-radius: 8px !important;
 }
 
+.tile, .context-menu-button.icon {
+  background-color: rgba(255, 255, 255, .8) !important;
+}
+
+.context-menu-button {
+  fill: #000 !important;
+}
+
+.lightWallpaper .top-site-outer .title {
+  color: #000 !important;
+}
+
+.darkWallpaper .top-site-outer .title {
+  color: #fff !important;
+}
+
+@media (prefers-color-scheme: dark) {
+.tile, .context-menu-button.icon {
+  background-color: rgba(15, 15, 15, .6) !important;
+}
+
+.context-menu-button {
+  fill: #fff !important;
+}
+}
+
 .tile {
-  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
-  border-radius: 12px !important;
-  width: 58px !important;
-  height: 58px !important;
-  box-shadow: none !important;
+  border-radius: 16px !important;
+  width: 72px !important;
+  height: 72px !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
   border: none !important;
   transition: background .5s !important;
 }
 
-.tile:hover {
-  background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
-  transition: background .5s !important;
-}
-
 .tile:active {
-  background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
+  background-color: light-dark(rgba(255, 255, 255, .4), rgba(15, 15, 15, .7)) !important;
   transition: background .5s !important;
 }
 
@@ -357,7 +379,6 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 .context-menu-button.icon {
   margin: 5px 5px 0 0 !important;
   border-radius: 50px !important;
-  background-color: light-dark(rgba(0, 0, 0, .1), rgba(255, 255, 255, .1)) !important;
 }
 
 .contentSearchSuggestionTable .contentSearchHeader,
@@ -385,6 +406,7 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
   border: none !important;
   animation-name: panel-grow;
   animation-duration: 250ms;
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
 }
 
 .modal, .tile, .context-menu-button.icon, .search-inner-wrapper {
@@ -430,71 +452,15 @@ body {--newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !
 }
 }
 
-@media (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabWallpapers.enabled"),
-       (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
-.tile, .search-inner-wrapper {
-  box-shadow: 0 2px 15px rgba(0, 0, 0, .1) !important;
-}
-
-@media (-moz-bool-pref: "uc.tweak.newtab_wallpapers") {
-body {
-  background-image: url("resources/light.jpg") !important;
-@media (prefers-color-scheme: dark) {
-  background-image: url("resources/dark.jpg") !important;
-}
-}
-}
-
-.tile, .context-menu-button.icon {
-  background-color: rgba(255, 255, 255, .5) !important;
-}
-
-.context-menu-button {
-  fill: #000 !important;
-}
-
-.lightWallpaper .top-site-outer .title {
-  color: #000 !important;
-}
-
-.darkWallpaper .top-site-outer .title {
-  color: #fff !important;
-}
-
-@media (prefers-color-scheme: dark) {
-.tile, .context-menu-button.icon {
-  background-color: rgba(25, 25, 25, .5) !important;
-}
-
-.context-menu-button {
-  fill: #fff !important;
-}
-}
-
-.search-inner-wrapper, .modal {
-  background-color: light-dark(rgba(255, 255, 255, .5), rgba(25, 25, 25, .5)) !important;
-}
-
-.tile:hover, .icon.icon-settings:hover,
-.search-inner-wrapper:hover, .search-button:hover {
-  background-color: light-dark(rgba(255, 255, 255, .6), rgba(25, 25, 25, .6)) !important;
-}
-
-.tile:active, .search-button:focus,
-.search-inner-wrapper:active {
-  background-color: light-dark(rgba(255, 255, 255, .4), rgba(25, 25, 25, .4)) !important;
-}
-}
-
 @media (-moz-platform: windows) {
 .modal, .tile, .context-menu-button.icon, .search-inner-wrapper,
 .top-site-outer .context-menu, .card-outer .context-menu,
-.contentSearchSuggestionTable, .customize-menu {
+.contentSearchSuggestionTable, .customize-menu, .icon.icon-settings:hover {
   background-color: light-dark(#f8f8f8, #2c2c2c) !important;
 }
 
 .tile, .search-inner-wrapper {
-&:hover { background-color: light-dark(#ededed, #242424) !important; }
+&:active { background-color: light-dark(#ededed, #242424) !important; }
 }
 
 .lightWallpaper .tile, .lightWallpaper .context-menu-button.icon {
