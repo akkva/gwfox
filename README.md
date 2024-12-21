@@ -21,12 +21,6 @@
   - `widget.windows.mica` *
  
   - `browser.urlbar.scotchBonnet.enableOverride` 切换为 `false`
- 
-- 可选项
-
-  - 定制标签页壁纸：把壁纸命名为 `light.jpg` 和 `dark.jpg` 放入 `resources` 文件夹内
-    
-    - 添加布尔值 `uc.tweak.newtab_wallpapers` 为 `true` 启用
 
 - 安装扩展[Sidebery](https://addons.mozilla.org/firefox/addon/sidebery)固定到工具栏
 
