@@ -1487,6 +1487,10 @@ xul|search-textbox[focused],
 }
 
 :root:not([customizing]):has(#sidebar-box:not([hidden])) {
+#TabsToolbar {
+  width: 0 !important;
+}
+
 #tabbrowser-tabs,
 #new-tab-button {
   display: none !important;
