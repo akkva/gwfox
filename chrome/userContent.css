@@ -144,6 +144,10 @@ body {
   background-image: url("resources/dark.jpg") !important;
 }
 
+.container {
+  margin-top: -40px !important;
+}
+
 .search-handoff-button {
   background-color: rgba(15, 15, 15, .6) !important;
   border-radius: 12px !important;
