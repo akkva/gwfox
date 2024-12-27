@@ -158,8 +158,18 @@ body {
   fill: rgba(255, 255, 255, .7) !important;
 }
 
+.search-handoff-button.disabled {
+  opacity: 1 !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
+  fill: rgba(255, 255, 255, .4) !important;
+}
+
 .fake-textbox {
   color: #fff !important;
+}
+
+.search-handoff-button.disabled .fake-textbox {
+  color: #999 !important;
 }
 
 .logo {
@@ -173,6 +183,12 @@ body {
 
 .info, .promo-visible {
   display: none;
+}
+
+@media (-moz-platform: windows) {
+.search-handoff-button {
+  background-color: #2c2c2c !important;
+}
 }
 }
 
