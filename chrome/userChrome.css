@@ -245,10 +245,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 :root[privatebrowsingmode] {
-body {
-  background: rgba(128, 0, 215, .5) !important;
-}
-
 #customization-container,
 #browser {
   background: transparent !important;
