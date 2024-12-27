@@ -130,6 +130,48 @@ input[type="radio"], .radio-check {
 }
 }
 
+@-moz-document url("about:privatebrowsing") {
+:root {
+  --in-content-page-background: transparent !important;
+}
+
+body {
+  --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url("resources/dark.jpg") !important;
+}
+
+.search-handoff-button {
+  background-color: rgba(15, 15, 15, .6) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
+  backdrop-filter: blur(30px) !important;
+  outline: none !important;
+  border: none !important;
+  fill: rgba(255, 255, 255, .7) !important;
+}
+
+.fake-textbox {
+  color: #fff !important;
+}
+
+.logo {
+  background: url("chrome://browser/skin/privateBrowsing.svg") no-repeat center center !important;
+  background-size: 76px !important;
+  height: 76px !important;
+  width: 76px !important;
+  -moz-context-properties: fill;
+  fill: currentColor;
+}
+
+.info, .promo-visible {
+  display: none;
+}
+}
+
 @-moz-document url("about:newtab"), url("about:home") {
 body {
   --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
