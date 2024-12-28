@@ -979,6 +979,28 @@ panel[type="arrow"] {
   }
 }
 
+@keyframes slide-in {
+  0%, 30% {
+    translate: 100%;
+    opacity: 0;
+  }
+  100% {
+    translate: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  100% {
+    translate: 100%;
+    opacity: 0;
+  }
+  0% {
+    translate: 0;
+    opacity: 1;
+  }
+}
+
 panelmultiview, popupnotification {
   animation-name: panel-grow;
   animation-duration: 250ms;
@@ -1273,14 +1295,19 @@ richlistbox {
 
 findbar {
   position: absolute !important;
-  top: 0;
-  right: 10px;
+  top: 5px;
+  right: -8px;
   width: calc(100% - 15px) !important;
   height: 90px !important;
   border: none !important;
   background: none !important;
   flex-direction: row-reverse;
   white-space: nowrap;
+  animation-name: slide-in;
+  animation-duration: 250ms;
+&:is([hidden="true"]) {
+  animation-name: slide-out;
+}
 }
 
 findbar::after {
@@ -1291,7 +1318,7 @@ findbar::after {
 
 .findbar-closebutton {
   position: fixed;
-  right: 36px;
+  right: 18px;
   margin-top: 7px !important;
   background: none !important;
   z-index: 1;
