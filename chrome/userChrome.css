@@ -1289,8 +1289,8 @@ richlistbox {
 }
 
 .devtools-toolbox-side-iframe {
-  &:first-child {margin-right: 0 !important;}
-  &:last-child {margin-left: 0 !important;}
+  &:first-child { margin-right: 0 !important; }
+  &:last-child { margin-left: 0 !important; }
 }
 
 findbar {
@@ -1492,7 +1492,7 @@ xul|search-textbox[focused],
 
 :has(#sidebar-box[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]) {
 #sidebar-header {
-  display: none
+  display: none;
 }
 }
 
@@ -1733,6 +1733,7 @@ xul|search-textbox[focused],
   list-style-image: url("resources/forward.svg") !important;
 }
 
+@media not (-moz-bool-pref: "uc.tweak.popout_sidebar") {
 :has(#sidebar-box[style*="width: 67px"]) {
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
@@ -1786,6 +1787,7 @@ xul|search-textbox[focused],
 }
 }
 }
+}
 
 :root[inFullscreen]:has(#sidebar-box:not([hidden])) {
 #nav-bar {
@@ -1802,6 +1804,309 @@ xul|search-textbox[focused],
   visibility: visible !important;
 }
 }
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.popout_sidebar") {
+:has(#sidebar-box:not([hidden])) {
+.titlebar-buttonbox-container {
+  left: -225px !important;
+  transition: left .25s !important;
+}
+
+.titlebar-buttonbox {
+  appearance: none !important;
+  &::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -15px;
+  background: transparent;
+  width: 15px;
+  height: 200%;
+}
+}
+
+.titlebar-button {
+  display: flex !important;
+  padding: 0 !important;
+  scale: .75;
+}
+
+.titlebar-close {
+  order: -1;
+  list-style-image: url("resources/titlebar-backdrop.svg") !important;  
+.titlebar-buttonbox:hover & {
+  list-style-image: url("resources/titlebar-close-hover.svg") !important;
+&:active {
+  list-style-image: url("resources/titlebar-close-active.svg") !important;
+@media (prefers-color-scheme: dark) {
+  list-style-image: url("resources/titlebar-close-active-dark.svg") !important;
+}
+}
+}
+}
+
+.titlebar-min {
+  list-style-image: url("resources/titlebar-backdrop.svg") !important;  
+.titlebar-buttonbox:hover & {
+  list-style-image: url("resources/titlebar-min-hover.svg") !important;
+&:active {
+  list-style-image: url("resources/titlebar-min-active.svg") !important;
+@media (prefers-color-scheme: dark) {
+  list-style-image: url("resources/titlebar-min-active-dark.svg") !important;
+}
+}
+}
+}
+
+.titlebar-max {
+  list-style-image: url("resources/titlebar-backdrop.svg") !important;  
+.titlebar-buttonbox:hover & {
+  list-style-image: url("resources/titlebar-max-hover.svg") !important;
+&:active {
+  list-style-image: url("resources/titlebar-max-active.svg") !important;
+@media (prefers-color-scheme: dark) {
+  list-style-image: url("resources/titlebar-max-active-dark.svg") !important;
+}
+}
+}
+}
+
+.titlebar-restore {
+  list-style-image: url("resources/titlebar-backdrop.svg") !important;  
+.titlebar-buttonbox:hover & {
+  list-style-image: url("resources/titlebar-restore-hover.svg") !important;
+&:active {
+  list-style-image: url("resources/titlebar-restore-active.svg") !important;
+@media (prefers-color-scheme: dark) {
+  list-style-image: url("resources/titlebar-restore-active-dark.svg") !important;
+}
+}
+}
+}
+
+@media (prefers-color-scheme: dark) {
+.titlebar-buttonbox:not(:hover, :active) {
+  opacity: .5;     
+}
+}
+}
+
+:root:not([inDOMFullscreen]):has(#sidebar-box:not([hidden])) {
+#tabbrowser-tabbox {
+  z-index: 1 !important;
+}
+
+#tabbrowser-tabbox browser {
+  margin: 0 8px 8px;
+}
+
+#tabbrowser-tabpanels {
+  margin-top: -59.5px;
+}
+}
+
+:root:not([customizing]):has(#sidebar-box:not([hidden])) {
+#sidebar-box {
+  position: fixed;
+  top: 0px;
+  left: -225px !important;
+  max-width: 217px !important;
+  min-width: 217px !important;
+  height: calc(100% - 16px) !important;
+  margin-top: 8px !important;
+  border-radius: 8px !important;
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  backdrop-filter: blur(30px) !important;
+  box-shadow: var(--bs1) !important;
+  z-index: 2 !important;
+  opacity: 0;
+  transition: .25s !important;
+& > * {
+  margin: 83px 5px 0 !important;
+  transition: .25s !important;
+}
+&::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -10px;
+  background: transparent;
+  width: 15px;
+  height: 100%;
+}
+
+&::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: -25px;
+  background: transparent;
+  width: 25px;
+  height: 100%;
+}
+}
+
+#sidebar-box:-moz-window-inactive {
+  background-color: var(--bg1) !important;
+  opacity: 1 !important;
+  left: -225px !important;
+&::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: transparent;
+  width: 120%;
+  height: 100%;
+}
+}
+
+#urlbar:not([breakout][breakout-extend], [usertyping]) {
+  top: 52px !important;
+  left: -225px !important;
+  opacity: 0;
+  transition: left .25s !important; 
+}
+
+#reload-button,
+#stop-button,
+#back-button,
+#forward-button {
+  position: fixed !important;
+  top: 18px;
+  left: -225px;
+  opacity: 0;
+  z-index: 8;
+  transition: left .25s !important;
+}
+
+:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
+  left: -225px !important;
+  top: 15px !important;
+  opacity: 0;
+  z-index: 8;
+  transition: left .25s !important;
+}
+
+#PanelUI-menu-button,
+#nav-bar-overflow-button,
+#unified-extensions-button {
+  left: -225px;
+  opacity: 0;
+  transition: left .25s !important;
+}
+
+:has(.titlebar-buttonbox:hover, #sidebar-box:hover, toolbarbutton:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"], #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button):hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], .urlbar-page-action[open], #downloads-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], .tab-throbber[busy]) {
+.titlebar-buttonbox-container {
+  top: 23px !important;
+  left: 2px !important;
+}
+
+#sidebar-box {
+  left: 3px !important;
+  opacity: 1;
+  transition: .25s !important;
+}
+
+#urlbar:not([breakout][breakout-extend], [usertyping]) {
+  left: 17px !important;
+  opacity: 1;
+  transition: left .25s !important;
+}
+
+#reload-button,
+#stop-button,
+#back-button,
+#forward-button,
+:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
+  left: 108px;
+  opacity: 1;
+  transition: left .25s !important;
+}
+
+#forward-button {
+  left: 148px;
+}
+
+#reload-button,
+#stop-button {
+  left: 182px;
+}
+
+:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
+  left: 80px !important;
+}
+
+#PanelUI-menu-button,
+#nav-bar-overflow-button {
+  left: 18px;
+  bottom: 19px;
+  opacity: 1;
+  transition: left .25s !important;
+}
+
+#nav-bar-overflow-button,
+#unified-extensions-button {
+  left: 190px;
+}
+
+#unified-extensions-button {
+  bottom: 59px;
+}
+
+@media (prefers-color-scheme: dark) {
+#sidebar-box {
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1px !important;
+  box-shadow: var(--bs2) !important;
+}
+}
+}
+}
+
+:root:not([customizing]):has(#sidebar-box:not([hidden])) {
+#PersonalToolbar {
+  width: calc(100% - 16px) !important;
+  margin: 0 8px 8px 8px !important;
+}
+
+#statuspanel-label {
+  margin: 8px !important;
+}
+
+:has(#urlbar[usertyping]) {
+#sidebar-box {
+  margin-top: 8px !important;
+}
+}
+
+:has(#urlbar[breakout][breakout-extend], #urlbar[usertyping]) {
+#sidebar-box {
+& > * {
+  margin-top: 40px !important;
+  transition: .25s !important;
+}
+}
+}
+
+#sidebar-header {
+  margin-bottom: -83px !important;
+}
+}
+
+:root[inFullscreen]:not([customizing]):has(#sidebar-box:not([hidden])) {
+:has(.titlebar-buttonbox:hover, #sidebar-box:hover, toolbarbutton:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"], #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button):hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], .urlbar-page-action[open], #downloads-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], .tab-throbber[busy]) {
+:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
+  left: 18px !important;
+}
+}
+}
+
+:root:not([sizemode="maximized"], [sizemode="fullscreen"]):has(#sidebar-box:not([hidden])) .titlebar-restore, 
+:root:is([sizemode="maximized"], [sizemode="fullscreen"]):has(#sidebar-box:not([hidden])) .titlebar-max {
+  display: none !important;
 }
 }
 
@@ -2091,6 +2396,34 @@ richlistitem {
 #editBookmarkPanel .expander-up,
 #editBookmarkPanel .expander-down {
   border: none !important;
+}
+}
+
+@media (-moz-bool-pref: "uc.tweak.popout_sidebar") {
+:has(#sidebar-box:not([hidden])) {
+.titlebar-button {
+  padding: 0 4px !important;
+  scale: unset;
+}
+}
+
+:root:not([inDOMFullscreen]):has(#sidebar-box:not([hidden])) {
+#tabbrowser-tabpanels {
+  margin-top: -38.5px;
+}
+}
+
+:root:not([customizing]):has(#sidebar-box:not([hidden])) {
+#sidebar-box {
+  background-color: var(--bg2) !important;
+}
+
+:has(.titlebar-buttonbox:hover, #sidebar-box:hover, toolbarbutton:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"], #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button):hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], .urlbar-page-action[open], #downloads-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], .tab-throbber[busy]) {
+.titlebar-buttonbox-container {
+  top: 25px !important;
+  left: 15px !important;
+}
+}
 }
 }
 }
