@@ -343,7 +343,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #urlbar[breakout][breakout-extend] {
   position: fixed !important;
   top: 20vh !important;
-  left: 15vw !important;
+  left: 18vw !important;
   width: 65vw !important;
   max-width: unset !important;
   animation-name: panel-grow;
@@ -411,7 +411,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #urlbar {
   position: fixed !important;
   top: 20vh !important;
-  left: 15vw !important;
+  left: 18vw !important;
   width: 65vw !important;
   max-width: unset !important;
   margin-top: 25px !important;
@@ -1910,6 +1910,16 @@ xul|search-textbox[focused],
 :root:not([customizing]):has(#sidebar-box:not([hidden])) {
 #nav-bar {
   padding-left: 0 !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+  left: 18vw !important;
+}
+
+:has(#urlbar[usertyping]) {
+#urlbar {
+  left: 18vw !important;
+}
 }
 
 #sidebar-box {
