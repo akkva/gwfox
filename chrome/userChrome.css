@@ -2418,6 +2418,10 @@ richlistitem {
 }
 
 :root:not([customizing]):has(#sidebar-box:not([hidden])) {
+#nav-bar {
+  padding-left: 0 !important;
+}
+
 #sidebar-box {
   background-color: var(--bg2) !important;
 }
