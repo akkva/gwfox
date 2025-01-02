@@ -1908,6 +1908,10 @@ xul|search-textbox[focused],
 }
 
 :root:not([customizing]):has(#sidebar-box:not([hidden])) {
+#nav-bar {
+  padding-left: 0 !important;
+}
+
 #sidebar-box {
   position: fixed;
   top: 0px;
