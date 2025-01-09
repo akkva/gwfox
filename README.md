@@ -35,6 +35,8 @@
 
 - 隐藏侧栏：在 `about:config` 页面中添加布尔值 `uc.tweak.popout_sidebar` 为 `true` 启用
 
+  - macOS在此模式下建议把 `widget.macos.native-context-menus` 切换为 `false`
+
 ## 样式截图
 
 <picture>
