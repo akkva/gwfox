@@ -1886,6 +1886,20 @@ xul|search-textbox[focused],
 }
 }
 
+@media (-moz-platform: macos) {
+.titlebar-max, .titlebar-restore {
+.titlebar-buttonbox:hover & {
+  list-style-image: url("resources/titlebar-max-hover-mac.svg") !important;
+&:active {
+  list-style-image: url("resources/titlebar-max-active-mac.svg") !important;
+@media (prefers-color-scheme: dark) {
+  list-style-image: url("resources/titlebar-max-active-dark-mac.svg") !important;
+}
+}
+}
+}
+}
+
 @media (prefers-color-scheme: dark) {
 .titlebar-buttonbox:not(:hover, :active) {
   opacity: .5;     
