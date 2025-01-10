@@ -1896,7 +1896,7 @@ xul|search-textbox[focused],
 }
 }
 
-:has(#sidebar-box[style*="width: 67px"]) {
+:has(#sidebar-box[style*="width: 67px"]:not(:hover)) {
 #nav-bar {
 :is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
   left: 25px;
