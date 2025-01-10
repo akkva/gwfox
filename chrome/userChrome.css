@@ -1896,6 +1896,15 @@ xul|search-textbox[focused],
 }
 }
 
+:has(toolbarbutton:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"], #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button):hover, #urlbar-revert-button-container:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], .urlbar-page-action[open], #downloads-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open]) {
+#nav-bar {
+:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
+  left: 5px;
+  visibility: visible !important;
+}
+}
+}
+
 :has(#sidebar-box[style*="width: 67px"]:not(:hover)) {
 #nav-bar {
 :is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
