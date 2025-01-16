@@ -1583,11 +1583,16 @@ xul|search-textbox[focused],
   scale: 1.22;
 }
 
+:is([data-extensionid="userchrome-toggle@joolee.nl"]) > .toolbarbutton-badge-stack {
+  height: 30px !important;
+  width: 30px !important;
+}
+
 :is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
   position: fixed !important;
   left: 210px;
   top: 6.5px;
-  display: unset;
+  display: flex;
 }
 }
 
