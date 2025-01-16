@@ -1881,7 +1881,7 @@ xul|search-textbox[focused],
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
-  width: unset !important;
+  width: 231px !important;
 }
 
 #urlbar[breakout][breakout-extend] {
