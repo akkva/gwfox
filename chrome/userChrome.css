@@ -1768,6 +1768,26 @@ xul|search-textbox[focused],
   opacity: 0;
 }
 
+#urlbar {
+&::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -10px;
+  width: 110%;
+  height: 165%;
+}
+
+&::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: 28px;
+  width: 5px;
+  height: 100%;
+}
+}
+
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   width: 62px !important;
 }
@@ -1858,26 +1878,6 @@ xul|search-textbox[focused],
   max-width: 237px !important;
   min-width: 237px !important;
   transition: .25s !important;
-}
-
-#urlbar {
-&::before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: -10px;
-  width: 110%;
-  height: 165%;
-}
-
-&::after {
-  content: "";
-  position: absolute;
-  top: -40px;
-  right: 28px;
-  width: 5px;
-  height: 100%;
-}
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
