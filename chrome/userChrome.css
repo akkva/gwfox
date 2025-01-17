@@ -97,12 +97,7 @@
 
 #navigator-toolbox {
   background: none !important;
-}
-
-@media (-moz-platform: macos) {
-#navigator-toolbox {
   border: none !important;
-}
 }
 
 .browser-toolbar {
@@ -2344,7 +2339,6 @@ xul|search-textbox[focused],
 --bs: 0 10px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15);
 }
 :root:-moz-window-inactive {--sidebar-background-color: transparent !important;}
-body {background: var(--bg1) !important;}
 
 :root#main-window {
   appearance: none !important;
@@ -2396,7 +2390,15 @@ richlistitem[selected] {
 }
 
 #nav-bar {
-  border-bottom: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+&::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: light-dark(#d2d2d5, #090910);
+  width: .5px;
+  height: 50%;
+}
 }
 
 toolbarbutton:-moz-window-inactive {
@@ -2477,15 +2479,6 @@ toolbarbutton:-moz-window-inactive {
 }
 }
 
-:has(#sidebar-box[hidden]) {
-#tabbrowser-tabbox browser {
-  margin: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-}
-
 .urlbar-input-container > box {
   -moz-window-dragging: no-drag !important;
 }
@@ -2507,20 +2500,6 @@ menupopup, panel[type="arrow"] {
 
 #contentAreaContextMenu .menu-iconic-left {
   display: unset;
-}
-
-#PersonalToolbar {
-  width: 100%;
-  margin: 0 !important;
-}
-
-#statuspanel-label {
-  margin: 0 !important;
-}
-
-.devtools-side-splitter,
-.devtools-horizontal-splitter {
-  display: unset !important;
 }
 
 #PersonalToolbar, window[role="dialog"],
