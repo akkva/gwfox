@@ -1777,18 +1777,18 @@ xul|search-textbox[focused],
 &::before {
   content: "";
   position: absolute;
-  top: -8px;
+  top: -10px;
   left: -10px;
   width: 110%;
-  height: 165%;
+  height: 170%;
 }
 
 &::after {
   content: "";
   position: absolute;
   top: -40px;
-  right: 28px;
-  width: 5px;
+  right: 27px;
+  width: 8px;
   height: 100%;
 }
 }
@@ -2635,17 +2635,13 @@ richlistitem {
 }
 }
 
-:root[titlepreface=""]:not([customizing]):has(#sidebar-box:not([hidden])) {
+:root[titlepreface=""]:not([inDOMFullscreen]):has(#sidebar-box:not([hidden])) {
 #tabbrowser-tabpanels {
   margin-top: -38.5px;
 }
 }
 
 :root[titlepreface=""]:not([customizing]):has(#sidebar-box:not([hidden])) {
-#nav-bar {
-  padding-left: 0 !important;
-}
-
 #sidebar-box {
   background-color: var(--bg2) !important;
 }
