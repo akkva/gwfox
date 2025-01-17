@@ -80,6 +80,7 @@
   border-radius: 8px;
   clip-path: circle(100%);
   box-shadow: 0 1.5px 6px #00000026;
+  background-color: light-dark(#fff, #202020) !important;
 }
 
 #tabbrowser-tabpanels {
@@ -2529,8 +2530,6 @@ menupopup, panel[type="arrow"] {
 }
 
 :root:not([customizing]):has(#sidebar-box:not([hidden])) {
-body {background: transparent !important;}
-
 .sidebar-splitter {
   margin-top: -35px !important;
 }
