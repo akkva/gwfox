@@ -1425,6 +1425,16 @@ xul|search-textbox[focused],
   min-width: 67px !important;
   margin: 19.5px 0 0 5px !important;
   transition: .25s !important;
+  &::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: -25px;
+  width: 205px;
+  height: 100vh;
+  z-index: -1;
+  -moz-window-dragging: drag;
+}
 }
 
 #sidebar-box:-moz-window-inactive {
@@ -1500,7 +1510,6 @@ xul|search-textbox[focused],
 :has(#sidebar-box:not([hidden])) {
 #tabbrowser-tabbox browser {
   box-shadow: 1px 0 6px #00000026;
-  -moz-window-dragging: no-drag !important;
 }
 
 #tabbrowser-tabpanels {
@@ -1568,6 +1577,7 @@ xul|search-textbox[focused],
 #nav-bar {
   padding: 29px 3px 0 100px !important;
   height: 87px !important;
+  -moz-window-dragging: no-drag;
 
 :is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
   left: 72px;
@@ -2139,16 +2149,6 @@ xul|search-textbox[focused],
   left: -10px;
   background: transparent;
   width: 15px;
-  height: 100%;
-}
-
-&::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: -25px;
-  background: transparent;
-  width: 25px;
   height: 100%;
 }
 }
