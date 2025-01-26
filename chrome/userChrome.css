@@ -954,10 +954,12 @@ tab .tab-label {
 
 .tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
   margin-left: 1px;
+  transition: margin-left .2s;
 }
 
 .tabbrowser-tab:hover:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
   margin-left: 6px;
+  transition: margin-left .2s;
 }
 
 .tab-secondary-label {
