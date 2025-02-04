@@ -625,8 +625,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #nav-bar-overflow-button {
-  margin-left: -4px !important;
-  margin-right: 4px !important;
+  margin-left: -8px !important;
+  margin-right: 8px !important;
 }
 
 #viewButton {
@@ -680,7 +680,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #PanelUI-menu-button {
-  margin-left: -4px !important;
+  margin-left: -8px !important;
 }
 
 #PanelUI-menu-button > .toolbarbutton-badge-stack {
