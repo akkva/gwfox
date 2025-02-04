@@ -1444,8 +1444,7 @@ xul|search-textbox[focused],
 }
 
 #sidebar-box {
-  max-width: 237px !important;
-  min-width: 67px !important;
+  width: 237px !important;
   margin: 19.5px 0 0 5px !important;
   transition: .25s !important;
   &::after {
@@ -1543,17 +1542,6 @@ xul|search-textbox[focused],
 }
 
 :root:not([customizing]):has(#sidebar-box:not([hidden])) {
-.sidebar-splitter {
-  margin: -55px -5px 12px 1px !important;
-  border-radius: 4px;
-  transition: .25s !important;
-}
-
-.sidebar-splitter:hover {
-  background-color: var(--outline-color) !important;
-  transition: .25s !important;
-}
-
 #TabsToolbar {
   width: 0 !important;
 }
@@ -1796,197 +1784,6 @@ xul|search-textbox[focused],
 }
 }
 
-:root:not([titlepreface=""]) {
-:has(#sidebar-box[style*="width: 67px"]) {
-:is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
-  opacity: 0;
-}
-
-#urlbar {
-&::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 110%;
-  height: 170%;
-}
-
-&::after {
-  content: "";
-  position: absolute;
-  top: -40px;
-  right: 27px;
-  width: 8px;
-  height: 100%;
-}
-}
-
-#urlbar:not([breakout][breakout-extend], [usertyping]) {
-  width: 62px !important;
-}
-
-#urlbar[breakout][breakout-extend] {
-  left: 19vw !important;
-}
-
-:has(#urlbar[usertyping]) {
-#urlbar {
-  left: 19vw !important;
-}
-}
-
-#PanelUI-menu-button {
-  left: 25px !important;
-}
-
-#nav-bar-overflow-button,
-#unified-extensions-button,
-#back-button, #forward-button,
-#reload-button, #stop-button,
-:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
-  visibility: hidden !important;
-}
-
-#urlbar:not([breakout][breakout-extend]) {
-#tracking-protection-icon-container,
-#identity-permission-box,
-#notification-popup-box {
-  visibility: hidden !important;
-}
-}
-
-#urlbar[breakout][breakout-extend] {
-#identity-box[pageproxystate="invalid"] {
-#identity-icon {
-  margin-left: 0 !important;
-}
-}
-}
-
-#identity-box[pageproxystate="invalid"] {
-#identity-icon {
-  margin-left: 10px !important;
-}
-}
-
-#identity-box[pageproxystate="valid"].chromeUI #identity-icon {
-  margin-left: 14px !important;
-}
-
-#identity-permission-box[open=true],
-#identity-permission-box[hasPermissions],
-#identity-permission-box[hasSharingIcon] {
-  display: none !important;
-}
-
-#urlbar:not([breakout][breakout-extend], [usertyping]) {
-#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
-#identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon,  
-#identity-box[pageproxystate="valid"].weakCipher #identity-icon,
-#identity-box[pageproxystate="valid"].mixedDisplayContent #identity-icon,
-#identity-box[pageproxystate="valid"].mixedDisplayContentLoadedActiveBlocked #identity-icon,
-#identity-box[pageproxystate="valid"].certUserOverridden #identity-icon,
-#identity-box[pageproxystate="valid"].certErrorPage #identity-icon,
-#identity-box[pageproxystate="valid"].notSecure #identity-icon,
-#identity-box[pageproxystate="valid"].mixedActiveContent #identity-icon,
-#identity-box[pageproxystate="valid"].httpsOnlyErrorPage #identity-icon,
-#identity-box[pageproxystate="valid"].extensionPage #identity-icon {
-  margin-right: 16px !important;
-  margin-left: 16px !important;
-}
-}
-
-#PersonalToolbar {
-  width: calc(100% - 83px) !important;
-  margin: 0 6px 6px 77px !important;
-}
-}
-
-:has(#sidebar-box:hover, toolbarbutton:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"], [data-extensionid="userchrome-toggle@joolee.nl"], #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button):hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], .urlbar-page-action[open], #downloads-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open]) {
-:is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
-  opacity: 1;
-}
-
-#sidebar-box {
-  max-width: 237px !important;
-  min-width: 237px !important;
-  transition: .25s !important;
-}
-
-#urlbar:not([breakout][breakout-extend], [usertyping]) {
-  width: 231px !important;
-}
-
-#urlbar[breakout][breakout-extend] {
-  left: 25vw !important;
-}
-
-:has(#urlbar[usertyping]) {
-#urlbar {
-  left: 25vw !important;
-}
-}
-
-#PanelUI-menu-button {
-  left: 10px !important;
-}
-
-#nav-bar-overflow-button,
-#unified-extensions-button,
-#back-button, #forward-button,
-#reload-button, #stop-button,
-:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
-  visibility: visible !important;
-  z-index: 8 !important;
-}
-
-#PersonalToolbar {
-  width: calc(100% - 223px);
-  margin: 0 6px 6px 217px !important;
-}
-
-#identity-box[pageproxystate="invalid"] {
-#identity-icon {
-  margin-left: 0 !important;
-}
-}
-
-#identity-box[pageproxystate="valid"].chromeUI #identity-icon {
-  margin-left: 0 !important;
-}
-
-#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
-#identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon,  
-#identity-box[pageproxystate="valid"].weakCipher #identity-icon,
-#identity-box[pageproxystate="valid"].mixedDisplayContent #identity-icon,
-#identity-box[pageproxystate="valid"].mixedDisplayContentLoadedActiveBlocked #identity-icon,
-#identity-box[pageproxystate="valid"].certUserOverridden #identity-icon,
-#identity-box[pageproxystate="valid"].certErrorPage #identity-icon,
-#identity-box[pageproxystate="valid"].notSecure #identity-icon,
-#identity-box[pageproxystate="valid"].mixedActiveContent #identity-icon,
-#identity-box[pageproxystate="valid"].httpsOnlyErrorPage #identity-icon,
-#identity-box[pageproxystate="valid"].extensionPage #identity-icon {
-  margin-right: unset !important;
-  margin-left: unset !important;
-}
-
-#identity-permission-box[open=true],
-#identity-permission-box[hasPermissions],
-#identity-permission-box[hasSharingIcon] {
-  display: block !important;
-}
-
-#urlbar:not([breakout][breakout-extend]) {
-#tracking-protection-icon-container,
-#identity-permission-box,
-#notification-popup-box {
-  visibility: visible !important;
-}
-}
-}
-}
-
 :root[inFullscreen]:has(#sidebar-box:not([hidden])) {
 #nav-bar {
 :is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
@@ -1999,15 +1796,6 @@ xul|search-textbox[focused],
 #nav-bar {
 :is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
   left: 5px;
-  visibility: visible !important;
-}
-}
-}
-
-:has(#sidebar-box[style*="width: 67px"]:not(:hover)) {
-#nav-bar {
-:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
-  left: 25px;
   visibility: visible !important;
 }
 }
@@ -2128,10 +1916,6 @@ xul|search-textbox[focused],
 }
 
 :root[titlepreface=""]:not([customizing]):has(#sidebar-box:not([hidden])) {
-.sidebar-splitter {
-  display: none;
-}
-
 #nav-bar {
   padding-left: 0 !important;
 }
@@ -2553,10 +2337,6 @@ menupopup, panel[type="arrow"] {
 }
 
 :root:not([customizing]):has(#sidebar-box:not([hidden])) {
-.sidebar-splitter {
-  margin-top: -35px !important;
-}
-
 #navigator-toolbox {
   border: none !important;
 }
