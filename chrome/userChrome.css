@@ -832,8 +832,7 @@ tab .tab-label {
   margin-bottom: -16px !important;
 }
 
-:root:not([customizing]) {
-#alltabs-button {
+#nav-bar #alltabs-button {
   list-style-image: url("resources/alltabs.svg") !important;
 > .toolbarbutton-badge-stack {
   height: 30px !important;
@@ -844,7 +843,6 @@ tab .tab-label {
   height: 18px !important;
   width: 18px !important;
   margin: unset !important;
-}
 }
 }
 }
