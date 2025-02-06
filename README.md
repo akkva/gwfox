@@ -40,13 +40,13 @@
 ## 样式截图
 
 <picture>
-<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/320fbe7b-2858-4061-9f02-96c28f08c995">
-<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/46f765c3-ae09-4f47-b45f-6f25055e7eb4">
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/0be61e2d-9350-4a95-8fe6-03913cba61aa">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/da771032-7911-426d-8f20-62c8249b7f1e">
 <img width="1130" alt="01">
 </picture>
 <br><br>
 <picture>
-<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/e4bc04d7-06f5-460c-aa16-c2ef3876e39b">
-<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/0da426ee-ae06-42c5-8371-138ee59b7900">
-<img width="1130" alt="03">
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/f16b0787-f21f-4f74-8c51-7e3f396acaeb">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/f0586711-7da5-4ed2-8a97-d612d967ddba">
+<img width="1130" alt="02">
 </picture>
