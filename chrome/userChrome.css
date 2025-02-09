@@ -1732,7 +1732,7 @@ xul|search-textbox[focused],
 #nav-bar-overflow-button,
 #unified-extensions-button {
   position: fixed;
-  left: 10px;
+  left: 12px;
   bottom: 9px;
   scale: .9;
   z-index: 8;
@@ -1740,12 +1740,12 @@ xul|search-textbox[focused],
 
 #unified-extensions-button {
   bottom: 49px;
-  left: 211px;
+  left: 208.5px;
   opacity: 0;
 }
 
 #nav-bar-overflow-button {
-  left: 211px;
+  left: 215px;
   display: flex !important;
   scale: 1;
 }
@@ -2021,7 +2021,7 @@ xul|search-textbox[focused],
 :has(.titlebar-buttonbox:hover, #sidebar-box:hover, toolbarbutton:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"], [data-extensionid="userchrome-toggle@joolee.nl"], #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button):hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], .urlbar-page-action[open], #downloads-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], .tab-throbber[busy]) {
 .titlebar-buttonbox-container {
   top: 23px !important;
-  left: 2px !important;
+  left: 4px !important;
 }
 
 #sidebar-box {
@@ -2031,7 +2031,7 @@ xul|search-textbox[focused],
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
-  left: 17px !important;
+  left: 16px !important;
   opacity: 1;
   transition: left .25s !important;
 }
@@ -2042,18 +2042,18 @@ xul|search-textbox[focused],
 #forward-button,
 :is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton,
 :is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
-  left: 108px;
+  left: 106px;
   opacity: 1;
   transition: left .25s !important;
 }
 
 #forward-button {
-  left: 148px;
+  left: 146px;
 }
 
 #reload-button,
 #stop-button {
-  left: 182px;
+  left: 180px;
 }
 
 :is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
@@ -2061,12 +2061,12 @@ xul|search-textbox[focused],
 }
 
 :is([data-extensionid="userchrome-toggle@joolee.nl"]) toolbarbutton {
-  left: 219px !important;
+  left: 217px !important;
 }
 
 #PanelUI-menu-button,
 #nav-bar-overflow-button {
-  left: 18px;
+  left: 20px;
   bottom: 19px;
   opacity: 1;
   transition: left .25s !important;
@@ -2074,11 +2074,12 @@ xul|search-textbox[focused],
 
 #nav-bar-overflow-button,
 #unified-extensions-button {
-  left: 219px;
+  left: 223px;
 }
 
 #unified-extensions-button {
   bottom: 59px;
+  left: 216.5px;
 }
 
 #unified-extensions-button:hover {
