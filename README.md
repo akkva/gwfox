@@ -1,4 +1,8 @@
-# gwfox
+<picture>
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/65d5ae2c-7252-4662-8a62-f2440a371e84">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/7d472475-5313-4fd4-b078-cc3488184e0c">
+<img width="1270" alt="01">
+</picture>
 
 - 本主题适用Mac/Win*，火狐V133+
 
@@ -35,18 +39,4 @@
 
 - 隐藏侧栏：安装扩展[Userchrome Toggle](https://addons.mozilla.org/firefox/addon/userchrome-toggle)(默认设置)固定到工具栏
 
-  - macOS在此模式下建议把 `widget.macos.native-context-menus` 切换为 `false`
-
-## 样式截图
-
-<picture>
-<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/0be61e2d-9350-4a95-8fe6-03913cba61aa">
-<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/da771032-7911-426d-8f20-62c8249b7f1e">
-<img width="1130" alt="01">
-</picture>
-<br><br>
-<picture>
-<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/f16b0787-f21f-4f74-8c51-7e3f396acaeb">
-<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/f0586711-7da5-4ed2-8a97-d612d967ddba">
-<img width="1130" alt="02">
-</picture>
+  - macOS在此模式下建议把 `widget.macos.native-context-menus` 切换为 `false
