@@ -1460,6 +1460,10 @@ xul|search-textbox[focused],
   opacity: .5 !important;
 }
 
+.sidebar-splitter {
+  cursor: default !important;
+}
+
 /* icons */
 
 #back-button {
@@ -2149,6 +2153,19 @@ xul|search-textbox[focused],
 :root[titlepreface=""]:not([sizemode="maximized"], [sizemode="fullscreen"]):has(#sidebar-box:not([hidden])) .titlebar-restore, 
 :root[titlepreface=""]:is([sizemode="maximized"], [sizemode="fullscreen"]):has(#sidebar-box:not([hidden])) .titlebar-max {
   display: none !important;
+}
+
+@media (-moz-platform: macos) {
+#sidebar-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -25px !important;
+  width: 160px !important;
+  height: 100vh !important;
+  z-index: -1;
+  -moz-window-dragging: drag;
+}
 }
 
 /* win */
