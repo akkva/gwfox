@@ -1974,7 +1974,6 @@ xul|search-textbox[focused],
   position: absolute;
   top: 0;
   right: 0;
-  background: transparent;
   width: 120%;
   height: 100%;
 }
@@ -2037,6 +2036,10 @@ xul|search-textbox[focused],
   left: 3px !important;
   opacity: 1;
   transition: .25s !important;
+  &::after {
+  right: -50px;
+  width: 55px;
+}
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
