@@ -81,6 +81,7 @@
   clip-path: circle(100%);
   box-shadow: 0 1.5px 6px #00000026;
   background-color: light-dark(#fff, #202020) !important;
+  -moz-window-dragging: no-drag;
 }
 
 #tabbrowser-tabpanels {
@@ -93,6 +94,12 @@
   #tabbrowser-tabpanels {
   background-color: transparent !important;
 }
+}
+}
+
+:has(#PersonalToolbar:hover) {
+#tabbrowser-tabbox browser {
+  -moz-window-dragging: unset;
 }
 }
 
@@ -160,7 +167,7 @@
 }
 
 #PersonalToolbar:hover {
-  bottom: 0px;
+  bottom: 0;
   opacity: 1;
   transition: .25s;
 }
@@ -1447,16 +1454,6 @@ xul|search-textbox[focused],
   width: 237px !important;
   margin: 19.5px 0 0 5px !important;
   transition: .25s !important;
-  &::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: -25px;
-  width: 145px;
-  height: 100vh;
-  z-index: -1;
-  -moz-window-dragging: drag;
-}
 }
 
 #sidebar-box:-moz-window-inactive {
@@ -1588,7 +1585,6 @@ xul|search-textbox[focused],
 #nav-bar {
   padding: 29px 3px 0 100px !important;
   height: 87px !important;
-  -moz-window-dragging: no-drag;
 
 :is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"]) toolbarbutton {
   left: 72px;
@@ -1908,6 +1904,7 @@ xul|search-textbox[focused],
 
 #tabbrowser-tabbox browser {
   margin: 0 8px 8px;
+  -moz-window-dragging: unset;
 }
 
 #tabbrowser-tabpanels {
@@ -1918,6 +1915,7 @@ xul|search-textbox[focused],
 :root[titlepreface=""]:not([customizing]):has(#sidebar-box:not([hidden])) {
 #nav-bar {
   padding-left: 0 !important;
+  -moz-window-dragging: no-drag;
 }
 
 #urlbar[breakout][breakout-extend] {
@@ -1932,7 +1930,7 @@ xul|search-textbox[focused],
 
 #sidebar-box {
   position: fixed;
-  top: 0px;
+  top: 0;
   left: -258px !important;
   max-width: 247px !important;
   min-width: 247px !important;
@@ -1952,10 +1950,17 @@ xul|search-textbox[focused],
 &::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   left: -10px;
-  background: transparent;
   width: 15px;
+  height: 100%;
+}
+&::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 25px;
   height: 100%;
 }
 }
@@ -1967,8 +1972,8 @@ xul|search-textbox[focused],
 &::before {
   content: "";
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   background: transparent;
   width: 120%;
   height: 100%;
@@ -2022,6 +2027,10 @@ xul|search-textbox[focused],
 .titlebar-buttonbox-container {
   top: 23px !important;
   left: 4px !important;
+}
+
+#nav-bar {
+  -moz-window-dragging: drag;
 }
 
 #sidebar-box {
