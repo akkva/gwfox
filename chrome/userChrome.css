@@ -1461,7 +1461,10 @@ xul|search-textbox[focused],
 }
 
 .sidebar-splitter {
-  cursor: default !important;
+  cursor: move !important;
+  -moz-window-dragging: drag;
+  width: 10px !important;
+  margin-right: -6px;
 }
 
 /* icons */
@@ -1808,25 +1811,6 @@ xul|search-textbox[focused],
   transition: left .25s !important;
 }
 
-.titlebar-buttonbox {
-  appearance: none !important;
-  &::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -15px;
-  background: transparent;
-  width: 15px;
-  height: 200%;
-}
-}
-
-.titlebar-button {
-  display: flex !important;
-  padding: 0 !important;
-  scale: .75;
-}
-
 .titlebar-close {
   order: -1;
   list-style-image: url("resources/titlebar-backdrop.svg") !important;  
@@ -1881,6 +1865,24 @@ xul|search-textbox[focused],
 }
 
 @media (-moz-platform: macos) {
+.titlebar-buttonbox {
+  appearance: none !important;
+  &::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 15px;
+  height: 220%;
+}
+}
+
+.titlebar-button {
+  display: flex !important;
+  padding: 0 !important;
+  scale: .75;
+}
+
 .titlebar-max, .titlebar-restore {
 .titlebar-buttonbox:hover & {
   list-style-image: url("resources/titlebar-max-hover-mac.svg") !important;
@@ -1983,11 +1985,16 @@ xul|search-textbox[focused],
 }
 }
 
+.sidebar-splitter {
+  margin-left: -2px !important;
+  margin-right: -8px !important;
+}
+
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   top: 52px !important;
   left: -258px !important;
   opacity: 0;
-  transition: left .25s !important; 
+  transition: left .25s !important;
 }
 
 #reload-button,
@@ -2026,7 +2033,7 @@ xul|search-textbox[focused],
   transition: left .25s !important;
 }
 
-:has(.titlebar-buttonbox:hover, #sidebar-box:hover, toolbarbutton:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"], [data-extensionid="userchrome-toggle@joolee.nl"], #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button):hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], .urlbar-page-action[open], #downloads-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], .tab-throbber[busy]) {
+:has(.titlebar-buttonbox:hover, #sidebar-box:hover, .sidebar-splitter:hover, toolbarbutton:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"], [data-extensionid="userchrome-toggle@joolee.nl"], #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button):hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], .urlbar-page-action[open], #downloads-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], .tab-throbber[busy]) {
 .titlebar-buttonbox-container {
   top: 23px !important;
   left: 4px !important;
@@ -2155,19 +2162,6 @@ xul|search-textbox[focused],
   display: none !important;
 }
 
-@media (-moz-platform: macos) {
-#sidebar-box::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -25px !important;
-  width: 160px !important;
-  height: 100vh !important;
-  z-index: -1;
-  -moz-window-dragging: drag;
-}
-}
-
 /* win */
 
 @media (-moz-platform: windows) {
@@ -2227,18 +2221,6 @@ richlistitem[selected] {
   border: 0 !important;
 }
 
-#nav-bar {
-&::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: light-dark(#d2d2d5, #090910);
-  width: .5px;
-  height: 50%;
-}
-}
-
 toolbarbutton:-moz-window-inactive {
   opacity: 50% !important;
 }
@@ -2248,13 +2230,8 @@ toolbarbutton:-moz-window-inactive {
   top: 19.5px;
 }
 
-.titlebar-buttonbox {
-  opacity: 1 !important;
-}
-
 .titlebar-button {
   padding: 0 4px !important;
-  stroke: none !important;
   background-color: transparent !important;
 &:-moz-window-inactive {
   list-style-image: url("resources/titlebar-backdrop.svg") !important;
@@ -2439,13 +2416,6 @@ richlistitem {
 }
 }
 
-:root[titlepreface=""]:has(#sidebar-box:not([hidden])) {
-.titlebar-button {
-  padding: 0 4px !important;
-  scale: unset;
-}
-}
-
 :root[titlepreface=""]:not([inDOMFullscreen]):has(#sidebar-box:not([hidden])) {
 #tabbrowser-tabpanels {
   margin-top: -38.5px;
@@ -2457,7 +2427,7 @@ richlistitem {
   background-color: var(--bg2) !important;
 }
 
-:has(.titlebar-buttonbox:hover, #sidebar-box:hover, toolbarbutton:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"], [data-extensionid="userchrome-toggle@joolee.nl"], #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button):hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], .urlbar-page-action[open], #downloads-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], .tab-throbber[busy]) {
+:has(.titlebar-buttonbox:hover, #sidebar-box:hover, .sidebar-splitter:hover, toolbarbutton:is([data-extensionid="{3c078156-979c-498b-8990-85f7987dd929}"], [data-extensionid="userchrome-toggle@joolee.nl"], #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button):hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], .urlbar-page-action[open], #downloads-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], .tab-throbber[busy]) {
 .titlebar-buttonbox-container {
   top: 25px !important;
   left: 15px !important;
