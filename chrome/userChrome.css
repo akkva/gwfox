@@ -611,7 +611,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #reader-mode-button > .urlbar-icon,
 #translations-button > #translations-button-icon,
 #shopping-sidebar-button > .urlbar-icon , #identity-box,
-#scrollbutton-up:not([disabled]), #scrollbutton-down:not([disabled]),
 #tracking-protection-icon-container {
   fill: light-dark(#525252, #c9c9cb) !important;
   fill-opacity: 1 !important;
@@ -623,7 +622,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #reader-mode-button:active > .urlbar-icon,
 #translations-button:active > #translations-button-icon,
 #shopping-sidebar-button:active > .urlbar-icon , #identity-box:active,
-#scrollbutton-up:not([disabled]):active, #scrollbutton-down:not([disabled]):active,
 #tracking-protection-icon-container:active {
   fill: light-dark(#2d2d2d, #ececec) !important;
 }
@@ -1048,6 +1046,7 @@ panelmultiview, popupnotification {
   border-image: none !important;
 }
 
+#toolbar-context-toggle-vertical-tabs, #sidebarRevampSeparator,
 .panel-footer toolbarseparator, .panel-header + toolbarseparator,
 #identity-popup-mainView-panel-header + toolbarseparator,
 #permission-popup-mainView-panel-header + toolbarseparator,
@@ -1066,10 +1065,14 @@ panelmultiview, popupnotification {
   display: none;
 }
 
+#context_toggleVerticalTabs {
+  margin-top: -33px !important;
+  visibility: hidden;
+}
+
 menuitem, menu {
   appearance: none !important;
   border-radius: 4px !important;
-  color: light-dark(#000, #fff) !important;
   height: 22px !important;
 }
 
@@ -1086,25 +1089,14 @@ menupopup .bookmark-item {
   height: 22px !important;
 }
 
-menuitem[disabled], menupopup menu[disabled],
-.subviewbutton[disabled], .toolbarbutton-1[disabled],
-.protections-popup-category[disabled],
-.identity-popup-content-blocking-category[disabled] {
-  opacity: .5 !important;
-}
-
-menuitem[disabled][_moz-menuactive], menupopup menu[disabled][_moz-menuactive] {
-  background: none !important;
-}
-
-menupopup menu:hover:not([disabled]),
-menupopup menuitem:hover:not([disabled]),
-menupopup menu[_moz-menuactive]:not([disabled]),
-menupopup menuitem[_moz-menuactive]:not([disabled]),
-.protections-popup-footer-button:not([disabled]):hover,
+menupopup menu:hover:not([disabled=true]),
+menupopup menuitem:hover:not([disabled=true]),
+menupopup menu[_moz-menuactive]:not([disabled=true]),
+menupopup menuitem[_moz-menuactive]:not([disabled=true]),
+.protections-popup-footer-button:not([disabled=true]):hover,
 #protections-popup-show-report-stack:hover .protections-popup-footer-button,
-.protections-popup-category:not([disabled]):hover,
-.identity-popup-content-blocking-category:not([disabled]):hover,
+.protections-popup-category:not([disabled=true]):hover,
+.identity-popup-content-blocking-category:not([disabled=true]):hover,
 #PlacesToolbar .bookmark-item:is(:hover, [open], [_moz-menuactive]),
 #downloadsPanel-mainView .download-state:hover {
   background: var(--button-hover-bgcolor) !important;
