@@ -1100,6 +1100,7 @@ menupopup menuitem[_moz-menuactive]:not([disabled=true]),
 #PlacesToolbar .bookmark-item:is(:hover, [open], [_moz-menuactive]),
 #downloadsPanel-mainView .download-state:hover {
   background: var(--button-hover-bgcolor) !important;
+  color: inherit !important;
 }
 
 toolbarseparator, menuseparator::before {
