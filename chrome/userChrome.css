@@ -977,6 +977,30 @@ tab .tab-label {
   --panel-padding: 0 !important;
 }
 
+@media not -moz-pref("sidebar.verticalTabs") {
+.tab-group-label {
+  color: #fff !important;
+  outline: none !important;
+  min-width: 10px !important;
+tab-group[collapsed] > .tab-group-label-container > & {
+  background-color: light-dark(var(--tab-group-color-invert), var(--tab-group-color)) !important;
+}
+}
+
+.tab-group-label-container {
+tab-group:not([collapsed]) > &::after {
+  background-color: transparent !important;
+}
+}
+
+.tab-group-line {
+  margin: 0 !important;
+  border-radius: 50px !important;
+  width: 5px !important;
+  height: 5px !important;
+}
+}
+  
 /* popup */
 
 menupopup, panel[type="arrow"] {
