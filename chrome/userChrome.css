@@ -48,6 +48,8 @@
   --browser-area-z-index-toolbox: 4 !important;
   --tabstrip-min-height: unset !important;
   --tab-icon-overlay-fill: light-dark(rgba(0, 0, 0, .8), rgba(225, 225, 225, .8)) !important;
+  --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
+  --toolbarbutton-active-background: color-mix(in srgb, currentColor 15%, transparent) !important;
 }
 
 :root[macOSNativeFullscreen] #navigator-toolbox {
@@ -584,17 +586,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #reset-pbm-toolbar-button, #nav-bar toolbarspring,
 #firefox-view-button, #fxa-toolbar-menu-button,
 #userContext-icons, #userContext-label,
-#scrollbutton-up, #scrollbutton-down {
+#scrollbutton-up, #scrollbutton-down,
+.sharing-icon {
   display: none !important;
-}
-
-#identity-permission-box[hasPermissions] {
-  display: block !important;
-}
-
-#permissions-granted-icon {
-  margin-top: 6px;
-  margin-bottom: 15px;
 }
 
 .close-icon {
@@ -1087,11 +1081,6 @@ panelmultiview, popupnotification {
 #tabContextMenu .menu-iconic-left,
 #contentAreaContextMenu .menu-iconic-left {
   display: none;
-}
-
-#context_toggleVerticalTabs {
-  margin-top: -33px !important;
-  visibility: hidden;
 }
 
 menuitem, menu {
