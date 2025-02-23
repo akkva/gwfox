@@ -1222,7 +1222,7 @@ richlistbox {
 
 #tab-notification-deck {
   position: fixed;
-  top: 52px;
+  top: 49px;
   right: 6px;
   z-index: 9;
 }
