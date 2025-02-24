@@ -492,42 +492,4 @@ body {
   box-shadow: var(--bs2) !important;
 }
 }
-
-@media (-moz-platform: windows) {
-.modal, .tile, .context-menu-button.icon, .search-inner-wrapper,
-.top-site-outer .context-menu, .card-outer .context-menu,
-.contentSearchSuggestionTable, .customize-menu, .icon.icon-settings:hover {
-  background-color: light-dark(#f8f8f8, #2c2c2c) !important;
-}
-
-.tile, .search-inner-wrapper {
-&:active { background-color: light-dark(#ededed, #242424) !important; }
-}
-
-.lightWallpaper .tile, .lightWallpaper .context-menu-button.icon {
-  background-color: #f8f8f8 !important;
-}
-
-.darkWallpaper .tile, .darkWallpaper .context-menu-button.icon {
-  background-color: #f8f8f8 !important;
-}
-
-@media (prefers-color-scheme: dark) {
-.customize-menu {
-  outline: 1px solid rgba(235, 235, 235, .1) !important;
-}
-
-.modal, .context-menu, .contentSearchSuggestionTable {
-  border: 1px solid rgba(235, 235, 235, .1) !important;
-}
-
-.lightWallpaper .tile, .lightWallpaper .context-menu-button.icon {
-  background-color: #2c2c2c !important;
-}
-
-.darkWallpaper .tile, .darkWallpaper .context-menu-button.icon {
-  background-color: #2c2c2c !important;
-}
-}
-}
 }
