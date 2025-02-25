@@ -4,7 +4,7 @@
 <img width="1267" alt="01">
 </picture>
 
-- 本主题适用Firefox Nightly `macOS`
+- 本主题适用Firefox Nightly `Mac` `Win` *
 
 - 工具栏按钮数量仅支持左4右4
 
@@ -19,6 +19,10 @@
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
 
   - `svg.context-properties.content.enabled`
+ 
+  - `widget.windows.mica` *
+ 
+  - `widget.windows.mica.popups` *
  
   - `browser.urlbar.scotchBonnet.enableOverride` 切换为 `false`
 
