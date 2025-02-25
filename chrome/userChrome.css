@@ -40,6 +40,8 @@
   --in-content-box-border-color: transparent !important;
   --sidebar-background-color: transparent !important;
   --sidebar-border-color: transparent !important;
+  --sidebar-box-border: transparent !important;
+  --sidebar-box-background: light-dark(rgba(102, 105, 108, .1), rgba(165, 165, 165, .1)) !important;
   --urlbarView-hover-background: light-dark(rgba(155, 155, 155, .2), rgba(195, 195, 195, .2)) !important;
   --urlbarView-highlight-background: light-dark(rgba(155, 155, 155, .3), rgba(195, 195, 195, .3)) !important;
   --urlbarView-highlight-color: light-dark(#000, #fff) !important;
@@ -1408,6 +1410,24 @@ xul|search-textbox[focused],
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
 
+@-moz-document regexp("chrome://(?!browser/content/browser\.xhtml).*") {
+:not(#places) input {
+  border: none !important;
+  border-bottom: 1px solid rgba(185, 185, 185, .1) !important;
+  outline-style: solid !important;
+  outline-color: transparent !important;
+  outline-width: 18px !important;
+  background-color: light-dark(rgba(102, 105, 108, .1), rgba(165, 165, 165, .1)) !important;
+}
+
+:not(#places) input:focus {
+  outline-color: var(--outline-color) !important;
+  outline-width: 3px !important;
+  outline-offset: -1px !important;
+  transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
+}
+}
+
 #urlbar:hover #tracking-protection-icon-container:not(:hover, :active, [open])::after {
   content: "";
   position: absolute;
@@ -1506,6 +1526,19 @@ xul|search-textbox[focused],
   -moz-window-dragging: drag;
 }
 
+#sidebar-box {
+  max-width: 280px !important;
+  min-width: 280px !important;
+&[sidebarcommand="viewGenaiChatSidebar"] {
+  max-width: 400px !important;
+  min-width: 400px !important;
+}
+}
+
+.sidebar-splitter {
+  cursor: default !important;
+}
+
 span > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"]) {
   fill: light-dark(#525252, #c9c9cb) !important;
 }
@@ -1518,6 +1551,20 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
 #PersonalToolbar {
   margin-left: 57.5px !important;
   width: calc(100% - 65.5px);
+}
+}
+
+:has(#sidebar-box:not([hidden])) {
+#PersonalToolbar {
+  margin-left: 329.5px !important;
+  width: calc(100% - 337.5px);
+}
+}
+
+:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
+#PersonalToolbar {
+  margin-left: 449px !important;
+  width: calc(100% - 457px);
 }
 }
 }
@@ -1550,12 +1597,6 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
   margin-top: -45.5px !important;
   margin-bottom: 2px !important;
   margin-left: 6px !important;
-  max-width: 280px !important;
-  min-width: 280px !important;
-&[sidebarcommand="viewGenaiChatSidebar"] {
-  max-width: 400px !important;
-  min-width: 400px !important;
-}
 }
 
 button:has([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"], [src="chrome://browser/content/genai/assets/brands/claude.svg"], [src="chrome://browser/content/genai/assets/brands/huggingchat.svg"], [src="chrome://browser/content/genai/assets/brands/lechat.svg"], [src="chrome://browser/content/genai/assets/brands/gemini.svg"]) {
@@ -1757,10 +1798,6 @@ tab-group {
   min-width: 221px !important;
 }
 
-.sidebar-splitter {
-  cursor: default !important;
-}
-
 #urlbar[breakout][breakout-extend] {
   top: 20vh !important;
   left: 25vw !important;
@@ -1776,6 +1813,10 @@ tab-group {
 :has(#tabbrowser-tabs:not([expanded])) {
 --padding: 25px;
 :has(#sidebar-main:not([hidden])) {
+.sidebar-splitter {
+  cursor: col-resize !important;
+}
+
 #PersonalToolbar {
   margin-left: 82px !important;
   width: calc(100% - 90px);
@@ -1783,6 +1824,10 @@ tab-group {
 }
 
 :has(#sidebar-box:not([hidden])) {
+.sidebar-splitter {
+  cursor: default !important;
+}
+
 #nav-bar {
   padding-left: 352px !important;
 }
