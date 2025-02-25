@@ -70,23 +70,38 @@ body { background-color: #282828 !important; }
 .search-container input[type="search"] {
   background: light-dark(#eeeeef, #373737) !important;
   border-color: transparent !important;
+  outline-style: solid !important;
+  outline-color: transparent !important;
+  outline-width: 18px !important;
 
 &:is(:focus-visible, [focused]) {
-  outline: 3px solid var(--focus-outline-color) !important;
+  outline-color: var(--focus-outline-color) !important;
+  outline-width: 3px !important;
+  outline-offset: -1px !important;
+  transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
 }
 
 #searchInput[focused] { 
-  outline: 3px solid var(--focus-outline-color) !important;
+  outline-color: var(--focus-outline-color) !important;
+  outline-width: 3px !important;
+  outline-offset: -1px !important;
+  transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
 
 search-addons > search-textbox[focused] {
-  outline: 3px solid var(--focus-outline-color) !important;
+  outline-color: var(--focus-outline-color) !important;
+  outline-width: 3px !important;
+  outline-offset: -1px !important;
+  transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
 
 search-textbox {
   background: light-dark(#eeeeef, #373737) !important;
   border-color: transparent !important;
+  outline-style: solid !important;
+  outline-color: transparent !important;
+  outline-width: 18px !important;
 }
 
 @-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html") { 
@@ -232,11 +247,16 @@ body {
 .topsite-form .form-wrapper input[type=text] {
   border: none !important;
   background: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+  outline-style: solid !important;
+  outline-color: transparent !important;
+  outline-width: 18px !important;
 }
 
 .topsite-form .form-wrapper input[type=text]:focus {
-  outline: 3px solid var(--focus-outline-color) !important;
+  outline-color: var(--focus-outline-color) !important;
+  outline-width: 3px !important;
   outline-offset: -1px !important;
+  transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
 
 .divider, .edit-topsites-wrapper .actions {
