@@ -1410,9 +1410,21 @@ xul|search-textbox[focused],
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
 
-@-moz-document regexp("chrome://(?!browser/content/browser\.xhtml).*") {
-:not(#places) input {
+input {
+  background: none !important;
+  outline: none !important;
+}
+
+@-moz-document url("chrome://browser/content/sidebar/sidebar-syncedtabs.html") {
+fxview-search-textbox {
+  padding-top: 10px !important;
+  padding-bottom: 8.5px !important;
+}   
+}
+
+fxview-search-textbox {
   border: none !important;
+  border-radius: 6px !important;
   border-bottom: 1px solid rgba(185, 185, 185, .1) !important;
   outline-style: solid !important;
   outline-color: transparent !important;
@@ -1420,12 +1432,11 @@ xul|search-textbox[focused],
   background-color: light-dark(rgba(102, 105, 108, .1), rgba(165, 165, 165, .1)) !important;
 }
 
-:not(#places) input:focus {
+fxview-search-textbox:focus {
   outline-color: var(--outline-color) !important;
   outline-width: 3px !important;
   outline-offset: -1px !important;
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
-}
 }
 
 #urlbar:hover #tracking-protection-icon-container:not(:hover, :active, [open])::after {
