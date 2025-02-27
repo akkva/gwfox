@@ -1040,6 +1040,11 @@ panelmultiview, popupnotification {
   display: none !important;
 }
 
+#toolbar-context-toggle-vertical-tabs,
+#sidebarRevampSeparator {
+  display: flex !important;
+}
+
 .popup-internal-box,
 #PopupAutoComplete > .autocomplete-richlistbox,
 .menupopup-arrowscrollbox {
@@ -1428,6 +1433,12 @@ input:focus {
 }  
 }
 
+@-moz-document url("chrome://browser/content/sidebar/sidebar-customize.html") {
+[data-l10n-id="sidebar-show-on-the-right"] {
+  display: none !important;
+}
+}
+
 #urlbar:hover #tracking-protection-icon-container:not(:hover, :active, [open])::after {
   content: "";
   position: absolute;
@@ -1587,6 +1598,10 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
 
 #tab-notification-deck {
   top: 6px;
+}
+
+#toolbar-context-customize-sidebar {
+  display: flex !important;
 }
 
 #sidebar-main {
