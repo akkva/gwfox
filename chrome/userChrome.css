@@ -51,6 +51,10 @@
   --tab-icon-overlay-fill: light-dark(rgba(0, 0, 0, .8), rgba(225, 225, 225, .8)) !important;
   --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
   --toolbarbutton-active-background: color-mix(in srgb, currentColor 15%, transparent) !important;
+  @media (-moz-platform: windows) {
+  --bs1: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17);
+  --bs2: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(255, 255, 255, .15);    
+  }
 }
 
 :root[macOSNativeFullscreen] #navigator-toolbox {
@@ -1551,6 +1555,10 @@ input:focus {
   cursor: default !important;
 }
 
+button:has([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"], [src="chrome://browser/content/genai/assets/brands/claude.svg"], [src="chrome://browser/content/genai/assets/brands/huggingchat.svg"], [src="chrome://browser/content/genai/assets/brands/lechat.svg"], [src="chrome://browser/content/genai/assets/brands/gemini.svg"]) {
+  -moz-window-dragging: no-drag;
+}
+
 span > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"]) {
   fill: light-dark(#525252, #c9c9cb) !important;
 }
@@ -1620,7 +1628,6 @@ button:has([src="chrome://browser/skin/history.svg"], [src="chrome://browser/ski
   padding-right: var(--padding) !important;
   margin-top: -5px !important;
   margin-bottom: 5px !important;
-  -moz-window-dragging: no-drag;
 }
 
 button:has([src="chrome://global/skin/icons/settings.svg"]) {
@@ -2133,14 +2140,14 @@ toolbarbutton:-moz-window-inactive {
 }
 
 menupopup, panel[type="arrow"] {
-  --panel-background: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  --panel-background: light-dark(rgba(255, 255, 255, .45), rgba(45, 45, 45, .45)) !important;
 }
 
 menupopup,
 .popup-internal-box,
 #PopupAutoComplete > .autocomplete-richlistbox,
 .menupopup-arrowscrollbox {
-  background: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  background: light-dark(rgba(255, 255, 255, .45), rgba(45, 45, 45, .45)) !important;
 }
 
 #contentAreaContextMenu .menu-iconic-left {
@@ -2196,7 +2203,7 @@ menupopup,
 #urlbar[breakout][breakout-extend] #urlbar-background,
 .findbar-container, .dialogBox, #statuspanel-label,
 #PersonalToolbar {
-  outline: 1px solid rgba(235, 235, 235, .1) !important;
+  outline: none !important;
 }
 
 menupopup, panel[type="arrow"] {
