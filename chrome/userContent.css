@@ -7,6 +7,10 @@
   --focus-outline-color: light-dark(#7db0f7, #2c749f) !important;
   --bs1: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15);
   --bs2: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5);
+  @media (-moz-platform: windows) {
+  --bs1: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17);
+  --bs2: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(255, 255, 255, .15);    
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -510,6 +514,16 @@ body {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
   box-shadow: var(--bs2) !important;
+}
+
+@media (-moz-platform: windows) {
+.modal, .context-menu, .contentSearchSuggestionTable {
+  border: none !important;
+}
+
+.customize-menu {
+  outline: none !important;
+}
 }
 }
 }
