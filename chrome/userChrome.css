@@ -153,8 +153,8 @@
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--bs1) !important;
-  border-bottom-left-radius: 10px !important;
-  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
   overflow: initial !important;
 }
 
