@@ -1657,6 +1657,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 }
 
+:has(#sidebar-main:not([hidden])) {
 :has(#urlbar[usertyping]) {
 #urlbar {
   left: 25vw !important;
@@ -1665,6 +1666,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 #sidebar-main {
   margin-top: -14px !important;
   transition: .25s !important;
+}
 }
 }
 
@@ -1961,6 +1963,7 @@ tab-group {
 }
 }
 
+:has(#sidebar-main:not([hidden])) {
 :has(#urlbar[breakout][breakout-extend]) {
 #sidebar-main {
   margin-top: -14px !important;
@@ -1972,18 +1975,81 @@ tab-group {
   transition: unset !important;
 }
 }
+}
 
 :has(#sidebar-main[hidden]) {
 #tabbrowser-tabbox {
   margin-left: 8px !important;
 }
 
-#urlbar, .titlebar-buttonbox-container {
+.titlebar-buttonbox-container {
   visibility: hidden;
 }
 
 #nav-bar {
   padding-left: 5px !important;
+}
+
+#tabbrowser-tabs {
+  margin-top: 40px !important;
+}
+
+#urlbar:not([breakout][breakout-extend], [usertyping]) {
+  top: 15px !important;
+  left: -80px !important;
+  opacity: 0;
+  transition: left .25s !important;
+}
+
+#urlbar::before {
+  content: none;
+}
+
+#sidebar-main {
+  height: calc(100% - 16px) !important;
+  display: flex !important;
+  position: fixed;
+  top: -19px;
+  left: -80px;
+  opacity: 0;
+  transition: .25s;
+  z-index: 9;
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65));
+  backdrop-filter: blur(30px);
+  box-shadow: var(--bs1);
+  overflow: unset !important;
+&::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 25px;
+  height: 100%;
+}
+&::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 25px;
+  height: 100%;
+}
+}
+
+:has(#sidebar-main:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], .tab-throbber[busy], #tab-group-name:focus) {
+#sidebar-main {
+  left: 8px;
+  opacity: 1;
+  transition: .25s;
+}
+
+#urlbar:not([breakout][breakout-extend], [usertyping]) {
+  left: 18px !important;
+  opacity: 1;
+  transition: left .25s !important;
+}
 }
 }
 
@@ -2052,6 +2118,10 @@ tab-group {
 :root[inFullscreen] {
 .titlebar-buttonbox-container {
   display: none !important;
+}
+
+#PersonalToolbar {
+  visibility: unset !important;
 }
 }
 
@@ -2214,6 +2284,16 @@ menupopup,
   left: -15px;
   width: 15px;
   height: 30px;
+}
+
+#nav-bar {
+  height: 54.5px !important;
+}
+
+:has(#sidebar-main[hidden]) {
+#sidebar-main {
+  top: -18px;
+}
 }
 }
 
