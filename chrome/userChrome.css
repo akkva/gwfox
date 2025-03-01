@@ -1974,6 +1974,10 @@ tab-group {
 }
 
 :has(#sidebar-main[hidden]) {
+#tabbrowser-tabbox {
+  margin-left: 8px !important;
+}
+
 #urlbar, .titlebar-buttonbox-container {
   visibility: hidden;
 }
@@ -2048,16 +2052,6 @@ tab-group {
 :root[inFullscreen] {
 .titlebar-buttonbox-container {
   display: none !important;
-}
-
-#urlbar {
-  visibility: hidden;
-}
-
-#navigator-toolbox:hover {
-#urlbar {
-  visibility: visible;
-}
 }
 }
 
@@ -2160,6 +2154,29 @@ menupopup,
 
 #contentAreaContextMenu .menu-iconic-left {
   display: unset;
+}
+
+@media -moz-pref("sidebar.revamp") {
+:has(#sidebar-main:not([hidden])) {
+#PersonalToolbar {
+  margin-left: 59px !important;
+  width: calc(100% - 67px);
+}
+}
+
+:has(#sidebar-box:not([hidden])) {
+#PersonalToolbar {
+  margin-left: 331px !important;
+  width: calc(100% - 339px);
+}
+}
+
+:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
+#PersonalToolbar {
+  margin-left: 451px !important;
+  width: calc(100% - 459px);
+}
+}
 }
 
 @media -moz-pref("sidebar.verticalTabs") {
