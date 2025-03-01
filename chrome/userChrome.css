@@ -2157,6 +2157,7 @@ menupopup,
 }
 
 @media -moz-pref("sidebar.revamp") {
+@media not -moz-pref("sidebar.verticalTabs") {
 :has(#sidebar-main:not([hidden])) {
 #PersonalToolbar {
   margin-left: 59px !important;
@@ -2175,6 +2176,7 @@ menupopup,
 #PersonalToolbar {
   margin-left: 451px !important;
   width: calc(100% - 459px);
+}
 }
 }
 }
