@@ -1537,7 +1537,7 @@ input:focus {
   background-color: var(--button-bgcolor) !important;
 }
 
-#sidebar-wrapper {
+#sidebar-main {
   -moz-window-dragging: drag;
 }
 
@@ -2148,7 +2148,7 @@ toolbarbutton:-moz-window-inactive {
 }
 
 menupopup, panel[type="arrow"] {
-  --panel-background: light-dark(rgba(255, 255, 255, .45), rgba(45, 45, 45, .45)) !important;
+  --panel-background: light-dark(rgba(255, 255, 255, .65), rgba(45, 45, 45, .65)) !important;
 }
 
 menupopup,
