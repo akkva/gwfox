@@ -70,10 +70,6 @@
   top: 17.5px;
 }
 
-#browser:not(.browser-toolbox-background) {
-  background-color: transparent !important;
-}
-
 #tabbrowser-tabbox {
   box-shadow: none !important;
   outline: none !important;
@@ -93,14 +89,13 @@
 #tabbrowser-tabpanels {
   margin-top: 0;
   transition: .25s !important;
+  background-color: transparent !important;
+}
 }
 
 #browser {
   clip-path: circle(100%);
-  #tabbrowser-tabpanels {
   background-color: transparent !important;
-}
-}
 }
 
 :has(#PersonalToolbar:hover) {
@@ -1555,11 +1550,11 @@ input:focus {
   cursor: default !important;
 }
 
-button:has([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"], [src="chrome://browser/content/genai/assets/brands/claude.svg"], [src="chrome://browser/content/genai/assets/brands/huggingchat.svg"], [src="chrome://browser/content/genai/assets/brands/lechat.svg"], [src="chrome://browser/content/genai/assets/brands/gemini.svg"]) {
+moz-button {
   -moz-window-dragging: no-drag;
 }
 
-button:has([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"], [src="chrome://browser/content/genai/assets/brands/claude.svg"], [src="chrome://browser/content/genai/assets/brands/huggingchat.svg"], [src="chrome://browser/content/genai/assets/brands/lechat.svg"], [src="chrome://browser/content/genai/assets/brands/gemini.svg"]):-moz-window-inactive {
+moz-button:-moz-window-inactive {
   opacity: .5 !important;
 }
 
@@ -1627,15 +1622,17 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
   margin-left: 6px !important;
 }
 
-button:has([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"], [src="chrome://browser/content/genai/assets/brands/claude.svg"], [src="chrome://browser/content/genai/assets/brands/huggingchat.svg"], [src="chrome://browser/content/genai/assets/brands/lechat.svg"], [src="chrome://browser/content/genai/assets/brands/gemini.svg"]) {
-  padding-left: var(--padding) !important;
-  padding-right: var(--padding) !important;
-  margin-top: -5px !important;
+.tools-and-extensions {
   margin-bottom: 5px !important;
 }
 
-button:has([src="chrome://global/skin/icons/settings.svg"]) {
-  display: none;
+moz-button {
+  padding-left: var(--padding) !important;
+  padding-right: var(--padding) !important;
+}
+
+button:has([src="chrome://global/skin/icons/settings.svg"]), moz-button[extension] {
+  display: none !important;
 }
 
 .webextension-browser-action {
@@ -1828,7 +1825,7 @@ tab-group {
 }
 
 :has(#tabbrowser-tabs[expanded]) {
---padding: 9px;
+--padding: 0;
 #sidebar-main {
   min-width: 221px !important;
 }
@@ -1846,7 +1843,7 @@ tab-group {
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
---padding: 25px;
+--padding: 15px;
 :has(#sidebar-main:not([hidden])) {
 .sidebar-splitter {
   cursor: col-resize !important;
