@@ -2020,6 +2020,13 @@ tab-group {
   backdrop-filter: blur(30px);
   box-shadow: var(--bs1);
   overflow: unset !important;
+@media (prefers-color-scheme: dark) {
+  box-shadow: var(--bs2) !important;
+@media (-moz-platform: macos) {
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1px !important;
+}   
+}
 &::before {
   content: "";
   position: absolute;
