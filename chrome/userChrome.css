@@ -1550,12 +1550,11 @@ input:focus {
   cursor: default !important;
 }
 
-moz-button {
+.tools-and-extensions {
   -moz-window-dragging: no-drag;
-}
-
-moz-button:-moz-window-inactive {
+&:-moz-window-inactive {
   opacity: .5 !important;
+}
 }
 
 span > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"]) {
@@ -1626,12 +1625,14 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
   margin-bottom: 5px !important;
 }
 
-moz-button {
+.tools-and-extensions > moz-button:not([extension]) {
   padding-left: var(--padding) !important;
   padding-right: var(--padding) !important;
 }
 
-button:has([src="chrome://global/skin/icons/settings.svg"]), moz-button[extension] {
+.extensions, .customize-extensions-heading,
+.tools-and-extensions > moz-button[extension],
+button:has([src="chrome://global/skin/icons/settings.svg"]) {
   display: none !important;
 }
 
