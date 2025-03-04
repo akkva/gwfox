@@ -115,7 +115,7 @@
 }
 
 #nav-bar {
-  padding: 11.5px 3px 4.5px 79px !important;
+  padding: 12px 3px 4.5px 79px !important;
   height: 53.5px !important;
 }
 
@@ -1611,7 +1611,7 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
 }
 
 #sidebar-main {
-  margin-top: 27px !important;
+  margin-top: 25.5px !important;
   transition: .25s !important;
 }
 
@@ -1642,7 +1642,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 
 #urlbar {
   left: 10px !important;
-  top: 46.5px !important;
+  top: 45px !important;
   max-width: 201px !important;
   -moz-window-dragging: no-drag;
 &::before {
@@ -2007,7 +2007,7 @@ tab-group {
   height: calc(100% - 16px) !important;
   display: flex !important;
   position: fixed;
-  top: -19px;
+  top: -17.5px;
   left: -80px;
   opacity: 0;
   transition: .25s;
@@ -2231,31 +2231,6 @@ menupopup,
   display: unset;
 }
 
-@media -moz-pref("sidebar.revamp") {
-@media not -moz-pref("sidebar.verticalTabs") {
-:has(#sidebar-main:not([hidden])) {
-#PersonalToolbar {
-  margin-left: 59px !important;
-  width: calc(100% - 67px);
-}
-}
-
-:has(#sidebar-box:not([hidden])) {
-#PersonalToolbar {
-  margin-left: 331px !important;
-  width: calc(100% - 339px);
-}
-}
-
-:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
-#PersonalToolbar {
-  margin-left: 451px !important;
-  width: calc(100% - 459px);
-}
-}
-}
-}
-
 @media -moz-pref("sidebar.verticalTabs") {
 .titlebar-buttonbox-container {
   left: 12px;
@@ -2289,16 +2264,6 @@ menupopup,
   left: -15px;
   width: 15px;
   height: 30px;
-}
-
-#nav-bar {
-  height: 54.5px !important;
-}
-
-:has(#sidebar-main[hidden]) {
-#sidebar-main {
-  top: -18px;
-}
 }
 }
 
