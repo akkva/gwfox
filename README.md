@@ -4,7 +4,7 @@
 <img width="1267" alt="01">
 </picture>
 
-- 本主题适用Firefox Nightly `Mac` `Win` *
+- 本主题适用Firefox 137+ `Mac` `Win` *
 
 - 工具栏按钮数量仅支持左4右4
 
