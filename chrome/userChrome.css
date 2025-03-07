@@ -1067,6 +1067,7 @@ menu {
 
 menupopup > menuitem[selected] {
   background: none !important;
+  color: inherit !important;
 }
 
 menupopup .bookmark-item {
