@@ -962,6 +962,13 @@ tab-group:not([collapsed]) > &::after {
   height: 5px !important;
 }
 }
+
+.tabbrowser-tab:active,
+#tabs-newtab-button:active,
+#vertical-tabs-newtab-button:active,
+.tools-and-extensions > moz-button:active {
+  transform: scale(.98);
+}
   
 /* popup */
 
