@@ -1,7 +1,7 @@
 <picture>
-<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/eccced7c-e4bf-4152-a745-a462db2ccc25">
-<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/a7319bc9-040c-4ebc-8cf3-d6700c90dedd">
-<img width="1267" alt="01">
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/12f5fbd0-fa2b-47bd-b891-6fb6be44252c">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/2dffdcdf-a123-4a23-b8b6-9c7beb7439fa">
+<img width="1270" alt="01">
 </picture>
 
 - 本主题适用Firefox 137+ `Mac` `Win` *
@@ -35,4 +35,3 @@
   - 在 `about:config` 页面中添加布尔值 `widget.windows.acrylic` 为 `true`
 
   - 使用[MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone)调整
-  
