@@ -969,6 +969,12 @@ tab-group:not([collapsed]) > &::after {
 .tools-and-extensions > moz-button:active {
   transform: scale(.98);
 }
+
+:has(.tab-icon-overlay:active, .tab-audio-button:active, .tab-close-button:active) {
+.tabbrowser-tab {
+  transform: none;
+}
+}
   
 /* popup */
 
