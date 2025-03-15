@@ -2239,6 +2239,7 @@ toolbarbutton:-moz-window-inactive {
 
 menupopup, panel[type="arrow"] {
   --panel-background: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75)) !important;
+  --panel-shadow-margin: 0px !important;
 }
 
 menupopup,
