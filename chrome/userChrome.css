@@ -1045,6 +1045,7 @@ panelmultiview, popupnotification {
   border-image: none !important;
 }
 
+#toolbar-context-toggle-vertical-tabs + menuseparator,
 .panel-footer toolbarseparator, .panel-header + toolbarseparator,
 #identity-popup-mainView-panel-header + toolbarseparator,
 #permission-popup-mainView-panel-header + toolbarseparator,
