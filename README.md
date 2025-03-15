@@ -27,3 +27,12 @@
   - `browser.urlbar.scotchBonnet.enableOverride` 切换为 `false`
 
 - 重启火狐
+
+## 样式调整
+
+- 主窗口亚克力效果 *
+
+  - 在 `about:config` 页面中添加布尔值 `widget.windows.acrylic` 为 `true`
+
+  - 使用[MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone)调整
+  
