@@ -98,7 +98,7 @@
   background-color: transparent !important;
 }
 
-:has(#PersonalToolbar:hover) {
+:has(#PersonalToolbar:hover, #sidebar-main:hover) {
 #tabbrowser-tabbox browser {
   -moz-window-dragging: unset;
 }
