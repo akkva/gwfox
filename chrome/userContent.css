@@ -5,11 +5,12 @@
   --newtab-background-color-secondary: transparent !important;
   --in-content-focus-outline-color: light-dark(#7db0f7, #2c749f) !important;
   --focus-outline-color: light-dark(#7db0f7, #2c749f) !important;
-  --bs1: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15);
-  --bs2: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5);
+  --bg4: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
+  --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 .5px rgba(0, 0, 0, .15);
+  --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 .5px rgba(0, 0, 0, .5);
   @media (-moz-platform: windows) {
-  --bs1: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17);
-  --bs2: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(255, 255, 255, .15);    
+  --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
+  --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15);    
   }
 }
 
@@ -232,6 +233,10 @@ body {
 .context-menu {
   border-radius: 6px !important;
   padding: 6px !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+@media (-moz-platform: windows) {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
+}
 }
 
 .context-menu > ul {
@@ -389,6 +394,11 @@ body {
 .context-menu-button {
   fill: #fff !important;
 }
+
+.context-menu {
+  border: 1px solid rgba(235, 245, 255, .15) !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+}
 }
 
 .tile {
@@ -471,19 +481,19 @@ body {
   border: none !important;
   animation-name: panel-grow;
   animation-duration: 250ms;
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  background-color: var(--bg4) !important;
 }
 
 .modal, .tile, .context-menu-button.icon, .search-inner-wrapper {
   backdrop-filter: blur(30px) !important;
 }
 
-.modal, .context-menu, .contentSearchSuggestionTable {
+.modal, .contentSearchSuggestionTable {
   box-shadow: var(--bs1) !important;
 }
 
 .customize-menu {
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--bs1) !important;
   margin: 11px 11px 0 0 !important;
@@ -492,7 +502,7 @@ body {
 
 .top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable {
   backdrop-filter: blur(30px) !important;
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  background-color: var(--bg4) !important;
 }
 
 .wallpaper-list.category {
@@ -505,7 +515,7 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-.modal, .context-menu, .contentSearchSuggestionTable {
+.modal, .contentSearchSuggestionTable {
   box-shadow: var(--bs2) !important;
   border: 1px solid rgba(235, 245, 255, .15) !important;
 }
@@ -519,6 +529,10 @@ body {
 @media (-moz-platform: windows) {
 .modal, .context-menu, .contentSearchSuggestionTable {
   border: none !important;
+}
+
+.context-menu {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(255, 255, 255, .15) !important;
 }
 
 .customize-menu {
