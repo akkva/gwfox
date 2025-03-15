@@ -240,7 +240,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   background: transparent !important;
 }
 
-#tabbrowser-tabs {
+#tabbrowser-tabs[orient="horizontal"] {
   margin-inline-start: 4px !important;
 }
 }
@@ -1044,11 +1044,6 @@ panelmultiview, popupnotification {
 #permission-popup-mainView-panel-header + toolbarseparator,
 #protections-popup-mainView-panel-header-section + toolbarseparator {
   display: none !important;
-}
-
-#toolbar-context-toggle-vertical-tabs,
-#sidebarRevampSeparator {
-  display: flex !important;
 }
 
 .popup-internal-box,
@@ -2126,6 +2121,11 @@ tab-group {
 
 :root#main-window {
   appearance: none !important;
+@media -moz-pref("widget.windows.acrylic") {
+&:not(:-moz-window-inactive) {
+  background-color: light-dark(rgba(245, 245, 245, .75), rgba(20, 20, 20, .75)) !important;
+}
+}
 }
 
 :root[inFullscreen] {
