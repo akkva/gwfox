@@ -4,8 +4,9 @@
   --bg1: light-dark(#f5f6f6, #383838);
   --bg2: light-dark(#fff, #454545);
   --bg3: light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1));
-  --bs1: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15);
-  --bs2: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5);
+  --bg4: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
+  --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 .5px rgba(0, 0, 0, .15);
+  --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 .5px rgba(0, 0, 0, .5);
   --outline-color: light-dark(#7db0f7, #2c749f);
   --button-bgcolor: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
   --button-hover-bgcolor: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
@@ -52,8 +53,8 @@
   --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
   --toolbarbutton-active-background: color-mix(in srgb, currentColor 15%, transparent) !important;
   @media (-moz-platform: windows) {
-  --bs1: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17);
-  --bs2: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(255, 255, 255, .15);    
+  --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
+  --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15);    
   }
 }
 
@@ -145,7 +146,7 @@
   opacity: 0;
   transition: .25s;
   padding-bottom: 0 !important;
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--bs1) !important;
   border-bottom-left-radius: 8px !important;
@@ -376,7 +377,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #urlbar[breakout][breakout-extend] #urlbar-background {
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--bs1) !important;
 }
@@ -408,7 +409,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #urlbar-background {
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--bs1) !important;
   height: 50px !important;
@@ -1124,7 +1125,7 @@ toolbarseparator[orient="vertical"] {
 }
 
 window[role="dialog"] {
-  background: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  background: var(--bg4) !important;
   appearance: -moz-mac-unified-toolbar-window !important;
 }
 
@@ -1256,9 +1257,9 @@ richlistbox {
 }
 
 .findbar-container, #statuspanel-label {
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
-  box-shadow: var(--bs1) !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1269,11 +1270,16 @@ richlistbox {
 }
 
 #urlbar[breakout][breakout-extend] #urlbar-background,
-.findbar-container, .dialogBox, #statuspanel-label,
-#PersonalToolbar {
+.dialogBox, #PersonalToolbar {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
   box-shadow: var(--bs2) !important;
+}
+
+.findbar-container, #statuspanel-label {
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1px !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
 }
 
 #identity-box:hover {
@@ -2024,7 +2030,7 @@ tab-group {
   z-index: 9;
   border-top-left-radius: 8px !important;
   border-bottom-left-radius: 8px !important;
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65));
+  background-color: var(--bg4);
   backdrop-filter: blur(30px);
   box-shadow: var(--bs1);
   overflow: unset !important;
@@ -2232,18 +2238,22 @@ toolbarbutton:-moz-window-inactive {
 }
 
 menupopup, panel[type="arrow"] {
-  --panel-background: light-dark(rgba(255, 255, 255, .65), rgba(25, 25, 25, .65)) !important;
+  --panel-background: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75)) !important;
 }
 
 menupopup,
 .popup-internal-box,
 #PopupAutoComplete > .autocomplete-richlistbox,
 .menupopup-arrowscrollbox {
-  background: light-dark(rgba(255, 255, 255, .45), rgba(25, 25, 25, .25)) !important;
+  background: light-dark(rgba(255, 255, 255, .55), rgba(15, 15, 12, .35)) !important;
 }
 
 #contentAreaContextMenu .menu-iconic-left {
   display: unset;
+}
+
+.findbar-container, #statuspanel-label {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
 }
 
 @media -moz-pref("sidebar.verticalTabs") {
@@ -2296,6 +2306,10 @@ menupopup,
 .findbar-container, .dialogBox, #statuspanel-label,
 #PersonalToolbar {
   outline: none !important;
+}
+
+.findbar-container, #statuspanel-label {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(255, 255, 255, .15) !important;
 }
 
 menupopup, panel[type="arrow"] {
