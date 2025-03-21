@@ -1476,13 +1476,10 @@ input:focus {
   opacity: .5 !important;
 }
 
-.sidebar-splitter {
-  margin-right: -8px;
-}
-
 :root[sidebar-expand-on-hover] {
 #sidebar-main {
   background-color: transparent !important;
+  transition: none !important;
 }
 
 #tabbrowser-tabs:not([haspinnedtabs]) {
@@ -1508,16 +1505,17 @@ input:focus {
 }
 
 #tabbrowser-tabbox {
-&:not([sidebar-positionend]) {
-&:not([sidebar-panel-open]) {
-  transition: .15s;
+  clip-path: inset(-50px 0 0 0);
+  transition: clip-path .25s;
 }
 
-&[sidebar-launcher-expanded][sidebar-launcher-hovered]:not([sidebar-panel-open]),
-&[sidebar-ongoing-animations]:not([sidebar-launcher-expanded], [sidebar-panel-open]) {
-  margin-inline-start: 212px !important;
-  transition: .3s;
+#sidebar-main:hover ~ #tabbrowser-tabbox {
+  clip-path: inset(-50px 0 0 147px);
 }
+
+:has(#sidebar-box:not([hidden])) {
+#tabbrowser-tabbox {
+  clip-path: inset(-50px 0 0 0);
 }
 }
 
@@ -1694,7 +1692,6 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
 
 .tools-and-extensions > moz-button:not([extension]) {
   padding-left: var(--padding) !important;
-  padding-right: var(--padding) !important;
 }
 
 .extensions, .customize-extensions-heading,
@@ -1864,6 +1861,10 @@ tab-group {
   margin-left: 499px !important;
   width: calc(100% - 507px);
 }
+
+#sidebar-box {
+  margin-right: -8px !important;
+}
 }
 
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
@@ -1896,6 +1897,7 @@ tab-group {
 --padding: 0;
 #sidebar-main {
   min-width: 221px !important;
+  margin-right: -8px !important;
 }
 
 #urlbar[breakout][breakout-extend] {
@@ -1911,7 +1913,7 @@ tab-group {
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
---padding: 15px;
+--padding: 16px;
 :has(#sidebar-main:not([hidden])) {
 .sidebar-splitter {
   cursor: col-resize !important;
@@ -1960,7 +1962,7 @@ tab-group {
 }
 
 #tabbrowser-tabs {
-  width: 82px !important;
+  width: 74px !important;
 }
 
 .tabbrowser-tab {
@@ -1980,7 +1982,8 @@ tab-group {
 
 #tabs-newtab-button,
 #vertical-tabs-newtab-button {
-  width: 62px !important;
+  min-width: 62px !important;
+  margin-left: 10px !important;
 }
 
 .tab-close-button {
@@ -2043,10 +2046,6 @@ tab-group {
 }
 
 :has(#sidebar-main[hidden]) {
-#tabbrowser-tabbox {
-  margin-left: 8px !important;
-}
-
 .titlebar-buttonbox-container {
   visibility: hidden;
 }
@@ -2071,6 +2070,7 @@ tab-group {
 }
 
 #sidebar-main {
+  width: 82px;
   height: calc(100% - 16px) !important;
   display: flex !important;
   position: fixed;
@@ -2096,7 +2096,7 @@ tab-group {
   content: "";
   position: absolute;
   top: 0;
-  left: -10px;
+  left: -20px;
   width: 25px;
   height: 100%;
 }
@@ -2104,7 +2104,7 @@ tab-group {
   content: "";
   position: absolute;
   top: 0;
-  right: -10px;
+  right: -20px;
   width: 25px;
   height: 100%;
 }
@@ -2341,6 +2341,32 @@ menupopup,
   left: -15px;
   width: 15px;
   height: 30px;
+}
+
+#sidebar-box {
+  margin-top: -44.5px !important;
+}
+
+:root:not([inDOMFullscreen]) {
+#tabbrowser-tabpanels {
+  margin-top: -44.5px;
+}
+}
+
+:has(#tabbrowser-tabs[expanded]) {
+:has(.titlebar-buttonbox:hover, #urlbar:hover, #back-button:hover, #forward-button:hover, #stop-reload-button:hover, #sidebar-button:hover) {
+#tabbrowser-tabpanels {
+  margin-top: -44.5px;
+}
+}
+}
+
+:has(#tabbrowser-tabs:not([expanded])) {
+:has(.titlebar-buttonbox:hover, #urlbar:hover) {
+#tabbrowser-tabpanels {
+  margin-top: -44.5px;
+}
+}
 }
 }
 
