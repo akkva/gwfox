@@ -1485,6 +1485,16 @@ input:focus {
   background-color: transparent !important;
 }
 
+#tabbrowser-tabs {
+  margin-top: -6px !important;
+}
+
+:has(#urlbar[breakout][breakout-extend], [usertyping]) {
+#tabbrowser-tabs {
+  margin-top: -7.5px !important;
+}
+}
+
 .tabbrowser-tab[pinned] .tab-icon-image {
   margin-left: 6px;
 }
