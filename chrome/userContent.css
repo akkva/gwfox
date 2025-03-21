@@ -165,7 +165,7 @@ body {
 }
 
 .search-handoff-button {
-  background-color: rgba(15, 15, 15, .6) !important;
+  background-color: rgba(15, 15, 15, .7) !important;
   border-radius: 12px !important;
   box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
   backdrop-filter: blur(30px) !important;
@@ -177,7 +177,7 @@ body {
 .search-handoff-button.disabled {
   opacity: 1 !important;
   box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
-  fill: rgba(255, 255, 255, .4) !important;
+  fill: rgba(255, 255, 255, .6) !important;
 }
 
 .fake-textbox {
@@ -278,13 +278,13 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 }
 
 .icon.icon-settings:hover {
-  background-color: light-dark(rgba(255, 255, 255, .8), rgba(15, 15, 15, .6)) !important;
+  background-color: light-dark(rgba(255, 255, 255, .8), rgba(15, 15, 15, .7)) !important;
   backdrop-filter: blur(30px) !important;
   opacity: 1 !important;
 }
 
 .search-inner-wrapper {
-  background-color: light-dark(rgba(255, 255, 255, .8), rgba(15, 15, 15, .6)) !important;
+  background-color: light-dark(rgba(255, 255, 255, .8), rgba(15, 15, 15, .7)) !important;
   border-radius: 12px !important;
   box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
   transition: background .5s !important;
@@ -292,7 +292,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 }
 
 .search-inner-wrapper:active {
-  background-color: light-dark(rgba(255, 255, 255, .4), rgba(15, 15, 15, .7)) !important;
+  background-color: light-dark(rgba(255, 255, 255, .6), rgba(15, 15, 15, .8)) !important;
   transition: background .5s !important;
 }
 
@@ -371,6 +371,10 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   background-color: rgba(255, 255, 255, .8) !important;
 }
 
+.context-menu-button.icon:active {
+  background-color: rgba(255, 255, 255, .6) !important;
+}
+
 .context-menu-button {
   fill: #000 !important;
 }
@@ -400,7 +404,11 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 
 @media (prefers-color-scheme: dark) {
 .tile, .context-menu-button.icon {
-  background-color: rgba(15, 15, 15, .6) !important;
+  background-color: rgba(15, 15, 15, .7) !important;
+}
+
+.context-menu-button.icon:active {
+  background-color: rgba(15, 15, 15, .8) !important;
 }
 
 .context-menu-button {
@@ -423,7 +431,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 }
 
 .tile:active {
-  background-color: light-dark(rgba(255, 255, 255, .4), rgba(15, 15, 15, .7)) !important;
+  background-color: light-dark(rgba(255, 255, 255, .6), rgba(15, 15, 15, .8)) !important;
   transition: background .5s !important;
 }
 
