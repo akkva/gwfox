@@ -109,10 +109,6 @@ search-textbox {
   outline-width: 18px !important;
 }
 
-@-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html") { 
-:root { background: none !important; }
-}
-
 @-moz-document url-prefix("about:firefoxview") {
 * {--fxview-border: transparent !important;}
 
@@ -213,8 +209,9 @@ body {
 }
 
 @-moz-document url("about:newtab"), url("about:home") {
-body {
-  --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
+body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important; }
+
+*[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"] {
   background-image: url("resources/light.jpg") !important;
 @media (prefers-color-scheme: dark) {
   background-image: url("resources/dark.jpg") !important;
@@ -386,6 +383,21 @@ body {
   color: #fff !important;
 }
 
+@media not (prefers-color-scheme: dark) {
+:has(*[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"]) {
+.personalize-button:not(:hover, :active),
+.top-site-outer .context-menu-button,
+.top-site-outer:not(:hover, :active, .active),
+.logo-and-wordmark .wordmark {
+  color-scheme: light !important;
+}
+
+.top-site-outer .title {
+  color: #000 !important;
+}
+}
+}
+
 @media (prefers-color-scheme: dark) {
 .tile, .context-menu-button.icon {
   background-color: rgba(15, 15, 15, .6) !important;
@@ -456,6 +468,7 @@ body {
   border-radius: 50px !important;
 }
 
+[data-l10n-id="newtab-custom-recent-toggle"],
 .contentSearchSuggestionTable .contentSearchHeader,
 .wallpaper-attribution,
 .pinned .icon, .card-outer,
@@ -466,6 +479,10 @@ body {
 
 .pinned:hover .icon {
   display: inline-block !important;
+}
+
+.wallpaper-input:checked {
+  outline-color: transparent !important;
 }
 
 .wallpaper-list .wallpaper-input:checked {
@@ -495,7 +512,7 @@ body {
 .customize-menu {
   background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
-  box-shadow: var(--bs1) !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
   margin: 11px 11px 0 0 !important;
   height: 98% !important;
 }
@@ -523,7 +540,6 @@ body {
 .customize-menu {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
-  box-shadow: var(--bs2) !important;
 }
 
 @media (-moz-platform: windows) {
