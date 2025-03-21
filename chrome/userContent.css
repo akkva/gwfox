@@ -470,7 +470,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 
 [data-l10n-id="newtab-custom-recent-toggle"],
 .contentSearchSuggestionTable .contentSearchHeader,
-.wallpaper-attribution,
+.wallpaper-attribution, .logo-and-wordmark,
 .pinned .icon, .card-outer,
 .section-title-container,
 .customize-menu .close-button-wrapper {
