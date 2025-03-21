@@ -1480,6 +1480,47 @@ input:focus {
   margin-right: -8px;
 }
 
+:root[sidebar-expand-on-hover] {
+#sidebar-main {
+  background-color: transparent !important;
+}
+
+.tabbrowser-tab[pinned] .tab-icon-image {
+  margin-left: 6px;
+}
+
+.tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover .tab-icon-image {
+  display: unset;
+}
+
+.tabbrowser-tab[pinned] .tab-close-button {
+  display: none;
+}
+
+#tabbrowser-tabbox {
+&:not([sidebar-positionend]) {
+&:not([sidebar-panel-open]) {
+  transition: .15s;
+}
+
+&[sidebar-launcher-expanded][sidebar-launcher-hovered]:not([sidebar-panel-open]),
+&[sidebar-ongoing-animations]:not([sidebar-launcher-expanded], [sidebar-panel-open]) {
+  margin-inline-start: 212px !important;
+  transition: .3s;
+}
+}
+}
+
+#sidebar-box {
+&:not([sidebar-positionend]) {
+&[sidebar-panel-open][sidebar-launcher-hovered][sidebar-launcher-expanded],
+&[sidebar-ongoing-animations][sidebar-panel-open] {
+  margin-inline-start: 218px !important;
+}
+}
+}
+}
+
 /* icons */
 
 #back-button {
@@ -1759,7 +1800,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
-  margin: 6px 0 6px 0 !important;
+  margin: 6px 0 3px 0 !important;
 }
 
 .tab-group-label {
