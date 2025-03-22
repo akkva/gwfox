@@ -1513,6 +1513,19 @@ input:focus {
   clip-path: inset(-50px 0 0 147px);
 }
 
+:has(#tabbrowser-tabs[expanded], #tabbrowser-tabs:not([expanded])) {
+#urlbar[breakout][breakout-extend] {
+  top: 20vh !important;
+  left: 25vw !important;
+}
+
+:has(#urlbar[usertyping]) {
+#urlbar {
+  left: 25vw !important;
+}
+}
+}
+
 :has(#sidebar-box:not([hidden])) {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 0);
@@ -1642,6 +1655,10 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
   margin-left: 329.5px !important;
   width: calc(100% - 337.5px);
 }
+
+#sidebar-box {
+  margin-right: -8px !important;
+}
 }
 
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
@@ -1727,7 +1744,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 
 #sidebar-main {
   margin-top: -14px !important;
-  transition: .25s !important;
+  transition: margin-top .25s !important;
 }
 }
 }
@@ -2035,7 +2052,7 @@ tab-group {
 :has(#urlbar[breakout][breakout-extend]) {
 #sidebar-main {
   margin-top: -14px !important;
-  transition: .25s !important;
+  transition: margin-top .25s !important;
 }
 
 #tabbrowser-tabs {
