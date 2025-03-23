@@ -459,6 +459,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   height: 28px !important;
   border-radius: 6px !important;
   padding: 6px !important;
+  -moz-window-dragging: no-drag;
 }
 
 .urlbar-page-action:not(#star-button-box) {
