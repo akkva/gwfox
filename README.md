@@ -24,7 +24,11 @@
  
   - `widget.windows.mica.popups` *
  
-  - `browser.urlbar.scotchBonnet.enableOverride` 切换为 `false`
+- 以下布尔值切换为 `false`
+ 
+  - `browser.urlbar.scotchBonnet.enableOverride`
+ 
+  - `sidebar.animation.enabled`
 
 - 重启火狐
 
