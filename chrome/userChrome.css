@@ -1477,6 +1477,115 @@ input:focus {
   opacity: .5 !important;
 }
 
+.expandOnHover {
+  background-color: transparent !important;
+  border-radius: none !important;
+  border: none !important;
+#sidebar-main {
+  box-shadow: none !important;
+}
+
+#sidebar-box {
+  background-color: var(--bg4) !important;
+  backdrop-filter: blur(30px) !important;
+  margin-bottom: 8px !important;
+  margin-left: 8px !important;
+  border-radius: 8px !important;
+}
+
+#sidebar-box:-moz-window-inactive {
+  opacity: unset !important;
+}
+}
+
+:has(.expandOnHover) {
+#tabbrowser-tabbox {
+  clip-path: inset(-50px 0 0 0);
+  transition: clip-path 200ms;
+}
+
+:has(#tabbrowser-tabs[expanded]) {
+#tabbrowser-tabbox {
+  clip-path: inset(-50px 0 0 147px);
+}
+}
+
+:has(#urlbar:not([breakout][breakout-extend], [usertyping]):hover) {
+:has(#tabbrowser-tabs:not([expanded])) {
+--display: block;
+}
+
+#tabbrowser-tabbox {
+  clip-path: inset(-50px 0 0 147px);
+}
+
+#urlbar:not([breakout][breakout-extend], [usertyping]) {
+  width: 221px !important;
+
+#identity-box[pageproxystate="invalid"] #identity-icon {
+  margin-left: unset !important;
+  margin-right: 4px !important;
+}
+
+#identity-box {
+  margin-right: unset !important;
+  margin-left: unset !important;
+}
+
+#identity-permission-box[open=true],
+#identity-permission-box[hasPermissions],
+#identity-permission-box[hasSharingIcon],
+#notification-popup-box,
+#tracking-protection-icon-container {
+  display: flex !important;
+}
+}
+
+#tabbrowser-tabs,
+#tabs-newtab-button,
+#vertical-tabs-newtab-button {
+  width: 221px !important;
+}
+
+#tabs-newtab-button,
+#vertical-tabs-newtab-button {
+  margin-left: 9px !important;
+}
+
+#tabbrowser-tabs .toolbarbutton-text {
+  margin-left: 2px !important;
+}
+
+.tabbrowser-tab,
+.tab-background {
+  width: 201px !important;
+}
+
+.tab-icon-image {
+  margin-left: -9px !important;
+  margin-right: 7.5px !important;
+}
+
+.tab-label-container,
+#tabbrowser-tabs .toolbarbutton-text {
+  display: block !important;
+}
+}
+
+:has(#tabbrowser-tabs[expanded], #tabbrowser-tabs:not([expanded])) {
+#urlbar[breakout][breakout-extend] {
+  top: 20vh !important;
+  left: 25vw !important;
+}
+
+:has(#urlbar[usertyping]) {
+#urlbar {
+  left: 25vw !important;
+}
+}
+}
+}
+
 :root[sidebar-expand-on-hover] {
 #sidebar-main {
   background-color: transparent !important;
