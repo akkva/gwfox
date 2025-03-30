@@ -1515,6 +1515,10 @@ input:focus {
 --display: block;
 }
 
+#urlbar::before {
+  width: 220px;
+}
+
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 147px);
 }
@@ -1629,6 +1633,10 @@ input:focus {
 :has(#urlbar:not([breakout][breakout-extend], [usertyping]):hover) {
 :has(#tabbrowser-tabs:not([expanded])) {
 --display: block;
+}
+
+#urlbar::before {
+  width: 220px;
 }
 
 #tabbrowser-tabbox {
@@ -1914,8 +1922,8 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   position: absolute;
   top: -8px;
   left: -9px;
-  width: 225px;
-  height: 100%;
+  width: 220px;
+  height: 48px;
 }
 }
 
@@ -2192,6 +2200,10 @@ tab-group {
 
 .tabbrowser-tab:hover .tab-close-button {
   opacity: 1 !important;
+}
+
+#urlbar::before {
+  width: 82px;
 }
 
 #urlbar[breakout][breakout-extend] {
