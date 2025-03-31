@@ -2051,10 +2051,23 @@ tab-group {
 }
 
 .tab-group-line {
-  margin: 0 !important;
-  border-radius: 50px !important;
-  width: 5px !important;
-  height: 5px !important;
+#tabbrowser-tabs & {
+  width: 1.5px !important;
+
+.tabbrowser-tab:first-of-type > .tab-stack > .tab-background > & {
+  inset-block-start: 2px !important;
+}
+
+.tabbrowser-tab:last-of-type > .tab-stack > .tab-background > & {
+  inset-block-end: 2px !important;
+}
+}
+}
+
+.tab-group-label-container {
+#tabbrowser-tabs[orient="vertical"] tab-group:not([collapsed]) > &::after {
+  width: 0 !important;
+}
 }
 
 :has(#sidebar-main:not([hidden])) {
@@ -2159,6 +2172,20 @@ tab-group {
 }
 }
 
+.tab-group-line {
+#tabbrowser-tabs & {
+  inset: -3px -8px -2px !important;
+
+.tabbrowser-tab:first-of-type > .tab-stack > .tab-background > & {
+  inset-block-start: 2px !important;
+}
+
+.tabbrowser-tab:last-of-type > .tab-stack > .tab-background > & {
+  inset-block-end: 2px !important;
+}
+}
+}
+
 .tab-group-label {
   margin-left: 22px !important;
 }
@@ -2169,13 +2196,13 @@ tab-group {
 }
 }
 
+.tabbrowser-tab[pinned],
 #tabbrowser-tabs {
   width: 74px !important;
 }
 
 .tabbrowser-tab {
-  margin-left: 9px !important;
-  width: 62px !important;
+  padding-left: 9px !important;
 }
 
 .tab-background {
@@ -2200,6 +2227,10 @@ tab-group {
 
 .tabbrowser-tab:hover .tab-close-button {
   opacity: 1 !important;
+}
+
+#vertical-pinned-tabs-container-separator {
+  margin-right: -20px !important;
 }
 
 #urlbar::before {
