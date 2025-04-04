@@ -201,6 +201,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #PersonalToolbar {
   display: none;
 }
+
+#tabbrowser-tabbox {
+  margin: 0 !important;
+}
 }
 
 :root[inFullscreen] {
