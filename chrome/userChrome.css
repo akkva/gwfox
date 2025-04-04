@@ -1502,6 +1502,7 @@ input:focus {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 0);
   transition: clip-path 200ms;
+  margin-left: 74px !important;
 }
 
 :has(#tabbrowser-tabs[expanded]) {
@@ -1572,6 +1573,10 @@ input:focus {
 .tab-label-container,
 #tabbrowser-tabs .toolbarbutton-text {
   display: block !important;
+}
+
+.tab-group-label {
+  margin-left: 0 !important;
 }
 }
 
@@ -1721,6 +1726,10 @@ input:focus {
   margin-inline-start: 218px !important;
 }
 }
+}
+
+#urlbar::before {
+  content: none;
 }
 }
 
