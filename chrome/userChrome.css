@@ -1500,6 +1500,14 @@ input:focus {
 #sidebar-box:-moz-window-inactive {
   opacity: unset !important;
 }
+
+#vertical-pinned-tabs-container {
+  grid-template-columns: 1fr !important;
+}
+
+#vertical-pinned-tabs-container-separator {
+  display: block !important;
+}
 }
 
 :has(.expandOnHover) {
@@ -1513,9 +1521,16 @@ input:focus {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 147px);
 }
+
+#vertical-pinned-tabs-container {
+.tab-label-container {
+  display: block !important;
+  margin-left: 10px !important;
+}
+}
 }
 
-:has(#urlbar:not([breakout][breakout-extend], [usertyping]):hover) {
+:has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover) {
 :has(#tabbrowser-tabs:not([expanded])) {
 --display: block;
 }
@@ -1528,6 +1543,10 @@ input:focus {
   clip-path: inset(-50px 0 0 147px);
 }
 
+#tabbrowser-tabpanels {
+  margin-top: -45.5px !important;
+}
+
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   width: 221px !important;
 
@@ -1537,8 +1556,8 @@ input:focus {
 }
 
 #identity-box {
-  margin-right: unset !important;
-  margin-left: unset !important;
+  margin-right: 28px !important;
+  margin-left: 0 !important;
 }
 
 #identity-permission-box[open=true],
@@ -1565,6 +1584,24 @@ input:focus {
   margin-left: 2px !important;
 }
 
+#vertical-pinned-tabs-container {
+.tab-content {
+  margin-left: 6px !important;
+}
+
+.tab-label-container {
+  margin-left: 2.5px !important;
+}
+
+.tab-icon-overlay {
+  margin-left: -9px;
+}
+}
+
+.tabbrowser-tab[pinned] {
+  width: unset !important;
+}
+
 .tab-background {
   width: 201px !important;
 }
@@ -1578,9 +1615,14 @@ input:focus {
 #tabbrowser-tabs .toolbarbutton-text {
   display: block !important;
 }
+}
 
-.tab-group-label {
-  margin-left: 0 !important;
+:has(#urlbar:not([breakout][breakout-extend], [usertyping]):hover) {
+#urlbar:not([breakout][breakout-extend], [usertyping]) {
+#identity-box {
+  margin-right: unset !important;
+  margin-left: unset !important;
+}
 }
 }
 
@@ -1636,9 +1678,19 @@ input:focus {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 147px);
 }
+
+#vertical-pinned-tabs-container {
+.tab-content {
+  margin-left: -6px !important;
 }
 
-:has(#urlbar:not([breakout][breakout-extend], [usertyping]):hover) {
+.tab-label-container {
+  margin-left: 1px !important;
+}
+}
+}
+
+:has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover) {
 :has(#tabbrowser-tabs:not([expanded])) {
 --display: block;
 }
@@ -1652,6 +1704,10 @@ input:focus {
   margin-left: -147px !important;
 }
 
+#tabbrowser-tabpanels {
+  margin-top: -45.5px !important;
+}
+
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   width: 221px !important;
 
@@ -1661,8 +1717,8 @@ input:focus {
 }
 
 #identity-box {
-  margin-right: unset !important;
-  margin-left: unset !important;
+  margin-right: 28px !important;
+  margin-left: 0 !important;
 }
 
 #identity-permission-box[open=true],
@@ -1689,6 +1745,16 @@ input:focus {
   margin-left: 2px !important;
 }
 
+#vertical-pinned-tabs-container {
+.tab-icon-overlay {
+  margin-left: -15px;
+}
+}
+
+.tabbrowser-tab[pinned] {
+  width: unset !important;
+}
+
 .tab-background {
   width: 201px !important;
 }
@@ -1701,6 +1767,15 @@ input:focus {
 .tab-label-container,
 #tabbrowser-tabs .toolbarbutton-text {
   display: block !important;
+}
+}
+
+:has(#urlbar:not([breakout][breakout-extend], [usertyping]):hover) {
+#urlbar:not([breakout][breakout-extend], [usertyping]) {
+#identity-box {
+  margin-right: unset !important;
+  margin-left: unset !important;
+}
 }
 }
 
@@ -1733,7 +1808,7 @@ input:focus {
 }
 
 #urlbar::before {
-  content: none;
+  height: 40px;
 }
 }
 
@@ -2135,6 +2210,10 @@ tab-group {
 #urlbar[breakout][breakout-extend] {
   top: 20vh !important;
   left: 25vw !important;
+}
+
+.tab-close-button {
+  margin-inline-end: calc(-1 * var(--tab-close-button-padding)) !important;
 }
 
 :has(.titlebar-buttonbox:hover, #urlbar:hover, #back-button:hover, #forward-button:hover, #stop-reload-button:hover, #sidebar-button:hover) {
