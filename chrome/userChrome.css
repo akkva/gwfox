@@ -1585,6 +1585,12 @@ input:focus {
   margin-left: 1px !important;
 }
 }
+
+:has(#sidebar-box:not([hidden])) {
+#tabbrowser-tabbox {
+  margin-left: 0 !important;
+}
+}
 }
 
 :has(#sidebar-box:not([hidden])) {
