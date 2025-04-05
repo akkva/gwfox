@@ -1567,11 +1567,13 @@ input:focus {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 0);
   transition: clip-path 200ms;
+  margin-left: 0 !important;
 }
 
 :has(#tabbrowser-tabs[expanded]) {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 147px);
+  margin-left: 74px !important;
 }
 
 #vertical-pinned-tabs-container {
