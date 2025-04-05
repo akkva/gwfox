@@ -1507,6 +1507,10 @@ input:focus {
 
 #vertical-pinned-tabs-container-separator {
   display: block !important;
+
+#vertical-pinned-tabs-container:empty + & {
+  display: none !important;
+}
 }
 }
 
