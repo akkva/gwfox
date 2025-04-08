@@ -388,7 +388,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 }
 
 @media not (prefers-color-scheme: dark) {
-:has(*[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"]) {
+:has(body[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"]) {
 .personalize-button:not(:hover, :active),
 .top-site-outer .context-menu-button,
 .top-site-outer:not(:hover, :active, .active),
