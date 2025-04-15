@@ -439,6 +439,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-right: 5px !important;
 }
 
+#urlbar-search-mode-indicator {
+  margin-top: 13px !important;
+}
+
 #tabbrowser-tabs[orient="horizontal"] {
   margin-left: -223px !important;
 }
