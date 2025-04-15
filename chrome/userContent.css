@@ -6,8 +6,8 @@
   --in-content-focus-outline-color: light-dark(#7db0f7, #2c749f) !important;
   --focus-outline-color: light-dark(#7db0f7, #2c749f) !important;
   --bg4: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
-  --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 .5px rgba(0, 0, 0, .15);
-  --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 .5px rgba(0, 0, 0, .5);
+  --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15);
+  --bs2: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5);
   @media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
   --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15);    
@@ -230,7 +230,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 .context-menu {
   border-radius: 6px !important;
   padding: 6px !important;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
 @media (-moz-platform: windows) {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
 }
@@ -417,7 +417,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 
 .context-menu {
   border: 1px solid rgba(235, 245, 255, .15) !important;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
 }
 }
 
