@@ -4,7 +4,7 @@
 <img width="1270" alt="01">
 </picture>
 
-- 本主题适用Firefox 137+ `Mac` `Win` *
+- 本主题适用Firefox 138+ `Mac` `Win` *
 
 - 工具栏按钮数量仅支持左4右4
 
@@ -22,8 +22,6 @@
  
   - `widget.windows.mica` *
  
-  - `widget.windows.mica.popups` *
- 
 - 以下布尔值切换为 `false`
  
   - `browser.urlbar.scotchBonnet.enableOverride`
@@ -31,11 +29,3 @@
   - `sidebar.animation.enabled`
 
 - 重启火狐
-
-## 样式调整
-
-- 主窗口亚克力效果 *
-
-  - 在 `about:config` 页面中添加布尔值 `widget.windows.acrylic` 为 `true`
-
-  - 使用[MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone)调整
