@@ -27,5 +27,7 @@
   - `browser.urlbar.scotchBonnet.enableOverride`
  
   - `sidebar.animation.enabled`
+ 
+  - `widget.macos.native-context-menus`
 
 - 重启火狐
