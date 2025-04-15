@@ -1481,68 +1481,10 @@ input:focus {
   opacity: .5 !important;
 }
 
-.expandOnHover {
-  background-color: transparent !important;
-  border-radius: none !important;
-  border: none !important;
-#sidebar-main {
-  box-shadow: none !important;
-}
-
-#sidebar-box {
-  background-color: var(--bg4) !important;
-  backdrop-filter: blur(30px) !important;
-  margin-bottom: 8px !important;
-  margin-left: 8px !important;
-  border-radius: 8px !important;
-}
-
-#sidebar-box:-moz-window-inactive {
-  opacity: unset !important;
-}
-
-#vertical-pinned-tabs-container {
-  grid-template-columns: 1fr !important;
-}
-
-#vertical-pinned-tabs-container-separator {
-  display: block !important;
-
-#vertical-pinned-tabs-container:empty + & {
-  display: none !important;
-}
-}
-}
-
-:has(.expandOnHover) {
-#tabbrowser-tabbox {
-  clip-path: inset(-50px 0 0 0);
-  transition: clip-path 200ms;
-  margin-left: 74px !important;
-}
-
-:has(#tabbrowser-tabs[expanded]) {
-#tabbrowser-tabbox {
-  clip-path: inset(-50px 0 0 147px);
-}
-
-#vertical-pinned-tabs-container {
-.tab-label-container {
-  display: block !important;
-  margin-left: 10px !important;
-}
-}
-}
-}
-
 :root[sidebar-expand-on-hover] {
 #sidebar-main {
   background-color: transparent !important;
   transition: none !important;
-}
-
-#tabbrowser-tabs:not([haspinnedtabs]) {
-  margin-top: -6px !important;
 }
 
 :has(#urlbar[breakout][breakout-extend], [usertyping]) {
@@ -2443,11 +2385,6 @@ tab-group {
 
 :root#main-window {
   appearance: none !important;
-@media -moz-pref("widget.windows.acrylic") {
-&:not(:-moz-window-inactive) {
-  background-color: light-dark(rgba(245, 245, 245, .75), rgba(20, 20, 20, .75)) !important;
-}
-}
 }
 
 :root[inFullscreen] {
