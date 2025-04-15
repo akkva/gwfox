@@ -5,8 +5,8 @@
   --bg2: light-dark(#fff, #454545);
   --bg3: light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1));
   --bg4: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
-  --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 .5px rgba(0, 0, 0, .15);
-  --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 .5px rgba(0, 0, 0, .5);
+  --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15);
+  --bs2: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5);
   --outline-color: light-dark(#7db0f7, #2c749f);
   --button-bgcolor: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
   --button-hover-bgcolor: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
@@ -986,9 +986,6 @@ tab-group:not([collapsed]) > &::after {
 
 menupopup, panel[type="arrow"] {
   appearance: menupopup !important;
-  background: transparent !important;
-  --panel-background: var(--bg2) !important;
-  --panel-border-color: transparent !important;
   --panel-border-radius: 6px !important;
   --panel-padding: 6px !important;
   --panel-separator-color: var(--bg3) !important;
@@ -997,8 +994,8 @@ menupopup, panel[type="arrow"] {
   --arrowpanel-color: light-dark(#000, #fff) !important;
 }
 
-panel[type="arrow"] { 
-  --panel-background: transparent !important;
+panel[type="arrow"] {
+  --panel-background: light-dark(rgba(255, 255, 255, .55), rgba(15, 15, 12, .55)) !important;
   --arrowpanel-background: transparent !important;
   --arrowpanel-border-radius: 0 !important;
 }
@@ -1059,10 +1056,11 @@ panelmultiview, popupnotification {
   display: none !important;
 }
 
+menupopup,
 .popup-internal-box,
 #PopupAutoComplete > .autocomplete-richlistbox,
 .menupopup-arrowscrollbox {
-  background: transparent !important;
+  background: light-dark(rgba(255, 255, 255, .55), rgba(15, 15, 12, .55)) !important;
 }
 
 #tabContextMenu .menu-iconic-left,
@@ -1264,7 +1262,10 @@ richlistbox {
 .findbar-container, #statuspanel-label {
   background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
+  box-shadow: var(--bs1) !important;
+@media (-moz-platform: windows) {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1284,7 +1285,10 @@ richlistbox {
 .findbar-container, #statuspanel-label {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
+  box-shadow: var(--bs2) !important;
+@media (-moz-platform: windows) {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+}
 }
 
 #identity-box:hover {
@@ -2483,16 +2487,9 @@ toolbarbutton:-moz-window-inactive {
   -moz-window-dragging: no-drag !important;
 }
 
-menupopup, panel[type="arrow"] {
+panel[type="arrow"] {
   --panel-background: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75)) !important;
   --panel-shadow-margin: 0px !important;
-}
-
-menupopup,
-.popup-internal-box,
-#PopupAutoComplete > .autocomplete-richlistbox,
-.menupopup-arrowscrollbox {
-  background: light-dark(rgba(255, 255, 255, .55), rgba(15, 15, 12, .35)) !important;
 }
 
 #contentAreaContextMenu .menu-iconic-left {
