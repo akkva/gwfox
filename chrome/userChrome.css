@@ -2177,23 +2177,13 @@ tab-group {
 }
 }
 
-:has(.expandOnHover) {
-#tabbrowser-tabbox {
-  margin-left: 74px !important;
-}
-
-#vertical-pinned-tabs-container {
-.tab-content {
-  margin-left: 6px !important;
-}
-
-.tab-label-container {
-  margin-left: 2.5px !important;
-}
-
-.tab-icon-overlay {
-  margin-left: -9px;
-}
+.tab-group-label {
+  margin-left: 8px !important;
+  padding-top: 3px !important;
+  padding-right: 180px !important;
+  padding-left: 15px !important;
+&::first-letter {
+  font: unset !important;
 }
 }
 
