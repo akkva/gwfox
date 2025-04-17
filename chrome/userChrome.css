@@ -1848,7 +1848,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
-  margin: 6px 0 3px 0 !important;
+  margin: 6px 0 6px 0 !important;
 }
 
 .tab-group-label {
@@ -1860,11 +1860,11 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   min-width: 0 !important;
   margin-top: -5px !important;
   margin-bottom: -5px !important;
-  padding-right: 12px !important;
+  padding-left: 15px !important;
   background-color: transparent !important;
   background-image: url("chrome://global/skin/icons/arrow-down-12.svg");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: left;
   -moz-context-properties: fill;
   fill: currentColor;
 tab-group[collapsed] > .tab-group-label-container > & {
@@ -2024,7 +2024,8 @@ tab-group {
 }
 
 .tab-group-label {
-  margin-left: 22px !important;
+  margin-left: 35px !important;
+  padding-left: 50px !important;
 }
 
 tab-group {
