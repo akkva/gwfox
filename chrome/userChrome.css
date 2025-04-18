@@ -2152,8 +2152,31 @@ tab-group {
 }
 }
 
+tab-group {
+.tabbrowser-tab {
+  margin-left: 8.5px !important;
+}
+
+.tab-background {
+  width: 192px !important;
+}
+
+.tab-group-line {
+  margin-left: -.5px !important;
+}
+
 .tab-group-label {
-  margin-left: 0 !important;
+  margin-left: 8px !important;
+  margin-bottom: -2.5px !important;
+  padding-top: 2px !important;
+  padding-right: 180px !important;
+  padding-left: 16px !important;
+  background-position: left 1px top 7.5px !important;
+&::first-letter {
+  font: unset !important;
+  line-height: 23px !important;
+}
+}
 }
 
 #tabbrowser-tabs,
@@ -2177,16 +2200,6 @@ tab-group {
 }
 }
 
-.tab-group-label {
-  margin-left: 8px !important;
-  padding-top: 3px !important;
-  padding-right: 180px !important;
-  padding-left: 15px !important;
-&::first-letter {
-  font: unset !important;
-}
-}
-
 .tabbrowser-tab[pinned] {
   width: unset !important;
 }
@@ -2198,6 +2211,10 @@ tab-group {
 .tab-icon-image {
   margin-left: -9px !important;
   margin-right: 7.5px !important;
+}
+
+.tab-icon-overlay {
+  margin-left: -9px !important;
 }
 
 .tab-label-container,
