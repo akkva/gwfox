@@ -2233,7 +2233,7 @@ tab-group {
 }
 }
 
-:has(#urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *:hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open]) {
+:has(#urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *:hover) {
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
 #identity-box {
   margin-right: unset !important;
