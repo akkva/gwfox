@@ -2152,29 +2152,39 @@ tab-group {
 }
 }
 
-tab-group {
-.tabbrowser-tab {
-  margin-left: 8.5px !important;
+#tabbrowser-tabs {
+tab-group > :is(.tab-group-label-container, .tabbrowser-tab),
+&[movingtab][movingtab-addToGroup]:not([movingtab-createGroup],[movingtab-ungroup]) .tabbrowser-tab:is(:active,[multiselected]) {
+  margin-inline-start: var(--space-medium) !important;
+}
 }
 
+tab-group {
 .tab-background {
   width: 192px !important;
 }
 
 .tab-group-line {
-  margin-left: -.5px !important;
+#tabbrowser-tabs & {
+  inset-inline-start: -9px !important;
+}
 }
 
 .tab-group-label {
-  margin-left: 8px !important;
-  margin-bottom: -2.5px !important;
-  padding-top: 2px !important;
-  padding-right: 180px !important;
-  padding-left: 16px !important;
-  background-position: left 1px top 7.5px !important;
+  margin-left: unset !important;
+  padding-left: 15px !important;
+#tabbrowser-tabs:not([expanded]) & {
+  width: unset !important;
+  min-height: unset !important;
+  max-width: unset !important;
+  align-self: start !important;
+  line-height: var(--tab-group-label-height) !important;
+  margin-inline-end: var(--space-medium) !important;
+  padding-block: var(--tab-group-label-padding) !important;
 &::first-letter {
   font: unset !important;
-  line-height: 23px !important;
+  line-height: unset !important;
+}
 }
 }
 }
