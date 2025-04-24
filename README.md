@@ -28,6 +28,6 @@
  
   - `sidebar.animation.enabled`
  
-  - `widget.macos.native-context-menus`
+  - `widget.macos.native-context-menus` (可选项)
 
 - 重启火狐
