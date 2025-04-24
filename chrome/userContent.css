@@ -540,6 +540,12 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   padding: 10px !important;
 }
 
+@media -moz-pref("widget.macos.native-context-menus") {
+.modal, .customize-menu, .top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable {
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+}
+}
+
 @media (prefers-color-scheme: dark) {
 .modal, .contentSearchSuggestionTable {
   box-shadow: var(--bs2) !important;
