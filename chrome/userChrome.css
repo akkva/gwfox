@@ -1171,7 +1171,9 @@ menupopup,
   background: transparent !important;
 }
 
-window[role="dialog"], #urlbar:is([breakout][breakout-extend], [usertyping]) #urlbar-background, #PersonalToolbar, #sidebar-main, .findbar-container, #statuspanel-label {
+:root:not([chromehidden~="toolbar"]):has(#sidebar-main[hidden]) #sidebar-main,
+window[role="dialog"], #PersonalToolbar, .findbar-container, #statuspanel-label,
+#urlbar:is([breakout][breakout-extend], [usertyping]) #urlbar-background {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
 }
 }
