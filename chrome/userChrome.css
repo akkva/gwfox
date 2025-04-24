@@ -1132,8 +1132,7 @@ toolbarseparator[orient="vertical"] {
 }
 
 window[role="dialog"] {
-  background: var(--bg4) !important;
-  appearance: -moz-mac-unified-toolbar-window !important;
+  background-color: var(--bg4) !important;
 }
 
 #editBookmarkPanelContent > input,
@@ -1158,6 +1157,23 @@ window[role="dialog"] {
 #unified-extensions-view {
   --uei-icon-size: 16px !important;
   width: 22em !important;
+}
+
+@media -moz-pref("widget.macos.native-context-menus") {
+panel[type="arrow"] {
+  --panel-background: transparent !important;
+}
+
+menupopup,
+.popup-internal-box,
+#PopupAutoComplete > .autocomplete-richlistbox,
+.menupopup-arrowscrollbox {
+  background: transparent !important;
+}
+
+window[role="dialog"], #urlbar:is([breakout][breakout-extend], [usertyping]) #urlbar-background, #PersonalToolbar, #sidebar-main, .findbar-container, #statuspanel-label {
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+}
 }
 
 /* misc */
