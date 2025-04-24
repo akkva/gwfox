@@ -2254,6 +2254,14 @@ tab-group {
 }
 }
 }
+
+:has(#sidebar-box:not([hidden])) {
+:has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open]) {
+#nav-bar {
+  padding-left: 79px !important;
+}
+}
+}
 }
 }
 
@@ -2271,7 +2279,7 @@ tab-group {
 }
 }
 
-:has(#sidebar-main[hidden]) {
+:root:not([chromehidden~="toolbar"]):has(#sidebar-main[hidden]) {
 .titlebar-buttonbox-container {
   visibility: hidden;
 }
