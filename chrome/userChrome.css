@@ -1527,6 +1527,14 @@ input:focus {
   display: unset;
 }
 
+.tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
+  margin-left: unset;
+}
+
+.tabbrowser-tab:hover:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
+  margin-left: 8.5px;
+}
+
 #tabbrowser-tabs[orient="vertical"]:not([expanded]) .tab-close-button, 
 .tabbrowser-tab[pinned] .tab-close-button {
   display: none !important;
