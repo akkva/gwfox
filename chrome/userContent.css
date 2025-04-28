@@ -230,6 +230,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 .context-menu {
   border-radius: 6px !important;
   padding: 6px !important;
+  margin-top: -20px !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
 @media (-moz-platform: windows) {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
@@ -472,7 +473,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 }
 
 .context-menu-button.icon {
-  margin: 5px 5px 0 0 !important;
+  margin: -15px 5px 0 0 !important;
   border-radius: 50px !important;
   box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
 }
@@ -480,13 +481,13 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 [data-l10n-id="newtab-custom-recent-toggle"],
 .contentSearchSuggestionTable .contentSearchHeader,
 .wallpaper-attribution, .logo-and-wordmark,
-.pinned .icon, .card-outer,
+.icon.icon-pin-small, .card-outer,
 .section-title-container,
 .customize-menu .close-button-wrapper {
   display: none !important;
 }
 
-.pinned:hover .icon {
+.tile:hover .icon.icon-pin-small {
   display: inline-block !important;
 }
 
