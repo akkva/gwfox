@@ -1523,16 +1523,12 @@ input:focus {
   margin-left: 6px;
 }
 
-.tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover .tab-icon-image {
-  display: unset;
-}
-
 .tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
   margin-left: unset;
 }
 
 .tabbrowser-tab:hover:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
-  margin-left: 8.5px;
+  margin-left: 10.5px;
 }
 
 #tabbrowser-tabs[orient="vertical"]:not([expanded]) .tab-close-button, 
@@ -1869,10 +1865,6 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   margin-left: 6.5px;
 }
 
-.tabbrowser-tab:hover:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
-  margin-left: 11.5px;
-}
-
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
   margin: 6px 0 6px 0 !important;
 }
@@ -1987,6 +1979,28 @@ tab-group {
 
 .tab-close-button {
   margin-inline-end: calc(-1 * var(--tab-close-button-padding)) !important;
+}
+
+.tab-icon-overlay {
+  display: none !important;
+}
+
+.tab-audio-button:is([soundplaying], [muted], [activemedia-blocked]) {
+  display: block !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-context-properties: fill, fill-opacity;
+  fill: currentColor;
+  fill-opacity: .6;
+&[soundplaying] {
+  background-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg");
+}
+&[muted] {
+  background-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg");
+}
+&[activemedia-blocked] {
+  background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg");
+}
 }
 
 :has(.titlebar-buttonbox:hover, #urlbar:hover, #back-button:hover, #forward-button:hover, #stop-reload-button:hover, #sidebar-button:hover) {
@@ -2256,6 +2270,28 @@ tab-group {
 .tab-label-container,
 #tabbrowser-tabs .toolbarbutton-text {
   display: block !important;
+}
+
+.tab-icon-overlay {
+  display: none !important;
+}
+
+.tab-audio-button:is([soundplaying], [muted], [activemedia-blocked]) {
+  display: block !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-context-properties: fill, fill-opacity;
+  fill: currentColor;
+  fill-opacity: .6;
+&[soundplaying] {
+  background-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg");
+}
+&[muted] {
+  background-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg");
+}
+&[activemedia-blocked] {
+  background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg");
+}
 }
 }
 
