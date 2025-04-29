@@ -389,6 +389,10 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 }
 
 @media not (prefers-color-scheme: dark) {
+.darkWallpaper .top-site-outer .context-menu {
+  color-scheme: light !important;
+}
+
 :has(body[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"]) {
 .personalize-button:not(:hover, :active),
 .top-site-outer .context-menu-button,
@@ -404,6 +408,10 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 }
 
 @media (prefers-color-scheme: dark) {
+.lightWallpaper .top-site-outer .context-menu {
+  color-scheme: dark !important;
+}
+
 .tile, .context-menu-button.icon {
   background-color: rgba(15, 15, 15, .7) !important;
 }
