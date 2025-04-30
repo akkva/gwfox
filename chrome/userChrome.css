@@ -18,6 +18,7 @@
   --in-content-primary-button-background-hover: light-dark(#227cfb, #2566e1) !important;
   --in-content-primary-button-background-active: light-dark(#1c66e8, #225cca) !important;
   --in-content-primary-button-text-color: #fff !important;
+  --devtools-splitter-color: transparent !important;
   --button-text-color-primary: #fff !important;
   --button-primary-color: #fff !important;
   --color-accent-primary: light-dark(#2b87fb, #3078ef) !important;
