@@ -1338,11 +1338,6 @@ richlistbox {
 }
 }
 
-.devtools-side-splitter,
-.devtools-horizontal-splitter {
-  display: none !important;
-}
-
 .devtools-toolbox-side-iframe {
   &:first-child { margin-right: 0 !important; }
   &:last-child { margin-left: 0 !important; }
