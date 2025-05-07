@@ -2164,6 +2164,9 @@ tab-group {
 
 #tabbrowser-tabpanels {
   margin-top: -45.5px !important;
+@media (-moz-platform: windows) {
+  margin-top: -44.5px !important;
+}
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
@@ -2575,7 +2578,7 @@ toolbarbutton:-moz-window-inactive {
   -moz-window-dragging: no-drag !important;
 }
 
-panel[type="arrow"] {
+menupopup, panel[type="arrow"] {
   --panel-background: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75)) !important;
   --panel-shadow-margin: 0px !important;
 }
