@@ -2089,6 +2089,10 @@ tab-group {
   margin-left: 6px;
 }
 
+.tab-throbber {
+  margin-left: 6px !important;
+}
+
 #tabs-newtab-button,
 #vertical-tabs-newtab-button {
   min-width: 62px !important;
@@ -2257,13 +2261,9 @@ tab-group {
   width: 201px !important;
 }
 
-.tab-icon-image {
+.tab-icon-image, .tab-throbber {
   margin-left: -9px !important;
   margin-right: 7.5px !important;
-}
-
-.tab-icon-overlay {
-  margin-left: -9px !important;
 }
 
 .tab-label-container,
