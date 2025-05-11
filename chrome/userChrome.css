@@ -18,6 +18,7 @@
   --in-content-primary-button-background-hover: light-dark(#227cfb, #2566e1) !important;
   --in-content-primary-button-background-active: light-dark(#1c66e8, #225cca) !important;
   --in-content-primary-button-text-color: #fff !important;
+  --devtools-splitter-color: transparent !important;
   --button-text-color-primary: #fff !important;
   --button-primary-color: #fff !important;
   --color-accent-primary: light-dark(#2b87fb, #3078ef) !important;
@@ -78,52 +79,19 @@
 }
 
 :root:not([inDOMFullscreen]) {
+#tabbrowser-tabbox browser {
+  margin: 0 8px 8px;
+  border-radius: 8px;
+  clip-path: circle(100%);
+  box-shadow: 0 1.5px 6px #00000026;
+  background-color: light-dark(#fff, #202020) !important;
+  -moz-window-dragging: no-drag;
+}
+
 #tabbrowser-tabpanels {
   margin-top: 0;
   transition: .25s !important;
   background-color: transparent !important;
-}
-
-.browserStack {
-  clip-path: inset(0 round 8px);
-}
-
-.browserContainer {
-  margin: 0 8px 8px;
-  box-shadow: 0 1.5px 9px light-dark(#00000026, #00000040);
-  background-color: light-dark(#fff, #202020) !important;
-  border-radius: 8px;
-  -moz-window-dragging: no-drag;
-}
-
-:has(.devtools-toolbox-bottom-iframe) {
-.browserStack {
-  clip-path: unset;
-}
-
-.browserContainer {
-  margin: unset;
-  box-shadow: unset;
-  border-radius: unset;
-}
-
-.browserContainer {
-  clip-path: inset(0 round 8px);
-}
-
-.browserSidebarContainer {
-  margin: 0 8px 8px;
-  box-shadow: 0 1.5px 9px light-dark(#00000026, #00000040);
-  border-radius: 8px;
-}
-
-#statuspanel-label {
-  border-bottom-left-radius: 0 !important;
-#statuspanel:not([mirror]) > &:-moz-locale-dir(rtl),
-#statuspanel[mirror] > &:-moz-locale-dir(ltr) {
-  border-bottom-right-radius: 0 !important;
-}
-}
 }
 }
 
@@ -133,7 +101,7 @@
 }
 
 :has(#PersonalToolbar:hover, #sidebar-main:hover) {
-.browserContainer {
+#tabbrowser-tabbox browser {
   -moz-window-dragging: unset;
 }
 }
@@ -1303,23 +1271,18 @@ richlistbox {
 }
 
 #statuspanel-label {
-  background-color: var(--bg4) !important;
-  backdrop-filter: blur(30px) !important;
   border: none !important;
-  border-top: .5px solid light-dark(rgba(0, 0, 0, .15), rgba(235, 235, 235, .2)) !important;
-  border-right: .5px solid light-dark(rgba(0, 0, 0, .15), rgba(235, 235, 235, .2)) !important;
   border-radius: 0 !important;
+  margin: 8px !important;
   border-bottom-left-radius: 8px !important;
 #statuspanel:not([mirror]) > &:-moz-locale-dir(rtl),
 #statuspanel[mirror] > &:-moz-locale-dir(ltr) {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 8px !important;
-  border-left: .5px solid light-dark(rgba(0, 0, 0, .15), rgba(235, 235, 235, .2)) !important;
-  border-right: 0 !important;
 }
 }
 
-.findbar-container {
+.findbar-container, #statuspanel-label {
   background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--bs1) !important;
@@ -1342,7 +1305,7 @@ richlistbox {
   box-shadow: var(--bs2) !important;
 }
 
-.findbar-container {
+.findbar-container, #statuspanel-label {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
   box-shadow: var(--bs2) !important;
@@ -1377,21 +1340,8 @@ richlistbox {
 }
 
 .devtools-toolbox-side-iframe {
-  margin-bottom: 8px !important;
-  box-shadow: 0 1.5px 9px light-dark(#00000026, #00000040);
-  border-radius: 8px;
-  -moz-window-dragging: no-drag;
-  &:first-child { margin-left: 8px !important; }
-  &:last-child { margin-right: 8px !important; }
-}
-
-.devtools-toolbox-bottom-iframe {
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-.devtools-side-splitter {
-  background-color: transparent !important;
+  &:first-child { margin-right: 0 !important; }
+  &:last-child { margin-left: 0 !important; }
 }
 
 findbar {
@@ -2637,7 +2587,7 @@ menupopup, panel[type="arrow"] {
   display: unset;
 }
 
-.findbar-container {
+.findbar-container, #statuspanel-label {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
 }
 
@@ -2714,12 +2664,12 @@ menupopup, panel[type="arrow"] {
 }
 
 #urlbar[breakout][breakout-extend] #urlbar-background,
-.findbar-container, .dialogBox,
+.findbar-container, .dialogBox, #statuspanel-label,
 #PersonalToolbar {
   outline: none !important;
 }
 
-.findbar-container {
+.findbar-container, #statuspanel-label {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(255, 255, 255, .15) !important;
 }
 
