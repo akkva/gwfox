@@ -91,6 +91,7 @@
 .browserContainer {
   margin: 0 8px 8px;
   box-shadow: 0 1.5px 9px light-dark(#00000026, #00000040);
+  background-color: light-dark(#fff, #202020) !important;
   border-radius: 8px;
   -moz-window-dragging: no-drag;
 }
