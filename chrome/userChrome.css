@@ -79,19 +79,38 @@
 }
 
 :root:not([inDOMFullscreen]) {
-#tabbrowser-tabbox browser {
-  margin: 0 8px 8px;
-  border-radius: 8px;
-  clip-path: circle(100%);
-  box-shadow: 0 1.5px 6px #00000026;
+#tabbrowser-tabbox browser:not(.devtools-toolbox-bottom-iframe, .devtools-toolbox-side-iframe) {
+  border-radius: 6px;
+  clip-path: inset(0 round 8px);
   background-color: light-dark(#fff, #202020) !important;
   -moz-window-dragging: no-drag;
+}
+
+.browserStack {
+  border-radius: 8px;
+  margin: 0 8px 8px;
+  box-shadow: 0 1.5px 9px light-dark(#00000026, #00000040);
 }
 
 #tabbrowser-tabpanels {
   margin-top: 0;
   transition: .25s !important;
   background-color: transparent !important;
+}
+
+.devtools-toolbox-side-iframe {
+  border-radius: 8px;
+  margin-bottom: 8px !important;
+  box-shadow: 0 1.5px 9px light-dark(#00000026, #00000040);
+  -moz-window-dragging: no-drag;
+  &:first-child { margin-left: 8px !important; }
+  &:last-child { margin-right: 8px !important; }
+}
+
+.devtools-toolbox-bottom-iframe {
+  border-radius: 8px;
+  margin: 0 8px 8px 8px !important;
+  box-shadow: 0 1.5px 9px light-dark(#00000026, #00000040);
 }
 }
 
@@ -1273,7 +1292,6 @@ richlistbox {
 #statuspanel-label {
   border: none !important;
   border-radius: 0 !important;
-  margin: 8px !important;
   border-bottom-left-radius: 8px !important;
 #statuspanel:not([mirror]) > &:-moz-locale-dir(rtl),
 #statuspanel[mirror] > &:-moz-locale-dir(ltr) {
@@ -1337,11 +1355,6 @@ richlistbox {
   fill: #1280fd !important;
 }
 }
-}
-
-.devtools-toolbox-side-iframe {
-  &:first-child { margin-right: 0 !important; }
-  &:last-child { margin-left: 0 !important; }
 }
 
 findbar {
