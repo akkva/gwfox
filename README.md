@@ -1,4 +1,8 @@
-<img width="1000" alt="01" src="https://github.com/user-attachments/assets/5cdbce96-f7cf-4fb0-b198-aa6041e39685" />
+<picture>
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/819d3b82-f56e-4d52-8f8c-b68bd599c73a">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/2dffdcdf-a123-4a23-b8b6-9c7beb7439fa">
+<img width="1270" alt="01">
+</picture>
 
 - 本主题适用Firefox 138+ `Mac` `Win` *
 
