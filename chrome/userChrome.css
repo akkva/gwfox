@@ -291,6 +291,16 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   height: 22px !important;
 }
 
+#urlbar-searchmode-switcher {
+  background-color: transparent !important;
+}
+
+#searchmode-switcher-dropmarker,
+#searchmode-switcher-close,
+#searchmode-switcher-title {
+  display: none !important;
+}
+
 #urlbar-background {
   height: 30px !important;
   border: none !important;
