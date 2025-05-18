@@ -774,6 +774,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   border: none !important;
   box-shadow: none !important;
   border-radius: 6px !important;
+#tabbrowser-tabs[movingtab-createGroup] & {
+  outline: none !important;
+&[dragover-createGroup] {
+  background-color: color-mix(in srgb, var(--dragover-tab-group-color) 38%, transparent) !important;
+}
+}
 }
 
 .tabbrowser-tab .tab-close-button {
