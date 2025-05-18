@@ -230,7 +230,6 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 .context-menu {
   border-radius: 6px !important;
   padding: 6px !important;
-  margin-top: -20px !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
 @media (-moz-platform: windows) {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
@@ -481,7 +480,6 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 }
 
 .context-menu-button.icon {
-  margin: -15px 5px 0 0 !important;
   border-radius: 50px !important;
   box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
 }
