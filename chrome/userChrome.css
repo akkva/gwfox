@@ -413,7 +413,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-inline-start: 10px !important;
 }
 
-#tracking-protection-icon-container {
+#urlbar-searchmode-switcher,
+#tracking-protection-icon-container,
+#identity-box[pageproxystate="valid"]:is(.localResource, .chromeUI, .extensionPage) {
   margin-inline-start: 15px !important;
 }
 
