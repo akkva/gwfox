@@ -2514,7 +2514,26 @@ tab-group {
   margin-right: 62px !important;
 }
 
+:has(#urlbar[breakout][breakout-extend], [usertyping]) {
+#back-button::before {
+  content: "";
+  position: fixed;
+  top: 45px;
+  left: 10px;
+  width: 201px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--button-active-bgcolor);
+}
+}
+
 :has(#tabbrowser-tabs:not([expanded])) {
+:has(#urlbar[breakout][breakout-extend], [usertyping]) {
+#back-button::before {
+  width: 62px;
+}
+}
+
 #sidebar-button {
   margin-left: -52px !important;
   margin-right: 22px !important;
