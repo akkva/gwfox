@@ -415,7 +415,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #urlbar-searchmode-switcher,
 #tracking-protection-icon-container,
-#identity-box[pageproxystate="valid"]:is(.localResource, .chromeUI, .extensionPage) {
+#identity-box[pageproxystate="valid"]:is(.localResource, .notSecureText, .chromeUI, .extensionPage) {
   margin-inline-start: 15px !important;
 }
 
@@ -1700,6 +1700,7 @@ input:focus {
   cursor: default !important;
 }
 
+.actions-list,
 .tools-and-extensions {
   -moz-window-dragging: no-drag;
 &:-moz-window-inactive {
