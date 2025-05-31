@@ -408,6 +408,18 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #urlbar-search-mode-indicator {
   margin-top: 13px !important;
 }
+
+#identity-box[pageproxystate="invalid"] #identity-icon {
+  margin-inline-start: 10px !important;
+}
+
+#tracking-protection-icon-container {
+  margin-inline-start: 15px !important;
+}
+
+#star-button-box {
+  margin-inline-end: 15px !important;
+}
 }
 
 #urlbar[breakout][breakout-extend] #urlbar-background {
@@ -1739,13 +1751,19 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
   top: 14.5px;
 }
 
-.titlebar-buttonbox::before {
+.titlebar-buttonbox {
+&::before {
   content: "";
   position: absolute;
   top: -8px;
   left: -16px;
   width: 82px;
   height: 200%;
+}
+
+&::after {
+  content: "";
+}
 }
 
 #tab-notification-deck {
@@ -1807,15 +1825,29 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 }
 
+:has(#urlbar[breakout][breakout-extend], [usertyping]) {
+.titlebar-buttonbox::after {
+  position: fixed;
+  top: 45px;
+  left: 10px;
+  width: 201px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--button-active-bgcolor);
+}
+
+#urlbar::before {
+  content: "";
+  position: fixed;
+  top: 37px;
+  left: 0;
+}
+}
+
 :has(#sidebar-main:not([hidden])) {
 :has(#urlbar[usertyping]) {
 #urlbar {
   left: 25vw !important;
-}
-
-#sidebar-main {
-  margin-top: -14px !important;
-  transition: margin-top .25s !important;
 }
 }
 }
@@ -2174,6 +2206,12 @@ tab-group {
 }
 }
 
+:has(#urlbar[breakout][breakout-extend], [usertyping]) {
+.titlebar-buttonbox::after {
+  width: 62px;
+}
+}
+
 :has(.titlebar-buttonbox:hover, #urlbar:hover) {
 #tabbrowser-tabpanels {
   margin-top: -45.5px;
@@ -2357,11 +2395,6 @@ tab-group {
 
 :has(#sidebar-main:not([hidden])) {
 :has(#urlbar[breakout][breakout-extend]) {
-#sidebar-main {
-  margin-top: -14px !important;
-  transition: margin-top .25s !important;
-}
-
 #tabbrowser-tabs {
   margin-left: unset !important;
   transition: unset !important;
