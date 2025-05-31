@@ -1550,12 +1550,6 @@ input:focus {
   transition: none !important;
 }
 
-:has(#urlbar[breakout][breakout-extend], [usertyping]) {
-#tabbrowser-tabs:not([haspinnedtabs]) {
-  margin-top: -7.5px !important;
-}
-}
-
 .tabbrowser-tab[pinned] .tab-icon-image {
   margin-left: 6px;
 }
@@ -2240,6 +2234,12 @@ tab-group {
 }
 }
 
+:has(#urlbar[breakout][breakout-extend], [usertyping]) {
+.titlebar-buttonbox::after {
+  width: 201px;
+}
+}
+
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   width: 221px !important;
 
@@ -2543,6 +2543,16 @@ tab-group {
 :has(#sidebar-main[hidden]) {
 #nav-bar {
   padding-left: 55px !important;
+}
+}
+
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+:has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open]) {
+:has(#urlbar[breakout][breakout-extend], [usertyping]) {
+#back-button::before {
+  width: 201px;
+}
+}
 }
 }
 }
