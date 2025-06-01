@@ -2184,6 +2184,7 @@ tab-group {
 }
 }
 
+:has(#sidebar-main:not([hidden])) {
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   width: 62px !important;
 
@@ -2202,6 +2203,7 @@ tab-group {
   display: none !important;
 }
 }
+}
 
 :has(#urlbar[breakout][breakout-extend], [usertyping]) {
 .titlebar-buttonbox::after {
@@ -2216,7 +2218,7 @@ tab-group {
 }
 
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
-:has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open]) {
+:has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #tab-group-name:focus) {
 :has(#tabbrowser-tabs:not([expanded])) {
 --display: block;
 }
@@ -2416,11 +2418,171 @@ tab-group {
 
 #tabbrowser-tabs {
   margin-top: 40px !important;
+
+tab-group > :is(.tab-group-label-container, .tabbrowser-tab),
+&[movingtab][movingtab-addToGroup]:not([movingtab-createGroup],[movingtab-ungroup]) .tabbrowser-tab:is(:active,[multiselected]) {
+  margin-inline-start: var(--space-medium) !important;
+}
+}
+
+tab-group {
+.tab-background {
+  width: 192px !important;
+}
+
+.tab-group-line {
+#tabbrowser-tabs & {
+  inset-inline-start: -9px !important;
+}
+}
+
+.tab-group-label {
+  margin-left: unset !important;
+  padding-left: 15px !important;
+#tabbrowser-tabs:not([expanded]) & {
+  width: unset !important;
+  min-height: unset !important;
+  max-width: unset !important;
+  align-self: start !important;
+  line-height: var(--tab-group-label-height) !important;
+  margin-inline-end: var(--space-medium) !important;
+  padding-block: var(--tab-group-label-padding) !important;
+&::first-letter {
+  font: unset !important;
+  line-height: unset !important;
+}
+}
+}
+}
+
+#tabbrowser-tabs,
+#tabs-newtab-button,
+#vertical-tabs-newtab-button {
+  width: 221px !important;
+}
+
+#tabs-newtab-button,
+#vertical-tabs-newtab-button {
+  margin-left: 9px !important;
+}
+
+#tabbrowser-tabs .toolbarbutton-text {
+  margin-left: 2px !important;
+}
+
+#vertical-pinned-tabs-container {
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+
+.tab-background {
+  width: calc(100% - 10px) !important;
+}
+
+.tabbrowser-tab {
+  margin-left: -5px !important;
+  margin-right: -6px !important;
+}
+
+.tab-label-container {
+  display: none !important;
+}
+
+.tab-content {
+  justify-content: center !important;
+  margin-left: 7px !important;
+}
+
+.tab-icon-overlay {
+  margin-left: -15px;
+}
+}
+
+#vertical-pinned-tabs-container-separator {
+  display: none !important;
+}
+
+.tabbrowser-tab[pinned] {
+  width: unset !important;
+}
+
+.tab-background {
+  width: 201px !important;
+}
+
+.tab-icon-image, .tab-throbber {
+  margin-left: -9px !important;
+  margin-right: 7.5px !important;
+}
+
+.tab-label-container,
+#tabbrowser-tabs .toolbarbutton-text {
+  display: block !important;
+}
+
+.tab-icon-overlay {
+  display: none !important;
+}
+
+.tab-audio-button:is([soundplaying], [muted], [activemedia-blocked]) {
+  display: block !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-context-properties: fill, fill-opacity;
+  fill: currentColor;
+  fill-opacity: .6;
+&[soundplaying] {
+  background-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg");
+}
+&[muted] {
+  background-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg");
+}
+&[activemedia-blocked] {
+  background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg");
+}
+}
+
+.tab-close-button {
+  -moz-context-properties: fill, fill-opacity !important;
+  margin-inline-end: calc(var(--tab-inline-padding) / -2) !important;
+  width: 24px !important;
+  height: 24px !important;
+  top: 6px !important;
+  left: 3px !important;
+  box-sizing: border-box !important;
+  padding: var(--tab-close-button-padding) !important;
+  border-radius: var(--tab-border-radius) !important;
+  list-style-image: url(chrome://global/skin/icons/close-12.svg) !important;
+  box-shadow: unset !important;
+  background-image: linear-gradient(var(--close-button-extra-background)) !important;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-icon-image {
+  opacity: 0;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-label-container {
+  margin-left: 1px;
+}
+
+.tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
+  margin-left: 1px;
+}
+
+.tabbrowser-tab:hover:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
+  margin-left: 1px;
+}
+
+.tabbrowser-tab[pinned] .tab-audio-button {
+  display: none !important;
+}
+
+.tabbrowser-tab[pinned] .tab-icon-overlay {
+  display: flex !important;
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   top: 15px !important;
-  left: -80px !important;
+  left: -225px !important;
   opacity: 0;
   transition: left .25s !important;
 }
@@ -2429,18 +2591,20 @@ tab-group {
   content: none;
 }
 
+#toolbar-context-customize-sidebar {
+  display: none !important;
+}
+
 #sidebar-main {
-  width: 82px;
   height: calc(100% - 16px) !important;
   display: flex !important;
   position: fixed;
   top: -17.5px;
-  left: -80px;
+  left: -225px;
   opacity: 0;
   transition: .25s;
   z-index: 9;
-  border-top-left-radius: 8px !important;
-  border-bottom-left-radius: 8px !important;
+  border-radius: 8px !important;
   background-color: var(--bg4);
   backdrop-filter: blur(30px);
   box-shadow: var(--bs1);
@@ -2470,7 +2634,11 @@ tab-group {
 }
 }
 
-:has(#sidebar-main:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], .tab-throbber[busy], #tab-group-name:focus) {
+:has(#tabbrowser-tabs:not([expanded])) {
+--display: none;
+}
+
+:has(#sidebar-main:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], .tab-throbber[busy], #tab-group-name:focus) {
 #sidebar-main {
   left: 8px;
   opacity: 1;
