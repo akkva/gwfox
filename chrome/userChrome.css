@@ -994,13 +994,11 @@ tab .tab-label {
 }
 
 .tab-group-label {
-  color: #fff !important;
+  color: light-dark(var(--tab-group-color), var(--tab-group-color-invert)) !important;
   outline: none !important;
   min-width: 5px !important;
   font-weight: normal !important;
-tab-group[collapsed] > .tab-group-label-container > & {
-  background-color: light-dark(var(--tab-group-color-invert), var(--tab-group-color)) !important;
-}
+  background-color: color-mix(in srgb, light-dark(var(--tab-group-color), var(--tab-group-color-invert)) 30%, transparent) !important;
 }
 
 .tab-group-label-container {
@@ -1014,6 +1012,7 @@ tab-group:not([collapsed]) > &::after {
   border-radius: 50px !important;
   width: 5px !important;
   height: 5px !important;
+  background-color: color-mix(in srgb, light-dark(var(--tab-group-color), var(--tab-group-color-invert)) 60%, transparent) !important;
 }
 }
 
@@ -1950,6 +1949,8 @@ tab-group {
 }
 
 .tab-group-line {
+  background-color: color-mix(in srgb, light-dark(var(--tab-group-color), var(--tab-group-color-invert)) 60%, transparent) !important;
+  
 #tabbrowser-tabs & {
   width: 1.5px !important;
 
