@@ -829,6 +829,10 @@ tab .tab-label {
   margin-inline-start: 0 !important;
 }
 
+#pinned-tabs-container[orient="horizontal"] {
+  margin-inline-end: 0 !important;
+}
+
 #tabbrowser-tabs[movingtab] {
   margin-bottom: -16px !important;
 }
@@ -2589,7 +2593,8 @@ tab-group {
   margin-left: 2px !important;
 }
 
-#vertical-pinned-tabs-container {
+#vertical-pinned-tabs-container,
+#pinned-tabs-container[orient="vertical"] {
   margin-left: 5px !important;
   margin-right: 5px !important;
 
@@ -2616,6 +2621,7 @@ tab-group {
 }
 }
 
+#vertical-pinned-tabs-splitter,
 #vertical-pinned-tabs-container-separator {
   display: none !important;
 }
@@ -2670,7 +2676,7 @@ tab-group {
   box-sizing: border-box !important;
   padding: var(--tab-close-button-padding) !important;
   border-radius: var(--tab-border-radius) !important;
-  list-style-image: url(chrome://global/skin/icons/close-12.svg) !important;
+  list-style-image: url(chrome://global/skin/icons/close-12.svg), url(resource://content-accessible/close-12.svg) !important;
   box-shadow: unset !important;
   background-image: linear-gradient(var(--close-button-extra-background)) !important;
 }
