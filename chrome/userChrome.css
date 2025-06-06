@@ -1462,7 +1462,7 @@ findbar::after {
   box-shadow: none !important;
 }
 
-#search-box, xul|search-textbox {
+xul|search-textbox {
   appearance: none !important;
   border-bottom: 1px solid rgba(185, 185, 185, .1) !important;
   border-radius: 6px !important;
@@ -1472,15 +1472,30 @@ findbar::after {
   background-color: light-dark(rgba(102, 105, 108, .1), rgba(165, 165, 165, .1)) !important;
 }
 
-#search-box[focused], xul|search-textbox[focused] {
+xul|search-textbox[focused] {
   outline: 3px solid var(--outline-color) !important;
   outline-offset: -1px;
   transition: outline 100ms ease-out;
 }
 
+input[type="search"] {
+  border: none !important;
+  border-bottom: 1px solid rgba(185, 185, 185, .1) !important;
+  border-radius: 6px !important;
+  height: 28px !important;
+  max-height: 28px !important;
+  background-color: light-dark(rgba(102, 105, 108, .1), rgba(165, 165, 165, .1)) !important;
+}
+
+#searchbar input[type="search"] {
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
 #searchbar, 
-#search-box,
 xul|search-textbox,
+input[type="search"],
 [type="text"] {
   outline-style: solid !important;
   outline-color: transparent !important;
@@ -1488,8 +1503,8 @@ xul|search-textbox,
 }
 
 #searchbar:focus-within,
-#search-box[focused],
 xul|search-textbox[focused],
+input[type="search"]:focus-within,
 [type="text"]:focus-visible {
   outline-color: var(--outline-color) !important;
   outline-width: 3px !important;
@@ -1499,20 +1514,9 @@ xul|search-textbox[focused],
 
 @-moz-document url("chrome://browser/content/sidebar/sidebar-history.html"), url("chrome://browser/content/sidebar/sidebar-syncedtabs.html") {
 input {
-  border: none !important;
-  border-bottom: 1px solid rgba(185, 185, 185, .1) !important;
-  outline-style: solid !important;
-  outline-color: transparent !important;
-  outline-width: 18px !important;
-  background-color: light-dark(rgba(102, 105, 108, .1), rgba(165, 165, 165, .1)) !important;
-}
-
-input:focus {
-  outline-color: var(--outline-color) !important;
-  outline-width: 3px !important;
-  outline-offset: -1px !important;
-  transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
-}  
+  appearance: none !important;
+  min-height: 32px !important;
+} 
 }
 
 @-moz-document url("chrome://browser/content/sidebar/sidebar-customize.html") {
