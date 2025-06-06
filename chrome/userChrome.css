@@ -1925,35 +1925,36 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 
 .tab-group-label {
+  display: flex !important;
+  align-items: center;
   font-weight: normal !important;
   font-size: 13px !important;
-  color: inherit !important;
-  opacity: .6;
+  color: light-dark(var(--tab-group-color), var(--tab-group-color-invert)) !important;
+  opacity: .7;
   outline: none !important;
-  min-width: 0 !important;
-  margin-top: -5px !important;
-  margin-bottom: -5px !important;
-  padding-left: 15px !important;
-  background-color: transparent !important;
+  min-height: var(--tab-min-height) !important;
+  margin-block: 0 !important;
+  padding-block: 0 !important;
+  margin-left: 1px !important;
+  margin-right: 10px !important;
+  padding-left: 33px !important;
+  border-radius: 8px !important;
+  width: 201px !important;
+  background-color: color-mix(in srgb, light-dark(var(--tab-group-color), var(--tab-group-color-invert)) 30%, transparent) !important;
   background-image: url("chrome://global/skin/icons/arrow-down-12.svg");
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: left 9px bottom 11px;
   -moz-context-properties: fill;
   fill: currentColor;
+
 tab-group[collapsed] > .tab-group-label-container > & {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  background-image: url("chrome://global/skin/icons/arrow-right-12.svg");
-  }
+  background-image: url("chrome://global/skin/icons/folder.svg");
+  background-position: left 9px bottom 7.5px;
 }
 
-tab-group {
-&:not([collapsed])::before {
-  width: 1.5px !important;
-  margin-top: -12px !important;
+&::first-letter {
+  font: unset !important;
 }
-
-* { transition: margin-top .2s; }
 }
 
 .tab-group-line {
@@ -1973,8 +1974,23 @@ tab-group {
 }
 
 .tab-group-label-container {
-#tabbrowser-tabs[orient="vertical"] tab-group:not([collapsed]) > &::after {
+#tabbrowser-tabs & {
+  margin-block-start: 4px !important;
+  margin-block-end: 4px !important;
+tab-group:not([collapsed]) > & {
+  padding-block-end: 0 !important;
+}
+}
+
+#tabbrowser-tabs tab-group:not([collapsed]) > &::after {
   width: 0 !important;
+}
+}
+
+#tabbrowser-tabs {
+tab-group > .tabbrowser-tab,
+&[movingtab][movingtab-addToGroup]:not([movingtab-createGroup],[movingtab-ungroup]) .tabbrowser-tab:is(:active,[multiselected]) {
+  margin-inline-start: 0 !important;
 }
 }
 
@@ -2108,7 +2124,7 @@ tab-group {
 
 .tab-group-line {
 #tabbrowser-tabs & {
-  inset: -3px -8px -2px !important;
+  inset: -3px -9px -2px !important;
 
 .tabbrowser-tab:first-of-type > .tab-stack > .tab-background > & {
   inset-block-start: 2px !important;
@@ -2121,14 +2137,10 @@ tab-group {
 }
 
 .tab-group-label {
-  margin-left: 35px !important;
-  padding-left: 50px !important;
-}
-
-tab-group {
-&:not([collapsed])::before {
-  margin-top: 20px !important;
-}
+  font-size: 0 !important;
+  margin-left: 10px !important;
+  padding-left: 58px !important;
+  background-position: center;
 }
 
 .tabbrowser-tab[pinned],
@@ -2271,38 +2283,26 @@ tab-group {
 }
 
 #tabbrowser-tabs {
-tab-group > :is(.tab-group-label-container, .tabbrowser-tab),
+tab-group > .tabbrowser-tab,
 &[movingtab][movingtab-addToGroup]:not([movingtab-createGroup],[movingtab-ungroup]) .tabbrowser-tab:is(:active,[multiselected]) {
-  margin-inline-start: var(--space-medium) !important;
+  margin-inline-start: 0 !important;
 }
 }
 
 tab-group {
-.tab-background {
-  width: 192px !important;
-}
-
-.tab-group-line {
-#tabbrowser-tabs & {
-  inset-inline-start: -9px !important;
-}
-}
-
 .tab-group-label {
-  margin-left: unset !important;
-  padding-left: 15px !important;
+  font-size: 13px !important;
+  background-position: left 9px bottom 11px;
+
 #tabbrowser-tabs:not([expanded]) & {
-  width: unset !important;
-  min-height: unset !important;
+  width: 201px !important;
+  padding-left: 33px !important;
   max-width: unset !important;
-  align-self: start !important;
-  line-height: var(--tab-group-label-height) !important;
-  margin-inline-end: var(--space-medium) !important;
-  padding-block: var(--tab-group-label-padding) !important;
-&::first-letter {
-  font: unset !important;
-  line-height: unset !important;
+  font-size-adjust: unset !important;
 }
+
+tab-group[collapsed] > .tab-group-label-container > & {
+  background-position: left 9px bottom 7.5px;
 }
 }
 }
@@ -2546,37 +2546,27 @@ tab-group {
   margin-top: 78px !important;
   margin-bottom: 45px !important;
 
-tab-group > :is(.tab-group-label-container, .tabbrowser-tab),
+#tabbrowser-tabs {
+tab-group > .tabbrowser-tab,
 &[movingtab][movingtab-addToGroup]:not([movingtab-createGroup],[movingtab-ungroup]) .tabbrowser-tab:is(:active,[multiselected]) {
-  margin-inline-start: var(--space-medium) !important;
+  margin-inline-start: 0 !important;
 }
 }
 
 tab-group {
-.tab-background {
-  width: 192px !important;
-}
-
-.tab-group-line {
-#tabbrowser-tabs & {
-  inset-inline-start: -9px !important;
-}
-}
-
 .tab-group-label {
-  margin-left: unset !important;
-  padding-left: 15px !important;
+  font-size: 13px !important;
+  background-position: left 9px bottom 11px;
+
 #tabbrowser-tabs:not([expanded]) & {
-  width: unset !important;
-  min-height: unset !important;
+  width: 201px !important;
+  padding-left: 33px !important;
   max-width: unset !important;
-  align-self: start !important;
-  line-height: var(--tab-group-label-height) !important;
-  margin-inline-end: var(--space-medium) !important;
-  padding-block: var(--tab-group-label-padding) !important;
-&::first-letter {
-  font: unset !important;
-  line-height: unset !important;
+  font-size-adjust: unset !important;
+}
+
+tab-group[collapsed] > .tab-group-label-container > & {
+  background-position: left 9px bottom 7.5px;
 }
 }
 }
