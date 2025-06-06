@@ -31,3 +31,5 @@
   - `widget.macos.native-context-menus` (可选项)
 
 - 重启火狐
+<img width="1495" alt="p1" src="https://github.com/user-attachments/assets/d7699474-d17b-4560-a9d6-9e1ecaac0ba5" />
+<img width="1495" alt="p2" src="https://github.com/user-attachments/assets/90f88774-2886-4a02-aae8-6814f3199adb" />
