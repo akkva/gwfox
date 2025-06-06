@@ -1,7 +1,7 @@
 <picture>
-<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/819d3b82-f56e-4d52-8f8c-b68bd599c73a">
-<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/2dffdcdf-a123-4a23-b8b6-9c7beb7439fa">
-<img width="1270" alt="01">
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/d806bc92-9a86-49ec-8df6-71450e620340">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/6ce670cb-3031-41be-bf3e-8ae7afe50b63">
+<img width="1495" alt="01">
 </picture>
 
 - 本主题适用Firefox 138+ `Mac` `Win` *
