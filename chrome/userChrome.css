@@ -317,6 +317,15 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 .devtools-toolbox-bottom-iframe {
   margin-left: 0 !important;
 }
+
+#sidebar-box {
+&:not([sidebar-positionend]) {
+&[sidebar-panel-open] {
+  margin-inline-end: 2px !important;
+  margin-bottom: 2px !important;
+}
+}
+}
 }
 }
 
