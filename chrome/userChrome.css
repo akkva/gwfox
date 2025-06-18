@@ -1782,19 +1782,15 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
 
 :has(#sidebar-main:not([hidden])) {
 #PersonalToolbar {
-  margin-left: 57.5px !important;
-  width: calc(100% - 65.5px);
+  margin-left: 49.5px !important;
+  width: calc(100% - 57.5px);
 }
 }
 
 :has(#sidebar-box:not([hidden])) {
 #PersonalToolbar {
-  margin-left: 329.5px !important;
-  width: calc(100% - 337.5px);
-}
-
-#sidebar-box {
-  margin-right: -8px !important;
+  margin-left: 330.5px !important;
+  width: calc(100% - 338.5px);
 }
 }
 
@@ -2071,7 +2067,7 @@ tab-group > .tabbrowser-tab,
 }
 
 #sidebar-box {
-  margin-right: -8px !important;
+  margin-right: -6px !important;
 }
 }
 
