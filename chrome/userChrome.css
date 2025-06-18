@@ -1789,15 +1789,15 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
 
 :has(#sidebar-box:not([hidden])) {
 #PersonalToolbar {
-  margin-left: 330.5px !important;
-  width: calc(100% - 338.5px);
+  margin-left: 331px !important;
+  width: calc(100% - 339px);
 }
 }
 
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
 #PersonalToolbar {
-  margin-left: 449px !important;
-  width: calc(100% - 457px);
+  margin-left: 451px !important;
+  width: calc(100% - 459px);
 }
 }
 }
@@ -2062,8 +2062,8 @@ tab-group > .tabbrowser-tab,
 
 :has(#sidebar-box:not([hidden])) {
 #PersonalToolbar {
-  margin-left: 499px !important;
-  width: calc(100% - 507px);
+  margin-left: 501px !important;
+  width: calc(100% - 509px);
 }
 
 #sidebar-box {
@@ -2073,8 +2073,8 @@ tab-group > .tabbrowser-tab,
 
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
 #PersonalToolbar {
-  margin-left: 619px !important;
-  width: calc(100% - 627px);
+  margin-left: 621px !important;
+  width: calc(100% - 629px);
 }
 }
 
