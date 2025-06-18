@@ -303,6 +303,21 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   background: var(--button-active-bgcolor);
 }
 }
+
+:has(#sidebar-main:not([hidden])) {
+.browserStack {
+  margin-left: 0;
+}
+
+.devtools-toolbox-side-iframe:first-child {
+  margin-left: 0 !important;
+  margin-right: 8px !important;
+}
+
+.devtools-toolbox-bottom-iframe {
+  margin-left: 0 !important;
+}
+}
 }
 
 /* urlbar */
