@@ -2400,8 +2400,8 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   margin-left: 81px !important;
   width: calc(100% - 89px);
 @media (-moz-platform: windows) {
-  margin-left: 82px !important;
-  width: calc(100% - 90px);
+  margin-left: 81.5px !important;
+  width: calc(100% - 89.5px);
 }
 }
 }
@@ -2419,8 +2419,8 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   margin-left: 363px !important;
   width: calc(100% - 371px);
 @media (-moz-platform: windows) {
-  margin-left: 364px !important;
-  width: calc(100% - 372px);
+  margin-left: 363.5px !important;
+  width: calc(100% - 371.5px);
 }
 }
 }
@@ -2434,8 +2434,8 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   margin-left: 483px !important;
   width: calc(100% - 491px);
 @media (-moz-platform: windows) {
-  margin-left: 484px !important;
-  width: calc(100% - 492px);
+  margin-left: 483.5px !important;
+  width: calc(100% - 491.5px);
 }
 }
 }
