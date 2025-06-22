@@ -1963,6 +1963,9 @@ tab-group > .tabbrowser-tab,
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
   margin-left: 81px !important;
+@media (-moz-platform: windows) {
+  margin-left: 81.5px !important;
+}
 }
 
 #vertical-pinned-tabs-container {
