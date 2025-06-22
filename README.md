@@ -4,6 +4,7 @@
 <img width="1495" alt="01">
 </picture>
 <br><br>
+
 - 本主题适用Firefox 138+ `Mac` `Win` *
 
 ## 使用方法
