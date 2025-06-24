@@ -282,6 +282,7 @@ toolbarspring {
 
 #unified-extensions-button {
   position: fixed;
+  display: flex !important;
   inset-inline-end: 43px;
 @media (-moz-platform: windows) {
 @media not -moz-pref("gwfox.plus") {
