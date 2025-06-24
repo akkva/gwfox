@@ -184,13 +184,6 @@
 }
 
 :root[customizing] {
-#urlbar {
-  top: -3px !important;
-@media -moz-pref("sidebar.verticalTabs") {
-  top: 0px !important;
-}
-}
-
 #PersonalToolbar {
   outline: 1px dashed var(--button-active-bgcolor) !important;
 }
@@ -3258,6 +3251,10 @@ tab-group[collapsed] > .tab-group-label-container > & {
 :root[customizing] {
 #urlbar {
   visibility: hidden;
+}
+
+#nav-bar [id^=wrapper-customizableui-special-spring] {
+  display: none !important;
 }
 }
 }
