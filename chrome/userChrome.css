@@ -1181,11 +1181,13 @@ toolbarseparator[orient="vertical"] {
 }
 
 .dialogBox {
-  margin-top: 80px !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--bs1) !important;
   animation-name: panel-grow;
   animation-duration: 250ms;
+#window-modal-dialog > .dialogOverlay > &:not(.spotlightBox) {
+  margin-top: 80px !important;
+}
 }
 
 #window-modal-dialog::backdrop {
