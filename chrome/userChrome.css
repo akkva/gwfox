@@ -3291,6 +3291,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 
 .titlebar-close {
+  -moz-default-appearance: unset !important;
   order: -1;
   content: url("resources/titlebar-close.svg") !important;
 .titlebar-buttonbox:hover & {
@@ -3305,6 +3306,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 
 .titlebar-min {
+  -moz-default-appearance: unset !important;
   content: url("resources/titlebar-min.svg") !important;
 .titlebar-buttonbox:hover & {
   content: url("resources/titlebar-min-hover.svg") !important;
@@ -3331,6 +3333,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 
 .titlebar-restore {
+  -moz-default-appearance: unset !important;
   content: url("resources/titlebar-max.svg") !important;
 .titlebar-buttonbox:hover & {
   content: url("resources/titlebar-restore-hover.svg") !important;
