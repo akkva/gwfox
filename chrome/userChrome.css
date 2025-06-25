@@ -504,6 +504,9 @@ toolbarspring {
   margin-top: 6.5px !important;
   border-radius: 6px;
   background: var(--button-active-bgcolor);
+@media (-moz-platform: windows) {
+  background: light-dark(rgba(120, 120, 120, .1), rgba(155, 155, 155, .2));
+}
 }
 }
 
@@ -2223,6 +2226,9 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   border-radius: 8px;
   background: var(--button-active-bgcolor);
   pointer-events: none;
+@media (-moz-platform: windows) {
+  background: light-dark(rgba(120, 120, 120, .1), rgba(155, 155, 155, .2));
+}
 }
 
 #urlbar::before {
@@ -2230,6 +2236,10 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   position: fixed;
   top: 37px;
   left: 0;
+}
+
+#urlbar-container {
+  background: transparent;
 }
 }
 
@@ -3217,6 +3227,9 @@ tab-group[collapsed] > .tab-group-label-container > & {
   height: 32px;
   border-radius: 8px;
   background: var(--button-active-bgcolor);
+@media (-moz-platform: windows) {
+  background: light-dark(rgba(120, 120, 120, .1), rgba(155, 155, 155, .2));
+}
 }
 }
 
