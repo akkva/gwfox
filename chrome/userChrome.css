@@ -3351,31 +3351,8 @@ tab-group[collapsed] > .tab-group-label-container > & {
 
 .titlebar-buttonbox {
 &::before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  left: -16px;
-  width: 82px;
-  height: 15px;
+  z-index: -1;
 }
-
-&::after {
-  content: "";
-  position: absolute;
-  top: -15px;
-  left: -16px;
-  width: 82px;
-  height: 15px;
-}
-}
-
-.titlebar-close::before {
-  content: "";
-  position: absolute;
-  top: -15px;
-  left: -15px;
-  width: 15px;
-  height: 30px;
 }
 }
 }
