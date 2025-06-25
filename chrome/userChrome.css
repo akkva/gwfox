@@ -1799,6 +1799,12 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 }
 
+#vertical-pinned-tabs-splitter {
+&:hover {
+  background-color: var(--outline-color) !important;
+}
+}
+
 .tab-background {
   border-radius: 8px !important;
 }
@@ -2933,9 +2939,8 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 
-#vertical-pinned-tabs-splitter,
-#vertical-pinned-tabs-container-separator {
-  display: none !important;
+#vertical-pinned-tabs-splitter {
+  border-top: none !important;
 }
 
 .tabbrowser-tab[pinned] {
