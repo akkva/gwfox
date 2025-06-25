@@ -2218,6 +2218,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   height: 32px;
   border-radius: 8px;
   background: var(--button-active-bgcolor);
+  pointer-events: none;
 }
 
 #urlbar::before {
@@ -2840,7 +2841,8 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 
 #downloads-button,
-#nav-bar-overflow-button {
+#nav-bar-overflow-button,
+#unified-extensions-button {
   display: flex !important;
 }
 
