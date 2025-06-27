@@ -1258,8 +1258,14 @@ menupopup,
 
 :root:not([chromehidden~="toolbar"]):has(#sidebar-main[hidden]) #sidebar-main,
 window[role="dialog"], .findbar-container, #statuspanel-label,
-#urlbar:is([breakout][breakout-extend], [usertyping]) #urlbar-background {
+#urlbar[breakout][breakout-extend] #urlbar-background {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+}
+
+:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
+#urlbar-background {
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+}
 }
 }
 
