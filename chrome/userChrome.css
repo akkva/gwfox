@@ -318,8 +318,14 @@ toolbarspring {
   height: 22px !important;
 }
 
+.urlbar-revert-button,
 #urlbar-searchmode-switcher {
+  height: 28px !important;
+  width: 28px !important;
+  border-radius: 6px !important;
+&:not(:hover, [open]) {
   background-color: transparent !important;
+}
 }
 
 #searchmode-switcher-dropmarker,
@@ -451,7 +457,7 @@ toolbarspring {
 }
 }
 
-:has(#urlbar[usertyping]) {
+:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
 #urlbar {
   position: fixed !important;
   top: 20vh !important;
@@ -468,8 +474,16 @@ toolbarspring {
   height: 50px !important;
 }
 
+:has(#urlbar[breakout][breakout-extend]) {
+#urlbar-background {
+  height: unset !important;
+}
+}
+
 .urlbar-input-container {
   height: 50px !important;
+  padding-inline-start: 15px !important;
+  padding-inline-end: 15px !important;
 & > :is(box, image) {
   margin-top: 10px !important;
 }
@@ -483,17 +497,12 @@ toolbarspring {
   box-shadow: var(--bs1) !important;
 }
 
-.urlbar-revert-button {
-  margin-top: 10px !important;
-  margin-right: 5px !important;
-}
-
 #urlbar-search-mode-indicator {
   margin-top: 13px !important;
 }
 
-#tabbrowser-tabs[orient="horizontal"] {
-  margin-top: 0 !important;
+#urlbar-searchmode-switcher {
+  margin-top: 10px !important;
 }
 }
 
@@ -504,6 +513,19 @@ toolbarspring {
   margin-top: 6.5px !important;
   border-radius: 6px;
   background: var(--button-active-bgcolor);
+}
+
+:has(#urlbar[persistsearchterms]) {
+#urlbar-container {
+  background: none;
+}
+}
+}
+
+:has(#urlbar[breakout][breakout-extend]) {
+.urlbar-revert-button,
+#urlbar-searchmode-switcher {
+  margin-top: 10px !important;
 }
 }
 
@@ -1890,7 +1912,7 @@ tab-group > .tabbrowser-tab,
   left: 25vw !important;
 }
 
-:has(#urlbar[usertyping]) {
+:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
 #urlbar {
   left: 25vw !important;
 }
@@ -1938,7 +1960,7 @@ tab-group > .tabbrowser-tab,
   left: 20vw !important;
 }
 
-:has(#urlbar[usertyping]) {
+:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
 #urlbar {
   left: 20vw !important;
 }
@@ -2221,6 +2243,11 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 }
 
+.urlbar-revert-button,
+#urlbar-searchmode-switcher {
+  margin-top: 1px !important;
+}
+
 :has(#urlbar[breakout][breakout-extend], [usertyping]) {
 .titlebar-buttonbox::after {
   position: fixed;
@@ -2233,6 +2260,12 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   pointer-events: none;
 @media (-moz-platform: windows) {
   background: light-dark(rgba(120, 120, 120, .1), rgba(155, 155, 155, .2));
+}
+}
+
+:has(#urlbar[persistsearchterms]) {
+.titlebar-buttonbox::after {
+  background: none;
 }
 }
 
@@ -2249,7 +2282,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 
 :has(#sidebar-main:not([hidden])) {
-:has(#urlbar[usertyping]) {
+:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
 #urlbar {
   left: 25vw !important;
 }
@@ -2518,6 +2551,20 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   width: 82px;
 }
 
+#urlbar:not([breakout][breakout-extend])[persistsearchterms] {
+  width: 62px !important;
+
+#urlbar-searchmode-switcher {
+  margin-left: 16px !important;
+  margin-right: 16px !important;
+}
+}
+
+#urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher {
+  margin-left: 16px !important;
+  margin-right: 16px !important;
+}
+
 :has(#sidebar-main:not([hidden])) {
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   width: 62px !important;
@@ -2706,7 +2753,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
   left: 25vw !important;
 }
 
-:has(#urlbar[usertyping]) {
+:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
 #urlbar {
   left: 25vw !important;
 }
@@ -3040,6 +3087,23 @@ tab-group[collapsed] > .tab-group-label-container > & {
   width: 218px;
 }
 
+#urlbar:not([breakout][breakout-extend])[persistsearchterms] {
+  width: 220px !important;
+  position: fixed;
+  top: 55px !important;
+  left: -258px !important;
+  opacity: 0;
+#urlbar-searchmode-switcher {
+  margin-left: unset !important;
+  margin-right: unset !important;
+}
+}
+
+#urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher {
+  margin-left: unset !important;
+  margin-right: 7px !important;
+}
+
 #toolbar-context-customize-sidebar {
   display: none !important;
 }
@@ -3121,7 +3185,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 --display: none;
 }
 
-:has(#sidebar-main:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], .tab-throbber[busy], #tab-group-name:focus, .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open]) {
+:has(#sidebar-main:hover, #urlbar:not([breakout][breakout-extend])[persistsearchterms]:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], .tab-throbber[busy], #tab-group-name:focus, .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open]) {
 .titlebar-buttonbox-container {
   left: 7px;
   opacity: 1;
@@ -3181,6 +3245,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
   transition: .25s;
 }
 
+#urlbar:not([breakout][breakout-extend])[persistsearchterms],
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   left: 18px !important;
   opacity: 1;
@@ -3233,6 +3298,12 @@ tab-group[collapsed] > .tab-group-label-container > & {
   background: var(--button-active-bgcolor);
 @media (-moz-platform: windows) {
   background: light-dark(rgba(120, 120, 120, .1), rgba(155, 155, 155, .2));
+}
+}
+
+:has(#urlbar[persistsearchterms]) {
+#back-button::before {
+  background: none;
 }
 }
 }
