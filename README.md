@@ -22,9 +22,7 @@
   - `widget.windows.mica.toplevel-backdrop` 设为 `2` *
  
 - 以下布尔值切换为 `false`
- 
-  - `browser.urlbar.scotchBonnet.enableOverride`
- 
+  
   - `sidebar.animation.enabled`
  
   - `widget.macos.native-context-menus` (可选项)
@@ -36,5 +34,3 @@
 - 书签工具栏隐藏至底部，地址栏置于侧栏，简洁模式，macOS样式窗口控件 * 等
 
   在 `about:config` 页面添加 `gwfox.plus` 布尔值设为 `true` 启用
-
-
