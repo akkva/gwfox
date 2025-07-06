@@ -771,6 +771,13 @@ toolbarspring {
 }
 }
 
+#sidebar-button > .toolbarbutton-badge-stack {
+  height: 30px !important;
+  width: 30px !important;
+  border-radius: 6px !important;
+  padding: 7px 0 0 7px !important;
+}
+
 #page-action-buttons {
   margin-right: 0 !important;
   margin-bottom: 0 !important;
@@ -1912,6 +1919,11 @@ tab-group > .tabbrowser-tab,
 &[movingtab][movingtab-addToGroup]:not([movingtab-createGroup],[movingtab-ungroup]) .tabbrowser-tab:is(:active,[multiselected]) {
   margin-inline-start: 0 !important;
 }
+}
+
+#urlbar[breakout][breakout-extend], [usertyping]{
+  backdrop-filter: blur(30px) !important;
+  min-height: 50px !important;
 }
 
 #urlbar[breakout][breakout-extend] {
