@@ -1924,6 +1924,7 @@ tab-group > .tabbrowser-tab,
 #urlbar[breakout][breakout-extend], [usertyping]{
   backdrop-filter: blur(30px) !important;
   min-height: 50px !important;
+  border-radius: 8px !important;
 }
 
 #urlbar[breakout][breakout-extend] {
