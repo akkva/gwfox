@@ -189,6 +189,13 @@
 }
 }
 
+:root[privatebrowsingmode] {
+#customization-container,
+#browser {
+  background: transparent !important;
+}
+}
+
 @media not -moz-pref("sidebar.verticalTabs") {
 .titlebar-buttonbox-container {
   position: absolute !important;
