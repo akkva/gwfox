@@ -2120,6 +2120,41 @@ tab-group > .tabbrowser-tab,
   margin-left: 11.5px;
 }
 
+#tabbrowser-tabs[movingtab] {
+.tab-close-button {
+  display: none !important;
+}
+
+.tab-icon-image {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.tab-label-container {
+  margin-left: 5px;
+}
+
+.tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
+  margin-left: 8.5px;
+}
+
+&[orient="vertical"] {
+.tab-label-container {
+  margin-left: 1px;
+}
+
+.tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
+  margin-left: 6.5px;
+}
+}
+
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+.tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
+  margin-left: 0 !important;
+}
+}
+}
+
 #PersonalToolbar {
   position: fixed;
   width: calc(100% - 16px);
