@@ -414,6 +414,10 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   color-scheme: dark !important;
 }
 
+.lightWallpaper .tile:active {
+  background-color: rgba(15, 15, 15, .8) !important;
+}
+
 .tile, .context-menu-button.icon {
   background-color: rgba(15, 15, 15, .7) !important;
 }
@@ -429,6 +433,12 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 .context-menu {
   border: 1px solid rgba(235, 245, 255, .15) !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+}
+}
+
+@media (prefers-color-scheme: light) {
+.darkWallpaper .tile:active {
+  background-color: rgba(255, 255, 255, .6) !important;
 }
 }
 
@@ -550,9 +560,38 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   padding: 10px !important;
 }
 
+.weatherCard {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
+}
+
+.weatherSponsorText {
+  display: none;
+}
+
+.weatherInfoLink, .weatherButtonContextMenuWrapper {
+  background-color: var(--bg4) !important;
+  backdrop-filter: blur(30px) !important;
+}
+
+.weatherInfoLink:active, .weatherButtonContextMenuWrapper:active {
+  background-color: light-dark(rgba(255, 255, 255, .6), rgba(15, 15, 15, .8)) !important;
+}
+
 @media -moz-pref("widget.macos.native-context-menus") {
-.modal, .customize-menu, .top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable {
+.tile, .context-menu-button.icon, .search-inner-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .weather .context-menu, .modal, .customize-menu, .top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+}
+
+@media (prefers-color-scheme: light) {
+.tile, .context-menu-button.icon {
+  background-color: rgba(255, 255, 255, .55) !important;
+}
+}
+
+@media (prefers-color-scheme: dark) {
+.tile, .context-menu-button.icon {
+  background-color: rgba(25, 25, 25, .65) !important;
+}
 }
 }
 
