@@ -1786,6 +1786,13 @@ richlistitem {
   fill: currentColor;
 }
 
+#searchmode-switcher-icon {
+  fill: light-dark(#525252, #c9c9cb) !important;
+&:not([style*=".svg"]) {
+  content: url("chrome://global/skin/icons/search-glass.svg");
+}
+}
+
 /* verticalTabs */
 
 @media -moz-pref("sidebar.revamp") {
