@@ -546,7 +546,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   height: 98% !important;
 }
 
-.top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable, .weather .context-menu {
+.top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable, .weather .context-menu, .location-input-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper {
   backdrop-filter: blur(30px) !important;
   background-color: var(--bg4) !important;
 }
@@ -568,17 +568,17 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   display: none;
 }
 
-.weatherInfoLink, .weatherButtonContextMenuWrapper {
-  background-color: var(--bg4) !important;
-  backdrop-filter: blur(30px) !important;
-}
-
 .weatherInfoLink:active, .weatherButtonContextMenuWrapper:active {
   background-color: light-dark(rgba(255, 255, 255, .6), rgba(15, 15, 15, .8)) !important;
 }
 
+.location-input-wrapper input {
+  border: none !important;
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+}
+
 @media -moz-pref("widget.macos.native-context-menus") {
-.tile, .context-menu-button.icon, .search-inner-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .weather .context-menu, .modal, .customize-menu, .top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable {
+.tile, .context-menu-button.icon, .search-inner-wrapper, .location-input-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .weather .context-menu, .modal, .customize-menu, .top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
 }
 
