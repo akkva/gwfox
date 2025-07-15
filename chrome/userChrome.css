@@ -1628,6 +1628,7 @@ input {
 :root[sidebar-expand-on-hover] {
 #sidebar-main {
   background-color: transparent !important;
+  background-image: none !important;
 }
 
 #tabbrowser-tabbox {
@@ -1911,13 +1912,13 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   background-color: color-mix(in srgb, light-dark(var(--tab-group-color), var(--tab-group-color-invert)) 30%, transparent) !important;
   background-image: url("chrome://global/skin/icons/arrow-down-12.svg");
   background-repeat: no-repeat;
-  background-position: left 10px bottom 10px;
+  background-position: left 9px bottom 11px;
   -moz-context-properties: fill;
   fill: currentColor;
 
 tab-group[collapsed] > .tab-group-label-container > & {
   background-image: url("chrome://global/skin/icons/folder.svg");
-  background-position: left 8px bottom 8px;
+  background-position: left 9px bottom 7.5px;
 }
 
 &::first-letter {
@@ -1982,6 +1983,9 @@ tab-group > .tabbrowser-tab,
 .tab-group-line {
 #tabbrowser-tabs & {
   inset-inline: 0 !important;
+@media (-moz-platform: windows) {
+  margin-inline-start: -.5px !important;
+}
 
 .tabbrowser-tab:first-of-type > .tab-stack > .tab-background > & {
   inset-block-start: 2px !important;
@@ -2026,6 +2030,18 @@ tab-group > .tabbrowser-tab,
 }
 }
 }
+
+@media (-moz-platform: windows) {
+:has(#tabbrowser-tabs[expanded]) {
+tab > stack {
+  margin: 0 .5px !important;
+}
+}
+
+.tab-group-label {
+  margin-left: .5px !important;
+}
+}
 }
 
 /* tweak */
@@ -2058,10 +2074,7 @@ tab-group > .tabbrowser-tab,
 :has(#tabbrowser-tabs[expanded]) {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
-  margin-left: 81px !important;
-@media (-moz-platform: windows) {
-  margin-left: 81.5px !important;
-}
+  margin-left: 82px !important;
 }
 
 #vertical-pinned-tabs-container {
@@ -2331,7 +2344,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 &::before {
   content: "";
   position: absolute;
-  top: -8px;
+  top: -10px;
   left: -9px;
   width: 220px;
   height: 48px;
@@ -2706,6 +2719,11 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   width: 220px;
 }
 
+#urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher {
+  margin-left: 0 !important;
+  margin-right: 6px !important;
+}
+
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
   margin-left: -139px !important;
@@ -2829,6 +2847,31 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 &[activemedia-blocked] {
   background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg");
+}
+}
+
+@media (-moz-platform: windows) {
+tab > stack {
+  margin: 0 .5px !important;
+}
+
+.tab-group-label {
+  margin-left: 10px !important;
+}
+
+.tab-group-line {
+#tabbrowser-tabs & {
+  margin-inline-start: 0 !important;
+}
+}
+
+.tab-background {
+  margin-left: .5px !important;
+}
+
+#tabs-newtab-button,
+#vertical-tabs-newtab-button {
+  margin-left: 9.5px !important;
 }
 }
 }
