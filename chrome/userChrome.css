@@ -76,7 +76,6 @@
 #tabbrowser-tabbox browser:not(.devtools-toolbox-bottom-iframe, .devtools-toolbox-side-iframe) {
   border-radius: 6px;
   clip-path: inset(0 round 8px);
-  background-color: light-dark(#fff, #202020) !important;
   -moz-window-dragging: no-drag;
 }
 
@@ -525,6 +524,7 @@ toolbarspring {
 :has(#urlbar[persistsearchterms]) {
 #urlbar-container {
   background: none;
+  margin-top: 7.5px !important;
 }
 }
 }
@@ -1176,7 +1176,6 @@ panelmultiview, popupnotification {
   border-image: none !important;
 }
 
-#toolbar-context-toggle-vertical-tabs + menuseparator,
 .panel-footer toolbarseparator, .panel-header + toolbarseparator,
 #identity-popup-mainView-panel-header + toolbarseparator,
 #permission-popup-mainView-panel-header + toolbarseparator,
@@ -1963,7 +1962,7 @@ tab-group > .tabbrowser-tab,
 }
 }
 
-#urlbar[breakout][breakout-extend], [usertyping]{
+#urlbar[breakout][breakout-extend] {
   backdrop-filter: blur(30px) !important;
   min-height: 50px !important;
   border-radius: 8px !important;
@@ -1976,6 +1975,8 @@ tab-group > .tabbrowser-tab,
 :has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
 #urlbar {
   left: 25vw !important;
+  backdrop-filter: blur(30px) !important;
+  min-height: 50px !important;
 }
 }
 
