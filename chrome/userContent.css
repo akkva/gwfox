@@ -56,9 +56,8 @@ body { background-color: #282828 !important; }
   --toolbar-button-background-hover: #383838 !important;
   --toolbar-button-background-active: #2b2b2b !important;
   --fxview-background-color: #282828 !important;
+  --in-content-page-background: #282828 !important;
 }
-
-* { --in-content-page-background: #282828 !important; }
 
 .toggle-button {
   --toggle-background-color-pressed: #1280fd !important;
@@ -280,10 +279,16 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   opacity: .8 !important;
 }
 
+.icon.icon-settings {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
 .icon.icon-settings:hover {
   background-color: light-dark(rgba(255, 255, 255, .8), rgba(15, 15, 15, .7)) !important;
   backdrop-filter: blur(30px) !important;
   opacity: 1 !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
 }
 
 .search-inner-wrapper {
