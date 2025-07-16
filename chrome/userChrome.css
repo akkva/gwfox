@@ -519,12 +519,18 @@ toolbarspring {
   margin-top: 6.5px !important;
   border-radius: 6px;
   background: var(--button-active-bgcolor);
+@media (-moz-platform: windows) {
+  margin-top: 7.5px !important;
+}
 }
 
 :has(#urlbar[persistsearchterms]) {
 #urlbar-container {
   background: none;
   margin-top: 7.5px !important;
+@media (-moz-platform: windows) {
+  margin-top: 8.5px !important;
+}
 }
 }
 }
@@ -556,6 +562,14 @@ toolbarspring {
   border-radius: 6px !important;
   padding: 6px !important;
   -moz-window-dragging: no-drag;
+}
+
+@media not -moz-pref("sidebar.verticalTabs") {
+@media (-moz-platform: windows) {
+#urlbar:not([breakout][breakout-extend], [usertyping]) {
+  margin-top: .5px !important;
+}
+}
 }
 
 @media -moz-pref("gwfox.plus") or (not -moz-pref("sidebar.verticalTabs")) {
