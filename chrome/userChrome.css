@@ -134,7 +134,7 @@
 
 #browser {
   clip-path: circle(100%);
-  background-color: transparent !important;
+  background: transparent !important;
 }
 
 :has(#PersonalToolbar:hover, #sidebar-main:hover) {
