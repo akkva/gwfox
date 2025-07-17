@@ -35,6 +35,9 @@
 
   在 `about:config` 页面添加 `gwfox.plus` 布尔值设为 `true` 启用
 
-## 样式展示
+<details><summary>样式展示</summary>
+<br>
   
 [01.webm](https://github.com/user-attachments/assets/0f24f538-67eb-42e2-a483-b4a8a8e75603)
+
+</details>
