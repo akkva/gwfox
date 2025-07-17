@@ -76,6 +76,7 @@
 #tabbrowser-tabbox browser:not(.devtools-toolbox-bottom-iframe, .devtools-toolbox-side-iframe) {
   border-radius: 6px;
   clip-path: inset(0 round 8px);
+  background-color: light-dark(#fff, #202020) !important;
   -moz-window-dragging: no-drag;
 }
 
