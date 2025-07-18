@@ -406,19 +406,17 @@ toolbarspring {
 }
 
 #urlbar[breakout][breakout-extend] {
-  position: fixed !important;
   top: 20vh !important;
   left: 18vw !important;
   width: 65vw !important;
   max-width: unset !important;
-  animation-name: panel-grow;
-  animation-duration: 250ms;
   margin-top: 25px !important;
-  transition: none !important;
+  transition: margin .25s !important;
 
 #urlbar-input,
 #urlbar-input::placeholder {
   font-size: 21px !important;
+  text-align: center !important;
 }
 
 .urlbar-input-container {
@@ -481,9 +479,19 @@ toolbarspring {
   height: 50px !important;
 }
 
+#urlbar-input,
+#urlbar-input::placeholder {
+  text-align: left !important;
+}
+
 :has(#urlbar[breakout][breakout-extend]) {
 #urlbar-background {
   height: unset !important;
+}
+
+#urlbar-input,
+#urlbar-input::placeholder {
+  text-align: left !important;
 }
 }
 
@@ -525,7 +533,7 @@ toolbarspring {
 }
 }
 
-:has(#urlbar[persistsearchterms]) {
+:has(#urlbar[persistsearchterms]):not(:has(#urlbar[breakout][breakout-extend])) {
 #urlbar-container {
   background: none;
   margin-top: 7.5px !important;
@@ -1977,14 +1985,15 @@ tab-group > .tabbrowser-tab,
 }
 }
 
-#urlbar[breakout][breakout-extend] {
-  backdrop-filter: blur(30px) !important;
-  min-height: 50px !important;
-  border-radius: 8px !important;
+#urlbar {
+  backdrop-filter: blur(0px) !important;
 }
 
 #urlbar[breakout][breakout-extend] {
   left: 25vw !important;
+  min-height: 50px !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(30px) !important;
 }
 
 :has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
@@ -2293,7 +2302,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 @media -moz-pref("sidebar.verticalTabs") {
 .titlebar-buttonbox-container {
-  position: absolute !important;
+  position: fixed !important;
   margin-top: unset !important;
   left: 2px;
   top: 15.5px;
@@ -2387,17 +2396,19 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 }
 
-:has(#urlbar[persistsearchterms]) {
+:has(#urlbar[persistsearchterms]):not(:has(#urlbar[breakout][breakout-extend])) {
 .titlebar-buttonbox::after {
   background: none;
 }
 }
 
-#urlbar::before {
+.titlebar-buttonbox::before {
   content: "";
   position: fixed;
   top: 37px;
   left: 0;
+  width: 220px;
+  height: 48px;
 }
 
 #urlbar-container {
@@ -2463,6 +2474,13 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   font-size: 13px !important;
 }
 
+.tabbrowser-tab {
+&[dragtarget] {
+  position: unset !important;
+  margin-bottom: -40px !important;
+}
+}
+
 .tabbrowser-tab:-moz-window-inactive {
   opacity: .5 !important;
 }
@@ -2510,7 +2528,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 
 :root:not([inDOMFullscreen]) {
 #nav-bar {
-  padding-left: 71px !important;
+  margin-left: 71px !important;
 }
 
 #tabbrowser-tabpanels {
@@ -2594,7 +2612,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 
 #nav-bar {
-  padding-left: 352px !important;
+  padding-left: 285px !important;
 }
 
 #PersonalToolbar {
@@ -2609,7 +2627,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
 #nav-bar {
-  padding-left: 472px !important;
+  padding-left: 405px !important;
 }
 
 #PersonalToolbar {
@@ -2671,10 +2689,6 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   margin-left: 10px !important;
 }
 
-#urlbar::before {
-  width: 82px;
-}
-
 #urlbar:not([breakout][breakout-extend])[persistsearchterms] {
   width: 62px !important;
 
@@ -2729,10 +2743,6 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 :has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #tab-group-name:focus) {
 :has(#tabbrowser-tabs:not([expanded])) {
 --display: block;
-}
-
-#urlbar::before {
-  width: 220px;
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher {
@@ -3147,13 +3157,6 @@ tab-group[collapsed] > .tab-group-label-container > & {
   width: unset !important;
 }
 
-.tabbrowser-tab {
-&[dragtarget] {
-  position: unset !important;
-  margin-bottom: -40px !important;
-}
-}
-
 .tab-background {
   width: 201px !important;
 }
@@ -3244,8 +3247,8 @@ tab-group[collapsed] > .tab-group-label-container > & {
   transition: left .25s !important;
 }
 
-#urlbar::before {
-  width: 218px;
+.titlebar-buttonbox::before {
+  width: 0;
 }
 
 #urlbar:not([breakout][breakout-extend])[persistsearchterms] {
@@ -3438,10 +3441,6 @@ tab-group[collapsed] > .tab-group-label-container > & {
   background: transparent !important;
 }
 
-#urlbar {
-  left: 10px !important;
-}
-
 #sidebar-button {
   margin-left: -62px !important;
   margin-right: 62px !important;
@@ -3451,7 +3450,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 #back-button::before {
   content: "";
   position: fixed;
-  top: 45px;
+  top: 47px;
   left: 10px;
   width: 201px;
   height: 32px;
