@@ -12,7 +12,7 @@ user_pref("widget.windows.mica.toplevel-backdrop", 2);
 user_pref("widget.macos.titlebar-blend-mode.behind-window", true);
 user_pref("browser.tabs.allow_transparent_browser", true);
 
-/* (可选项 | OPTIONAL)
-user_pref("gwfox.plus", true);
-user_pref("widget.macos.native-context-menus", true);
-*/
+/* (可选项 | OPTIONAL) */
+
+user_pref("gwfox.plus", false);
+/*user_pref("widget.macos.native-context-menus", true);*/
