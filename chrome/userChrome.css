@@ -2102,6 +2102,13 @@ tab > stack {
   margin-left: 81px !important;
 }
 
+:has(tab-group) {
+#tabbrowser-tabbox {
+  clip-path: inset(-50px 0 0 139px);
+  margin-left: 82px !important;
+}
+}
+
 #vertical-pinned-tabs-container {
 .tab-content {
   margin-left: -6px !important;
@@ -2753,6 +2760,13 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
   margin-left: -140px !important;
+}
+
+:has(tab-group) {
+#tabbrowser-tabbox {
+  clip-path: inset(-50px 0 0 139px);
+  margin-left: -139px !important;
+}
 }
 
 #tabbrowser-tabpanels {
