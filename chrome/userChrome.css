@@ -2099,7 +2099,7 @@ tab > stack {
 :has(#tabbrowser-tabs[expanded]) {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
-  margin-left: 82px !important;
+  margin-left: 81px !important;
 }
 
 #vertical-pinned-tabs-container {
@@ -2752,7 +2752,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
-  margin-left: -139px !important;
+  margin-left: -140px !important;
 }
 
 #tabbrowser-tabpanels {
