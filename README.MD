@@ -34,19 +34,29 @@
 > english
 
 - [Download the theme](https://github.com/akkva/gwfox/archive/refs/heads/main.zip) and place the chrome folder into your profile folder.
+
 - Note: You can also use the included user.js to set the preferences (below) for you.
+
 - In the URL Bar, go to `about:config` and set these to true
+
     - `toolkit.legacyUserProfileCustomizations.stylesheets`
+
     - `svg.context-properties.content.enabled`
+
     - `widget.windows.mica`
+
     - `widget.windows.mica.toplevel-backdrop` set to `2`
+
 - Restart firefox
 
 ## 样式调整 | Adjustments
 
 - 书签工具栏隐藏至底部，地址栏置于侧栏，简洁模式，macOS样式窗口控件 * 等
+
     - 在 `about:config` 页面添加 `gwfox.plus` 布尔值设为 `true` 启用
+
 - Bookmark toolbar hidden at the bottom, address bar in the sidebar, simple mode, macOS style window controls*, etc.
+
     - in `about:config` add `gwfox.plus` Boolean value set to `true`
 
 <details><summary>预览 | Preview</summary>
