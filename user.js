@@ -10,7 +10,7 @@ user_pref("widget.windows.mica.extra", true);
 user_pref("widget.windows.mica.popups", 2);
 user_pref("widget.windows.mica.toplevel-backdrop", 2);
 user_pref("widget.macos.titlebar-blend-mode.behind-window", true);
-user_pref("browser.tabs.allow_transparent_browser", true);
+user_pref("browser.tabs.allow_transparent_browser", false);
 
 /* (可选项 | OPTIONAL) */
 
