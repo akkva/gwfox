@@ -14,19 +14,13 @@
 - 把下载的 `chrome` 文件夹放入火狐 `配置文件夹` 内
 
 - 在 `about:config` 页面中搜索以下布尔值切换为 `true`
-
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
-
-  - `svg.context-properties.content.enabled`
- 
+  - `svg.context-properties.content.enabled` 
   - `widget.windows.mica` *
- 
   - `widget.windows.mica.toplevel-backdrop` 设为 `2` *
- 
-- 以下布尔值切换为 `false`
-  
-  - `sidebar.animation.enabled`
- 
+
+- 以下布尔值切换为 `false`  
+  - `sidebar.animation.enabled` 
   - `widget.macos.native-context-menus` (可选项)
 
 - 重启火狐
@@ -38,25 +32,23 @@
 - Note: You can also use the included user.js to set the preferences (below) for you.
 
 - In the URL Bar, go to `about:config` and set these to true
-
     - `toolkit.legacyUserProfileCustomizations.stylesheets`
-
     - `svg.context-properties.content.enabled`
+    - `widget.windows.mica` *
+    - `widget.windows.mica.toplevel-backdrop` set to `2` *
 
-    - `widget.windows.mica`
-
-    - `widget.windows.mica.toplevel-backdrop` set to `2`
+- Set these to false
+  - `sidebar.animation.enabled`
+  - `widget.macos.native-context-menus` (Optional)
 
 - Restart firefox
 
 ## 样式调整 | Adjustments
 
 - 书签工具栏隐藏至底部，地址栏置于侧栏，简洁模式，macOS样式窗口控件 * 等
-
     - 在 `about:config` 页面添加 `gwfox.plus` 布尔值设为 `true` 启用
 
 - Bookmark toolbar hidden at the bottom, address bar in the sidebar, simple mode, macOS style window controls*, etc.
-
     - in `about:config` add `gwfox.plus` Boolean value set to `true`
 
 <details><summary>预览 | Preview</summary>
