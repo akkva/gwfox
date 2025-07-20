@@ -11,7 +11,7 @@
 
 > 中文
 
-- 把下载的 `chrome` 文件夹放入火狐 `配置文件夹` 内
+- [下载主题](https://github.com/akkva/gwfox/archive/refs/heads/main.zip) 把 `chrome` 文件夹放入火狐 `配置文件夹` 内
 
 - 在 `about:config` 页面中搜索以下布尔值切换为 `true`
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
@@ -25,7 +25,7 @@
 
 - 重启火狐
 
-> english
+> English
 
 - [Download the theme](https://github.com/akkva/gwfox/archive/refs/heads/main.zip) and place the chrome folder into your profile folder.
 
