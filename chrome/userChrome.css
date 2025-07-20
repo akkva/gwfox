@@ -2000,6 +2000,7 @@ tab-group > .tabbrowser-tab,
 #urlbar {
   left: 25vw !important;
   backdrop-filter: blur(30px) !important;
+  border-radius: 8px !important;
   min-height: 50px !important;
 }
 }
