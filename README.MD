@@ -5,9 +5,20 @@
 </picture>
 <br><br>
 
+- [中文指示](#中文指示)
+  - [使用方法](#使用方法)
+  - [样式调整](#样式调整)
+- [English instructions](#english-instructions)
+  - [How to install](#how-to-install)
+  - [Further customization](#further-customization)
+
+<br>
+
+# 中文指示
+
 - 本主题适用Firefox 138+ `Mac` `Win` *
 
-## 使用方法 | How to use
+## 使用方法
 
 > 中文
 
@@ -15,45 +26,61 @@
 
 - 在 `about:config` 页面中搜索以下布尔值切换为 `true`
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
-  - `svg.context-properties.content.enabled` 
+  - `svg.context-properties.content.enabled`
   - `widget.windows.mica` *
   - `widget.windows.mica.toplevel-backdrop` 设为 `2` *
 
-- 以下布尔值切换为 `false`  
-  - `sidebar.animation.enabled` 
+- 以下布尔值切换为 `false`
+  - `sidebar.animation.enabled`
   - `widget.macos.native-context-menus` (可选项)
 
 - 重启火狐
 
-> English
-
-- [Download the theme](https://github.com/akkva/gwfox/archive/refs/heads/main.zip) and place the chrome folder into your profile folder.
-
-- Note: You can also use the included user.js to set the preferences (below) for you.
-
-- In the URL Bar, go to `about:config` and set these to true
-    - `toolkit.legacyUserProfileCustomizations.stylesheets`
-    - `svg.context-properties.content.enabled`
-    - `widget.windows.mica` *
-    - `widget.windows.mica.toplevel-backdrop` set to `2` *
-
-- Set these to false
-  - `sidebar.animation.enabled`
-  - `widget.macos.native-context-menus` (Optional)
-
-- Restart firefox
-
-## 样式调整 | Adjustments
+## 样式调整
 
 - 书签工具栏隐藏至底部，地址栏置于侧栏，简洁模式，macOS样式窗口控件 * 等
     - 在 `about:config` 页面添加 `gwfox.plus` 布尔值设为 `true` 启用
 
-- Bookmark toolbar hidden at the bottom, address bar in the sidebar, simple mode, macOS style window controls*, etc.
-    - in `about:config` add `gwfox.plus` Boolean value set to `true`
-
-<details><summary>预览 | Preview</summary>
+<details><summary>预览</summary>
 <br>
-  
+[01.webm](https://github.com/user-attachments/assets/0f24f538-67eb-42e2-a483-b4a8a8e75603)
+</details>
+
+<br>
+
+# English instructions
+
+- This theme works on Firefox 138+ on `Mac` & `Windows`
+
+## How to install
+
+- [Download the theme as a zip file](https://github.com/akkva/gwfox/archive/refs/heads/main.zip)
+- Open your profile directory
+  - go to `about:support`
+  - click the **Open Folder** button next to your **Profile directory**
+- Place the `chrome` folder from the download zip in your profile folder
+- Change configurations
+  - _Option 1: use included user.js (easy)_
+    - Place the included user.js file in your profile folder
+  - _Option 2: manually set below configurations_
+    - In the URL Bar, go to `about:config`
+    - Set these to true
+        - `toolkit.legacyUserProfileCustomizations.stylesheets`
+        - `svg.context-properties.content.enabled`
+        - `widget.windows.mica`
+        - `widget.windows.mica.toplevel-backdrop` set to `2`
+    - Set these to false
+      - `sidebar.animation.enabled`
+      - `widget.macos.native-context-menus` (Optional)
+- Restart Firefox!
+
+## Further customization
+
+If you would like to have your Bookmark toolbar hidden at the bottom, address bar in the sidebar, & macOS style window controls change the configutation `gwfox.plus` to `true` in your `about:config`
+
+<details><summary>Preview</summary>
+<br>
+
 [01.webm](https://github.com/user-attachments/assets/0f24f538-67eb-42e2-a483-b4a8a8e75603)
 
 </details>
