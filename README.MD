@@ -5,7 +5,7 @@
 </picture>
 <br><br>
 
-- [中文指示](#中文指示)
+- [简介](#简介)
   - [使用方法](#使用方法)
   - [样式调整](#样式调整)
 - [English instructions](#english-instructions)
@@ -14,7 +14,7 @@
 
 <br>
 
-# 中文指示
+# 简介
 
 - 本主题适用Firefox 138+ `Mac` `Win` *
 
