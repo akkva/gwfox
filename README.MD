@@ -1,9 +1,9 @@
 ## <p align="center"> <b> GWfox 🦊 </b> </p>
 <p align="center">This theme compatible with Firefox 138+ on macOS & Windows *</p>
 <picture>
-<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/d7699474-d17b-4560-a9d6-9e1ecaac0ba5">
-<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/90f88774-2886-4a02-aae8-6814f3199adb">
-<img width="1495" alt="01">
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/05dd4a5c-fe38-4774-842e-c5129947ee02">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/5ee0768f-23e4-4b2e-a452-3ef119a69567">
+<img width="1412" alt="01">
 </picture>
 
 ## How to install
