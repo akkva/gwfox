@@ -8,7 +8,7 @@
 - [简介](#简介)
   - [使用方法](#使用方法)
   - [样式调整](#样式调整)
-- [English instructions](#english-instructions)
+- [Introduction](#Introduction)
   - [How to install](#how-to-install)
   - [Further customization](#further-customization)
 
@@ -43,7 +43,7 @@
 
 <br>
 
-# English instructions
+# Introduction
 
 - This theme works on Firefox 138+ on `Mac` & `Windows` *
 
