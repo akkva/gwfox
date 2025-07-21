@@ -9,8 +9,8 @@
   - [使用方法](#使用方法)
   - [样式调整](#样式调整)
 - [English instructions](#english-instructions)
-  - [How to use](#how-to-use)
-  - [Further customizations](#further-customizations)
+  - [How to install](#how-to-install)
+  - [Further customization](#further-customization)
 
 <br>
 
@@ -50,20 +50,20 @@
 
 # English instructions
 
-- This theme works on Firefox 138+ `Mac` `Win`
+- This theme works on Firefox 138+ on `Mac` & `Windows`
 
-## How to use
+## How to install
 
-- [Download the theme as a zip](https://github.com/akkva/gwfox/archive/refs/heads/main.zip)
+- [Download the theme as a zip file](https://github.com/akkva/gwfox/archive/refs/heads/main.zip)
 - Open your profile directory
-  - open `about:support`
-  - click the "Open Folder" button next to your Profile directory
-- Place the `chrome` folder from the repo in your profile folder.
-- Configuration change options
-  - Option 1: use included user.js (easier)
+  - go to `about:support`
+  - click the **Open Folder** button next to your **Profile directory**
+- Place the `chrome` folder from the download zip in your profile folder
+- Change configurations
+  - _Option 1: use included user.js (easy)_
     - Place the included user.js file in your profile folder
-  - Option 2: manually set configurations
-  - In the URL Bar, go to `about:config`
+  - _Option 2: manually set below configurations_
+    - In the URL Bar, go to `about:config`
     - Set these to true
         - `toolkit.legacyUserProfileCustomizations.stylesheets`
         - `svg.context-properties.content.enabled`
@@ -72,9 +72,9 @@
     - Set these to false
       - `sidebar.animation.enabled`
       - `widget.macos.native-context-menus` (Optional)
-- Restart firefox
+- Restart Firefox!
 
-## Further customizations
+## Further customization
 
 If you would like to have your Bookmark toolbar hidden at the bottom, address bar in the sidebar, & macOS style window controls change the configutation `gwfox.plus` to `true` in your `about:config`
 
