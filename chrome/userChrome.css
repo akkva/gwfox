@@ -368,11 +368,17 @@ toolbarspring {
 #urlbar-input::placeholder,
 .searchbar-textbox::placeholder {
   font-size: 12.5px !important;
-  text-align: left !important;
+  text-align: center !important;
+  @media -moz-pref("gwfox.alignLeft") {
+    text-align: left !important;
+  }
 }
 
 #urlbar-input {
   text-align: center !important;
+  @media -moz-pref("gwfox.alignLeft") {
+    text-align: left !important;
+  }
   margin-bottom: 1px !important;
 }
 
@@ -417,6 +423,9 @@ toolbarspring {
 #urlbar-input::placeholder {
   font-size: 21px !important;
   text-align: center !important;
+  @media -moz-pref("gwfox.alignLeft") {
+    text-align: left !important;
+  }
 }
 
 .urlbar-input-container {
@@ -3626,4 +3635,9 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 }
+}
+
+#identity-box.extensionPage #identity-icon-labels,
+#identity-box.extensionPage #identity-icon-label {
+  visibility: collapse !important;
 }
