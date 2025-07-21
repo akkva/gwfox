@@ -20,20 +20,15 @@
 
 ## 使用方法
 
-> 中文
-
 - [下载主题](https://github.com/akkva/gwfox/archive/refs/heads/main.zip) 把 `chrome` 文件夹放入火狐 `配置文件夹` 内
-
 - 在 `about:config` 页面中搜索以下布尔值切换为 `true`
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
   - `svg.context-properties.content.enabled`
   - `widget.windows.mica` *
   - `widget.windows.mica.toplevel-backdrop` 设为 `2` *
-
 - 以下布尔值切换为 `false`
   - `sidebar.animation.enabled`
   - `widget.macos.native-context-menus` (可选项)
-
 - 重启火狐
 
 ## 样式调整
@@ -50,7 +45,7 @@
 
 # English instructions
 
-- This theme works on Firefox 138+ on `Mac` & `Windows`
+- This theme works on Firefox 138+ on `Mac` & `Windows` *
 
 ## How to install
 
@@ -67,8 +62,8 @@
     - Set these to true
         - `toolkit.legacyUserProfileCustomizations.stylesheets`
         - `svg.context-properties.content.enabled`
-        - `widget.windows.mica`
-        - `widget.windows.mica.toplevel-backdrop` set to `2`
+        - `widget.windows.mica` *
+        - `widget.windows.mica.toplevel-backdrop` set to `2` *
     - Set these to false
       - `sidebar.animation.enabled`
       - `widget.macos.native-context-menus` (Optional)
