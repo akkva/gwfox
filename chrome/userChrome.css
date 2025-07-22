@@ -376,8 +376,9 @@ toolbarspring {
   margin-bottom: 1px !important;
 }
 
-.urlbar-input-container[pageproxystate=invalid] .urlbar-input {
+.urlbar-input-container[pageproxystate="invalid"] #urlbar-input {
   mask-image: linear-gradient(to left, transparent, #fff 10ch);
+  text-align: left !important;
 }
 
 #urlbar[focused] > .urlbar-input-container {
@@ -416,10 +417,6 @@ toolbarspring {
 #urlbar-input,
 #urlbar-input::placeholder {
   font-size: 21px !important;
-}
-
-.urlbar-input-container[pageproxystate="invalid"] #urlbar-input {
-  text-align: left !important;
 }
 
 .urlbar-input-container {
