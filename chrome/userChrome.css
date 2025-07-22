@@ -416,7 +416,10 @@ toolbarspring {
 #urlbar-input,
 #urlbar-input::placeholder {
   font-size: 21px !important;
-  text-align: center !important;
+}
+
+.urlbar-input-container[pageproxystate="invalid"] #urlbar-input {
+  text-align: left !important;
 }
 
 .urlbar-input-container {
@@ -548,6 +551,49 @@ toolbarspring {
 .urlbar-revert-button,
 #urlbar-searchmode-switcher {
   margin-top: 10px !important;
+}
+}
+
+:has(#identity-box[pageproxystate="valid"].extensionPage) {
+.urlbar-page-action,
+.identity-box-button,
+#urlbar-searchmode-switcher,
+#tracking-protection-icon-container {
+  display: none !important;
+}
+
+.urlbar-input-container {
+  padding-inline-start: 28px !important;
+  background-image: url(chrome://global/skin/icons/search-glass.svg);
+  background-repeat: no-repeat;
+  background-position: left 6px bottom 7px;
+  -moz-context-properties: fill, fill-opacity;
+  fill: currentColor;
+  fill-opacity: .69;
+@media (not -moz-pref("gwfox.plus")) or (not -moz-pref("sidebar.verticalTabs")) {
+  background-position: left 6px bottom 6px;
+}
+}
+
+.urlbar-input-container[pageproxystate="valid"] #urlbar-input {
+  text-align: left !important;
+}
+
+@media -moz-pref("gwfox.plus") {
+:has(#tabbrowser-tabs[orient="vertical"]:not([expanded])) {
+.urlbar-input-container {
+  background-position: center;
+}
+}
+}
+
+#urlbar[breakout][breakout-extend] .urlbar-input-container {
+  padding-inline-start: 43px !important;
+  background-position: left 21px bottom 16px;
+}
+
+.urlbar-input {
+  mask-image: linear-gradient(to left, transparent, #fff 10ch);
 }
 }
 
@@ -2946,6 +2992,18 @@ tab > stack {
 }
 }
 }
+
+:has(#identity-box[pageproxystate="valid"].extensionPage) {
+:has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover) {
+#tracking-protection-icon-box {
+  display: none !important;
+}
+
+.urlbar-input-container {
+  background-position: left 6px bottom 7px;
+}
+}
+}
 }
 }
 
@@ -3429,6 +3487,12 @@ tab-group[collapsed] > .tab-group-label-container > & {
   left: 18px !important;
   opacity: 1;
   transition: left .25s !important;
+}
+
+:has(#identity-box[pageproxystate="valid"].extensionPage) {
+#urlbar:not([breakout][breakout-extend]) .urlbar-input-container {
+  background-position: left 6px bottom 7px;
+}
 }
 }
 }
