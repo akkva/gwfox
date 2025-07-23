@@ -1,5 +1,5 @@
 ## <p align="center"> <b> GWfox 🦊 </b> </p>
-<p align="center">This theme compatible with Firefox 138+ on macOS & Windows *</p>
+<p align="center">This theme compatible with Firefox 138+ on macOS, Linux & Windows *</p>
 <picture>
 <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/05dd4a5c-fe38-4774-842e-c5129947ee02">
 <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/5ee0768f-23e4-4b2e-a452-3ef119a69567">
@@ -41,7 +41,7 @@ If you would like to have your Bookmark toolbar hidden at the bottom, address ba
 
 ## 简介
 
-- 本主题适用Firefox 138+ `Mac` `Win` *
+- 本主题适用Firefox 138+ macOS, Linux & Windows *
 
 ## 使用方法
 
