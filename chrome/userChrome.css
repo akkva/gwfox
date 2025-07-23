@@ -1429,7 +1429,7 @@ tree {
 }
 
 @media (max-width: 590px) {
-.tabbrowser-tab[pinned] {
+#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab[pinned] {
   display: none !important;
 }
 }
