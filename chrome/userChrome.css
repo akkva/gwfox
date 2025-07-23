@@ -182,8 +182,10 @@
 }
 
 :root[inFullscreen] {
+@media not (-moz-platform: linux) {
 #nav-bar {
   padding-left: 0 !important;
+}
 }
 }
 
@@ -1861,6 +1863,7 @@ menupopup {
   position: absolute !important;
   left: 15px;
   top: 15.5px;
+}
 
 .titlebar-button {
   padding: 0 2px !important;
@@ -1925,7 +1928,6 @@ menupopup {
   content: url("resources/titlebar-restore-active.svg") !important;
 @media (prefers-color-scheme: dark) {
   content: url("resources/titlebar-restore-active-dark.svg") !important;
-}
 }
 }
 }
@@ -2065,6 +2067,12 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
 .tools-and-extensions > moz-button[extension],
 button:has([src="chrome://global/skin/icons/settings.svg"]) {
   display: none !important;
+}
+
+@media not -moz-pref("sidebar.visibility", "expand-on-hover") {
+.more-tools-button {
+  display: none !important;
+}
 }
 
 #sidebar-tools-and-extensions-splitter {
@@ -3691,9 +3699,11 @@ tab-group[collapsed] > .tab-group-label-container > & {
   background: transparent !important;
 }
 
+@media not (-moz-platform: linux) {
 #sidebar-button {
   margin-left: -62px !important;
   margin-right: 62px !important;
+}
 }
 
 :has(#urlbar[breakout][breakout-extend], [usertyping]) {
@@ -3725,15 +3735,19 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 
+@media not (-moz-platform: linux) {
 #sidebar-button {
   margin-left: -52px !important;
   margin-right: 22px !important;
 }
 }
+}
 
 :has(#sidebar-main[hidden]) {
+@media not (-moz-platform: linux) {
 #nav-bar {
   padding-left: 55px !important;
+}
 }
 }
 
