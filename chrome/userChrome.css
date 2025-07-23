@@ -1417,7 +1417,7 @@ tree {
 }
 
 :root#main-window {
-  min-width: 1000px !important;
+  min-width: 590px !important;
 @media (-moz-platform: macos) {
   appearance: -moz-sidebar !important;
 }
@@ -1425,6 +1425,12 @@ tree {
 &:-moz-window-inactive {
   background: var(--bg1) !important;
 }
+}
+}
+
+@media (max-width: 590px) {
+.tabbrowser-tab[pinned] {
+  display: none !important;
 }
 }
 
