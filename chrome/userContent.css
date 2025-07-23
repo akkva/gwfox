@@ -174,6 +174,10 @@ body {
   outline: none !important;
   border: none !important;
   fill: rgba(255, 255, 255, .7) !important;
+@media (-moz-platform: linux) {
+  background-color: #36363a !important;
+  backdrop-filter: blur(0px) !important;
+}
 }
 
 .search-handoff-button.disabled {
@@ -290,6 +294,10 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   backdrop-filter: blur(30px) !important;
   opacity: 1 !important;
   box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
+@media (-moz-platform: linux) {
+  background-color: light-dark(#fff, #36363a) !important;
+  backdrop-filter: blur(0px) !important;
+}
 }
 
 .search-inner-wrapper {
@@ -298,11 +306,17 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
   transition: background .5s !important;
   z-index: 1;
+@media (-moz-platform: linux) {
+  background-color: light-dark(#fff, #36363a) !important;
+}
 }
 
 .search-inner-wrapper:active {
   background-color: light-dark(rgba(255, 255, 255, .6), rgba(15, 15, 15, .8)) !important;
   transition: background .5s !important;
+@media (-moz-platform: linux) {
+  background-color: light-dark(rgba(255, 255, 255, .9), rgba(54, 54, 58, .9)) !important;
+}
 }
 
 .search-handoff-button {
@@ -378,10 +392,16 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 
 .tile, .context-menu-button.icon {
   background-color: rgba(255, 255, 255, .8) !important;
+@media (-moz-platform: linux) {
+  background-color: #fff !important;
+}
 }
 
 .context-menu-button.icon:active {
   background-color: rgba(255, 255, 255, .6) !important;
+@media (-moz-platform: linux) {
+  background-color: rgba(255, 255, 255, .9) !important;
+}
 }
 
 .context-menu-button {
@@ -422,14 +442,23 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 
 .lightWallpaper .tile:active {
   background-color: rgba(15, 15, 15, .8) !important;
+@media (-moz-platform: linux) {
+  background-color: #36363a !important;
+}
 }
 
 .tile, .context-menu-button.icon {
   background-color: rgba(15, 15, 15, .7) !important;
+@media (-moz-platform: linux) {
+  background-color: #36363a !important;
+}
 }
 
 .context-menu-button.icon:active {
   background-color: rgba(15, 15, 15, .8) !important;
+@media (-moz-platform: linux) {
+  background-color: rgba(54, 54, 58, .9) !important;
+}
 }
 
 .context-menu-button {
@@ -460,6 +489,9 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 .tile:active {
   background-color: light-dark(rgba(255, 255, 255, .6), rgba(15, 15, 15, .8)) !important;
   transition: background .5s !important;
+@media (-moz-platform: linux) {
+  background-color: light-dark(rgba(255, 255, 255, .9), rgba(54, 54, 58, .9)) !important;
+}
 }
 
 .top-site-outer, .top-site-button,
@@ -487,6 +519,9 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   width: 96px !important;
   height: 96px !important;
   background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+@media (-moz-platform: linux) {
+  background-color: light-dark(#fff, #36363a) !important;
+}
 }
 
 .edit-topsites-wrapper .icon-wrapper {
@@ -534,10 +569,16 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   animation-name: panel-grow;
   animation-duration: 250ms;
   background-color: var(--bg4) !important;
+@media (-moz-platform: linux) {
+  background-color: light-dark(#fff, #36363a) !important;
+}
 }
 
 .modal, .tile, .context-menu-button.icon, .search-inner-wrapper {
   backdrop-filter: blur(30px) !important;
+@media (-moz-platform: linux) {
+  backdrop-filter: blur(0px) !important;
+}
 }
 
 .modal, .contentSearchSuggestionTable {
@@ -550,11 +591,19 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
   margin: 11px 11px 0 0 !important;
   height: 98% !important;
+@media (-moz-platform: linux) {
+  background-color: light-dark(#fff, #36363a) !important;
+  backdrop-filter: blur(0px) !important;
+}
 }
 
 .top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable, .weather .context-menu, .location-input-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .personalize-button {
   backdrop-filter: blur(30px) !important;
   background-color: var(--bg4) !important;
+@media (-moz-platform: linux) {
+  background-color: light-dark(#fff, #36363a) !important;
+  backdrop-filter: blur(0px) !important;
+}
 }
 
 .wallpaper-list.category {
