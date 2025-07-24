@@ -344,10 +344,33 @@ toolbarspring {
 }
 }
 
-#searchmode-switcher-dropmarker,
-#searchmode-switcher-close,
-#searchmode-switcher-title {
+#searchmode-switcher-dropmarker {
   display: none !important;
+}
+
+#searchmode-switcher-chicklet {
+  height: 28px !important;
+  border-radius: 16px !important;
+}
+
+#urlbar[usertyping] #searchmode-switcher-chicklet {
+  margin-left: 7px !important;
+}
+
+#urlbar[breakout][breakout-extend]:not([usertyping]) {
+#urlbar-searchmode-switcher {
+  display: none !important;
+}
+
+.urlbar-input-container {
+  padding-inline-start: 50px !important;
+  background-image: url(chrome://global/skin/icons/search-glass.svg);
+  background-repeat: no-repeat;
+  background-position: left 21px bottom 16px;
+  -moz-context-properties: fill, fill-opacity;
+  fill: currentColor;
+  fill-opacity: .65;
+}
 }
 
 #urlbar-background {
@@ -409,6 +432,11 @@ toolbarspring {
 
 #urlbar:not([breakout][breakout-extend]) {
   transform: none !important;
+
+#searchmode-switcher-close,
+#searchmode-switcher-title {
+  display: none !important;
+}
 }
 
 #urlbar:not([breakout][breakout-extend]) #identity-icon-label {
@@ -457,7 +485,11 @@ toolbarspring {
 #urlbar-search-mode-indicator {
   margin-top: 13px !important;
 }
+
+#searchmode-switcher-title {
+  margin-left: 10px !important;
 }
+} 
 
 #urlbar[breakout][breakout-extend] #urlbar-background {
   background-color: var(--bg4) !important;
