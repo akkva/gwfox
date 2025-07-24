@@ -362,7 +362,7 @@ toolbarspring {
   display: none !important;
 }
 
-.urlbar-input-container {
+.urlbar-input-container[pageproxystate="invalid"] {
   padding-inline-start: 50px !important;
   background-image: url(chrome://global/skin/icons/search-glass.svg);
   background-repeat: no-repeat;
