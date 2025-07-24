@@ -2107,10 +2107,8 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   display: none !important;
 }
 
-@media not -moz-pref("sidebar.visibility", "expand-on-hover") {
 .more-tools-button {
-  display: none !important;
-}
+  display: var(--mtb) !important;
 }
 
 #sidebar-tools-and-extensions-splitter {
@@ -2233,6 +2231,10 @@ tab-group > .tabbrowser-tab,
   backdrop-filter: blur(0px) !important;
 }
 }
+}
+
+:has(#tabbrowser-tabs[expanded]) {
+  --mtb: none;
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
