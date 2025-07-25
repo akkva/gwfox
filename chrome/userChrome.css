@@ -138,7 +138,6 @@
 
 #browser {
   clip-path: circle(100%);
-  background: transparent !important;
 }
 
 :has(#PersonalToolbar:hover, #sidebar-main:hover) {
@@ -148,7 +147,6 @@
 }
 
 #navigator-toolbox {
-  background: none !important;
   border: none !important;
   z-index: unset !important;
 }
@@ -164,6 +162,7 @@
 #nav-bar {
   padding-top: 2px !important;
   height: 47px !important;
+  background: transparent !important;
 @media (-moz-platform: windows) {
 @media not -moz-pref("sidebar.verticalTabs") {
   height: 48px !important;
@@ -171,8 +170,11 @@
 }
 }
 
-#nav-bar, #PersonalToolbar, #TabsToolbar {
+@media not -moz-pref("gwfox.atbc") {
+#PersonalToolbar, #TabsToolbar,
+#navigator-toolbox, #browser {
   background: transparent !important;
+}
 }
 
 :root[inDOMFullscreen] {
@@ -1873,8 +1875,10 @@ richlistitem {
 }
 
 @media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.atbc") {
 #browser, #navigator-toolbox {
   background: var(--bg1) !important;
+}
 }
 
 #nav-bar {
@@ -3008,7 +3012,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
 :has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #tab-group-name:focus) {
 :has(#tabbrowser-tabs:not([expanded])) {
---display: block;
+--display: none;
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher {
