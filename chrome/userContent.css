@@ -425,7 +425,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 .personalize-button:not(:hover, :active),
 .top-site-outer .context-menu-button,
 .top-site-outer:not(:hover, :active, .active),
-.logo-and-wordmark .wordmark {
+.logo-and-wordmark .wordmark, .icon.icon-pin-small {
   color-scheme: light !important;
 }
 
@@ -547,7 +547,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   display: none !important;
 }
 
-.tile:hover .icon.icon-pin-small {
+.top-site-outer:hover .icon.icon-pin-small {
   display: inline-block !important;
 }
 
