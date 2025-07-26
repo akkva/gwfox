@@ -14,18 +14,15 @@
   - click the **Open Folder** button next to your **Profile directory**
 - Place the `chrome` folder from the download zip in your profile folder
 - Change configurations
-  - _Option 1: use included user.js (easy)_
-    - Place the included user.js file in your profile folder
-  - _Option 2: manually set below configurations_
-    - In the URL Bar, go to `about:config`
-    - Set these to true
-        - `toolkit.legacyUserProfileCustomizations.stylesheets`
-        - `svg.context-properties.content.enabled`
-        - `widget.windows.mica` *
-        - `widget.windows.mica.toplevel-backdrop` set to `2` *
-    - Set these to false
-      - `sidebar.animation.enabled`
-      - `widget.macos.native-context-menus` (Optional)
+  - In the URL Bar, go to `about:config`
+  - Set these to true
+    - `toolkit.legacyUserProfileCustomizations.stylesheets`
+    - `svg.context-properties.content.enabled`
+    - `widget.windows.mica` *
+    - `widget.windows.mica.toplevel-backdrop` set to `2` *
+  - Set these to false
+    - `sidebar.animation.enabled`
+    - `widget.macos.native-context-menus` (Optional)
 - Restart Firefox!
 
 ## Further customization
