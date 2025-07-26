@@ -2211,6 +2211,11 @@ tab-group > .tabbrowser-tab,
 }
 }
 
+#tabs-newtab-button,
+#vertical-tabs-newtab-button {
+  font-size: 13px !important;
+}
+
 #urlbar {
   backdrop-filter: blur(0px) !important;
 }
@@ -2729,11 +2734,6 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 
 #tabs-newtab-button {
   margin-top: 5px !important;
-}
-
-#tabs-newtab-button,
-#vertical-tabs-newtab-button {
-  font-size: 13px !important;
 }
 
 .tabbrowser-tab {
