@@ -27,7 +27,8 @@
 
 ## Further customization
 
-If you would like to have your Bookmark toolbar hidden at the bottom, address bar in the sidebar, & macOS style window controls change the configutation `gwfox.plus` to `true` in your `about:config`
+If you would like to have your Bookmark toolbar hidden at the bottom, address bar in the sidebar, macOS style window controls & simple mode, add `gwfox.plus` set to `true` in your `about:config`
+  - Add `gwfox.atbc` to enable [Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour)
 
 <details><summary>Preview</summary>
 <br>
@@ -55,8 +56,8 @@ If you would like to have your Bookmark toolbar hidden at the bottom, address ba
 
 ## 样式调整
 
-- 书签工具栏隐藏至底部，地址栏置于侧栏，简洁模式，macOS样式窗口控件 * 等
-    - 在 `about:config` 页面添加 `gwfox.plus` 布尔值设为 `true` 启用
+书签工具栏隐藏至底部，地址栏置于侧栏，macOS样式窗口控件及简洁模式，在 `about:config` 页面添加 `gwfox.plus` 设为 `true` 启用
+  - 添加 `gwfox.atbc` 启用 [变色标签栏](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour)
 
 <details><summary>预览</summary>
 <br>
