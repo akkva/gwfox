@@ -1524,7 +1524,7 @@ richlistbox {
 
 #customization-panelWrapper > .panel-arrowcontent,
 #customization-container {
-@media not(-moz-platform: linux) {
+@media not (-moz-platform: linux) {
   background-color: transparent !important;
 }
 }
