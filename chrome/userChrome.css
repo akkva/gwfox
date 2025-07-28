@@ -2849,6 +2849,12 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 }
 
+:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
+#nav-bar .toolbarbutton-1:nth-child(5) {
+  margin-left: 410px !important;
+}
+}
+
 :has(.titlebar-buttonbox:hover, #urlbar:hover, #back-button:hover, #forward-button:hover, #stop-reload-button:hover, #sidebar-button:hover) {
 #tabbrowser-tabpanels {
   margin-top: -39px;
