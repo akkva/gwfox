@@ -2132,6 +2132,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 
 #vertical-pinned-tabs-splitter {
+  margin-block-start: 4px !important;
 &:hover {
   background-color: var(--outline-color) !important;
 }
