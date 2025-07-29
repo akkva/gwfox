@@ -2970,6 +2970,10 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   margin-left: 6px;
 }
 
+.tabbrowser-tab:not([pinned]):hover .tab-icon-image {
+  display: unset !important;
+}
+
 .tab-throbber {
   margin-left: 6px !important;
 }
