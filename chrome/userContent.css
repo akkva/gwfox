@@ -300,6 +300,10 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 }
 }
 
+.outer-wrapper.only-search {
+  display: flex !important;
+}
+
 .search-inner-wrapper {
   background-color: light-dark(rgba(255, 255, 255, .8), rgba(15, 15, 15, .7)) !important;
   border-radius: 12px !important;
