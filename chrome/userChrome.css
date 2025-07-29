@@ -2701,26 +2701,6 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 }
 
-#stop-reload-button {
-&::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 226px;
-  height: 10px;
-}
-
-&::after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 213px;
-  width: 13px;
-  height: 100%;
-}
-}
-
 #urlbar-background, .urlbar-input-container {
   height: 32px !important;
   border-radius: 8px !important;
@@ -2850,6 +2830,26 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 &[activemedia-blocked] {
   background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg");
+}
+}
+
+#stop-reload-button {
+&::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 10px;
+}
+
+&::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 138px;
+  width: 13px;
+  height: 100%;
 }
 }
 
