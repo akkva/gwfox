@@ -1142,6 +1142,10 @@ tab-group[collapsed][hasactivetab] > & {
   margin-right: 5.5px !important;
 }
 
+.tab-icon-image:not([src], [pinned], [crashed], [sharing], [pictureinpicture], [busy]) {
+   display: block !important;
+}
+
 .tab-content[pinned] {
   margin-right: 5px;
   padding-left: 8px !important;
@@ -2385,9 +2389,10 @@ tab > stack {
   order: 3;
 }
 
+.tabbrowser-tab:hover .tab-throbber,
 .tabbrowser-tab:not([pinned]):hover .tab-icon-image,
 .tabbrowser-tab[selected]:not(:hover) .tab-close-button {
-  display: none;
+  display: none !important;
 }
 
 .tabbrowser-tab:not([pinned]):hover .tab-label-container {
