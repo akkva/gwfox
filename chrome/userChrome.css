@@ -1244,6 +1244,7 @@ menupopup, panel[type="arrow"] {
   --arrowpanel-background: var(--bg2) !important;
   --arrowpanel-border-color: transparent !important;
   --arrowpanel-color: light-dark(#000, #fff) !important;
+  --padding: 0;
 @media not (-moz-platform: linux) {
   appearance: menupopup !important;
 }
@@ -2114,7 +2115,6 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
 }
 
 .extensions, .customize-extensions-heading,
-.tools-and-extensions > moz-button[extension],
 button:has([src="chrome://global/skin/icons/settings.svg"]) {
   display: none !important;
 }
@@ -2130,7 +2130,8 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 }
 
-.more-tools-button {
+.more-tools-button,
+.tools-and-extensions > moz-button[extension] {
   display: var(--mtb) !important;
 }
 
@@ -2419,6 +2420,12 @@ tab > stack {
 }
 }
 
+#tabbrowser-tabs:is([orient="horizontal"], [expanded]):not([movingtab]) .tab-icon-stack {
+.tabbrowser-tab:hover .tab-content > &:not([pinned]) {
+  display: none;
+}
+}
+
 .tabbrowser-tab .tab-close-button {
   margin-left: -5px;
   order: 1;
@@ -2651,7 +2658,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-.tools-and-extensions > moz-button:not([extension]) {
+.tools-and-extensions > moz-button {
   padding-left: var(--padding) !important;
 }
 
