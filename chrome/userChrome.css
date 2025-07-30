@@ -1786,7 +1786,7 @@ input {
 
 :has(#tabbrowser-tabs[expanded]) {
 #tabbrowser-tabbox {
-  clip-path: inset(-8px 0 0 155px);
+  clip-path: inset(-8px 0 0 168px);
 }
 }
 
@@ -2264,6 +2264,10 @@ tab-group > .tabbrowser-tab,
 
 :has(#tabbrowser-tabs[expanded]) {
   --mtb: none;
+
+#sidebar-main {
+  min-width: 221px !important;
+}
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
@@ -2323,6 +2327,18 @@ tab-group > .tabbrowser-tab,
   margin-left: 2px !important;
   margin-right: -6px !important;
   margin-bottom: 2px !important;
+}
+}
+
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+tab-group {
+.tab-group-label {
+  background-position: left 10px bottom 10px;
+
+tab-group[collapsed] > .tab-group-label-container > & {
+  background-position: left 8px bottom 8px;
+}
+}
 }
 }
 
@@ -2808,10 +2824,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 :has(#tabbrowser-tabs[expanded]) {
---padding: 0;
-#sidebar-main {
-  min-width: 221px !important;
-}
+  --padding: 0;
 
 .tab-close-button {
   margin-inline-end: calc(-1 * var(--tab-close-button-padding)) !important;
