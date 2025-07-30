@@ -1786,7 +1786,7 @@ input {
 
 :has(#tabbrowser-tabs[expanded]) {
 #tabbrowser-tabbox {
-  clip-path: inset(-8px 0 0 168px);
+  clip-path: inset(-8px 0 0 155px);
 }
 }
 
@@ -2119,6 +2119,17 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   display: none !important;
 }
 
+.actions-list {
+  display: var(--display, inherit) !important;
+&:has(.expanded-button) {
+  display: flex !important;
+}
+&[orientation="horizontal"] {
+  justify-content: center !important;
+  max-width: calc(100% - 20px) !important;
+}
+}
+
 .more-tools-button {
   display: var(--mtb) !important;
 }
@@ -2304,6 +2315,14 @@ tab-group > .tabbrowser-tab,
 #urlbar {
   left: 20vw !important;
 }
+}
+}
+
+:has(#sidebar-main[hidden]) {
+#sidebar-box {
+  margin-left: 2px !important;
+  margin-right: -6px !important;
+  margin-bottom: 2px !important;
 }
 }
 
@@ -2618,19 +2637,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 .tools-and-extensions > moz-button:not([extension]) {
   padding-left: var(--padding) !important;
-}
-
-.extensions, .customize-extensions-heading,
-.tools-and-extensions > moz-button[extension],
-button:has([src="chrome://global/skin/icons/settings.svg"]) {
-  display: none !important;
-}
-
-.actions-list {
-  display: var(--display, inherit) !important;
-&:has(.expanded-button) {
-  display: flex !important;
-}
 }
 
 .webextension-browser-action {
