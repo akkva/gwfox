@@ -1824,8 +1824,8 @@ input {
   transition: clip-path 300ms !important;
 }
 
-#urlbar, .tabbrowser-tab {
-  transition: width 200ms !important;
+#urlbar {
+  transition: width 600ms !important;
 }
 }
 
