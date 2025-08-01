@@ -960,10 +960,6 @@ toolbarspring {
   background: var(--button-active-bgcolor) !important;
 }
 
-#appMenu-zoom-controls {
-  border-top: 1px solid var(--bg3) !important;
-}
-
 /* tabs */
 
 .tab-background {
@@ -1350,14 +1346,12 @@ menupopup menuitem[_moz-menuactive]:not([disabled=true]),
   color: inherit !important;
 }
 
-toolbarseparator {
-  border-top: 1px solid var(--bg3) !important;
-  margin: 4px 8px 0 !important;
-}
-
-menuseparator::before {
+toolbarseparator::before, menuseparator::before {
   border-top: 1px solid var(--bg3) !important;
   margin: 0 8px 0 !important;
+  content: "";
+  display: block;
+  flex: 1;
 }
 
 menupopup menuseparator {
