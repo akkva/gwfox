@@ -2362,16 +2362,10 @@ tab-group > .tabbrowser-tab,
 }
 
 .tab-close-button {
-  background-image: linear-gradient(var(--close-button-extra-background)),
-                    linear-gradient(var(--bg2)) !important;
-
-&:hover {
-  --close-button-extra-background: var(--button-background-color-ghost) !important;
-}
-
-&:hover:active {
-  --close-button-extra-background: var(--button-background-color-ghost-hover) !important;
-}
+  background-image: none !important;
+  box-shadow: none !important;
+  top: 0 !important;
+  inset-inline-start: 0 !important;
 }
 
 #urlbar[breakout][breakout-extend] {
