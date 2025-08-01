@@ -1823,10 +1823,6 @@ input {
   clip-path: inset(-8px 0 0 168px);
   transition: clip-path 300ms !important;
 }
-
-#urlbar {
-  transition: width 600ms !important;
-}
 }
 
 :has(#sidebar-box:not([hidden])) {
@@ -2727,14 +2723,15 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   top: 47px !important;
   max-width: 201px !important;
   -moz-window-dragging: no-drag;
-&::before {
+}
+
+#urlbar:not([breakout][breakout-extend], [usertyping])::before {
   content: "";
   position: absolute;
   top: -10px;
   left: -9px;
   width: 220px;
   height: 48px;
-}
 }
 
 .urlbar-revert-button,
@@ -3075,6 +3072,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
+#urlbar:not([breakout][breakout-extend], [usertyping])::before {
+  width: 82px;
+}
+
 #urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher {
   margin-left: 16px !important;
   margin-right: 16px !important;
@@ -3125,6 +3126,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher {
   margin-left: 0 !important;
   margin-right: 6px !important;
+}
+
+#urlbar:not([breakout][breakout-extend], [usertyping])::before {
+  width: 220px 
 }
 
 #tabbrowser-tabbox {
