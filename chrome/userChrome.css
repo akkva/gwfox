@@ -1831,7 +1831,7 @@ input {
 
 :has(#sidebar-box:not([hidden])) {
 #tabbrowser-tabbox {
-  clip-path: inset(-8px 0 0 -8px);
+  clip-path: none !important;
 }
 }
 
