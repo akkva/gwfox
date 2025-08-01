@@ -1815,12 +1815,17 @@ input {
 
 #tabbrowser-tabbox {
   clip-path: inset(-8px 0 0 -8px);
-  transition: clip-path 200ms;
+  transition: clip-path 300ms !important;
 }
 
 :has(#tabbrowser-tabs[expanded]) {
 #tabbrowser-tabbox {
   clip-path: inset(-8px 0 0 168px);
+  transition: clip-path 300ms !important;
+}
+
+#urlbar, .tabbrowser-tab {
+  transition: width 200ms !important;
 }
 }
 
@@ -2170,16 +2175,40 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 
 #sidebar-tools-and-extensions-splitter {
   display: var(--display) !important;
-  background-color: transparent !important;
+  width: 10px !important;
+  margin-inline: auto !important;
+  margin-block-start: 15px !important;
+  border-top-color: transparent !important;
+.wrapper:hover &:not(:has(~ .actions-list:hover)) {
+  background-color: var(--panel-separator-color) !important;
+  opacity: .5;
+  transition: .25s !important;
+  -moz-window-dragging: no-drag;
 &:hover {
   background-color: var(--outline-color) !important;
+  width: calc(100% - 25px) !important;
+  opacity: 1;
+  transition: .25s !important;
+}
 }
 }
 
 #vertical-pinned-tabs-splitter {
   margin-block-start: 4px !important;
+  width: 10px !important;
+  margin-inline: auto !important;
+  border-top-color: transparent !important;
+#vertical-tabs:hover & {
+  background-color: var(--panel-separator-color) !important;
+  opacity: .5;
+  transition: .25s !important;
+  -moz-window-dragging: no-drag;
 &:hover {
   background-color: var(--outline-color) !important;
+  width: calc(100% - 25px) !important;
+  opacity: 1;
+  transition: .25s !important;
+}
 }
 }
 
