@@ -2718,20 +2718,18 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #urlbar {
-  position: fixed !important;
   left: 10px !important;
   top: 47px !important;
   max-width: 201px !important;
   -moz-window-dragging: no-drag;
-}
-
-#urlbar:not([breakout][breakout-extend], [usertyping])::before {
+&::before {
   content: "";
   position: absolute;
   top: -10px;
   left: -9px;
   width: 220px;
   height: 48px;
+}
 }
 
 .urlbar-revert-button,
@@ -3072,7 +3070,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-#urlbar:not([breakout][breakout-extend], [usertyping])::before {
+#urlbar::before {
   width: 82px;
 }
 
@@ -3128,7 +3126,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-right: 6px !important;
 }
 
-#urlbar:not([breakout][breakout-extend], [usertyping])::before {
+#urlbar::before {
   width: 220px 
 }
 
