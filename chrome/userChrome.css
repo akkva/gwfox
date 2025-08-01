@@ -2535,7 +2535,7 @@ tab > stack {
   z-index: 1;
   bottom: -32px;
   opacity: 0;
-  transition: .25s;
+  transition: .25s !important;
   padding-bottom: 0 !important;
   background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
@@ -2552,7 +2552,7 @@ tab > stack {
 #PersonalToolbar:hover {
   bottom: 0;
   opacity: 1;
-  transition: .25s;
+  transition: .25s !important;
 }
 
 #PersonalToolbar::before {
@@ -2560,9 +2560,8 @@ tab > stack {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -8px;
-  height: 8px;
-  background-color: transparent; 
+  bottom: -10px;
+  height: 10px;
 }
 
 toolbarbutton.bookmark-item:not(.subviewbutton) {
