@@ -1355,6 +1355,11 @@ toolbarseparator {
   margin: 4px 8px 0 !important;
 }
 
+menuseparator::before {
+  border-top: 1px solid var(--bg3) !important;
+  margin: 0 8px 0 !important;
+}
+
 menupopup menuseparator {
   border: none !important;
   margin: 0 !important;
