@@ -375,7 +375,7 @@ toolbarspring {
 }
 }
 
-#urlbar-background {
+#urlbar-background, .urlbar-background {
   height: 30px !important;
   border: none !important;
   border-radius: 6px !important;
@@ -383,13 +383,13 @@ toolbarspring {
   transition: background .5s !important;
 }
 
-#urlbar:hover #urlbar-background {
+#urlbar:hover #urlbar-background, #urlbar:hover .urlbar-background {
   background: var(--button-active-bgcolor) !important;
   box-shadow: none !important;
   transition: background .5s !important;
 }
 
-#urlbar[open] #urlbar-background {
+#urlbar[open] #urlbar-background, #urlbar[open] .urlbar-background {
   transition: none !important;
 }
 
@@ -419,13 +419,14 @@ toolbarspring {
   outline: none !important;
 }
 
-#urlbar > #urlbar-background {
+#urlbar > #urlbar-background, #urlbar > .urlbar-background {
   outline-style: solid !important;
   outline-color: transparent !important;
   outline-width: 18px !important;
 }
 
-#urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
+#urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
+#urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
   outline-color: var(--outline-color) !important;
   outline-width: 3px !important;
   outline-offset: -1px !important;
@@ -493,7 +494,8 @@ toolbarspring {
 }
 } 
 
-#urlbar[breakout][breakout-extend] #urlbar-background {
+#urlbar[breakout][breakout-extend] #urlbar-background,
+#urlbar[breakout][breakout-extend] .urlbar-background {
   background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--bs1) !important;
@@ -504,7 +506,7 @@ toolbarspring {
 }
 
 :has(#urlbar[breakout][breakout-extend]) {
-#urlbar-background {
+#urlbar-background, .urlbar-background {
   height: unset !important;
 }
 }
@@ -519,7 +521,7 @@ toolbarspring {
   margin-top: 25px !important;
 }
 
-#urlbar-background {
+#urlbar-background, .urlbar-background {
   background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--bs1) !important;
@@ -536,7 +538,7 @@ toolbarspring {
 }
 
 :has(#urlbar[breakout][breakout-extend]) {
-#urlbar-background {
+#urlbar-background, .urlbar-background {
   height: unset !important;
 }
 
@@ -559,7 +561,8 @@ toolbarspring {
   font-size: 21px !important;
 }
 
-#urlbar[focused] #urlbar-background {
+#urlbar[focused] #urlbar-background,
+#urlbar[focused] .urlbar-background {
   box-shadow: var(--bs1) !important;
 }
 
@@ -755,6 +758,7 @@ toolbarspring {
 }
 
 #urlbar[focused] > #urlbar-background,
+#urlbar[focused] > .urlbar-background,
 #searchbar:focus-within {
   box-shadow: none !important;
 }
@@ -1227,7 +1231,7 @@ tab-group:not([collapsed]) > &::after {
 menupopup, panel[type="arrow"] {
   --panel-border-radius: 6px !important;
   --panel-padding: 6px !important;
-  --panel-separator-color: var(--bg3) !important;
+  --panel-separator-color: transparent !important;
   --arrowpanel-background: var(--bg2) !important;
   --arrowpanel-border-color: transparent !important;
   --arrowpanel-color: light-dark(#000, #fff) !important;
@@ -1287,7 +1291,7 @@ panelmultiview, popupnotification {
   stroke: transparent !important;
 }
 
-.proton-zap {
+.proton-zap, toolbarseparator.proton-zap::before {
   border-image: none !important;
 }
 
@@ -1346,8 +1350,9 @@ menupopup menuitem[_moz-menuactive]:not([disabled=true]),
   color: inherit !important;
 }
 
-toolbarseparator, menuseparator::before {
+toolbarseparator {
   border-top: 1px solid var(--bg3) !important;
+  margin: 4px 8px 0 !important;
 }
 
 menupopup menuseparator {
@@ -1421,12 +1426,13 @@ menupopup,
 
 :root:not([chromehidden~="toolbar"]):has(#sidebar-main[hidden]) #sidebar-main,
 window[role="dialog"], .findbar-container, #statuspanel-label,
-#urlbar[breakout][breakout-extend] #urlbar-background {
+#urlbar[breakout][breakout-extend] #urlbar-background,
+#urlbar[breakout][breakout-extend] .urlbar-background {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
 }
 
 :has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
-#urlbar-background {
+#urlbar-background, .urlbar-background {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
 }
 }
@@ -1583,6 +1589,7 @@ richlistbox {
 }
 
 #urlbar[breakout][breakout-extend] #urlbar-background,
+#urlbar[breakout][breakout-extend] .urlbar-background,
 .dialogBox {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
@@ -1885,6 +1892,7 @@ menupopup, panel[type="arrow"] {
 }
 
 #urlbar[breakout][breakout-extend] #urlbar-background,
+#urlbar[breakout][breakout-extend] .urlbar-background,
 .findbar-container, .dialogBox, #statuspanel-label {
   outline: none !important;
 }
@@ -2780,7 +2788,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-#urlbar-background, .urlbar-input-container {
+#urlbar-background, .urlbar-background, .urlbar-input-container {
   height: 32px !important;
   border-radius: 8px !important;
 }
