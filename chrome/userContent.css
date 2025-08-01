@@ -123,12 +123,12 @@ input[type="checkbox"], .checkbox-check {
 }
 }
 
-input[type="radio"], .radio-check {
+.radio-check {
   appearance: none !important;
   background-color: transparent !important;
   border-radius: 50% !important;
   border: 2px solid rgba(165, 165, 165, .8) !important;
-  &[selected], &:checked {
+  &[selected] {
   background-color: light-dark(#4481f2, #1280fd) !important;
   background-image: url("resources/radio.svg") !important;
   border: none !important;
@@ -143,6 +143,21 @@ input[type="radio"], .radio-check {
 .card-container {
   background: light-dark(#eeeeef, #373737) !important;
   box-shadow: none !important;
+}
+}
+
+@-moz-document url-prefix("about:preferences") {
+input[type="radio"] {
+  appearance: none !important;
+  background-color: transparent !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(165, 165, 165, .8) !important;
+  &:checked {
+  background-color: light-dark(#4481f2, #1280fd) !important;
+  background-image: url("resources/radio.svg") !important;
+  border: none !important;
+  &:hover:active { background-color: light-dark(#0a4eb8, #417bde) !important; }
+}
 }
 }
 
