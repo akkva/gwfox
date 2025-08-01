@@ -1621,6 +1621,37 @@ richlistbox {
 }
 }
 
+#ctrlTab-panel {
+  --panel-background: transparent !important;
+  background-color: transparent !important;
+}
+
+.ctrlTab-preview-inner {
+  border-radius: 16px !important;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .35) !important;
+  background-color: rgba(0, 0, 0, .85) !important;
+}
+
+#ctrlTab-showAll {
+  border-radius: 16px !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .35) !important;
+  background-color: rgba(0, 0, 0, .85) !important;
+  margin-top: 28px !important;
+}
+
+.ctrlTab-canvas {
+  border-radius: 16px !important;
+  box-shadow: none !important;
+  margin-top: -8px !important;
+  margin-left: -8px !important;
+  margin-right: -8px !important;
+> img,
+> canvas {
+  border-top-left-radius: 14px !important;
+  border-top-right-radius: 14px !important;
+}
+}
+
 findbar {
   position: absolute !important;
   top: 3px;
