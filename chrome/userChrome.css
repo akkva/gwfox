@@ -2495,6 +2495,12 @@ tab > stack {
   order: 3;
 }
 
+.tab-content {
+:root:not([uidensity="compact"], [sidebar-expand-on-hover]) &[pinned] {
+  padding: 0 17px !important;
+}
+}
+
 .tabbrowser-tab:hover .tab-throbber,
 .tabbrowser-tab:not([pinned]):hover .tab-icon-image,
 .tabbrowser-tab[selected]:not(:hover) .tab-close-button {
@@ -2954,6 +2960,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media (-moz-platform: windows) {
   margin-top: -38px;
 }
+}
+}
+
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+.tabbrowser-tab[pinned] .tab-content {
+  margin-left: -6px !important;
 }
 }
 }
