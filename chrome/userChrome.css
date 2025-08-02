@@ -130,6 +130,9 @@
 &[sidebar-panel-open] {
   margin-inline-end: 2px !important;
   margin-bottom: 2px !important;
+@media (-moz-platform: windows) {
+  margin-inline-end: 1px !important;
+}
 }
 }
 }
