@@ -1826,6 +1826,12 @@ input {
   opacity: .5 !important;
 }
 
+.sidebar-splitter {
+@media -moz-pref("sidebar.revamp") or (not (-moz-platform: linux)) {
+  width: var(--splitter-width) !important;
+}
+}
+
 :root[sidebar-expand-on-hover] {
 #sidebar-main {
   background-color: transparent !important;
