@@ -2213,7 +2213,9 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
   width: 10px !important;
   margin-inline: auto !important;
   margin-block-start: 15px !important;
-  border-top-color: transparent !important;
+  border-top: none !important;
+  border-color: transparent !important;
+  background-color: transparent !important;
 .wrapper:hover &:not(:has(~ .actions-list:hover)) {
   background-color: var(--panel-separator-color) !important;
   opacity: .5;
