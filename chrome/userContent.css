@@ -110,12 +110,25 @@ search-textbox {
   outline-width: 18px !important;
 }
 
-input[type="checkbox"], .checkbox-check {
+input[type="checkbox"] {
   appearance: none !important;
   background-color: transparent !important;
   border-radius: 2px !important;
   border: 2px solid rgba(165, 165, 165, .8) !important;
-  &[checked], &:checked {
+  &:checked {
+  background-color: light-dark(#4481f2, #1280fd) !important;
+  background-image: url("resources/check.svg") !important;
+  border: none !important;
+  &:hover:active { background-color: light-dark(#0a4eb8, #417bde) !important; }
+}
+}
+
+.checkbox-check {
+  appearance: none !important;
+  background-color: transparent !important;
+  border-radius: 2px !important;
+  border: 2px solid rgba(165, 165, 165, .8) !important;
+  &[checked] {
   background-color: light-dark(#4481f2, #1280fd) !important;
   background-image: url("resources/check.svg") !important;
   border: none !important;
