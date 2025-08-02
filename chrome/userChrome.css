@@ -133,6 +133,9 @@
 @media (-moz-platform: windows) {
   margin-inline-end: 1px !important;
 }
+@media (-moz-platform: linux) {
+  margin-inline-end: 0 !important;
+}
 }
 }
 }
@@ -1349,12 +1352,19 @@ menupopup menuitem[_moz-menuactive]:not([disabled=true]),
   color: inherit !important;
 }
 
-toolbarseparator::before, menuseparator::before {
+toolbarseparator::before {
   border-top: 1px solid var(--bg3) !important;
   margin: 0 8px 0 !important;
   content: "";
   display: block;
   flex: 1;
+}
+
+menuseparator::before {
+  border-top: 1px solid var(--bg3) !important;
+@media not (-moz-platform: windows) {
+  margin: 0 8px 0 !important;
+}
 }
 
 menupopup menuseparator {
