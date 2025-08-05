@@ -3474,7 +3474,7 @@ tab > stack {
 }
 
 #nav-bar {
-  z-index: 9;
+  z-index: 10;
   margin-top: -39px !important;
 @media (-moz-platform: windows) {
   margin-top: -38px !important;
@@ -3681,10 +3681,6 @@ tab-group[collapsed] > .tab-group-label-container > & {
   transition: left .25s !important;
 }
 
-.titlebar-buttonbox::before {
-  width: 0;
-}
-
 #urlbar:not([breakout][breakout-extend])[persistsearchterms] {
   width: 220px !important;
   position: fixed;
@@ -3780,6 +3776,15 @@ tab-group[collapsed] > .tab-group-label-container > & {
 :has(#urlbar[breakout][breakout-extend], [usertyping]) {
 .titlebar-buttonbox::after {
   content: none;
+}
+
+.titlebar-buttonbox::before {
+  content: "";
+  position: fixed;
+  top: 10px;
+  left: 0;
+  width: 40px;
+  height: 40px;
 }
 }
 
