@@ -142,10 +142,6 @@
 }
 }
 
-#browser {
-  clip-path: circle(100%);
-}
-
 :has(#PersonalToolbar:hover, #sidebar-main:hover) {
 #tabbrowser-tabbox browser {
   -moz-window-dragging: unset;
