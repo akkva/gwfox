@@ -2580,7 +2580,7 @@ tab > stack {
   width: calc(100% - 16px);
   margin: 0 8px 8px 8px !important;
   height: 48px !important;
-  z-index: 1;
+  z-index: 9;
   bottom: -32px;
   opacity: 0;
   transition: .25s !important;
