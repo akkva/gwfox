@@ -55,7 +55,7 @@
   --toolbarbutton-active-background: color-mix(in srgb, currentColor 15%, transparent) !important;
   @media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
-  --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15);    
+  --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15);
   }
   @media (-moz-platform: linux) {
   --bg1: light-dark(#f5f6f6, #2e2e32);
@@ -473,7 +473,7 @@ toolbarspring {
 .urlbarView-row-inner {
   flex-wrap: nowrap !important;
 }
-  
+
 .urlbarView-no-wrap {
   max-width: 50% !important;
   flex-basis: 0 !important;
@@ -494,7 +494,7 @@ toolbarspring {
 #searchmode-switcher-title {
   margin-left: 10px !important;
 }
-} 
+}
 
 #urlbar[breakout][breakout-extend] #urlbar-background,
 #urlbar[breakout][breakout-extend] .urlbar-background {
@@ -1068,10 +1068,10 @@ tab .tab-label {
   background-size: 16px !important;
 }
   &:hover {
-  background-color: var(--button-hover-bgcolor) !important;   
+  background-color: var(--button-hover-bgcolor) !important;
 }
   &:active {
-  background-color: var(--button-active-bgcolor) !important;   
+  background-color: var(--button-active-bgcolor) !important;
 }
 }
   :is(
@@ -1208,7 +1208,7 @@ tab-group:not([collapsed]) > &::after {
   transform: none;
 }
 }
-  
+
 /* popup */
 
 menupopup, panel[type="arrow"] {
@@ -1391,7 +1391,7 @@ window[role="dialog"] {
   height: 20px !important;
   border-radius: 2px !important;
   margin-top: 2px !important;
-  margin-bottom: 2px !important; 
+  margin-bottom: 2px !important;
 }
 
 #unified-extensions-view .panel-header,
@@ -1776,7 +1776,7 @@ input[type="search"] {
   outline: none !important;
 }
 
-#searchbar, 
+#searchbar,
 xul|search-textbox,
 input[type="search"],
 [type="text"] {
@@ -1799,7 +1799,7 @@ input[type="search"]:focus-within,
 input {
   appearance: none !important;
   min-height: 32px !important;
-} 
+}
 }
 
 @-moz-document url("chrome://browser/content/sidebar/sidebar-customize.html") {
@@ -2277,7 +2277,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 
 .tab-group-line {
   background-color: color-mix(in srgb, light-dark(var(--tab-group-color), var(--tab-group-color-invert)) 60%, transparent) !important;
-  
+
 #tabbrowser-tabs & {
   width: 1.5px !important;
 
@@ -2447,7 +2447,7 @@ tab > stack {
   margin-left: 10.5px;
 }
 
-#tabbrowser-tabs[orient="vertical"]:not([expanded]) .tab-close-button, 
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) .tab-close-button,
 .tabbrowser-tab[pinned] .tab-close-button {
   display: none !important;
 }
@@ -2972,9 +2972,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 :has(.titlebar-buttonbox:hover, #urlbar:hover, #back-button:hover, #forward-button:hover, #stop-reload-button:hover, #sidebar-button:hover) {
 #tabbrowser-tabpanels {
-  margin-top: -39px;
+  margin-top: 0px;
 @media (-moz-platform: windows) {
-  margin-top: -38px;
+  margin-top: 0px;
 }
 }
 }
@@ -3184,7 +3184,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #urlbar::before {
-  width: 220px 
+  width: 220px
 }
 
 #tabbrowser-tabbox {
@@ -3730,7 +3730,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 @media (-moz-platform: macos) {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
-}   
+}
 }
 &::before {
   content: "";
@@ -3875,7 +3875,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 #sidebar-button {
   margin-left: -335px !important;
   margin-right: 300px !important;
-}  
+}
 }
 }
 
@@ -3884,7 +3884,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 #sidebar-button {
   margin-left: -455px !important;
   margin-right: 420px !important;
-}  
+}
 }
 }
 
@@ -3956,7 +3956,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 
-:root:not([sizemode="maximized"], [sizemode="fullscreen"]):has(#sidebar-main[hidden]) .titlebar-restore, 
+:root:not([sizemode="maximized"], [sizemode="fullscreen"]):has(#sidebar-main[hidden]) .titlebar-restore,
 :root:is([sizemode="maximized"], [sizemode="fullscreen"]):has(#sidebar-main[hidden]) .titlebar-max {
   display: none !important;
 }
