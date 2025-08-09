@@ -1872,6 +1872,11 @@ toolbarbutton:-moz-window-inactive {
   opacity: 50% !important;
 }
 
+#editBookmarkPanel .expander-up,
+#editBookmarkPanel .expander-down {
+  border: none !important;
+}
+
 .urlbar-input-container > box {
   -moz-window-dragging: no-drag !important;
 }
@@ -1924,11 +1929,6 @@ treecol {
 
 richlistitem {
   color: #fff !important;
-}
-
-#editBookmarkPanel .expander-up,
-#editBookmarkPanel .expander-down {
-  border: none !important;
 }
 }
 }
