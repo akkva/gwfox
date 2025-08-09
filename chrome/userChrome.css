@@ -211,7 +211,7 @@
 
 @media not -moz-pref("sidebar.verticalTabs") {
 .titlebar-buttonbox-container {
-  position: absolute !important;
+  position: fixed !important;
   left: 7px;
   top: 15.5px;
 @media (-moz-platform: windows) {
@@ -1961,7 +1961,7 @@ menupopup {
 }
 
 .titlebar-buttonbox-container {
-  position: absolute !important;
+  position: fixed !important;
   left: 15px;
   top: 15.5px;
 }
@@ -3975,6 +3975,20 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 
+#toolbar-menubar {
+  position: fixed;
+  top: 49px;
+  right: 9px;
+  z-index: 9;
+  border-radius: 8px;
+  background-color: light-dark(rgba(255, 255, 255, .95), rgba(15, 15, 12, .85)) !important;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, .2) !important;
+  padding: 0 2px !important;
+:root[customtitlebar] #navigator-toolbox[tabs-hidden] > & {
+  min-height: unset !important;
+}
+}
+
 .titlebar-buttonbox-container {
   left: 15px;
   top: 17.5px;
@@ -4049,6 +4063,10 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 
 @media -moz-pref("sidebar.verticalTabs") {
+#toolbar-menubar {
+  top: 10px;
+}
+
 .titlebar-buttonbox-container {
   left: 12px;
   top: 16px;
