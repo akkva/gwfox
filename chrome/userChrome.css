@@ -228,8 +228,8 @@
 }
 }
 
-.titlebar-spacer {
-  display: none !important
+.titlebar-spacer, #nav-bar:not([customizing]) toolbarspring {
+  display: none !important;
 }
 
 #navigator-toolbox {
@@ -245,10 +245,6 @@
 @media not -moz-pref("gwfox.plus") {
   padding-left: 0 !important;
 }
-}
-
-toolbarspring {
-  display: none;
 }
 }
 
@@ -790,7 +786,7 @@ toolbarspring {
 .toggle-button { --toggle-dot-background-color-on-pressed: #fff !important; }
 #blocked-permissions-container, #picture-in-picture-button,
 #urlbar-go-button, .private-browsing-indicator-with-label,
-#reset-pbm-toolbar-button,
+#reset-pbm-toolbar-button, #vertical-spacer,
 #firefox-view-button, #fxa-toolbar-menu-button,
 #userContext-icons, #userContext-label,
 #scrollbutton-up, #scrollbutton-down,
@@ -3964,10 +3960,6 @@ tab-group[collapsed] > .tab-group-label-container > & {
 :root[customizing] {
 #urlbar {
   visibility: hidden;
-}
-
-#nav-bar [id^=wrapper-customizableui-special-spring] {
-  display: none !important;
 }
 }
 }
