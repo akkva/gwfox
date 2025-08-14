@@ -58,7 +58,7 @@
   --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15);    
   }
   @media (-moz-platform: linux) {
-  --bg1: light-dark(#f5f6f6, #2e2e32);
+  --bg1: light-dark(#f5f6f6, #28282c);
   --bg2: light-dark(#fff, #36363a);
   }
 }
@@ -204,7 +204,7 @@
 #browser {
   background: transparent !important;
 @media (-moz-platform: linux) {
-  background: #2e2e32 !important;
+  background: #28282c !important;
 }
 }
 }
@@ -2414,6 +2414,12 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 
+@media (-moz-platform: linux) {
+#tabbrowser-tabs:not([expanded]) .tab-group-label {
+  margin-left: 13px !important;
+}
+}
+
 @media (-moz-platform: windows) {
 :has(#tabbrowser-tabs[expanded]) {
 tab > stack {
@@ -2458,12 +2464,18 @@ tab > stack {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
   margin-left: 81px !important;
+@media (-moz-platform: linux) {
+  margin-left: 83.5px !important;
+}
 }
 
 :has(tab-group) {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
   margin-left: 82px !important;
+@media (-moz-platform: linux) {
+  margin-left: 84.5px !important;
+}
 }
 }
 
@@ -2667,12 +2679,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-left: 331px !important;
   width: calc(100% - 339px);
 @media (-moz-platform: windows) {
-  margin-left: 333px !important;
-  width: calc(100% - 341px);
+  margin-left: 332px !important;
+  width: calc(100% - 340px);
 }
 @media (-moz-platform: linux) {
-  margin-left: 337px !important;
-  width: calc(100% - 345px);
+  margin-left: 336px !important;
+  width: calc(100% - 344px);
 }
 }
 }
@@ -2682,24 +2694,26 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-left: 451px !important;
   width: calc(100% - 459px);
 @media (-moz-platform: windows) {
-  margin-left: 453px !important;
-  width: calc(100% - 461px);
+  margin-left: 452px !important;
+  width: calc(100% - 460px);
 }
 @media (-moz-platform: linux) {
-  margin-left: 457px !important;
-  width: calc(100% - 465px);
+  margin-left: 456px !important;
+  width: calc(100% - 464px);
 }
 }
 }
 }
 
 @media -moz-pref("sidebar.verticalTabs") {
-@media not (-moz-platform: linux) {
 .titlebar-buttonbox-container {
   position: fixed !important;
   margin-top: unset !important;
   left: 2px;
   top: 15.5px;
+@media (-moz-platform: linux) {
+  left: 12px;
+}
 }
 
 .titlebar-buttonbox {
@@ -2710,11 +2724,13 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   left: -16px;
   width: 82px;
   height: 200%;
+@media (-moz-platform: linux) {
+  z-index: -1;
+}
 }
 
 &::after {
   content: "";
-}
 }
 }
 
@@ -2872,6 +2888,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #PersonalToolbar {
   margin-left: 503px !important;
   width: calc(100% - 511px);
+@media not (-moz-platform: macos) {
+  margin-left: 502px !important;
+  width: calc(100% - 510px);
+}
 }
 }
 
@@ -2879,6 +2899,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #PersonalToolbar {
   margin-left: 623px !important;
   width: calc(100% - 631px);
+@media not (-moz-platform: macos) {
+  margin-left: 622px !important;
+  width: calc(100% - 630px);
+}
 }
 }
 
@@ -3002,6 +3026,23 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 }
+
+@media (-moz-platform: linux) {
+#tabbrowser-tabs {
+  margin-left: -3px !important;
+  margin-right: -2.5px !important;
+}
+
+.tab-group-label {
+  width: 201px !important;
+}
+
+.tab-group-line {
+#tabbrowser-tabs & {
+  margin-inline-start: 3px !important;
+}
+}
+}
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
@@ -3017,6 +3058,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media (-moz-platform: windows) {
   margin-left: 81.5px !important;
   width: calc(100% - 89.5px);
+}
+@media (-moz-platform: linux) {
+  margin-left: 84px !important;
+  width: calc(100% - 92px);
 }
 }
 }
@@ -3037,8 +3082,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-left: 363px !important;
   width: calc(100% - 371px);
 @media (-moz-platform: windows) {
-  margin-left: 363.5px !important;
-  width: calc(100% - 371.5px);
+  margin-left: 362.5px !important;
+  width: calc(100% - 370.5px);
+}
+@media (-moz-platform: linux) {
+  margin-left: 365px !important;
+  width: calc(100% - 373px);
 }
 }
 }
@@ -3055,8 +3104,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-left: 483px !important;
   width: calc(100% - 491px);
 @media (-moz-platform: windows) {
-  margin-left: 483.5px !important;
-  width: calc(100% - 491.5px);
+  margin-left: 482.5px !important;
+  width: calc(100% - 490.5px);
+}
+@media (-moz-platform: linux) {
+  margin-left: 485px !important;
+  width: calc(100% - 493px);
 }
 }
 }
@@ -3098,6 +3151,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 .tabbrowser-tab:not([pinned]) .tab-icon-image {
   display: unset;
   margin-left: 6px;
+@media (-moz-platform: linux) {
+  margin-left: 3px;
+}
 }
 
 .tabbrowser-tab:not([pinned]):hover .tab-icon-image {
@@ -3975,20 +4031,6 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 
-#toolbar-menubar {
-  position: fixed;
-  top: 49px;
-  right: 9px;
-  z-index: 9;
-  border-radius: 8px;
-  background-color: light-dark(rgba(255, 255, 255, .95), rgba(15, 15, 12, .85)) !important;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, .2) !important;
-  padding: 0 2px !important;
-:root[customtitlebar] #navigator-toolbox[tabs-hidden] > & {
-  min-height: unset !important;
-}
-}
-
 .titlebar-buttonbox-container {
   left: 15px;
   top: 17.5px;
@@ -4063,10 +4105,6 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 
 @media -moz-pref("sidebar.verticalTabs") {
-#toolbar-menubar {
-  top: 10px;
-}
-
 .titlebar-buttonbox-container {
   left: 12px;
   top: 16px;
@@ -4076,6 +4114,25 @@ tab-group[collapsed] > .tab-group-label-container > & {
 &::before {
   z-index: -1;
 }
+}
+}
+}
+
+@media not (-moz-platform: macos) {
+#toolbar-menubar {
+  position: fixed;
+  top: 49px;
+  right: 9px;
+  z-index: 9;
+  border-radius: 8px;
+  background-color: light-dark(rgba(255, 255, 255, .95), rgba(15, 15, 12, .85)) !important;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, .2) !important;
+  padding: 0 2px !important;
+:root[customtitlebar] #navigator-toolbox[tabs-hidden] > & {
+  min-height: unset !important;
+}
+@media -moz-pref("sidebar.verticalTabs") {
+  top: 10px;
 }
 }
 }
