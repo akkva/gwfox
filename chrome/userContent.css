@@ -12,6 +12,10 @@
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
   --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15);    
   }
+  @media (-moz-platform: linux) {
+  --in-content-page-background: light-dark(#fff, #1d1d20) !important;
+  --newtab-background-color: light-dark(#fff, #1d1d20) !important; 
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -68,6 +72,19 @@ body { background-color: #282828 !important; }
 
 #migrationWizardDialog {
   background: #282828 !important;
+}
+
+@media (-moz-platform: linux) {
+body { background-color: #1d1d20 !important; }
+
+* {
+  --fxview-background-color: #1d1d20 !important;
+  --in-content-page-background: #1d1d20 !important;
+}
+
+#migrationWizardDialog {
+  background: #1d1d20 !important;
+}
 }
 }
 }
@@ -160,6 +177,10 @@ input[type="checkbox"] {
 }
 
 @-moz-document url-prefix("about:preferences") {
+.navigation::after {
+  content: none !important;
+}
+
 input[type="radio"] {
   appearance: none !important;
   background-color: transparent !important;
