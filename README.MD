@@ -1,5 +1,5 @@
 ## <p align="center"> <b> GWfox 🦊 </b> </p>
-<p align="center">This theme compatible with Firefox 138+ on macOS & Windows *</p>
+<p align="center">This theme compatible with Firefox 138+ on macOS, Linux & Windows</p>
 <picture>
 <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/204bffdb-d37f-4a3e-98f6-c21e84b3b46d">
 <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/0a83cfb1-23ac-4458-8113-536b240d549b">
@@ -18,11 +18,15 @@
   - Set these to true
     - `toolkit.legacyUserProfileCustomizations.stylesheets`
     - `svg.context-properties.content.enabled`
-    - `widget.windows.mica` *
-    - `widget.windows.mica.toplevel-backdrop` set to `2` *
+    - _Windows:_<br>
+    `widget.windows.mica`<br>
+    `widget.windows.mica.toplevel-backdrop` set to `2`
+    - _Linux:_<br>
+    `widget.gtk.rounded-bottom-corners.enabled`
   - Set these to false
     - `sidebar.animation.enabled`
-    - `widget.macos.native-context-menus` (Optional)
+    - _macOS:_<br>
+    `widget.macos.native-context-menus` (Optional)
 - Restart Firefox!
 
 ## Further customization
@@ -39,7 +43,7 @@ If you would like to have your Bookmark toolbar hidden at the bottom, address ba
 
 ## 简介
 
-- 本主题适用Firefox 138+ macOS & Windows *
+- 本主题适用Firefox 138+ macOS, Linux & Windows
 
 ## 使用方法
 
@@ -47,11 +51,15 @@ If you would like to have your Bookmark toolbar hidden at the bottom, address ba
 - 在 `about:config` 页面中搜索以下布尔值切换为 `true`
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
   - `svg.context-properties.content.enabled`
-  - `widget.windows.mica` *
-  - `widget.windows.mica.toplevel-backdrop` 设为 `2` *
+  - _Windows:_<br>
+    `widget.windows.mica`<br>
+    `widget.windows.mica.toplevel-backdrop` set to `2`
+  - _Linux:_<br>
+    `widget.gtk.rounded-bottom-corners.enabled`
 - 以下布尔值切换为 `false`
   - `sidebar.animation.enabled`
-  - `widget.macos.native-context-menus` (可选项)
+  - _macOS:_<br>
+    `widget.macos.native-context-menus` (可选项)
 - 重启火狐
 
 ## 样式调整
