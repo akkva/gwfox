@@ -1962,7 +1962,7 @@ menupopup {
 }
 
 #customization-container {
-  background: #28282c !important;
+  background: var(--bg1) !important;
 }
 
 .titlebar-buttonbox-container {
