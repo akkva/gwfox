@@ -1,6 +1,6 @@
 :root {
-  --in-content-page-background: light-dark(#fff, #282828) !important;
-  --newtab-background-color: light-dark(#fff, #282828) !important;
+  --in-content-page-background: light-dark(#fff, #191919) !important;
+  --newtab-background-color: light-dark(#fff, #191919) !important;
   --in-content-box-border-color: light-dark(#d7d7db, #535353) !important;
   --newtab-background-color-secondary: transparent !important;
   --in-content-focus-outline-color: light-dark(#7db0f7, #2c749f) !important;
@@ -12,15 +12,11 @@
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
   --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15);    
   }
-  @media (-moz-platform: linux) {
-  --in-content-page-background: light-dark(#fff, #1d1d20) !important;
-  --newtab-background-color: light-dark(#fff, #1d1d20) !important; 
-  }
 }
 
 @media (prefers-color-scheme: dark) {
 :root {
-  --in-content-box-background: #333 !important;
+  --in-content-box-background: #282828 !important;
   --in-content-table-background: #252525 !important;
   --checkbox-checked-bgcolor: #1280fd !important;
   --checkbox-checked-hover-bgcolor: #1280fd !important;
@@ -40,7 +36,7 @@
   --newtab-primary-element-text-color: #fff !important;
   --color-accent-primary: #1280fd !important;
   --color-accent-primary-active: #0b66ca !important;
-  --color-gray-80: #333 !important;
+  --color-gray-80: #282828 !important;
 }
 
 .home-section .section .sponsored-checkbox:checked:hover {
@@ -48,7 +44,7 @@
 }
 
 @-moz-document url-prefix(about:) {
-body { background-color: #282828 !important; }
+body { background-color: #191919 !important; }
 
 * {
   --toolbar-button-foreground-active: #1280fd !important;
@@ -59,8 +55,8 @@ body { background-color: #282828 !important; }
   --popup-button-background-active: #2b2b2b !important;
   --toolbar-button-background-hover: #383838 !important;
   --toolbar-button-background-active: #2b2b2b !important;
-  --fxview-background-color: #282828 !important;
-  --in-content-page-background: #282828 !important;
+  --fxview-background-color: #191919 !important;
+  --in-content-page-background: #191919 !important;
 }
 
 .toggle-button {
@@ -71,27 +67,14 @@ body { background-color: #282828 !important; }
 }
 
 #migrationWizardDialog {
-  background: #282828 !important;
-}
-
-@media (-moz-platform: linux) {
-body { background-color: #1d1d20 !important; }
-
-* {
-  --fxview-background-color: #1d1d20 !important;
-  --in-content-page-background: #1d1d20 !important;
-}
-
-#migrationWizardDialog {
-  background: #1d1d20 !important;
-}
+  background: #191919 !important;
 }
 }
 }
 
 @-moz-document url-prefix(about:), regexp("chrome://(?!browser\.xhtml).*") {
 input[type="search"] {
-  background-color: light-dark(#eeeeef, #373737) !important;
+  background-color: light-dark(#eeeeef, #282828) !important;
   border-color: transparent !important;
   outline-style: solid !important;
   outline-color: transparent !important;
@@ -120,7 +103,7 @@ search-addons > search-textbox[focused] {
 }
 
 search-textbox {
-  background: light-dark(#eeeeef, #373737) !important;
+  background: light-dark(#eeeeef, #282828) !important;
   border-color: transparent !important;
   outline-style: solid !important;
   outline-color: transparent !important;
@@ -171,7 +154,7 @@ input[type="checkbox"] {
 * {--fxview-border: transparent !important;}
 
 .card-container {
-  background: light-dark(#eeeeef, #373737) !important;
+  background: light-dark(#eeeeef, #282828) !important;
   box-shadow: none !important;
 }
 }
