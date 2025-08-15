@@ -1961,10 +1961,17 @@ menupopup {
   margin: -18px -18px -5px !important;
 }
 
+#customization-container {
+  background: #28282c !important;
+}
+
 .titlebar-buttonbox-container {
-  position: fixed !important;
+  position: absolute !important;
   left: 15px;
   top: 15.5px;
+@media -moz-pref("gwfox.plus") {
+  position: fixed !important;
+}
 }
 
 .titlebar-button {
@@ -2100,6 +2107,16 @@ menupopup {
   fill: light-dark(#525252, #c9c9cb) !important;
 &:not([style*=".svg"]) {
   content: url("chrome://global/skin/icons/search-glass.svg");
+}
+}
+
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.plus") {
+#toolbar-menubar {
+.titlebar-buttonbox-container {
+  visibility: collapse;
+}
+}
 }
 }
 
