@@ -80,7 +80,7 @@
 #tabbrowser-tabbox browser:not(.devtools-toolbox-bottom-iframe, .devtools-toolbox-side-iframe) {
   border-radius: 6px;
   clip-path: inset(0 round 8px);
-  background-color: light-dark(#fff, #202020) !important;
+  background-color: light-dark(#fff, #191919) !important;
   -moz-window-dragging: no-drag;
 }
 
@@ -1298,7 +1298,9 @@ menupopup,
 menuitem, menu {
   appearance: none !important;
   border-radius: 4px !important;
+@media not (-moz-platform: linux) {
   height: 22px !important;
+}
 }
 
 menu {
@@ -1830,13 +1832,12 @@ input {
 
 #tabbrowser-tabbox {
   clip-path: inset(-8px 0 0 -8px);
-  transition: clip-path 300ms !important;
+  transition: clip-path .25s;
 }
 
 :has(#tabbrowser-tabs[expanded]) {
 #tabbrowser-tabbox {
   clip-path: inset(-8px 0 0 168px);
-  transition: clip-path 300ms !important;
 }
 }
 
@@ -2456,7 +2457,6 @@ tab > stack {
 
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 -8px);
-  transition: clip-path 200ms;
   margin-left: 0 !important;
 }
 
@@ -2474,7 +2474,7 @@ tab > stack {
   clip-path: inset(-50px 0 0 139px);
   margin-left: 82px !important;
 @media (-moz-platform: linux) {
-  margin-left: 84.5px !important;
+  margin-left: 83.5px !important;
 }
 }
 }
@@ -3030,7 +3030,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media (-moz-platform: linux) {
 #tabbrowser-tabs {
   margin-left: -3px !important;
-  margin-right: -2.5px !important;
+  margin-right: -3px !important;
 }
 
 .tab-group-label {
@@ -3242,12 +3242,18 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
   margin-left: -140px !important;
+@media (-moz-platform: linux) {
+  margin-left: -137.5px !important;
+}
 }
 
 :has(tab-group) {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
   margin-left: -139px !important;
+@media (-moz-platform: linux) {
+  margin-left: -137.5px !important;
+}
 }
 }
 
@@ -3348,6 +3354,12 @@ tab-group[collapsed] > .tab-group-label-container > & {
 .tab-label-container,
 #tabbrowser-tabs .toolbarbutton-text {
   display: block !important;
+}
+
+@media (-moz-platform: linux) {
+.tab-content {
+  margin-left: -3px !important;
+}
 }
 
 @media (-moz-platform: windows) {
