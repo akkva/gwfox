@@ -159,6 +159,10 @@ input[type="checkbox"] {
 }
 }
 
+@-moz-document url-prefix("about:addons") {
+::after { content: none !important; }
+}
+
 @-moz-document url-prefix("about:preferences") {
 .navigation::after {
   content: none !important;
