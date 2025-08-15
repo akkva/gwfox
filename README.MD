@@ -18,15 +18,12 @@
   - Set these to true
     - `toolkit.legacyUserProfileCustomizations.stylesheets`
     - `svg.context-properties.content.enabled`
-    - _Windows:_<br>
-    `widget.windows.mica`<br>
-    `widget.windows.mica.toplevel-backdrop` set to `2`
-    - _Linux:_<br>
-    `widget.gtk.rounded-bottom-corners.enabled`
+    - _Linux:_ `widget.gtk.rounded-bottom-corners.enabled`
+    - _Windows:_ `widget.windows.mica`<br>
   - Set these to false
     - `sidebar.animation.enabled`
-    - _macOS:_<br>
-    `widget.macos.native-context-menus` (Optional)
+    - _macOS:_ `widget.macos.native-context-menus` (Optional)
+  - `widget.windows.mica.toplevel-backdrop` set to `2` (Windows)
 - Restart Firefox!
 
 ## Further customization
@@ -51,15 +48,12 @@ If you would like to have your Bookmark toolbar hidden at the bottom, address ba
 - 在 `about:config` 页面中搜索以下布尔值切换为 `true`
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
   - `svg.context-properties.content.enabled`
-  - _Windows:_<br>
-    `widget.windows.mica`<br>
-    `widget.windows.mica.toplevel-backdrop` set to `2`
-  - _Linux:_<br>
-    `widget.gtk.rounded-bottom-corners.enabled`
+  - _Linux:_ `widget.gtk.rounded-bottom-corners.enabled`
+  - _Windows:_ `widget.windows.mica`<br>
 - 以下布尔值切换为 `false`
   - `sidebar.animation.enabled`
-  - _macOS:_<br>
-    `widget.macos.native-context-menus` (可选项)
+  - _macOS:_ `widget.macos.native-context-menus` (可选项)
+- `widget.windows.mica.toplevel-backdrop` 设为 `2` (Windows)
 - 重启火狐
 
 ## 样式调整
