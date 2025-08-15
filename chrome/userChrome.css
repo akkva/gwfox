@@ -215,7 +215,7 @@
   left: 7px;
   top: 15.5px;
 @media (-moz-platform: windows) {
-@media not -moz-pref("gwfox.plus") {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_win") {
   left: unset;
   right: 0;
   top: 1px;
@@ -242,7 +242,7 @@
   grid-area: 2 / 1 / auto / auto;
   padding-left: 76px !important;
 @media (-moz-platform: windows) {
-@media not -moz-pref("gwfox.plus") {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_win") {
   padding-left: 0 !important;
 }
 }
@@ -257,7 +257,7 @@
   padding-inline-end: 77px !important;
   margin-bottom: 5.5px !important;
 @media (-moz-platform: windows) {
-@media not -moz-pref("gwfox.plus") {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_win") {
   padding-inline-end: 212px !important;
 }
 }
@@ -265,7 +265,7 @@
 :has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & {
   padding-inline-end: 111px !important;
 @media (-moz-platform: windows) {
-@media not -moz-pref("gwfox.plus") {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_win") {
   padding-inline-end: 246px !important;
 }
 }
@@ -280,7 +280,7 @@
   position: fixed;
   inset-inline-end: 3px;
 @media (-moz-platform: windows) {
-@media not -moz-pref("gwfox.plus") {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_win") {
   inset-inline-end: 138px;
 }
 }
@@ -290,7 +290,7 @@
   position: fixed;
   inset-inline-end: 43px;
 @media (-moz-platform: windows) {
-@media not -moz-pref("gwfox.plus") {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_win") {
   inset-inline-end: 178px;
 }
 }
@@ -301,7 +301,7 @@
   display: flex !important;
   inset-inline-end: 43px;
 @media (-moz-platform: windows) {
-@media not -moz-pref("gwfox.plus") {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_win") {
   inset-inline-end: 178px;
 }
 }
@@ -309,7 +309,7 @@
 :has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & {
   inset-inline-end: 77px;
 @media (-moz-platform: windows) {
-@media not -moz-pref("gwfox.plus") {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_win") {
   inset-inline-end: 212px;
 }
 }
@@ -4060,6 +4060,76 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 
+@media -moz-pref("gwfox.plus_win") {
+@media -moz-pref("sidebar.verticalTabs") {
+.titlebar-buttonbox-container {
+  position: unset !important;
+}
+
+#sidebar-box {
+  margin-top: 0 !important;
+}
+
+:root:not([inDOMFullscreen]) {
+#nav-bar {
+  margin-left: 18px !important;
+}
+
+:has(#sidebar-box:not([hidden])),
+:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
+#tabbrowser-tabpanels {
+  margin-top: 0 !important;
+}
+}
+}
+
+:root:not([chromehidden~="toolbar"], [customizing]):has(#sidebar-main[hidden]) {
+.titlebar-button {
+  padding: 0 2px !important;
+  scale: .78;
+  background-color: transparent !important;
+}
+
+.titlebar-buttonbox {
+&::before {
+  z-index: -1;
+}
+}
+}
+
+:has(#tabbrowser-tabs[expanded]) {
+:has(#sidebar-box:not([hidden])),
+:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
+#nav-bar .toolbarbutton-1:nth-child(5) {
+  margin-left: 0 !important;
+}
+}
+}
+
+:has(#tabbrowser-tabs:not([expanded])) {
+#nav-bar .toolbarbutton-1:first-child {
+  margin-right: 20px !important;
+}
+
+:has(#sidebar-box:not([hidden])),
+:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
+#nav-bar {
+  padding-left: 0 !important;
+}
+}
+}
+
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+:has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #tab-group-name:focus) {
+#nav-bar .toolbarbutton-1:first-child {
+  margin-right: 0 !important;
+}
+}
+}
+}
+}
+
+@media not -moz-pref("gwfox.plus_win") {
 .titlebar-buttonbox-container {
   left: 15px;
   top: 17.5px;
@@ -4146,6 +4216,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 }
+}
 
 @media not (-moz-platform: macos) {
 #toolbar-menubar {
@@ -4162,6 +4233,51 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 @media -moz-pref("sidebar.verticalTabs") {
   top: 10px;
+}
+}
+}
+}
+
+@media -moz-pref("gwfox.noborder") {
+:root:not([inDOMFullscreen], [chromehidden~="toolbar"]) {
+@media not -moz-pref("sidebar.verticalTabs") {
+#tabbrowser-tabbox browser {
+  border-radius: 0 !important;
+  clip-path: inset(0 round .1px) !important;
+}
+
+.browserStack,
+.devtools-toolbox-side-iframe,
+.devtools-toolbox-bottom-iframe {
+  border-radius: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+.devtools-toolbox-bottom-iframe {
+  margin-top: 8px !important;
+}
+
+.devtools-toolbox-side-iframe {
+&:first-child {
+  margin-left: 0 !important;
+  margin-right: 8px !important;
+}
+
+&:last-child {
+  margin-left: 8px !important;
+  margin-right: 0 !important;
+}
+}
+
+#PersonalToolbar {
+  margin: 0 !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+}
+
+#statuspanel-label {
+  border-radius: 0 !important;
 }
 }
 }
