@@ -3853,7 +3853,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 @media (prefers-color-scheme: dark) {
   box-shadow: var(--bs2) !important;
-@media (-moz-platform: macos) {
+@media not (-moz-platform: windows) {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
 }   
