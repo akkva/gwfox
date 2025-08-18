@@ -60,6 +60,9 @@
   @media (-moz-platform: linux) {
   --bg1: light-dark(#f5f6f6, #28282c);
   --bg2: light-dark(#fff, #36363a);
+  @media -moz-pref("gwfox.bms") {
+  --bg1: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
+  }
   }
 }
 
@@ -498,8 +501,10 @@
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--bs1) !important;
 @media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
   background-color: var(--bg2) !important;
   backdrop-filter: blur(0px) !important;
+}
 }
 }
 
@@ -525,8 +530,10 @@
   box-shadow: var(--bs1) !important;
   height: 50px !important;
 @media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
   background-color: var(--bg2) !important;
   backdrop-filter: blur(0px) !important;
+}
 }
 }
 
@@ -1364,7 +1371,9 @@ toolbarseparator[orient="vertical"] {
   margin-top: 80px !important;
 }
 @media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
   backdrop-filter: blur(0px) !important;
+}
 }
 }
 
@@ -1375,7 +1384,9 @@ toolbarseparator[orient="vertical"] {
 window[role="dialog"] {
   background-color: var(--bg4) !important;
 @media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
   background-color: var(--bg2) !important;
+}
 }
 }
 
@@ -1596,8 +1607,10 @@ richlistbox {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
 }
 @media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
   background-color: var(--bg2) !important;
   backdrop-filter: blur(0px) !important;
+}
 }
 }
 
@@ -1965,12 +1978,20 @@ richlistitem {
   display: unset;
 }
 
+#editBookmarkPanel .expander-up,
+#editBookmarkPanel .expander-down {
+  border: none !important;
+}
+
 menupopup, panel[type="arrow"] {
   --panel-shadow: var(--bs1) !important;
   --panel-shadow-margin: 18px !important;
   --panel-background: var(--bg2) !important;
   --panel-border-color: rgba(255, 255, 255, .1) !important;
   --arrowpanel-border-color: rgba(255, 255, 255, .1) !important;
+@media -moz-pref("gwfox.bms") {
+  --panel-background: light-dark(rgba(255, 255, 255, .98), rgba(25, 25, 25, .98)) !important;
+}
 }
 
 menupopup {
@@ -2357,7 +2378,9 @@ tab-group > .tabbrowser-tab,
   border-radius: 8px !important;
   backdrop-filter: blur(30px) !important;
 @media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
   backdrop-filter: blur(0px) !important;
+}
 }
 }
 
@@ -2368,7 +2391,9 @@ tab-group > .tabbrowser-tab,
   border-radius: 8px !important;
   min-height: 50px !important;
 @media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
   backdrop-filter: blur(0px) !important;
+}
 }
 }
 }
@@ -2633,8 +2658,10 @@ tab > stack {
   border-bottom-right-radius: 8px !important;
   overflow: initial !important;
 @media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
   background-color: var(--bg2) !important;
   backdrop-filter: blur(0px) !important;
+}
 }
 }
 
@@ -3819,8 +3846,10 @@ tab-group[collapsed] > .tab-group-label-container > & {
   height: calc(100% - 17px) !important;
 }
 @media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
   background-color: var(--bg2) !important;
   backdrop-filter: blur(0px) !important;
+}
 }
 @media (prefers-color-scheme: dark) {
   box-shadow: var(--bs2) !important;
