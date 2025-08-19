@@ -4111,6 +4111,12 @@ tab-group[collapsed] > .tab-group-label-container > & {
   position: unset !important;
 }
 
+.titlebar-buttonbox {
+&::before {
+  content: none !important;
+}
+}
+
 #sidebar-box {
   margin-top: 0 !important;
 }
@@ -4139,6 +4145,12 @@ tab-group[collapsed] > .tab-group-label-container > & {
 &::before {
   z-index: -1;
 }
+}
+}
+
+:has(.titlebar-buttonbox:hover) {
+#tabbrowser-tabpanels {
+  margin-top: 0 !important;
 }
 }
 
