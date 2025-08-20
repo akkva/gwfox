@@ -403,11 +403,12 @@
 #urlbar-input::placeholder,
 .searchbar-textbox::placeholder {
   text-align: left !important;
+  font-size: 12.5px !important;
 }
 
 #urlbar-input {
   text-align: center !important;
-  font-size: 13px !important;
+  font-size: 1em !important;
   margin-bottom: 1px !important;
 }
 
@@ -455,7 +456,8 @@
   margin-top: 25px !important;
   transition: margin .25s !important;
 
-#urlbar-input {
+#urlbar-input,
+#urlbar-input::placeholder {
   font-size: 21px !important;
 }
 
