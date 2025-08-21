@@ -2271,7 +2271,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 
 .actions-list {
-  display: var(--display, inherit) !important;
+  display: var(--dp, inherit) !important;
 &:has(.expanded-button) {
   display: flex !important;
 }
@@ -2287,7 +2287,7 @@ button:has([src="chrome://global/skin/icons/settings.svg"]) {
 }
 
 #sidebar-tools-and-extensions-splitter {
-  display: var(--display) !important;
+  display: var(--dp) !important;
   width: 10px !important;
   margin-inline: auto !important;
   margin-block-start: 15px !important;
@@ -2446,6 +2446,7 @@ tab-group > .tabbrowser-tab,
 
 :has(#tabbrowser-tabs[expanded]) {
   --mtb: none;
+  --dp: flex;
 
 #sidebar-main {
   min-width: 221px !important;
@@ -3335,7 +3336,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
 :has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #tab-group-name:focus) {
 :has(#tabbrowser-tabs:not([expanded])) {
---display: none;
+--dp: none;
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) .searchmode-switcher,
@@ -3965,7 +3966,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
---display: none;
+--dp: none;
 }
 
 :has(#sidebar-main:hover, #urlbar:not([breakout][breakout-extend])[persistsearchterms]:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], .tab-throbber[busy], #tab-group-name:focus, .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher[open], #urlbar:not([breakout][breakout-extend], [usertyping]) .searchmode-switcher[open]) {
