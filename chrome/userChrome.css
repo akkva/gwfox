@@ -408,8 +408,10 @@
 
 #urlbar-input {
   text-align: center !important;
-  font-size: 1em !important;
   margin-bottom: 1px !important;
+@media (-moz-platform: linux) {
+  font-size: 13px !important;
+}
 }
 
 .urlbar-input-container[pageproxystate="invalid"] #urlbar-input {
