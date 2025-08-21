@@ -34,14 +34,6 @@
 - Add `gwfox.atbc` to enable [Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour)
 - Add `gwfox.bms` enable blur effects using [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell)
 
-
-<details><summary>Preview</summary>
-<br>
-
-[01.webm](https://github.com/user-attachments/assets/0f24f538-67eb-42e2-a483-b4a8a8e75603)
-
-</details>
-
 ## 简介
 
 - 本主题适用Firefox 138+ macOS, Linux & Windows
@@ -67,10 +59,3 @@
 - 移除水平标签页的边框：添加 `gwfox.noborder` 设为 `true`
 - 添加 `gwfox.atbc` 启用 [变色标签栏](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour)
 - 添加 `gwfox.bms` 使用 [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell) 启用模糊特效
-
-<details><summary>预览</summary>
-<br>
-
-[01.webm](https://github.com/user-attachments/assets/0f24f538-67eb-42e2-a483-b4a8a8e75603)
-
-</details>
