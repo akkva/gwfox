@@ -8,6 +8,10 @@
   --bg4: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15);
   --bs2: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5);
+  --button-background-color-primary: light-dark(#2b87fb, #3078ef) !important;
+  --button-background-color-primary-hover: light-dark(#2b87fb, #3078ef) !important;
+  --button-background-color-primary-active: light-dark(#1c66e8, #225cca) !important;
+  --button-text-color-primary: #fff !important;
   @media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
   --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15);    
@@ -37,6 +41,11 @@
   --color-accent-primary: #1280fd !important;
   --color-accent-primary-active: #0b66ca !important;
   --color-gray-80: #282828 !important;
+  --color-gray-90: #191919 !important;
+}
+
+:root[dialogroot] {
+  --background-color-canvas: #191919 !important;
 }
 
 .home-section .section .sponsored-checkbox:checked:hover {
@@ -57,6 +66,7 @@ body { background-color: #191919 !important; }
   --toolbar-button-background-active: #2b2b2b !important;
   --fxview-background-color: #191919 !important;
   --in-content-page-background: #191919 !important;
+  --background-color-canvas: #191919 !important;
 }
 
 .toggle-button {
