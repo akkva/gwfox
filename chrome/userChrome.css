@@ -380,6 +380,7 @@
 }
 
 .urlbar-revert-button,
+.searchmode-switcher,
 #urlbar-searchmode-switcher {
   height: 28px !important;
   width: 28px !important;
@@ -389,21 +390,24 @@
 }
 }
 
+.searchmode-switcher-dropmarker,
 #searchmode-switcher-dropmarker {
   display: none !important;
 }
 
+.searchmode-switcher-chicklet,
 #searchmode-switcher-chicklet {
   height: 28px !important;
   border-radius: 16px !important;
 }
 
+#urlbar[usertyping] .searchmode-switcher-chicklet,
 #urlbar[usertyping] #searchmode-switcher-chicklet {
   margin-left: 7px !important;
 }
 
 #urlbar[breakout][breakout-extend]:not([usertyping]) {
-#urlbar-searchmode-switcher {
+.searchmode-switcher, #urlbar-searchmode-switcher {
   display: none !important;
 }
 
@@ -442,13 +446,13 @@
   border-radius: 6px !important;
 }
 
-#urlbar-input::placeholder,
+.urlbar-input::placeholder,
 .searchbar-textbox::placeholder {
   text-align: left !important;
   font-size: 12.5px !important;
 }
 
-#urlbar-input {
+.urlbar-input {
   text-align: center !important;
   margin-bottom: 1px !important;
 @media (-moz-platform: linux) {
@@ -456,7 +460,7 @@
 }
 }
 
-.urlbar-input-container[pageproxystate="invalid"] #urlbar-input {
+.urlbar-input-container[pageproxystate="invalid"] .urlbar-input {
   mask-image: linear-gradient(to left, transparent, #fff 10ch);
   text-align: left !important;
 }
@@ -482,6 +486,8 @@
 #urlbar:not([breakout][breakout-extend]) {
   transform: none !important;
 
+.searchmode-switcher-close,
+.searchmode-switcher-title,
 #searchmode-switcher-close,
 #searchmode-switcher-title {
   display: none !important;
@@ -500,8 +506,8 @@
   margin-top: 25px !important;
   transition: margin .25s !important;
 
-#urlbar-input,
-#urlbar-input::placeholder {
+.urlbar-input,
+.urlbar-input::placeholder {
   font-size: 21px !important;
 }
 
@@ -535,6 +541,7 @@
   margin-top: 13px !important;
 }
 
+.searchmode-switcher-title,
 #searchmode-switcher-title {
   margin-left: 10px !important;
 }
@@ -582,8 +589,8 @@
 }
 }
 
-#urlbar-input,
-#urlbar-input::placeholder {
+.urlbar-input,
+.urlbar-input::placeholder {
   text-align: left !important;
 }
 
@@ -592,8 +599,8 @@
   height: unset !important;
 }
 
-#urlbar-input,
-#urlbar-input::placeholder {
+.urlbar-input,
+.urlbar-input::placeholder {
   text-align: left !important;
 }
 }
@@ -607,7 +614,7 @@
 }
 }
 
-#urlbar-input {
+.urlbar-input {
   font-size: 21px !important;
 }
 
@@ -620,7 +627,7 @@
   margin-top: 13px !important;
 }
 
-#urlbar-searchmode-switcher {
+.searchmode-switcher, #urlbar-searchmode-switcher {
   margin-top: 10px !important;
 }
 }
@@ -650,6 +657,7 @@
 
 :has(#urlbar[breakout][breakout-extend]) {
 .urlbar-revert-button,
+.searchmode-switcher,
 #urlbar-searchmode-switcher {
   margin-top: 10px !important;
 }
@@ -658,6 +666,7 @@
 :has(#identity-box[pageproxystate="valid"].extensionPage) {
 .urlbar-page-action,
 .identity-box-button,
+.searchmode-switcher,
 #urlbar-searchmode-switcher,
 #tracking-protection-icon-container {
   display: none !important;
@@ -676,7 +685,7 @@
 }
 }
 
-.urlbar-input-container[pageproxystate="valid"] #urlbar-input {
+.urlbar-input-container[pageproxystate="valid"] .urlbar-input {
   text-align: left !important;
 }
 
@@ -2195,6 +2204,7 @@ menupopup {
   fill: currentColor;
 }
 
+.searchmode-switcher-icon,
 #searchmode-switcher-icon {
   fill: light-dark(#525252, #c9c9cb) !important;
 &:not([style*=".svg"]) {
@@ -2889,6 +2899,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 .urlbar-revert-button,
+.searchmode-switcher,
 #urlbar-searchmode-switcher {
   margin-top: 1px !important;
 }
@@ -3288,7 +3299,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #urlbar:not([breakout][breakout-extend])[persistsearchterms] {
   width: 62px !important;
 
-#urlbar-searchmode-switcher {
+.searchmode-switcher, #urlbar-searchmode-switcher {
   margin-left: 16px !important;
   margin-right: 16px !important;
 }
@@ -3298,6 +3309,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   width: 82px;
 }
 
+#urlbar:not([breakout][breakout-extend], [usertyping]) .searchmode-switcher,
 #urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher {
   margin-left: 16px !important;
   margin-right: 16px !important;
@@ -3345,6 +3357,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 --display: none;
 }
 
+#urlbar:not([breakout][breakout-extend], [usertyping]) .searchmode-switcher,
 #urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher {
   margin-left: 0 !important;
   margin-right: 6px !important;
@@ -3866,12 +3879,13 @@ tab-group[collapsed] > .tab-group-label-container > & {
   top: 55px !important;
   left: -258px !important;
   opacity: 0;
-#urlbar-searchmode-switcher {
+.searchmode-switcher, #urlbar-searchmode-switcher {
   margin-left: unset !important;
   margin-right: unset !important;
 }
 }
 
+#urlbar:not([breakout][breakout-extend], [usertyping]) .searchmode-switcher,
 #urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher {
   margin-left: unset !important;
   margin-right: 7px !important;
@@ -3973,7 +3987,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 --display: none;
 }
 
-:has(#sidebar-main:hover, #urlbar:not([breakout][breakout-extend])[persistsearchterms]:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], .tab-throbber[busy], #tab-group-name:focus, .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher[open]) {
+:has(#sidebar-main:hover, #urlbar:not([breakout][breakout-extend])[persistsearchterms]:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], .tab-throbber[busy], #tab-group-name:focus, .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher[open], #urlbar:not([breakout][breakout-extend], [usertyping]) .searchmode-switcher[open]) {
 .titlebar-buttonbox-container {
   left: 7px;
   opacity: 1;
