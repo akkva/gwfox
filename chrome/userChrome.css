@@ -229,6 +229,13 @@
 }
 }
 }
+@media (-moz-platform: linux) {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_linux") {
+  left: unset;
+  right: 8px;
+  top: 10px;
+}
+}
 }
 
 .titlebar-spacer, #nav-bar:not([customizing]) toolbarspring {
@@ -249,6 +256,11 @@
   padding-left: 0 !important;
 }
 }
+@media (-moz-platform: linux) {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_linux") {
+  padding-left: 0 !important;
+}
+}
 }
 
 #urlbar-container {
@@ -264,12 +276,22 @@
   padding-inline-end: 212px !important;
 }
 }
+@media (-moz-platform: linux) {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_linux") {
+  padding-inline-end: 172px !important;
+}
+}
 
 :has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & {
   padding-inline-end: 111px !important;
 @media (-moz-platform: windows) {
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_win") {
   padding-inline-end: 246px !important;
+}
+}
+@media (-moz-platform: linux) {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_linux") {
+  padding-inline-end: 206px !important;
 }
 }
 }
@@ -287,6 +309,11 @@
   inset-inline-end: 138px;
 }
 }
+@media (-moz-platform: linux) {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_linux") {
+  inset-inline-end: 98px;
+}
+}
 }
 
 #nav-bar-overflow-button {
@@ -295,6 +322,11 @@
 @media (-moz-platform: windows) {
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_win") {
   inset-inline-end: 178px;
+}
+}
+@media (-moz-platform: linux) {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_linux") {
+  inset-inline-end: 138px;
 }
 }
 }
@@ -308,12 +340,22 @@
   inset-inline-end: 178px;
 }
 }
+@media (-moz-platform: linux) {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_linux") {
+  inset-inline-end: 138px;
+}
+}
 
 :has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & {
   inset-inline-end: 77px;
 @media (-moz-platform: windows) {
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_win") {
   inset-inline-end: 212px;
+}
+}
+@media (-moz-platform: linux) {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_linux") {
+  inset-inline-end: 172px;
 }
 }
 }
@@ -1973,10 +2015,6 @@ richlistitem {
 }
 }
 
-#nav-bar {
-  padding-left: 76px !important;
-}
-
 #context-navigation .menu-icon {
   display: unset;
 }
@@ -2005,13 +2043,25 @@ menupopup {
   background: var(--bg1) !important;
 }
 
+@media -moz-pref("sidebar.verticalTabs") {
+@media not -moz-pref("gwfox.plus") {
 .titlebar-buttonbox-container {
-  position: absolute !important;
+  margin-top: -5px;
+  margin-right: 8px;
+}
+}
+}
+
+@media -moz-pref("gwfox.plus") {
+@media not -moz-pref("gwfox.plus_linux") {
+#nav-bar {
+  padding-left: 76px !important;
+}
+
+.titlebar-buttonbox-container {
+  position: fixed !important;
   left: 15px;
   top: 15.5px;
-@media -moz-pref("gwfox.plus") {
-  position: fixed !important;
-}
 }
 
 .titlebar-button {
@@ -2077,6 +2127,8 @@ menupopup {
   content: url("resources/titlebar-restore-active.svg") !important;
 @media (prefers-color-scheme: dark) {
   content: url("resources/titlebar-restore-active-dark.svg") !important;
+}
+}
 }
 }
 }
@@ -2851,7 +2903,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   border-radius: 8px;
   background: var(--button-active-bgcolor);
   pointer-events: none;
-@media (-moz-platform: windows) {
+@media not (-moz-platform: macos) {
   background: light-dark(rgba(120, 120, 120, .1), rgba(155, 155, 155, .2));
 }
 }
@@ -4108,87 +4160,6 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 
-@media -moz-pref("gwfox.plus_win") {
-@media -moz-pref("sidebar.verticalTabs") {
-.titlebar-buttonbox-container {
-  position: unset !important;
-}
-
-.titlebar-buttonbox {
-&::before {
-  content: none !important;
-}
-}
-
-#sidebar-box {
-  margin-top: 0 !important;
-}
-
-:root:not([inDOMFullscreen]) {
-#nav-bar {
-  margin-left: 18px !important;
-}
-
-:has(#sidebar-box:not([hidden])),
-:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
-#tabbrowser-tabpanels {
-  margin-top: 0 !important;
-}
-}
-}
-
-:root:not([chromehidden~="toolbar"], [customizing]):has(#sidebar-main[hidden]) {
-.titlebar-button {
-  padding: 0 2px !important;
-  scale: .78;
-  background-color: transparent !important;
-}
-
-.titlebar-buttonbox {
-&::before {
-  z-index: -1;
-}
-}
-}
-
-:has(.titlebar-buttonbox:hover) {
-#tabbrowser-tabpanels {
-  margin-top: 0 !important;
-}
-}
-
-:has(#tabbrowser-tabs[expanded]) {
-:has(#sidebar-box:not([hidden])),
-:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
-#nav-bar .toolbarbutton-1:nth-child(5) {
-  margin-left: 0 !important;
-}
-}
-}
-
-:has(#tabbrowser-tabs:not([expanded])) {
-#nav-bar .toolbarbutton-1:first-child {
-  margin-right: 20px !important;
-}
-
-:has(#sidebar-box:not([hidden])),
-:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
-#nav-bar {
-  padding-left: 0 !important;
-}
-}
-}
-
-@media -moz-pref("sidebar.visibility", "expand-on-hover") {
-:has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #tab-group-name:focus) {
-#nav-bar .toolbarbutton-1:first-child {
-  margin-right: 0 !important;
-}
-}
-}
-}
-}
-
 @media not -moz-pref("gwfox.plus_win") {
 .titlebar-buttonbox-container {
   left: 15px;
@@ -4293,6 +4264,91 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 @media -moz-pref("sidebar.verticalTabs") {
   top: 10px;
+}
+}
+
+@media -moz-pref("gwfox.plus_win") or -moz-pref("gwfox.plus_linux") {
+@media -moz-pref("sidebar.verticalTabs") {
+.titlebar-buttonbox-container {
+  position: unset !important;
+@media (-moz-platform: linux) {
+  margin-top: -5px !important;
+  margin-right: 8px;
+}
+}
+
+.titlebar-buttonbox {
+&::before {
+  content: none !important;
+}
+}
+
+#sidebar-box {
+  margin-top: 0 !important;
+}
+
+:root:not([inDOMFullscreen]) {
+#nav-bar {
+  margin-left: 18px !important;
+}
+
+:has(#sidebar-box:not([hidden])),
+:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
+#tabbrowser-tabpanels {
+  margin-top: 0 !important;
+}
+}
+}
+
+:root:not([chromehidden~="toolbar"], [customizing]):has(#sidebar-main[hidden]) {
+.titlebar-button {
+  padding: 0 2px !important;
+  scale: .78;
+  background-color: transparent !important;
+}
+
+.titlebar-buttonbox {
+&::before {
+  z-index: -1;
+}
+}
+}
+
+:has(.titlebar-buttonbox:hover) {
+#tabbrowser-tabpanels {
+  margin-top: 0 !important;
+}
+}
+
+:has(#tabbrowser-tabs[expanded]) {
+:has(#sidebar-box:not([hidden])),
+:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
+#nav-bar .toolbarbutton-1:nth-child(5) {
+  margin-left: 0 !important;
+}
+}
+}
+
+:has(#tabbrowser-tabs:not([expanded])) {
+#nav-bar .toolbarbutton-1:first-child {
+  margin-right: 20px !important;
+}
+
+:has(#sidebar-box:not([hidden])),
+:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
+#nav-bar {
+  padding-left: 0 !important;
+}
+}
+}
+
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+:has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #tab-group-name:focus) {
+#nav-bar .toolbarbutton-1:first-child {
+  margin-right: 0 !important;
+}
+}
+}
 }
 }
 }
