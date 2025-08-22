@@ -229,7 +229,6 @@
 }
 }
 @media (-moz-platform: linux) {
-  right: 8px;
   top: 11px;
 }
 }
@@ -268,7 +267,7 @@
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   padding-inline-end: 212px !important;
 @media (-moz-platform: linux) {
-  padding-inline-end: 172px !important;
+  padding-inline-end: 187px !important;
 }
 }
 }
@@ -279,7 +278,7 @@
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   padding-inline-end: 246px !important;
 @media (-moz-platform: linux) {
-  padding-inline-end: 206px !important;
+  padding-inline-end: 221px !important;
 }
 }
 }
@@ -297,7 +296,7 @@
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   inset-inline-end: 138px;
 @media (-moz-platform: linux) {
-  inset-inline-end: 98px;
+  inset-inline-end: 113px;
 }
 }
 }
@@ -310,7 +309,7 @@
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   inset-inline-end: 178px;
 @media (-moz-platform: linux) {
-  inset-inline-end: 138px;
+  inset-inline-end: 153px;
 }
 }
 }
@@ -324,7 +323,7 @@
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   inset-inline-end: 178px;
 @media (-moz-platform: linux) {
-  inset-inline-end: 138px;
+  inset-inline-end: 153px;
 }
 }
 }
@@ -335,7 +334,7 @@
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   inset-inline-end: 212px;
 @media (-moz-platform: linux) {
-  inset-inline-end: 172px;
+  inset-inline-end: 187px;
 }
 }
 }
@@ -2062,8 +2061,7 @@ menuitem[type="radio"][disabled="true"] .menu-icon {
 @media -moz-pref("sidebar.verticalTabs") {
 @media not -moz-pref("gwfox.plus") {
 .titlebar-buttonbox-container {
-  padding-bottom: 3px;
-  padding-right: 8px;
+  padding-bottom: 2px;
 }
 }
 }
@@ -4290,8 +4288,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 .titlebar-buttonbox-container {
   position: unset !important;
 @media (-moz-platform: linux) {
-  padding-bottom: 3px;
-  padding-right: 8px;
+  padding-bottom: 2px;
 }
 }
 
