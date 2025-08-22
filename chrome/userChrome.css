@@ -4407,11 +4407,15 @@ tab-group[collapsed] > .tab-group-label-container > & {
 #PersonalToolbar {
   margin: 0 !important;
   width: 100% !important;
+@media not (-moz-platform: linux) {
   border-radius: 0 !important;
+}
 }
 
 #statuspanel-label {
+@media not (-moz-platform: linux) {
   border-radius: 0 !important;
+}
 }
 }
 }
