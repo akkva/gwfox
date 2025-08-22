@@ -4414,6 +4414,24 @@ tab-group[collapsed] > .tab-group-label-container > & {
   border-radius: 0 !important;
 }
 }
+
+:has(#sidebar-main:not([hidden])) {
+#PersonalToolbar {
+  width: calc(100% - 50px) !important;
+}
+}
+
+:has(#sidebar-box:not([hidden])) {
+#PersonalToolbar {
+  width: calc(100% - 330px) !important;
+}
+}
+
+:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
+#PersonalToolbar {
+  width: calc(100% - 450px) !important;
+}
+}
 }
 }
 }
