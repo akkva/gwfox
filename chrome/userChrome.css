@@ -230,7 +230,7 @@
 }
 @media (-moz-platform: linux) {
   right: 8px;
-  top: 10px;
+  top: 11px;
 }
 }
 }
@@ -2029,6 +2029,32 @@ menupopup {
   margin: -18px -18px -5px !important;
 }
 
+menuitem[type="checkbox"] image, menuitem[type="radio"] image {
+  appearance: none !important;
+}
+
+menuitem[type="checkbox"][checked="true"] {
+  list-style-image: url("resources/check.svg") !important;
+}
+
+menuitem[type="radio"][checked="true"] {
+  list-style-image: url("resources/radio.svg") !important;
+}
+
+menuitem[type="radio"] .menu-icon {
+  border-radius: 50%;
+  border: 2px solid rgba(165, 165, 165, .8);
+}
+
+menuitem[type="radio"][checked="true"] .menu-icon {
+  background-color: light-dark(#4481f2, #1280fd);
+  border: none;
+}
+
+menuitem[type="radio"][disabled="true"] .menu-icon {
+  opacity: .5;
+}
+
 #customization-container {
   background: var(--bg1) !important;
 }
@@ -2036,8 +2062,8 @@ menupopup {
 @media -moz-pref("sidebar.verticalTabs") {
 @media not -moz-pref("gwfox.plus") {
 .titlebar-buttonbox-container {
-  margin-top: -5px;
-  margin-right: 8px;
+  padding-bottom: 3px;
+  padding-right: 8px;
 }
 }
 }
@@ -2190,16 +2216,6 @@ menupopup {
   fill: light-dark(#525252, #c9c9cb) !important;
 &:not([style*=".svg"]) {
   content: url("chrome://global/skin/icons/search-glass.svg");
-}
-}
-
-@media (-moz-platform: linux) {
-@media not -moz-pref("gwfox.plus") {
-#toolbar-menubar {
-.titlebar-buttonbox-container {
-  visibility: collapse;
-}
-}
 }
 }
 
@@ -4274,8 +4290,8 @@ tab-group[collapsed] > .tab-group-label-container > & {
 .titlebar-buttonbox-container {
   position: unset !important;
 @media (-moz-platform: linux) {
-  margin-top: -5px !important;
-  margin-right: 8px;
+  padding-bottom: 3px;
+  padding-right: 8px;
 }
 }
 
