@@ -8,9 +8,9 @@
   --bg4: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15);
   --bs2: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5);
-  --button-background-color-primary: light-dark(#2b87fb, #3078ef) !important;
-  --button-background-color-primary-hover: light-dark(#2b87fb, #3078ef) !important;
-  --button-background-color-primary-active: light-dark(#1c66e8, #225cca) !important;
+  --button-background-color-primary: light-dark(#0062fa, #1280fd) !important;
+  --button-background-color-primary-hover: light-dark(#2477ff, #006bdc) !important;
+  --button-background-color-primary-active: light-dark(#3f94ff, #0055bc) !important;
   --button-text-color-primary: #fff !important;
   @media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
@@ -26,8 +26,8 @@
   --checkbox-checked-hover-bgcolor: #1280fd !important;
   --checkbox-checked-active-bgcolor: #417bde !important;
   --in-content-primary-button-background: #1280fd !important;
-  --in-content-primary-button-background-hover: #1280fd !important;
-  --in-content-primary-button-background-active: #417bde !important;
+  --in-content-primary-button-background-hover: #006bdc !important;
+  --in-content-primary-button-background-active: #0055bc !important;
   --in-content-primary-button-text-color: #fff !important;
   --link-color: #1280fd !important;
   --link-color-hover: #1280fd !important;
@@ -126,10 +126,7 @@ input[type="checkbox"] {
   border-radius: 2px !important;
   border: 2px solid rgba(165, 165, 165, .8) !important;
   &:checked {
-  background-color: light-dark(#4481f2, #1280fd) !important;
-  background-image: url("resources/check.svg") !important;
-  border: none !important;
-  &:hover:active { background-color: light-dark(#0a4eb8, #417bde) !important; }
+  appearance: checkbox !important;
 }
 }
 
@@ -139,10 +136,7 @@ input[type="checkbox"] {
   border-radius: 2px !important;
   border: 2px solid rgba(165, 165, 165, .8) !important;
   &[checked] {
-  background-color: light-dark(#4481f2, #1280fd) !important;
-  background-image: url("resources/check.svg") !important;
-  border: none !important;
-  &:hover:active { background-color: light-dark(#0a4eb8, #417bde) !important; }
+  appearance: checkbox !important;
 }
 }
 
@@ -152,10 +146,13 @@ input[type="checkbox"] {
   border-radius: 50% !important;
   border: 2px solid rgba(165, 165, 165, .8) !important;
   &[selected] {
-  background-color: light-dark(#4481f2, #1280fd) !important;
-  background-image: url("resources/radio.svg") !important;
+  background-color: light-dark(#0062fa, #1280fd) !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4'/%3E%3C/svg%3E") !important;
+  -moz-context-properties: fill;
+  fill: #fff;
   border: none !important;
-  &:hover:active { background-color: light-dark(#0a4eb8, #417bde) !important; }
+  &:hover { background-color: light-dark(#2477ff, #006bdc) !important; }
+  &:hover:active { background-color: light-dark(#3f94ff, #0055bc) !important; }
 }
 }
 }
@@ -184,10 +181,13 @@ input[type="radio"] {
   border-radius: 50% !important;
   border: 2px solid rgba(165, 165, 165, .8) !important;
   &:checked {
-  background-color: light-dark(#4481f2, #1280fd) !important;
-  background-image: url("resources/radio.svg") !important;
+  background-color: light-dark(#0062fa, #1280fd) !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4'/%3E%3C/svg%3E") !important;
+  -moz-context-properties: fill;
+  fill: #fff;
   border: none !important;
-  &:hover:active { background-color: light-dark(#0a4eb8, #417bde) !important; }
+  &:hover { background-color: light-dark(#2477ff, #006bdc) !important; }
+  &:hover:active { background-color: light-dark(#3f94ff, #0055bc) !important; }
 }
 }
 }
@@ -213,7 +213,7 @@ body {
 .search-handoff-button {
   background-color: rgba(15, 15, 15, .7) !important;
   border-radius: 12px !important;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
   backdrop-filter: blur(30px) !important;
   outline: none !important;
   border: none !important;
@@ -228,7 +228,7 @@ body {
 
 .search-handoff-button.disabled {
   opacity: 1 !important;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
   fill: rgba(255, 255, 255, .6) !important;
 }
 
@@ -264,9 +264,16 @@ body {
 body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important; }
 
 *[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"] {
-  background-image: url("resources/light.jpg") !important;
+  background-image: repeating-linear-gradient(-45deg, #f0f0f0 0 250px, #fdfdfd 0 500px) !important;
 @media (prefers-color-scheme: dark) {
-  background-image: url("resources/dark.jpg") !important;
+  background-image: repeating-linear-gradient(-45deg, #2d2d2d 0 250px, #202020 0 500px) !important;
+}
+}
+
+.wallpaper-input[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"] {
+  background-image: repeating-linear-gradient(-45deg, #f0f0f0 0 50px, #fdfdfd 0 100px) !important;
+@media (prefers-color-scheme: dark) {
+  background-image: repeating-linear-gradient(-45deg, #2d2d2d 0 50px, #202020 0 100px) !important;
 }
 }
 
@@ -339,7 +346,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   background-color: light-dark(rgba(255, 255, 255, .8), rgba(15, 15, 15, .7)) !important;
   backdrop-filter: blur(30px) !important;
   opacity: 1 !important;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
@@ -355,7 +362,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 .search-inner-wrapper {
   background-color: light-dark(rgba(255, 255, 255, .8), rgba(15, 15, 15, .7)) !important;
   border-radius: 12px !important;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
   transition: background .5s !important;
   z-index: 1;
 @media (-moz-platform: linux) {
@@ -547,7 +554,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
   border-radius: 16px !important;
   width: 72px !important;
   height: 72px !important;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
   border: none !important;
   transition: background .5s !important;
 }
@@ -605,7 +612,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 
 .context-menu-button.icon {
   border-radius: 50px !important;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
 }
 
 [data-l10n-id="newtab-custom-recent-toggle"],
@@ -662,7 +669,7 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 .customize-menu {
   background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
   margin: 11px 11px 0 0 !important;
   height: 98% !important;
 @media (-moz-platform: linux) {
@@ -694,7 +701,8 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 }
 
 .weatherCard, .personalize-button {
-  box-shadow: 0 2px 15px rgba(0, 0, 0, .2) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
+  border-radius: var(--border-radius-medium) !important;
 }
 
 .weatherSponsorText {
