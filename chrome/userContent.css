@@ -120,7 +120,7 @@ search-textbox {
   outline-width: 18px !important;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"]:not(.reveal-password-checkbox) {
   appearance: none !important;
   background-color: transparent !important;
   border-radius: 2px !important;
@@ -130,7 +130,7 @@ input[type="checkbox"] {
 }
 }
 
-input[type="radio"] {
+input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]) {
   appearance: none !important;
   background-color: transparent !important;
   border-radius: 50% !important;
@@ -261,19 +261,11 @@ body {
 }
 
 @-moz-document url("about:newtab"), url("about:home") {
-body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important; }
-
-*[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"] {
-  background-image: repeating-linear-gradient(-45deg, #f0f0f0 0 250px, #fdfdfd 0 500px) !important;
+body { 
+  --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
+  background-image: var(--newtab-wallpaper, ""), repeating-linear-gradient(-45deg, #f0f0f0 0 250px, #fdfdfd 0 500px) !important;
 @media (prefers-color-scheme: dark) {
-  background-image: repeating-linear-gradient(-45deg, #2d2d2d 0 250px, #202020 0 500px) !important;
-}
-}
-
-.wallpaper-input[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"] {
-  background-image: repeating-linear-gradient(-45deg, #f0f0f0 0 50px, #fdfdfd 0 100px) !important;
-@media (prefers-color-scheme: dark) {
-  background-image: repeating-linear-gradient(-45deg, #2d2d2d 0 50px, #202020 0 100px) !important;
+  background-image: var(--newtab-wallpaper, ""), repeating-linear-gradient(-45deg, #2d2d2d 0 250px, #202020 0 500px) !important;
 }
 }
 
@@ -486,19 +478,6 @@ body { --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") 
 @media not (prefers-color-scheme: dark) {
 .darkWallpaper .top-site-outer .context-menu {
   color-scheme: light !important;
-}
-
-:has(body[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"]) {
-.personalize-button:not(:hover, :active),
-.top-site-outer .context-menu-button,
-.top-site-outer:not(:hover, :active, .active),
-.logo-and-wordmark .wordmark, .icon.icon-pin-small {
-  color-scheme: light !important;
-}
-
-.top-site-outer .title {
-  color: #000 !important;
-}
 }
 }
 
