@@ -130,6 +130,22 @@ input[type="checkbox"] {
 }
 }
 
+input[type="radio"] {
+  appearance: none !important;
+  background-color: transparent !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(165, 165, 165, .8) !important;
+  &:checked {
+  background-color: light-dark(#007aff, #1280fd) !important;
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4'/%3E%3C/svg%3E") !important;
+  -moz-context-properties: fill;
+  fill: #fff;
+  border: none !important;
+  &:hover { background-color: light-dark(#0075dd, #006bdc) !important; }
+  &:hover:active { background-color: light-dark(#005ebb, #0055bc) !important; }
+}
+}
+
 .checkbox-check {
   appearance: none !important;
   background-color: transparent !important;
@@ -147,7 +163,7 @@ input[type="checkbox"] {
   border: 2px solid rgba(165, 165, 165, .8) !important;
   &[selected] {
   background-color: light-dark(#007aff, #1280fd) !important;
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4'/%3E%3C/svg%3E") !important;
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4'/%3E%3C/svg%3E") !important;
   -moz-context-properties: fill;
   fill: #fff;
   border: none !important;
@@ -173,22 +189,6 @@ input[type="checkbox"] {
 @-moz-document url-prefix("about:preferences") {
 .navigation::after {
   content: none !important;
-}
-
-input[type="radio"] {
-  appearance: none !important;
-  background-color: transparent !important;
-  border-radius: 50% !important;
-  border: 2px solid rgba(165, 165, 165, .8) !important;
-  &:checked {
-  background-color: light-dark(#007aff, #1280fd) !important;
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4'/%3E%3C/svg%3E") !important;
-  -moz-context-properties: fill;
-  fill: #fff;
-  border: none !important;
-  &:hover { background-color: light-dark(#0075dd, #006bdc) !important; }
-  &:hover:active { background-color: light-dark(#005ebb, #0055bc) !important; }
-}
 }
 }
 
