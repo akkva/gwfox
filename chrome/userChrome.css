@@ -2044,8 +2044,16 @@ menuitem[type="radio"] .menu-icon {
 }
 
 menuitem[type="radio"][checked="true"] .menu-icon {
-  background-color: light-dark(#4481f2, #1280fd);
+  background-color: light-dark(#007aff, #1280fd);
   border: none;
+}
+
+menuitem[type="radio"][checked="true"]:hover .menu-icon {
+  background-color: light-dark(#0075dd, #006bdc);
+}
+
+menuitem[type="radio"][checked="true"]:active .menu-icon {
+  background-color: light-dark(#005ebb, #0055bc);
 }
 
 menuitem[type="radio"][disabled="true"] .menu-icon {
