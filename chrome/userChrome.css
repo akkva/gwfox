@@ -2070,14 +2070,14 @@ menuitem[type="radio"][disabled="true"] .menu-icon {
 #back-button {
   list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 4.2,8.37 6.3,5.92 a 0.72,0.68 0 0 0 1.02,-0.96 L 5.83,7.99 11.52,2.65 A 0.72,0.68 0 0 0 10.5,1.69 L 4.2,7.61 Z'/%3E%3C/svg%3E") !important;
 @media -moz-pref("sidebar.verticalTabs") {
-  list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.375 8 3.048 8l4.308-4.308a.626.626 0 0 0-.885-.885L1 8.281l0 .689 5.472 5.473a.623.623 0 0 0 .884 0 .628.628 0 0 0 0-.885L3.048 9.25l11.327 0a.625.625 0 0 0 0-1.25z'/%3E%3C/svg%3E") !important;
+  list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.375 8 3.048 8l4.308-4.308a.626.626 0 0 0-.885-.885L1 8.281l0 .689 5.472 5.473a.623.623 0 0 0 .884 0 .628.628 0 0 0 0-.885L3.048 9.25l11.327 0a.625.625 0 0 0 0-1.25z'/%3E%3C/svg%3E") !important;
 }
 }
 
 #forward-button {
   list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 11.72,8.37 5.42,14.29 A 0.72,0.68 0 0 1 4.4,13.33 L 10.09,7.99 4.4,2.65 a 0.72,0.68 0 0 1 1.02,-0.96 l 6.3,5.92 z'/%3E%3C/svg%3E") !important;
 @media -moz-pref("sidebar.verticalTabs") {
-  list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 1.62 8 11.33 0-4.31-4.31 a .626.63 0 0 1 .885-0.89 L 15 8.28 l 0 .689-5.47 5.47 a .623.62 0 0 1-0.88 0 .628.63 0 0 1 0-0.89 l 4.31-4.31-11.33 0 a .625.62 0 0 1 0-1.25 z'/%3E%3C/svg%3E") !important;
+  list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 1.62 8 11.33 0-4.31-4.31 a .626.63 0 0 1 .885-0.89 L 15 8.28 l 0 .689-5.47 5.47 a .623.62 0 0 1-0.88 0 .628.63 0 0 1 0-0.89 l 4.31-4.31-11.33 0 a .625.62 0 0 1 0-1.25 z'/%3E%3C/svg%3E") !important;
 }
 }
 
