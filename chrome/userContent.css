@@ -136,7 +136,16 @@ input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]) {
   border-radius: 50% !important;
   border: 2px solid rgba(165, 165, 165, .8) !important;
   &:checked {
-  appearance: radio !important;
+  background-color: light-dark(#007aff, #1280fd) !important;
+  background-image: url("chrome://devtools/skin/images/linear-easing-swatch.svg") !important;
+  background-size: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-context-properties: fill;
+  fill: #fff;
+  border: none !important;
+  &:hover { background-color: light-dark(#0075dd, #006bdc) !important; }
+  &:hover:active { background-color: light-dark(#005ebb, #0055bc) !important; }
 }
 }
 
@@ -156,7 +165,16 @@ input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]) {
   border-radius: 50% !important;
   border: 2px solid rgba(165, 165, 165, .8) !important;
   &[selected] {
-  appearance: radio !important;
+  background-color: light-dark(#007aff, #1280fd) !important;
+  background-image: url("chrome://devtools/skin/images/linear-easing-swatch.svg") !important;
+  background-size: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-context-properties: fill;
+  fill: #fff;
+  border: none !important;
+  &:hover { background-color: light-dark(#0075dd, #006bdc) !important; }
+  &:hover:active { background-color: light-dark(#005ebb, #0055bc) !important; }
 }
 }
 }
