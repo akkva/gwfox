@@ -2032,13 +2032,24 @@ menuitem[type="checkbox"][checked="true"] {
   fill: currentColor;
 }
 
+menuitem[type="radio"][checked="true"] {
+  list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4'/%3E%3C/svg%3E") !important;
+  -moz-context-properties: fill;
+  fill: #fff;
+}
+
 menuitem[type="radio"] .menu-icon {
   border-radius: 50%;
   border: 2px solid rgba(165, 165, 165, .8);
 }
 
-menuitem[type="radio"][checked="true"] image {
-  appearance: radio !important;
+menuitem[type="radio"][checked="true"] .menu-icon {
+  background-color: light-dark(#4481f2, #1280fd);
+  border: none;
+}
+
+menuitem[type="radio"][disabled="true"] .menu-icon {
+  opacity: .5;
 }
 
 #customization-container {
