@@ -4253,6 +4253,9 @@ position: fixed !important;
 
 .titlebar-buttonbox-container {
   position: unset !important;
+@media (-moz-platform: windows) {
+  margin-top: -1px !important;
+}
 @media (-moz-platform: linux) {
   padding-bottom: 2px;
 }
