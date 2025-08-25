@@ -1410,8 +1410,9 @@ toolbarseparator[orient="vertical"] {
 }
 }
 
+.dialogOverlay[topmost="true"],
 #window-modal-dialog::backdrop {
-  background: none !important;
+  background-color: transparent !important;
 }
 
 window[role="dialog"] {
@@ -1439,7 +1440,7 @@ window[role="dialog"] {
 #unified-extensions-view .panel-header,
 #unified-extensions-view .panel-header + toolbarseparator,
 #unified-extensions-view .unified-extensions-item-menu-button.subviewbutton {
-  display:none !important;
+  display: none !important;
 }
 
 #unified-extensions-view {
@@ -2809,6 +2810,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   top: 47px !important;
   max-width: 201px !important;
   -moz-window-dragging: no-drag;
+  z-index: 9;
 &::before {
   content: "";
   position: absolute;
