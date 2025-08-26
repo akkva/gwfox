@@ -1558,7 +1558,7 @@ input[type="checkbox"] {
 }
 }
 
-.checkbox-check {
+.checkbox-check:not([native]) {
   appearance: none !important;
   background-color: transparent !important;
   border-radius: 2px !important;
