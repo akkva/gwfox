@@ -1547,6 +1547,12 @@ tree {
 }
 }
 
+@-moz-document url("chrome://global/content/megalist/megalist.html") {
+* {
+  --background-color-canvas: transparent !important;
+}
+}
+
 @-moz-document regexp("chrome://(?!browser\.xhtml).*") {
 input[type="checkbox"] {
   appearance: none !important;
@@ -1733,8 +1739,8 @@ findbar {
   flex-direction: row-reverse;
   white-space: nowrap;
   animation-name: slide-in;
-  animation-duration: 250ms;
-&:is([hidden="true"]) {
+  animation-duration: 350ms;
+&:is([hidden]) {
   animation-name: slide-out;
 }
 }
@@ -2184,6 +2190,10 @@ menuitem[type="radio"][disabled="true"] .menu-icon {
   cursor: default !important;
 }
 
+.buttons-wrapper {
+  height: fit-content !important;
+}
+
 .actions-list,
 .tools-and-extensions {
   -moz-window-dragging: no-drag;
@@ -2192,11 +2202,17 @@ menuitem[type="radio"][disabled="true"] .menu-icon {
 }
 }
 
-span > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"]) {
+.actions-list > moz-button[view=viewCustomizeSidebar] {
+  position: fixed;
+  bottom: 2px;
+  -moz-window-dragging: no-drag;
+}
+
+span > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/skin/login.svg"]) {
   fill: light-dark(#525252, #c9c9cb) !important;
 }
 
-span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"]) {
+span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/skin/login.svg"]) {
   fill: light-dark(#2d2d2d, #ececec) !important;
 }
 }
@@ -2213,7 +2229,7 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
 }
 
 .extensions, .customize-extensions-heading,
-button:has([src="chrome://global/skin/icons/settings.svg"]) {
+.actions-list > moz-button[view=viewCustomizeSidebar] {
   display: none !important;
 }
 
