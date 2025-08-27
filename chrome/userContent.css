@@ -685,7 +685,7 @@ body {
 }
 }
 
-.top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable, .weather .context-menu, .location-input-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .personalize-button {
+.top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable, .weather .context-menu, .location-input-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .weatherNotAvailable, .personalize-button {
   backdrop-filter: blur(30px) !important;
   background-color: var(--bg4) !important;
 @media (-moz-platform: linux) {
