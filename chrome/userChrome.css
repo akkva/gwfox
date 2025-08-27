@@ -483,8 +483,10 @@
   left: 18vw !important;
   width: 65vw !important;
   max-width: unset !important;
-  margin-top: 25px !important;
-  transition: margin .25s !important;
+  margin-top: 15px !important;
+  animation-name: panel-grow;
+  animation-duration: 250ms;
+  transition: none !important;
 
 .urlbar-input,
 .urlbar-input::placeholder {
