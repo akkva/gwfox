@@ -1011,6 +1011,15 @@
   background-color: color-mix(in srgb, var(--dragover-tab-group-color) 38%, transparent) !important;
 }
 }
+#tabbrowser-tabs[movingtab-group] & {
+ &[dragover-groupTarget] {
+  background-color: color-mix(in srgb, var(--dragover-tab-group-color) 38%, transparent) !important;
+  outline: none !important;
+}
+&:is([selected], [multiselected]) {
+  outline: none !important;
+}
+}
 }
 
 tab > stack {
