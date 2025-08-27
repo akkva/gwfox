@@ -370,6 +370,10 @@
 }
 }
 
+#urlbar-go-button {
+  border-radius: 6px !important;
+}
+
 .searchmode-switcher-dropmarker,
 #searchmode-switcher-dropmarker {
   display: none !important;
@@ -480,8 +484,8 @@
 
 #urlbar[breakout][breakout-extend] {
   top: 20vh !important;
-  left: 18vw !important;
-  width: 65vw !important;
+  left: 29vw !important;
+  width: 45vw !important;
   max-width: unset !important;
   margin-top: 15px !important;
   animation-name: panel-grow;
@@ -551,9 +555,9 @@
 :has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
 #urlbar {
   position: fixed !important;
-  top: 20vh !important;
-  left: 18vw !important;
-  width: 65vw !important;
+  top: 19vh !important;
+  left: 29vw !important;
+  width: 45vw !important;
   max-width: unset !important;
   margin-top: 25px !important;
 }
@@ -828,7 +832,7 @@
 
 .toggle-button { --toggle-dot-background-color-on-pressed: #fff !important; }
 #blocked-permissions-container, #picture-in-picture-button,
-#urlbar-go-button, .private-browsing-indicator-with-label,
+.private-browsing-indicator-with-label,
 #reset-pbm-toolbar-button, #vertical-spacer,
 #firefox-view-button, #fxa-toolbar-menu-button,
 #userContext-icons, #userContext-label,
@@ -844,7 +848,7 @@
 #reader-mode-button > .urlbar-icon,
 #translations-button > #translations-button-icon,
 #shopping-sidebar-button > .urlbar-icon , #identity-box,
-#tracking-protection-icon-container {
+#tracking-protection-icon-container, #urlbar-go-button {
   fill: light-dark(#525252, #c9c9cb) !important;
   fill-opacity: 1 !important;
 }
@@ -856,7 +860,7 @@
 #reader-mode-button:active > .urlbar-icon,
 #translations-button:active > #translations-button-icon,
 #shopping-sidebar-button:active > .urlbar-icon , #identity-box:active,
-#tracking-protection-icon-container:active {
+#tracking-protection-icon-container:active, #urlbar-go-button:active {
   fill: light-dark(#2d2d2d, #ececec) !important;
 }
 
@@ -2393,7 +2397,7 @@ tab-group > .tabbrowser-tab,
 }
 
 #urlbar[breakout][breakout-extend] {
-  left: 25vw !important;
+  left: 34vw !important;
   min-height: 50px !important;
   border-radius: 8px !important;
   backdrop-filter: blur(30px) !important;
@@ -2406,7 +2410,7 @@ tab-group > .tabbrowser-tab,
 
 :has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
 #urlbar {
-  left: 25vw !important;
+  left: 34vw !important;
   backdrop-filter: blur(30px) !important;
   border-radius: 8px !important;
   min-height: 50px !important;
@@ -2463,12 +2467,12 @@ tab-group > .tabbrowser-tab,
 }
 
 #urlbar[breakout][breakout-extend] {
-  left: 20vw !important;
+  left: 29vw !important;
 }
 
 :has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
 #urlbar {
-  left: 20vw !important;
+  left: 29vw !important;
 }
 }
 }
@@ -2509,6 +2513,32 @@ tab > stack {
 
 .tab-group-label {
   margin-left: .5px !important;
+}
+}
+
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+:has(#tabbrowser-tabs[expanded], #tabbrowser-tabs:not([expanded])) {
+#urlbar[breakout][breakout-extend] {
+  left: 29vw !important;
+}
+
+:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
+#urlbar {
+  left: 29vw !important;
+}
+}
+}
+}
+
+:has(#sidebar-main[hidden]) {
+#urlbar[breakout][breakout-extend] {
+  left: 27.5vw !important;
+}
+
+:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
+#urlbar {
+  left: 27.5vw !important;
+}
 }
 }
 }
@@ -2897,14 +2927,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-:has(#sidebar-main:not([hidden])) {
-:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
-#urlbar {
-  left: 25vw !important;
-}
-}
-}
-
 #urlbar-background, .urlbar-background, .urlbar-input-container {
   height: 32px !important;
   border-radius: 8px !important;
@@ -3031,6 +3053,16 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 &[activemedia-blocked] {
   background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg");
+}
+}
+
+#urlbar[breakout][breakout-extend] {
+  left: 34vw !important;
+}
+
+:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
+#urlbar {
+  left: 34vw !important;
 }
 }
 
@@ -3244,6 +3276,16 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #vertical-tabs-newtab-button {
   min-width: 62px !important;
   margin-left: 10px !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+  left: 29.5vw !important;
+}
+
+:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
+#urlbar {
+  left: 29.5vw !important;
+}
 }
 
 #urlbar:not([breakout][breakout-extend])[persistsearchterms] {
@@ -3475,19 +3517,6 @@ tab > stack {
 }
 }
 
-:has(#tabbrowser-tabs[expanded], #tabbrowser-tabs:not([expanded])) {
-#urlbar[breakout][breakout-extend] {
-  top: 20vh !important;
-  left: 25vw !important;
-}
-
-:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
-#urlbar {
-  left: 25vw !important;
-}
-}
-}
-
 :has(#sidebar-box:not([hidden])) {
 :has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open]) {
 #nav-bar {
@@ -3505,6 +3534,20 @@ tab > stack {
 .urlbar-input-container {
   background-position: left 6px bottom 7px;
 }
+}
+}
+}
+}
+
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+:has(#tabbrowser-tabs[expanded], #tabbrowser-tabs:not([expanded])) {
+#urlbar[breakout][breakout-extend] {
+  left: 29.5vw !important;
+}
+
+:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
+#urlbar {
+  left: 29.5vw !important;
 }
 }
 }
@@ -3820,6 +3863,16 @@ tab-group[collapsed] > .tab-group-label-container > & {
 
 .tabbrowser-tab[pinned] .tab-icon-overlay {
   display: flex !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+  left: 27.5vw !important;
+}
+
+:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
+#urlbar {
+  left: 27.5vw !important;
+}
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
