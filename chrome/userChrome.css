@@ -2547,6 +2547,7 @@ tab > stack {
 
 @media -moz-pref("gwfox.plus") {
 :root[sidebar-expand-on-hover] {
+@media not -moz-pref("gwfox.plus_sc") {
 .tabbrowser-tab[pinned] .tab-icon-image {
   margin-left: 6px;
 }
@@ -2562,6 +2563,7 @@ tab > stack {
 #tabbrowser-tabs[orient="vertical"]:not([expanded]) .tab-close-button, 
 .tabbrowser-tab[pinned] .tab-close-button {
   display: none !important;
+}
 }
 
 #tabbrowser-tabbox {
@@ -2612,6 +2614,7 @@ tab > stack {
 }
 }
 
+@media not -moz-pref("gwfox.plus_sc") {
 #tabbrowser-tabs:is([orient="horizontal"], [expanded]):not([movingtab]) .tab-icon-stack {
 .tabbrowser-tab:hover .tab-content > &:not([pinned]) {
   display: none;
@@ -2688,6 +2691,7 @@ tab > stack {
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
 .tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
   margin-left: 0 !important;
+}
 }
 }
 }
@@ -2955,10 +2959,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   opacity: .5 !important;
 }
 
-.tabbrowser-tab .tab-label-container {
-  margin-left: 1px;
-}
-
 .tab-background {
   border-radius: 8px !important;
 }
@@ -2967,8 +2967,14 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   background: transparent !important;
 }
 
+@media not -moz-pref("gwfox.plus_sc") {
+.tabbrowser-tab .tab-label-container {
+  margin-left: 1px;
+}
+
 .tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
   margin-left: 6.5px;
+}
 }
 
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
@@ -3030,6 +3036,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 :has(#tabbrowser-tabs[expanded]) {
   --padding: 0;
 
+@media not -moz-pref("gwfox.plus_sc") {
 .tab-close-button {
   margin-inline-end: calc(-1 * var(--tab-close-button-padding)) !important;
 }
@@ -3053,6 +3060,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 &[activemedia-blocked] {
   background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg");
+}
 }
 }
 
@@ -3107,6 +3115,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
+@media not -moz-pref("gwfox.plus_sc") {
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
 .tabbrowser-tab[pinned] .tab-content {
   margin-left: -6px !important;
@@ -3131,6 +3140,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 &[activemedia-blocked] {
   background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg");
+}
 }
 }
 }
@@ -3841,12 +3851,12 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 
-.tabbrowser-tab:not([pinned]):hover .tab-icon-image {
-  opacity: 0;
+.tabbrowser-tab .tab-label-container {
+  margin-left: 1px;
 }
 
-.tabbrowser-tab:not([pinned]):hover .tab-label-container {
-  margin-left: 1px;
+.tabbrowser-tab:not([pinned]):hover .tab-icon-image {
+  opacity: 0;
 }
 
 .tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
