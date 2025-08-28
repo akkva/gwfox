@@ -209,7 +209,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url("resources/dark.jpg") !important;
+  background-image: repeating-linear-gradient(-45deg, #2d2d2d 0 250px, #202020 0 500px) !important;
 }
 
 .container {
@@ -252,7 +252,11 @@ body {
   height: 76px !important;
   width: 76px !important;
   -moz-context-properties: fill;
-  fill: currentColor;
+  fill: #b9b9b9;
+}
+
+.wordmark {
+  fill: #b9b9b9 !important;
 }
 
 .info, .promo-visible {
