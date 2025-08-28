@@ -207,8 +207,17 @@
 #browser {
   background: transparent !important;
 @media (-moz-platform: linux) {
+@media -moz-pref("gwfox.bms") {
+  background: rgba(15, 15, 12, .75) !important;
+}
+@media not -moz-pref("gwfox.bms") {
   background: #28282c !important;
 }
+}
+}
+
+#tabbrowser-tabbox browser:not(.devtools-toolbox-bottom-iframe, .devtools-toolbox-side-iframe) {
+  background-color: #191919 !important;
 }
 }
 
@@ -951,6 +960,21 @@
   padding: 7px 0 0 7px !important;
 }
 
+#TabsToolbar #alltabs-button,
+#nav-bar #alltabs-button {
+> .toolbarbutton-badge-stack {
+  height: 30px !important;
+  width: 30px !important;
+  padding: 6px 0 0 6px !important;
+  border-radius: 6px !important;
+> .toolbarbutton-icon {
+  height: 18px !important;
+  width: 18px !important;
+  margin: unset !important;
+}
+}
+}
+
 #page-action-buttons {
   margin-right: 0 !important;
   margin-bottom: 0 !important;
@@ -1071,20 +1095,6 @@ tab .tab-label {
 
 #tabbrowser-tabs[movingtab] {
   margin-bottom: -16px !important;
-}
-
-#alltabs-button {
-> .toolbarbutton-badge-stack {
-  height: 30px !important;
-  width: 30px !important;
-  padding: 6px 0 0 6px !important;
-  border-radius: 6px !important;
-> .toolbarbutton-icon {
-  height: 18px !important;
-  width: 18px !important;
-  margin: unset !important;
-}
-}
 }
 
 .tabbrowser-tab:not([selected]) .tab-close-button {
@@ -1504,7 +1514,7 @@ tree {
 }
 
 :root#main-window {
-  min-width: 590px !important;
+  min-width: 611px !important;
 @media (-moz-platform: macos) {
   appearance: -moz-sidebar !important;
 }
@@ -1531,9 +1541,19 @@ tree {
 }
 }
 
-@media (max-width: 590px) {
-#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab[pinned] {
-  display: none !important;
+@media (max-width: 611px) {
+@media not -moz-pref("sidebar.verticalTabs") {
+#urlbar {
+  margin-left: 30px !important;
+}
+}
+
+#TabsToolbar {
+  visibility: collapse;
+}
+
+.titlebar-buttonbox-container {
+  visibility: visible;
 }
 }
 
@@ -2240,7 +2260,7 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
 }
 
 .tools-and-extensions {
-  margin-bottom: 6px !important;
+  margin-bottom: 4px !important;
 }
 
 .extensions, .customize-extensions-heading,
@@ -2284,6 +2304,10 @@ span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://b
   transition: .25s !important;
 }
 }
+}
+
+#vertical-tabs-newtab-button {
+  margin-bottom: 6px !important;
 }
 
 #vertical-pinned-tabs-splitter {
