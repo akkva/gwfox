@@ -1515,6 +1515,11 @@ tree {
 
 :root#main-window {
   min-width: 611px !important;
+@media not (-moz-platform: macos) {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
+  min-width: 701px !important;
+}
+}
 @media (-moz-platform: macos) {
   appearance: -moz-sidebar !important;
 }
@@ -1543,7 +1548,7 @@ tree {
 
 @media (max-width: 611px) {
 @media not -moz-pref("sidebar.verticalTabs") {
-#urlbar {
+#urlbar-container {
   margin-left: 30px !important;
 }
 }
@@ -1554,6 +1559,25 @@ tree {
 
 .titlebar-buttonbox-container {
   visibility: visible;
+}
+}
+
+@media not (-moz-platform: macos) {
+@media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
+@media (max-width: 701px) {
+@media not -moz-pref("sidebar.verticalTabs") {
+#urlbar-container {
+  margin-left: 55px !important;
+@media (-moz-platform: linux) {
+  margin-left: 65px !important;
+}
+}
+}
+
+#TabsToolbar {
+  visibility: collapse;
+}
+}
 }
 }
 
