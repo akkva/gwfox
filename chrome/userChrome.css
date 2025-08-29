@@ -379,6 +379,11 @@
 }
 }
 
+.searchmode-switcher[open],
+#urlbar-searchmode-switcher[open] {
+* { animation: panel-scale .35s ease-out forwards; }
+}
+
 #urlbar-go-button {
   border-radius: 6px !important;
 }
@@ -1289,14 +1294,32 @@ panel[type="arrow"] {
   --panel-background: light-dark(rgba(255, 255, 255, .55), rgba(15, 15, 12, .55)) !important;
   --arrowpanel-background: transparent !important;
   --arrowpanel-border-radius: 0 !important;
+&[animate="open"] {
+  animation: panel-scale .35s ease-out forwards;
+}
 }
 
 @keyframes panel-grow {
   0% {
-    transform: scaleX(.96) scaleY(.95);
+    transform: scale(.92);
   }
   100% {
-    transform: scale(1.0);
+    transform: scale(1);
+  }
+}
+
+@keyframes panel-scale {
+  0% {
+    opacity: 0;
+    -moz-window-transform: scale(.4);
+  }
+  50% {
+    opacity: 1;
+    -moz-window-transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    -moz-window-transform: scale(1);
   }
 }
 
@@ -1320,11 +1343,6 @@ panel[type="arrow"] {
     translate: 0;
     opacity: 1;
   }
-}
-
-panelmultiview, popupnotification {
-  animation-name: panel-grow;
-  animation-duration: 250ms;
 }
 
 .panel-arrowcontent {
@@ -3750,6 +3768,7 @@ tab > stack {
   bottom: 16px;
   left: -258px;
   opacity: 0;
+  scale: .9;
   transition: left .25s !important;
 }
 
@@ -4048,6 +4067,10 @@ tab-group[collapsed] > .tab-group-label-container > & {
   width: 40px;
   height: 40px;
 }
+
+#sidebar-main {
+  display: none !important;
+}
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
@@ -4094,21 +4117,21 @@ tab-group[collapsed] > .tab-group-label-container > & {
 #PanelUI-menu-button,
 #nav-bar-overflow-button,
 #unified-extensions-button {
-  left: 20px;
+  left: 45px;
   opacity: 1;
   transition: left .25s !important;
 }
 
 #nav-bar-overflow-button {
-  left: 72px;
+  left: 83px;
 }
 
 #unified-extensions-button {
-  left: 123px;
+  left: 119.5px;
 }
 
 #downloads-button {
-  left: 175px;
+  left: 157px;
 }
 
 #sidebar-main {
