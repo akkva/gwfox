@@ -379,11 +379,6 @@
 }
 }
 
-.searchmode-switcher[open],
-#urlbar-searchmode-switcher[open] {
-* { animation: panel-scale .35s ease-out forwards; }
-}
-
 #urlbar-go-button {
   border-radius: 6px !important;
 }
@@ -1294,9 +1289,6 @@ panel[type="arrow"] {
   --panel-background: light-dark(rgba(255, 255, 255, .55), rgba(15, 15, 12, .55)) !important;
   --arrowpanel-background: transparent !important;
   --arrowpanel-border-radius: 0 !important;
-&[animate="open"] {
-  animation: panel-scale .35s ease-out forwards;
-}
 }
 
 @keyframes panel-grow {
@@ -1305,21 +1297,6 @@ panel[type="arrow"] {
   }
   100% {
     transform: scale(1);
-  }
-}
-
-@keyframes panel-scale {
-  0% {
-    opacity: 0;
-    -moz-window-transform: scale(.4);
-  }
-  50% {
-    opacity: 1;
-    -moz-window-transform: scale(1.05);
-  }
-  100% {
-    opacity: 1;
-    -moz-window-transform: scale(1);
   }
 }
 
@@ -3808,15 +3785,17 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 
-#tabbrowser-tabs,
-#tabs-newtab-button,
-#vertical-tabs-newtab-button {
+#tabbrowser-tabs {
   width: 221px !important;
+&[overflow]::after {
+  content: none !important;
+}
 }
 
 #tabs-newtab-button,
 #vertical-tabs-newtab-button {
-  margin-left: 9px !important;
+  width: 201px !important;
+  margin-left: 10px !important;
 }
 
 #tabbrowser-tabs .toolbarbutton-text {
@@ -4068,7 +4047,10 @@ tab-group[collapsed] > .tab-group-label-container > & {
   height: 40px;
 }
 
-#sidebar-main {
+#sidebar-button, #reload-button, #stop-button, #back-button,
+#forward-button, #PanelUI-menu-button, #nav-bar-overflow-button,
+#unified-extensions-button, #downloads-button, #sidebar-main,
+.titlebar-buttonbox-container {
   display: none !important;
 }
 }
