@@ -3789,7 +3789,7 @@ tab > stack {
 .titlebar-buttonbox:hover & {
   fill: #006200;
 &:active {
-  background-color: light-dark(#1e9730, #56f66e);
+  background-color: light-dark(#1e9730, #56f66e) !important;
   fill: light-dark(#003000, #006a00) !important;
   outline: .5px solid light-dark(#0a7811, transparent);
   outline-offset: -.5px !important;
@@ -4510,7 +4510,7 @@ position: fixed !important;
 .titlebar-buttonbox:hover & {
   fill: #006200;
 &:active {
-  background-color: light-dark(#1e9730, #56f66e);
+  background-color: light-dark(#1e9730, #56f66e) !important;
   fill: light-dark(#003000, #006a00) !important;
   outline: .5px solid light-dark(#0a7811, transparent);
   outline-offset: -.5px !important;
