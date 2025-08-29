@@ -3613,9 +3613,6 @@ tab > stack {
   left: -258px;
   opacity: 0;
   transition: left .25s !important;
-@media (-moz-platform: windows) {
-  top: 24px !important;
-}
 }
 
 .titlebar-buttonbox {
@@ -3625,6 +3622,12 @@ tab > stack {
   background-color: light-dark(#d6d6d6, #4c4c4c) !important;
   outline: .5px solid light-dark(#b3b3b3, transparent);
   outline-offset: -.5px;
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+  background-color: transparent !important;
+  outline: none;
+}
+}
 }
 }
 @media (-moz-platform: macos) {
@@ -3642,6 +3645,13 @@ tab > stack {
   padding: 0 !important;
   margin-inline: 4px !important;
   border-radius: 50% !important;
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+  padding: 2px !important;
+  margin-inline: 2px !important;
+  border-radius: 20% !important;
+}
+}
 }
 
 .titlebar-close {
@@ -3652,6 +3662,7 @@ tab > stack {
   fill: transparent;
   outline: .5px solid light-dark(#e24138, transparent);
   outline-offset: -.5px;
+@media -moz-pref("gwfox.plus") or (not -moz-pref("gwfox.plus_sc")) {
 .titlebar-buttonbox:hover & {
   fill: light-dark(#730000, #990000);
 &:active {
@@ -3659,6 +3670,28 @@ tab > stack {
   fill: light-dark(#330000, #730100);
   outline: .5px solid light-dark(#a12822, transparent);
   outline-offset: -.5px;
+}
+}
+}
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+  order: unset !important;
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 3.5,3.01 a 0.5,0.5 0 0 0 -0.35,0.15 0.5,0.5 0 0 0 0,0.71 l 4.13,4.14 -4.14,4.13 a 0.5,0.5 0 0 0 0,0.71 0.5,0.5 0 0 0 0.71,0 L 8,8.71 12.14,12.85 a 0.5,0.5 0 0 0 0.71,0 0.5,0.5 0 0 0 0,-0.71 L 8.7,8 12.83,3.86 a 0.5,0.5 0 0 0 0,-0.71 0.5,0.5 0 0 0 -0.71,0 L 7.99,7.29 3.85,3.15 A 0.5,0.5 0 0 0 3.5,3.01 Z'/%3E%3C/svg%3E") !important;
+  background-color: transparent !important;
+  fill: #000;
+  fill-opacity: .8;
+  outline: none;
+&:hover {
+  background-color: var(--button-hover-bgcolor) !important;
+}
+.titlebar-buttonbox:hover & {
+  fill: #000;
+&:active {
+  fill: #000;
+  outline: none;
+  background-color: var(--button-active-bgcolor) !important;
+}
+}
 }
 }
 }
@@ -3670,6 +3703,7 @@ tab > stack {
   fill: transparent;
   outline: .5px solid light-dark(#e19e0f, transparent);
   outline-offset: -.5px;
+@media -moz-pref("gwfox.plus") or (not -moz-pref("gwfox.plus_sc")) {
 .titlebar-buttonbox:hover & {
   fill: #985600;
 &:active {
@@ -3677,6 +3711,28 @@ tab > stack {
   fill: light-dark(#582700, #735e00);
   outline: .5px solid light-dark(#a06f0a, transparent);
   outline-offset: -.5px;
+}
+}
+}
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+  order: unset !important;
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 3.5,7.5 A 0.5,0.5 0 0 0 3,8 0.5,0.5 0 0 0 3.5,8.5 h 9 A 0.5,0.5 0 0 0 13,8 0.5,0.5 0 0 0 12.5,7.5 Z'/%3E%3C/svg%3E") !important;
+  background-color: transparent !important;
+  fill: #000;
+  fill-opacity: .8;
+  outline: none;
+&:hover {
+  background-color: var(--button-hover-bgcolor) !important;
+}
+.titlebar-buttonbox:hover & {
+  fill: #000;
+&:active {
+  fill: #000;
+  outline: none;
+  background-color: var(--button-active-bgcolor) !important;
+}
+}
 }
 }
 }
@@ -3688,6 +3744,7 @@ tab > stack {
   fill: transparent;
   outline: .5px solid light-dark(#0aaa21, transparent);
   outline-offset: -.5px;
+@media -moz-pref("gwfox.plus") or (not -moz-pref("gwfox.plus_sc")) {
 .titlebar-buttonbox:hover & {
   fill: #006200;
 &:active {
@@ -3695,6 +3752,28 @@ tab > stack {
   fill: light-dark(#003000, #006a00);
   outline: .5px solid light-dark(#0a7811, transparent);
   outline-offset: -.5px;
+}
+}
+}
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+  order: unset !important;
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 4.5,3 C 3.677,3 3,3.677 3,4.5 v 7 C 3,12.323 3.677,13 4.5,13 h 7 c 0.823,0 1.5,-0.677 1.5,-1.5 v -7 C 13,3.677 12.323,3 11.5,3 Z m 0,1 h 7 C 11.782,4 12,4.218 12,4.5 v 7 c 0,0.282 -0.218,0.5 -0.5,0.5 h -7 A 0.493,0.493 0 0 1 4,11.5 v -7 C 4,4.218 4.218,4 4.5,4 Z'/%3E%3C/svg%3E") !important;
+  background-color: transparent !important;
+  fill: #000;
+  fill-opacity: .8;
+  outline: none;
+&:hover {
+  background-color: var(--button-hover-bgcolor) !important;
+}
+.titlebar-buttonbox:hover & {
+  fill: #000;
+&:active {
+  fill: #000;
+  outline: none;
+  background-color: var(--button-active-bgcolor) !important;
+}
+}
 }
 }
 }
@@ -3706,6 +3785,7 @@ tab > stack {
   fill: transparent;
   outline: .5px solid light-dark(#0aaa21, transparent);
   outline-offset: -.5px;
+@media -moz-pref("gwfox.plus") or (not -moz-pref("gwfox.plus_sc")) {
 .titlebar-buttonbox:hover & {
   fill: #006200;
 &:active {
@@ -3713,6 +3793,28 @@ tab > stack {
   fill: light-dark(#003000, #006a00) !important;
   outline: .5px solid light-dark(#0a7811, transparent);
   outline-offset: -.5px !important;
+}
+}
+}
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+  order: unset !important;
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 5.5,4 h 5 A 1.5,1.5 0 0 1 12,5.5 v 5 a 1,1 0 0 0 1,-1 v -4 A 2.5,2.5 0 0 0 10.5,3 h -4 a 1,1 0 0 0 -1,1 z M 3,6.5 v 5 A 1.5,1.5 0 0 0 4.5,13 h 5 A 1.5,1.5 0 0 0 11,11.5 v -5 A 1.5,1.5 0 0 0 9.5,5 h -5 A 1.5,1.5 0 0 0 3,6.5 Z M 4.5,6 h 5 A 0.5,0.5 0 0 1 10,6.5 v 5 A 0.5,0.5 0 0 1 9.5,12 h -5 A 0.5,0.5 0 0 1 4,11.5 v -5 A 0.5,0.5 0 0 1 4.5,6 Z'/%3E%3C/svg%3E") !important;
+  background-color: transparent !important;
+  fill: #000;
+  fill-opacity: .8;
+  outline: none;
+&:hover {
+  background-color: var(--button-hover-bgcolor) !important;
+}
+.titlebar-buttonbox:hover & {
+  fill: #000;
+&:active {
+  fill: #000;
+  outline: none;
+  background-color: var(--button-active-bgcolor) !important;
+}
+}
 }
 }
 }
@@ -4033,7 +4135,7 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 
-:has(#urlbar[breakout][breakout-extend], [usertyping]) {
+:has(#urlbar[breakout][breakout-extend]) {
 .titlebar-buttonbox::after {
   content: none;
 }
@@ -4055,11 +4157,20 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 
+:has(#urlbar[usertyping]):not(:has(#urlbar[persistsearchterms])) {
+#sidebar-button, #reload-button, #stop-button, #back-button,
+#forward-button, #PanelUI-menu-button, #nav-bar-overflow-button,
+#unified-extensions-button, #downloads-button, #sidebar-main,
+.titlebar-buttonbox-container {
+  display: none !important;
+}
+}
+
 :has(#tabbrowser-tabs:not([expanded])) {
 --dp: none;
 }
 
-:has(#sidebar-main:hover, #urlbar:not([breakout][breakout-extend])[persistsearchterms]:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], .tab-throbber[busy], #tab-group-name:focus, .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #urlbar-searchmode-switcher[open], #urlbar:not([breakout][breakout-extend], [usertyping]) .searchmode-switcher[open]) {
+:has(#sidebar-main:hover, #urlbar:not([breakout][breakout-extend])[persistsearchterms]:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], .tab-throbber[busy], #tab-group-name:focus, .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open], #urlbar:not([breakout][breakout-extend], [usertyping]:not([persistsearchterms])) #urlbar-searchmode-switcher[open], #urlbar:not([breakout][breakout-extend], [usertyping]:not([persistsearchterms])) .searchmode-switcher[open]) {
 .titlebar-buttonbox-container {
   left: 7px;
   opacity: 1;
@@ -4069,6 +4180,12 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 @media (-moz-platform: linux) {
   left: 22px;
+}
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+  top: 22px !important;
+  left: 150px;
+}
 }
 }
 
@@ -4080,19 +4197,39 @@ tab-group[collapsed] > .tab-group-label-container > & {
   left: 80px;
   opacity: 1;
   transition: left .25s !important;
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+  left: 8px;
+}
+}
 }
 
 #back-button {
   left: 119px;
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+  left: 47px;
+}
+}
 }
 
 #forward-button {
   left: 153px;
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+  left: 80px;
+}
+}
 }
 
 #reload-button,
 #stop-button {
   left: 187px;
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+  left: 113px;
+}
+}
 }
 
 #downloads-button,
