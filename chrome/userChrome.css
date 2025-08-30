@@ -3739,16 +3739,16 @@ tab > stack {
   order: unset !important;
   content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 3.5,3.01 a 0.5,0.5 0 0 0 -0.35,0.15 0.5,0.5 0 0 0 0,0.71 l 4.13,4.14 -4.14,4.13 a 0.5,0.5 0 0 0 0,0.71 0.5,0.5 0 0 0 0.71,0 L 8,8.71 12.14,12.85 a 0.5,0.5 0 0 0 0.71,0 0.5,0.5 0 0 0 0,-0.71 L 8.7,8 12.83,3.86 a 0.5,0.5 0 0 0 0,-0.71 0.5,0.5 0 0 0 -0.71,0 L 7.99,7.29 3.85,3.15 A 0.5,0.5 0 0 0 3.5,3.01 Z'/%3E%3C/svg%3E") !important;
   background-color: transparent !important;
-  fill: #000;
+  fill: currentColor;
   fill-opacity: .8;
   outline: none;
 &:hover {
   background-color: var(--button-hover-bgcolor) !important;
 }
 .titlebar-buttonbox:hover & {
-  fill: #000;
+  fill: currentColor;
 &:active {
-  fill: #000;
+  fill: currentColor;
   outline: none;
   background-color: var(--button-active-bgcolor) !important;
 }
@@ -3780,16 +3780,16 @@ tab > stack {
   order: unset !important;
   content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 3.5,7.5 A 0.5,0.5 0 0 0 3,8 0.5,0.5 0 0 0 3.5,8.5 h 9 A 0.5,0.5 0 0 0 13,8 0.5,0.5 0 0 0 12.5,7.5 Z'/%3E%3C/svg%3E") !important;
   background-color: transparent !important;
-  fill: #000;
+  fill: currentColor;
   fill-opacity: .8;
   outline: none;
 &:hover {
   background-color: var(--button-hover-bgcolor) !important;
 }
 .titlebar-buttonbox:hover & {
-  fill: #000;
+  fill: currentColor;
 &:active {
-  fill: #000;
+  fill: currentColor;
   outline: none;
   background-color: var(--button-active-bgcolor) !important;
 }
@@ -3821,16 +3821,16 @@ tab > stack {
   order: unset !important;
   content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 4.5,3 C 3.677,3 3,3.677 3,4.5 v 7 C 3,12.323 3.677,13 4.5,13 h 7 c 0.823,0 1.5,-0.677 1.5,-1.5 v -7 C 13,3.677 12.323,3 11.5,3 Z m 0,1 h 7 C 11.782,4 12,4.218 12,4.5 v 7 c 0,0.282 -0.218,0.5 -0.5,0.5 h -7 A 0.493,0.493 0 0 1 4,11.5 v -7 C 4,4.218 4.218,4 4.5,4 Z'/%3E%3C/svg%3E") !important;
   background-color: transparent !important;
-  fill: #000;
+  fill: currentColor;
   fill-opacity: .8;
   outline: none;
 &:hover {
   background-color: var(--button-hover-bgcolor) !important;
 }
 .titlebar-buttonbox:hover & {
-  fill: #000;
+  fill: currentColor;
 &:active {
-  fill: #000;
+  fill: currentColor;
   outline: none;
   background-color: var(--button-active-bgcolor) !important;
 }
@@ -3851,7 +3851,7 @@ tab > stack {
   fill: #006200;
 &:active {
   background-color: light-dark(#1e9730, #56f66e) !important;
-  fill: light-dark(#003000, #006a00) !important;
+  fill: light-dark(#003000, #006a00);
   outline: .5px solid light-dark(#0a7811, transparent);
   outline-offset: -.5px !important;
 }
@@ -3862,16 +3862,16 @@ tab > stack {
   order: unset !important;
   content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 5.5,4 h 5 A 1.5,1.5 0 0 1 12,5.5 v 5 a 1,1 0 0 0 1,-1 v -4 A 2.5,2.5 0 0 0 10.5,3 h -4 a 1,1 0 0 0 -1,1 z M 3,6.5 v 5 A 1.5,1.5 0 0 0 4.5,13 h 5 A 1.5,1.5 0 0 0 11,11.5 v -5 A 1.5,1.5 0 0 0 9.5,5 h -5 A 1.5,1.5 0 0 0 3,6.5 Z M 4.5,6 h 5 A 0.5,0.5 0 0 1 10,6.5 v 5 A 0.5,0.5 0 0 1 9.5,12 h -5 A 0.5,0.5 0 0 1 4,11.5 v -5 A 0.5,0.5 0 0 1 4.5,6 Z'/%3E%3C/svg%3E") !important;
   background-color: transparent !important;
-  fill: #000;
+  fill: currentColor;
   fill-opacity: .8;
   outline: none;
 &:hover {
   background-color: var(--button-hover-bgcolor) !important;
 }
 .titlebar-buttonbox:hover & {
-  fill: #000;
+  fill: currentColor;
 &:active {
-  fill: #000;
+  fill: currentColor;
   outline: none;
   background-color: var(--button-active-bgcolor) !important;
 }
