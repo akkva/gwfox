@@ -4538,6 +4538,9 @@ tab-group[collapsed] > .tab-group-label-container > & {
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
 #nav-bar {
   padding-left: 520px !important;
+@media (-moz-platform: linux) {
+  padding-left: 590px !important;
+}
 }
 }
 
