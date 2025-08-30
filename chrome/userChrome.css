@@ -2879,8 +2879,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   outline: none !important;
   background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
+@media not -moz-pref("gwfox.noborder") {
   border-top-left-radius: 8px !important;
   border-top-right-radius: 8px !important;
+}
   transform: rotateX(90deg);
   transform-origin: top;
   transition: transform 105ms linear 500ms !important;
@@ -4843,11 +4845,13 @@ position: fixed !important;
 }
 }
 
+@media not -moz-pref("gwfox.plus_tb") {
 #PersonalToolbar {
   margin: 0 !important;
   width: 100% !important;
 @media not (-moz-platform: linux) {
   border-radius: 0 !important;
+}
 }
 }
 
