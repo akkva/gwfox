@@ -2883,7 +2883,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   border-top-right-radius: 8px !important;
   transform: rotateX(90deg);
   transform-origin: top;
-  transition: transform 135ms linear 600ms;
+  transition: transform 105ms linear 500ms !important;
   z-index: 11;
 @media -moz-pref("widget.macos.native-context-menus") {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
