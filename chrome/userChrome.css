@@ -2739,6 +2739,7 @@ tab > stack {
 }
 }
 
+@media not -moz-pref("gwfox.plus_tb") {
 #PersonalToolbar {
   position: fixed;
   width: calc(100% - 16px);
@@ -2777,9 +2778,10 @@ tab > stack {
   bottom: -10px;
   height: 10px;
 }
+}
 
 toolbarbutton.bookmark-item:not(.subviewbutton) {
-  margin: 5px 0 !important;
+  margin: 8px 0 !important;
 }
 
 #personal-toolbar-empty-description,
@@ -2799,6 +2801,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
+@media not -moz-pref("gwfox.plus_tb") {
 @media (prefers-color-scheme: dark) {
 #PersonalToolbar {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
@@ -2810,12 +2813,15 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
+
 @media -moz-pref("widget.macos.native-context-menus") {
 #PersonalToolbar {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
 }
 }
+}
 
+@media not -moz-pref("sidebar.verticalTabs") {
 @media -moz-pref("sidebar.revamp") {
 :has(#sidebar-main:not([hidden])) {
 #PersonalToolbar {
@@ -2858,6 +2864,41 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media (-moz-platform: linux) {
   margin-left: 456px !important;
   width: calc(100% - 464px);
+}
+}
+}
+}
+
+@media -moz-pref("gwfox.plus_tb") {
+#PersonalToolbar:not([customizing]) {
+  position: relative;
+  width: calc(100% - 16px);
+  height: 48px;
+  margin: 0 8px -48px 8px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background-color: var(--bg4) !important;
+  backdrop-filter: blur(30px) !important;
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+  transform: rotateX(90deg);
+  transform-origin: top;
+  transition: transform 135ms linear 600ms;
+  z-index: 11;
+@media -moz-pref("widget.macos.native-context-menus") {
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+}
+}
+
+#navigator-toolbox:hover > #PersonalToolbar {
+  transition-delay: 100ms;
+  transform: rotateX(0deg);
+}
+
+@media not (-moz-platform: macos) {
+#navigator-toolbox > #PersonalToolbar {
+  grid-area: 3 !important;
+  grid-column: 1 / span 2 !important;
 }
 }
 }
@@ -2916,10 +2957,15 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-bottom: 9px !important;
 }
 
+#urlbar-container {
+  width: fit-content !important;
+}
+
 #urlbar {
   position: fixed !important;
   left: 10px !important;
   top: 47px !important;
+  min-width: 201px !important;
   max-width: 201px !important;
   -moz-window-dragging: no-drag;
   z-index: 9;
@@ -3024,6 +3070,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin: 6px 0 6px 0 !important;
 }
 
+@media not -moz-pref("gwfox.plus_tb") {
 :has(#sidebar-main:not([hidden])) {
 #PersonalToolbar {
   margin-left: 221px !important;
@@ -3049,6 +3096,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media not (-moz-platform: macos) {
   margin-left: 622px !important;
   width: calc(100% - 630px);
+}
 }
 }
 }
@@ -3213,6 +3261,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   cursor: col-resize !important;
 }
 
+@media not -moz-pref("gwfox.plus_tb") {
 #PersonalToolbar {
   margin-left: 81px !important;
   width: calc(100% - 89px);
@@ -3223,6 +3272,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media (-moz-platform: linux) {
   margin-left: 84px !important;
   width: calc(100% - 92px);
+}
 }
 }
 }
@@ -3239,6 +3289,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
+@media not -moz-pref("gwfox.plus_tb") {
 #PersonalToolbar {
   margin-left: 363px !important;
   width: calc(100% - 371px);
@@ -3252,6 +3303,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 }
+}
 
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
 #nav-bar {
@@ -3261,6 +3313,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
+@media not -moz-pref("gwfox.plus_tb") {
 #PersonalToolbar {
   margin-left: 483px !important;
   width: calc(100% - 491px);
@@ -3271,6 +3324,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media (-moz-platform: linux) {
   margin-left: 485px !important;
   width: calc(100% - 493px);
+}
 }
 }
 }
@@ -3342,7 +3396,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #urlbar:not([breakout][breakout-extend])[persistsearchterms] {
-  width: 62px !important;
+  min-width: 62px !important;
+  max-width: 62px !important;
 
 .searchmode-switcher, #urlbar-searchmode-switcher {
   margin-left: 16px !important;
@@ -3362,7 +3417,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 :has(#sidebar-main:not([hidden])) {
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
-  width: 62px !important;
+  min-width: 62px !important;
+  max-width: 62px !important;
 
 #identity-box[pageproxystate="invalid"] #identity-icon {
   margin-left: -5px !important;
@@ -3410,6 +3466,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #urlbar::before {
   width: 220px 
+}
+
+#urlbar:not([breakout][breakout-extend], [usertyping]:not([persistsearchterms])) {
+  min-width: 201px !important;
+  max-width: 201px !important;
 }
 
 #tabbrowser-tabbox {
@@ -4135,10 +4196,12 @@ tab-group[collapsed] > .tab-group-label-container > & {
   margin-top: 0;
 }
 
+@media not -moz-pref("gwfox.plus_tb") {
 :has(#sidebar-box:not([hidden])) {
 #PersonalToolbar {
   margin-left: 282px !important;
   width: calc(100% - 290px);
+}
 }
 }
 
@@ -4285,6 +4348,20 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 }
 }
+
+@media -moz-pref("gwfox.plus_tb") {
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+.titlebar-buttonbox {
+  inset-inline-end: unset;
+  height: unset !important;
+}
+}
+}
+#PersonalToolbar {
+  display: none;
+}
+}
 }
 
 :root[inFullscreen]:has(#tabbrowser-tabs:not([expanded])) {
@@ -4381,6 +4458,95 @@ tab-group[collapsed] > .tab-group-label-container > & {
 :root[customizing] {
 #urlbar {
   visibility: hidden;
+}
+}
+
+@media -moz-pref("gwfox.plus_tb") {
+#navigator-toolbox {
+  display: grid;
+  grid-template-columns: minmax(auto, 0) auto;
+}
+
+#nav-bar {
+  width: fit-content !important;
+  grid-area: 2 / 1 / auto / auto;
+}
+
+#PersonalToolbar {
+  grid-area: 2 / 2 / auto / auto;
+}
+
+#TabsToolbar {
+  display: none;
+}
+
+:has(#PersonalToolbar:hover) {
+#tabbrowser-tabpanels {
+  margin-top: 0;
+  transition: .25s !important;
+}
+}
+
+@media (-moz-platform: macos) or (not -moz-pref("gwfox.plus_sc")) {
+:has(#sidebar-box:not([hidden])) {
+#nav-bar {
+  padding-left: 400px !important;
+@media (-moz-platform: linux) {
+  padding-left: 470px !important;
+}
+}
+
+:has(#tabbrowser-tabs[expanded]) {
+#reload-button,
+#stop-button,
+#back-button,
+#forward-button,
+#sidebar-button {
+  position: fixed !important;
+  top: 2px;
+  left: 71px;
+@media (-moz-platform: linux) {
+  left: 76px;
+}
+}
+
+#back-button {
+  left: 111px;
+@media (-moz-platform: linux) {
+  left: 116px;
+}
+}
+
+#forward-button {
+  left: 145px;
+@media (-moz-platform: linux) {
+  left: 150px;
+}
+}
+
+#reload-button,
+#stop-button {
+  left: 179px;
+@media (-moz-platform: linux) {
+  left: 184px;
+}
+}
+}
+}
+}
+
+:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
+#nav-bar {
+  padding-left: 520px !important;
+}
+}
+
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+#urlbar-container {
+  margin-left: 40px !important;
+}
+}
 }
 }
 }
@@ -4619,6 +4785,21 @@ position: fixed !important;
 :has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #tab-group-name:focus) {
 #nav-bar .toolbarbutton-1:first-child {
   margin-right: 0 !important;
+}
+}
+}
+
+@media -moz-pref("gwfox.plus_tb") {
+.titlebar-buttonbox {
+  position: fixed !important;
+  inset-inline-end: 0;
+  height: 46px !important;
+}
+
+#PersonalToolbar {
+  padding-inline-end: 150px !important;
+@media (-moz-platform: linux) {
+  padding-inline-end: 120px !important;
 }
 }
 }
