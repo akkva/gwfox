@@ -2756,6 +2756,9 @@ tab > stack {
   border-bottom-left-radius: 8px !important;
   border-bottom-right-radius: 8px !important;
   overflow: initial !important;
+&:-moz-window-inactive {
+  background-color: var(--bg1) !important;
+}
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: var(--bg2) !important;
@@ -2787,12 +2790,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #personal-toolbar-empty-description,
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   padding: 4px 7px !important;
-}
-
-:root:-moz-window-inactive {
-#PersonalToolbar {
-  background-color: var(--bg1) !important;
-}
 }
 
 :root[customizing] {
