@@ -233,7 +233,7 @@
   top: 1px;
 @media (-moz-platform: windows) {
 .titlebar-button {
-  padding-top: 17px !important;
+  padding-top: 19px !important;
   padding-bottom: 18px !important;
 }
 }
@@ -2618,6 +2618,9 @@ tab > stack {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
   margin-left: 81px !important;
+@media (-moz-platform: windows) {
+  margin-left: 81.5px !important;
+}
 @media (-moz-platform: linux) {
   margin-left: 83.5px !important;
 }
@@ -4387,9 +4390,11 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 
 @media not (-moz-platform: linux) {
+@media not -moz-pref("gwfox.plus_sc") {
 #sidebar-button {
   margin-left: -62px !important;
   margin-right: 62px !important;
+}
 }
 }
 
@@ -4423,9 +4428,11 @@ tab-group[collapsed] > .tab-group-label-container > & {
 }
 
 @media not (-moz-platform: linux) {
+@media not -moz-pref("gwfox.plus_sc") {
 #sidebar-button {
   margin-left: -52px !important;
   margin-right: 22px !important;
+}
 }
 }
 }
@@ -4555,8 +4562,10 @@ tab-group[collapsed] > .tab-group-label-container > & {
 
 @media (-moz-platform: windows) {
 :root[inFullscreen] {
+@media not -moz-pref("gwfox.plus_sc") {
 .titlebar-buttonbox-container {
   display: none !important;
+}
 }
 
 #PersonalToolbar {
@@ -4744,7 +4753,13 @@ position: fixed !important;
 
 :root:not([inDOMFullscreen]) {
 #nav-bar {
+  margin-left: 5px !important;
+}
+
+:has(#tabbrowser-tabs:not([expanded])) {
+#nav-bar {
   margin-left: 18px !important;
+}
 }
 
 :has(#sidebar-box:not([hidden])),
