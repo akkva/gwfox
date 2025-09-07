@@ -36,6 +36,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
+@media (-moz-platform: windows) {:not(:-moz-window-inactive) {::-moz-selection { background-color: #416189 }}}
 :root {
   --in-content-box-background: #282828 !important;
   --in-content-table-background: #252525 !important;
@@ -771,4 +772,3 @@ body {
 }
 }
 }
-
