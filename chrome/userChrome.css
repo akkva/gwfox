@@ -582,6 +582,9 @@
   backdrop-filter: blur(0px) !important;
 }
 }
+@media (prefers-color-scheme: dark) {
+  box-shadow: var(--bs2) !important;
+}
 }
 
 .urlbar-input,
@@ -616,6 +619,9 @@
 #urlbar[focused] #urlbar-background,
 #urlbar[focused] .urlbar-background {
   box-shadow: var(--bs1) !important;
+@media (prefers-color-scheme: dark) {
+  box-shadow: var(--bs2) !important;
+}
 }
 
 #urlbar-search-mode-indicator {
