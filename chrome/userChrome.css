@@ -1759,6 +1759,7 @@ richlistbox {
 
 #ctrlTab-panel {
   --panel-background: transparent !important;
+  --panel-shadow: none !important;
   background-color: transparent !important;
 }
 
