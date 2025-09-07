@@ -28,7 +28,7 @@
 
 ## Further customization
 
-- If you would like to have your Bookmark toolbar hidden at the bottom, address bar in the sidebar, macOS style window controls & simple mode, add `gwfox.plus` set to `true` in your `about:config`
+- If you would like to have your Bookmark toolbar hidden at the bottom, address bar in the sidebar, macOS style window controls & compact mode, add `gwfox.plus` set to `true` in your `about:config`
   - Use system style window controls: add `gwfox.plus_sc` set to `true`
   - Bookmark toolbar hidden at the top: add `gwfox.plus_tb` set to `true`
 - Remove window border when horizontal tabs is enabled: add `gwfox.noborder` set to `true`
