@@ -3592,6 +3592,14 @@ tab-group[collapsed] > .tab-group-label-container > & {
   display: block !important;
 }
 
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+#nav-bar {
+  margin-left: 5px !important;
+}
+}
+}
+
 @media (-moz-platform: linux) {
 .tab-content {
   margin-left: -3px !important;
