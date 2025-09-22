@@ -4829,8 +4829,14 @@ position: fixed !important;
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
-#nav-bar .toolbarbutton-1:first-child {
-  margin-right: 20px !important;
+#nav-bar {
+  padding-left: 65px !important;
+}
+
+#sidebar-button {
+  position: fixed !important;
+  top: 2px;
+  left: 18px;
 }
 
 :has(#sidebar-box:not([hidden])),
