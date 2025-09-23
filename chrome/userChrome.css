@@ -2685,7 +2685,7 @@ tab > stack {
 }
 
 #tabbrowser-tabs[orient="vertical"] .tab-content {
-:root:not([uidensity="compact"], [sidebar-expand-on-hover]) &[pinned] {
+:root:not([uidensity="compact"], [sidebar-expand-on-hover]):has([sidebar-shown]) &[pinned] {
   padding: 0 17px !important;
 }
 }
@@ -4829,6 +4829,7 @@ position: fixed !important;
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
+:has([sidebar-shown]) {
 #nav-bar {
   padding-left: 65px !important;
 }
@@ -4837,6 +4838,7 @@ position: fixed !important;
   position: fixed !important;
   top: 2px;
   left: 18px;
+}
 }
 
 :has(#sidebar-box:not([hidden])),
