@@ -840,7 +840,8 @@
 #firefox-view-button, #fxa-toolbar-menu-button,
 #userContext-icons, #userContext-label,
 #scrollbutton-up, #scrollbutton-down,
-.sharing-icon, #save-to-pocket-button {
+.sharing-icon, #save-to-pocket-button,
+#taskbar-tabs-button {
   display: none !important;
 }
 
@@ -1699,12 +1700,20 @@ richlistbox {
 }
 
 #statuspanel-label {
-  border: none !important;
+  border: .5px solid rgba(105, 105, 105, .1) !important;
   border-radius: 5px !important;
   margin: 5px !important;
+  background-color: light-dark(rgba(238, 238, 238, .75), rgba(52, 52, 54, .75)) !important;
+  backdrop-filter: blur(30px) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: light-dark(rgba(238, 238, 238, .98), rgba(52, 52, 54, .98)) !important;
+  backdrop-filter: blur(0px) !important;
+}
+}
 }
 
-.findbar-container, #statuspanel-label {
+.findbar-container {
   background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--bs1) !important;
@@ -1733,7 +1742,7 @@ richlistbox {
   box-shadow: var(--bs2) !important;
 }
 
-.findbar-container, #statuspanel-label {
+.findbar-container {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1px !important;
   box-shadow: var(--bs2) !important;
@@ -2025,7 +2034,7 @@ menupopup, panel[type="arrow"] {
   display: unset;
 }
 
-.findbar-container, #statuspanel-label {
+.findbar-container {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
 }
 
@@ -2040,11 +2049,11 @@ menupopup, panel[type="arrow"] {
 }
 
 #urlbar[breakout][breakout-extend] .urlbar-background,
-.findbar-container, .dialogBox, #statuspanel-label {
+.findbar-container, .dialogBox {
   outline: none !important;
 }
 
-.findbar-container, #statuspanel-label {
+.findbar-container {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(255, 255, 255, .15) !important;
 }
 
@@ -2613,10 +2622,6 @@ tab > stack {
 @media -moz-pref("gwfox.plus") {
 :root[sidebar-expand-on-hover] {
 @media not -moz-pref("gwfox.plus_sc") {
-.tabbrowser-tab[pinned] .tab-icon-image {
-  margin-left: 6px;
-}
-
 .tabbrowser-tab:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
   margin-left: unset;
 }
@@ -2624,11 +2629,15 @@ tab > stack {
 .tabbrowser-tab:hover:not([pinned]):is([soundplaying], [muted], [activemedia-blocked]) .tab-label-container {
   margin-left: 10.5px;
 }
+}
+
+.tabbrowser-tab[pinned] .tab-icon-image {
+  margin-left: 6px;
+}
 
 #tabbrowser-tabs[orient="vertical"]:not([expanded]) .tab-close-button, 
 .tabbrowser-tab[pinned] .tab-close-button {
   display: none !important;
-}
 }
 
 #tabbrowser-tabbox {
