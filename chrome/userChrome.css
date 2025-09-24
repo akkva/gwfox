@@ -2123,7 +2123,7 @@ menuitem[type="checkbox"]:not([checked="true"]) .menu-icon {
   visibility: hidden !important;
 }
 
-menuitem[type="radio"][checked="true"] .menu-icon {
+menuitem[type="checkbox"][checked="true"] .menu-icon {
   background-color: transparent;
   border: none;
 }
