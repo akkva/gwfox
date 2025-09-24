@@ -274,9 +274,9 @@ body {
 @-moz-document url("about:newtab"), url("about:home") {
 body { 
   --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
-  background-image: var(--newtab-wallpaper, ""), repeating-linear-gradient(-45deg, #f0f0f0 0 250px, #fdfdfd 0 500px) !important;
+  background-image: var(--newtab-wallpaper, ""), repeating-linear-gradient(-45deg, var(--newtab-wallpaper-color, "") 0 250px, #fdfdfd 0 500px) !important;
 @media (prefers-color-scheme: dark) {
-  background-image: var(--newtab-wallpaper, ""), repeating-linear-gradient(-45deg, #2d2d2d 0 250px, #202020 0 500px) !important;
+  background-image: var(--newtab-wallpaper, ""), repeating-linear-gradient(-45deg, var(--newtab-wallpaper-color, "") 0 250px, #202020 0 500px) !important;
 }
 }
 
@@ -644,6 +644,10 @@ body {
 
 .wallpaper-list .wallpaper-input:checked {
   outline-color: #1280fd !important;
+}
+
+.wallpaper-input:checked, .wallpaper-input.selected {
+  box-shadow: none !important;
 }
 
 .modal-overlay, .modalOverlayOuter {
