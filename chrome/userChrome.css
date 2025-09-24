@@ -3091,6 +3091,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #PersonalToolbar {
   margin-left: 221px !important;
   width: calc(100% - 229px);
+@media (-moz-platform: linux) {
+  margin-left: 223px !important;
+  width: calc(100% - 231px);
+}
 }
 }
 
