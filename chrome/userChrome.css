@@ -1700,13 +1700,8 @@ richlistbox {
 
 #statuspanel-label {
   border: none !important;
-  border-radius: 0 !important;
-  border-bottom-left-radius: 8px !important;
-#statuspanel:not([mirror]) > &:-moz-locale-dir(rtl),
-#statuspanel[mirror] > &:-moz-locale-dir(ltr) {
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 8px !important;
-}
+  border-radius: 5px !important;
+  margin: 5px !important;
 }
 
 .findbar-container, #statuspanel-label {
@@ -4917,12 +4912,6 @@ position: fixed !important;
 @media not (-moz-platform: linux) {
   border-radius: 0 !important;
 }
-}
-}
-
-#statuspanel-label {
-@media not (-moz-platform: linux) {
-  border-radius: 0 !important;
 }
 }
 
