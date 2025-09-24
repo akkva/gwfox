@@ -37,7 +37,7 @@
 
 ## 简介
 
-- 本主题适用Firefox 138+ macOS, Linux & Windows
+- 本主题适用Firefox 143+ macOS, Linux & Windows
 
 ## 使用方法
 
