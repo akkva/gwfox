@@ -2650,10 +2650,10 @@ tab > stack {
   clip-path: inset(-50px 0 0 139px);
   margin-left: 81px !important;
 @media (-moz-platform: windows) {
-  margin-left: 81.5px !important;
+  margin-left: 83px !important;
 }
 @media (-moz-platform: linux) {
-  margin-left: 83.5px !important;
+  margin-left: 87.5px !important;
 }
 }
 
@@ -2661,8 +2661,11 @@ tab > stack {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
   margin-left: 82px !important;
+@media (-moz-platform: windows) {
+  margin-left: 83px !important;
+}
 @media (-moz-platform: linux) {
-  margin-left: 83.5px !important;
+  margin-left: 87.5px !important;
 }
 }
 }
@@ -3498,8 +3501,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
   margin-left: -140px !important;
+@media (-moz-platform: windows) {
+  margin-left: -138px !important;
+}
 @media (-moz-platform: linux) {
-  margin-left: -137.5px !important;
+  margin-left: -134px !important;
 }
 }
 
@@ -3507,8 +3513,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
   margin-left: -139px !important;
+@media (-moz-platform: windows) {
+  margin-left: -138px !important;
+}
 @media (-moz-platform: linux) {
-  margin-left: -137.5px !important;
+  margin-left: -133px !important;
 }
 }
 }
@@ -3609,7 +3618,13 @@ tab-group[collapsed] > .tab-group-label-container & {
 @media not (-moz-platform: macos) {
 @media -moz-pref("gwfox.plus_sc") {
 #nav-bar {
-  margin-left: 5px !important;
+   padding-left: 27px !important;
+}
+
+#sidebar-button {
+  position: fixed !important;
+  top: 2px;
+  left: 5px;
 }
 }
 }
