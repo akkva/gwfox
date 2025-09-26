@@ -1981,6 +1981,24 @@ input {
 :has(#tabbrowser-tabs[expanded]) {
 #tabbrowser-tabbox {
   clip-path: inset(-8px 0 0 168px);
+@media (-moz-platform: linux) {
+  clip-path: inset(-8px 0 0 162px);
+}
+}
+
+#vertical-tabs-newtab-button {
+  margin-bottom: 10px !important;
+}
+
+@media (-moz-platform: windows) {
+#tabbrowser-tabs {
+  margin-inline-start: .5px !important;
+}
+
+#tabs-newtab-button,
+#vertical-tabs-newtab-button {
+  margin-inline-start: 9px !important;
+}
 }
 }
 
@@ -2537,7 +2555,13 @@ tab-group > .tabbrowser-tab,
   background-image: none !important;
   box-shadow: none !important;
   top: 0 !important;
-  inset-inline-start: 0 !important;
+  inset-inline-start: 7px !important;
+@media (-moz-platform: windows) {
+  inset-inline-start: 8px !important;
+}
+@media (-moz-platform: linux) {
+  inset-inline-start: 10px !important;
+}
 }
 
 #urlbar[breakout][breakout-extend] {
@@ -2653,7 +2677,7 @@ tab > stack {
   margin-left: 83px !important;
 }
 @media (-moz-platform: linux) {
-  margin-left: 87.5px !important;
+  margin-left: 80.5px !important;
 }
 }
 
@@ -2665,7 +2689,7 @@ tab > stack {
   margin-left: 83px !important;
 }
 @media (-moz-platform: linux) {
-  margin-left: 87.5px !important;
+  margin-left: 80.5px !important;
 }
 }
 }
@@ -3264,6 +3288,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 @media (-moz-platform: linux) {
+#tabbrowser-tabbox {
+  margin-left: -1px !important;
+}
+
 #tabbrowser-tabs {
   margin-left: -3px !important;
   margin-right: -3px !important;
@@ -3310,9 +3338,14 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #nav-bar {
-  padding-left: 285px !important;
+  padding-left: 295px !important;
 @media (-moz-platform: linux) {
-  padding-left: 355px !important;
+  padding-left: 365px !important;
+}
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+  margin-left: 78px !important;
+}
 }
 }
 
@@ -3334,9 +3367,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
 #nav-bar {
-  padding-left: 405px !important;
+  padding-left: 415px !important;
 @media (-moz-platform: linux) {
-  padding-left: 475px !important;
+  padding-left: 485px !important;
 }
 }
 
@@ -3354,6 +3387,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 }
+}
+
+.tab-close-button {
+  top: 1px !important;
+  inset-inline-start: 0 !important;
 }
 
 .tab-group-line {
@@ -3478,6 +3516,19 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
+@media (-moz-platform: linux) {
+#sidebar-box {
+  margin-left: -7px !important;
+}
+:has([sidebar-shown]) {
+:has(#sidebar-box[hidden]) {
+#tabbrowser-tabbox {
+  margin-left: -7px !important;
+}
+}
+}
+}
+
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
 :has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #tab-group-name:focus) {
 :has(#tabbrowser-tabs:not([expanded])) {
@@ -3505,7 +3556,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-left: -138px !important;
 }
 @media (-moz-platform: linux) {
-  margin-left: -134px !important;
+  margin-left: -140.5px !important;
 }
 }
 
@@ -3517,7 +3568,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-left: -138px !important;
 }
 @media (-moz-platform: linux) {
-  margin-left: -133px !important;
+  margin-left: -140.5px !important;
 }
 }
 }
@@ -3917,6 +3968,12 @@ tab > stack {
 }
 }
 }
+}
+}
+
+@media (-moz-platform: linux) {
+#tabbrowser-tabbox {
+  margin-left: -2px !important;
 }
 }
 
