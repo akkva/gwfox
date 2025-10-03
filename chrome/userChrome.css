@@ -4448,6 +4448,10 @@ tab-group[collapsed] > .tab-group-label-container & {
   transition: .25s var(--ssa);
 }
 
+.tab-throbber {
+  margin-left: -9px !important;
+}
+
 #urlbar:not([breakout][breakout-extend])[persistsearchterms],
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   left: 18px !important;
