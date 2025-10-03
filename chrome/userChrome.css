@@ -3310,7 +3310,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
---padding: 16px;
+  --padding: 16px;
 :has(#sidebar-main:not([hidden])) {
 .sidebar-splitter {
   cursor: col-resize !important;
@@ -3532,7 +3532,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
 :has(#back-button:hover, #forward-button:hover, #reload-button:hover, #stop-button:hover, #sidebar-button:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], #tab-group-name:focus) {
 :has(#tabbrowser-tabs:not([expanded])) {
---dp: none;
+  --dp: none;
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) .searchmode-switcher {
@@ -3759,6 +3759,7 @@ tab > stack {
 
 :root:not([chromehidden~="toolbar"], [customizing]) {
 &:not(:has([sidebar-shown])) {
+  --ssa: linear(0, 0.52 20%, 0.73 30%, 0.84 40%, 0.95 50%, 1.005 60%, 1.01 70%, 1.009 80%, 1.006 90%, 1.01);
 .titlebar-buttonbox-container {
   position: fixed !important;
   top: 25px !important;
@@ -4256,7 +4257,6 @@ tab-group[collapsed] > .tab-group-label-container & {
   top: 8px;
   left: -225px;
   opacity: 0;
-  transition: .25s;
   z-index: 9;
   border-radius: 8px !important;
   background-color: var(--bg4);
@@ -4293,8 +4293,8 @@ tab-group[collapsed] > .tab-group-label-container & {
   content: "";
   position: absolute;
   top: 0;
-  right: -20px;
-  width: 25px;
+  right: -25px;
+  width: 30px;
   height: 100%;
 }
 }
@@ -4356,14 +4356,14 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
---dp: none;
+  --dp: none;
 }
 
 :has(#sidebar-main:hover, #urlbar:not([breakout][breakout-extend])[persistsearchterms]:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], .tab-throbber[busy], #tab-group-name:focus, .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open], #urlbar:not([breakout][breakout-extend], [usertyping]:not([persistsearchterms])) .searchmode-switcher[open]) {
 .titlebar-buttonbox-container {
   left: 7px;
   opacity: 1;
-  transition: left .25s !important;
+  transition: left .25s var(--ssa) !important;
 @media (-moz-platform: windows) {
   left: 18px;
 }
@@ -4385,7 +4385,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 #sidebar-button {
   left: 80px;
   opacity: 1;
-  transition: left .25s !important;
+  transition: left .25s var(--ssa) !important;
 @media not (-moz-platform: macos) {
 @media -moz-pref("gwfox.plus_sc") {
   left: 8px;
@@ -4427,7 +4427,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 #unified-extensions-button {
   left: 45px;
   opacity: 1;
-  transition: left .25s !important;
+  transition: left .25s var(--ssa) !important;
 }
 
 #nav-bar-overflow-button {
@@ -4445,14 +4445,14 @@ tab-group[collapsed] > .tab-group-label-container & {
 #sidebar-main {
   left: 8px;
   opacity: 1;
-  transition: .25s;
+  transition: .25s var(--ssa);
 }
 
 #urlbar:not([breakout][breakout-extend])[persistsearchterms],
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   left: 18px !important;
   opacity: 1;
-  transition: left .25s !important;
+  transition: left .25s var(--ssa) !important;
 }
 
 #urlbar:not([breakout][breakout-extend])[persistsearchterms] {
