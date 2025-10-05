@@ -484,6 +484,12 @@
   display: none !important;
 }
 
+.urlbar[searchmode]:not([usertyping]) .urlbarView-body-inner {
+#urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
+  border-top: none !important;
+}
+}
+
 #urlbar[breakout][breakout-extend] {
   top: 20vh !important;
   left: 29vw !important;
@@ -3759,13 +3765,12 @@ tab > stack {
 
 :root:not([chromehidden~="toolbar"], [customizing]) {
 &:not(:has([sidebar-shown])) {
-  --ssa: linear(0, 0.52 20%, 0.73 30%, 0.84 40%, 0.95 50%, 1.005 60%, 1.01 70%, 1.009 80%, 1.006 90%, 1.01);
+  --ssa: linear(0 0%, 0.002654 1%, 0.010233 2%, 0.022589 3%, 0.038521 4%, 0.058553 5%, 0.080862 6%, 0.104472 7%, 0.131354 8%, 0.159546 9%, 0.188549 10%, 0.218369 11%, 0.249288 12%, 0.281157 13%, 0.312384 14%, 0.344478 15%, 0.375657 16%, 0.406785 17%, 0.437125 18%, 0.467506 19%, 0.497583 20%, 0.525452 21%, 0.553258 22%, 0.580418 23%, 0.606814 24%, 0.632552 25%, 0.656279 26%, 0.679514 27%, 0.701291 28%, 0.723084 28%, 0.743361 30%, 0.762963 31%, 0.780978 32%, 0.798355 33%, 0.814394 34%, 0.830143 35%, 0.844855 36%, 0.858699 37%, 0.871026 38%, 0.883408 39%, 0.894826 40%, 0.905208 41%, 0.915478 42%, 0.924365 43%, 0.932758 44%, 0.940157 45%, 0.947697 46%, 0.954563 47%, 0.960553 48%, 0.966231 49%, 0.971569 50%, 0.976025 51%, 0.980753 52%, 0.984596 53%, 0.987158 54%, 0.990917 55%, 0.993357 56%, 0.996029 56%, 0.998558 57%, 1.000579 59%, 1.002236 60%, 1.004611 61%, 1.005263 62%, 1.006517 63%, 1.007582 64%, 1.008345 65%, 1.009024 66%, 1.009528 67%, 1.010155 68%, 1.010425 69%, 1.010612 70%, 1.010823 71%, 1.010895 72%, 1.010923 73%, 1.010867 74%, 1.010754 75%, 1.010622 76%, 1.010415 77%, 1.010215 78%, 1.009915 79%, 1.009611 80%, 1.009327 81%, 1.009057 82%, 1.008714 83%, 1.008462 84%, 1.008073 85%, 1.007723 86%, 1.007397 87%, 1.007042 88%, 1.006705 89%, 1.006352 90%, 1.006033 91%, 1.005703 92%, 1.005304 93%, 1.005073 94%, 1.004761 95%, 1.004475 96%, 1.004212 97%, 1.003928 98%, 1.003654 99%, 1.003410 100%);
 .titlebar-buttonbox-container {
   position: fixed !important;
   top: 25px !important;
   left: -258px;
-  opacity: 0;
-  transition: left .25s !important;
+  transition: .15s;
 }
 
 .titlebar-buttonbox {
@@ -3994,8 +3999,7 @@ tab > stack {
   position: fixed !important;
   top: 10px;
   left: -258px;
-  opacity: 0;
-  transition: left .25s !important;
+  transition: .15s;
 }
 
 #downloads-button,
@@ -4005,9 +4009,8 @@ tab > stack {
   position: fixed !important;
   bottom: 16px;
   left: -258px;
-  opacity: 0;
   scale: .9;
-  transition: left .25s !important;
+  transition: .15s;
 }
 
 #downloads-button,
@@ -4152,7 +4155,7 @@ tab-group[collapsed] > .tab-group-label-container & {
   margin-inline-end: calc(var(--tab-inline-padding) / -2) !important;
   width: 24px !important;
   height: 24px !important;
-  margin-top: 6px !important;
+  margin-top: 5px !important;
   margin-left: 3px !important;
   box-sizing: border-box !important;
   padding: var(--tab-close-button-padding) !important;
@@ -4216,18 +4219,15 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 }
 
+#urlbar:not([breakout][breakout-extend])[persistsearchterms],
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   top: 55px !important;
   left: -225px !important;
-  opacity: 0;
-  transition: left .25s !important;
+  transition: .15s !important;
 }
 
-#urlbar:not([breakout][breakout-extend])[persistsearchterms] {
-  position: fixed;
-  top: 55px !important;
-  left: -258px !important;
-  opacity: 0;
+.searchmode-switcher {
+  transition: .15s !important;
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping]) .searchmode-switcher {
@@ -4256,14 +4256,13 @@ tab-group[collapsed] > .tab-group-label-container & {
   position: fixed;
   top: 8px;
   left: -225px;
-  opacity: 0;
   z-index: 9;
   border-radius: 8px !important;
   background-color: var(--bg4);
   backdrop-filter: blur(30px);
   box-shadow: var(--bs1);
   overflow: unset !important;
-  transition: .25s;
+  transition: .15s;
 @media (-moz-platform: windows) {
   top: 9px;
   height: calc(100% - 17px) !important;
@@ -4362,7 +4361,6 @@ tab-group[collapsed] > .tab-group-label-container & {
 :has(#sidebar-main:hover, #urlbar:not([breakout][breakout-extend])[persistsearchterms]:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], .tab-throbber[busy], #tab-group-name:focus, .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open], #urlbar:not([breakout][breakout-extend], [usertyping]:not([persistsearchterms])) .searchmode-switcher[open]) {
 .titlebar-buttonbox-container {
   left: 7px;
-  opacity: 1;
   transition: left .25s var(--ssa) !important;
 @media (-moz-platform: windows) {
   left: 18px;
@@ -4384,7 +4382,6 @@ tab-group[collapsed] > .tab-group-label-container & {
 #forward-button,
 #sidebar-button {
   left: 80px;
-  opacity: 1;
   transition: left .25s var(--ssa) !important;
 @media not (-moz-platform: macos) {
 @media -moz-pref("gwfox.plus_sc") {
@@ -4426,7 +4423,6 @@ tab-group[collapsed] > .tab-group-label-container & {
 #nav-bar-overflow-button,
 #unified-extensions-button {
   left: 45px;
-  opacity: 1;
   transition: left .25s var(--ssa) !important;
 }
 
@@ -4444,7 +4440,6 @@ tab-group[collapsed] > .tab-group-label-container & {
 
 #sidebar-main {
   left: 8px;
-  opacity: 1;
   transition: .25s var(--ssa);
 }
 
@@ -4455,7 +4450,6 @@ tab-group[collapsed] > .tab-group-label-container & {
 #urlbar:not([breakout][breakout-extend])[persistsearchterms],
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   left: 18px !important;
-  opacity: 1;
   transition: left .25s var(--ssa) !important;
 }
 
