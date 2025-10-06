@@ -3238,7 +3238,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-:has(#nav-bar:hover, #alltabs-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open]) {
+:has(#nav-bar:hover, #alltabs-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open], .webextension-browser-action[open]) {
 #tabbrowser-tabpanels {
   margin-top: 0;
   transition: margin .25s !important;
@@ -4782,13 +4782,13 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 }
 }
-}
 
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
 #nav-bar {
   padding-left: 545px !important;
 @media (-moz-platform: linux) {
   padding-left: 615px !important;
+}
 }
 }
 }
