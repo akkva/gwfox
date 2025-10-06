@@ -94,8 +94,6 @@
 }
 
 #tabbrowser-tabpanels {
-  margin-top: 0;
-  transition: .25s !important;
   background-color: transparent !important;
 }
 
@@ -842,12 +840,11 @@
 .toggle-button { --toggle-dot-background-color-on-pressed: #fff !important; }
 #blocked-permissions-container, #picture-in-picture-button,
 .private-browsing-indicator-with-label,
-#reset-pbm-toolbar-button, #vertical-spacer,
+#reset-pbm-toolbar-button, #taskbar-tabs-button,
 #firefox-view-button, #fxa-toolbar-menu-button,
 #userContext-icons, #userContext-label,
 #scrollbutton-up, #scrollbutton-down,
-.sharing-icon, #save-to-pocket-button,
-#taskbar-tabs-button {
+.sharing-icon, #save-to-pocket-button {
   display: none !important;
 }
 
@@ -3131,6 +3128,56 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin: 6px 0 6px 0 !important;
 }
 
+#vertical-spacer {
+  max-width: 0 !important;
+  min-width: 0 !important;
+&::before {
+  content: "";
+  position: fixed;
+  top: 8px;
+  left: 221px;
+  width: 100%;
+  height: 12px;
+  z-index: 9;
+}
+}
+
+:has(#sidebar-box:not([hidden])) {
+#vertical-spacer::before {
+  left: 510px;
+}
+}
+
+:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
+#vertical-spacer::before {
+  left: 630px;
+}
+}
+
+:has(#tabbrowser-tabs:not([expanded])) {
+#vertical-spacer::before {
+  left: 82px;
+}
+
+:has(#sidebar-box:not([hidden])) {
+#vertical-spacer::before {
+  left: 370px;
+}
+}
+
+:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
+#vertical-spacer::before {
+  left: 490px;
+}
+}
+}
+
+:has(#PersonalToolbar:hover, .toolbarbutton-1:hover, #PersonalToolbar .bookmark-item[open]) {
+#vertical-spacer::before {
+  content: none;
+}
+}
+
 @media not -moz-pref("gwfox.plus_tb") {
 :has(#sidebar-main:not([hidden])) {
 #PersonalToolbar {
@@ -3175,16 +3222,16 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #tabbrowser-tabpanels {
   margin-top: -39px;
-  transition: .25s !important;
+  transition: margin .25s !important;
 @media (-moz-platform: windows) {
   margin-top: -38px;
 }
 }
 
-:has(#nav-bar:hover) {
+:has(#nav-bar:hover, #alltabs-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open]) {
 #tabbrowser-tabpanels {
   margin-top: 0;
-  transition: .25s !important;
+  transition: margin .25s !important;
 }
 }
 
@@ -3192,7 +3239,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 :has(#PersonalToolbar .bookmark-item[open]) {
 #tabbrowser-tabpanels {
   margin-top: 0;
-  transition: .25s !important;
 }
 }
 }
@@ -4268,6 +4314,10 @@ tab-group[collapsed] > .tab-group-label-container & {
   display: none !important;
 }
 
+#vertical-spacer {
+  visibility: hidden;
+}
+
 #sidebar-main {
   height: calc(100% - 16px) !important;
   min-width: 221px !important;
@@ -4511,28 +4561,20 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 
 #nav-bar {
-  visibility: collapse;
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
 
-#urlbar,
-#stop-button,
-#back-button,
-#reload-button,
-#forward-button,
-#sidebar-button,
-#downloads-button,
-#PanelUI-menu-button,
-#nav-bar-overflow-button,
-#unified-extensions-button,
-.titlebar-buttonbox-container {
-  visibility: visible;
+#nav-bar .toolbarbutton-1:not(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button) {
+  display: none !important;
+}
+
+#vertical-spacer::before {
+  left: 0 !important;
 }
 
 #tabbrowser-tabpanels {
   margin-top: -39px !important;
-  transition: .25s !important;
 @media (-moz-platform: windows) {
   margin-top: -38px !important;
 }
@@ -4548,10 +4590,9 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 }
 
-:has(#PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open]) {
+:has(#vertical-spacer:hover, #PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open]) {
 #tabbrowser-tabpanels {
   margin-top: 0 !important;
-  transition: .25s !important;
 }
 }
 }
@@ -4681,7 +4722,6 @@ tab-group[collapsed] > .tab-group-label-container & {
 :has(#PersonalToolbar:hover) {
 #tabbrowser-tabpanels {
   margin-top: 0;
-  transition: .25s !important;
 }
 }
 
