@@ -4279,7 +4279,6 @@ tab-group[collapsed] > .tab-group-label-container & {
   border-radius: 8px !important;
   background-color: var(--bg4);
   backdrop-filter: blur(30px);
-  box-shadow: var(--bs1);
   overflow: unset !important;
   transition: .15s;
 @media (-moz-platform: windows) {
@@ -4461,6 +4460,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 
 #sidebar-main {
   left: 8px;
+  box-shadow: var(--bs1);
   transition: .25s var(--ssa);
 }
 
@@ -4534,6 +4534,16 @@ tab-group[collapsed] > .tab-group-label-container & {
   transition: .25s !important;
 @media (-moz-platform: windows) {
   margin-top: -38px !important;
+}
+}
+
+@media (-moz-platform: macos) or (not -moz-pref("gwfox.plus_sc")) {
+#sidebar-box {
+  margin-top: -39px !important;
+  margin-bottom: 2px !important;
+@media (-moz-platform: windows) {
+  margin-top: -38px !important;
+}
 }
 }
 
