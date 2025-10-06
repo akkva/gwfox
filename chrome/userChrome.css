@@ -4513,6 +4513,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 #nav-bar {
   visibility: collapse;
   margin-left: 0 !important;
+  padding-left: 0 !important;
 }
 
 #urlbar,
