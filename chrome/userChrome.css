@@ -2822,21 +2822,22 @@ tab > stack {
   backdrop-filter: blur(0px) !important;
 }
 }
-}
-
-#PersonalToolbar:hover {
-  bottom: 0;
-  opacity: 1;
-  transition: .25s !important;
-}
-
-#PersonalToolbar::before {
+&::before {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   bottom: -10px;
   height: 10px;
+}
+}
+
+:has(#PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open]) {
+#PersonalToolbar {
+  bottom: 0;
+  opacity: 1;
+  transition: .25s !important;
+}
 }
 }
 
@@ -2952,6 +2953,13 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #navigator-toolbox > #PersonalToolbar {
   grid-area: 3 !important;
   grid-column: 1 / span 2 !important;
+}
+}
+
+:has(#PersonalToolbar .bookmark-item[open]) {
+#PersonalToolbar {
+  transition-delay: 100ms;
+  transform: rotateX(0deg);
 }
 }
 }
@@ -3177,6 +3185,15 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #tabbrowser-tabpanels {
   margin-top: 0;
   transition: .25s !important;
+}
+}
+
+@media -moz-pref("gwfox.plus_tb") {
+:has(#PersonalToolbar .bookmark-item[open]) {
+#tabbrowser-tabpanels {
+  margin-top: 0;
+  transition: .25s !important;
+}
 }
 }
 }
@@ -3985,9 +4002,11 @@ tab > stack {
 
 #nav-bar {
   z-index: 10;
+@media not -moz-pref("gwfox.plus_tb") {
   margin-top: -39px !important;
 @media (-moz-platform: windows) {
   margin-top: -38px !important;
+}
 }
 }
 
@@ -4317,9 +4336,11 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 }
 
+@media not -moz-pref("gwfox.plus_tb") {
 :has(#urlbar:hover, .titlebar-buttonbox:hover) {
 #tabbrowser-tabpanels {
   margin-top: 0 !important;
+}
 }
 }
 
@@ -4476,10 +4497,51 @@ tab-group[collapsed] > .tab-group-label-container & {
   inset-inline-end: unset;
   height: unset !important;
 }
-}
-}
+
 #PersonalToolbar {
-  display: none;
+  padding-inline-end: 8px !important;
+}
+
+:has(#tabbrowser-tabs:not([expanded])) {
+#nav-bar {
+  margin-left: 0 !important;
+}
+}
+}
+}
+
+#nav-bar {
+  visibility: collapse;
+  margin-left: 0 !important;
+}
+
+#urlbar,
+#stop-button,
+#back-button,
+#reload-button,
+#forward-button,
+#sidebar-button,
+#downloads-button,
+#PanelUI-menu-button,
+#nav-bar-overflow-button,
+#unified-extensions-button,
+.titlebar-buttonbox-container {
+  visibility: visible;
+}
+
+#tabbrowser-tabpanels {
+  margin-top: -39px !important;
+  transition: .25s !important;
+@media (-moz-platform: windows) {
+  margin-top: -38px !important;
+}
+}
+
+:has(#PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open]) {
+#tabbrowser-tabpanels {
+  margin-top: 0 !important;
+  transition: .25s !important;
+}
 }
 }
 }
