@@ -3137,8 +3137,18 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   top: 8px;
   left: 221px;
   width: 100%;
-  height: 12px;
+  height: 13px;
   z-index: 9;
+}
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.plus_sc") {
+&::before {
+  width: calc(100% - 360px);
+@media (-moz-platform: linux) {
+  width: calc(100% - 340px);
+}
+}
+}
 }
 }
 
@@ -4314,10 +4324,6 @@ tab-group[collapsed] > .tab-group-label-container & {
   display: none !important;
 }
 
-#vertical-spacer {
-  visibility: hidden;
-}
-
 #sidebar-main {
   height: calc(100% - 16px) !important;
   min-width: 221px !important;
@@ -4540,6 +4546,10 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 }
 
+#vertical-spacer::before {
+  width: 0;
+}
+
 @media -moz-pref("gwfox.plus_tb") {
 @media not (-moz-platform: macos) {
 @media -moz-pref("gwfox.plus_sc") {
@@ -4571,6 +4581,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 
 #vertical-spacer::before {
   left: 0 !important;
+  width: 100%;
 }
 
 #tabbrowser-tabpanels {
