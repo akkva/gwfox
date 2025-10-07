@@ -2803,12 +2803,13 @@ tab > stack {
   bottom: -32px;
   opacity: 0;
   transition: .25s !important;
+  transition-delay: .35s !important;
   padding-bottom: 0 !important;
   background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
   border-top: 1px solid rgba(105, 105, 105, .15) !important;
-  border-bottom-left-radius: 8px !important;
-  border-bottom-right-radius: 8px !important;
+  border-bottom-left-radius: 7px !important;
+  border-bottom-right-radius: 7px !important;
   overflow: initial !important;
 &:-moz-window-inactive {
   background-color: var(--bg1) !important;
@@ -2833,7 +2834,7 @@ tab > stack {
 #PersonalToolbar {
   bottom: 0;
   opacity: 1;
-  transition: .25s !important;
+  transition: .35s !important;
 }
 }
 }
