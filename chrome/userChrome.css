@@ -3233,6 +3233,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #tabbrowser-tabpanels {
   margin-top: -39px;
   transition: margin .25s !important;
+  transition-delay: .35s !important;
 @media (-moz-platform: windows) {
   margin-top: -38px;
 }
@@ -3241,7 +3242,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 :has(#nav-bar:hover, #alltabs-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open], .webextension-browser-action[open]) {
 #tabbrowser-tabpanels {
   margin-top: 0;
-  transition: margin .25s !important;
+  transition: margin .35s !important;
 }
 }
 
