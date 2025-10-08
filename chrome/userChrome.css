@@ -2881,12 +2881,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 :has(#sidebar-box:not([hidden])) {
 #PersonalToolbar {
-  margin-left: 331px !important;
-  width: calc(100% - 339px);
-@media -moz-pref("gwfox.plus_tb") {
-  margin-left: 337px !important;
-  width: calc(100% - 345px);
-}
+  margin-left: 338px !important;
+  width: calc(100% - 346px);
 @media (-moz-platform: windows) {
   margin-left: 339px !important;
   width: calc(100% - 347px);
@@ -2900,12 +2896,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
 #PersonalToolbar {
-  margin-left: 451px !important;
-  width: calc(100% - 459px);
-@media -moz-pref("gwfox.plus_tb") {
-  margin-left: 457px !important;
-  width: calc(100% - 465px);
-}
+  margin-left: 458px !important;
+  width: calc(100% - 466px);
 @media (-moz-platform: windows) {
   margin-left: 459px !important;
   width: calc(100% - 467px);
@@ -3198,6 +3190,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-left: 223px !important;
   width: calc(100% - 231px);
 }
+@media -moz-pref("gwfox.noborder") {
+  width: calc(100% - 221px) !important;
+}
 }
 }
 
@@ -3209,6 +3204,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-left: 512px !important;
   width: calc(100% - 520px);
 }
+@media -moz-pref("gwfox.noborder") {
+  width: calc(100% - 509px) !important;
+}
 }
 }
 
@@ -3219,6 +3217,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media (-moz-platform: linux) {
   margin-left: 632px !important;
   width: calc(100% - 640px);
+}
+@media -moz-pref("gwfox.noborder") {
+  width: calc(100% - 629px) !important;
 }
 }
 }
@@ -3237,6 +3238,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   transition-delay: .35s !important;
 @media (-moz-platform: windows) {
   margin-top: -38px;
+}
+@media -moz-pref("gwfox.noborder") {
+  margin-top: -47px;
+@media (-moz-platform: windows) {
+  margin-top: -46px;
+}
 }
 }
 
@@ -3335,6 +3342,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media (-moz-platform: windows) {
   margin-top: -38px;
 }
+@media -moz-pref("gwfox.noborder") {
+  margin-top: -47px;
+@media (-moz-platform: windows) {
+  margin-top: -46px;
+}
+}
 }
 }
 
@@ -3402,12 +3415,15 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-left: 81px !important;
   width: calc(100% - 89px);
 @media (-moz-platform: windows) {
-  margin-left: 81.5px !important;
-  width: calc(100% - 89.5px);
+  margin-left: 83px !important;
+  width: calc(100% - 91px);
 }
 @media (-moz-platform: linux) {
   margin-left: 84px !important;
   width: calc(100% - 92px);
+}
+@media -moz-pref("gwfox.noborder") {
+  width: calc(100% - 81px) !important;
 }
 }
 }
@@ -3435,12 +3451,15 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-left: 369px !important;
   width: calc(100% - 377px);
 @media (-moz-platform: windows) {
-  margin-left: 368.5px !important;
-  width: calc(100% - 376.5px);
+  margin-left: 371px !important;
+  width: calc(100% - 379px);
 }
 @media (-moz-platform: linux) {
   margin-left: 371px !important;
   width: calc(100% - 379px);
+}
+@media -moz-pref("gwfox.noborder") {
+  width: calc(100% - 369px) !important;
 }
 }
 }
@@ -3459,12 +3478,15 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-left: 489px !important;
   width: calc(100% - 497px);
 @media (-moz-platform: windows) {
-  margin-left: 488.5px !important;
-  width: calc(100% - 496.5px);
+  margin-left: 491px !important;
+  width: calc(100% - 499px);
 }
 @media (-moz-platform: linux) {
   margin-left: 491px !important;
   width: calc(100% - 499px);
+}
+@media -moz-pref("gwfox.noborder") {
+  width: calc(100% - 489px) !important;
 }
 }
 }
@@ -3594,6 +3616,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media (-moz-platform: windows) {
   margin-top: -38px;
 }
+@media -moz-pref("gwfox.noborder") {
+  margin-top: -47px;
+@media (-moz-platform: windows) {
+  margin-top: -46px;
+}
+}
 }
 }
 
@@ -3658,6 +3686,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-top: -39px !important;
 @media (-moz-platform: windows) {
   margin-top: -38px !important;
+}
+@media -moz-pref("gwfox.noborder") {
+  margin-top: -47px !important;
+@media (-moz-platform: windows) {
+  margin-top: -46px !important;
+}
 }
 }
 
@@ -4064,6 +4098,12 @@ tab > stack {
   margin-top: -39px !important;
 @media (-moz-platform: windows) {
   margin-top: -38px !important;
+}
+@media -moz-pref("gwfox.noborder") {
+  margin-top: -47px !important;
+@media (-moz-platform: windows) {
+  margin-top: -46px !important;
+}
 }
 }
 }
@@ -4591,6 +4631,12 @@ tab-group[collapsed] > .tab-group-label-container & {
 @media (-moz-platform: windows) {
   margin-top: -38px !important;
 }
+@media -moz-pref("gwfox.noborder") {
+  margin-top: -47px !important;
+@media (-moz-platform: windows) {
+  margin-top: -46px !important;
+}
+}
 }
 
 @media (-moz-platform: macos) or (not -moz-pref("gwfox.plus_sc")) {
@@ -5080,7 +5126,6 @@ position: fixed !important;
 
 @media -moz-pref("gwfox.noborder") {
 :root:not([inDOMFullscreen], [chromehidden~="toolbar"]) {
-@media not -moz-pref("sidebar.verticalTabs") {
 #tabbrowser-tabbox browser {
   border-radius: 0 !important;
   clip-path: inset(0 round .1px) !important;
@@ -5091,7 +5136,7 @@ position: fixed !important;
 .devtools-toolbox-bottom-iframe {
   border-radius: 0 !important;
   margin: 0 !important;
-  box-shadow: none !important;
+  box-shadow: 0 0 2px light-dark(#00000026, #00000040) !important;
 }
 
 .devtools-toolbox-bottom-iframe {
@@ -5120,6 +5165,7 @@ position: fixed !important;
 }
 }
 
+@media not -moz-pref("sidebar.verticalTabs") {
 :has(#sidebar-main:not([hidden])) {
 #PersonalToolbar {
   width: calc(100% - 50px) !important;
@@ -5128,13 +5174,29 @@ position: fixed !important;
 
 :has(#sidebar-box:not([hidden])) {
 #PersonalToolbar {
-  width: calc(100% - 330px) !important;
+  margin-left: 338px !important;
+  width: calc(100% - 340px) !important;
+@media (-moz-platform: windows) {
+  margin-left: 339px !important;
+}
+@media (-moz-platform: linux) {
+  margin-left: 345px !important;
+  width: calc(100% - 347px) !important;
+}
 }
 }
 
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
 #PersonalToolbar {
-  width: calc(100% - 450px) !important;
+  margin-left: 458px !important;
+  width: calc(100% - 460px) !important;
+@media (-moz-platform: windows) {
+  margin-left: 459px !important;
+}
+@media (-moz-platform: linux) {
+  margin-left: 465px !important;
+  width: calc(100% - 467px) !important;
+}
 }
 }
 }
