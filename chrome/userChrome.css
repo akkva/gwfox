@@ -2729,9 +2729,6 @@ tab > stack {
 :has(#tabbrowser-tabs[expanded]) {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 139px);
-@media (-moz-platform: windows) {
-  margin-left: 83px !important;
-}
 @media (-moz-platform: linux) {
   margin-left: 80.5px !important;
 }
