@@ -26,10 +26,6 @@
   --checkbox-checked-bgcolor: light-dark(#007aff, #1280fd) !important;
   --checkbox-checked-hover-bgcolor: light-dark(#0075dd, #006bdc) !important;
   --checkbox-checked-active-bgcolor: light-dark(#005ebb, #0055bc) !important;
-  --link-color: light-dark(#007aff, #1280fd) !important;
-  --link-color-hover: light-dark(#0075dd, #006bdc) !important;
-  --link-color-active: light-dark(#005ebb, #0055bc) !important;
-  --link-color-visited: light-dark(#007aff, #1280fd) !important;
   --brand-color-accent: light-dark(#007aff, #1280fd) !important;
   --brand-color-accent-hover: light-dark(#0075dd, #006bdc) !important;
   --brand-color-accent-active: light-dark(#005ebb, #0055bc) !important;
@@ -202,6 +198,15 @@ input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]) {
   &:hover { background-color: light-dark(#0075dd, #006bdc) !important; }
   &:hover:active { background-color: light-dark(#005ebb, #0055bc) !important; }
 }
+}
+}
+
+@-moz-document url-prefix(about:) {
+:root {
+  --link-color: light-dark(#007aff, #1280fd) !important;
+  --link-color-hover: light-dark(#0075dd, #006bdc) !important;
+  --link-color-active: light-dark(#005ebb, #0055bc) !important;
+  --link-color-visited: light-dark(#007aff, #1280fd) !important;
 }
 }
 
