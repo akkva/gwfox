@@ -5013,6 +5013,17 @@ position: fixed !important;
 }
 }
 }
+@media -moz-pref("gwfox.plus_tb") {
+#PersonalToolbar {
+@media -moz-pref("sidebar.revamp") {
+@media -moz-pref("sidebar.revamp.round-content-area") {
+@media -moz-pref("sidebar.position_start") {
+  border-top-left-radius: 8px !important;
+}
+}
+}
+}
+}
 }
 
 :has(#sidebar-main[hidden]) {
