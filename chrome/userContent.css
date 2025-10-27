@@ -36,6 +36,10 @@
   --bg4: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15);
   --bs2: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5);
+  @media (-moz-mac-tahoe-theme) {
+  --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 1px rgba(0, 0, 0, .2);
+  --bs2: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .4);
+  }
   @media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
   --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15);    
@@ -329,7 +333,7 @@ body {
 .context-menu {
   border-radius: 6px !important;
   padding: 6px !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+  box-shadow: var(--bs1) !important;
 @media (-moz-mac-tahoe-theme) {
   border-radius: 12px !important;
 }
@@ -586,7 +590,7 @@ body {
 
 .context-menu {
   border: 1px solid rgba(235, 245, 255, .15) !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
+  box-shadow: var(--bs2) !important;
 }
 }
 
