@@ -1653,6 +1653,28 @@ tree {
 @-moz-document url("chrome://global/content/megalist/megalist.html") {
 * {
   --background-color-canvas: transparent !important;
+  --background-color-box: light-dark(rgba(255, 255, 255, .95), rgba(0, 0, 0, .95)) !important;
+}
+
+input {--background-color-box: light-dark(rgba(155, 155, 155, .2), rgba(195, 195, 195, .2)) !important;}
+
+.search-container {
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+}
+
+.search-icon {
+  display: none;
+}
+
+.search {
+  margin-inline-start: 0 !important;
+  min-height: 32px !important;
+}
+
+input[type="radio"] {
+  appearance: none !important;
 }
 }
 
