@@ -1406,6 +1406,9 @@ menupopup,
 .popup-internal-box,
 #PopupAutoComplete > .autocomplete-richlistbox,
 .menupopup-arrowscrollbox {
+@media (-moz-mac-tahoe-theme) {
+  border-radius: 12px !important;
+}
 @media not (-moz-platform: linux) {
   background: light-dark(rgba(255, 255, 255, .55), rgba(15, 15, 12, .55)) !important;
 }
