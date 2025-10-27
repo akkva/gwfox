@@ -66,7 +66,9 @@
   --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
   --toolbarbutton-active-background: color-mix(in srgb, currentColor 15%, transparent) !important;
   @media (-moz-mac-tahoe-theme) {
-  --border-radius-small: 12px !important;    
+  --border-radius-small: 12px !important;
+  --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 1px rgba(0, 0, 0, .2);
+  --bs2: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .4);
   }
   @media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
@@ -4991,6 +4993,28 @@ position: fixed !important;
 }
 
 @media not -moz-pref("sidebar.verticalTabs") {
+#tabbrowser-tabbox {
+@media -moz-pref("sidebar.revamp") {
+@media -moz-pref("sidebar.revamp.round-content-area") {
+@media -moz-pref("sidebar.position_start") {
+  border-start-start-radius: 10px !important;
+}
+}
+}
+}
+
+:has([sidebar-shown]) {
+#tabbrowser-tabbox {
+@media -moz-pref("sidebar.revamp") {
+@media -moz-pref("sidebar.revamp.round-content-area") {
+@media -moz-pref("sidebar.position_start") {
+  clip-path: inset(0 round 12px 0 0 0);
+}
+}
+}
+}
+}
+
 :has(#sidebar-main[hidden]) {
 #PersonalToolbar {
   width: 100% !important;
