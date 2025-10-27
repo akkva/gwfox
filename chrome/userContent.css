@@ -330,6 +330,9 @@ body {
   border-radius: 6px !important;
   padding: 6px !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+@media (-moz-mac-tahoe-theme) {
+  border-radius: 12px !important;
+}
 @media (-moz-platform: windows) {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
 }
@@ -491,6 +494,9 @@ body {
 
 .customize-menu {
   border-radius: 8px !important;
+@media (-moz-mac-tahoe-theme) {
+  border-radius: 12px !important;
+}
 }
 
 .tile, .context-menu-button.icon {
@@ -690,6 +696,9 @@ body {
   animation-name: panel-grow;
   animation-duration: 250ms;
   background-color: var(--bg4) !important;
+@media (-moz-mac-tahoe-theme) {
+  border-radius: 12px !important;
+}
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
