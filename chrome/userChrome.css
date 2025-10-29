@@ -18,7 +18,7 @@
   --bg3: light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1));
   --bg4: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15);
-  --bs2: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5);
+  --bs2: 0 5px 15px rgba(0, 0, 0, .25), inset 0 0 0 .5px rgba(0, 0, 0, .78), 0 0 0 .5px rgba(0, 0, 0, .2);
   --outline-color: light-dark(#7db0f7, #2c749f);
   --button-bgcolor: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
   --button-hover-bgcolor: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
@@ -67,8 +67,7 @@
   --toolbarbutton-active-background: color-mix(in srgb, currentColor 15%, transparent) !important;
   @media (-moz-mac-tahoe-theme) {
   --border-radius-small: 12px !important;
-  --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 1px rgba(0, 0, 0, .2);
-  --bs2: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .4);
+  --bs1: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .34), 0 0 0 .5px rgba(0, 0, 0, .12);
   }
   @media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
@@ -1803,13 +1802,13 @@ richlistbox {
 #urlbar[breakout][breakout-extend] .urlbar-background,
 .dialogBox {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
-  outline-offset: -1px !important;
+  outline-offset: -1.5px !important;
   box-shadow: var(--bs2) !important;
 }
 
 .findbar-container {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
-  outline-offset: -1px !important;
+  outline-offset: -1.5px !important;
   box-shadow: var(--bs2) !important;
 @media (-moz-platform: windows) {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
