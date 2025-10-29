@@ -35,10 +35,9 @@
   --button-text-color-primary: #fff !important;
   --bg4: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15);
-  --bs2: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5);
+  --bs2: 0 5px 15px rgba(0, 0, 0, .25), inset 0 0 0 .5px rgba(0, 0, 0, .78), 0 0 0 .5px rgba(0, 0, 0, .2);
   @media (-moz-mac-tahoe-theme) {
-  --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 1px rgba(0, 0, 0, .2);
-  --bs2: 0 5px 15px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .4);
+  --bs1: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .34), 0 0 0 .5px rgba(0, 0, 0, .12);
   }
   @media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
@@ -587,11 +586,6 @@ body {
 .context-menu-button {
   fill: #fff !important;
 }
-
-.context-menu {
-  border: 1px solid rgba(235, 245, 255, .15) !important;
-  box-shadow: var(--bs2) !important;
-}
 }
 
 @media (prefers-color-scheme: light) {
@@ -794,26 +788,14 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-.modal, .contentSearchSuggestionTable {
+.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu {
   box-shadow: var(--bs2) !important;
-  border: 1px solid rgba(235, 245, 255, .15) !important;
-}
-
-.customize-menu {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
-  outline-offset: -1px !important;
+  outline-offset: -1.5px !important;
 }
 
 @media (-moz-platform: windows) {
-.modal, .context-menu, .contentSearchSuggestionTable {
-  border: none !important;
-}
-
-.context-menu {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(255, 255, 255, .15) !important;
-}
-
-.customize-menu {
+.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu {
   outline: none !important;
 }
 }
