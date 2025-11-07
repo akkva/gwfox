@@ -60,7 +60,7 @@
   --sidebar-box-background: light-dark(rgba(102, 105, 108, .1), rgba(165, 165, 165, .1)) !important;
   --urlbarView-action-button-background-color: var(--button-bgcolor) !important;
   --urlbarView-hover-background: var(--button-hover-bgcolor) !important;
-  --urlbarView-highlight-background: var(--button-active-bgcolor) !important;
+  --urlbarView-highlight-background: var(--button-hover-bgcolor) !important;
   --urlbarView-highlight-color: light-dark(#000, #fff) !important;
   --input-bgcolor: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   --input-border-color: transparent !important;
@@ -389,6 +389,11 @@
 .urlbarView-row & {
   color: light-dark(#5a5a5a, #a2a2a2) !important;
 }
+}
+
+.urlbarView-action-btn {
+  color: light-dark(#5a5a5a, #a2a2a2) !important;
+  font-weight: unset !important;
 }
 
 .urlbarView-row[has-action]:is([type="switchtab"], [type="remotetab"], [type="clipboard"]) {
