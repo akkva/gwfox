@@ -33,6 +33,7 @@
   --color-accent-primary: light-dark(#007aff, #1280fd) !important;
   --color-accent-primary-active: light-dark(#005ebb, #0055bc) !important;
   --button-text-color-primary: #fff !important;
+  --border-color: rgba(105, 105, 105, .2) !important;
   --bg4: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15);
   --bs2: 0 5px 15px rgba(0, 0, 0, .25), inset 0 0 0 .5px rgba(0, 0, 0, .78), 0 0 0 .5px rgba(0, 0, 0, .2);
@@ -49,10 +50,6 @@
 }
 }
 
-@media (prefers-color-scheme: light) {
-:root { --color-gray-20: #fff !important; }
-}
-
 @media (prefers-color-scheme: dark) {
 @media (-moz-platform: windows) {:not(:-moz-window-inactive) {::-moz-selection { background-color: #416189 }}}
 :root {
@@ -60,7 +57,6 @@
 @media not -moz-pref("gwfox.atbc") {
   --in-content-box-background: #282828 !important;
   --in-content-table-background: #252525 !important;
-  --color-gray-70: #4d4d4d !important;
   --color-gray-80: #282828 !important;
   --color-gray-90: #191919 !important;
 }
