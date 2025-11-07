@@ -49,6 +49,10 @@
 }
 }
 
+@media (prefers-color-scheme: light) {
+:root { --color-gray-20: #fff !important; }
+}
+
 @media (prefers-color-scheme: dark) {
 @media (-moz-platform: windows) {:not(:-moz-window-inactive) {::-moz-selection { background-color: #416189 }}}
 :root {
@@ -56,6 +60,7 @@
 @media not -moz-pref("gwfox.atbc") {
   --in-content-box-background: #282828 !important;
   --in-content-table-background: #252525 !important;
+  --color-gray-70: #4d4d4d !important;
   --color-gray-80: #282828 !important;
   --color-gray-90: #191919 !important;
 }
