@@ -1094,11 +1094,11 @@
 }
 }
 
-tab > stack {
+.tab-stack {
   margin: 0 1px !important;
 }
 
-tab .tab-label {
+.tab-label {
   font-size: 13px !important;
   margin-bottom: 1px !important;
 }
@@ -2648,9 +2648,6 @@ tab-group > .tabbrowser-tab,
 .tab-group-line {
 #tabbrowser-tabs & {
   inset-inline: 0 !important;
-@media (-moz-platform: windows) {
-  margin-inline-start: -.5px !important;
-}
 
 .tabbrowser-tab:first-of-type > .tab-stack > .tab-background > & {
   inset-block-start: 2px !important;
@@ -3782,6 +3779,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-inline: 4px !important;
   border-radius: 50% !important;
   clip-path: circle(50%);
+@media (-moz-mac-tahoe-theme) {
+  padding: 1px !important;
+}
 @media not (-moz-platform: macos) {
 @media -moz-pref("gwfox.plus_sc") {
   padding: 2px !important;
@@ -4346,7 +4346,7 @@ tab-group[collapsed] > .tab-group-label-container & {
   --dp: none;
 }
 
-:has(#sidebar-main:hover, #urlbar:not([breakout][breakout-extend])[persistsearchterms]:hover, #urlbar:not([breakout][breakout-extend], [usertyping]):hover, #urlbar:not([breakout][breakout-extend], [usertyping]) #page-action-buttons > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-box > *[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #identity-permission-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #notification-popup-box[open], #urlbar:not([breakout][breakout-extend], [usertyping]) #tracking-protection-icon-container[open], .tab-throbber[busy], #tab-group-name:focus, .tab-group-editor-panel *:hover, #tabbrowser-tabs[movingtab], .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open], #urlbar:not([breakout][breakout-extend], [usertyping]:not([persistsearchterms])) .searchmode-switcher[open]) {
+:has(#sidebar-main:hover, #urlbar:not([open])[persistsearchterms]:hover, #urlbar:not([open], [usertyping]):hover, #urlbar:not([open], [usertyping]) #page-action-buttons > *[open], #urlbar:not([open], [usertyping]) #identity-box > *[open], #urlbar:not([open], [usertyping]) #identity-permission-box[open], #urlbar:not([open], [usertyping]) #notification-popup-box[open], #urlbar:not([open], [usertyping]) #tracking-protection-icon-container[open], .tab-throbber[busy], #tab-group-name:focus, .tab-group-editor-panel *:hover, #tabbrowser-tabs[movingtab], .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open], #urlbar:not([open], [usertyping]:not([persistsearchterms])) .searchmode-switcher[open]) {
 .titlebar-buttonbox-container {
   left: 7px;
   transition: left .25s var(--ssa) !important;
