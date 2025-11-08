@@ -3781,6 +3781,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   padding: 0 !important;
   margin-inline: 4px !important;
   border-radius: 50% !important;
+  clip-path: circle(50%);
 @media not (-moz-platform: macos) {
 @media -moz-pref("gwfox.plus_sc") {
   padding: 2px !important;
@@ -4770,6 +4771,7 @@ position: fixed !important;
   padding: 0 !important;
   margin-inline: 4px !important;
   border-radius: 50% !important;
+  clip-path: circle(50%);
 }
 
 .titlebar-close {
