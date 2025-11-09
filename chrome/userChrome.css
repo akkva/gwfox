@@ -69,7 +69,6 @@
   --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
   --toolbarbutton-active-background: color-mix(in srgb, currentColor 15%, transparent) !important;
   @media (-moz-mac-tahoe-theme) {
-  --border-radius-small: 12px !important;
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .34), 0 0 0 .5px rgba(0, 0, 0, .12);
   }
   @media (-moz-platform: windows) {
@@ -1447,7 +1446,7 @@ menuitem, menu {
   appearance: none !important;
   border-radius: 4px !important;
 @media not (-moz-platform: linux) {
-  height: 22px !important;
+  height: 24px !important;
 }
 }
 
@@ -1462,7 +1461,6 @@ menupopup > menuitem[selected] {
 
 menupopup .bookmark-item {
   margin: 2px 0 !important;
-  height: 22px !important;
 }
 
 menupopup menu:hover:not([disabled=true]),
