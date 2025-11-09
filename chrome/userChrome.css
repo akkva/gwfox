@@ -2615,6 +2615,9 @@ tab-group > .tabbrowser-tab,
   min-height: 50px !important;
   border-radius: 8px !important;
   backdrop-filter: blur(30px) !important;
+@media (-moz-mac-tahoe-theme) {
+  border-radius: 12px !important;
+}
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   backdrop-filter: blur(0px) !important;
@@ -2628,6 +2631,9 @@ tab-group > .tabbrowser-tab,
   backdrop-filter: blur(30px) !important;
   border-radius: 8px !important;
   min-height: 50px !important;
+@media (-moz-mac-tahoe-theme) {
+  border-radius: 12px !important;
+}
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   backdrop-filter: blur(0px) !important;
