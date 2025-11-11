@@ -3742,9 +3742,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   position: fixed !important;
   top: 25px !important;
   left: -258px;
+  transition: .01s;
 }
 
-.titlebar-spacer::before {
+.titlebar-spacer:not(#vertical-spacer)::before {
   content: none;
 }
 
@@ -3995,6 +3996,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   position: fixed !important;
   top: 10px;
   left: -258px;
+  transition: .01s;
 }
 
 #downloads-button,
@@ -4005,6 +4007,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   bottom: 16px;
   left: -258px;
   scale: .9;
+  transition: .01s;
 }
 
 #downloads-button,
@@ -4209,6 +4212,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 #urlbar:not([breakout][breakout-extend], [usertyping]) {
   top: 55px !important;
   left: -245px !important;
+  transition: .01s !important;
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping])[pageproxystate="invalid"] {
@@ -4246,6 +4250,7 @@ tab-group[collapsed] > .tab-group-label-container & {
   background-color: var(--bg4);
   backdrop-filter: blur(30px);
   overflow: unset !important;
+  transition: .01s;
 @media (-moz-platform: windows) {
   top: 9px;
   height: calc(100% - 17px) !important;
@@ -4340,11 +4345,13 @@ tab-group[collapsed] > .tab-group-label-container & {
   --dp: none;
 }
 
-&:has(#sidebar-main:hover, .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, toolbarbutton:is(#unified-extensions-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button)[open], #urlbar:not([breakout][breakout-extend]) :is(:hover, .urlbar-page-action[open], .identity-box-button[open], #notification-popup-box[open], #tracking-protection-icon-container[open]), .tab-group-editor-panel[panelopen="true"], #tabbrowser-tabs[movingtab]), &:has(#urlbar:not([open])[persistsearchterms]:hover) {
+&:has(#sidebar-main:hover) {
 #sidebar-main, #stop-button, #back-button, #reload-button, #forward-button, #sidebar-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, .titlebar-buttonbox-container, #urlbar:not([breakout][breakout-extend])[persistsearchterms], #urlbar:not([breakout][breakout-extend], [usertyping]) {
   transition: left .25s var(--ssa) !important;
 }
+}
 
+&:has(#sidebar-main:hover, .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, toolbarbutton:is(#unified-extensions-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button)[open], #urlbar:not([breakout][breakout-extend]) :is(:hover, .urlbar-page-action[open], .identity-box-button[open], #notification-popup-box[open], #tracking-protection-icon-container[open]), .tab-group-editor-panel[panelopen="true"], #tabbrowser-tabs[movingtab]), &:has(#urlbar:not([open])[persistsearchterms]:hover) {
 .titlebar-buttonbox-container {
   left: 7px;
 @media (-moz-platform: windows) {
