@@ -3136,6 +3136,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #urlbar {
+  position: fixed !important;
   left: 10px !important;
   top: 47px !important;
   min-width: 220px !important;
