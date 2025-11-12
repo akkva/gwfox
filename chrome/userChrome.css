@@ -3984,8 +3984,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-.toolbarbutton-1, .titlebar-buttonbox-container,
-#nav-bar-customization-target > :is(toolbarbutton, toolbaritem) {
+.titlebar-buttonbox-container, #PanelUI-menu-button, #nav-bar-overflow-button, #downloads-button,
+#sidebar-button, #back-button, #forward-button, #stop-reload-button, #unified-extensions-button {
   z-index: 10;
 }
 
