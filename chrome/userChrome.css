@@ -375,6 +375,7 @@
 #urlbar {
   --urlbar-box-bgcolor: var(--button-hover-bgcolor) !important;
   margin: 0 !important;
+  -moz-window-dragging: no-drag;
   transition: margin .25s !important;
 }
 
