@@ -3744,6 +3744,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   top: 25px !important;
   left: -258px;
   transition: .01s;
+  transition-delay: .35s;
 }
 
 .titlebar-spacer:not(#vertical-spacer)::before {
@@ -3765,6 +3766,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 }
+@media (-moz-platform: macos) {
 &::before {
   content: "";
   position: absolute;
@@ -3772,12 +3774,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   left: -20px;
   width: 25px;
   height: 28px;
-@media not (-moz-platform: macos) {
-@media -moz-pref("gwfox.plus_sc") {
-  left: -180px;
-  height: 35px;
-  width: 80px;
-}
 }
 }
 }
@@ -3974,7 +3970,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #nav-bar {
-  z-index: 10;
 @media not -moz-pref("gwfox.plus_tb") {
   margin-top: -39px !important;
 @media (-moz-platform: windows) {
@@ -3989,6 +3984,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
+.toolbarbutton-1, .titlebar-buttonbox-container,
+#nav-bar-customization-target > :is(toolbarbutton, toolbaritem) {
+  z-index: 10;
+}
+
 #reload-button,
 #stop-button,
 #back-button,
@@ -3998,6 +3998,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   top: 10px;
   left: -258px;
   transition: .01s;
+  transition-delay: .35s;
 }
 
 #downloads-button,
@@ -4009,6 +4010,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   left: -258px;
   scale: .9;
   transition: .01s;
+  transition-delay: .35s;
 }
 
 #downloads-button,
@@ -4214,6 +4216,7 @@ tab-group[collapsed] > .tab-group-label-container & {
   top: 55px !important;
   left: -245px !important;
   transition: .01s !important;
+  transition-delay: .35s !important;
 }
 
 #urlbar:not([breakout][breakout-extend], [usertyping])[pageproxystate="invalid"] {
@@ -4252,6 +4255,7 @@ tab-group[collapsed] > .tab-group-label-container & {
   backdrop-filter: blur(30px);
   overflow: unset !important;
   transition: .01s;
+  transition-delay: .35s;
 @media (-moz-platform: windows) {
   top: 9px;
   height: calc(100% - 17px) !important;
@@ -4349,7 +4353,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 &:has(#sidebar-main:hover) {
 #sidebar-main, #stop-button, #back-button, #reload-button, #forward-button, #sidebar-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, .titlebar-buttonbox-container, #urlbar:not([breakout][breakout-extend])[persistsearchterms], #urlbar:not([breakout][breakout-extend], [usertyping]) {
   transition: left .25s var(--ssa) !important;
-  transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
+  transition-timing-function: cubic-bezier(.27, 1.217, .17, 1.0117) !important;
 }
 }
 
