@@ -4245,7 +4245,7 @@ tab-group[collapsed] > .tab-group-label-container & {
   display: flex !important;
   position: fixed;
   top: 8px;
-  left: -245px;
+  left: -295px;
   z-index: 9;
   border-radius: 8px !important;
   background-color: var(--bg4);
@@ -4281,8 +4281,8 @@ tab-group[collapsed] > .tab-group-label-container & {
   content: "";
   position: absolute;
   top: 0;
-  right: -25px;
-  width: 30px;
+  right: -75px;
+  width: 80px;
   height: 100%;
 }
 }
@@ -4349,10 +4349,11 @@ tab-group[collapsed] > .tab-group-label-container & {
 &:has(#sidebar-main:hover) {
 #sidebar-main, #stop-button, #back-button, #reload-button, #forward-button, #sidebar-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, .titlebar-buttonbox-container, #urlbar:not([breakout][breakout-extend])[persistsearchterms], #urlbar:not([breakout][breakout-extend], [usertyping]) {
   transition: left .25s var(--ssa) !important;
+  transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
 }
 }
 
-&:has(#sidebar-main:hover, .titlebar-buttonbox:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, toolbarbutton:is(#unified-extensions-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button)[open], #urlbar:not([breakout][breakout-extend]) :is(:hover, .urlbar-page-action[open], .identity-box-button[open], #notification-popup-box[open], #tracking-protection-icon-container[open]), .tab-group-editor-panel[panelopen="true"], #tabbrowser-tabs[movingtab]), &:has(#urlbar:not([open])[persistsearchterms]:hover) {
+&:has(#sidebar-main:hover, .titlebar-buttonbox:hover, #tabContextMenu:hover, #toolbar-context-menu:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, toolbarbutton:is(#unified-extensions-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button)[open], #urlbar:not([breakout][breakout-extend]) :is(:hover, .urlbar-page-action[open], .identity-box-button[open], #notification-popup-box[open], #tracking-protection-icon-container[open]), .tab-group-editor-panel[panelopen="true"], #tabbrowser-tabs[movingtab]), &:has(#urlbar:not([open])[persistsearchterms]:hover) {
 .titlebar-buttonbox-container {
   left: 7px;
 @media (-moz-platform: windows) {
