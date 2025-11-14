@@ -295,7 +295,13 @@
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   padding-inline-end: 212px !important;
 @media (-moz-platform: linux) {
+  padding-inline-end: 113px !important;
+@media (-moz-gtk-csd-maximize-button) or (-moz-gtk-csd-minimize-button) {
+  padding-inline-end: 150px !important;
+}
+@media (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button) {
   padding-inline-end: 187px !important;
+}
 }
 }
 }
@@ -306,7 +312,13 @@
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   padding-inline-end: 246px !important;
 @media (-moz-platform: linux) {
+  padding-inline-end: 147px !important;
+@media (-moz-gtk-csd-maximize-button) or (-moz-gtk-csd-minimize-button) {
+  padding-inline-end: 184px !important;
+}
+@media (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button) {
   padding-inline-end: 221px !important;
+}
 }
 }
 }
@@ -324,7 +336,13 @@
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   inset-inline-end: 138px;
 @media (-moz-platform: linux) {
+  inset-inline-end: 39px;
+@media (-moz-gtk-csd-maximize-button) or (-moz-gtk-csd-minimize-button) {
+  inset-inline-end: 76px;
+}
+@media (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button) {
   inset-inline-end: 113px;
+}
 }
 }
 }
@@ -337,7 +355,13 @@
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   inset-inline-end: 178px;
 @media (-moz-platform: linux) {
+  inset-inline-end: 79px;
+@media (-moz-gtk-csd-maximize-button) or (-moz-gtk-csd-minimize-button) {
+  inset-inline-end: 116px;
+}
+@media (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button) {
   inset-inline-end: 153px;
+}
 }
 }
 }
@@ -351,7 +375,13 @@
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   inset-inline-end: 178px;
 @media (-moz-platform: linux) {
+  inset-inline-end: 79px;
+@media (-moz-gtk-csd-maximize-button) or (-moz-gtk-csd-minimize-button) {
+  inset-inline-end: 116px;
+}
+@media (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button) {
   inset-inline-end: 153px;
+}
 }
 }
 }
@@ -362,7 +392,13 @@
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   inset-inline-end: 212px;
 @media (-moz-platform: linux) {
+  inset-inline-end: 110px;
+@media (-moz-gtk-csd-maximize-button) or (-moz-gtk-csd-minimize-button) {
+  inset-inline-end: 147px;
+}
+@media (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button) {
   inset-inline-end: 187px;
+}
 }
 }
 }
@@ -2822,7 +2858,10 @@ tab-group[collapsed] > .tab-group-label-container & {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 158px);
 @media (-moz-platform: linux) {
+  margin-left: 78px !important;
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   margin-left: 80.5px !important;
+}
 }
 }
 }
@@ -4624,6 +4663,9 @@ tab-group[collapsed] > .tab-group-label-container & {
 
 #PersonalToolbar {
   grid-area: 2 / 2 / auto / auto;
+@media (-moz-platform: macos) {
+  margin-top: 2px !important;
+}
 }
 
 #TabsToolbar {
@@ -4896,7 +4938,13 @@ position: fixed !important;
 #PersonalToolbar {
   padding-inline-end: 150px !important;
 @media (-moz-platform: linux) {
+padding-inline-end: 46px !important;
+@media (-moz-gtk-csd-maximize-button) or (-moz-gtk-csd-minimize-button) {
+  padding-inline-end: 83px !important;
+}
+@media (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button) {
   padding-inline-end: 120px !important;
+}
 }
 }
 }
