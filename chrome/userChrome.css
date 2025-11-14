@@ -2172,6 +2172,11 @@ xul|search-textbox {
   max-height: 28px !important;
   padding: 6px !important;
   background-color: light-dark(rgba(102, 105, 108, .1), rgba(165, 165, 165, .1)) !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 xul|search-textbox[focused] {
@@ -2187,6 +2192,11 @@ input[type="search"] {
   height: 28px !important;
   max-height: 28px !important;
   background-color: light-dark(rgba(102, 105, 108, .1), rgba(165, 165, 165, .1)) !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 #searchbar input[type="search"] {
