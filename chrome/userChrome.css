@@ -81,6 +81,9 @@
   @media -moz-pref("gwfox.bms") {
   --bg1: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
   }
+  @media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  --arrowpanel-menuitem-border-radius: 8px !important;
+  }
   }
 }
 
@@ -459,6 +462,11 @@
   height: 28px !important;
   width: 28px !important;
   border-radius: 6px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 &:not(:hover, [open]) {
   background-color: transparent !important;
 }
@@ -466,6 +474,11 @@
 
 .urlbar-go-button {
   border-radius: 6px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 .searchmode-switcher-dropmarker {
@@ -503,6 +516,11 @@
   border-radius: 6px !important;
   background: var(--button-hover-bgcolor) !important;
   transition: background .5s !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 #urlbar:hover .urlbar-background {
@@ -519,6 +537,11 @@
   padding: 0 !important;
   height: 30px !important;
   border-radius: 6px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 .urlbar-input::placeholder,
@@ -639,6 +662,9 @@
   background-color: var(--bg2) !important;
   backdrop-filter: blur(0px) !important;
 }
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 13px !important;
+}
 }
 }
 
@@ -670,6 +696,9 @@
 @media not -moz-pref("gwfox.bms") {
   background-color: var(--bg2) !important;
   backdrop-filter: blur(0px) !important;
+}
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 13px !important;
 }
 }
 @media (prefers-color-scheme: dark) {
@@ -729,6 +758,11 @@
   margin-top: 6.5px !important;
   border-radius: 6px;
   background: var(--button-active-bgcolor);
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px;
+}
+}
 @media (-moz-platform: windows) {
   margin-top: 7.5px !important;
 }
@@ -814,6 +848,11 @@
   height: 28px !important;
   border-radius: 6px !important;
   padding: 6px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 @media not -moz-pref("sidebar.verticalTabs") {
@@ -935,6 +974,11 @@
   background: var(--button-hover-bgcolor) !important;
   border-radius: 6px !important;
   border: none !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 .search-go-button, .search-panel-header, .searchbar-separator {
@@ -986,6 +1030,11 @@
   border: none !important;
   background: none !important;
   border-radius: 4px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 #viewButton:hover {
@@ -1006,6 +1055,11 @@
   border-radius: 6px !important;
   margin-bottom: 8.5px !important;
   width: 30px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 #nav-bar .toolbarbutton-1 {
@@ -1018,6 +1072,11 @@
   width: 30px !important;
   padding: 6px !important;
   border-radius: 6px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 #TabsToolbar .toolbarbutton-1 {
@@ -1032,6 +1091,11 @@
   width: 30px !important;
   padding: 6px !important;
   border-radius: 6px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 #TabsToolbar #downloads-button > .toolbarbutton-badge-stack {
@@ -1039,6 +1103,11 @@
   width: 30px !important;
   border-radius: 6px !important;
   padding: 6.5px 5.5px 5.5px 6.5px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 #PanelUI-menu-button > .toolbarbutton-badge-stack {
@@ -1046,6 +1115,11 @@
   width: 30px !important;
   border-radius: 6px !important;
   padding: 6px 5.5px 0 !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 #PanelUI-menu-button .toolbarbutton-icon {
@@ -1059,6 +1133,11 @@
   width: 30px !important;
   border-radius: 6px !important;
   padding: 6.5px 5.5px 5.5px 6.5px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 }
 
@@ -1067,6 +1146,11 @@
   width: 30px !important;
   border-radius: 6px !important;
   padding: 7px 0 0 7px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 #TabsToolbar #alltabs-button,
@@ -1076,6 +1160,11 @@
   width: 30px !important;
   padding: 6px 0 0 6px !important;
   border-radius: 6px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 > .toolbarbutton-icon {
   height: 18px !important;
   width: 18px !important;
@@ -1110,6 +1199,11 @@
 #tracking-protection-icon-container {
   height: 28px !important;
   border-radius: 6px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 #star-button[starred], #translations-button-circle-arrows,
@@ -1144,6 +1238,11 @@
   border: none !important;
   box-shadow: none !important;
   border-radius: 6px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 #tabbrowser-tabs[movingtab-createGroup] & {
   outline: none !important;
 &[dragover-createGroup] {
@@ -1362,6 +1461,11 @@ tab-group[collapsed] > .tabbrowser-tab[visuallyselected] > .tab-stack > & {
   padding: 5px 7px !important;
   border-radius: 6px !important;
   background: none !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 #TabsToolbar #new-tab-button,
@@ -1371,6 +1475,11 @@ tab-group[collapsed] > .tabbrowser-tab[visuallyselected] > .tab-stack > & {
   max-height: 30px !important;
   min-height: 30px !important;
   border-radius: 6px !important;
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 #TabsToolbar #new-tab-button:hover,
@@ -1431,6 +1540,11 @@ menupopup, panel[type="arrow"] {
 }
 @media not (-moz-platform: linux) {
   appearance: menupopup !important;
+}
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  --panel-border-radius: 13px !important;
+}
 }
 }
 
@@ -1513,6 +1627,11 @@ menuitem, menu {
 @media not (-moz-platform: linux) {
   height: 24px !important;
 }
+@media (-moz-platform: linux) {
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
+}
 }
 
 menu {
@@ -1580,6 +1699,9 @@ toolbarseparator[orient="vertical"] {
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   backdrop-filter: blur(0px) !important;
+}
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 13px !important;
 }
 }
 }
@@ -2349,6 +2471,12 @@ menuitem[type="radio"][disabled="true"] .menu-icon {
   background: var(--bg1) !important;
 }
 
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+#unified-extensions-panel * {
+  border-radius: 8px !important;
+}
+}
+
 @media -moz-pref("sidebar.verticalTabs") {
 @media not -moz-pref("gwfox.plus") {
 .titlebar-buttonbox-container {
@@ -2683,6 +2811,9 @@ tab-group > .tabbrowser-tab,
 @media not -moz-pref("gwfox.bms") {
   backdrop-filter: blur(0px) !important;
 }
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 13px !important;
+}
 }
 }
 
@@ -2698,6 +2829,9 @@ tab-group > .tabbrowser-tab,
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   backdrop-filter: blur(0px) !important;
+}
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 13px !important;
 }
 }
 }
@@ -2858,10 +2992,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 #tabbrowser-tabbox {
   clip-path: inset(-50px 0 0 158px);
 @media (-moz-platform: linux) {
-  margin-left: 78px !important;
-@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   margin-left: 80.5px !important;
-}
 }
 }
 }
