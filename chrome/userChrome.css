@@ -5051,6 +5051,7 @@ padding-inline-end: 46px !important;
 }
 }
 
+@media -moz-pref("gwfox.plus") {
 :has(#sidebar-main[hidden]) {
 #PersonalToolbar {
   width: 100% !important;
@@ -5089,6 +5090,7 @@ padding-inline-end: 46px !important;
 @media (-moz-platform: linux) {
   margin-left: 465px !important;
   width: calc(100% - 467px) !important;
+}
 }
 }
 }
