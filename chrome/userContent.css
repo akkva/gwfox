@@ -337,11 +337,6 @@ body {
 @media (-moz-mac-tahoe-theme) {
   border-radius: 12px !important;
 }
-@media (-moz-platform: linux) {
-@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  border-radius: 13px !important;
-}
-}
 @media (-moz-platform: windows) {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
 }
@@ -355,11 +350,6 @@ body {
 .context-menu > ul > li > button {
   border-radius: 4px !important;
   padding: 6px 12px !important;
-@media (-moz-platform: linux) {
-@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  border-radius: 8px !important;
-}
-}
 }
 
 .context-menu > ul > li.separator {
@@ -510,11 +500,6 @@ body {
   border-radius: 8px !important;
 @media (-moz-mac-tahoe-theme) {
   border-radius: 12px !important;
-}
-@media (-moz-platform: linux) {
-@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  border-radius: 13px !important;
-}
 }
 }
 
@@ -716,9 +701,6 @@ body {
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
-}
-@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  border-radius: 13px !important;
 }
 }
 }
