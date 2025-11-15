@@ -44,6 +44,9 @@
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
   --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15);    
   }
+  @media (-moz-platform: linux) {
+  --bs1: 0 2px 15px rgba(0, 0, 0, .2), 0 0 0 1px rgba(0, 0, 0, .058);
+  }
   @media not -moz-pref("gwfox.atbc") {
   --in-content-page-background: light-dark(#fff, #191919) !important;
   --newtab-background-color: light-dark(#fff, #191919) !important;
@@ -334,7 +337,7 @@ body {
   border-radius: 6px !important;
   padding: 6px !important;
   box-shadow: var(--bs1) !important;
-@media (-moz-mac-tahoe-theme) {
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: 12px !important;
 }
 @media (-moz-platform: windows) {
@@ -350,6 +353,9 @@ body {
 .context-menu > ul > li > button {
   border-radius: 4px !important;
   padding: 6px 12px !important;
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 8px !important;
+}
 }
 
 .context-menu > ul > li.separator {
@@ -498,7 +504,7 @@ body {
 
 .customize-menu {
   border-radius: 8px !important;
-@media (-moz-mac-tahoe-theme) {
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: 12px !important;
 }
 }
@@ -695,7 +701,7 @@ body {
   animation-name: panel-grow;
   animation-duration: 250ms;
   background-color: var(--bg4) !important;
-@media (-moz-mac-tahoe-theme) {
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: 12px !important;
 }
 @media (-moz-platform: linux) {
@@ -789,6 +795,7 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
+@media not (-moz-platform: linux) {
 .modal, .contentSearchSuggestionTable, .customize-menu, .context-menu {
   box-shadow: var(--bs2) !important;
   outline: 1px solid rgba(235, 235, 235, .2) !important;
@@ -798,6 +805,13 @@ body {
 @media (-moz-platform: windows) {
 .modal, .contentSearchSuggestionTable, .customize-menu, .context-menu {
   outline: none !important;
+}
+}
+}
+
+@media (-moz-platform: linux) {
+.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu {
+  border: 1px solid rgba(255, 255, 255, .06) !important;
 }
 }
 }
