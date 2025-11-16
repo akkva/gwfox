@@ -297,6 +297,7 @@
   grid-area: 2 / 2 / auto / auto;
   padding-inline-end: 77px !important;
   margin-bottom: 5.5px !important;
+  margin-left: -2px !important;
 @media not (-moz-platform: macos) {
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   padding-inline-end: 212px !important;
@@ -1199,14 +1200,6 @@
   --tab-min-width: 88px !important;
   margin-bottom: -1px !important;
   border-inline-start: none !important;
-}
-
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])[orient="horizontal"] > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
-  margin-inline-start: 0 !important;
-}
-
-#pinned-tabs-container[orient="horizontal"] {
-  margin-inline-end: 0 !important;
 }
 
 #tabbrowser-tabs[orient="vertical"] {
