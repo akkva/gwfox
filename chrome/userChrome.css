@@ -289,6 +289,11 @@
 }
 }
 
+.webextension-browser-action,
+#nav-bar-customization-target > toolbarbutton:nth-last-child(3) {
+  margin-right: 4px !important;
+}
+
 #urlbar-container {
   max-width: 219px !important;
 }
