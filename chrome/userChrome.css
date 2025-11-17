@@ -841,6 +841,7 @@
 }
 
 @media -moz-pref("gwfox.plus") or (not -moz-pref("sidebar.verticalTabs")) {
+&:not(:has(#identity-box[pageproxystate="valid"].extensionPage)) {
 #urlbar:not(:hover, [open]) {
 .urlbar-input {
   padding-inline-start: 10px !important;
@@ -926,6 +927,7 @@
 #urlbar:-moz-window-inactive:hover #identity-permission-box,
 #urlbar:-moz-window-inactive:hover #notification-popup-box {
   opacity: unset !important;
+}
 }
 }
 
@@ -5040,6 +5042,7 @@ padding-inline-end: 46px !important;
 
 #tabbrowser-tabbox browser {
   clip-path: inset(0 round 12px 0 0 0) !important;
+  border-start-start-radius: 10px !important;
 }
 
 @media -moz-pref("gwfox.plus_tb") {
