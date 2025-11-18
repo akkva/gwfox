@@ -103,6 +103,23 @@
   overflow: unset !important;
 }
 
+.browserContainer {
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+:root:not([inDOMFullscreen]) #tabbrowser-tabbox[sidebar-shown] & {
+@media not -moz-pref("gwfox.noborder") {
+  margin-inline-start: -8px !important;
+}
+/* FF147
+@media -moz-pref("gwfox.noborder") {
+  border-start-start-radius: 12px !important;
+  outline: 0.01px solid var(--chrome-content-separator-color) !important;
+  box-shadow: var(--content-area-shadow) !important;
+} */
+}
+}
+
 :root:not([inDOMFullscreen], [chromehidden~="toolbar"]) {
 #tabbrowser-tabbox browser:not(.devtools-toolbox-bottom-iframe, .devtools-toolbox-side-iframe) {
   border-radius: var(--br1);
@@ -113,12 +130,15 @@
 
 .browserStack {
   border-radius: var(--br2);
-  margin: 0 8px 8px;
-  box-shadow: 0 1.5px 9px light-dark(#00000026, #00000040);
+  margin: 8px !important;
+  box-shadow: 0 1px 8px light-dark(#00000026, #00000040);
 }
 
 #tabbrowser-tabpanels {
   background-color: transparent !important;
+@media not -moz-pref("gwfox.noborder") {
+  margin-top: -8px;
+}
 }
 
 .devtools-toolbox-side-iframe {
@@ -3400,11 +3420,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 #tabbrowser-tabpanels {
-  margin-top: -39px;
+  margin-top: -47px;
   transition: margin .25s !important;
   transition-delay: .5s !important;
 @media (-moz-platform: windows) {
-  margin-top: -38px;
+  margin-top: -46px;
 }
 @media -moz-pref("gwfox.noborder") {
   margin-top: -47px;
@@ -3416,7 +3436,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 :has(#nav-bar:hover, #alltabs-button[open], #PanelUI-menu-button[open], #nav-bar-overflow-button[open], #unified-extensions-button[open], #downloads-button[open], .webextension-browser-action[open]) {
 #tabbrowser-tabpanels {
-  margin-top: 0;
+  margin-top: -8px;
   transition: margin .5s !important;
 }
 }
@@ -3424,7 +3444,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media -moz-pref("gwfox.plus_tb") {
 :has(#PersonalToolbar .bookmark-item[open]) {
 #tabbrowser-tabpanels {
-  margin-top: 0;
+  margin-top: -8px;
 }
 }
 }
@@ -3477,9 +3497,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 :has(.titlebar-buttonbox:hover, .titlebar-spacer[type="pre-tabs"]:hover, #urlbar:hover, #back-button:hover, #forward-button:hover, #stop-reload-button:hover, #sidebar-button:hover) {
 #tabbrowser-tabpanels {
-  margin-top: -39px;
+  margin-top: -47px;
 @media (-moz-platform: windows) {
-  margin-top: -38px;
+  margin-top: -46px;
 }
 @media -moz-pref("gwfox.noborder") {
   margin-top: -47px;
@@ -3748,9 +3768,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 :has(.titlebar-buttonbox:hover, #urlbar:hover) {
 #tabbrowser-tabpanels {
-  margin-top: -39px;
+  margin-top: -47px;
 @media (-moz-platform: windows) {
-  margin-top: -38px;
+  margin-top: -46px;
 }
 @media -moz-pref("gwfox.noborder") {
   margin-top: -47px;
@@ -4034,9 +4054,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #nav-bar {
 @media not -moz-pref("gwfox.plus_tb") {
-  margin-top: -39px !important;
+  margin-top: -47px !important;
 @media (-moz-platform: windows) {
-  margin-top: -38px !important;
+  margin-top: -46px !important;
 }
 @media -moz-pref("gwfox.noborder") {
   margin-top: -47px !important;
@@ -4372,7 +4392,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 
 #tabbrowser-tabpanels {
-  margin-top: 0;
+  margin-top: -8px;
 }
 
 @media not -moz-pref("gwfox.plus_tb") {
@@ -4387,7 +4407,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 @media not -moz-pref("gwfox.plus_tb") {
 :has(#urlbar:hover, .titlebar-buttonbox:hover) {
 #tabbrowser-tabpanels {
-  margin-top: 0 !important;
+  margin-top: -8px !important;
 }
 }
 }
@@ -4562,9 +4582,9 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 
 #tabbrowser-tabpanels {
-  margin-top: -39px !important;
+  margin-top: -47px !important;
 @media (-moz-platform: windows) {
-  margin-top: -38px !important;
+  margin-top: -46px !important;
 }
 @media -moz-pref("gwfox.noborder") {
   margin-top: -47px !important;
@@ -4586,7 +4606,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 
 :has(#vertical-spacer:hover, #PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open]) {
 #tabbrowser-tabpanels {
-  margin-top: 0 !important;
+  margin-top: -8px !important;
 }
 }
 }
@@ -4708,7 +4728,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 
 :has(#PersonalToolbar:hover) {
 #tabbrowser-tabpanels {
-  margin-top: 0;
+  margin-top: -8px;
 }
 }
 
@@ -4930,14 +4950,14 @@ position: fixed !important;
 :has(#sidebar-box:not([hidden])),
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
 #tabbrowser-tabpanels {
-  margin-top: 0 !important;
+  margin-top: -8px !important;
 }
 }
 }
 
 :has(.titlebar-buttonbox:hover) {
 #tabbrowser-tabpanels {
-  margin-top: 0 !important;
+  margin-top: -8px !important;
 }
 }
 
