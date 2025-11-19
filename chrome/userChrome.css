@@ -136,8 +136,9 @@
 
 #tabbrowser-tabpanels {
   background-color: transparent !important;
-@media not -moz-pref("gwfox.noborder") {
   margin-top: -8px;
+@media -moz-pref("gwfox.noborder") {
+  margin-top: 0;
 }
 }
 
@@ -174,7 +175,6 @@
 &:not([sidebar-positionend]) {
 &[sidebar-panel-open] {
   margin-inline-end: 2px !important;
-  margin-bottom: 2px !important;
 @media (-moz-platform: windows) {
   margin-inline-end: 1px !important;
 }
@@ -3320,16 +3320,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   height: 13px;
   z-index: 9;
 }
-@media not (-moz-platform: macos) {
-@media -moz-pref("gwfox.plus_sc") {
-&::before {
-  width: calc(100% - 360px);
-@media (-moz-platform: linux) {
-  width: calc(100% - 340px);
-}
-}
-}
-}
 }
 
 :has(#sidebar-box:not([hidden])) {
@@ -3362,7 +3352,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-:has(#PersonalToolbar:hover, .toolbarbutton-1:hover, #PersonalToolbar .bookmark-item[open]) {
+:has(.titlebar-buttonbox:hover, #PersonalToolbar:hover, .toolbarbutton-1:hover, #PersonalToolbar .bookmark-item[open]) {
 #vertical-spacer::before {
   content: none;
 }
@@ -3438,6 +3428,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #tabbrowser-tabpanels {
   margin-top: -8px;
   transition: margin .5s !important;
+@media -moz-pref("gwfox.noborder") {
+  margin-top: 0;
+}
 }
 }
 
@@ -3445,6 +3438,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 :has(#PersonalToolbar .bookmark-item[open]) {
 #tabbrowser-tabpanels {
   margin-top: -8px;
+@media -moz-pref("gwfox.noborder") {
+  margin-top: 0;
+}
 }
 }
 }
@@ -4392,7 +4388,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 
 #tabbrowser-tabpanels {
-  margin-top: -8px;
+  margin-top: 0;
 }
 
 @media not -moz-pref("gwfox.plus_tb") {
@@ -4407,7 +4403,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 @media not -moz-pref("gwfox.plus_tb") {
 :has(#urlbar:hover, .titlebar-buttonbox:hover) {
 #tabbrowser-tabpanels {
-  margin-top: -8px !important;
+  margin-top: 0 !important;
 }
 }
 }
@@ -4607,6 +4603,9 @@ tab-group[collapsed] > .tab-group-label-container & {
 :has(#vertical-spacer:hover, #PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open]) {
 #tabbrowser-tabpanels {
   margin-top: -8px !important;
+@media -moz-pref("gwfox.noborder") {
+  margin-top: 0 !important;
+}
 }
 }
 }
@@ -4729,6 +4728,9 @@ tab-group[collapsed] > .tab-group-label-container & {
 :has(#PersonalToolbar:hover) {
 #tabbrowser-tabpanels {
   margin-top: -8px;
+@media -moz-pref("gwfox.noborder") {
+  margin-top: 0;
+}
 }
 }
 
@@ -4951,6 +4953,9 @@ position: fixed !important;
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
 #tabbrowser-tabpanels {
   margin-top: -8px !important;
+@media -moz-pref("gwfox.noborder") {
+  margin-top: 0 !important;
+}
 }
 }
 }
@@ -4958,6 +4963,9 @@ position: fixed !important;
 :has(.titlebar-buttonbox:hover) {
 #tabbrowser-tabpanels {
   margin-top: -8px !important;
+@media -moz-pref("gwfox.noborder") {
+  margin-top: 0 !important;
+}
 }
 }
 
