@@ -34,7 +34,12 @@
   --color-accent-primary-active: light-dark(#005ebb, #0055bc) !important;
   --button-text-color-primary: #fff !important;
   --border-color: rgba(105, 105, 105, .2) !important;
-  --bg4: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
+  --bg1: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15));
+  --bg2: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2));
+  --bg3: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3));
+  --bg4: light-dark(rgba(255, 255, 255, .7), rgba(15, 15, 15, .7));
+  --bg5: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 15, .75));
+  --bg6: light-dark(rgba(255, 255, 255, .6), rgba(15, 15, 15, .6));
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15);
   --bs2: 0 5px 15px rgba(0, 0, 0, .25), inset 0 0 0 .5px rgba(0, 0, 0, .78), 0 0 0 .5px rgba(0, 0, 0, .2);
   @media (-moz-mac-tahoe-theme) {
@@ -385,29 +390,6 @@ body {
   border: 1px solid light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1)) !important;
 }
 
-.icon.icon-settings, .wordmark {
-  opacity: .8 !important;
-}
-
-.icon.icon-settings {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-}
-
-.icon.icon-settings:hover {
-  background-color: light-dark(rgba(255, 255, 255, .8), rgba(15, 15, 15, .7)) !important;
-  backdrop-filter: blur(30px) !important;
-  opacity: 1 !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
-@media (-moz-platform: linux) {
-@media not -moz-pref("gwfox.bms") {
-  background-color: light-dark(#fff, #36363a) !important;
-  backdrop-filter: blur(0px) !important;
-}
-}
-}
-
 .outer-wrapper.only-search {
   display: flex !important;
 }
@@ -558,49 +540,6 @@ body {
 }
 }
 
-@media (prefers-color-scheme: dark) {
-.lightWallpaper .top-site-outer .context-menu {
-  color-scheme: dark !important;
-}
-
-.lightWallpaper .tile:active {
-  background-color: rgba(15, 15, 15, .8) !important;
-@media (-moz-platform: linux) {
-@media not -moz-pref("gwfox.bms") {
-  background-color: #36363a !important;
-}
-}
-}
-
-.tile, .context-menu-button.icon {
-  background-color: rgba(15, 15, 15, .7) !important;
-@media (-moz-platform: linux) {
-@media not -moz-pref("gwfox.bms") {
-  background-color: #36363a !important;
-}
-}
-}
-
-.context-menu-button.icon:active {
-  background-color: rgba(15, 15, 15, .8) !important;
-@media (-moz-platform: linux) {
-@media not -moz-pref("gwfox.bms") {
-  background-color: rgba(54, 54, 58, .9) !important;
-}
-}
-}
-
-.context-menu-button {
-  fill: #fff !important;
-}
-}
-
-@media (prefers-color-scheme: light) {
-.darkWallpaper .tile:active {
-  background-color: rgba(255, 255, 255, .6) !important;
-}
-}
-
 .tile {
   border-radius: 16px !important;
   width: 72px !important;
@@ -738,7 +677,7 @@ body {
 }
 }
 
-.top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable, .weather .context-menu, .location-input-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .weatherNotAvailable, .personalize-button {
+.top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable, .location-input-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .weatherNotAvailable, .personalize-button {
   backdrop-filter: blur(30px) !important;
   background-color: var(--bg4) !important;
 @media (-moz-platform: linux) {
@@ -759,16 +698,22 @@ body {
 }
 
 .weatherCard, .personalize-button {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
   border-radius: var(--border-radius-medium) !important;
+}
+
+.weatherCard {
+  box-shadow: none !important;
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper") {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
+}
+}
+
+.weather .context-menu {
+  background-color: light-dark(rgba(255, 255, 255, .98), rgba(15, 15, 15, .98)) !important;
 }
 
 .weatherSponsorText {
   display: none;
-}
-
-.weatherInfoLink:active, .weatherButtonContextMenuWrapper:active {
-  background-color: light-dark(rgba(255, 255, 255, .6), rgba(15, 15, 15, .8)) !important;
 }
 
 .location-input-wrapper input {
@@ -777,7 +722,7 @@ body {
 }
 
 @media -moz-pref("widget.macos.native-context-menus") {
-.tile, .context-menu-button.icon, .search-inner-wrapper, .location-input-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .weather .context-menu, .modal, .customize-menu, .top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable {
+.tile, .context-menu-button.icon, .search-inner-wrapper, .location-input-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .modal, .customize-menu, .top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
 }
 
@@ -812,6 +757,162 @@ body {
 @media (-moz-platform: linux) {
 .modal, .contentSearchSuggestionTable, .customize-menu, .context-menu {
   border: 1px solid rgba(255, 255, 255, .06) !important;
+}
+}
+}
+
+.search-inner-wrapper, .tile, .context-menu-button.icon, .location-input-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .weatherNotAvailable, .personalize-button {
+  background-color: var(--bg1) !important;
+  box-shadow: none !important;
+&:hover {background-color: var(--bg2) !important;}
+&:active {background-color: var(--bg3) !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper") {
+  background-color: var(--bg4) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: light-dark(#fff, #36363a) !important;
+}
+}
+&:hover {
+  background-color: var(--bg5) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: light-dark(#fff, #36363a) !important;
+}
+}
+}
+&:active {
+  background-color: var(--bg6) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: light-dark(#f5f5f5, #2c2c2f) !important;
+}
+}
+}
+}
+}
+
+.weatherButtonContextMenuWrapper {
+  box-shadow: none !important;
+}
+
+@media (prefers-color-scheme: dark) {
+.lightWallpaper .top-site-outer .context-menu {
+  color-scheme: dark !important;
+}
+
+.lightWallpaper .tile {
+  background-color: rgba(15, 15, 15, .7) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: #36363a !important;
+}
+}
+}
+
+.lightWallpaper .tile:hover {
+  background-color: rgba(15, 15, 15, .75) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: #36363a !important;
+}
+}
+}
+
+.lightWallpaper .tile:active {
+  background-color: rgba(15, 15, 15, .6) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: #2c2c2f !important;
+}
+}
+}
+
+.lightWallpaper .context-menu-button.icon {
+  background-color: rgba(15, 15, 15, .7) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: #36363a !important;
+}
+}
+}
+
+.lightWallpaper .context-menu-button.icon:hover {
+  background-color: rgba(15, 15, 15, .75) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: #36363a !important;
+}
+}
+}
+
+.lightWallpaper .context-menu-button.icon:active {
+  background-color: rgba(15, 15, 15, .6) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: #2c2c2f !important;
+}
+}
+}
+
+.context-menu-button {
+  fill: #fff !important;
+}
+}
+
+@media (prefers-color-scheme: light) {
+.darkWallpaper .tile {
+  background-color: rgba(255, 255, 255, .7) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: #fff !important;
+}
+}
+}
+
+.darkWallpaper .tile:hover {
+  background-color: rgba(255, 255, 255, .75) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: #fff !important;
+}
+}
+}
+
+.darkWallpaper .tile:active {
+  background-color: rgba(255, 255, 255, .6) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: #f5f5f5 !important;
+}
+}
+}
+
+.darkWallpaper .context-menu-button.icon {
+  background-color: rgba(255, 255, 255, .7) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: #fff !important;
+}
+}
+}
+
+.darkWallpaper .context-menu-button.icon:hover {
+  background-color: rgba(255, 255, 255, .75) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: #fff !important;
+}
+}
+}
+
+.darkWallpaper .context-menu-button.icon:active {
+  background-color: rgba(255, 255, 255, .6) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: #f5f5f5 !important;
+}
 }
 }
 }
