@@ -85,7 +85,7 @@
   --bg2: light-dark(#fff, #36363a);
   --bs1: 0 2px 15px rgba(0, 0, 0, .2), 0 0 0 1px rgba(0, 0, 0, .058);
   @media -moz-pref("gwfox.bms") {
-  --bg1: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
+  --bg1: light-dark(rgba(245, 245, 246, .76), rgba(40, 40, 44, .76));
   }
   }
 }
