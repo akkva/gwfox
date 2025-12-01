@@ -682,7 +682,6 @@
 
 :has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #urlbar {
-  position: fixed !important;
   top: 19vh !important;
   left: 29vw !important;
   width: 45vw !important;
