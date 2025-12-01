@@ -680,7 +680,7 @@
 }
 }
 
-:has(#urlbar[usertyping]:not([persistsearchterms])) {
+:has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #urlbar {
   position: fixed !important;
   top: 19vh !important;
@@ -1671,7 +1671,7 @@ window[role="dialog"], .findbar-container, #statuspanel-label,
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
 }
 
-:has(#urlbar[usertyping]:not([persistsearchterms])) {
+:has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 .urlbar-background {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
 }
@@ -2733,7 +2733,7 @@ tab-group > .tabbrowser-tab,
 }
 }
 
-:has(#urlbar[usertyping]:not([persistsearchterms])) {
+:has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #urlbar {
   left: 34vw !important;
   backdrop-filter: blur(30px) !important;
@@ -2801,7 +2801,7 @@ tab-group > .tabbrowser-tab,
   left: 29vw !important;
 }
 
-:has(#urlbar[usertyping]:not([persistsearchterms])) {
+:has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #urlbar {
   left: 29vw !important;
 }
@@ -2853,7 +2853,7 @@ tab-group[collapsed] > .tab-group-label-container & {
   left: 29vw !important;
 }
 
-:has(#urlbar[usertyping]:not([persistsearchterms])) {
+:has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #urlbar {
   left: 29vw !important;
 }
@@ -2866,7 +2866,7 @@ tab-group[collapsed] > .tab-group-label-container & {
   left: 27.5vw !important;
 }
 
-:has(#urlbar[usertyping]:not([persistsearchterms])) {
+:has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #urlbar {
   left: 27.5vw !important;
 }
@@ -3232,7 +3232,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin-top: 1px !important;
 }
 
-:has(#urlbar[breakout][breakout-extend], [usertyping]) {
+:has(#urlbar[breakout][breakout-extend], [usertyping][focused]) {
 .titlebar-buttonbox::after {
   position: fixed;
   top: 47px;
@@ -3485,7 +3485,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   left: 34vw !important;
 }
 
-:has(#urlbar[usertyping]:not([persistsearchterms])) {
+#urlbar[usertyping]:not([focused]) {
+  min-width: 220px !important;
+  max-width: 220px !important;
+}
+
+:has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #urlbar {
   left: 34vw !important;
 }
@@ -3713,10 +3718,15 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   left: 29.5vw !important;
 }
 
-:has(#urlbar[usertyping]:not([persistsearchterms])) {
+:has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #urlbar {
   left: 29.5vw !important;
 }
+}
+
+#urlbar[usertyping]:not([focused]) {
+  min-width: 62px !important;
+  max-width: 62px !important;
 }
 
 #urlbar:not([breakout][breakout-extend])[persistsearchterms] {
@@ -3756,7 +3766,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-:has(#urlbar[breakout][breakout-extend], [usertyping]) {
+:has(#urlbar[breakout][breakout-extend], [usertyping][focused]) {
 .titlebar-buttonbox::after {
   width: 62px;
 }
@@ -3808,7 +3818,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   left: 29.5vw !important;
 }
 
-:has(#urlbar[usertyping]:not([persistsearchterms])) {
+:has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #urlbar {
   left: 29.5vw !important;
 }
@@ -4287,12 +4297,13 @@ tab-group[collapsed] > .tab-group-label-container & {
   left: 27.5vw !important;
 }
 
-:has(#urlbar[usertyping]:not([persistsearchterms])) {
+:has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #urlbar {
   left: 27.5vw !important;
 }
 }
 
+#urlbar[usertyping]:not([focused]),
 #urlbar:not([open])[persistsearchterms],
 #urlbar:not([open], [usertyping]) {
   top: 55px !important;
@@ -4421,7 +4432,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 }
 
-:has(#urlbar[usertyping]:not([persistsearchterms])) {
+:has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #sidebar-button, #reload-button, #stop-button, #back-button,
 #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button,
 #unified-extensions-button, #downloads-button, #sidebar-main,
@@ -4533,10 +4544,16 @@ tab-group[collapsed] > .tab-group-label-container & {
   margin-left: -9px !important;
 }
 
+#urlbar[usertyping]:not([focused]),
 #urlbar:not([open])[persistsearchterms],
 #urlbar:not([open], [usertyping]) {
   left: 18px !important;
 }
+}
+
+#urlbar[usertyping]:not([focused]) {
+  min-width: 220px !important;
+  max-width: 220px !important;
 }
 
 #vertical-spacer::before {
