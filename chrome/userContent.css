@@ -339,7 +339,10 @@ body {
 }
 
 @media (-moz-platform: windows) {
-* {box-shadow: none !important;}
+* {
+  box-shadow: none !important;
+  transition: .2s;
+}
 }
 
 .context-menu {
@@ -377,6 +380,7 @@ body {
   outline-style: solid !important;
   outline-color: transparent !important;
   outline-width: 18px !important;
+  transition: none !important;
 }
 
 .topsite-form .form-wrapper input[type=text]:focus {
@@ -675,6 +679,8 @@ body {
   height: 98% !important;
 @media (-moz-platform: windows) {
   margin: 16px 0 0 0 !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
