@@ -253,7 +253,7 @@
   background: transparent !important;
 @media (-moz-platform: linux) {
 @media -moz-pref("gwfox.bms") {
-  background: rgba(15, 15, 12, .75) !important;
+  background: rgba(40, 40, 44, .76) !important;
 }
 @media not -moz-pref("gwfox.bms") {
   background: #28282c !important;
