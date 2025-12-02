@@ -338,13 +338,6 @@ body {
   }
 }
 
-@media (-moz-platform: windows) {
-* {
-  box-shadow: none !important;
-  transition: .2s;
-}
-}
-
 .context-menu {
   border-radius: 6px !important;
   padding: 6px !important;
@@ -380,7 +373,6 @@ body {
   outline-style: solid !important;
   outline-color: transparent !important;
   outline-width: 18px !important;
-  transition: none !important;
 }
 
 .topsite-form .form-wrapper input[type=text]:focus {
@@ -677,11 +669,6 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
   margin: 11px 11px 0 0 !important;
   height: 98% !important;
-@media (-moz-platform: windows) {
-  margin: 16px 0 0 0 !important;
-  padding-left: 10px !important;
-  padding-right: 10px !important;
-}
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
