@@ -667,8 +667,8 @@ body {
   background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
-  margin: 11px 11px 0 0 !important;
-  height: 98% !important;
+  margin: 10px 10px 0 0 !important;
+  height: calc(100% - 20px) !important;
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
