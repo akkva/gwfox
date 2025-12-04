@@ -181,10 +181,6 @@
   margin-right: 8px !important;
 }
 
-.devtools-toolbox-bottom-iframe {
-  margin-left: 0 !important;
-}
-
 #sidebar-box {
   margin-bottom: 2px !important;
 &:not([sidebar-positionend]) {
