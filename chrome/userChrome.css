@@ -4488,14 +4488,14 @@ tab-group[collapsed] > .tab-group-label-container & {
   --dp: none;
 }
 
-&:has(#sidebar-main:hover) {
+:has(#sidebar-main:hover) {
 #sidebar-main, #stop-button, #back-button, #reload-button, #forward-button, #sidebar-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, .titlebar-buttonbox-container, #urlbar:not(:hover, [open]) {
   transition: left .5s !important;
   transition-timing-function: cubic-bezier(.27, 1.217, .17, 1.0117) !important;
 }
 }
 
-&:has(#sidebar-main:hover, .titlebar-buttonbox:hover, #tabContextMenu:hover, #toolbar-context-menu:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, toolbarbutton:is(#unified-extensions-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button)[open], #urlbar:not([open]) :is(:hover, .urlbar-page-action[open], .identity-box-button[open], #notification-popup-box[open], #tracking-protection-icon-container[open]), .tab-group-editor-panel[panelopen="true"], #tabbrowser-tabs[movingtab]), &:has(#urlbar:not([open])[persistsearchterms]:hover) {
+:has(#sidebar-main:hover, .titlebar-buttonbox:hover, #tabContextMenu:hover, #toolbar-context-menu:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, toolbarbutton:is(#unified-extensions-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button)[open], .tab-group-editor-panel[panelopen="true"], #tabbrowser-tabs[movingtab], #urlbar:not([open]):hover, #urlbar:not([open])[persistsearchterms]:hover, #urlbar:not([open]) .urlbar-page-action[open], #urlbar:not([open]) .identity-box-button[open], #urlbar:not([open]) #notification-popup-box[open], #urlbar:not([open]) #tracking-protection-icon-container[open]) {
 .titlebar-buttonbox-container {
   left: 7px;
 @media (-moz-platform: windows) {
@@ -4666,35 +4666,20 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 }
 
-:root[inFullscreen]:has(#tabbrowser-tabs:not([expanded])) {
-:has(#sidebar-box:not([hidden])) {
-#sidebar-button {
-  margin-left: -335px !important;
-  margin-right: 300px !important;
-}  
-}
-}
-
-:root[inFullscreen]:has(#tabbrowser-tabs:not([expanded])) {
-:has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
-#sidebar-button {
-  margin-left: -455px !important;
-  margin-right: 420px !important;
-}  
-}
-}
-
 :root[inFullscreen] {
+#vertical-spacer {
+  display: flex !important;
+}
+
 .browser-toolbox-background {
   background: transparent !important;
 }
 
-@media not (-moz-platform: linux) {
 @media not -moz-pref("gwfox.plus_sc") {
 #sidebar-button {
-  margin-left: -62px !important;
-  margin-right: 62px !important;
-}
+  position: fixed;
+  left: 5px;
+  top: 2px;
 }
 }
 
@@ -4727,12 +4712,9 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 }
 
-@media not (-moz-platform: linux) {
 @media not -moz-pref("gwfox.plus_sc") {
 #sidebar-button {
-  margin-left: -52px !important;
-  margin-right: 22px !important;
-}
+  left: 20px;
 }
 }
 }
@@ -4789,15 +4771,23 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 
 @media (-moz-platform: macos) or (not -moz-pref("gwfox.plus_sc")) {
+:has(#tabbrowser-tabs[expanded]) {
 :has(#sidebar-box:not([hidden])) {
 #nav-bar-customization-target > :is(toolbarbutton, toolbaritem):nth-child(4) {
   padding-inline-end: 260px !important;
+:root[inFullscreen] & {
+  padding-inline-end: 315px !important;
+}
 }
 }
 
 :has(#sidebar-box[sidebarcommand="viewGenaiChatSidebar"]:not([hidden])) {
 #nav-bar-customization-target > :is(toolbarbutton, toolbaritem):nth-child(4) {
   padding-inline-end: 380px !important;
+:root[inFullscreen] & {
+  padding-inline-end: 435px !important;
+}
+}
 }
 }
 }
@@ -4812,7 +4802,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 }
 
-@media (-moz-platform: windows) {
+@media not (-moz-platform: macos) {
 :root[inFullscreen] {
 @media not -moz-pref("gwfox.plus_sc") {
 .titlebar-buttonbox-container {
