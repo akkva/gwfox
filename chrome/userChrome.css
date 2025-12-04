@@ -4675,7 +4675,7 @@ tab-group[collapsed] > .tab-group-label-container & {
   background: transparent !important;
 }
 
-@media not -moz-pref("gwfox.plus_sc") {
+@media (not -moz-pref("gwfox.plus_sc")) and (not -moz-pref("sidebar.visibility", "hide-sidebar")) {
 #sidebar-button {
   position: fixed;
   left: 5px;
@@ -4712,7 +4712,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 }
 
-@media not -moz-pref("gwfox.plus_sc") {
+@media (not -moz-pref("gwfox.plus_sc")) and (not -moz-pref("sidebar.visibility", "hide-sidebar")) {
 #sidebar-button {
   left: 20px;
 }
