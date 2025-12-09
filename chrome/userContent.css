@@ -262,7 +262,7 @@ body {
 .search-handoff-button {
   background-color: rgba(15, 15, 15, .7) !important;
   border-radius: 12px !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .1) !important;
   backdrop-filter: blur(30px) !important;
   outline: none !important;
   border: none !important;
@@ -277,7 +277,7 @@ body {
 
 .search-handoff-button.disabled {
   opacity: 1 !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .1) !important;
   fill: rgba(255, 255, 255, .6) !important;
 }
 
@@ -397,7 +397,7 @@ body {
 .search-inner-wrapper {
   background-color: light-dark(rgba(255, 255, 255, .8), rgba(15, 15, 15, .7)) !important;
   border-radius: 12px !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .1) !important;
   transition: background .5s !important;
   z-index: 1;
 @media (-moz-platform: linux) {
@@ -522,13 +522,13 @@ body {
 }
 
 @media not (prefers-color-scheme: dark) {
-.darkWallpaper .top-site-outer .context-menu {
+.darkWallpaper .context-menu {
   color-scheme: light !important;
 }
 
 :has(body[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"]) {
 .personalize-button:not(:hover, :active),
-.top-site-outer .context-menu-button,
+.context-menu-button,
 .top-site-outer:not(:hover, :active, .active),
 .logo-and-wordmark .wordmark, .icon.icon-pin-small {
   color-scheme: light !important;
@@ -544,7 +544,7 @@ body {
   border-radius: 16px !important;
   width: 72px !important;
   height: 72px !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .1) !important;
   border: none !important;
   transition: background .5s !important;
 }
@@ -564,7 +564,7 @@ body {
   background-color: transparent !important;
 }
 
-.top-site-outer .context-menu-button {
+.context-menu-button {
   inset-inline-end: -9px !important;
 }
 
@@ -602,7 +602,7 @@ body {
 
 .context-menu-button.icon {
   border-radius: 50px !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .1) !important;
 }
 
 [data-l10n-id="newtab-custom-recent-toggle"],
@@ -666,9 +666,11 @@ body {
 .customize-menu {
   background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
-  margin: 10px 10px 0 0 !important;
-  height: calc(100% - 20px) !important;
+  box-shadow: var(--bs1) !important;
+  margin: 16px 0 0 0 !important;
+  height: calc(100% - 16px) !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
@@ -677,7 +679,11 @@ body {
 }
 }
 
-.top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable, .location-input-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .weatherNotAvailable, .personalize-button {
+.customize-menu-animate-wrapper {
+  box-shadow: none !important;
+}
+
+.context-menu, .contentSearchSuggestionTable, .location-input-wrapper, .weatherInfoLink, .weatherNotAvailable, .personalize-button {
   backdrop-filter: blur(30px) !important;
   background-color: var(--bg4) !important;
 @media (-moz-platform: linux) {
@@ -697,23 +703,40 @@ body {
   padding: 10px !important;
 }
 
-.weatherCard, .personalize-button {
+.weatherCard, .weatherInfoLink, .personalize-button {
   border-radius: var(--border-radius-medium) !important;
 }
 
 .weatherCard {
   box-shadow: none !important;
-@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper") {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
-}
-}
-
-.weather .context-menu {
-  background-color: light-dark(rgba(255, 255, 255, .98), rgba(15, 15, 15, .98)) !important;
+  padding: 15px !important;
 }
 
 .weatherSponsorText {
   display: none;
+}
+
+.weatherButtonContextMenuWrapper {
+  background: none !important;
+  box-shadow: none !important;
+  margin-left: 10px;
+  margin-top: 10px;
+&:not(:has(.context-menu)) {
+  visibility: collapse;
+.weatherCard:hover & {
+  visibility: visible;
+}
+}
+> .weatherButtonContextMenu {
+  min-height: 24px !important;
+  min-width: 24px !important;
+  max-height: 24px !important;
+  max-width: 24px !important;
+  border-radius: 50px !important;
+}
+&::after {
+  content: none !important;
+}
 }
 
 .location-input-wrapper input {
@@ -722,7 +745,7 @@ body {
 }
 
 @media -moz-pref("widget.macos.native-context-menus") {
-.tile, .context-menu-button.icon, .search-inner-wrapper, .location-input-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .modal, .customize-menu, .top-site-outer .context-menu, .card-outer .context-menu, .contentSearchSuggestionTable {
+.tile, .context-menu-button.icon, .search-inner-wrapper, .location-input-wrapper, .weatherInfoLink, .modal, .customize-menu, .context-menu, .contentSearchSuggestionTable {
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
 }
 
@@ -761,14 +784,14 @@ body {
 }
 }
 
-.search-inner-wrapper, .tile, .context-menu-button.icon, .location-input-wrapper, .weatherInfoLink, .weatherButtonContextMenuWrapper, .weatherNotAvailable, .personalize-button {
+.search-inner-wrapper, .tile, .context-menu-button.icon, .location-input-wrapper, .weatherInfoLink, .weatherNotAvailable, .weatherButtonContextMenu, .personalize-button {
   background-color: var(--bg1) !important;
   box-shadow: none !important;
 &:hover {background-color: var(--bg2) !important;}
 &:active {background-color: var(--bg3) !important;}
 @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper") {
   background-color: var(--bg4) !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .1) !important;
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
@@ -793,12 +816,8 @@ body {
 }
 }
 
-.weatherButtonContextMenuWrapper {
-  box-shadow: none !important;
-}
-
 @media (prefers-color-scheme: dark) {
-.lightWallpaper .top-site-outer .context-menu {
+.lightWallpaper .context-menu {
   color-scheme: dark !important;
 }
 
