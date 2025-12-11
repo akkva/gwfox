@@ -1536,6 +1536,12 @@ menupopup,
 }
 }
 
+panel > .menupopup-arrowscrollbox {
+@media not (-moz-platform: linux) {
+  background: none !important;
+}
+}
+
 #tabContextMenu .menu-icon,
 #contentAreaContextMenu .menu-icon {
   display: none;
