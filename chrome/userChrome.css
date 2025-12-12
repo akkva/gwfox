@@ -1727,7 +1727,7 @@ tree {
 }
 @media (-moz-platform: linux) {
 @media (prefers-color-scheme: dark) {
-  &::before {
+  &:not([chromehidden~="toolbar"])::before {
   content: "";
   position: absolute;
   top: 0;
