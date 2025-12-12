@@ -995,7 +995,6 @@
 #reset-pbm-toolbar-button, #taskbar-tabs-button,
 #firefox-view-button, #fxa-toolbar-menu-button,
 #userContext-icons, #userContext-label,
-#scrollbutton-up, #scrollbutton-down,
 .sharing-icon, #save-to-pocket-button {
   display: none !important;
 }
