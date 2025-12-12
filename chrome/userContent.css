@@ -681,6 +681,11 @@ body {
 
 .customize-menu-animate-wrapper {
   box-shadow: none !important;
+:has(.category.wallpaper-list) {
+.category-header, .category-list, ~ * {
+  display: none !important;
+}
+}
 }
 
 .context-menu, .contentSearchSuggestionTable, .location-input-wrapper, .weatherInfoLink, .weatherNotAvailable, .personalize-button {
@@ -695,12 +700,13 @@ body {
 }
 
 .wallpaper-list.category {
-  background-color: light-dark(rgba(255, 255, 255, .95), rgba(55, 55, 55, .95)) !important;
   margin: 0 !important;
   width: 100% !important;
   height: 100% !important;
   inset-inline-start: 0 !important;
   padding: 10px !important;
+  transition: none !important;
+  animation: .25s ease-in panel-grow;
 }
 
 .weatherCard, .weatherInfoLink, .personalize-button {
