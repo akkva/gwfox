@@ -3154,6 +3154,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   border-top-right-radius: 11px !important;
 }
 }
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: var(--bg2) !important;
+  backdrop-filter: blur(0px) !important;
+}
+}
   transform: rotateX(90deg);
   transform-origin: top;
   transition: transform 105ms linear 500ms !important;
