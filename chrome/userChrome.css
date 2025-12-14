@@ -1489,6 +1489,10 @@ tab-group:not([collapsed]) > &::after {
 tab-split-view-wrapper {
   margin-inline-start: 7.5px !important;
   margin-inline-end: 8px !important;
+@media (-moz-platform: linux) {
+  margin-inline-start: 10px !important;
+  margin-inline-end: 11px !important;
+}
   padding: 0 !important;
   background-color: transparent !important;
 #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
