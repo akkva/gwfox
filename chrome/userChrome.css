@@ -3003,9 +3003,15 @@ tab-group[collapsed] > .tab-group-label-container & {
 tab-split-view-wrapper {
 .tab-background {
   margin-inline-start: 9px !important;
+@media (-moz-platform: linux) {
+  margin-inline-start: 12px !important;
+}
 }
 .tab-close-button {
   margin-inline-start: 6px !important;
+@media (-moz-platform: linux) {
+  margin-inline-start: 9px !important;
+}
 }
 }
 }
