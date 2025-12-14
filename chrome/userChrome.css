@@ -304,6 +304,18 @@ split-view-footer {
 }
 
 @media not -moz-pref("sidebar.verticalTabs") {
+:has(#sidebar-main[hidden]) {
+#tabbrowser-tabpanels[splitview] {
+.split-view-panel[column="0"] {
+  margin-inline-end: -8px !important;
+}
+@media -moz-pref("gwfox.noborder") {
+.split-view-panel[column="0"] {
+  margin-inline-end: 8px !important;
+}
+}
+}
+}
 .titlebar-buttonbox-container {
   position: fixed !important;
   left: 7px;
@@ -2982,6 +2994,19 @@ tab-group[collapsed] > .tab-group-label-container & {
 :has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #urlbar {
   left: 27.5vw !important;
+}
+}
+}
+
+@media not -moz-pref("gwfox.plus") {
+:has(#tabbrowser-tabs:not([expanded])) {
+tab-split-view-wrapper {
+.tab-background {
+  margin-inline-start: 9px !important;
+}
+.tab-close-button {
+  margin-inline-start: 6px !important;
+}
 }
 }
 }
