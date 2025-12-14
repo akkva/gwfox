@@ -5181,6 +5181,17 @@ padding-inline-end: 46px !important;
 
 @media -moz-pref("gwfox.noborder") {
 :root:not([inDOMFullscreen], [chromehidden~="toolbar"]) {
+#tabbrowser-tabpanels {
+&[splitview] {
+.browserStack {
+  border-radius: 0 !important;
+}
+.split-view-panel[column="0"] {
+  margin-inline-end: 8px !important;
+}
+}
+}
+
 #tabbrowser-tabbox browser {
   border-radius: 0 !important;
   clip-path: inset(0 round .1px) !important;
@@ -5229,6 +5240,10 @@ padding-inline-end: 46px !important;
 #tabbrowser-tabbox browser {
   clip-path: inset(0 round 12px 0 0 0) !important;
   border-start-start-radius: 10px !important;
+.split-view-panel[column="1"] & {
+  clip-path: none !important;
+  border-start-start-radius: 0 !important;
+}
 }
 
 @media -moz-pref("gwfox.plus_tb") {
