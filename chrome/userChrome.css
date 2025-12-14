@@ -4541,6 +4541,11 @@ tab-split-view-wrapper & {
   margin-inline-end: -7px !important;
 }
 }
+@media -moz-pref("gwfox.noborder") {
+.split-view-panel[column="0"] {
+  margin-inline-end: 16px !important;
+}
+}
 }
 }
 
