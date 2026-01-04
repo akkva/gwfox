@@ -31,7 +31,9 @@
   --brand-color-accent-active: light-dark(#005ebb, #0055bc) !important;
   --newtab-primary-action-background: light-dark(#007aff, #1280fd) !important;
   --color-accent-primary: light-dark(#007aff, #1280fd) !important;
+  --color-accent-primary-hover: light-dark(#0075dd, #006bdc) !important;
   --color-accent-primary-active: light-dark(#005ebb, #0055bc) !important;
+  --color-accent-primary-selected: light-dark(#007aff, #1280fd) !important;
   --button-text-color-primary: #fff !important;
   --border-color: rgba(105, 105, 105, .2) !important;
   --bg1: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15));
@@ -61,6 +63,7 @@
 @media (prefers-color-scheme: dark) {
 @media (-moz-platform: windows) {:not(:-moz-window-inactive) {::-moz-selection { background-color: #416189 }}}
 :root {
+  --text-color-accent-primary-selected: #fff !important;
   --newtab-primary-element-text-color: #fff !important;
 @media not -moz-pref("gwfox.atbc") {
   --in-content-box-background: #282828 !important;
