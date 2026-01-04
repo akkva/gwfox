@@ -1223,12 +1223,6 @@ split-view-footer {
   border: none !important;
   box-shadow: none !important;
   border-radius: var(--br1) !important;
-#tabbrowser-tabs[movingtab-createGroup] & {
-  outline: none !important;
-&[dragover-createGroup] {
-  background-color: color-mix(in srgb, var(--dragover-tab-group-color) 38%, transparent) !important;
-}
-}
 #tabbrowser-tabs[movingtab-group] & {
  &[dragover-groupTarget] {
   background-color: color-mix(in srgb, var(--dragover-tab-group-color) 38%, transparent) !important;
@@ -1519,7 +1513,9 @@ tab-group & {
 }
 &:not([hasactivetab]) {
 .tabbrowser-tab {
+&:not(:hover) {
   border-image: linear-gradient( to bottom, transparent 30%, rgba(155, 155, 155, .3) 30%, rgba(155, 155, 155, .3) 70%, transparent 70%) 1 !important;
+}
 tab-group & {
   border-image: none !important;
 }
@@ -1527,6 +1523,9 @@ tab-group & {
   border-block-end: none !important;
 }
 &:last-child {
+&:hover {
+  border-inline-start: none !important;
+}
 tab-group & {
   border-inline-start: none !important;
 }
@@ -2847,7 +2846,7 @@ tab-group:not([collapsed]) > & {
 
 #tabbrowser-tabs {
 tab-group > .tabbrowser-tab,
-&[movingtab][movingtab-addToGroup]:not([movingtab-createGroup],[movingtab-ungroup]) .tabbrowser-tab:is(:active,[multiselected]) {
+&[movingtab][movingtab-addToGroup]:not([movingtab-group],[movingtab-ungroup]) .tabbrowser-tab:is(:active,[multiselected]) {
   margin-inline-start: 0 !important;
 }
 }
@@ -4268,7 +4267,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #tabbrowser-tabs {
 tab-group > .tabbrowser-tab,
-&[movingtab][movingtab-addToGroup]:not([movingtab-createGroup],[movingtab-ungroup]) .tabbrowser-tab:is(:active,[multiselected]) {
+&[movingtab][movingtab-addToGroup]:not([movingtab-group],[movingtab-ungroup]) .tabbrowser-tab:is(:active,[multiselected]) {
   margin-inline-start: 0 !important;
 }
 }
