@@ -111,12 +111,6 @@
 @media not -moz-pref("gwfox.noborder") {
   margin-inline-start: -8px !important;
 }
-/* FF147
-@media -moz-pref("gwfox.noborder") {
-  border-start-start-radius: 12px !important;
-  outline: 0.01px solid var(--chrome-content-separator-color) !important;
-  box-shadow: var(--content-area-shadow) !important;
-} */
 }
 }
 
@@ -1273,6 +1267,9 @@ tab-group[collapsed] > .tabbrowser-tab[visuallyselected] > .tab-stack > & {
   --tab-min-width: 88px !important;
   margin-bottom: -1px !important;
   border-inline-start: none !important;
+tab-group > .tabbrowser-tab {
+  transition: .25s !important;
+}
 }
 
 #tabbrowser-tabs[movingtab] {
@@ -1340,6 +1337,24 @@ tab-group[collapsed] > .tabbrowser-tab[visuallyselected] > .tab-stack > & {
 
 #tab-preview-panel {
   --panel-padding: 0 !important;
+}
+
+.tab-group-editor-panel {
+toolbarseparator:not(.tab-group-edit-mode-only) {
+  display: none;
+}
+
+.tab-group-editor-name {
+> label {
+  margin-inline-start: 8px !important;
+}
+}
+
+.tab-group-editor-swatch {
+input:checked + & {
+  border-color: light-dark(rgba(0, 0, 0, .4), rgba(255, 255, 255, .2)) !important;
+}
+}
 }
 
 .tab-group-overflow-count-container {
@@ -2810,6 +2825,7 @@ tab-group > tab-split-view-wrapper & {
   padding-block: 0 !important;
   margin-left: 1px !important;
   margin-right: 10px !important;
+  margin-bottom: 1px !important;
   padding-left: 33px !important;
   border-radius: var(--br2) !important;
   width: 100% !important;
@@ -2823,6 +2839,11 @@ tab-group > tab-split-view-wrapper & {
 tab-group[collapsed] > .tab-group-label-container & {
   background-image: url("chrome://global/skin/icons/folder.svg");
   background-position: left 9px bottom 7.5px;
+[hasactivetab] & {
+  background-image: url("chrome://global/skin/icons/folder.svg"), url("chrome://global/skin/icons/more.svg");
+  background-size: auto, 10px 16px;
+  background-position: left 9px bottom 7.5px, left 12.5px bottom 7.5px;
+}
 }
 
 &::first-letter {
@@ -2845,6 +2866,16 @@ tab-group:not([collapsed]) > & {
 }
 
 #tabbrowser-tabs {
+tab-group > .tabbrowser-tab {
+  max-height: 42px;
+[collapsed] & {
+&:not([selected], [busy]) {
+  display: block !important;
+  padding-block: 0 !important;
+  max-height: 0;
+}
+}
+}
 tab-group > .tabbrowser-tab,
 &[movingtab][movingtab-addToGroup]:not([movingtab-group],[movingtab-ungroup]) .tabbrowser-tab:is(:active,[multiselected]) {
   margin-inline-start: 0 !important;
@@ -4286,6 +4317,9 @@ tab-group {
 
 tab-group[collapsed] > .tab-group-label-container & {
   background-position: left 9px bottom 7.5px;
+[hasactivetab] & {
+  background-position: left 9px bottom 7.5px, left 12.5px bottom 7.5px;
+}
 }
 }
 }
