@@ -1303,18 +1303,19 @@ tab-group > .tabbrowser-tab {
 
 .tab-icon-overlay {
   scale: .7;
-  &:hover { scale: .8; }
+  &:hover { scale: .9; }
   &:is([soundplaying], [muted], [activemedia-blocked]) {
-  background-color: transparent !important;
+  background: light-dark(color-mix(in srgb, var(--button-bgcolor) 20%, #fff), color-mix(in srgb, var(--button-bgcolor) 80%, #fff)) !important;
+  backdrop-filter: blur(30px);
   border: none !important;
   &:not([pinned]) {
   background-size: 16px !important;
 }
   &:hover {
-  background-color: var(--button-hover-bgcolor) !important;   
+  background: light-dark(color-mix(in srgb, var(--button-hover-bgcolor) 20%, #fff), color-mix(in srgb, var(--button-hover-bgcolor) 80%, #fff)) !important;
 }
   &:active {
-  background-color: var(--button-active-bgcolor) !important;   
+  background: light-dark(color-mix(in srgb, var(--button-active-bgcolor) 20%, #fff), color-mix(in srgb, var(--button-active-bgcolor) 80%, #fff)) !important;
 }
 }
   :is(
@@ -2871,6 +2872,9 @@ tab-group:not([collapsed]) > & {
 #tabbrowser-tabs {
 tab-group > .tabbrowser-tab {
   max-height: 42px;
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+  transition: max-height .25s !important;
+}
 [collapsed] & {
 &:not([selected], [busy]) {
   display: block !important;
