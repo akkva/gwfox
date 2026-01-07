@@ -1305,17 +1305,17 @@ tab-group > .tabbrowser-tab {
   scale: .7;
   &:hover { scale: .9; }
   &:is([soundplaying], [muted], [activemedia-blocked]) {
-  background: light-dark(color-mix(in srgb, var(--button-bgcolor) 20%, #fff), color-mix(in srgb, var(--button-bgcolor) 80%, #fff)) !important;
+  background: light-dark(color-mix(in srgb, var(--button-bgcolor) 20%, #fff), color-mix(in srgb, var(--button-bgcolor) 80%, #555)) !important;
   backdrop-filter: blur(30px);
   border: none !important;
   &:not([pinned]) {
   background-size: 16px !important;
 }
   &:hover {
-  background: light-dark(color-mix(in srgb, var(--button-hover-bgcolor) 20%, #fff), color-mix(in srgb, var(--button-hover-bgcolor) 80%, #fff)) !important;
+  background: light-dark(color-mix(in srgb, var(--button-hover-bgcolor) 20%, #fff), color-mix(in srgb, var(--button-hover-bgcolor) 80%, #555)) !important;
 }
   &:active {
-  background: light-dark(color-mix(in srgb, var(--button-active-bgcolor) 20%, #fff), color-mix(in srgb, var(--button-active-bgcolor) 80%, #fff)) !important;
+  background: light-dark(color-mix(in srgb, var(--button-active-bgcolor) 20%, #fff), color-mix(in srgb, var(--button-active-bgcolor) 80%, #555)) !important;
 }
 }
   :is(
@@ -5265,6 +5265,13 @@ padding-inline-end: 46px !important;
 &[splitview] {
 .browserStack, .browserContainer {
   border-radius: 0 !important;
+:has([sidebar-shown]) & {
+@media not -moz-pref("sidebar.verticalTabs") {
+.split-view-panel[column="0"] & {
+  border-start-start-radius: 12px !important;
+}  
+}  
+}
 }
 .split-view-panel[column="0"] {
   margin-inline-end: 8px !important;
