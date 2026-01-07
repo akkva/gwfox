@@ -5324,6 +5324,8 @@ padding-inline-end: 46px !important;
   border-start-start-radius: 12px !important;
 }
 
+#browser { clip-path: inset(0 round .1px) !important; }
+
 #tabbrowser-tabbox browser {
   clip-path: inset(0 round 12px 0 0 0) !important;
   border-start-start-radius: 10px !important;
