@@ -5265,6 +5265,7 @@ padding-inline-end: 46px !important;
 &[splitview] {
 .browserStack, .browserContainer {
   border-radius: 0 !important;
+  box-shadow: 0 0 2px light-dark(#00000026, #00000040) !important;
 :has([sidebar-shown]) & {
 @media not -moz-pref("sidebar.verticalTabs") {
 .split-view-panel[column="0"] & {
@@ -5324,13 +5325,11 @@ padding-inline-end: 46px !important;
   border-start-start-radius: 12px !important;
 }
 
-#browser { clip-path: inset(0 round .1px) !important; }
-
-#tabbrowser-tabbox browser {
+#tabbrowser-tabbox browser:not(.devtools-toolbox-bottom-iframe, .devtools-toolbox-side-iframe) {
   clip-path: inset(0 round 12px 0 0 0) !important;
   border-start-start-radius: 10px !important;
 .split-view-panel[column="1"] & {
-  clip-path: none !important;
+  clip-path: inset(0 round .1px) !important;
   border-start-start-radius: 0 !important;
 }
 }
