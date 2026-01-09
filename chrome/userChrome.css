@@ -828,9 +828,6 @@ split-view-footer {
   margin-top: 6.5px !important;
   border-radius: var(--br1);
   background: var(--button-active-bgcolor);
-@media (-moz-platform: windows) {
-  margin-top: 7.5px !important;
-}
 }
 
 :has(#urlbar[persistsearchterms]):not(:has(#urlbar[breakout][breakout-extend])) {
@@ -913,14 +910,6 @@ split-view-footer {
   height: 28px !important;
   border-radius: var(--br1) !important;
   padding: 6px !important;
-}
-
-@media not -moz-pref("sidebar.verticalTabs") {
-@media (-moz-platform: windows) {
-#urlbar:not([breakout][breakout-extend], [usertyping]) {
-  margin-top: .5px !important;
-}
-}
 }
 
 @media -moz-pref("gwfox.plus") or (not -moz-pref("sidebar.verticalTabs")) {
