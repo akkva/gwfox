@@ -2229,7 +2229,7 @@ findbar::after {
   outline-style: solid !important;
   outline-color: transparent !important;
   outline-width: 5px !important;
-  border-radius: var(--br2) !important;
+  border-radius: 6px !important;
   padding-inline-start: 22px !important;
   background-image: url(chrome://global/skin/icons/search-glass.svg) !important;
   background-repeat: no-repeat !important;
