@@ -361,12 +361,6 @@ split-view-footer {
 }
 }
 
-#nav-bar-customization-target {
-@media (-moz-platform: windows) {
-  margin-top: .5px !important;
-} 
-}
-
 .webextension-browser-action,
 #nav-bar-customization-target > toolbarbutton:nth-last-child(3) {
   margin-right: 4px !important;
@@ -383,9 +377,6 @@ split-view-footer {
   margin-left: -2px !important;
 @media (-moz-platform: linux) {
   margin-top: 4.5px !important;
-}
-@media (-moz-platform: windows) {
-  margin-bottom: 4px !important;
 }
 @media not (-moz-platform: macos) {
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
