@@ -1870,10 +1870,10 @@ tree {
 }
 
 :root#main-window {
-  min-width: 611px !important;
+  min-width: 621px !important;
 @media not (-moz-platform: macos) {
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
-  min-width: 701px !important;
+  min-width: 711px !important;
 }
 }
 @media (-moz-platform: macos) {
@@ -1902,7 +1902,7 @@ tree {
 }
 }
 
-@media (max-width: 611px) {
+@media (max-width: 621px) {
 @media not -moz-pref("sidebar.verticalTabs") {
 #urlbar-container {
   margin-left: 30px !important;
@@ -2181,7 +2181,7 @@ findbar {
   position: absolute !important;
   top: 3px;
   right: -8px;
-  width: calc(100% - 15px) !important;
+  width: 100% !important;
   height: 90px !important;
   border: none !important;
   background: none !important;
@@ -2247,16 +2247,20 @@ findbar::after {
   margin-right: 30px;
 }
 
-.findbar-textbox, .findbar-textbox:-moz-window-inactive {
-  background: none !important;
-  width: 100px !important;
-  border: none !important;
-}
-
 .findbar-textbox {
+  width: 10em !important;
+  background: rgba(165, 165, 165, .1) !important;
   outline-style: solid !important;
   outline-color: transparent !important;
   outline-width: 5px !important;
+  padding-inline-start: 22px !important;
+  background-image: url(chrome://global/skin/icons/search-glass.svg) !important;
+  background-repeat: no-repeat !important;
+  background-size: 12px !important;
+  background-position: left 5px bottom 5px !important;
+  -moz-context-properties: fill, fill-opacity;
+  fill: currentColor;
+  fill-opacity: .65;
 }
 
 .findbar-textbox[focused],
