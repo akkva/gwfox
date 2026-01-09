@@ -1920,7 +1920,7 @@ tree {
 
 @media not (-moz-platform: macos) {
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
-@media (max-width: 701px) {
+@media (max-width: 711px) {
 @media not -moz-pref("sidebar.verticalTabs") {
 #urlbar-container {
   margin-left: 55px !important;
