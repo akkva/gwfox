@@ -244,11 +244,6 @@ split-view-footer {
   padding-top: 2px !important;
   height: 47px !important;
   background: transparent !important;
-@media (-moz-platform: windows) {
-@media not -moz-pref("sidebar.verticalTabs") {
-  height: 48px !important;
-}
-}
 &:not([customizing]) toolbarspring:not(#vertical-spacer) {
   min-width: 12.5px !important;
 }
@@ -333,7 +328,7 @@ split-view-footer {
 @media (-moz-platform: windows) {
 .titlebar-button {
   padding-top: 19px !important;
-  padding-bottom: 18px !important;
+  padding-bottom: 17px !important;
 }
 }
 @media (-moz-platform: linux) {
@@ -366,6 +361,12 @@ split-view-footer {
 }
 }
 
+#nav-bar-customization-target {
+@media (-moz-platform: windows) {
+  margin-top: .5px !important;
+} 
+}
+
 .webextension-browser-action,
 #nav-bar-customization-target > toolbarbutton:nth-last-child(3) {
   margin-right: 4px !important;
@@ -378,8 +379,14 @@ split-view-footer {
 #TabsToolbar {
   grid-area: 2 / 2 / auto / auto;
   padding-inline-end: 77px !important;
-  margin-bottom: 5.5px !important;
+  margin-bottom: 4.5px !important;
   margin-left: -2px !important;
+@media (-moz-platform: linux) {
+  margin-top: 4.5px !important;
+}
+@media (-moz-platform: windows) {
+  margin-bottom: 4px !important;
+}
 @media not (-moz-platform: macos) {
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   padding-inline-end: 212px !important;
@@ -1276,7 +1283,6 @@ tab-group[collapsed] > .tabbrowser-tab[visuallyselected] > .tab-stack > & {
 
 #tabbrowser-tabs {
   --tab-min-width: 88px !important;
-  margin-bottom: -1px !important;
   border-inline-start: none !important;
 tab-group > .tabbrowser-tab {
   transition: .25s !important;
@@ -1599,6 +1605,9 @@ tab-group & {
   margin-top: 3px !important;
 &:has([pinned]) {
   margin-top: 1px !important;
+}
+&::after {
+  content: none !important;
 }
 .tabbrowser-tab {
   padding-block: 5px !important;
@@ -2694,11 +2703,11 @@ menuitem[type="radio"][disabled="true"] .menu-icon {
 }
 }
 
-span > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/skin/login.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"]) {
+span > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/skin/login.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"], [src="chrome://global/skin/icons/chevron.svg"]) {
   fill: light-dark(#525252, #c9c9cb) !important;
 }
 
-span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/skin/login.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"]) {
+span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/skin/login.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"], [src="chrome://global/skin/icons/chevron.svg"]) {
   fill: light-dark(#2d2d2d, #ececec) !important;
 }
 
@@ -2722,24 +2731,9 @@ span:active > img:is([src="chrome://browser/content/genai/assets/brands/claude.s
 
 .tools-and-extensions {
   margin-bottom: 4px !important;
-}
-
-.extensions, .customize-extensions-heading {
-  display: none !important;
-}
-
-.actions-list > moz-button[view=viewCustomizeSidebar] {
-  display: var(--mtb) !important;
-}
-
-.actions-list {
-  display: var(--dp, inherit) !important;
-&:has(.expanded-button) {
-  display: flex !important;
-}
+  visibility: var(--dp);
 &[orientation="horizontal"] {
-  justify-content: center !important;
-  max-width: calc(100% - 20px) !important;
+  padding-inline: 19px !important;
 }
 }
 
@@ -2747,13 +2741,14 @@ span:active > img:is([src="chrome://browser/content/genai/assets/brands/claude.s
   justify-content: center !important;
 }
 
-.more-tools-button,
-.tools-and-extensions > moz-button[extension] {
-  display: var(--mtb) !important;
+.actions-list > moz-button[view=viewCustomizeSidebar] {
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0;
 }
 
 #sidebar-tools-and-extensions-splitter {
-  display: var(--dp) !important;
+  visibility: var(--dp);
   width: 10px !important;
   margin-inline: auto !important;
   margin-block-start: 15px !important;
@@ -2929,9 +2924,6 @@ tab-group > .tabbrowser-tab,
 }
 
 :has(#tabbrowser-tabs[expanded]) {
-  --mtb: none;
-  --dp: flex;
-
 #sidebar-main {
   min-width: 240px !important;
 }
@@ -2945,6 +2937,10 @@ tab-group > .tabbrowser-tab,
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
+#sidebar-main {
+  min-width: 82px !important;
+}
+
 .tab-group-label {
   font-size: 0 !important;
   margin-left: 10px !important;
@@ -4025,6 +4021,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 @media -moz-pref("sidebar.visibility", "hide-sidebar") {
 :root:not([chromehidden~="toolbar"], [customizing], [inDOMFullscreen]):has(#tabbrowser-tabs:not([expanded])) {
+  --dp: collapse;
 .titlebar-buttonbox-container {
   position: fixed !important;
   top: 25px !important;
@@ -4679,10 +4676,6 @@ tab-split-view-wrapper & {
 #urlbar:not([open]) .urlbar-input-container {
   background-position: left 6px bottom 7px;
 }
-}
-
-:has(#tabbrowser-tabs:not([expanded])) {
-  --dp: none;
 }
 
 :has(#sidebar-main:hover) {
