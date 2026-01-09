@@ -313,6 +313,14 @@ split-view-footer {
 }
 }
 }
+:has([sidebar-shown]) {
+@media (min-width: 610px) and (max-width: 846px) {
+.findbar-highlight, .findbar-match-diacritics,
+.findbar-entire-word, .findbar-case-sensitive {
+  display: none;
+}
+}
+}
 .titlebar-buttonbox-container {
   position: fixed !important;
   left: 7px;
@@ -2179,10 +2187,17 @@ findbar {
   background: none !important;
   flex-direction: row-reverse;
   white-space: nowrap;
+  pointer-events: none;
   animation-name: slide-in;
   animation-duration: 350ms;
 &:is([hidden]) {
   animation-name: slide-out;
+}
+@media (min-width: 610px) and (max-width: 796px) {
+.findbar-highlight, .findbar-match-diacritics,
+.findbar-entire-word, .findbar-case-sensitive {
+  display: none;
+}
 }
 }
 
@@ -2197,6 +2212,7 @@ findbar::after {
   right: 18px;
   margin-top: 7px !important;
   background: none !important;
+  pointer-events: auto;
   z-index: 1;
 }
 
@@ -2218,6 +2234,7 @@ findbar::after {
 .findbar-container {
   height: 42px !important;
   margin-right: 25px;
+  pointer-events: auto;
   overflow-inline: visible !important;
   flex-direction: row-reverse;
   border-radius: var(--br2) !important;
@@ -2937,6 +2954,13 @@ tab-group > .tabbrowser-tab,
 #sidebar-main {
   min-width: 240px !important;
 }
+
+@media (min-width: 610px) and (max-width: 1036px) {
+.findbar-highlight, .findbar-match-diacritics,
+.findbar-entire-word, .findbar-case-sensitive {
+  display: none;
+}
+}
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
@@ -2970,6 +2994,13 @@ tab-group > .tabbrowser-tab,
 :has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #urlbar {
   left: 29vw !important;
+}
+}
+
+@media (min-width: 610px) and (max-width: 876px) {
+.findbar-highlight, .findbar-match-diacritics,
+.findbar-entire-word, .findbar-case-sensitive {
+  display: none;
 }
 }
 }
