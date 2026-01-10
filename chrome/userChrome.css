@@ -2920,12 +2920,15 @@ tab-group > .tabbrowser-tab,
 
 :has(#tabbrowser-tabs:not([expanded])) {
 #sidebar-main {
+  min-width: 52px !important;
+@media -moz-pref("gwfox.plus") {
   min-width: 82px !important;
+}
 }
 
 .tab-group-label {
   font-size: 0 !important;
-  margin-left: 10px !important;
+  margin-left: 10.5px !important;
   padding: 0 !important;
   width: 32px !important;
   min-height: 32px !important;
