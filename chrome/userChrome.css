@@ -1893,7 +1893,9 @@ tree {
 }
 }
 
-#TabsToolbar {
+#TabsToolbar,
+#TabsToolbar .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #alltabs-button, #sidebar-button),
+#nav-bar .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #alltabs-button, #sidebar-button) {
   visibility: collapse;
 }
 
