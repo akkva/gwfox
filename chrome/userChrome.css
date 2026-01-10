@@ -4412,7 +4412,6 @@ tab-split-view-wrapper & {
   background-repeat: no-repeat;
   background-position: center;
   -moz-context-properties: fill, fill-opacity;
-  margin-inline-end: -12px !important;
   fill: currentColor;
   fill-opacity: .6;
 &[soundplaying] {
@@ -4423,9 +4422,6 @@ tab-split-view-wrapper & {
 }
 &[activemedia-blocked] {
   background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg");
-}
-@media -moz-pref("gwfox.plus_sc") {
-  margin-inline-end: 0 !important;
 }
 }
 
