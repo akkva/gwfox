@@ -2928,12 +2928,15 @@ tab-group > .tabbrowser-tab,
 
 .tab-group-label {
   font-size: 0 !important;
-  margin-left: 10.5px !important;
+  margin-left: 10px !important;
   padding: 0 !important;
   width: 32px !important;
   min-height: 32px !important;
   max-width: 32px !important;
   background-position: center;
+@media (-moz-platform: windows) {
+  margin-left: 10.5px !important;
+}
 }
 
 .tab-close-button {
