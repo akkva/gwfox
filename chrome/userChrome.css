@@ -13,6 +13,7 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 :root {
+  --bg0: #007aff;
   --bg1: light-dark(#f5f6f6, #383838);
   --bg2: light-dark(#fff, #454545);
   --bg3: light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1));
@@ -21,40 +22,35 @@
   --bs2: 0 5px 15px rgba(0, 0, 0, .25), inset 0 0 0 .5px rgba(0, 0, 0, .78), 0 0 0 .5px rgba(0, 0, 0, .2);
   --br1: 6px;
   --br2: 8px;
-  --outline-color: light-dark(#7db0f7, #2c749f);
   --button-bgcolor: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
   --button-hover-bgcolor: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   --button-active-bgcolor: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
   --button-background-color: var(--button-bgcolor) !important;
   --button-background-color-hover: var(--button-hover-bgcolor) !important;
   --button-background-color-active: var(--button-active-bgcolor) !important;
-  --in-content-primary-button-background: light-dark(#007aff, #1280fd) !important;
-  --in-content-primary-button-background-hover: light-dark(#0075dd, #006bdc) !important;
-  --in-content-primary-button-background-active: light-dark(#005ebb, #0055bc) !important;
   --in-content-primary-button-text-color: #fff !important;
   --devtools-splitter-color: transparent !important;
   --button-text-color-primary: #fff !important;
   --button-primary-color: #fff !important;
-  --color-accent-primary: light-dark(#007aff, #1280fd) !important;
-  --color-accent-primary-hover: light-dark(#0075dd, #006bdc) !important;
-  --color-accent-primary-active: light-dark(#005ebb, #0055bc) !important;
-  --button-primary-bgcolor: light-dark(#007aff, #1280fd) !important;
-  --button-primary-hover-bgcolor: light-dark(#0075dd, #006bdc) !important;
-  --button-primary-active-bgcolor: light-dark(#005ebb, #0055bc) !important;
+  --color-accent-primary: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
+  --color-accent-primary-hover: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #fff)) !important;
+  --color-accent-primary-active: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important;
   --in-content-button-background: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   --in-content-button-background-hover: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
   --in-content-button-background-active: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
-  --link-color: light-dark(#007aff, #1280fd) !important;
-  --link-color-hover: light-dark(#0075dd, #006bdc) !important;
-  --link-color-active: light-dark(#005ebb, #0055bc) !important;
+  --link-color: var(--color-accent-primary) !important;
+  --link-color-hover: var(--color-accent-primary-hover) !important;
+  --link-color-active: var(--color-accent-primary-active) !important;
   --toolbar-field-focus-background-color: light-dark(rgba(155, 155, 155, .25), rgba(195, 195, 195, .25)) !important;
   --urlbarView-result-button-hover-color: light-dark(rgba(0, 0, 0, .8), rgba(255, 255, 255, .8)) !important;
   --urlbarView-result-button-hover-background-color: light-dark(rgba(155, 155, 155, .5), rgba(195, 195, 195, .5)) !important;
-  --toolbarbutton-icon-fill-attention: light-dark(#007aff, #1280fd) !important;
+  --toolbarbutton-icon-fill-attention: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
+  --tab-loading-fill: var(--toolbarbutton-icon-fill-attention) !important;
   --arrowpanel-background: light-dark(#fff, #383838) !important;
-  --focus-outline-color: transparent !important;
+  --focus-outline-color: light-dark(color-mix(in srgb, var(--bg0) 55%, transparent), color-mix(in srgb, var(--bg0) 45%, #555)) !important;
   --in-content-box-background: light-dark(rgba(155, 155, 155, .2), rgba(195, 195, 195, .2)) !important;
   --background-color-box: light-dark(rgba(155, 155, 155, .2), rgba(195, 195, 195, .2)) !important;
+  --border-color: transparent !important;
   --in-content-box-border-color: transparent !important;
   --sidebar-background-color: transparent !important;
   --sidebar-border-color: transparent !important;
@@ -70,6 +66,13 @@
   --tab-icon-overlay-fill: light-dark(rgba(0, 0, 0, .8), rgba(225, 225, 225, .8)) !important;
   --toolbarbutton-hover-background: color-mix(in srgb, currentColor 10%, transparent) !important;
   --toolbarbutton-active-background: color-mix(in srgb, currentColor 15%, transparent) !important;
+  :not(:-moz-window-inactive) {::selection {background:color-mix(in srgb, var(--bg0), transparent 75%) !important;}}
+  @media -moz-pref("gwfox.ac") {
+  --urlbarView-result-button-hover-color: rgba(255, 255, 255, .8) !important;
+  --urlbarView-result-button-hover-background-color: rgba(195, 195, 195, .2) !important;
+  --urlbarView-hover-background: color-mix(in srgb, var(--bg0) 80%, transparent) !important;
+  --urlbarView-highlight-background: var(--urlbarView-hover-background) !important;
+  }
   @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   --arrowpanel-menuitem-border-radius: 8px !important;
   }
@@ -308,14 +311,7 @@ split-view-footer {
 }
 }
 }
-:has([sidebar-shown]) {
-@media (min-width: 610px) and (max-width: 846px) {
-.findbar-highlight, .findbar-match-diacritics,
-.findbar-entire-word, .findbar-case-sensitive {
-  display: none;
-}
-}
-}
+
 .titlebar-buttonbox-container {
   position: fixed !important;
   left: 7px;
@@ -638,7 +634,7 @@ split-view-footer {
 }
 
 #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
-  outline-color: var(--outline-color) !important;
+  outline-color: var(--focus-outline-color) !important;
   outline-width: 3px !important;
   outline-offset: -1px !important;
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
@@ -1714,6 +1710,17 @@ menu {
   margin: 2px 0 !important;
 }
 
+menuitem[badge]::after {
+  border-radius: 12px !important;
+  border: none !important;
+  color: inherit !important;
+  background-color: var(--button-bgcolor) !important;
+  font-weight: 480 !important;
+  font-size: 11px !important;
+  padding: 1px 8px !important;
+  scale: .9;
+}
+
 menupopup > menuitem[selected] {
   background: none !important;
   color: inherit !important;
@@ -1723,18 +1730,12 @@ menupopup .bookmark-item {
   margin: 2px 0 !important;
 }
 
-menupopup menu:hover:not([disabled=true]),
-menupopup menuitem:hover:not([disabled=true]),
-menupopup menu[_moz-menuactive]:not([disabled=true]),
-menupopup menuitem[_moz-menuactive]:not([disabled=true]),
-.protections-popup-footer-button:not([disabled=true]):hover,
-#protections-popup-show-report-stack:hover .protections-popup-footer-button,
-.protections-popup-category:not([disabled=true]):hover,
-.identity-popup-content-blocking-category:not([disabled=true]):hover,
-#PlacesToolbar .bookmark-item:is(:hover, [open], [_moz-menuactive]),
-#downloadsPanel-mainView .download-state:hover {
-  background: var(--button-hover-bgcolor) !important;
+menu,
+menuitem {
+&:where([_moz-menuactive]:not([disabled="true"])) {
+  background-color: var(--button-hover-bgcolor) !important;
   color: inherit !important;
+}
 }
 
 toolbarseparator::before {
@@ -1964,7 +1965,17 @@ input[type="checkbox"] {
   border-radius: 2px !important;
   border: 2px solid rgba(165, 165, 165, .8) !important;
   &:checked {
-  appearance: checkbox !important;
+  background-color: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
+  background-image: url("chrome://devtools/skin/images/check.svg") !important;
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-context-properties: fill, stroke;
+  fill: #fff;
+  stroke: #fff;
+  border: none !important;
+  &:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #fff)) !important; }
+  &:hover:active { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important; }
 }
 }
 
@@ -1974,7 +1985,17 @@ input[type="checkbox"] {
   border-radius: 2px !important;
   border: 2px solid rgba(165, 165, 165, .8) !important;
   &[checked] {
-  appearance: checkbox !important;
+  background-color: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
+  background-image: url("chrome://devtools/skin/images/check.svg") !important;
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-context-properties: fill, stroke;
+  fill: #fff;
+  stroke: #fff;
+  border: none !important;
+  &:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #fff)) !important; }
+  &:hover:active { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important; }
 }
 }
 }
@@ -2160,23 +2181,74 @@ findbar {
 &:is([hidden]) {
   animation-name: slide-out;
 }
-@media (min-width: 610px) and (max-width: 796px) {
-.findbar-highlight, .findbar-match-diacritics,
-.findbar-entire-word, .findbar-case-sensitive {
+checkbox {
+  height: 24px;
+  width: 24px;
+.checkbox-icon {
+  display: block !important;
+  -moz-context-properties: fill, fill-opacity;
+  fill: currentColor;
+  fill-opacity: .4;      
+.findbar-highlight & {
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 4.079 10.726 C 3.887 10.539 3.822 10.265 3.907 10.013 L 4.631 7.885 L 9.065 3.552 C 9.529 3.1 10.281 3.1 10.744 3.552 L 11.416 4.207 C 11.879 4.66 11.879 5.398 11.416 5.85 L 6.983 10.183 L 4.809 10.893 C 4.734 10.917 4.658 10.929 4.582 10.929 C 4.396 10.929 4.215 10.858 4.079 10.726 Z M 8.95 4.759 L 10.182 5.964 L 10.856 5.304 C 11.01 5.153 11.01 4.907 10.856 4.757 L 10.184 4.1 C 10.03 3.949 9.778 3.949 9.625 4.1 L 8.95 4.759 Z M 4.707 10.111 L 6.555 9.509 L 9.621 6.511 L 8.389 5.307 L 5.323 8.304 L 4.707 10.111 Z M 12.615 12.095 L 11.478 12.434 C 10.917 12.603 10.315 12.633 9.739 12.52 L 8.42 12.261 C 7.818 12.144 7.185 12.227 6.638 12.494 C 6.235 12.692 5.804 12.787 5.376 12.787 C 4.645 12.787 3.926 12.508 3.384 11.98 L 3.912 11.4 L 3.944 11.432 C 4.561 12.036 5.502 12.185 6.283 11.803 C 6.988 11.46 7.803 11.352 8.575 11.503 L 9.894 11.762 C 10.341 11.85 10.809 11.826 11.247 11.696 L 12.383 11.356 L 12.615 12.095 Z'/%3E%3C/svg%3E");
+}
+.findbar-case-sensitive & {
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 7.329 11.635 L 8.515 11.635 L 5.909 4.177 L 4.485 4.177 L 1.865 11.636 L 3.003 11.636 L 3.62 9.563 L 6.716 9.563 L 7.329 11.635 Z M 3.891 8.612 L 5.173 5.022 L 6.44 8.612 L 3.891 8.612 Z M 13.537 10.405 L 13.537 7.889 C 13.537 6.742 12.993 6.043 11.519 6.043 C 10.818 6.053 10.123 6.18 9.474 6.419 L 9.676 7.116 C 10.206 6.944 10.762 6.846 11.325 6.826 C 12.173 6.826 12.409 7.137 12.409 7.931 L 12.409 8.416 L 11.663 8.416 C 9.955 8.416 8.968 8.976 8.968 10.156 C 8.923 11.127 9.844 11.912 10.918 11.815 C 11.591 11.841 12.223 11.523 12.546 10.991 C 12.758 11.494 13.296 11.822 13.893 11.815 L 14.136 11.148 C 13.759 11.07 13.503 10.753 13.537 10.405 Z M 11.159 11.095 C 10.532 11.155 10.009 10.664 10.104 10.102 C 10.104 9.35 10.672 9.052 11.797 9.052 L 12.406 9.052 L 12.406 10.238 C 12.058 10.813 11.79 11.095 11.159 11.095 Z'/%3E%3C/svg%3E");
+}
+.findbar-entire-word & {
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 6.064 10.711 L 6.064 10.055 L 6.01 10.055 C 5.855 10.311 5.646 10.514 5.382 10.663 C 5.12 10.81 4.821 10.885 4.486 10.885 C 3.901 10.885 3.44 10.721 3.106 10.392 C 2.77 10.064 2.603 9.616 2.603 9.05 C 2.603 8.509 2.798 8.068 3.187 7.726 C 3.574 7.386 4.075 7.214 4.683 7.214 C 4.958 7.214 5.211 7.237 5.445 7.282 C 5.677 7.327 5.879 7.402 6.046 7.505 L 6.046 7.234 C 6.046 6.887 5.935 6.61 5.715 6.403 C 5.494 6.196 5.19 6.094 4.811 6.094 C 4.557 6.094 4.321 6.152 4.102 6.267 C 3.88 6.383 3.691 6.551 3.537 6.77 L 2.765 6.152 C 2.992 5.803 3.279 5.539 3.627 5.359 C 3.973 5.179 4.373 5.089 4.829 5.089 C 5.568 5.089 6.136 5.279 6.531 5.66 C 6.925 6.041 7.122 6.591 7.122 7.31 L 7.122 10.711 L 6.064 10.711 Z M 4.882 8.122 C 4.498 8.122 4.205 8.202 4.003 8.364 C 3.799 8.523 3.699 8.753 3.699 9.05 C 3.699 9.307 3.788 9.516 3.968 9.676 C 4.147 9.839 4.378 9.92 4.665 9.92 C 5.048 9.92 5.373 9.774 5.643 9.484 C 5.911 9.195 6.046 8.842 6.046 8.432 C 5.879 8.33 5.687 8.249 5.472 8.2 C 5.257 8.149 5.061 8.122 4.882 8.122 Z M 8.197 10.711 L 8.197 2.964 L 9.309 2.964 L 9.253 5.133 L 9.255 5.92 L 9.309 5.92 C 9.335 5.845 9.431 5.668 9.74 5.428 C 10.049 5.188 10.384 5.032 10.923 5.032 C 11.687 5.032 12.292 5.328 12.733 5.92 C 13.176 6.513 13.397 7.195 13.397 7.967 C 13.397 8.74 13.179 9.419 12.742 10.007 C 12.307 10.591 11.699 10.885 10.923 10.885 C 10.433 10.885 10.058 10.769 9.803 10.536 C 9.544 10.306 9.381 10.125 9.309 9.995 L 9.255 9.995 L 9.255 10.711 L 8.197 10.711 Z M 10.762 6.113 C 10.283 6.113 9.912 6.303 9.65 6.682 C 9.385 7.063 9.255 7.486 9.255 7.948 C 9.255 8.425 9.385 8.85 9.65 9.224 C 9.912 9.597 10.283 9.785 10.762 9.785 C 11.239 9.785 11.611 9.597 11.883 9.224 C 12.151 8.85 12.283 8.425 12.283 7.948 C 12.283 7.473 12.151 7.047 11.883 6.673 C 11.611 6.299 11.239 6.113 10.762 6.113 Z M 3.819 12.536 C 3.819 12.26 4.043 12.036 4.319 12.036 L 11.319 12.036 C 11.595 12.036 11.819 12.26 11.819 12.536 C 11.819 12.812 11.595 13.036 11.319 13.036 L 4.319 13.036 C 4.043 13.036 3.819 12.812 3.819 12.536 Z'/%3E%3C/svg%3E");
+}
+.findbar-match-diacritics & {
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 4.832 6.098 L 4.641 6.091 C 3.888 6.077 3.291 6.213 2.852 6.521 C 2.626 6.68 2.571 6.991 2.73 7.217 C 2.889 7.443 3.2 7.498 3.426 7.339 C 3.69 7.154 4.141 7.064 4.782 7.096 C 5.602 7.137 5.966 7.502 5.973 8.24 C 5.334 8.072 4.702 8.025 4.08 8.1 C 2.766 8.259 1.974 9.113 1.974 10.263 C 1.974 11.567 2.915 12.43 4.141 12.43 C 4.706 12.43 5.315 12.237 5.973 11.86 L 5.974 11.93 L 5.979 11.998 C 6.012 12.242 6.221 12.43 6.474 12.43 L 6.542 12.425 C 6.783 12.392 6.97 12.187 6.974 11.938 L 6.974 8.263 L 6.971 8.126 C 6.917 6.914 6.139 6.162 4.832 6.097 Z M 5.973 9.306 L 5.973 10.699 L 5.808 10.812 C 5.153 11.245 4.594 11.455 4.14 11.455 C 3.448 11.455 2.973 11.019 2.973 10.288 C 2.973 9.654 3.378 9.217 4.2 9.118 C 4.71 9.056 5.232 9.098 5.771 9.246 Z M 4.201 5.215 L 4.971 5.215 L 6.271 3.895 L 5.031 3.895 Z M 13.318 10.779 L 13.318 7.815 C 13.318 6.463 12.676 5.64 10.936 5.64 C 10.107 5.653 9.287 5.802 8.521 6.083 L 8.759 6.904 C 9.386 6.702 10.041 6.587 10.707 6.562 C 11.708 6.562 11.986 6.93 11.986 7.865 L 11.986 8.437 L 11.106 8.437 C 9.088 8.437 7.924 9.096 7.924 10.486 C 7.87 11.63 8.957 12.554 10.226 12.441 C 11.021 12.472 11.766 12.096 12.149 11.47 C 12.399 12.062 13.034 12.449 13.739 12.441 L 14.026 11.655 C 13.58 11.562 13.277 11.189 13.318 10.779 Z M 10.51 11.591 C 9.769 11.663 9.152 11.085 9.263 10.422 C 9.263 9.537 9.935 9.186 11.265 9.186 L 11.982 9.186 L 11.982 10.583 C 11.571 11.26 11.255 11.591 10.51 11.591 Z'/%3E%3C/svg%3E");
+}
+}
+&:hover .checkbox-icon {
+  fill-opacity: .8;
+}
+&[checked] .checkbox-icon {
+  fill-opacity: 1;
+}
+}
+&::after {
+  content: "";
+  display: flex;
+  flex-grow: 100;
+}
+.checkbox-check, .checkbox-label,
+.findbar-find-status {
+  display: none;
+}
+@media (min-width: 721px) and (max-width: 796px) {
+.found-matches {
   display: none;
 }
 }
 }
 
-findbar::after {
-  content: "";
-  display: flex;
-  flex-grow: 100;
+.findbar-highlight, .findbar-case-sensitive,
+.findbar-entire-word, .findbar-closebutton,
+.findbar-match-diacritics {
+  position: fixed;
+  right: 18px;
+}
+
+.findbar-highlight {
+  right: 98px;
+}
+
+.findbar-case-sensitive {
+  right: 115px;
+}
+
+.findbar-entire-word {
+  right: 133px;
+}
+
+.findbar-match-diacritics {
+  right: 151px;
 }
 
 .findbar-closebutton {
-  position: fixed;
-  right: 18px;
   margin-top: 7px !important;
   background: none !important;
   pointer-events: auto;
@@ -2200,6 +2272,7 @@ findbar::after {
 
 .findbar-container {
   height: 42px !important;
+  padding-inline-start: 10px;
   margin-right: 25px;
   pointer-events: auto;
   overflow-inline: visible !important;
@@ -2215,13 +2288,14 @@ findbar::after {
 }
 
 .findbar-textbox {
-  width: 10em !important;
+  width: 18em !important;
   background: rgba(165, 165, 165, .1) !important;
   outline-style: solid !important;
   outline-color: transparent !important;
   outline-width: 5px !important;
   border-radius: 6px !important;
   padding-inline-start: 22px !important;
+  padding-inline-end: 82px !important;
   background-image: url(chrome://global/skin/icons/search-glass.svg) !important;
   background-repeat: no-repeat !important;
   background-size: 12px !important;
@@ -2233,7 +2307,7 @@ findbar::after {
 
 .findbar-textbox[focused],
 .findbar-textbox:focus {
-  outline-color: var(--outline-color) !important;
+  outline-color: var(--focus-outline-color) !important;
   outline-width: 3px !important;
   transition: all .3s cubic-bezier(1, 0, 0, 1) !important;
   box-shadow: none !important;
@@ -2250,7 +2324,7 @@ xul|search-textbox {
 }
 
 xul|search-textbox[focused] {
-  outline: 3px solid var(--outline-color) !important;
+  outline: 3px solid var(--focus-outline-color) !important;
   outline-offset: -1px;
   transition: outline 100ms ease-out;
 }
@@ -2283,7 +2357,7 @@ input[type="search"],
 xul|search-textbox[focused],
 input[type="search"]:focus-within,
 [type="text"]:focus-visible {
-  outline-color: var(--outline-color) !important;
+  outline-color: var(--focus-outline-color) !important;
   outline-width: 3px !important;
   outline-offset: -1px !important;
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
@@ -2403,6 +2477,10 @@ richlistitem[selected] {
 #downloadsListBox {
   overflow-x: hidden;
   border: 0 !important;
+}
+
+#downloadsPanel-mainView .download-state:hover {
+  background-color: var(--button-hover-bgcolor) !important;
 }
 
 toolbarbutton:-moz-window-inactive {
@@ -2685,22 +2763,15 @@ menuitem[type="radio"][disabled="true"] .menu-icon {
 }
 }
 
-span > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/skin/login.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"], [src="chrome://global/skin/icons/chevron.svg"]) {
+button {
+img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/skin/login.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"], [src="chrome://global/skin/icons/chevron.svg"]) {
   fill: light-dark(#525252, #c9c9cb) !important;
+  :active & {fill: light-dark(#2d2d2d, #ececec) !important;}
 }
-
-span:active > img:is([src="chrome://browser/skin/history.svg"], [src="chrome://browser/skin/synced-tabs.svg"], [src="chrome://browser/skin/bookmark-hollow.svg"], [src="chrome://global/skin/icons/settings.svg"], [src="chrome://global/skin/icons/highlights.svg"], [src="chrome://browser/skin/login.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"], [src="chrome://global/skin/icons/chevron.svg"]) {
-  fill: light-dark(#2d2d2d, #ececec) !important;
-}
-
-span > img:is([src="chrome://browser/content/genai/assets/brands/claude.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"], [src="chrome://browser/content/genai/assets/brands/copilot.svg"], [src="chrome://browser/content/genai/assets/brands/gemini.svg"], [src="chrome://browser/content/genai/assets/brands/huggingchat.svg"], [src="chrome://browser/content/genai/assets/brands/lechat.svg"]) {
+img:is([src="chrome://browser/content/genai/assets/brands/claude.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"], [src="chrome://browser/content/genai/assets/brands/copilot.svg"], [src="chrome://browser/content/genai/assets/brands/gemini.svg"], [src="chrome://browser/content/genai/assets/brands/huggingchat.svg"], [src="chrome://browser/content/genai/assets/brands/lechat.svg"]) {
   content: url("chrome://global/skin/icons/highlights.svg");
   fill: light-dark(#525252, #c9c9cb) !important;
-}
-
-span:active > img:is([src="chrome://browser/content/genai/assets/brands/claude.svg"], [src="chrome://browser/content/genai/assets/brands/chatgpt.svg"], [src="chrome://browser/content/genai/assets/brands/copilot.svg"], [src="chrome://browser/content/genai/assets/brands/gemini.svg"], [src="chrome://browser/content/genai/assets/brands/huggingchat.svg"], [src="chrome://browser/content/genai/assets/brands/lechat.svg"]) {
-  content: url("chrome://global/skin/icons/highlights.svg");
-  fill: light-dark(#2d2d2d, #ececec) !important;
+  :active & {fill: light-dark(#2d2d2d, #ececec) !important;}
 }
 }
 
@@ -2743,7 +2814,7 @@ span:active > img:is([src="chrome://browser/content/genai/assets/brands/claude.s
   transition: .25s !important;
   -moz-window-dragging: no-drag;
 &:hover {
-  background-color: var(--outline-color) !important;
+  background-color: var(--focus-outline-color) !important;
   width: calc(100% - 25px) !important;
   opacity: 1;
   transition: .25s !important;
@@ -2766,7 +2837,7 @@ span:active > img:is([src="chrome://browser/content/genai/assets/brands/claude.s
   transition: .25s !important;
   -moz-window-dragging: no-drag;
 &:hover {
-  background-color: var(--outline-color) !important;
+  background-color: var(--focus-outline-color) !important;
   width: calc(100% - 25px) !important;
   opacity: 1;
   transition: .25s !important;
@@ -2909,13 +2980,6 @@ tab-group > .tabbrowser-tab,
 #sidebar-main {
   min-width: 240px !important;
 }
-
-@media (min-width: 610px) and (max-width: 1036px) {
-.findbar-highlight, .findbar-match-diacritics,
-.findbar-entire-word, .findbar-case-sensitive {
-  display: none;
-}
-}
 }
 
 :has(#tabbrowser-tabs:not([expanded])) {
@@ -2959,13 +3023,6 @@ tab-group > .tabbrowser-tab,
 :has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
 #urlbar {
   left: 29vw !important;
-}
-}
-
-@media (min-width: 610px) and (max-width: 876px) {
-.findbar-highlight, .findbar-match-diacritics,
-.findbar-entire-word, .findbar-case-sensitive {
-  display: none;
 }
 }
 }
@@ -5372,6 +5429,118 @@ padding-inline-end: 46px !important;
 }
 }
 }
+}
+}
+}
+}
+
+@media -moz-pref("gwfox.ac") {
+menu,
+menuitem {
+&:where([_moz-menuactive]:not([disabled="true"])) {
+  background-color: var(--urlbarView-hover-background) !important;
+  color: #fff !important;
+}
+}
+
+toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduce-button2, #appMenu-fullscreen-button2) {
+&:hover:not([disabled=true]) {
+  background-color: var(--urlbarView-hover-background) !important;
+  color: #fff !important;
+}
+}
+
+#downloadsListBox > richlistitem, #downloadsHistory {
+&:hover:not([disabled=true]) {
+  background-color: var(--urlbarView-hover-background) !important;
+  color: #fff !important;
+}
+}
+
+.downloadProgress::-moz-progress-bar {
+  background-color: color-mix(in srgb, var(--urlbarView-hover-background) 80%, #fff) !important;
+}
+
+#downloadsListBox:not(#downloadsListBox.allDownloadsListBox) richlistitem:hover {
+.downloadProgress::-moz-progress-bar {
+  background-color: color-mix(in srgb, var(--urlbarView-hover-background) 40%, #fff) !important;
+}
+}
+
+.downloadProgress[paused]::-moz-progress-bar {
+  background-color: var(--download-progress-paused-color) !important;
+}
+
+#downloadsListBox.allDownloadsListBox:focus > richlistitem:hover {
+  background-color: transparent !important;
+}
+
+#downloadsListBox.allDownloadsListBox:focus > richlistitem[selected] {
+  background-image: none !important;
+  outline : none !important;
+  border-radius: 0 !important;
+  background-color: var(--urlbarView-hover-background) !important;
+}
+
+#downloadsListBox.allDownloadsListBox richlistitem[selected] .downloadProgress::-moz-progress-bar {
+  --download-progress-flare-color: var(--toolbarbutton-icon-fill-attention) !important;
+  background-color: color-mix(in srgb, var(--urlbarView-hover-background) 40%, #fff) !important;
+}
+
+#protections-popup-show-report-stack:hover:not([disabled=true]) {
+  color: #fff !important;
+> .protections-popup-footer-button {
+  background-color: var(--urlbarView-hover-background) !important;
+}
+}
+
+#fxa-menu-header-title {
+  color: inherit !important;
+}
+
+.urlbarView-url {
+.urlbarView-row & {
+  color: light-dark(#3e3f40, #c4c4c5) !important;
+}
+
+.urlbarView-row:is([selected], :hover) & {
+  color: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
+}
+}
+
+.urlbarView-row:is([selected], :hover) {
+  color: #fff !important;
+}
+
+.urlbarView-row[has-action]:is([type="switchtab"], [type="remotetab"], [type="clipboard"]) {
+> .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action {
+  border: none !important;
+  color: light-dark(#3e3f40, #c4c4c5) !important;
+  background-color: var(--button-bgcolor) !important;
+&.urlbarView-tabGroup {
+  color: light-dark(#3e3f40, #c4c4c5) !important;
+  background-color: var(--button-bgcolor) !important;
+}
+}
+
+> .urlbarView-row-inner:hover > .urlbarView-no-wrap > .urlbarView-action {
+  color: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
+}
+}
+
+.urlbarView-action-btn {
+  color: light-dark(#3e3f40, #c4c4c5) !important;
+  font-weight: unset !important;
+&:hover {
+  color: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
+}
+&[data-action^="tabgroup-"] {
+  color: light-dark(#3e3f40, #c4c4c5) !important;
+  background-color: var(--button-bgcolor) !important;
+&:hover {
+  opacity: 1 !important;
+  color: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
+  background-color: var(--urlbarView-hover-background) !important;
 }
 }
 }
