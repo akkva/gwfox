@@ -7,7 +7,6 @@
 </picture>
 
 ## How to install
-
 - [Download the theme as a zip file](https://github.com/akkva/gwfox/archive/refs/heads/main.zip)
 - Open your profile directory
   - go to `about:support`
@@ -27,7 +26,6 @@
 - Restart Firefox!
 
 ## Further customization
-
 - If you would like to have your Bookmark toolbar hidden at the bottom, address bar in the sidebar, macOS style window controls & compact mode, add `gwfox.plus` set to `true` in your `about:config`
   - Use system style window controls: add `gwfox.plus_sc` set to `true`
   - Bookmark toolbar hidden at the top: add `gwfox.plus_tb` set to `true`
@@ -35,12 +33,15 @@
 - Add `gwfox.atbc` to enable [Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour)
 - Add `gwfox.bms` enable blur effects using [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell)
 
+## Customizing Accent Color
+- Add `gwfox.ac` in the `about:config` page.
+- Change the `--bg0` value in `userChrome.css` and `userContent.css` to your preferred color.
+
 ## 简介
 
 - 本主题适用Firefox 145+ macOS, Linux & Windows
 
 ## 使用方法
-
 - [下载主题](https://github.com/akkva/gwfox/archive/refs/heads/main.zip) 把 `chrome` 文件夹放入火狐 `配置文件夹` 内
 - 在 `about:config` 页面中搜索以下布尔值切换为 `true`
   - `toolkit.legacyUserProfileCustomizations.stylesheets`
@@ -54,10 +55,13 @@
 - 重启火狐
 
 ## 样式调整
-
 - 书签工具栏隐藏至底部，地址栏置于侧栏，macOS样式窗口控件及简洁模式，在 `about:config` 页面添加 `gwfox.plus` 设为 `true` 启用
   - 使用系统样式窗口控件：添加 `gwfox.plus_sc` 设为 `true`
   - 书签工具栏隐藏至顶部：添加 `gwfox.plus_tb` 设为 `true`
 - 移除窗口边框：添加 `gwfox.noborder` 设为 `true`
 - 添加 `gwfox.atbc` 启用 [变色标签栏](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour)
 - 添加 `gwfox.bms` 使用 [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell) 启用模糊特效
+
+## 定制强调色
+- 在 `about:config` 页面添加 `gwfox.ac`
+- 把 `userChrome.css` 和 `userContent.css` 文件里的 `--bg0` 修改为你要的颜色
