@@ -2208,19 +2208,19 @@ checkbox {
 }
 
 .findbar-highlight {
-  right: 98px;
+  right: 93px;
 }
 
 .findbar-case-sensitive {
-  right: 115px;
+  right: 110px;
 }
 
 .findbar-entire-word {
-  right: 133px;
+  right: 128px;
 }
 
 .findbar-match-diacritics {
-  right: 151px;
+  right: 146px;
 }
 
 .findbar-closebutton {
@@ -2263,14 +2263,14 @@ checkbox {
 }
 
 .findbar-textbox {
-  width: 18em !important;
+  width: 17em !important;
   background: rgba(165, 165, 165, .1) !important;
   outline-style: solid !important;
   outline-color: transparent !important;
   outline-width: 5px !important;
   border-radius: 6px !important;
   padding-inline-start: 22px !important;
-  padding-inline-end: 82px !important;
+  padding-inline-end: 75px !important;
   background-image: url(chrome://global/skin/icons/search-glass.svg) !important;
   background-repeat: no-repeat !important;
   background-size: 12px !important;
