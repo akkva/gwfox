@@ -1820,31 +1820,6 @@ window[role="dialog"] {
   width: 22em !important;
 }
 
-@media -moz-pref("widget.macos.native-context-menus") {
-panel[type="arrow"] {
-  --panel-background: transparent !important;
-}
-
-menupopup,
-.popup-internal-box,
-#PopupAutoComplete > .autocomplete-richlistbox,
-.menupopup-arrowscrollbox {
-  background: transparent !important;
-}
-
-:root:not([chromehidden~="toolbar"]):has(#sidebar-main[hidden]) #sidebar-main,
-window[role="dialog"], .findbar-container, #statuspanel-label,
-#urlbar[breakout][breakout-extend] .urlbar-background {
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
-}
-
-:has(#urlbar[usertyping]:not([persistsearchterms])[focused]) {
-.urlbar-background {
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
-}
-}
-}
-
 /* misc */
 
 @-moz-document url("chrome://browser/content/browser.xhtml") {
@@ -3296,14 +3271,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-@media not -moz-pref("gwfox.plus_tb") {
-@media -moz-pref("widget.macos.native-context-menus") {
-#PersonalToolbar {
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
-}
-}
-}
-
 @media not -moz-pref("sidebar.verticalTabs") {
 @media -moz-pref("sidebar.revamp") {
 :has(#sidebar-main:not([hidden])) {
@@ -3381,9 +3348,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   transform-origin: top;
   transition: transform 105ms linear 500ms !important;
   z-index: 11;
-@media -moz-pref("widget.macos.native-context-menus") {
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
-}
 }
 
 #navigator-toolbox:hover > #PersonalToolbar {
