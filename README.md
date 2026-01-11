@@ -21,7 +21,7 @@
     - _Windows:_ `widget.windows.mica`<br>
   - Set these to false
     - `sidebar.animation.enabled`
-    - _macOS:_ `widget.macos.native-context-menus` (_Optional_)
+    - `widget.macos.native-context-menus` (_macOS_)
   - `widget.windows.mica.toplevel-backdrop` set to `2` (_Windows_)
 - Restart Firefox!
 
@@ -50,7 +50,7 @@
   - _Windows:_ `widget.windows.mica`<br>
 - 以下布尔值切换为 `false`
   - `sidebar.animation.enabled`
-  - _macOS:_ `widget.macos.native-context-menus` (_可选项_)
+  - `widget.macos.native-context-menus` (_macOS_)
 - `widget.windows.mica.toplevel-backdrop` 设为 `2` (_Windows_)
 - 重启火狐
 
