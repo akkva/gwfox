@@ -32,9 +32,11 @@
   --devtools-splitter-color: transparent !important;
   --button-text-color-primary: #fff !important;
   --button-primary-color: #fff !important;
+  --text-color-accent-primary-selected: #fff !important;
   --color-accent-primary: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
   --color-accent-primary-hover: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #fff)) !important;
   --color-accent-primary-active: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important;
+  --color-accent-primary-selected: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
   --in-content-button-background: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   --in-content-button-background-hover: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
   --in-content-button-background-active: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
@@ -1719,11 +1721,6 @@ menuitem[badge]::after {
   font-size: 11px !important;
   padding: 1px 8px !important;
   scale: .9;
-}
-
-menupopup > menuitem[selected] {
-  background: none !important;
-  color: inherit !important;
 }
 
 menupopup .bookmark-item {
@@ -5437,10 +5434,12 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
 
 #downloadsListBox.allDownloadsListBox:focus > richlistitem:hover {
   background-color: transparent !important;
+  color: inherit !important;
 }
 
 #downloadsListBox.allDownloadsListBox:focus > richlistitem[selected] {
   background-image: none !important;
+  color: #fff !important;
   outline : none !important;
   border-radius: 0 !important;
   background-color: var(--urlbarView-hover-background) !important;
