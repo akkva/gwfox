@@ -5635,7 +5635,7 @@ menupopup {
   -moz-context-properties: fill, fill-opacity;
   fill: currentColor;
   fill-opacity: var(--menu-arrow-opacity);
-  scale: .85;
+  scale: .75;
 }
 }
 > menuitem:is([checked="true"], [selected="true"])::before {
@@ -5689,7 +5689,6 @@ menupopup {
 #context-openlinkincurrent::before,
 #placesContext_open::before {
   content: url("chrome://global/skin/icons/defaultFavicon.svg") !important;
-  scale: .8;
 }
 
 #context-setDesktopBackground::before {
