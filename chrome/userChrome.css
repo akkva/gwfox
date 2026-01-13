@@ -5515,9 +5515,6 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
 .menu-icon[srcset^="moz-extension://"] {
   filter: grayscale(100%) contrast(200%) !important;
   scale: .75;
-@media not (-moz-platform: macos) {
-  margin-inline-start: -19px;
-}
 }
 
 #appMenu-zoom-controls::before,
@@ -5614,7 +5611,7 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
 }
 
 @media not (-moz-platform: macos) {
-menupopup {
+menupopup[needsgutter] {
 > :is(menu, menuitem) > .menu-icon:not([srcset^="moz-extension://"]) {
   display: none !important;
 .bookmark-item & {
