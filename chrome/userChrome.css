@@ -2748,6 +2748,7 @@ img:is([src="chrome://browser/content/genai/assets/brands/claude.svg"], [src="ch
   :active & {fill: light-dark(#2d2d2d, #ececec) !important;}
 }
 }
+}
 
 @media -moz-pref("sidebar.verticalTabs") {
 @media not (-moz-platform: linux) {
