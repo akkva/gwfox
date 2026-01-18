@@ -45,7 +45,6 @@
   --newtab-primary-action-background: var(--color-accent-primary) !important;
   --button-text-color-primary: #fff !important;
   --border-color: rgba(105, 105, 105, .2) !important;
-  :not(:-moz-window-inactive) {::selection {background:color-mix(in srgb, var(--bg0), transparent 75%) !important;}}
   @media (-moz-mac-tahoe-theme) {
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .34), 0 0 0 .5px rgba(0, 0, 0, .12);
   }
@@ -61,6 +60,8 @@
   --newtab-background-color: light-dark(#fff, #191919) !important;
 }
 }
+
+:not(:-moz-window-inactive) {::selection {background:color-mix(in srgb, var(--bg0), transparent 75%) !important;}}
 
 @media (prefers-color-scheme: dark) {
 :root {
