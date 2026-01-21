@@ -4466,7 +4466,7 @@ tab-split-view-wrapper & {
   border-radius: calc(var(--tab-border-radius) - 3px) !important;
   list-style-image: url("data:image/svg+xml,%3Csvg width='12' height='12' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.116 6 2 9.116l.884.884L6 6.884 9.116 10 10 9.116 6.884 6 10 2.884 9.116 2 6 5.116 2.884 2 2 2.884 5.116 6z'/%3E%3C/svg%3E") !important;
   box-shadow: unset !important;
-  background: var(--button-bgcolor) !important;
+  background: none !important;
 &:hover {
   background: var(--button-hover-bgcolor) !important;
 }
