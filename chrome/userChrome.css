@@ -5567,6 +5567,7 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
 
 #appMenu-downloads-button {list-style-image: url("chrome://browser/skin/downloads/downloads.svg")}
 #appMenu-passwords-button {list-style-image: url("chrome://browser/skin/login.svg")}
+#appMenu-unified-extensions-button {list-style-image: url("chrome://mozapps/skin/extensions/extension.svg")}
 #appMenu-extensions-themes-button {list-style-image: url("chrome://mozapps/skin/extensions/extension.svg")}
 #appMenu-empty-profiles-button {list-style-image: url("chrome://global/skin/icons/edit-outline.svg")}
 #appMenu-bookmarks-button {list-style-image: url("chrome://browser/skin/bookmark-star-on-tray.svg")}
