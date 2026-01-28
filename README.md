@@ -1,5 +1,5 @@
 ## <p align="center"> <b> GWfox 🦊 </b> </p>
-<p align="center">This theme compatible with Firefox 145+ on macOS, Linux & Windows</p>
+<p align="center">This theme compatible with Firefox 145+ on macOS & Windows</p>
 <picture>
 <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/204bffdb-d37f-4a3e-98f6-c21e84b3b46d">
 <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/0a83cfb1-23ac-4458-8113-536b240d549b">
@@ -17,8 +17,7 @@
   - Set these to true
     - `toolkit.legacyUserProfileCustomizations.stylesheets`
     - `svg.context-properties.content.enabled`
-    - _Linux:_ `widget.gtk.rounded-bottom-corners.enabled`
-    - _Windows:_ `widget.windows.mica`<br>
+    - _Windows:_ `widget.windows.mica`
   - Set these to false
     - `sidebar.animation.enabled`
     - `widget.macos.native-context-menus` (_macOS_)
@@ -32,38 +31,7 @@
 - Remove window border: add `gwfox.noborder` set to `true`
 - Enable menu icons: add `gwfox.icons` set to `true`
 - Add `gwfox.atbc` to enable [Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour)
-- Add `gwfox.bms` enable blur effects using [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell)
 
 ## Customizing Accent Color
 - Add `gwfox.ac` in the `about:config` page.
 - Change the `--bg0` value in `userChrome.css` and `userContent.css` to your preferred color.
-
-## 简介
-
-- 本主题适用Firefox 145+ macOS, Linux & Windows
-
-## 使用方法
-- [下载主题](https://github.com/akkva/gwfox/archive/refs/heads/main.zip) 把 `chrome` 文件夹放入火狐 `配置文件夹` 内
-- 在 `about:config` 页面中搜索以下布尔值切换为 `true`
-  - `toolkit.legacyUserProfileCustomizations.stylesheets`
-  - `svg.context-properties.content.enabled`
-  - _Linux:_ `widget.gtk.rounded-bottom-corners.enabled`
-  - _Windows:_ `widget.windows.mica`<br>
-- 以下布尔值切换为 `false`
-  - `sidebar.animation.enabled`
-  - `widget.macos.native-context-menus` (_macOS_)
-- `widget.windows.mica.toplevel-backdrop` 设为 `2` (_Windows_)
-- 重启火狐
-
-## 样式调整
-- 书签工具栏隐藏至底部，地址栏置于侧栏，macOS样式窗口控件及简洁模式，在 `about:config` 页面添加 `gwfox.plus` 设为 `true` 启用
-  - 使用系统样式窗口控件：添加 `gwfox.plus_sc` 设为 `true`
-  - 书签工具栏隐藏至顶部：添加 `gwfox.plus_tb` 设为 `true`
-- 移除窗口边框：添加 `gwfox.noborder` 设为 `true`
-- 启用菜单图标：添加 `gwfox.icons` 设为 `true`
-- 添加 `gwfox.atbc` 启用 [变色标签栏](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour)
-- 添加 `gwfox.bms` 使用 [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell) 启用模糊特效
-
-## 定制强调色
-- 在 `about:config` 页面添加 `gwfox.ac`
-- 把 `userChrome.css` 和 `userContent.css` 文件里的 `--bg0` 修改为你要的颜色
