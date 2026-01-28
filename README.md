@@ -1,37 +1,32 @@
 ## <p align="center"> <b> GWfox 🦊 </b> </p>
-<p align="center">This theme compatible with Firefox 145+ on macOS & Windows</p>
+<p align="center">This theme is compatible with <b> Firefox </b> 145+ on macOS and Windows</p>
 <picture>
 <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/204bffdb-d37f-4a3e-98f6-c21e84b3b46d">
 <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/0a83cfb1-23ac-4458-8113-536b240d549b">
 <img width="1315" alt="01">
 </picture>
 
-## How to install
-- [Download the theme as a zip file](https://github.com/akkva/gwfox/archive/refs/heads/main.zip)
-- Open your profile directory
-  - go to `about:support`
-  - click the **Open Folder** button next to your **Profile directory**
-- Place the `chrome` folder from the download zip in your profile folder
-- Change configurations
-  - In the URL Bar, go to `about:config`
-  - Set these to true
-    - `toolkit.legacyUserProfileCustomizations.stylesheets`
-    - `svg.context-properties.content.enabled`
-    - _Windows:_ `widget.windows.mica`
-  - Set these to false
-    - `sidebar.animation.enabled`
-    - `widget.macos.native-context-menus` (_macOS_)
-  - `widget.windows.mica.toplevel-backdrop` set to `2` (_Windows_)
-- Restart Firefox!
+## Installation
+1. **[Download the theme](https://github.com/akkva/gwfox/archive/refs/heads/main.zip)** and move the `chrome` folder into your Firefox **profile directory**.
+2. Navigate to `about:config`, search for the following preferences, and set them to **`true`**:
+    * `toolkit.legacyUserProfileCustomizations.stylesheets`
+    * `svg.context-properties.content.enabled`
+    * `widget.windows.mica` (*Windows; requires **System theme — auto** to work*)
+3. Set the following preferences to **`false`**:
+    * `sidebar.animation.enabled`
+    * `widget.macos.native-context-menus` (*macOS*)
+4. Set `widget.windows.mica.toplevel-backdrop` to **`2`** (*Windows*).
+5. **Restart Firefox.**
 
-## Further customization
-- If you would like to have your Bookmark toolbar hidden at the bottom, address bar in the sidebar, macOS style window controls & compact mode, add `gwfox.plus` set to `true` in your `about:config`
-  - Use system style window controls: add `gwfox.plus_sc` set to `true`
-  - Bookmark toolbar hidden at the top: add `gwfox.plus_tb` set to `true`
-- Remove window border: add `gwfox.noborder` set to `true`
-- Enable menu icons: add `gwfox.icons` set to `true`
-- Add `gwfox.atbc` to enable [Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour)
+## Customization
+To enable additional features, add these **Boolean** preferences in `about:config` and set them to **`true`**:
+
+* **`gwfox.plus`**: Enables a bundled layout featuring macOS-style window controls, compact mode, a sidebar-integrated address bar, and an **auto-hide Bookmarks Toolbar at the bottom** (shows on hover).
+    * **`gwfox.plus_sc`**: Use native window controls.
+    * **`gwfox.plus_tb`**: Auto-hide Bookmarks Toolbar at the **top** instead.
+* **`gwfox.noborder`**: Remove window borders.
+* **`gwfox.icons`**: Enable menu icons.
 
 ## Customizing Accent Color
-- Add `gwfox.ac` in the `about:config` page.
-- Change the `--bg0` value in `userChrome.css` and `userContent.css` to your preferred color.
+1. In `about:config`, add a new **Boolean** preference named **`gwfox.ac`**.
+2. Locate the `--bg0` variable in `userChrome.css` and `userContent.css`, and change its value to your preferred color.
