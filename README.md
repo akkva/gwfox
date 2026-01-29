@@ -8,14 +8,16 @@
 
 ## Installation
 1. **[Download the theme](https://github.com/akkva/gwfox/archive/refs/heads/main.zip)** and move the `chrome` folder into your Firefox **profile directory**.
-2. Navigate to `about:config`, search for the following preferences, and set them to **`true`**:
-    * `toolkit.legacyUserProfileCustomizations.stylesheets`
-    * `svg.context-properties.content.enabled`
-    * `widget.windows.mica` (*Windows; requires **System theme — auto** to work*)
-3. Set the following preferences to **`false`**:
-    * `sidebar.animation.enabled`
-    * `widget.macos.native-context-menus` (*macOS*)
-4. Set `widget.windows.mica.toplevel-backdrop` to **`2`** (*Windows*).
+2. Navigate to `about:config` and configure the following preferences:
+    * **Set to `true`**:
+        * `toolkit.legacyUserProfileCustomizations.stylesheets`
+        * `svg.context-properties.content.enabled`
+        * `widget.windows.mica` (*Windows; requires **System theme — auto** to work*)
+    * **Set to `false`**:
+        * `sidebar.animation.enabled`
+        * `widget.macos.native-context-menus` (*macOS*)
+    * **Set to `2`**:
+        * `widget.windows.mica.toplevel-backdrop` (*Windows*)
 5. **Restart Firefox.**
 
 ## Customization
