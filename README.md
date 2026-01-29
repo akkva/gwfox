@@ -20,7 +20,6 @@
 
 ## Customization
 To enable additional features, add these **Boolean** preferences in `about:config` and set them to **`true`**:
-
 * **`gwfox.plus`**: Enables a bundled layout featuring macOS-style window controls, compact mode, a sidebar-integrated address bar, and an **auto-hide Bookmarks Toolbar at the bottom** (shows on hover).
     * **`gwfox.plus_sc`**: Use native window controls.
     * **`gwfox.plus_tb`**: Auto-hide Bookmarks Toolbar at the **top** instead.
