@@ -30,5 +30,5 @@ To enable additional features, add these **Boolean** preferences in `about:confi
 * **`gwfox.icons`**: Enable menu icons.
 
 ## Customizing Accent Color
-1. In `about:config`, add a new **Boolean** preference named **`gwfox.ac`**.
+1. In `about:config`, add a new **Boolean** preference named **`gwfox.ac`** and set it to **`true`**.
 2. Locate the `--bg0` variable in `userChrome.css` and `userContent.css`, and change its value to your preferred color.
