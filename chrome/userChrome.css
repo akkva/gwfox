@@ -112,6 +112,14 @@
   background: transparent !important;
   box-shadow: none !important;
   outline: none !important;
+.deck-selected.split-view-panel & {
+  outline: var(--focus-outline) !important;
+  outline-offset: -8px !important;
+  border-radius: 15px !important;
+@media (-moz-mac-tahoe-theme) {
+  border-radius: 19px !important;
+}
+}
 :root:not([inDOMFullscreen]) #tabbrowser-tabbox[sidebar-shown] & {
 @media not -moz-pref("gwfox.noborder") {
   margin-inline-start: -8px !important;
@@ -371,11 +379,9 @@ split-view-footer {
 #TabsToolbar {
   grid-area: 2 / 2 / auto / auto;
   padding-inline-end: 77px !important;
+  margin-top: 4.5px !important;
   margin-bottom: 4.5px !important;
   margin-left: -2px !important;
-@media (-moz-platform: linux) {
-  margin-top: 4.5px !important;
-}
 @media not (-moz-platform: macos) {
 @media (not -moz-pref("gwfox.plus")) or -moz-pref("gwfox.plus_sc") {
   padding-inline-end: 212px !important;
@@ -1268,7 +1274,7 @@ tab-group > .tabbrowser-tab {
 }
 
 #tabbrowser-tabs[movingtab] {
-  margin-bottom: -16px !important;
+  margin-bottom: -15px !important;
 }
 
 .tabbrowser-tab:not([selected]) .tab-close-button {
@@ -1347,6 +1353,7 @@ toolbarseparator:not(.tab-group-edit-mode-only) {
 }
 
 .tab-group-editor-swatch {
+  border-radius: 50px !important;
 input:checked + & {
   border-color: light-dark(rgba(0, 0, 0, .4), rgba(255, 255, 255, .2)) !important;
 }
@@ -1414,6 +1421,13 @@ tab-group[previewpanelactive] & {
   min-width: 138px !important;
 tab-split-view-wrapper & {
   min-width: unset !important;
+}
+}
+
+tab-split-view-wrapper {
+.tabbrowser-tab {
+  max-height: 30px !important;
+  min-height: 30px !important;
 }
 }
 
