@@ -1341,6 +1341,16 @@ tab-group > .tabbrowser-tab {
   --panel-padding: 0 !important;
 }
 
+.tab-preview-thumbnail-container {
+  width: 100% !important;
+  margin: 0 !important;
+  border-top: 1px solid var(--bg3) !important;
+> canvas {
+  border: none !important;
+  border-radius: 0 !important;
+}
+}
+
 .tab-group-editor-panel {
 toolbarseparator:not(.tab-group-edit-mode-only) {
   display: none;
@@ -5303,6 +5313,16 @@ padding-inline-end: 46px !important;
 }
 .split-view-panel[column="0"] {
   margin-inline-end: 8px !important;
+}
+.deck-selected.split-view-panel {
+  outline: var(--focus-outline) !important;
+:has([sidebar-shown]) & {
+@media not -moz-pref("sidebar.verticalTabs") {
+&[column="0"] {
+  border-start-start-radius: 12px !important;
+}
+}
+}
 }
 }
 }
