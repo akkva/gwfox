@@ -618,6 +618,11 @@ split-view-footer {
   font-size: 12.5px !important;
 }
 
+.urlbar-input::selection,
+.searchbar-textbox::selection {
+  color: inherit !important;
+}
+
 .urlbar-input {
   text-align: center !important;
   margin-bottom: 1px !important;
@@ -1213,10 +1218,15 @@ split-view-footer {
   background: var(--button-active-bgcolor) !important;
 }
 
+#appMenu-quit-button2, #appMenu-help-button2 + toolbarseparator {
+  display: none !important;
+}
+
 /* tabs */
 
 .tab-background {
   border: none !important;
+  outline: none !important;
   box-shadow: none !important;
   border-radius: var(--br1) !important;
 #tabbrowser-tabs[movingtab-group] & {
