@@ -3418,11 +3418,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-.titlebar-buttonbox {
-&::before {content: ""}
-&::after {content: ""}
-}
-
 &:not([customizing]) .titlebar-spacer[type="pre-tabs"] {
   display: flex !important;
   width: 0 !important;
@@ -3485,7 +3480,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 :has(#urlbar[breakout][breakout-extend], [usertyping][focused]) {
-.titlebar-buttonbox::after {
+.titlebar-spacer:not(#vertical-spacer)::before {
   position: fixed;
   top: 47px;
   left: 10px;
@@ -3494,13 +3489,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   border-radius: var(--br2);
   background: var(--button-active-bgcolor);
   pointer-events: none;
-@media not (-moz-platform: macos) {
-  background: light-dark(rgba(120, 120, 120, .1), rgba(155, 155, 155, .2));
-}
 }
 
 :has(#urlbar[persistsearchterms]):not(:has(#urlbar[breakout][breakout-extend])) {
-.titlebar-buttonbox::after {
+.titlebar-spacer:not(#vertical-spacer)::before {
   background: none;
 }
 }
@@ -4005,7 +3997,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 :has(#urlbar[breakout][breakout-extend], [usertyping][focused]) {
-.titlebar-buttonbox::after {
+.titlebar-spacer:not(#vertical-spacer)::before {
   width: 62px;
 }
 }
@@ -4693,10 +4685,6 @@ tab-split-view-wrapper & {
 }
 
 :has(#urlbar[open]) {
-.titlebar-buttonbox::after {
-  content: none;
-}
-
 #sidebar-button, #reload-button, #stop-button, #back-button,
 #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button,
 #unified-extensions-button, #downloads-button, #sidebar-main,
@@ -4903,8 +4891,10 @@ tab-split-view-wrapper & {
   display: flex !important;
 }
 
+@media not -moz-pref("gwfox.atbc") {
 .browser-toolbox-background {
   background: transparent !important;
+}
 }
 
 @media (not -moz-pref("gwfox.plus_sc")) and (not -moz-pref("sidebar.visibility", "hide-sidebar")) {
@@ -4913,38 +4903,8 @@ tab-split-view-wrapper & {
   left: 5px;
   top: 2px;
 }
-}
-
-:has(#urlbar[breakout][breakout-extend], [usertyping]) {
-#back-button::before {
-  content: "";
-  position: fixed;
-  top: 47px;
-  left: 10px;
-  width: 220px;
-  height: 32px;
-  border-radius: var(--br2);
-  background: var(--button-active-bgcolor);
-@media (-moz-platform: windows) {
-  background: light-dark(rgba(120, 120, 120, .1), rgba(155, 155, 155, .2));
-}
-}
-
-:has(#urlbar[persistsearchterms]) {
-#back-button::before {
-  background: none;
-}
-}
-}
 
 :has(#tabbrowser-tabs:not([expanded])) {
-:has(#urlbar[breakout][breakout-extend], [usertyping]) {
-#back-button::before {
-  width: 62px;
-}
-}
-
-@media (not -moz-pref("gwfox.plus_sc")) and (not -moz-pref("sidebar.visibility", "hide-sidebar")) {
 #sidebar-button {
   left: 20px;
 }
