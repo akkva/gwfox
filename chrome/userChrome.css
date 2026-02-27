@@ -80,6 +80,7 @@
   }
   @media (-moz-mac-tahoe-theme) {
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .34), 0 0 0 .5px rgba(0, 0, 0, .12);
+  --bg4: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55));
   }
   @media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
@@ -721,6 +722,9 @@ split-view-footer {
   background-color: var(--bg4) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--bs1) !important;
+@media (-moz-mac-tahoe-theme) {
+  backdrop-filter: blur(15px) !important;
+}
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: 12px !important;
 }
@@ -752,6 +756,9 @@ split-view-footer {
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--bs1) !important;
   height: 50px !important;
+@media (-moz-mac-tahoe-theme) {
+  backdrop-filter: blur(15px) !important;
+}
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: 12px !important;
 }
@@ -1629,9 +1636,6 @@ menupopup, panel[type="arrow"] {
 @media (-moz-platform: macos) {
   --panel-shadow-margin: 0 !important;
 }
-@media (-moz-mac-tahoe-theme) {
-  --panel-background: none !important;
-}
 }
 
 panel[type="arrow"] {
@@ -1796,6 +1800,9 @@ toolbarseparator[orient="vertical"] {
   animation-duration: 250ms;
 #window-modal-dialog > .dialogOverlay > &:not(.spotlightBox) {
   margin-top: 80px !important;
+}
+@media (-moz-mac-tahoe-theme) {
+  backdrop-filter: blur(15px) !important;
 }
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: 12px !important;
@@ -2069,6 +2076,9 @@ richlistbox {
   box-shadow: var(--bs1) !important;
 @media (-moz-platform: windows) {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
+}
+@media (-moz-mac-tahoe-theme) {
+  backdrop-filter: blur(15px) !important;
 }
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
@@ -2955,6 +2965,9 @@ tab-group > .tabbrowser-tab,
   min-height: 50px !important;
   border-radius: var(--br2) !important;
   backdrop-filter: blur(30px) !important;
+@media (-moz-mac-tahoe-theme) {
+  backdrop-filter: blur(15px) !important;
+}
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: 12px !important;
 }
@@ -2971,6 +2984,9 @@ tab-group > .tabbrowser-tab,
   backdrop-filter: blur(30px) !important;
   border-radius: var(--br2) !important;
   min-height: 50px !important;
+@media (-moz-mac-tahoe-theme) {
+  backdrop-filter: blur(15px) !important;
+}
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: 12px !important;
 }
@@ -3263,6 +3279,7 @@ tab-split-view-wrapper {
 @media (-moz-mac-tahoe-theme) {
   border-bottom-left-radius: 11px !important;
   border-bottom-right-radius: 11px !important;
+  backdrop-filter: blur(15px) !important;
 }
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
@@ -3369,6 +3386,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media (-moz-mac-tahoe-theme) {
   border-top-left-radius: 11px !important;
   border-top-right-radius: 11px !important;
+  backdrop-filter: blur(15px) !important;
 }
 }
 @media (-moz-platform: linux) {
@@ -4598,6 +4616,7 @@ tab-split-view-wrapper & {
   transition-delay: .25s;
 @media (-moz-mac-tahoe-theme) {
   border-radius: 12px !important;
+  backdrop-filter: blur(15px) !important;
 }
 @media (-moz-platform: windows) {
   top: 9px;
