@@ -1625,7 +1625,11 @@ menupopup, panel[type="arrow"] {
 }
 @media not (-moz-platform: linux) {
   appearance: menupopup !important;
-  --panel-shadow: none !important;
+}
+@media (-moz-platform: macos) {
+  --panel-shadow-margin: 0 !important;
+}
+@media (-moz-mac-tahoe-theme) {
   --panel-background: none !important;
 }
 }
@@ -1634,8 +1638,10 @@ panel[type="arrow"] {
   --panel-background: light-dark(rgba(255, 255, 255, .55), rgba(15, 15, 12, .55)) !important;
   --arrowpanel-background: transparent !important;
   --arrowpanel-border-radius: 0 !important;
-@media not (-moz-platform: linux) {
-  --panel-shadow: none !important;
+@media (-moz-platform: macos) {
+  --panel-shadow-margin: 0 !important;
+}
+@media (-moz-mac-tahoe-theme) {
   --panel-background: none !important;
 }
 }
