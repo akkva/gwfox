@@ -1625,6 +1625,8 @@ menupopup, panel[type="arrow"] {
 }
 @media not (-moz-platform: linux) {
   appearance: menupopup !important;
+  --panel-shadow: none !important;
+  --panel-background: none !important;
 }
 }
 
