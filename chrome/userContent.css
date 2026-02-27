@@ -799,21 +799,21 @@ body {
 
 @media (prefers-color-scheme: dark) {
 @media not (-moz-platform: linux) {
-.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu {
+.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu, .weatherButtonContextMenuWrapper > panel-list {
   box-shadow: var(--bs2) !important;
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1.5px !important;
 }
 
 @media (-moz-platform: windows) {
-.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu {
+.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu, .weatherButtonContextMenuWrapper > panel-list {
   outline: none !important;
 }
 }
 }
 
 @media (-moz-platform: linux) {
-.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu {
+.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu, .weatherButtonContextMenuWrapper > panel-list {
   border: 1px solid rgba(255, 255, 255, .06) !important;
 }
 }
