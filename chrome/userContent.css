@@ -644,7 +644,7 @@ body {
   background: none !important;
 }
 
-.modal, .confirmation-dialog {
+.modalOverlayOuter, .confirmation-dialog {
   border-radius: 6px !important;
   border: none !important;
   animation-name: panel-grow;
@@ -660,6 +660,13 @@ body {
 }
 }
 
+.modal {
+  border-radius: 6px !important;
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 12px !important;
+}
+}
+
 .modal, .tile, .context-menu-button.icon, .search-inner-wrapper {
   backdrop-filter: blur(30px) !important;
 @media (-moz-mac-tahoe-theme) {
@@ -672,7 +679,7 @@ body {
 }
 }
 
-.modal, .contentSearchSuggestionTable, .confirmation-dialog {
+.modal, .contentSearchSuggestionTable {
   box-shadow: var(--bs1) !important;
 }
 
