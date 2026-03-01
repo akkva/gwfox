@@ -48,6 +48,7 @@
   --newtab-background-color: var(--toolbox-bgcolor) !important;
   @media (-moz-mac-tahoe-theme) {
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .34), 0 0 0 .5px rgba(0, 0, 0, .12);
+  --bg4: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55));
   }
   @media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
@@ -639,13 +640,17 @@ body {
 }
 
 .confirmation-dialog::backdrop,
+.modalOverlayOuter::backdrop,
 .modal-overlay, .modalOverlayOuter {
   background: none !important;
 }
 
-.modal {
-  background-color: var(--bg4) !important;
+.modalOverlayOuter, .confirmation-dialog {
   border-radius: 6px !important;
+  border: none !important;
+  animation-name: panel-grow;
+  animation-duration: 250ms;
+  background-color: var(--bg4) !important;
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: 12px !important;
 }
@@ -656,11 +661,8 @@ body {
 }
 }
 
-.modalOverlayOuter, .confirmation-dialog {
+.modal {
   border-radius: 6px !important;
-  border: none !important;
-  animation-name: panel-grow;
-  animation-duration: 250ms;
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: 12px !important;
 }
@@ -668,6 +670,9 @@ body {
 
 .modal, .tile, .context-menu-button.icon, .search-inner-wrapper {
   backdrop-filter: blur(30px) !important;
+@media (-moz-mac-tahoe-theme) {
+  backdrop-filter: blur(15px) !important;
+}
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   backdrop-filter: blur(0px) !important;
@@ -687,6 +692,9 @@ body {
   height: calc(100% - 16px) !important;
   padding-left: 12px !important;
   padding-right: 12px !important;
+@media (-moz-mac-tahoe-theme) {
+  backdrop-filter: blur(15px) !important;
+}
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
@@ -707,6 +715,9 @@ body {
 .context-menu, .contentSearchSuggestionTable, .location-input-wrapper, .weatherInfoLink, .weatherNotAvailable, .personalize-button {
   backdrop-filter: blur(30px) !important;
   background-color: var(--bg4) !important;
+@media (-moz-mac-tahoe-theme) {
+  backdrop-filter: blur(15px) !important;
+}
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
@@ -759,6 +770,34 @@ body {
 &::after {
   content: none !important;
 }
+> panel-list {
+  --panel-item-border-radius: 4px;
+  --panel-item-background-color: color-mix(in srgb, var(--bg0) 80%, transparent);
+  --panel-item-color: #fff;
+  border: none !important;
+  border-radius: 6px !important;
+  box-shadow: var(--bs1) !important;
+  padding: 6px !important;
+  background-color: var(--bg4) !important;
+  backdrop-filter: blur(30px) !important;
+@media (-moz-mac-tahoe-theme) {
+  backdrop-filter: blur(15px) !important;
+}
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  --panel-item-border-radius: 8px;
+  border-radius: 12px !important;
+}
+}
+}
+
+*+button {
+  border-radius: var(--panel-item-border-radius) !important;
+@media -moz-pref("gwfox.ac") {
+&:hover {
+  background-color: var(--panel-item-background-color) !important;
+  color: var(--panel-item-color) !important;
+}
+}
 }
 
 .location-input-wrapper input {
@@ -768,21 +807,21 @@ body {
 
 @media (prefers-color-scheme: dark) {
 @media not (-moz-platform: linux) {
-.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu {
+.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu, .weatherButtonContextMenuWrapper > panel-list {
   box-shadow: var(--bs2) !important;
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1.5px !important;
 }
 
 @media (-moz-platform: windows) {
-.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu {
+.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu, .weatherButtonContextMenuWrapper > panel-list {
   outline: none !important;
 }
 }
 }
 
 @media (-moz-platform: linux) {
-.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu {
+.modal, .contentSearchSuggestionTable, .customize-menu, .context-menu, .weatherButtonContextMenuWrapper > panel-list {
   border: 1px solid rgba(255, 255, 255, .06) !important;
 }
 }
