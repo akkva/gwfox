@@ -33,3 +33,6 @@ To enable additional features, add these **Boolean** preferences in `about:confi
 1. In `about:config`, add a new **Boolean** preference named **`gwfox.ac`** and set it to **`true`**.
 2. Locate the `--bg0` variable in `userChrome.css` and `userContent.css`, and change its value to your preferred color.
 
+<img width="1234" height="787" alt="02" src="https://github.com/user-attachments/assets/2317a828-14dc-4818-8b49-534d54e3493b" />
+<img width="1234" height="787" alt="01" src="https://github.com/user-attachments/assets/e5bef8df-ec36-4867-b528-f2ae8b92574a" />
+
