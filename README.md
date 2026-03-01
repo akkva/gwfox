@@ -32,3 +32,7 @@ To enable additional features, add these **Boolean** preferences in `about:confi
 ## Customizing Accent Color
 1. In `about:config`, add a new **Boolean** preference named **`gwfox.ac`** and set it to **`true`**.
 2. Locate the `--bg0` variable in `userChrome.css` and `userContent.css`, and change its value to your preferred color.
+
+<img width="1234" height="787" alt="02" src="https://github.com/user-attachments/assets/6013ac87-2756-4128-8405-126795d119b0" />
+<img width="1234" height="787" alt="01" src="https://github.com/user-attachments/assets/0c6044ef-b145-4213-935f-4bd30fa18c35" />
+
