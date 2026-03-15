@@ -20,6 +20,9 @@
   --bg6: light-dark(rgba(255, 255, 255, .6), rgba(15, 15, 15, .6));
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15);
   --bs2: 0 5px 15px rgba(0, 0, 0, .25), inset 0 0 0 .5px rgba(0, 0, 0, .78), 0 0 0 .5px rgba(0, 0, 0, .2);
+  --bf1: blur(0);
+  --bf2: blur(15px);
+  --bf3: blur(30px);
   --in-content-box-border-color: light-dark(rgba(0, 0, 0, .2), rgba(225, 225, 225, .2)) !important;
   --border-color-interactive: var(--in-content-box-border-color) !important;
   --newtab-background-color-secondary: transparent !important;
@@ -123,7 +126,7 @@ body { background-color: #191919 !important; } }
   --toggle-dot-background-color-on-pressed: #fff !important;
 }
 
-@-moz-document url-prefix(about:), regexp("chrome://(?!browser\.xhtml).*") {
+@-moz-document url-prefix(about:), regexp("chrome:\/\/.*") {
 input[type="search"] {
   background-color: light-dark(rgba(85, 85, 85, .1), rgba(190, 190, 190, .1)) !important;
   border-color: transparent !important;
@@ -290,14 +293,14 @@ body {
   background-color: rgba(15, 15, 15, .7) !important;
   border-radius: 12px !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, .1) !important;
-  backdrop-filter: blur(30px) !important;
+  backdrop-filter: var(--bf3) !important;
   outline: none !important;
   border: none !important;
   fill: rgba(255, 255, 255, .7) !important;
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: #36363a !important;
-  backdrop-filter: blur(0px) !important;
+  backdrop-filter: var(--bf1) !important;
 }
 }
 }
@@ -669,13 +672,13 @@ body {
 }
 
 .modal, .tile, .context-menu-button.icon, .search-inner-wrapper {
-  backdrop-filter: blur(30px) !important;
+  backdrop-filter: var(--bf3) !important;
 @media (-moz-mac-tahoe-theme) {
-  backdrop-filter: blur(15px) !important;
+  backdrop-filter: var(--bf2) !important;
 }
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
-  backdrop-filter: blur(0px) !important;
+  backdrop-filter: var(--bf1) !important;
 }
 }
 }
@@ -686,19 +689,19 @@ body {
 
 .customize-menu {
   background-color: var(--bg4) !important;
-  backdrop-filter: blur(30px) !important;
+  backdrop-filter: var(--bf3) !important;
   box-shadow: var(--bs1) !important;
   margin: 16px 0 0 0 !important;
   height: calc(100% - 16px) !important;
   padding-left: 12px !important;
   padding-right: 12px !important;
 @media (-moz-mac-tahoe-theme) {
-  backdrop-filter: blur(15px) !important;
+  backdrop-filter: var(--bf2) !important;
 }
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
-  backdrop-filter: blur(0px) !important;
+  backdrop-filter: var(--bf1) !important;
 }
 }
 }
@@ -713,15 +716,15 @@ body {
 }
 
 .context-menu, .contentSearchSuggestionTable, .location-input-wrapper, .weatherInfoLink, .weatherNotAvailable, .personalize-button {
-  backdrop-filter: blur(30px) !important;
+  backdrop-filter: var(--bf3) !important;
   background-color: var(--bg4) !important;
 @media (-moz-mac-tahoe-theme) {
-  backdrop-filter: blur(15px) !important;
+  backdrop-filter: var(--bf2) !important;
 }
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
-  backdrop-filter: blur(0px) !important;
+  backdrop-filter: var(--bf1) !important;
 }
 }
 }
@@ -779,9 +782,9 @@ body {
   box-shadow: var(--bs1) !important;
   padding: 6px !important;
   background-color: var(--bg4) !important;
-  backdrop-filter: blur(30px) !important;
+  backdrop-filter: var(--bf3) !important;
 @media (-moz-mac-tahoe-theme) {
-  backdrop-filter: blur(15px) !important;
+  backdrop-filter: var(--bf2) !important;
 }
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   --panel-item-border-radius: 8px;
