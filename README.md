@@ -1,5 +1,5 @@
 ## <p align="center"> <b> GWfox 🦊 </b> </p>
-<p align="center">This theme is compatible with <b> Firefox 145+ </b> on macOS and Windows</p>
+<p align="center">This theme is compatible with <b> Firefox 149+ </b> on macOS and Windows</p>
 <picture>
 <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/e5bef8df-ec36-4867-b528-f2ae8b92574a">
 <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/2317a828-14dc-4818-8b49-534d54e3493b">
@@ -22,9 +22,8 @@
 
 ## Customization
 To enable additional features, add these **Boolean** preferences in `about:config` and set them to **`true`**:
-* **`gwfox.plus`**: Enables a bundled layout featuring macOS-style window controls, compact mode, a sidebar-integrated address bar, and an **auto-hide Bookmarks Toolbar at the bottom** (shows on hover).
+* **`gwfox.plus`**: Enables a bundled layout featuring macOS-style window controls, compact mode, a sidebar-integrated address bar, and an auto-hiding Bookmarks Toolbar.
     * **`gwfox.plus_sc`**: Use native window controls.
-    * **`gwfox.plus_tb`**: Auto-hide Bookmarks Toolbar at the **top** instead.
 * **`gwfox.atbc`**: Enable compatibility with the **Adaptive Tab Bar Colour** extension.
 * **`gwfox.noborder`**: Remove window borders.
 * **`gwfox.icons`**: Enable menu icons.
