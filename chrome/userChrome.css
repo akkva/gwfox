@@ -2046,9 +2046,6 @@ richlistbox {
   background-color: var(--bg4) !important;
   backdrop-filter: var(--bf3) !important;
   box-shadow: var(--bs1) !important;
-@media (-moz-platform: windows) {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15) !important;
-}
 @media (-moz-mac-tahoe-theme) {
   backdrop-filter: var(--bf2) !important;
 }
@@ -2079,9 +2076,6 @@ richlistbox {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1.5px !important;
   box-shadow: var(--bs2) !important;
-@media (-moz-platform: windows) {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .5) !important;
-}
 }
 }
 
@@ -2151,10 +2145,10 @@ richlistbox {
 
 findbar {
   position: absolute !important;
-  top: 3px;
+  top: 4px;
   right: -16px;
   width: 100% !important;
-  height: 90px !important;
+  height: 96px !important;
   border: none !important;
   background: none !important;
   flex-direction: row-reverse;
@@ -2233,7 +2227,7 @@ checkbox {
 }
 
 .findbar-closebutton {
-  margin-top: 7px !important;
+  margin-top: 13px !important;
   background: none !important;
   pointer-events: auto;
   z-index: 1;
@@ -2257,7 +2251,8 @@ checkbox {
 .findbar-container {
   height: 42px !important;
   padding-inline-start: 10px;
-  margin-right: 25px;
+  margin-top: 6px;
+  margin-right: 32px;
   pointer-events: auto;
   overflow-inline: visible !important;
   flex-direction: row-reverse;
@@ -4808,6 +4803,13 @@ padding-inline-end: 46px !important;
 }
 }
 }
+}
+}
+:has(#sidebar-box:not([hidden])) {
+:has(#navigator-toolbox:hover) {
+#tabbrowser-tabpanels {
+  margin-top: 0;
+}  
 }
 }
 }
