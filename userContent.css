@@ -1,25 +1,20 @@
-/* ##############################
-  ╔═══╗ ╔╗╔╗╔╗ ╔══╗ ╔══╗ ╔══╗╔══╗
-  ║╔══╝ ║║║║║║ ║╔═╝ ║╔╗║ ╚═╗║║╔═╝
-  ║║╔═╗ ║║║║║║ ║╚═╗ ║║║║   ║╚╝║
-  ║║╚╗║ ║║║║║║ ║╔═╝ ║║║║   ║╔╗║
-  ║╚═╝║ ║╚╝╚╝║ ║║   ║╚╝║ ╔═╝║║╚═╗
-  ╚═══╝ ╚═╝╚═╝ ╚╝   ╚══╝ ╚══╝╚══╝
-  
-  https://github.com/akkva/gwfox
-  
-  ############################## */
+/* * * * * * * * * * * * * * * *
+ * ░█▀▀▀░█░░░█░█▀▀▀░█▀▀█░█░░█░ *
+ * ░█░▝█░█▄█▄█░█▀▀▀░█░ █░▄▀▀▄░ *
+ * ░▀▀▀▀░▀░░░▀░▀░░░░▀▀▀▀░▀░░▀░ *
+ *   github.com/akkva/gwfox    *
+ * * * * * * * * * * * * * * * */
 
 :root {
   --bg0: #007aff;
   --bg1: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15));
   --bg2: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2));
   --bg3: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3));
-  --bg4: light-dark(#fff, #141618);
+  --bg4: light-dark(rgba(255, 255, 255, .98), rgba(25, 25, 25, .99));
   --bg5: light-dark(#fafafa, #1e2022);
   --bg6: light-dark(#f5f5f5, #282a2c);
   --bg7: color-mix(in srgb, var(--bg0), transparent 75%);
-  --bs1: 0 5px 15px rgba(0, 0, 0, .2), 0 0 0 .5px rgba(0, 0, 0, .15);
+  --bs1: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .28), 0 0 0 .5px rgba(0, 0, 0, .05);
   --bs2: 0 5px 15px rgba(0, 0, 0, .25), inset 0 0 0 .5px rgba(0, 0, 0, .78), 0 0 0 .5px rgba(0, 0, 0, .2);
   --bf1: none;
   --bf2: none;
@@ -58,14 +53,14 @@
   --bg6: light-dark(rgba(255, 255, 255, .6), rgba(15, 15, 15, .6));
   @media (-moz-mac-tahoe-theme) {
   --bg4: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55));
-  }    
+  }
   }
   @media (-moz-mac-tahoe-theme) {
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .34), 0 0 0 .5px rgba(0, 0, 0, .12);
   }
   @media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
-  --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15);    
+  --bs2: 0 45px 65px rgba(0, 0, 0, .45), inset 0 0 0 1px rgba(255, 255, 255, .15);
   }
   @media (-moz-platform: linux) {
   --bs1: 0 2px 15px rgba(0, 0, 0, .2), 0 0 0 1px rgba(0, 0, 0, .058);
@@ -113,7 +108,7 @@
   background-color: #436ee3 !important;
 }
 
-@-moz-document url-prefix(about:) {
+@-moz-document url-prefix("about:") {
 @media not -moz-pref("gwfox.atbc") {
 body { background-color: #191919 !important; } }
 
@@ -142,7 +137,7 @@ body { background-color: #191919 !important; } }
 }
 }
 
-@-moz-document url-prefix(about:), regexp("chrome:\/\/.*") {
+@-moz-document url-prefix("about:"), regexp("chrome:\/\/(?!devtools).*") {
 input[type="search"] {
   background-color: light-dark(rgba(85, 85, 85, .1), rgba(190, 190, 190, .1)) !important;
   border-color: transparent !important;
@@ -259,12 +254,75 @@ input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]) {
 }
 }
 
-@-moz-document url-prefix(about:) {
+@-moz-document url-prefix("about:") {
 :root {
   --link-color: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
   --link-color-hover: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #fff)) !important;
   --link-color-active: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important;
   --link-color-visited: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
+  --border-color-deemphasized: light-dark(rgba(50, 50, 50, .15), rgba(225, 225, 225, .15)) !important;
+}
+}
+
+@-moz-document url-prefix("about:buildconfig"), url-prefix("about:cache"), url-prefix("about:support") {
+th {
+ color: #fff !important;
+ border: none !important;
+}
+td {
+  border: .5px solid var(--in-content-box-border-color) !important;
+}
+table {
+  border-radius: 0 !important;
+}
+.action-box, table {
+  border: none !important;
+  background-color: var(--bg1) !important;
+}
+}
+
+@-moz-document url-prefix("about:newtab"), url-prefix("about:home"), url-prefix("about:addons") {
+panel-list {
+  --panel-item-border-radius: 4px;
+  --panel-item-background-color: color-mix(in srgb, var(--bg0) 80%, transparent);
+  --panel-item-color: #fff;
+  border: none !important;
+  border-radius: 6px !important;
+  box-shadow: var(--bs1) !important;
+  padding: 6px !important;
+  background-color: var(--bg4) !important;
+  backdrop-filter: var(--bf3) !important;
+@media (-moz-platform: windows) {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
+}
+@media (-moz-mac-tahoe-theme) {
+  backdrop-filter: var(--bf2) !important;
+}
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  --panel-item-border-radius: 8px;
+  border-radius: 12px !important;
+}
+}
+@media (prefers-color-scheme: dark) {
+@media not (-moz-platform: linux) {
+panel-list {
+  box-shadow: var(--bs2) !important;
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1.5px !important;
+}
+
+@media (-moz-platform: windows) {
+panel-list {
+  outline: none !important;
+}
+}
+}
+
+@media (-moz-platform: linux) {
+panel-list {
+  border: 1px solid rgba(255, 255, 255, .06) !important;
+}
+}
 }
 }
 
@@ -280,6 +338,11 @@ sidebar-tab-row {
 }
 }
 }
+.fxview-tab-row-main:is(.muted, .soundplaying, .activemedia-blocked):not(.attention) .fxview-tab-row-favicon::after {
+  inset-inline-start: 1px !important;
+  inset-block-start: 1px !important;
+  background-color: transparent !important;
+}
 }
 
 @-moz-document url-prefix("about:firefoxview") {
@@ -293,15 +356,92 @@ sidebar-tab-row {
 
 @-moz-document url-prefix("about:addons") {
 ::after { content: none !important; }
+button:not(.toggle-button) {
+ border-radius: 6px !important;
+@media -moz-pref("gwfox.ac") {
+&:is(:hover, :active) {
+  background-color: color-mix(in srgb, var(--bg0) 80%, transparent) !important;
+  color: #fff !important;
+}
+}
+}
+.card {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: var(--bg1) !important;
+}
+}
+
+@-moz-document url-prefix("about:config") {
+#about-config-search, #prefs {
+  background-color: var(--bg1) !important;
+  border: none !important;
+}
+#prefs > tr > td, .add > td::before,
+#prefs[has-visible-prefs] > .add > th,
+#prefs[has-visible-prefs] > .add > th::before {
+  border: none !important;
+}
 }
 
 @-moz-document url-prefix("about:preferences") {
+* {
+  --card-border: none !important;
+  --card-box-shadow: none !important;
+  --card-background-color: var(--bg1) !important;
+  --box-border: none !important;
+  --box-group-border: none !important;
+  --promo-background-color: var(--bg1) !important;
+}
 .navigation::after {
   content: none !important;
 }
+treecol, .tree-columnpicker-button {
+  box-shadow: none !important;
+}
+.container, #input, #blockAiGroup, listheader {
+  border: none !important;
+}
+input:not([type="checkbox"], [type="radio"], [type="button"]) {
+  background-color: var(--bg1) !important;
+&:focus {
+  outline: 3px solid var(--focus-outline-color) !important;
+}
+}
+.privacy-detailedoption {
+  border-color: transparent !important;
+  background-color: var(--bg1) !important;
+}
+.privacy-detailedoption.selected {
+  border-color: var(--border-color-selected) !important;
+  background-color: var(--section-highlight-background-color) !important;
+}
+.qr-code-box:not([hidden="true"]), .info-box-container {
+  background-color: var(--bg1) !important;
+}
+#blockAiGroup {
+  background-color: transparent !important;
+}
+.sync-info-box, #translations-manage-install-list, #handlersView,
+#fxaSyncComputerName, #oneClickSearchProvidersGroup > #engineList {
+  background-color: var(--bg1) !important;
+  border: none !important;
+}
+.button, .picker-item, .select-wrapper {
+  background-color: var(--bg1) !important;
+&:hover {
+  background-color: var(--bg2) !important;
+}
+&:hover:active {
+  background-color: var(--bg3) !important;
+}
+&:not([checked]) {
+  border: none !important;
+}
+}
 }
 
-@-moz-document url("about:privatebrowsing") {
+@-moz-document url-prefix("about:privatebrowsing") {
 :root { --in-content-page-background: transparent !important; }
 
 body {
@@ -371,7 +511,7 @@ body {
 }
 }
 
-@-moz-document url("about:newtab"), url("about:home") {
+@-moz-document url-prefix("about:newtab"), url-prefix("about:home") {
 body { 
   --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
   background-image: var(--newtab-wallpaper, ""), repeating-linear-gradient(-45deg, var(--newtab-wallpaper-color, "") 0 250px, #fff 0 500px) !important;
@@ -448,6 +588,9 @@ body {
 
 .divider, .edit-topsites-wrapper .actions {
   border-top: 1px solid light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1)) !important;
+@media (-moz-platform: windows) and (prefers-color-scheme: dark) {
+  margin-inline: 1px !important;
+}
 }
 
 .selector, .actions button {
@@ -674,7 +817,7 @@ body {
 @media -moz-pref("gwfox.blur") and (-moz-platform: macos) {
 .modal {
   box-shadow: var(--bs1) !important;
-}  
+}
 }
 
 .customize-menu {
@@ -771,24 +914,6 @@ body {
 &::after {
   content: none !important;
 }
-> panel-list {
-  --panel-item-border-radius: 4px;
-  --panel-item-background-color: color-mix(in srgb, var(--bg0) 80%, transparent);
-  --panel-item-color: #fff;
-  border: none !important;
-  border-radius: 6px !important;
-  box-shadow: var(--bs1) !important;
-  padding: 6px !important;
-  background-color: var(--bg4) !important;
-  backdrop-filter: var(--bf3) !important;
-@media (-moz-mac-tahoe-theme) {
-  backdrop-filter: var(--bf2) !important;
-}
-@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  --panel-item-border-radius: 8px;
-  border-radius: 12px !important;
-}
-}
 }
 
 *+button {
@@ -813,16 +938,16 @@ body {
   box-shadow: var(--bs2) !important;
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1.5px !important;
-}  
 }
-.modalOverlayOuter, .contentSearchSuggestionTable, .customize-menu, .context-menu, .weatherButtonContextMenuWrapper > panel-list, .confirmation-dialog {
+}
+.modalOverlayOuter, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
   box-shadow: var(--bs2) !important;
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1.5px !important;
 }
 
 @media (-moz-platform: windows) {
-.modal, .modalOverlayOuter, .contentSearchSuggestionTable, .customize-menu, .context-menu, .weatherButtonContextMenuWrapper > panel-list, .confirmation-dialog {
+.modal, .modalOverlayOuter, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
   outline: none !important;
 }
 .context-menu {
@@ -832,7 +957,7 @@ body {
 }
 
 @media (-moz-platform: linux) {
-.modalOverlayOuter, .contentSearchSuggestionTable, .customize-menu, .context-menu, .weatherButtonContextMenuWrapper > panel-list, .confirmation-dialog {
+.modalOverlayOuter, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
   border: 1px solid rgba(255, 255, 255, .06) !important;
 }
 }
@@ -841,8 +966,8 @@ body {
 .search-inner-wrapper, .tile, .context-menu-button.icon, .location-input-wrapper, .weatherInfoLink, .weatherNotAvailable, .weatherButtonContextMenu, .personalize-button {
   background-color: var(--bg1) !important;
   box-shadow: none !important;
-&:hover {background-color: var(--bg2) !important;}
-&:active {background-color: var(--bg3) !important;}
+&:hover { background-color: var(--bg2) !important; }
+&:active { background-color: var(--bg3) !important; }
 @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper") {
   background-color: var(--bg4) !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, .1) !important;
@@ -953,3 +1078,9 @@ body {
 }
 }
 }
+}
+
+@media -moz-pref("gwfox.tp") {
+@-moz-document url("about:newtab"), url("about:home") {
+body { background: transparent !important;
+* { display: none !important; }}}}
