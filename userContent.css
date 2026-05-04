@@ -528,12 +528,12 @@ body {
 }
 
 @keyframes panel-grow {
-  0% {
-    transform: scale(.92);
-  }
-  100% {
-    transform: scale(1);
-  }
+0% {
+  transform: scale(.92);
+}
+100% {
+  transform: scale(1);
+}
 }
 
 .context-menu {
@@ -591,10 +591,6 @@ body {
 @media (-moz-platform: windows) and (prefers-color-scheme: dark) {
   margin-inline: 1px !important;
 }
-}
-
-.selector, .actions button {
-  border: 1px solid light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1)) !important;
 }
 
 .outer-wrapper.only-search {
@@ -778,8 +774,7 @@ body {
 .modalOverlayOuter, .confirmation-dialog {
   border-radius: 6px !important;
   border: none !important;
-  animation-name: panel-grow;
-  animation-duration: 250ms;
+  animation: panel-grow 250ms ease-out;
   background-color: var(--bg4) !important;
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: 12px !important;
@@ -791,14 +786,7 @@ body {
 }
 }
 
-.modal {
-  border-radius: 6px !important;
-@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  border-radius: 12px !important;
-}
-}
-
-.modal, .tile, .context-menu-button.icon, .search-inner-wrapper {
+.modalOverlayOuter, .tile, .context-menu-button.icon, .search-inner-wrapper {
   backdrop-filter: var(--bf3) !important;
 @media (-moz-mac-tahoe-theme) {
   backdrop-filter: var(--bf2) !important;
@@ -814,20 +802,14 @@ body {
   box-shadow: var(--bs1) !important;
 }
 
-@media -moz-pref("gwfox.blur") and (-moz-platform: macos) {
-.modal {
-  box-shadow: var(--bs1) !important;
-}
-}
-
 .customize-menu {
   background-color: var(--bg4) !important;
   backdrop-filter: var(--bf3) !important;
   box-shadow: var(--bs1) !important;
-  margin: 16px 0 0 0 !important;
+  margin: 16px 16px 0 0 !important;
   height: calc(100% - 16px) !important;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
+  padding-inline: 12px !important;
+  min-height: unset !important;
 @media (-moz-mac-tahoe-theme) {
   backdrop-filter: var(--bf2) !important;
 }
@@ -837,15 +819,16 @@ body {
   backdrop-filter: var(--bf1) !important;
 }
 }
-}
-
-.customize-menu-animate-wrapper {
-  box-shadow: none !important;
 :has(.category.wallpaper-list) {
 .category-header, .category-list, ~ * {
   display: none !important;
 }
 }
+}
+
+.customize-menu-animate-wrapper {
+  box-shadow: none !important;
+  inset-inline-end: -16px !important;
 }
 
 .context-menu, .contentSearchSuggestionTable, .location-input-wrapper, .weatherInfoLink, .weatherNotAvailable, .personalize-button {
@@ -869,7 +852,7 @@ body {
   inset-inline-start: 0 !important;
   padding: 30px !important;
   transition: none !important;
-  animation: .25s ease-in panel-grow;
+  animation: panel-grow 250ms ease-out;
 @media not (-moz-platform: linux) {
 @media -moz-pref("gwfox.blur") {
   padding: 15px !important;
@@ -933,13 +916,6 @@ body {
 
 @media (prefers-color-scheme: dark) {
 @media not (-moz-platform: linux) {
-@media -moz-pref("gwfox.blur") {
-.modal {
-  box-shadow: var(--bs2) !important;
-  outline: 1px solid rgba(235, 235, 235, .2) !important;
-  outline-offset: -1.5px !important;
-}
-}
 .modalOverlayOuter, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
   box-shadow: var(--bs2) !important;
   outline: 1px solid rgba(235, 235, 235, .2) !important;
@@ -947,7 +923,7 @@ body {
 }
 
 @media (-moz-platform: windows) {
-.modal, .modalOverlayOuter, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
+.modalOverlayOuter, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
   outline: none !important;
 }
 .context-menu {
@@ -1080,7 +1056,7 @@ body {
 }
 }
 
-@media -moz-pref("gwfox.tp") {
-@-moz-document url("about:newtab"), url("about:home") {
+@media -moz-pref("gwfox.newtab") {
+@-moz-document url-prefix("about:newtab"), url-prefix("about:home") {
 body { background: transparent !important;
 * { display: none !important; }}}}
