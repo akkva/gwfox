@@ -1,15 +1,15 @@
 /* * * * * * * * * * * * * * * *
  * ░█▀▀▀░█░░░█░█▀▀▀░█▀▀█░█░░█░ *
- * ░█░▝█░█▄█▄█░█▀▀▀░█░ █░▄▀▀▄░ *
+ * ░█░▀█░█▄█▄█░█▀▀▀░█░ █░▄▀▀▄░ *
  * ░▀▀▀▀░▀░░░▀░▀░░░░▀▀▀▀░▀░░▀░ *
  *   github.com/akkva/gwfox    *
  * * * * * * * * * * * * * * * */
 
 :root {
   --bg0: #007aff;
-  --bg1: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15));
-  --bg2: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2));
-  --bg3: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3));
+  --bg1: light-dark(rgba(70, 70, 70, .08), rgba(170, 170, 170, .08));
+  --bg2: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .15));
+  --bg3: light-dark(rgba(70, 70, 70, .2), rgba(170, 170, 170, .2));
   --bg4: light-dark(rgba(255, 255, 255, .98), rgba(25, 25, 25, .99));
   --bg5: light-dark(#fafafa, #1e2022);
   --bg6: light-dark(#f5f5f5, #282a2c);
@@ -44,7 +44,6 @@
   --newtab-primary-action-background: var(--color-accent-primary) !important;
   --button-text-color-primary: #fff !important;
   --border-color: rgba(105, 105, 105, .2) !important;
-  --newtab-background-color: var(--toolbox-bgcolor) !important;
   @media -moz-pref("gwfox.blur") {
   --bf2: blur(15px);
   --bf3: blur(30px);
@@ -370,6 +369,9 @@ button:not(.toggle-button) {
   box-shadow: none !important;
   background-color: var(--bg1) !important;
 }
+moz-message-bar {
+  border: none !important;
+}
 }
 
 @-moz-document url-prefix("about:config") {
@@ -392,6 +394,34 @@ button:not(.toggle-button) {
   --box-border: none !important;
   --box-group-border: none !important;
   --promo-background-color: var(--bg1) !important;
+@media not -moz-pref("gwfox.atbc") {
+  --background-color-canvas: light-dark(#fff, #191919) !important;
+}
+}
+#backup-toggle-scheduled-button,
+#setting-control-verifiedManage,
+#setting-control-syncChangeOptions,
+#setting-control-dohAdvancedButton,
+#setting-control-showUpdateHistory,
+#setting-control-addPrimaryPassword,
+#setting-control-etpStatusAdvancedButton,
+#setting-control-fxaConnectAnotherDevice {
+  --box-border-radius-start: var(--box-border-radius-inner) !important;
+}
+#categories {
+  --page-nav-margin-block-start: 30px !important;
+}
+#search-container {
+  padding-top: 30px !important;
+}
+.main-content {
+  margin-top: 0 !important;
+}
+moz-message-bar {
+  border: none !important;
+}
+moz-box-item {
+  padding-inline-start: 0 !important;
 }
 .navigation::after {
   content: none !important;
@@ -520,6 +550,10 @@ body {
 }
 }
 
+button {
+  font-weight: normal !important;
+}
+
 *[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"] {
   background-image: url("resource://builtin-themes/alpenglow/background-noodles-left.svg") !important;
 @media (prefers-color-scheme: dark) {
@@ -528,12 +562,12 @@ body {
 }
 
 @keyframes panel-grow {
-  0% {
-    transform: scale(.92);
-  }
-  100% {
-    transform: scale(1);
-  }
+0% {
+  transform: scale(.92);
+}
+100% {
+  transform: scale(1);
+}
 }
 
 .context-menu {
@@ -591,10 +625,6 @@ body {
 @media (-moz-platform: windows) and (prefers-color-scheme: dark) {
   margin-inline: 1px !important;
 }
-}
-
-.selector, .actions button {
-  border: 1px solid light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1)) !important;
 }
 
 .outer-wrapper.only-search {
@@ -778,8 +808,7 @@ body {
 .modalOverlayOuter, .confirmation-dialog {
   border-radius: 6px !important;
   border: none !important;
-  animation-name: panel-grow;
-  animation-duration: 250ms;
+  animation: panel-grow 250ms ease-out;
   background-color: var(--bg4) !important;
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: 12px !important;
@@ -791,14 +820,7 @@ body {
 }
 }
 
-.modal {
-  border-radius: 6px !important;
-@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  border-radius: 12px !important;
-}
-}
-
-.modal, .tile, .context-menu-button.icon, .search-inner-wrapper {
+.modalOverlayOuter, .tile, .context-menu-button.icon, .search-inner-wrapper {
   backdrop-filter: var(--bf3) !important;
 @media (-moz-mac-tahoe-theme) {
   backdrop-filter: var(--bf2) !important;
@@ -814,20 +836,14 @@ body {
   box-shadow: var(--bs1) !important;
 }
 
-@media -moz-pref("gwfox.blur") and (-moz-platform: macos) {
-.modal {
-  box-shadow: var(--bs1) !important;
-}
-}
-
 .customize-menu {
   background-color: var(--bg4) !important;
   backdrop-filter: var(--bf3) !important;
   box-shadow: var(--bs1) !important;
-  margin: 16px 0 0 0 !important;
+  margin: 16px 16px 0 0 !important;
   height: calc(100% - 16px) !important;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
+  padding-inline: 12px !important;
+  min-height: unset !important;
 @media (-moz-mac-tahoe-theme) {
   backdrop-filter: var(--bf2) !important;
 }
@@ -837,15 +853,16 @@ body {
   backdrop-filter: var(--bf1) !important;
 }
 }
-}
-
-.customize-menu-animate-wrapper {
-  box-shadow: none !important;
 :has(.category.wallpaper-list) {
 .category-header, .category-list, ~ * {
   display: none !important;
 }
 }
+}
+
+.customize-menu-animate-wrapper {
+  box-shadow: none !important;
+  inset-inline-end: -16px !important;
 }
 
 .context-menu, .contentSearchSuggestionTable, .location-input-wrapper, .weatherInfoLink, .weatherNotAvailable, .personalize-button {
@@ -869,7 +886,7 @@ body {
   inset-inline-start: 0 !important;
   padding: 30px !important;
   transition: none !important;
-  animation: .25s ease-in panel-grow;
+  animation: panel-grow 250ms ease-out;
 @media not (-moz-platform: linux) {
 @media -moz-pref("gwfox.blur") {
   padding: 15px !important;
@@ -933,13 +950,6 @@ body {
 
 @media (prefers-color-scheme: dark) {
 @media not (-moz-platform: linux) {
-@media -moz-pref("gwfox.blur") {
-.modal {
-  box-shadow: var(--bs2) !important;
-  outline: 1px solid rgba(235, 235, 235, .2) !important;
-  outline-offset: -1.5px !important;
-}
-}
 .modalOverlayOuter, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
   box-shadow: var(--bs2) !important;
   outline: 1px solid rgba(235, 235, 235, .2) !important;
@@ -947,7 +957,7 @@ body {
 }
 
 @media (-moz-platform: windows) {
-.modal, .modalOverlayOuter, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
+.modalOverlayOuter, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
   outline: none !important;
 }
 .context-menu {
@@ -1080,7 +1090,7 @@ body {
 }
 }
 
-@media -moz-pref("gwfox.tp") {
-@-moz-document url("about:newtab"), url("about:home") {
+@media -moz-pref("gwfox.newtab") {
+@-moz-document url-prefix("about:newtab"), url-prefix("about:home") {
 body { background: transparent !important;
 * { display: none !important; }}}}
