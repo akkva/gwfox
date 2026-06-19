@@ -634,8 +634,11 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1 {
 @media not -moz-pref("sidebar.verticalTabs") {
 :root:not([taskbartab]) & {
   max-width: 219px !important;
-:root:has(#tabbrowser-tabs[closebuttons="activetab"]) & {
+:root:has(.tabbrowser-tab:nth-child(7)) & {
   max-width: 130px !important;
+@media (max-width: 721px) {
+  max-width: 219px !important;
+}
 :root:has(#urlbar:is(:hover, [focused], [open]), .urlbar-page-action[open], .identity-box-button[open], #notification-popup-box[open], #trust-icon-container[open]) & {
   max-width: 219px !important;
 }
@@ -1535,8 +1538,14 @@ tab-split-view-wrapper {
 @media not -moz-pref("sidebar.verticalTabs") {
 .tabbrowser-tab:not([pinned]) {
   min-width: 130px !important;
+tab-group[collapsed] & {
+  min-width: 0 !important;
+}
 &[selected] {
   min-width: 219px !important;
+tab-group[collapsed] & {
+  min-width: 219px !important;
+}
 tab-split-view-wrapper & {
   min-width: unset !important;
 }
@@ -1905,7 +1914,7 @@ tree {
 @media (max-width: 721px) {
 @media not -moz-pref("sidebar.verticalTabs") {
 #urlbar-container {
-  margin-left: 80px !important;
+  margin-inline-start: 80px !important;
 }
 #TabsToolbar, .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #PlacesChevron, #sidebar-button) {
   visibility: collapse;
