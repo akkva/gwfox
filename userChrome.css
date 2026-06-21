@@ -4568,6 +4568,11 @@ menupopup[needsgutter] {
 }
 
 @media (-moz-platform: macos) {
+:where(#placesContext > menu:not(.menu-iconic))::before,
+:where(#placesContext > menuitem:not(.menuitem-iconic))::before {
+  padding-inline-start: 13px !important;
+}
+
 #context-back::before {
   content: url("chrome://browser/skin/back.svg") !important;
 }
