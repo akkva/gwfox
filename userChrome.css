@@ -225,7 +225,7 @@
 .deck-selected.split-view-panel & {
   outline: var(--focus-outline) !important;
 }
-:root:has(#sidebar-main:hover) & {
+:root:has(#sidebar-main:hover, #sidebar-container:hover) & {
   -moz-window-dragging: unset;
 }
 }
@@ -2862,7 +2862,7 @@ menuitem[type="radio"][disabled] .menu-icon {
 /* sidebar */
 
 :root[sidebar-expand-on-hover] {
-#sidebar-main {
+#sidebar-main, #sidebar-container {
   background-color: transparent !important;
   background-image: none !important;
 }
@@ -2932,7 +2932,7 @@ menuitem[type="radio"][disabled] .menu-icon {
 }
 }
 
-#sidebar-main {
+#sidebar-main, #sidebar-container {
   -moz-window-dragging: drag;
 &[sidebar-launcher-expanded] {
   width: 240px !important;
@@ -3091,7 +3091,7 @@ menuitem[type="radio"][disabled] .menu-icon {
 }
 }
 &:has([sidebar-shown]):has(#PersonalToolbar:not([collapsed])) {
-#sidebar-main {
+#sidebar-main, #sidebar-container {
   margin-top: -28px;
 @media -moz-pref("sidebar.verticalTabs") {
   margin-top: -34px;
@@ -3401,7 +3401,7 @@ menuitem[type="radio"][disabled] .menu-icon {
   display: none;
 }
 
-#sidebar-main {
+#sidebar-main, #sidebar-container {
   margin-top: 34px !important;
 }
 
@@ -3982,7 +3982,7 @@ tab-split-view-wrapper {
   visibility: collapse;
 }
 
-#sidebar-main {
+#sidebar-main, #sidebar-container {
   height: calc(100% - 16px) !important;
   width: 240px !important;
   display: flex !important;
@@ -4072,7 +4072,7 @@ tab-split-view-wrapper {
 #sidebar-button, #reload-button, #stop-button, #back-button,
 #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button,
 #unified-extensions-button, #downloads-button, #sidebar-main,
-.titlebar-buttonbox-container {
+#sidebar-container, .titlebar-buttonbox-container {
   display: none !important;
 }
 }
@@ -4085,12 +4085,12 @@ tab-split-view-wrapper {
 
 #stop-button, #back-button, #reload-button, #forward-button, #sidebar-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, .titlebar-buttonbox-container, #urlbar:not([open]) {
   transition: all .05s .05s ease !important;
-:root:has(#sidebar-main:hover) & {
+:root:has(#sidebar-main:hover, #sidebar-container:hover) & {
   transition: all .25s 0s ease !important;
 }
 }
 
-&:has(#sidebar-main:hover, .titlebar-buttonbox:hover, #tabContextMenu:hover, #toolbar-context-menu:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, toolbarbutton:is(#unified-extensions-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button)[open], .tab-note-editor-panel[panelopen], .tab-group-editor-panel[panelopen], #tabbrowser-tabs[movingtab], #urlbar:not([open]):hover, #urlbar:not([open]) .urlbar-page-action[open], #urlbar:not([open]) .identity-box-button[open], #urlbar:not([open]) #notification-popup-box[open], #urlbar:not([open]) #trust-icon-container[open]) {
+&:has(#sidebar-main:hover, #sidebar-container:hover, .titlebar-buttonbox:hover, #tabContextMenu:hover, #toolbar-context-menu:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, toolbarbutton:is(#unified-extensions-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button)[open], .tab-note-editor-panel[panelopen], .tab-group-editor-panel[panelopen], #tabbrowser-tabs[movingtab], #urlbar:not([open]):hover, #urlbar:not([open]) .urlbar-page-action[open], #urlbar:not([open]) .identity-box-button[open], #urlbar:not([open]) #notification-popup-box[open], #urlbar:not([open]) #trust-icon-container[open]) {
 .titlebar-buttonbox-container {
   left: 7px;
 @media (-moz-platform: windows) {
@@ -4223,7 +4223,7 @@ tab-split-view-wrapper {
 }
 }
 
-#sidebar-main {
+#sidebar-main, #sidebar-container {
   left: 8px;
   box-shadow: var(--bs1);
 }
@@ -4245,8 +4245,8 @@ tab-split-view-wrapper {
   display: none !important;
 }
 }
-:root:not([sizemode="maximized"], [sizemode="fullscreen"]):has(#sidebar-main[hidden]) .titlebar-restore, 
-:root:is([sizemode="maximized"], [sizemode="fullscreen"]):has(#sidebar-main[hidden]) .titlebar-max {
+:root:not([sizemode="maximized"], [sizemode="fullscreen"]):has(#sidebar-main[hidden], #sidebar-container[hidden]) .titlebar-restore, 
+:root:is([sizemode="maximized"], [sizemode="fullscreen"]):has(#sidebar-main[hidden], #sidebar-container[hidden]) .titlebar-max {
   display: none !important;
 }
 }
