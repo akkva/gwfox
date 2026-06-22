@@ -1342,6 +1342,9 @@ toolbarseparator:not(.tab-group-edit-mode-only) {
 > label {
   margin-inline-start: 8px !important;
 }
+> input {
+  background-color: var(--button-bgcolor) !important;
+}
 }
 .tab-group-editor-swatch {
   border-radius: 50px !important;
