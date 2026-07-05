@@ -47,6 +47,8 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.noborder` | Remove window borders | |
 | `gwfox.bms` | Enable main window transparency | Linux only |
 | `gwfox.icons` | Add menu icons | |
+| `gwfox.mwc` | Enable macOS-style window controls  | Windows/Linux |
+| `gwfox.msc` | Enable macOS-style tab close button | |
 
 
 ### Numerical Settings
