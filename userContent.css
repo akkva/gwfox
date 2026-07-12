@@ -10,7 +10,7 @@
   --bg1: light-dark(rgba(70, 70, 70, .08), rgba(170, 170, 170, .08));
   --bg2: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .15));
   --bg3: light-dark(rgba(70, 70, 70, .2), rgba(170, 170, 170, .2));
-  --bg4: light-dark(rgba(255, 255, 255, .98), rgba(25, 25, 25, .99));
+  --bg4: light-dark(rgba(255, 255, 255, 1), rgba(25, 25, 25, 1));
   --bg5: light-dark(#fafafa, #1e2022);
   --bg6: light-dark(#f5f5f5, #282a2c);
   --bg7: color-mix(in srgb, var(--bg0), transparent 75%);
@@ -47,7 +47,7 @@
   @media -moz-pref("gwfox.blur") {
   --bf2: blur(15px);
   --bf3: blur(30px);
-  --bg4: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 12, .75));
+  --bg4: light-dark(rgba(255, 255, 255, .75), rgba(25, 25, 25, .75));
   --bg5: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 15, .75));
   --bg6: light-dark(rgba(255, 255, 255, .6), rgba(15, 15, 15, .6));
   @media (-moz-mac-tahoe-theme) {
@@ -59,7 +59,7 @@
   }
   @media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
-  --bs2: 0 45px 65px rgba(0, 0, 0, .45), inset 0 0 0 1px rgba(255, 255, 255, .15);
+  --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(205, 205, 205, .15);
   }
   @media (-moz-platform: linux) {
   --bs1: 0 2px 15px rgba(0, 0, 0, .2), 0 0 0 1px rgba(0, 0, 0, .058);
@@ -532,12 +532,6 @@ body {
 
 .info, .info-border, .promo-visible, .promo-dismiss {
   display: none !important;
-}
-
-@media (-moz-platform: windows) {
-.search-handoff-button {
-  background-color: #2c2c2c !important;
-}
 }
 }
 
