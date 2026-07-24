@@ -5,8 +5,9 @@
  *   github.com/akkva/gwfox    *
  * * * * * * * * * * * * * * * */
 
+* { --bg0: #007aff; }
+
 :root {
-  --bg0: #007aff;
   --bg1: light-dark(rgba(70, 70, 70, .08), rgba(170, 170, 170, .08));
   --bg2: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .15));
   --bg3: light-dark(rgba(70, 70, 70, .2), rgba(170, 170, 170, .2));
@@ -83,6 +84,29 @@
   --toggle-background-color-pressed-hover: var(--color-accent-primary-hover) !important;
   --toggle-background-color-pressed-active: var(--color-accent-primary-active) !important;
   --toggle-dot-background-color-on-pressed: #fff !important;
+}
+
+#download {
+  color: #fff !important;
+  background-color: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
+&:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #fff)) !important; }
+}
+
+#screenshots-cancel-button, #download, #cancel, #copy {
+  outline-color: light-dark(color-mix(in srgb, var(--bg0) 55%, transparent), color-mix(in srgb, var(--bg0) 45%, #555)) !important;
+}
+
+#buttons-container {
+  border-radius: 12px !important;
+  background-color: light-dark(rgba(255, 255, 255, 1), rgba(25, 25, 25, 1)) !important;
+@media -moz-pref("gwfox.blur") {
+  background-color: light-dark(rgba(255, 255, 255, .75), rgba(35, 35, 35, .75)) !important;
+  backdrop-filter: blur(30px);
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(35, 35, 35, .55)) !important;
+  backdrop-filter: blur(15px);
+}
+}
 }
 
 @media (prefers-color-scheme: dark) {
