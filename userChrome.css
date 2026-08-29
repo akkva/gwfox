@@ -4724,6 +4724,11 @@ tab-split-view-wrapper & {
   -moz-context-properties: fill, fill-opacity;
   fill: light-dark(#525252, #c9c9cb);
   transition: fill .25s .5s !important;
+@media -moz-pref("gwfox.fsi") {
+  background-image: var(--search-glass);
+  background-position: left 6.5px bottom 10.5px;
+  fill: currentColor;
+}
 &:-moz-window-inactive {
   fill-opacity: 0.5;
 }
