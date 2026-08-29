@@ -35,7 +35,7 @@
 
 Create these preferences in `about:config` to modify the UI:
 
-### Boolean Toggle
+### Boolean Toggles
 
 | Preference | Description | Notes |
 | :--- | :--- | :--- |
@@ -58,7 +58,7 @@ Create these preferences in `about:config` to modify the UI:
 
 ---
 
-### Numerical Settings
+### Numerical Setting
 
 | Preference | Description | Values |
 | :--- | :--- | :--- |
