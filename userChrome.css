@@ -227,6 +227,26 @@
 }
 @media -moz-pref("gwfox.noborder") {
   box-shadow: none !important;
+:root:not([inDOMFullscreen]) #tabbrowser-tabbox[sidebar-shown] & {
+@media -moz-pref("sidebar.position_start") {
+  border-start-start-radius: 12px !important;
+@media -moz-pref("gwfox.urlbar") and -moz-pref("sidebar.verticalTabs") and -moz-pref("gwfox.toolbar") {
+@media not -moz-pref("sidebar.visibility", "expand-on-hover") {
+  border-start-start-radius: 0 !important;
+:root:has(.split-view-panel) & {
+[column="0"] &, [column="1"] & {
+  border-start-start-radius: var(--br2) !important;
+}
+}
+}
+}
+:root:has(.split-view-panel) & {
+[column="0"] &, [column="1"] & {
+  border-start-start-radius: var(--br2) !important;
+}
+}
+}
+}
 }
 .deck-selected.split-view-panel & {
   outline: var(--focus-outline) !important;
@@ -4414,7 +4434,7 @@ tab-split-view-wrapper & {
 #sidebar-container {
   height: calc(100% - 16px) !important;
   width: 240px !important;
-  position: fixed;
+  position: fixed !important;
   top: -26px;
   left: -345px;
   z-index: 9;
@@ -4465,7 +4485,12 @@ tab-split-view-wrapper & {
 #tabbrowser-tabpanels {
 &[splitview] {
 .split-view-panel {
-@media -moz-pref("gwfox.noborder") and -moz-pref("gwfox.urlbar") and -moz-pref("gwfox.toolbar") {
+@media -moz-pref("gwfox.noborder") {
+&[column="0"] {
+  margin-inline-start: 8px !important;
+}
+}
+@media -moz-pref("gwfox.noborder") and -moz-pref("gwfox.toolbar") {
   margin-block-start: 8px !important;
 @media (-moz-platform: windows) {
   margin-block-start: 7.5px !important;
