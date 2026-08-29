@@ -54,7 +54,23 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.fsi` | Enable FluentUI System Icons | [Source](https://github.com/microsoft/fluentui-system-icons) |
 
 > [!NOTE]
-> When `gwfox.urlbar` is enabled, the collapsed sidebar expands in an Arc-like hover mode, which you can trigger from the left.
+> * When `gwfox.urlbar` is enabled, the collapsed sidebar expands in an Arc-like hover mode, which you can trigger from the left.
+> * For `gwfox.urlbar.ac`: If you want it to trigger only when the window size is reduced, you can manually modify `userChrome.css`.
+
+<details>
+<summary><b>Click to expand steps</b></summary>
+<br>
+
+Search for the following line in your `userChrome.css`:
+```css
+@media -moz-pref("gwfox.urlbar.ac") and (not -moz-pref("sidebar.verticalTabs")) {
+```
+And change it to:
+```css
+@media -moz-pref("gwfox.urlbar.ac") and (not -moz-pref("sidebar.verticalTabs")) and (width < 1500px) {
+```
+*Feel free to adjust `1500px` to any value that fits your needs.*
+</details>
 
 ---
 
