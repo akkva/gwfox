@@ -4260,12 +4260,23 @@ tab-split-view-wrapper & {
 
 tab-split-view-wrapper {
   grid-template-columns: 1fr 1fr !important;
+@media -moz-pref("gwfox.sidebar", 1) {
+  grid-template-columns: 1fr !important;
+}
 .tabbrowser-tab {
+@media not -moz-pref("gwfox.sidebar", 1) {
 &:last-child {
   margin-inline-start: 2.5px !important;
+@media -moz-pref("gwfox.sidebar", 3) {
+  margin-inline-start: 4px !important;
+}
 }
 .tab-background {
   width: 109px !important;
+@media -moz-pref("gwfox.sidebar", 3) {
+  width: 124px !important;
+}
+}
 }
 .tab-content {
   margin-inline: 7px !important;
