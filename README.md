@@ -39,10 +39,10 @@ Create these preferences in `about:config` to modify the UI:
 
 | Preference | Description | Notes |
 | :--- | :--- | :--- |
-| `gwfox.urlbar` | Move address bar to sidebar | Sidebar expanded (not hover to expand) |
+| `gwfox.urlbar` | Move address bar to sidebar | Not for hover-expand mode |
 | `gwfox.toolbar` | Auto-hide bookmarks toolbar | |
 | `gwfox.urlbar.ac` | Auto-collapse address bar | For horizontal tabs |
-| `gwfox.blur` | Add acrylic effect to the floating panel | |
+| `gwfox.blur` | Add acrylic effect to floating panel | |
 | `gwfox.ac` | Enable accent color | Edit `--bg0` in CSS to customize |
 | `gwfox.atbc` | Adaptive Tab Bar Colour compatibility | |
 | `gwfox.newtab` | Enable New Tab transparency | Requires `allow_transparent_browser` |
@@ -52,6 +52,11 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.mwc` | Enable macOS-style window controls  | Windows/Linux |
 | `gwfox.msc` | Enable macOS-style tab close button | |
 | `gwfox.fsi` | Enable FluentUI System Icons | [Source](https://github.com/microsoft/fluentui-system-icons) |
+
+> [!NOTE]
+> When `gwfox.urlbar` is enabled, the collapsed sidebar expands in an Arc-like hover mode, which you can trigger from the left.
+
+---
 
 ### Numerical Settings
 
