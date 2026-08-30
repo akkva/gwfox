@@ -70,6 +70,7 @@
   --toolbarbutton-active-background: color-mix(in srgb, currentColor 15%, transparent) !important;
   --toolbarbutton-background-color-hover: var(--button-hover-bgcolor) !important;
   --toolbarbutton-background-color-active: var(--button-active-bgcolor) !important;
+  --panel-separator-color: var(--bg3) !important;
   @media -moz-pref("gwfox.blur") {
   --bf2: blur(15px);
   --bf3: blur(30px);
@@ -523,6 +524,12 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1 {
   border-radius: var(--br2) !important;
   margin-bottom: 8.5px !important;
   width: 30px !important;
+@media (-moz-platform: macos) {
+  border-radius: 5px !important;
+}
+@media (-moz-mac-tahoe-theme) {
+  border-radius: var(--br2) !important;
+}
 }
 
 #nav-bar .toolbarbutton-1 {
@@ -709,6 +716,15 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1 {
   height: 50px !important;
   padding-inline: 15px !important;
   align-items: center !important;
+}
+.urlbarView-row {
+  border-radius: var(--br2) !important;
+@media (-moz-platform: macos) {
+  border-radius: 5px !important;
+}
+@media (-moz-mac-tahoe-theme) {
+  border-radius: var(--br2) !important;
+}
 }
 .urlbarView-row-inner {
   flex-wrap: nowrap !important;
@@ -1757,39 +1773,48 @@ tab-group:not([collapsed]) > &::after {
 menupopup, panel[type="arrow"] {
   --panel-border-color: transparent !important;
   --panel-border-radius: var(--br2) !important;
-  --panel-separator-color: transparent !important;
   --panel-menuitem-border-radius: var(--br2) !important;
   --panel-color: light-dark(#000, #fff) !important;
   --panel-text-color: light-dark(#000, #fff) !important;
   --panel-background-color: var(--bg4) !important;
+@media (-moz-platform: macos) {
+  --panel-border-radius: var(--br1) !important;
+@media -moz-pref("gwfox.blur") {
+  --panel-background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
+}
+}
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   --panel-border-radius: var(--br4) !important;
 }
 @media not (-moz-platform: linux) {
   appearance: menupopup !important;
-  --panel-shadow-margin: .1px !important;
-  --panel-box-shadow-margin: .1px !important;
 }
 }
 
 panel[type="arrow"] {
+@media (-moz-platform: macos) {
+  --panel-menuitem-border-radius: 5px !important;
+@media -moz-pref("gwfox.blur") {
+  --panel-background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55)) !important;
+}
+}
 @media (-moz-mac-tahoe-theme) {
-  --panel-background-color: transparent !important;
+  --panel-menuitem-border-radius: var(--br2) !important;
 }
 }
-
-* { --panel-list-border-color: var(--bg3) !important; }
 
 @media not (-moz-platform: linux) {
 .toolbar-menupopup {
-  --panel-shadow-margin: 0 !important;
   --panel-box-shadow-margin: 0 !important;
   --panel-border-color: transparent !important;
   --panel-background-color: var(--bg4) !important;
   --menuitem-border-radius: var(--br2) !important;
+@media (-moz-platform: macos) {
+  --menuitem-border-radius: 5px !important;
+}
 @media (-moz-mac-tahoe-theme) {
-  --panel-background-color: transparent !important;
-  
+  --menuitem-border-radius: var(--br2) !important;
+  --panel-border-radius: var(--br4) !important;
 }
 }
 }
@@ -1853,7 +1878,6 @@ panel[type="arrow"] {
 }
 @media (-moz-mac-tahoe-theme) {
   border-radius: var(--br4) !important;
-  background: none !important;
 }
 }
 
@@ -1868,6 +1892,12 @@ menuitem, menu {
   appearance: none !important;
   border-radius: var(--br1) !important;
   height: 24px !important;
+@media (-moz-platform: macos) {
+  border-radius: 4px !important;
+}
+@media (-moz-mac-tahoe-theme) {
+  border-radius: var(--br1) !important;
+}
 @media not (-moz-platform: macos) {
   height: 28px !important;
 }
@@ -2806,7 +2836,6 @@ richlistitem {
 
 menupopup, panel[type="arrow"], .toolbar-menupopup {
   --panel-box-shadow: var(--bs1) !important;
-  --panel-shadow-margin: 18px !important;
   --panel-box-shadow-margin: 18px !important;
   --panel-background-color: var(--bg2) !important;
   --panel-border-color: transparent !important;
