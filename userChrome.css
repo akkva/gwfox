@@ -118,6 +118,16 @@
 }
 }
 
+:root[fullscreenNavToolboxHidden]:not([inDOMFullscreen]) #sidebar-container {
+  content-visibility: unset !important;
+  flex-basis: unset !important;
+  min-width: unset !important;
+}
+
+#fullscr-toggler {
+  display: none !important;
+}
+
 .browser-titlebar {
 :root[customtitlebar] &,
 :root[customtitlebar] & .urlbar:popover-open {
@@ -207,6 +217,9 @@
   padding-inline-end: 8px !important;
 &:not([sidebar-shown]) {
   padding-inline-start: 8px !important;
+}
+:root[inFullscreen]:has(#sidebar-box:not([hidden])) & {
+  padding-inline-start: 0 !important;
 }
 }
 @media -moz-pref("gwfox.blur") {
@@ -3492,7 +3505,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 }
 }
-&:has([sidebar-shown]):has(#PersonalToolbar:not([collapsed])) {
+&:has(#sidebar-container:not([hidden])):has(#PersonalToolbar:not([collapsed])) {
 #sidebar-container {
   margin-top: -28px;
 @media -moz-pref("sidebar.verticalTabs") {
@@ -3562,7 +3575,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 }
 }
-:root:has([sidebar-shown]):has(#sidebar-box:not([hidden])) & {
+:root:has(#sidebar-container:not([hidden])):has(#sidebar-box:not([hidden])) & {
   margin-top: 0 !important;
 .browserStack {
   margin-top: 0 !important;
@@ -4789,7 +4802,7 @@ tab-split-view-wrapper & {
 #PersonalToolbar {
   opacity: 0;
   transition: opacity .1s .25s !important;
-:root:has(:is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]) & {
+:root:has(#sidebar-box:not([hidden]), :is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]) & {
   opacity: 1;
   transition: opacity .1s .35s !important;
 }
@@ -4806,7 +4819,7 @@ tab-split-view-wrapper & {
 .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #tabs-newtab-button, #vertical-tabs-newtab-button, #PlacesChevron) {
   opacity: 0 !important;
   transition: opacity .1s .25s !important;
-:root:is(:has(:is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
+:root:is(:has(#sidebar-box:not([hidden]), :is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
   opacity: 1 !important;
   transition: opacity .1s .35s !important;
 }
@@ -4816,7 +4829,7 @@ tab-split-view-wrapper & {
 .titlebar-buttonbox-container {
   opacity: 0 !important;
   transition: opacity .1s .25s !important;
-:root:is(:has(:is(#vertical-spacer, #PersonalToolbar, .titlebar-buttonbox-container):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
+:root:is(:has(#sidebar-box:not([hidden]), :is(#vertical-spacer, #PersonalToolbar, .titlebar-buttonbox-container):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
   opacity: 1 !important;
   transition: opacity .1s .35s !important;
 }
@@ -6846,5 +6859,18 @@ menupopup > menu:-moz-locale-dir(rtl)::after {
 
 [src="chrome://global/skin/icons/performance.svg"] {
   content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 7.99 2 C 4.12 2 1 5.12 1 8.99 1 10.02 1.23 11.05 1.68 11.98 c 0.08 0.16 0.25 0.26 0.42 0.26 0.05 0 0.13 -0.01 0.18 -0.04 l 0 -0 c 0.12 -0.06 0.21 -0.16 0.24 -0.27 0.04 -0.1 0.04 -0.24 -0.02 -0.35 C 2.12 10.77 1.92 9.89 1.92 8.99 1.92 5.63 4.63 2.92 7.99 2.92 c 3.35 0 6.07 2.72 6.07 6.07 -0 0.9 -0.21 1.79 -0.6 2.6 a 0.25 0.25 0 0 0 0 0 c -0.04 0.08 -0.06 0.15 -0.06 0.21 -0 0.04 0.02 0.12 0.03 0.16 0.03 0.07 0.06 0.09 0.09 0.13 0.04 0.04 0.08 0.08 0.15 0.11 0.07 0.03 0.13 0.04 0.18 0.05 0.05 0 0.09 0.01 0.16 -0.01 0.03 -0.01 0.11 -0.05 0.14 -0.07 0.03 -0.03 0.09 -0.09 0.13 -0.18 v -0 C 14.75 11.05 14.97 10.02 14.97 8.99 14.97 5.12 11.85 2 7.99 2 Z m 3.26 5.23 c -0 -0 -0.01 0 -0.03 0 a 0.25 0.25 0 0 0 -0 0 c -0.11 0.01 -0.21 0.07 -0.27 0.16 L 8.66 11 c -0.03 0.04 -0.08 0.06 -0.13 0.05 -0.18 -0.06 -0.36 -0.08 -0.54 -0.09 a 0.25 0.25 0 0 0 -0 0 c -0.59 0 -1.03 0.22 -1.31 0.54 -0.29 0.33 -0.44 0.77 -0.44 1.21 0 0.44 0.14 0.88 0.44 1.21 0.29 0.32 0.73 0.54 1.32 0.54 a 0.25 0.25 0 0 0 0 0 c 0.29 -0 0.57 -0.11 0.83 -0.25 h 0 a 0.25 0.25 0 0 0 0.01 -0 0.25 0.25 0 0 0 0 -0 0.25 0.25 0 0 0 0 0 0.25 0.25 0 0 0 0.24 -0.24 v 0.1 C 9.21 13.96 9.34 13.84 9.44 13.7 a 0.25 0.25 0 0 0 0 -0.01 c 0.39 -0.58 0.39 -1.36 -0 -1.95 a 0.25 0.25 0 0 0 -0.01 -0.01 C 9.39 11.66 9.33 11.59 9.27 11.53 9.23 11.49 9.23 11.43 9.25 11.39 L 11.55 7.78 c 0.05 -0.07 0.07 -0.17 0.05 -0.27 -0.02 -0.09 -0.08 -0.17 -0.16 -0.22 -0.06 -0.04 -0.12 -0.06 -0.19 -0.06 -0 -0 -0 -0 -0.01 -0 z'/%3E%3C/svg%3E") !important;
+}
+}
+
+:root[inFullscreen]  {
+[data-l10n-id="toolbar-context-turn-on-vertical-tabs"]::before,
+[data-l10n-id="toolbar-context-turn-off-vertical-tabs"]::before {
+  content: none !important;
+@media -moz-pref("gwfox.icons") {
+  content: url("chrome://devtools/skin/images/close-3-pane.svg") !important;
+@media -moz-pref("gwfox.fsi") {
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='1 1 18 18' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.17903 10.5L8.18051 11.3737C7.9727 11.5555 7.95164 11.8714 8.13348 12.0792C8.31532 12.2871 8.6312 12.3081 8.83902 12.1263L10.839 10.3763C10.9475 10.2813 11.0098 10.1442 11.0098 9.99999C11.0098 9.85581 10.9475 9.71865 10.839 9.62371L8.83902 7.87371C8.6312 7.69186 8.31532 7.71292 8.13348 7.92074C7.95164 8.12856 7.9727 8.44444 8.18051 8.62628L9.17905 9.5L5.5 9.5C5.22386 9.5 5 9.72386 5 10C5 10.2761 5.22386 10.5 5.5 10.5L9.17903 10.5ZM16 16C17.1046 16 18 15.1046 18 14V6C18 4.89543 17.1046 4 16 4H4C2.89543 4 2 4.89543 2 6V14C2 15.1046 2.89543 16 4 16L16 16ZM17 14C17 14.5523 16.5523 15 16 15H13L13 5L16 5C16.5523 5 17 5.44772 17 6L17 14ZM12 5L12 15L4 15C3.44772 15 3 14.5523 3 14L3 6C3 5.44771 3.44772 5 4 5L12 5Z'/%3E%3C/svg%3E") !important;
+}
+} 
 }
 }
