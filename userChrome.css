@@ -3636,28 +3636,6 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 }
 }
-@media (-moz-platform: linux) {
-&:has(#PersonalToolbar:not([collapsed])) {
-#nav-bar {
-@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  margin-bottom: -6px !important;
-}
-@media (-moz-gtk-theme-family: breeze) {
-  margin-bottom: -3px !important;
-}
-@media -moz-pref("gwfox.urlbar") and (not -moz-pref("sidebar.visibility", "expand-on-hover")) {
-:root:has(#tabbrowser-tabs[expanded]) & {
-  margin-bottom: 0 !important;
-}
-}
-@media -moz-pref("gwfox.urlbar") and -moz-pref("sidebar.visibility", "hide-sidebar") {
-:root:has(#tabbrowser-tabs:not([expanded])) & {
-  margin-bottom: 0 !important;
-}
-}
-}
-}
-}
 }
 @media not -moz-pref("sidebar.verticalTabs") {
 &:has(#PersonalToolbar:not([collapsed])) #tabbrowser-tabbox {
