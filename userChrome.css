@@ -3897,6 +3897,11 @@ img[src="chrome://global/skin/icons/more.svg"] {
   height: 100%;
   background: none;
 }
+@media (-moz-platform: macos) {
+:root[inFullscreen] & {
+  display: flex !important;
+}
+}
 }
 
 .titlebar-buttonbox {
@@ -4704,14 +4709,6 @@ tab-split-view-wrapper & {
 
 #urlbar:not([open]) {
   left: 16.5px !important;
-}
-
-@media (-moz-platform: macos) {
-#sidebar-button {
-:root[inFullscreen] & {
-  left: 10px;
-}
-}
 }
 }
 
