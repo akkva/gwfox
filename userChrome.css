@@ -169,6 +169,7 @@
 :root:not([inDOMFullscreen], [chromehidden~="toolbar"], [chromehidden~="location"], [taskbartab]) {
 .titlebar-buttonbox-container {
 @media not -moz-pref("sidebar.verticalTabs") {
+@media (-moz-platform: macos) {
   position: fixed !important;
   left: 4px;
   top: 15.5px;
@@ -176,30 +177,22 @@
   left: 5px;
   top: 16.5px;
 }
+}
 @media not (-moz-platform: macos) {
-  left: unset;
-  right: 0;
-  top: 0;
+  display: none !important;
+#nav-bar & {
+  display: flex !important;
+}
 @media (-moz-platform: windows) {
-.titlebar-button {
-  padding-block: 19px !important;
-}
-}
-@media (-moz-platform: linux) {
-  top: 11px;
-@media (-moz-gtk-theme-family: breeze) {
-  top: 15px;
-}
+  margin-top: -1px;
 }
 @media -moz-pref("gwfox.mwc") {
+  position: fixed !important;
   left: 13px;
   top: 17.5px;
-  right: unset;
   z-index: 1;
 @media (-moz-platform: windows) {
-.titlebar-button {
-  padding-block: 0 !important;
-}
+  margin-top: 0;
 }
 }
 }
@@ -349,39 +342,19 @@ split-view-footer {
 
 @media not -moz-pref("sidebar.verticalTabs") {
 :root:not([chromehidden~="toolbar"], [chromehidden~="location"], [taskbartab]) {
-  --btn-step: 40px;
-  --menu-base-pos: 3px;
-@media not (-moz-platform: macos) {
-  --menu-base-pos: 138px;
-@media (-moz-platform: linux) {
-  --menu-base-pos: 39px;
-@media (-moz-gtk-csd-maximize-button) or (-moz-gtk-csd-minimize-button) { --menu-base-pos: 76px; }
-@media (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button) { --menu-base-pos: 113px; }
-@media (-moz-gtk-theme-family: breeze) { --menu-base-pos: 83px; }
-}
-@media -moz-pref("gwfox.mwc") { --menu-base-pos: 3px; }
-}
-
 .titlebar-spacer, #nav-bar:not([customizing]) toolbarspring, #wrapper-customizableui-special-spring3, #customizableui-special-spring3 {
-  display: none !important;
-}
-
-.webextension-browser-action,
-#nav-bar-customization-target > toolbarbutton:nth-last-child(3) {
-  margin-right: 4px !important;
+  visibility: collapse;
 }
 
 #navigator-toolbox {
-  display: grid;
-  grid-template-columns: minmax(auto, 0) auto;
-> *:not(#TabsToolbar, #nav-bar) {
-  grid-column: 1 / span 2 !important;
-}
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 #nav-bar {
-  width: fit-content !important;
-  grid-area: 2 / 1 / auto / auto;
+  order: -1;
+  flex: auto;
   padding-left: 76px !important;
 @media (-moz-mac-tahoe-theme) {
   padding-left: 82px !important;
@@ -400,42 +373,27 @@ split-view-footer {
 }
 }
 
-#PersonalToolbar {
-  height: 28px !important;
+#urlbar-container {
+  anchor-name: --urlbar;
+  margin-inline-start: 4px !important;
+  margin-inline-end: auto !important;
+}
+
+#urlbar-container ~ :not(#urlbar-container ~ :not([hidden]) ~ *), #wrapper-urlbar-container ~ :not(#wrapper-urlbar-container ~ :not([hidden]) ~ *) {
+  anchor-name: --navbar;
 }
 
 #TabsToolbar {
-  grid-area: 2 / 2 / auto / auto;
-  margin-block: 4.5px !important;
-  margin-left: -2px !important;
-  --extension-offset: 0px;
-  --overflow-offset: 0px;
-:root:has(#unified-extensions-button[hidden]) & { --extension-offset: -34px; }
-:root:has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & { --overflow-offset: 34px; }
-  padding-inline-end: calc(var(--menu-base-pos) + 74px + var(--extension-offset) + var(--overflow-offset)) !important;
-@media (-moz-platform: windows) {
-  margin-block: 5px !important;
-}
-&:-moz-window-inactive {
-  opacity: 1 !important;
-}
+  position: absolute;
+  position-anchor: --urlbar;
+  top: 4.5px;
+  left: calc(anchor(right) + 3px);
+  right: anchor(--navbar left);
 }
 
-#PanelUI-menu-button {
-  position: fixed !important;
-  inset-inline-end: var(--menu-base-pos) !important;
-}
-
-#nav-bar-overflow-button {
-  position: fixed !important;
-  inset-inline-end: calc(var(--menu-base-pos) + var(--btn-step)) !important;
-}
-
-#unified-extensions-button {
-  position: fixed !important;
-  --overflow-offset: 0px;
-:root:has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & { --overflow-offset: 34px; }
-  inset-inline-end: calc(var(--menu-base-pos) + var(--btn-step) + var(--overflow-offset)) !important;
+#PersonalToolbar {
+  height: 28px !important;
+  width: 100%;
 }
 
 &:not([customizing]) {
@@ -458,8 +416,9 @@ split-view-footer {
 #blocked-permissions-container, #picture-in-picture-button,
 .private-browsing-indicator-with-label,
 #reset-pbm-toolbar-button, .sharing-icon,
-#firefox-view-button, #fxa-toolbar-menu-button,
-#userContext-icons, #userContext-label {
+#firefox-view-button, #wrapper-firefox-view-button,
+#userContext-icons, #userContext-label,
+#fxa-toolbar-menu-button {
   display: none !important;
 }
 
@@ -521,15 +480,12 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1 {
 }
 
 #downloads-indicator-progress-outer {
-  border: 1.5px solid light-dark(#525252, #c9c9cb) !important;
-  width: 17px !important;
-  height: 17px !important;
+  background: none !important;
+  outline: 1.5px solid light-dark(#525252, #c9c9cb);
+  outline-offset: -3px;
+  border-radius: 50%;
 @media -moz-pref("gwfox.fsi") {
-  border: 1px solid light-dark(#000, #fff) !important;
-  width: 16px !important;
-  height: 16px !important;
-  margin-top: 1px !important;
-  margin-left: 1px !important;
+  outline: 1px solid currentColor;
 }
 }
 
@@ -1567,6 +1523,9 @@ tab-split-view-wrapper {
 }
 #tabbrowser-tabs[orient="horizontal"] & {
   min-width: 219px !important;
+@media (max-width: 721px) {
+  min-width: unset !important;
+}
 .tabbrowser-tab {
   border-image: none !important;
 &:last-child {
@@ -1651,6 +1610,9 @@ tab-group[collapsed] & {
 }
 &[selected] {
   min-width: 225px !important;
+@media (max-width: 721px) {
+  min-width: unset !important;
+}
 tab-group[collapsed] & {
   min-width: 225px !important;
 }
@@ -2064,7 +2026,7 @@ tree {
   border-radius: var(--br2) !important;
 }
 
-:root#main-window {
+#main-window {
   min-width: 721px !important;
 @media (-moz-platform: macos) {
   appearance: -moz-sidebar !important;
@@ -2078,19 +2040,16 @@ tree {
 
 @media (max-width: 721px) {
 @media not -moz-pref("sidebar.verticalTabs") {
-#urlbar-container {
-  margin-inline-start: 80px !important;
+.tabbrowser-tab:not([selected], tab-split-view-wrapper *), tab-split-view-wrapper:not(:has(.tabbrowser-tab[selected])), .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #PlacesChevron, #sidebar-button, #alltabs-button, #widget-overflow-mainView *), tab-group > *:not(.tabbrowser-tab[selected]) {
+  display: none !important;
 }
-#TabsToolbar, .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #PlacesChevron, #sidebar-button) {
+:root[customizing] #tabbrowser-tabs {
   visibility: collapse;
-}
-.titlebar-buttonbox-container {
-  visibility: visible !important;
 }
 }
 }
 
-:root#main-window[chromehidden~="toolbar"] {
+#main-window[chromehidden~="toolbar"] {
   min-width: unset !important;
 
 .browser-toolbar {
@@ -4118,6 +4077,14 @@ img[src="chrome://global/skin/icons/more.svg"] {
   display: flex !important;
 }
 
+#downloads-indicator-progress-outer {
+  outline-width: 1px;
+  outline-offset: -2px;
+@media -moz-pref("gwfox.fsi") {
+  outline-width: .5px;
+}
+}
+
 #vertical-spacer::before {
   top: 0;
 }
@@ -4766,7 +4733,7 @@ tab-split-view-wrapper & {
 }
 }
 @media (max-width: 721px) {
-  max-width: 315px !important;
+  max-width: 219px !important;
   transition: none !important;
 #urlbar {
   fill: transparent;
@@ -4776,6 +4743,9 @@ tab-split-view-wrapper & {
   opacity: 1 !important;
   transition: none !important;
 }
+}
+&:has(#urlbar:is(:hover, [focused], [open]), .urlbar-page-action[open], .identity-box-button[open], #notification-popup-box[open], #trust-icon-container[open]) {
+  max-width: 219px !important;
 }
 }
 .urlbar-page-action,
@@ -6340,7 +6310,7 @@ list-style-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox=
 }
 
 .drm-icon {
-  list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 20 20' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 15.16 3.44 c 0.78 0 1.41 0.63 1.41 1.41 v 5.62 c 0 0.78 -0.63 1.41 -1.41 1.41 H 13.75 v 0.94 h 1.41 c 1.29 0 2.34 -1.05 2.34 -2.34 v -5.62 C 17.5 3.55 16.45 2.5 15.16 2.5 h -5.62 C 8.24 2.5 7.19 3.55 7.19 4.84 v 5.62 c 0 1.29 1.05 2.34 2.34 2.34 H 10.94 V 11.88 H 9.53 C 8.75 11.88 8.12 11.25 8.12 10.47 v -5.62 C 8.12 4.07 8.75 3.44 9.53 3.44 Z m -4.69 3.75 H 9.06 V 8.12 h 1.41 c 0.78 0 1.41 0.63 1.41 1.41 v 5.62 c 0 0.78 -0.63 1.41 -1.41 1.41 h -5.62 c -0.78 0 -1.41 -0.63 -1.41 -1.41 v -5.62 C 3.44 8.75 4.07 8.12 4.84 8.12 H 6.25 V 7.19 H 4.84 C 3.55 7.19 2.5 8.24 2.5 9.53 v 5.62 C 2.5 16.45 3.55 17.5 4.84 17.5 h 5.62 c 1.29 0 2.34 -1.05 2.34 -2.34 v -5.62 c 0 -1.29 -1.05 -2.34 -2.34 -2.34 z'/%3E%3C/svg%3E") !important;  
+  list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 20 20' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 15.16 3.44 c 0.78 0 1.41 0.63 1.41 1.41 v 5.62 c 0 0.78 -0.63 1.41 -1.41 1.41 H 13.75 v 0.94 h 1.41 c 1.29 0 2.34 -1.05 2.34 -2.34 v -5.62 C 17.5 3.55 16.45 2.5 15.16 2.5 h -5.62 C 8.24 2.5 7.19 3.55 7.19 4.84 v 5.62 c 0 1.29 1.05 2.34 2.34 2.34 H 10.94 V 11.88 H 9.53 C 8.75 11.88 8.12 11.25 8.12 10.47 v -5.62 C 8.12 4.07 8.75 3.44 9.53 3.44 Z m -4.69 3.75 H 9.06 V 8.12 h 1.41 c 0.78 0 1.41 0.63 1.41 1.41 v 5.62 c 0 0.78 -0.63 1.41 -1.41 1.41 h -5.62 c -0.78 0 -1.41 -0.63 -1.41 -1.41 v -5.62 C 3.44 8.75 4.07 8.12 4.84 8.12 H 6.25 V 7.19 H 4.84 C 3.55 7.19 2.5 8.24 2.5 9.53 v 5.62 C 2.5 16.45 3.55 17.5 4.84 17.5 h 5.62 c 1.29 0 2.34 -1.05 2.34 -2.34 v -5.62 c 0 -1.29 -1.05 -2.34 -2.34 -2.34 z'/%3E%3C/svg%3E") !important;
 }
 
 .tab-sharing-icon-overlay {
@@ -6868,6 +6838,6 @@ menupopup > menu:-moz-locale-dir(rtl)::after {
 @media -moz-pref("gwfox.fsi") {
   content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='1 1 18 18' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.17903 10.5L8.18051 11.3737C7.9727 11.5555 7.95164 11.8714 8.13348 12.0792C8.31532 12.2871 8.6312 12.3081 8.83902 12.1263L10.839 10.3763C10.9475 10.2813 11.0098 10.1442 11.0098 9.99999C11.0098 9.85581 10.9475 9.71865 10.839 9.62371L8.83902 7.87371C8.6312 7.69186 8.31532 7.71292 8.13348 7.92074C7.95164 8.12856 7.9727 8.44444 8.18051 8.62628L9.17905 9.5L5.5 9.5C5.22386 9.5 5 9.72386 5 10C5 10.2761 5.22386 10.5 5.5 10.5L9.17903 10.5ZM16 16C17.1046 16 18 15.1046 18 14V6C18 4.89543 17.1046 4 16 4H4C2.89543 4 2 4.89543 2 6V14C2 15.1046 2.89543 16 4 16L16 16ZM17 14C17 14.5523 16.5523 15 16 15H13L13 5L16 5C16.5523 5 17 5.44772 17 6L17 14ZM12 5L12 15L4 15C3.44772 15 3 14.5523 3 14L3 6C3 5.44771 3.44772 5 4 5L12 5Z'/%3E%3C/svg%3E") !important;
 }
-} 
+}
 }
 }
