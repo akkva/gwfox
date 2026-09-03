@@ -389,6 +389,9 @@ split-view-footer {
   top: 4.5px;
   left: calc(anchor(right) + 3px);
   right: anchor(--navbar left);
+@media (-moz-platform: windows) {
+  top: 5px;
+}
 }
 
 #PersonalToolbar {
