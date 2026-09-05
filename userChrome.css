@@ -770,7 +770,7 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1 {
   background-position: left 21px bottom 16px;
 }
 .urlbar-input {
-  mask-image: linear-gradient(to left, transparent, #fff 15ch) !important;
+  mask-image: linear-gradient(to left, transparent, #fff 5ch) !important;
 }
 }
 @media -moz-pref("gwfox.urlbar") or (not -moz-pref("sidebar.verticalTabs")) {
@@ -991,7 +991,7 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1 {
 }
 &[pageproxystate="invalid"] {
 .urlbar-input {
-  mask-image: linear-gradient(to left, transparent, #fff 15ch) !important;
+  mask-image: linear-gradient(to left, transparent, #fff 5ch) !important;
   text-align: left !important;
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
 #urlbar:not([focused], [open]) & {
@@ -3839,7 +3839,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
   top: 2px;
   right: 0;
   height: 47px;
-@media (-moz-platform: linux) and (not -moz-pref("gwfox.wc")) {
+@media (-moz-platform: linux) and (not -moz-pref("gwfox.twc")) {
   top: 0;
 }
 }
@@ -3857,7 +3857,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 }
 }
-@media -moz-pref("gwfox.wc") {
+@media -moz-pref("gwfox.twc") {
   padding-inline-end: 105px !important;
 @media (-moz-platform: linux) {
   padding-inline-end: 36px !important;
@@ -3928,7 +3928,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
   margin-inline: 2px !important;
   border-radius: 20% !important;
   clip-path: none;
-@media -moz-pref("gwfox.wc") {
+@media -moz-pref("gwfox.twc") {
   margin-top: 0 !important;
 }
 }
@@ -4806,7 +4806,7 @@ tab-split-view-wrapper & {
 }
 }
 
-@media -moz-pref("gwfox.wc") and (not (-moz-platform: macos)) {
+@media -moz-pref("gwfox.twc") and (not (-moz-platform: macos)) {
 .titlebar-button {
   appearance: none !important;
   max-height: 30px !important;
