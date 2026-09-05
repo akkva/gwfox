@@ -1763,7 +1763,6 @@ menupopup, panel[type="arrow"] {
   --panel-color: light-dark(#000, #fff) !important;
   --panel-text-color: light-dark(#000, #fff) !important;
   --panel-background-color: var(--bg4) !important;
-  --panel-box-shadow-margin: 0 !important;
 @media (-moz-platform: macos) {
   --panel-border-radius: var(--br1) !important;
 @media -moz-pref("gwfox.blur") {
@@ -1779,6 +1778,9 @@ menupopup, panel[type="arrow"] {
 }
 
 panel[type="arrow"] {
+@media not (-moz-platform: linux) {
+  --panel-box-shadow-margin: 0 !important;
+}
 @media (-moz-platform: macos) {
   --panel-menuitem-border-radius: 5px !important;
 @media -moz-pref("gwfox.blur") {
