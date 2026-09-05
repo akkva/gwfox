@@ -1,7 +1,7 @@
 <div align="center">
 <picture>
-<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/17e70652-64ad-419c-b28b-2c8b029a202d">
-<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/11bb3990-d6d6-4657-8a95-84f76f0f30b4">
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/611f62e5-61bf-47f3-bb87-65740d2cf92e">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/e406b1bb-d7e6-494b-95c7-558107d68878">
 <img alt="Preview">
 </picture>
 </div>
@@ -47,11 +47,12 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.atbc` | Adaptive Tab Bar Colour compatibility | |
 | `gwfox.newtab` | Enable New Tab transparency | Requires `allow_transparent_browser` |
 | `gwfox.noborder` | Remove window borders | |
-| `gwfox.bms` | Enable main window transparency | Linux only |
+| `gwfox.bms` | Enable main window transparency | Linux |
 | `gwfox.icons` | Add menu icons | |
 | `gwfox.mwc` | Enable macOS-style window controls  | Windows/Linux |
 | `gwfox.msc` | Enable macOS-style tab close button | |
-| `gwfox.fsi` | Enable FluentUI System Icons | [Source](https://github.com/microsoft/fluentui-system-icons) |
+| `gwfox.wc` | Enable theme-styled window controls | Windows/Linux |
+| `gwfox.fsi` | Enable [FluentUI System Icons](https://github.com/microsoft/fluentui-system-icons) | |
 
 > [!NOTE]
 > * When `gwfox.urlbar` is enabled, the collapsed sidebar expands in an Arc-like hover mode, which you can trigger from the left.
