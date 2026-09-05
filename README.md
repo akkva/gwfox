@@ -51,7 +51,7 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.icons` | Add menu icons | |
 | `gwfox.mwc` | Enable macOS-style window controls  | Windows/Linux |
 | `gwfox.msc` | Enable macOS-style tab close button | |
-| `gwfox.wc` | Enable theme-styled window controls | Windows/Linux |
+| `gwfox.twc` | Enable theme-styled window controls | Windows/Linux |
 | `gwfox.fsi` | Enable [FluentUI System Icons](https://github.com/microsoft/fluentui-system-icons) | |
 
 > [!NOTE]
