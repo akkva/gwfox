@@ -3876,6 +3876,10 @@ img[src="chrome://global/skin/icons/more.svg"] {
 
 &:has(#tabbrowser-tabs:not([expanded])) {
   --dp: collapse;
+#toolbar-menubar {
+  top: 10px;
+}
+
 .titlebar-buttonbox-container {
   position: fixed !important;
   top: 27px !important;
