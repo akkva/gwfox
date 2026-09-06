@@ -934,6 +934,10 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1 {
   display: none !important;
 }
 
+.urlbarView-result-menu {
+  background-color: var(--bg2) !important;
+}
+
 .searchmode-switcher {
   height: 28px !important;
   width: 28px !important;
