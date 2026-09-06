@@ -79,4 +79,4 @@ And change it to:
 
 | Preference | Description | Values |
 | :--- | :--- | :--- |
-| `gwfox.sidebar` | Set sidebar width | `1`, `2`, or `3` |
+| `gwfox.sidebar` | Set sidebar width | `1` (narrow), `3` (wide), or `otherwise` (default) |
