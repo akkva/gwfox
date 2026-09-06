@@ -4477,11 +4477,7 @@ tab-split-view-wrapper & {
 }
 }
 
-#widget-overflow-mainView .panel-subview-body:not(:has(toolbarbutton)) + toolbarseparator {
-  display: none !important;
-}
-
-#toolbar-context-customize-sidebar {
+#toolbar-context-customize-sidebar, #widget-overflow-mainView .panel-subview-body:not(:has(toolbarbutton)) + toolbarseparator {
   display: none !important;
 }
 
@@ -4956,10 +4952,11 @@ menuitem {
 }
 }
 
-toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduce-button2, #appMenu-zoomReset-button2, #appMenu-fullscreen-button2) {
+toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduce-button2, #appMenu-zoomReset-button2, #appMenu-fullscreen-button2), #widget-overflow-mainView toolbarbutton {
 &:hover:not([disabled]) {
   background-color: var(--urlbarView-hover-background) !important;
   color: #fff !important;
+  fill: #fff !important;
 }
 }
 
