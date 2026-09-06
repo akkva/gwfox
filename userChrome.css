@@ -3807,7 +3807,13 @@ img[src="chrome://global/skin/icons/more.svg"] {
   margin-inline-end: 5px !important;
 :root[inFullscreen] & {
 @media (not -moz-pref("gwfox.mwc")) or (-moz-platform: macos) {
-  margin-inline-end: 72px !important;
+  margin-inline-end: 73px !important;
+}
+}
+@media (-moz-platform: macos) {
+  margin-inline-end: 8px !important;
+@media (-moz-mac-tahoe-theme) {
+  margin-inline-end: 5px !important;
 }
 }
 @media not (-moz-platform: macos) {
