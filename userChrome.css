@@ -4477,6 +4477,10 @@ tab-split-view-wrapper & {
 }
 }
 
+#widget-overflow-mainView .panel-subview-body:not(:has(toolbarbutton)) + toolbarseparator {
+  display: none !important;
+}
+
 #toolbar-context-customize-sidebar {
   display: none !important;
 }
