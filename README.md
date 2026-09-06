@@ -44,7 +44,7 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.urlbar.ac` | Auto-collapse address bar | For horizontal tabs |
 | `gwfox.blur` | Add acrylic effect to floating panel | |
 | `gwfox.ac` | Enable accent color | Edit `--bg0` in CSS to customize |
-| `gwfox.atbc` | Adaptive Tab Bar Colour compatibility | |
+| `gwfox.atbc` | [Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/) compatibility | |
 | `gwfox.newtab` | Enable New Tab transparency | Requires `allow_transparent_browser` |
 | `gwfox.noborder` | Remove window borders | |
 | `gwfox.bms` | Enable main window transparency | Linux |
