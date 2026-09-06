@@ -211,7 +211,7 @@
 &:not([sidebar-shown]) {
   padding-inline-start: 8px !important;
 }
-:root[inFullscreen]:has(#sidebar-box:not([hidden])) & {
+:root[inFullscreen] & {
   padding-inline-start: 0 !important;
 }
 }
