@@ -958,7 +958,10 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1 {
 @media -moz-pref("gwfox.fsi") {
   content: var(--search-glass);
   margin-inline-start: -40.5px;
+  margin-block-start: 1px;
+@media (-moz-platform: macos) {
   margin-block-start: .5px;
+}
 }
 }
 }
