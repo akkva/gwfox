@@ -590,17 +590,12 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1 {
   height: 28px !important;
   border-radius: var(--br2) !important;
 &:hover {
-  background: rgba(70, 70, 70, .1) !important;
+  background-color: rgba(70, 70, 70, .1) !important;
 }
 }
 
-.identity-box-button {
-  background: none !important;
-}
-
-#notification-popup-box {
-  margin-top: 0 !important;
-  background: none !important;
+.identity-box-button, #notification-popup-box {
+  background-color: transparent !important;
 }
 
 #trust-icon-container {
@@ -944,21 +939,26 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1 {
   border-radius: var(--br2) !important;
   background-color: transparent !important;
   --button-background-color: transparent !important;
+:root:has(#tabbrowser-tabs[orient="horizontal"]) & {
+  height: 26px !important;
+}
 &:not([disabled]) {
 &:hover { background-color: var(--button-hover-bgcolor) !important; }
 &[open], &:hover:active { background-color: var(--button-active-bgcolor) !important; }
 }
 #urlbar:not([breakout][breakout-extend]) & {
 > .searchmode-switcher-content {
-  margin-inline-start: 40px;
+  margin-inline-start: 42px;
 &::before {
   content: url("chrome://global/skin/icons/search-glass.svg");
   -moz-context-properties: fill;
   fill: light-dark(#525252, #c9c9cb);
-  margin-inline-start: -39px;
+  margin-inline-start: -40px;
   margin-block-start: 2px;
 @media -moz-pref("gwfox.fsi") {
   content: var(--search-glass);
+  margin-inline-start: -40.5px;
+  margin-block-start: .5px;
 }
 }
 }
@@ -1066,6 +1066,21 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1 {
 #search-container,
 #wrapper-search-container:not([place="panel"]) {
   display: none !important;
+}
+
+:root:has(#tabbrowser-tabs[orient="horizontal"]):has(#urlbar:not([breakout][breakout-extend])) {
+.urlbar-page-action {
+  max-height: 26px !important;
+}
+.urlbar-input-container {
+  padding-inline: 1px !important;
+> box {
+  max-height: 26px !important;
+}
+}
+.notification-anchor-icon {
+  margin-bottom: 2px !important;
+}
 }
 
 /* tabs */
@@ -4762,13 +4777,13 @@ tab-split-view-wrapper & {
 #urlbar {
   background-image: url("chrome://global/skin/icons/search-glass.svg");
   background-repeat: no-repeat;
-  background-position: left 6.5px bottom 9.5px;
+  background-position: left 8px bottom 9.5px;
   -moz-context-properties: fill, fill-opacity;
   fill: light-dark(#525252, #c9c9cb);
   transition: fill .25s .5s !important;
 @media -moz-pref("gwfox.fsi") {
   background-image: var(--search-glass);
-  background-position: left 6.5px bottom 10.5px;
+  background-position: left 7.5px bottom 10px;
   fill: currentColor;
 }
 &:-moz-window-inactive {
