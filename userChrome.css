@@ -4795,8 +4795,16 @@ tab-split-view-wrapper & {
   animation: air-timer 1.5s forwards !important;
 }
 
-#nav-bar .toolbarbutton-1:not(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button) {
+#nav-bar .toolbarbutton-1:not(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button, #alltabs-button) {
   display: none !important;
+}
+
+#alltabs-button {
+  position: fixed !important;
+  bottom: 0;
+  left: -35px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 #tabbrowser-tabbox {
