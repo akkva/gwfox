@@ -1831,34 +1831,23 @@ panel[type="arrow"] {
 }
 
 @keyframes panel-grow {
-0% {
-  transform: scale(.92);
-}
-100% {
-  transform: scale(1);
-}
+  0% { transform: scale(.92); }
+  100% { transform: scale(1); }
 }
 
 @keyframes slide-in {
-0%, 30% {
-  translate: 100%;
-  opacity: 0;
-}
-100% {
-  translate: 0;
-  opacity: 1;
-}
+  0%, 30% { translate: 100%; opacity: 0; }
+  100% { translate: 0; opacity: 1; }
 }
 
 @keyframes slide-out {
-100% {
-  translate: 100%;
-  opacity: 0;
+  100% { translate: 100%; opacity: 0; }
+  0% { translate: 0; opacity: 1; }
 }
-0% {
-  translate: 0;
-  opacity: 1;
-}
+
+@keyframes air-timer {
+  0%, 75% { --urlbar-flash-show: 1; }
+  100% { --urlbar-flash-show: 0; }
 }
 
 #sanitizeEverythingWarningBox, #trustpanel-blocker-section,
@@ -3904,6 +3893,65 @@ img[src="chrome://global/skin/icons/more.svg"] {
 
 &:has(#tabbrowser-tabs:not([expanded])) {
   --dp: collapse;
+  --sidebar-left: -345px;
+  --buttonbox-left: -345px;
+  --urlbar-left: -345px;
+  --sidebar-btn-left: -345px;
+  --back-btn-left: -345px;
+  --forward-btn-left: -345px;
+  --reload-btns-left: -345px;
+  --menu-btn-left: -345px;
+  --overflow-btn-left: -345px;
+  --ext-btn-left: -345px;
+  --dl-btn-left: -345px;
+@media -moz-pref("gwfox.sidebar", 1) {
+  --back-btn-left: -360px;
+  --forward-btn-left: -360px;
+  --reload-btns-left: -696px;
+  --menu-btn-left: -369px;
+  --overflow-btn-left: -369px;
+  --ext-btn-left: -369px;
+  --dl-btn-left: -369px;
+}
+@media -moz-pref("gwfox.sidebar", 3) {
+  --back-btn-left: -315px;
+  --forward-btn-left: -315px;
+  --reload-btns-left: -315px;
+  --menu-btn-left: -330px;
+  --overflow-btn-left: -330px;
+  --ext-btn-left: -330px;
+  --dl-btn-left: -330px;
+}
+@media not (-moz-platform: macos) {
+@media not -moz-pref("gwfox.mwc") {
+  --buttonbox-left: -182px;
+  --sidebar-btn-left: -417px;
+  --back-btn-left: -416px;
+  --forward-btn-left: -417px;
+  --reload-btns-left: -418px;
+@media -moz-pref("gwfox.sidebar", 1) {
+  --buttonbox-left: -232px;
+  --back-btn-left: -431px;
+  --forward-btn-left: -432px;
+  --reload-btns-left: -696px;
+  --menu-btn-left: -369px;
+  --overflow-btn-left: -369px;
+  --ext-btn-left: -369px;
+  --dl-btn-left: -369px;
+}
+@media -moz-pref("gwfox.sidebar", 3) {
+  --buttonbox-left: -152px;
+  --back-btn-left: -386px;
+  --forward-btn-left: -387px;
+  --reload-btns-left: -388px;
+  --menu-btn-left: -330px;
+  --overflow-btn-left: -330px;
+  --ext-btn-left: -330px;
+  --dl-btn-left: -330px;
+}
+}
+}
+
 #toolbar-menubar {
   top: 10px;
 }
@@ -3911,7 +3959,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 .titlebar-buttonbox-container {
   position: fixed !important;
   top: 27px !important;
-  left: -345px;
+  left: calc(var(--buttonbox-left) + (352px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
   z-index: 10;
 &::after {
   content: "";
@@ -3925,6 +3973,17 @@ img[src="chrome://global/skin/icons/more.svg"] {
 @media (-moz-platform: macos) {
 :root[inFullscreen] & {
   display: flex !important;
+}
+}
+@media not (-moz-platform: macos) {
+@media -moz-pref("gwfox.mwc") {
+  top: 10px !important;
+}
+@media not -moz-pref("gwfox.mwc") {
+  top: 22px !important;
+@media (-moz-platform: linux) {
+  top: 21px !important;
+}
 }
 }
 }
@@ -4128,7 +4187,22 @@ img[src="chrome://global/skin/icons/more.svg"] {
 #sidebar-button {
   position: fixed !important;
   top: 10px;
-  left: -345px;
+}
+
+#sidebar-button {
+  left: calc(var(--sidebar-btn-left) + (425px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
+}
+
+#back-button {
+  left: calc(var(--back-btn-left) + (483px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
+}
+
+#forward-button {
+  left: calc(var(--forward-btn-left) + (517px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
+}
+
+#reload-button, #stop-button {
+  left: calc(var(--reload-btns-left) + (551px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 
 #downloads-button,
@@ -4137,8 +4211,23 @@ img[src="chrome://global/skin/icons/more.svg"] {
 #unified-extensions-button {
   position: fixed !important;
   bottom: 16px;
-  left: -345px;
   scale: .9;
+}
+
+#PanelUI-menu-button {
+  left: calc(var(--menu-btn-left) + (399px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
+}
+
+#nav-bar-overflow-button {
+  left: calc(var(--overflow-btn-left) + (437px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
+}
+
+#unified-extensions-button {
+  left: calc(var(--ext-btn-left) + (474px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
+}
+
+#downloads-button {
+  left: calc(var(--dl-btn-left) + (511px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 
 #downloads-button,
@@ -4470,7 +4559,7 @@ tab-split-view-wrapper & {
 
 #urlbar:not([open]) {
   top: 55px !important;
-  left: -345px !important;
+  left: calc(var(--urlbar-left) + (361.5px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1))) !important;
 }
 
 #urlbar:not([open]) .urlbar-background {
@@ -4512,21 +4601,17 @@ tab-split-view-wrapper & {
   width: 240px !important;
   position: fixed !important;
   top: -26px;
-  left: -345px;
+  left: calc(var(--sidebar-left) + (353px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
   z-index: 9;
   border-radius: var(--br2) !important;
   background-color: var(--bg4);
   box-shadow: var(--bs1);
   backdrop-filter: var(--bf3);
   overflow: unset !important;
-  transition: left .05s .05s ease, box-shadow .05s .05s ease;
   padding-top: 81px !important;
 @media (-moz-platform: windows) {
   height: calc(100% - 17px) !important;
   top: -25px;
-}
-:root:has(.titlebar-buttonbox-container:hover) & {
-  transition: left .25s 0s ease, box-shadow .25s 0s ease;
 }
 @media (-moz-mac-tahoe-theme) {
   border-radius: var(--br3) !important;
@@ -4599,163 +4684,115 @@ tab-split-view-wrapper & {
 }
 }
 
-#stop-button, #back-button, #reload-button, #forward-button, #sidebar-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, .titlebar-buttonbox-container, #urlbar:not([open]) {
-  transition: all .05s .05s ease !important;
+#sidebar-container, #stop-button, #back-button, #reload-button, #forward-button, #sidebar-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, .titlebar-buttonbox-container, #urlbar:not([open]) {
+  transition: 0s .05s !important;
 :root:has(.titlebar-buttonbox-container:hover) & {
-  transition: all .25s 0s ease !important;
+  transition: cubic-bezier(.27, 1.182, .57, .982) .35s 0s !important;
 }
 }
 
 &:has(#sidebar-container:hover, .titlebar-buttonbox-container:hover, .titlebar-buttonbox:hover, #tabContextMenu:hover, #toolbar-context-menu:hover, toolbarbutton:is(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button):hover, toolbarbutton:is(#unified-extensions-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button)[open], .tab-note-editor-panel[panelopen], .tab-group-editor-panel[panelopen], #tabbrowser-tabs[movingtab], #urlbar:not([open]):hover, #urlbar:not([open]) .urlbar-page-action[open], #urlbar:not([open]) .identity-box-button[open], #urlbar:not([open]) #notification-popup-box[open], #urlbar:not([open]) #trust-icon-container[open]) {
+  --hover-lock: 0;
 .titlebar-buttonbox-container {
-  left: 7px;
+  --buttonbox-left: 7px;
 @media not (-moz-platform: macos) {
-@media -moz-pref("gwfox.mwc") {
-  top: 10px !important;
-}
 @media not -moz-pref("gwfox.mwc") {
-  top: 22px !important;
-  left: 170px;
+  --buttonbox-left: 170px;
 @media -moz-pref("gwfox.sidebar", 1) {
-  left: 120px;
+  --buttonbox-left: 120px;
 }
 @media -moz-pref("gwfox.sidebar", 3) {
-  left: 200px;
-}
-@media (-moz-platform: linux) {
-  top: 21px !important;
+  --buttonbox-left: 200px;
 }
 }
 }
 }
 
-#reload-button,
-#stop-button,
-#back-button,
-#forward-button,
-#sidebar-button {
-  left: 80px;
+#reload-button, #stop-button, #back-button, #forward-button, #sidebar-button {
+  --nav-btns-left: 80px;
 @media not (-moz-platform: macos) {
 @media not -moz-pref("gwfox.mwc") {
-  left: 8px;
+  --nav-btns-left: 8px;
 }
 }
+}
+
+#sidebar-button {
+  --sidebar-btn-left: var(--nav-btns-left);
 }
 
 #back-button {
-  left: 138px;
-@media -moz-pref("gwfox.sidebar", 1) {
-  left: 123px;
-}
-@media -moz-pref("gwfox.sidebar", 3) {
-  left: 168px;
-}
+  --back-btn-left: calc(var(--nav-btns-left) + 58px);
+@media -moz-pref("gwfox.sidebar", 1) { --back-btn-left: calc(var(--nav-btns-left) + 43px); }
+@media -moz-pref("gwfox.sidebar", 3) { --back-btn-left: calc(var(--nav-btns-left) + 88px); }
 @media not (-moz-platform: macos) {
 @media not -moz-pref("gwfox.mwc") {
-  left: 67px;
-@media -moz-pref("gwfox.sidebar", 1) {
-  left: 52px;
-}
-@media -moz-pref("gwfox.sidebar", 3) {
-  left: 97px;
-}
+  --back-btn-left: 67px;
+@media -moz-pref("gwfox.sidebar", 1) { --back-btn-left: 52px; }
+@media -moz-pref("gwfox.sidebar", 3) { --back-btn-left: 97px; }
 }
 }
 }
 
 #forward-button {
-  left: 172px;
-@media -moz-pref("gwfox.sidebar", 1) {
-  left: 157px;
-}
-@media -moz-pref("gwfox.sidebar", 3) {
-  left: 202px;
-}
+  --forward-btn-left: calc(var(--nav-btns-left) + 92px);
+@media -moz-pref("gwfox.sidebar", 1) { --forward-btn-left: calc(var(--nav-btns-left) + 77px); }
+@media -moz-pref("gwfox.sidebar", 3) { --forward-btn-left: calc(var(--nav-btns-left) + 122px); }
 @media not (-moz-platform: macos) {
 @media not -moz-pref("gwfox.mwc") {
-  left: 100px;
-@media -moz-pref("gwfox.sidebar", 1) {
-  left: 85px;
-}
-@media -moz-pref("gwfox.sidebar", 3) {
-  left: 130px;
-}
+  --forward-btn-left: 100px;
+@media -moz-pref("gwfox.sidebar", 1) { --forward-btn-left: 85px; }
+@media -moz-pref("gwfox.sidebar", 3) { --forward-btn-left: 130px; }
 }
 }
 }
 
-#reload-button,
-#stop-button {
-  left: 206px;
-@media -moz-pref("gwfox.sidebar", 1) {
-  left: -345px;
-}
-@media -moz-pref("gwfox.sidebar", 3) {
-  left: 236px;
-}
+#reload-button, #stop-button {
+  --reload-btns-left: calc(var(--nav-btns-left) + 126px);
+@media -moz-pref("gwfox.sidebar", 1) { --reload-btns-left: -345px; }
+@media -moz-pref("gwfox.sidebar", 3) { --reload-btns-left: calc(var(--nav-btns-left) + 156px); }
 @media not (-moz-platform: macos) {
 @media not -moz-pref("gwfox.mwc") {
-  left: 133px;
-@media -moz-pref("gwfox.sidebar", 1) {
-  left: -345px;
-}
-@media -moz-pref("gwfox.sidebar", 3) {
-  left: 163px;
-}
+  --reload-btns-left: 133px;
+@media -moz-pref("gwfox.sidebar", 1) { --reload-btns-left: -345px; }
+@media -moz-pref("gwfox.sidebar", 3) { --reload-btns-left: 163px; }
 }
 }
 }
 
-#downloads-button,
-#PanelUI-menu-button,
-#nav-bar-overflow-button,
-#unified-extensions-button {
-  left: 54px;
-@media -moz-pref("gwfox.sidebar", 1) {
-  left: 30px;
+#downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button {
+  --bottom-btns-left: 54px;
+@media -moz-pref("gwfox.sidebar", 1) { --bottom-btns-left: 30px; }
+@media -moz-pref("gwfox.sidebar", 3) { --bottom-btns-left: 69px; }
 }
-@media -moz-pref("gwfox.sidebar", 3) {
-  left: 69px;
-}
+
+#PanelUI-menu-button {
+  --menu-btn-left: var(--bottom-btns-left);
 }
 
 #nav-bar-overflow-button {
-  left: 92px;
-@media -moz-pref("gwfox.sidebar", 1) {
-  left: 68px;
-}
-@media -moz-pref("gwfox.sidebar", 3) {
-  left: 107px;
-}
+  --overflow-btn-left: calc(var(--bottom-btns-left) + 38px);
 }
 
 #unified-extensions-button {
-  left: 129px;
-@media -moz-pref("gwfox.sidebar", 1) {
-  left: 105px;
-}
-@media -moz-pref("gwfox.sidebar", 3) {
-  left: 144px;
-}
+  --ext-btn-left: calc(var(--bottom-btns-left) + 75px);
 }
 
 #downloads-button {
-  left: 166px;
-@media -moz-pref("gwfox.sidebar", 1) {
-  left: 142px;
-}
-@media -moz-pref("gwfox.sidebar", 3) {
-  left: 181px;
-}
+  --dl-btn-left: calc(var(--bottom-btns-left) + 112px);
 }
 
 #sidebar-container {
-  left: 8px;
+  --sidebar-left: 8px;
 }
 
 #urlbar:not([open]) {
-  left: 16.5px !important;
+  --urlbar-left: 16.5px !important;
 }
+}
+
+&:has(.tabbrowser-tab[selected][busy]) {
+  animation: air-timer 1.5s forwards !important;
 }
 
 #nav-bar .toolbarbutton-1:not(#sidebar-button, #reload-button, #stop-button, #back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #downloads-button) {
