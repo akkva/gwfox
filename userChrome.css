@@ -4609,6 +4609,10 @@ tab-split-view-wrapper & {
   backdrop-filter: var(--bf3);
   overflow: unset !important;
   padding-top: 81px !important;
+  transition: left 0s .05s;
+:root:has(.titlebar-buttonbox-container:hover) & {
+  transition: left cubic-bezier(.27, 1.182, .57, .982) .35s 0s;
+}
 @media (-moz-platform: windows) {
   height: calc(100% - 17px) !important;
   top: -25px;
@@ -4684,7 +4688,7 @@ tab-split-view-wrapper & {
 }
 }
 
-#sidebar-container, #stop-button, #back-button, #reload-button, #forward-button, #sidebar-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, .titlebar-buttonbox-container, #urlbar:not([open]) {
+#stop-button, #back-button, #reload-button, #forward-button, #sidebar-button, #downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, .titlebar-buttonbox-container, #urlbar:not([open]) {
   transition: 0s .05s !important;
 :root:has(.titlebar-buttonbox-container:hover) & {
   transition: cubic-bezier(.27, 1.182, .57, .982) .35s 0s !important;
