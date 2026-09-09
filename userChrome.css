@@ -4898,13 +4898,10 @@ tab-split-view-wrapper & {
   -moz-context-properties: fill, fill-opacity;
   fill: light-dark(#525252, #c9c9cb) !important;
 @media -moz-pref("gwfox.fsi") {
-  fill: light-dark(#000, #fff);
+  fill: light-dark(#000, #fff) !important;
 }
 &:-moz-window-inactive {
-  fill-opacity: .65;
-@media -moz-pref("gwfox.fsi") {
-  fill-opacity: 1;
-}
+  fill-opacity: .65 !important;
 }
 &:hover {
   background-color: var(--button-hover-bgcolor) !important;
