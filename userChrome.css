@@ -4901,7 +4901,9 @@ tab-split-view-wrapper & {
   fill: light-dark(#000, #fff) !important;
 }
 &:-moz-window-inactive {
+@media (-moz-platform: linux) {
   fill-opacity: .65 !important;
+}
 }
 &:hover {
   background-color: var(--button-hover-bgcolor) !important;
