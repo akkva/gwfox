@@ -5136,11 +5136,7 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
 
 @media -moz-pref("gwfox.icons") {
 .menu-icon[srcset^="moz-extension://"] {
-  filter: grayscale(100%) contrast(200%) !important;
-  scale: .75;
-@media -moz-pref("gwfox.fsi") {
-  scale: 1;
-}
+  visibility: hidden !important;
 }
 
 #appMenu-zoom-controls::before,
@@ -5297,8 +5293,8 @@ menupopup[needsgutter] {
   display: block !important;
 }
 }
-> menu,
-> menuitem,
+> menu:not(.menu-iconic),
+> menuitem:not(.menuitem-iconic),
 > menucaption {
   padding-inline: 5px !important;
 &::before {
@@ -5313,7 +5309,7 @@ menupopup[needsgutter] {
   fill-opacity: var(--menu-arrow-opacity);
   scale: .75;
 @media -moz-pref("gwfox.fsi") {
-  content: var(--check) !important;
+  content: var(--check);
   scale: 1;
 }
 }
