@@ -3720,15 +3720,15 @@ img[src="chrome://global/skin/icons/more.svg"] {
 &:has([splitview], .devtools-toolbox-side-iframe:not([hidden])):has(#sidebar-box[hidden]) {
 #PersonalToolbar {
   opacity: 0;
-  transition: opacity .25s !important;
+  transition: opacity .15s !important;
 :root:has(#vertical-spacer:hover, .titlebar-buttonbox:hover, #PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open]) & {
   opacity: 1;
-  transition: opacity .25s !important;
+  transition: opacity .15s !important;
 }
 @media not -moz-pref("sidebar.verticalTabs") {
 :root:has(#TabsToolbar:hover):not(:has(:is(.tabbrowser-tab, #alltabs-button, #new-tab-button, #tabs-newtab-button, .tab-group-label):hover)) & {
   opacity: 1;
-  transition: opacity .25s !important;
+  transition: opacity .15s !important;
 }
 }
 }
@@ -4951,15 +4951,15 @@ tab-split-view-wrapper & {
 @media -moz-pref("gwfox.toolbar") {
 #PersonalToolbar {
   opacity: 0;
-  transition: opacity .25s !important;
+  transition: opacity .15s !important;
 :root:has(#sidebar-box:not([hidden]), :is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]) & {
   opacity: 1;
-  transition: opacity .25s !important;
+  transition: opacity .15s !important;
 }
 @media not -moz-pref("sidebar.verticalTabs") {
 :root:is(:has(#tabbrowser-tabs[movingtab]), :has(#TabsToolbar:hover):not(:has(:is(.tabbrowser-tab, #alltabs-button, #new-tab-button, #tabs-newtab-button, .tab-group-label, .titlebar-buttonbox-container):hover))) & {
   opacity: 1;
-  transition: opacity .25s !important;
+  transition: opacity .15s !important;
 }
 }
 }
@@ -4968,20 +4968,20 @@ tab-split-view-wrapper & {
 &:has(#tabbrowser-tabs[expanded]) {
 .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #tabs-newtab-button, #vertical-tabs-newtab-button, #PlacesChevron) {
   opacity: 0 !important;
-  transition: opacity .25s !important;
+  transition: opacity .15s !important;
 :root:is(:has(#sidebar-box:not([hidden]), :is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
   opacity: 1 !important;
-  transition: opacity .25s !important;
+  transition: opacity .15s !important;
 }
 }
 @media not (-moz-platform: macos) {
 @media not -moz-pref("gwfox.mwc") {
 .titlebar-buttonbox-container {
   opacity: 0 !important;
-  transition: opacity .25s !important;
+  transition: opacity .15s !important;
 :root:is(:has(#sidebar-box:not([hidden]), :is(#vertical-spacer, #PersonalToolbar, .titlebar-buttonbox-container):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
   opacity: 1 !important;
-  transition: opacity .25s !important;
+  transition: opacity .15s !important;
 }
 }
 }
@@ -4990,7 +4990,7 @@ tab-split-view-wrapper & {
 &:has(#tabbrowser-tabs[expanded]):has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open])) {
 #PersonalToolbar {  
   opacity: 1;
-  transition: opacity .25s !important;
+  transition: opacity .15s !important;
 }
 }
 @media not (-moz-platform: macos) {
@@ -4998,7 +4998,7 @@ tab-split-view-wrapper & {
 &:has(#tabbrowser-tabs[expanded]):has(.titlebar-buttonbox-container:hover) {
 #PersonalToolbar, .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button) {  
   opacity: 1 !important;
-  transition: opacity .25s !important;
+  transition: opacity .15s !important;
 }
 }
 }
