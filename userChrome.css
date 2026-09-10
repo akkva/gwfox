@@ -5133,7 +5133,11 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
 
 @media -moz-pref("gwfox.icons") {
 .menu-icon[srcset^="moz-extension://"] {
-  visibility: hidden !important;
+  filter: grayscale(100%) !important;
+  scale: .75;
+@media (prefers-color-scheme: dark) {
+  filter: invert(100%) grayscale(100%) brightness(200%) !important;
+}
 }
 
 #appMenu-zoom-controls::before,
