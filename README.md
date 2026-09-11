@@ -25,7 +25,7 @@
 > ¹ Windows: Requires enabling "System theme — auto" in Firefox Add-ons manager.
 
 > [!IMPORTANT]
-> **For East Asian (CJK) input:** Must enable **"Address Bar: show results during IME composition"** in `Settings` > `Firefox Labs`.
+> Required for East Asian (CJK) input: Enable "Address Bar: show results during IME composition" in `Settings` > `Firefox Labs`.
 
 3. Restart Firefox to apply changes.
 
