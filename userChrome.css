@@ -3540,8 +3540,10 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 :root:has(:is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]) & {
   margin-top: 0 !important;
+  transition: margin-top .25s .25s;
 .browserStack {
   margin-top: -28px;
+  transition: margin-top .25s .25s;
 @media -moz-pref("gwfox.urlbar") {
   margin-top: -39px;
 @media -moz-pref("gwfox.noborder") {
@@ -3646,8 +3648,10 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 &:has(#PersonalToolbar:not([collapsed])):has(#PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open], #PersonalToolbar #PlacesChevron[open], #TabsToolbar:hover):not(:has(:is(.tabbrowser-tab, #alltabs-button, #new-tab-button, #tabs-newtab-button, .tab-group-label, .titlebar-buttonbox-container):hover)) #tabbrowser-tabbox {
   margin-top: 0 !important;
+  transition: margin-top .25s .25s;
 .browserStack {
   margin-top: -28px;
+  transition: margin-top .25s .25s;
 }
 }
 &:has(#sidebar-box:not([hidden])) #tabbrowser-tabbox {
@@ -3723,12 +3727,12 @@ img[src="chrome://global/skin/icons/more.svg"] {
   transition: opacity .15s !important;
 :root:has(#vertical-spacer:hover, .titlebar-buttonbox:hover, #PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open]) & {
   opacity: 1;
-  transition: opacity .15s !important;
+  transition: opacity .15s .25s !important;
 }
 @media not -moz-pref("sidebar.verticalTabs") {
 :root:has(#TabsToolbar:hover):not(:has(:is(.tabbrowser-tab, #alltabs-button, #new-tab-button, #tabs-newtab-button, .tab-group-label):hover)) & {
   opacity: 1;
-  transition: opacity .15s !important;
+  transition: opacity .15s .25s !important;
 }
 }
 }
@@ -4954,12 +4958,12 @@ tab-split-view-wrapper & {
   transition: opacity .15s !important;
 :root:has(#sidebar-box:not([hidden]), :is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]) & {
   opacity: 1;
-  transition: opacity .15s !important;
+  transition: opacity .15s .25s !important;
 }
 @media not -moz-pref("sidebar.verticalTabs") {
 :root:is(:has(#tabbrowser-tabs[movingtab]), :has(#TabsToolbar:hover):not(:has(:is(.tabbrowser-tab, #alltabs-button, #new-tab-button, #tabs-newtab-button, .tab-group-label, .titlebar-buttonbox-container):hover))) & {
   opacity: 1;
-  transition: opacity .15s !important;
+  transition: opacity .15s .25s !important;
 }
 }
 }
@@ -4971,7 +4975,7 @@ tab-split-view-wrapper & {
   transition: opacity .15s !important;
 :root:is(:has(#sidebar-box:not([hidden]), :is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
   opacity: 1 !important;
-  transition: opacity .15s !important;
+  transition: opacity .15s .25s !important;
 }
 }
 @media not (-moz-platform: macos) {
@@ -4981,7 +4985,7 @@ tab-split-view-wrapper & {
   transition: opacity .15s !important;
 :root:is(:has(#sidebar-box:not([hidden]), :is(#vertical-spacer, #PersonalToolbar, .titlebar-buttonbox-container):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
   opacity: 1 !important;
-  transition: opacity .15s !important;
+  transition: opacity .15s .25s !important;
 }
 }
 }
@@ -4998,7 +5002,7 @@ tab-split-view-wrapper & {
 &:has(#tabbrowser-tabs[expanded]):has(.titlebar-buttonbox-container:hover) {
 #PersonalToolbar, .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button) {  
   opacity: 1 !important;
-  transition: opacity .15s !important;
+  transition: opacity .15s .25s !important;
 }
 }
 }
