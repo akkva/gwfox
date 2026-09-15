@@ -760,8 +760,8 @@ button {
 
 .tile {
   border-radius: 16px !important;
-  width: 72px !important;
-  height: 72px !important;
+  width: 68px !important;
+  height: 68px !important;
   box-shadow: 0 2px 25px rgba(0, 0, 0, .05) !important;
   border: none !important;
   transition: background .5s !important;
@@ -781,8 +781,33 @@ button {
   padding: unset !important;
 }
 
-.edit-topsites-wrapper .top-site-outer {
-  display: none !important;
+.edit-topsites .modal {
+  width: 100% !important;
+}
+
+.edit-topsites .topsite-form {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: var(--space-xlarge) !important;
+  gap: var(--space-xlarge) !important;
+}
+
+.edit-topsites .topsite-form .form-input-container {
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+.edit-topsites .topsite-form .form-wrapper input[type=text] {
+  width: 368px !important;
+  --border-radius-small: 8px !important;
+}
+
+.edit-topsites .topsite-form .top-site-outer {
+  margin-block-start: var(--space-large) !important;
+}
+
+.edit-topsites .topsite-form .topsite-form-footer {
+  padding: 0 !important;
 }
 
 .context-menu-button.icon {
