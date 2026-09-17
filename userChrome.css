@@ -166,7 +166,7 @@
   overflow: unset !important;
 }
 
-:root:not([inDOMFullscreen], [chromehidden~="toolbar"], [chromehidden~="location"], [taskbartab]) {
+:root:not([inDOMFullscreen], [chromehidden~="toolbar"], [popup-window], [taskbartab]) {
 .titlebar-buttonbox-container {
 @media not -moz-pref("sidebar.verticalTabs") {
 @media (-moz-platform: macos) {
@@ -346,7 +346,7 @@ split-view-footer {
 }
 
 @media not -moz-pref("sidebar.verticalTabs") {
-:root:not([chromehidden~="toolbar"], [chromehidden~="location"], [taskbartab]) {
+:root:not([chromehidden~="toolbar"], [popup-window], [taskbartab]) {
 .titlebar-spacer, #nav-bar:not([customizing]) toolbarspring, #wrapper-customizableui-special-spring3, #customizableui-special-spring3 {
   visibility: collapse;
 }
@@ -2091,11 +2091,15 @@ tree {
 }
 }
 
-#main-window[chromehidden~="toolbar"] {
+#main-window:is([chromehidden~="toolbar"], [popup-window]) {
   min-width: unset !important;
 
 .browser-toolbar {
   display: none !important;
+}
+
+.dialogStack {
+  margin-top: 10px !important;
 }
 
 #tabbrowser-tabbox browser {
@@ -3497,7 +3501,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 /* tweak */
 
 @media -moz-pref("gwfox.toolbar") {
-:root:not([inDOMFullscreen], [customizing], [taskbartab]) {
+:root:not([inDOMFullscreen], [customizing], [chromehidden~="toolbar"], [popup-window], [taskbartab]) {
 .browserStack,
 #tabbrowser-tabbox {
   transition: margin-top .25s;
@@ -3756,7 +3760,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 
 @media -moz-pref("gwfox.urlbar") and -moz-pref("sidebar.verticalTabs") {
 @media not -moz-pref("sidebar.visibility", "expand-on-hover") {
-:root:not([inDOMFullscreen], [customizing], [taskbartab]) {
+:root:not([inDOMFullscreen], [customizing], [chromehidden~="toolbar"], [popup-window], [taskbartab]) {
 #navigator-toolbox {
   display: grid;
   grid-template-columns: minmax(auto, 0) auto;
@@ -4961,7 +4965,7 @@ tab-split-view-wrapper & {
 }
 
 @media -moz-pref("gwfox.newtab") {
-:root:not([inDOMFullscreen], [chromehidden~="toolbar"], [chromehidden~="location"], [customizing], [taskbartab]) {
+:root:not([inDOMFullscreen], [chromehidden~="toolbar"], [popup-window], [customizing], [taskbartab]) {
 .browserContainer {
   background: light-dark(rgba(255, 255, 255, .3), rgba(255, 255, 255, .1)) !important;
 }
