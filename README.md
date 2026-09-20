@@ -52,7 +52,10 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.mwc` | Enable macOS-style window controls  | Windows/Linux |
 | `gwfox.msc` | Enable macOS-style tab close button | |
 | `gwfox.twc` | Enable theme-styled window controls | Windows/Linux |
+| `gwfox.twc.ac` | Auto-collapse window controls | |
+| `gwfox.fxa` | Replace app menu icon with user profile picture | Requires sign-in |
 | `gwfox.fsi` | Enable [FluentUI System Icons](https://github.com/microsoft/fluentui-system-icons) | |
+
 
 > [!NOTE]
 > * When `gwfox.urlbar` is enabled, the collapsed sidebar expands in an Arc-like hover mode, which you can trigger from the left.
