@@ -635,6 +635,19 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1 {
 }
 }
 
+@media -moz-pref("gwfox.fxa") {
+:root[fxastatus=signedin] #PanelUI-menu-button .toolbarbutton-icon {
+  list-style-image: none !important; 
+  background-image: var(--avatar-image-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+}
+
 #appMenu-fullscreen-button2 .toolbarbutton-icon {
   background: none !important;
 }
@@ -3504,7 +3517,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 :root:not([inDOMFullscreen], [customizing], [chromehidden~="toolbar"], [popup-window], [taskbartab]) {
 .browserStack,
 #tabbrowser-tabbox {
-  transition: margin-top .25s;
+  transition: margin-top .25s .05s;
 :root[sidebar-expand-on-hover] & {
   transition: margin-top .25s, clip-path .25s;
 :root:has(#tabbrowser-tabs[expanded]) & {
@@ -3742,7 +3755,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 &:has([splitview], .devtools-toolbox-side-iframe:not([hidden])):has(#sidebar-box[hidden]) {
 #PersonalToolbar {
   opacity: 0;
-  transition: opacity .15s !important;
+  transition: opacity .15s .05s !important;
 :root:has(#vertical-spacer:hover, .titlebar-buttonbox:hover, #PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open]) & {
   opacity: 1;
   transition: opacity .15s .25s !important;
@@ -4916,6 +4929,12 @@ tab-split-view-wrapper & {
   border-radius: var(--br2) !important;
   -moz-context-properties: fill, fill-opacity;
   fill: light-dark(#525252, #c9c9cb) !important;
+@media (-moz-gtk-csd-reversed-placement) {
+  margin: 6.5px -4px 0 8px !important;
+@media -moz-pref("sidebar.verticalTabs") and -moz-pref("gwfox.urlbar") {
+  margin: 6.5px 8px 0 -4px !important;
+}
+}
 @media -moz-pref("gwfox.fsi") {
   fill: light-dark(#000, #fff) !important;
 }
@@ -4939,6 +4958,41 @@ tab-split-view-wrapper & {
   content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 3.5 7.4 c -0.33 0 -0.6 0.27 -0.6 0.6 0 0.33 0.27 0.6 0.6 0.6 h 9 c 0.33 0 0.6 -0.27 0.6 -0.6 0 -0.33 -0.27 -0.6 -0.6 -0.6 z m 0 0.2 h 9 c 0.22 0 0.4 0.18 0.4 0.4 0 0.22 -0.18 0.4 -0.4 0.4 h -9 C 3.28 8.4 3.1 8.22 3.1 8 3.1 7.78 3.28 7.6 3.5 7.6 Z M 3.5 7.5 A 0.5 0.5 0 0 0 3 8 0.5 0.5 0 0 0 3.5 8.5 h 9 A 0.5 0.5 0 0 0 13 8 0.5 0.5 0 0 0 12.5 7.5 Z'/%3E%3C/svg%3E") !important;
 @media -moz-pref("gwfox.fsi") {
   content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 3.5,7.5 A 0.5,0.5 0 0 0 3,8 0.5,0.5 0 0 0 3.5,8.5 h 9 A 0.5,0.5 0 0 0 13,8 0.5,0.5 0 0 0 12.5,7.5 Z'/%3E%3C/svg%3E") !important;
+}
+@media -moz-pref("gwfox.twc.ac") {
+  max-width: 0 !important;
+  margin-inline-end: -32px !important;
+  transition: .25s;
+@media (-moz-gtk-csd-reversed-placement) {
+  margin-inline-end: -40px !important;
+}
+@media -moz-pref("sidebar.verticalTabs") and -moz-pref("gwfox.urlbar") {
+  max-width: 32px !important;
+  margin-inline-end: 8px !important;
+}
+.titlebar-buttonbox-container:hover & {
+  max-width: 32px !important;
+  margin-inline-end: 8px !important;
+@media (-moz-gtk-csd-reversed-placement) {
+  margin-inline-end: -2px !important;
+@media -moz-pref("sidebar.verticalTabs") and -moz-pref("gwfox.urlbar") {
+  margin-inline-end: 8px !important;
+}
+}
+}
+}
+}
+
+.titlebar-max, .titlebar-restore {
+@media -moz-pref("gwfox.twc.ac") {
+  max-width: 0 !important;
+  transition: .25s;
+@media -moz-pref("sidebar.verticalTabs") and -moz-pref("gwfox.urlbar") {
+  max-width: 32px !important;
+}
+.titlebar-buttonbox-container:hover & {
+  max-width: 32px !important;
+}
 }
 }
 
@@ -4973,7 +5027,7 @@ tab-split-view-wrapper & {
 @media -moz-pref("gwfox.toolbar") {
 #PersonalToolbar {
   opacity: 0;
-  transition: opacity .15s !important;
+  transition: opacity .15s .05s !important;
 :root:has(#sidebar-box:not([hidden]), :is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]) & {
   opacity: 1;
   transition: opacity .15s .25s !important;
@@ -4990,7 +5044,7 @@ tab-split-view-wrapper & {
 &:has(#tabbrowser-tabs[expanded]) {
 .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #tabs-newtab-button, #vertical-tabs-newtab-button, #PlacesChevron) {
   opacity: 0 !important;
-  transition: opacity .15s !important;
+  transition: opacity .15s .05s !important;
 :root:is(:has(#sidebar-box:not([hidden]), :is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
   opacity: 1 !important;
   transition: opacity .15s .25s !important;
@@ -5000,7 +5054,7 @@ tab-split-view-wrapper & {
 @media not -moz-pref("gwfox.mwc") {
 .titlebar-buttonbox-container {
   opacity: 0 !important;
-  transition: opacity .15s !important;
+  transition: opacity .15s .05s !important;
 :root:is(:has(#sidebar-box:not([hidden]), :is(#vertical-spacer, #PersonalToolbar, .titlebar-buttonbox-container):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
   opacity: 1 !important;
   transition: opacity .15s .25s !important;
@@ -5012,7 +5066,7 @@ tab-split-view-wrapper & {
 &:has(#tabbrowser-tabs[expanded]):has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open])) {
 #PersonalToolbar {  
   opacity: 1;
-  transition: opacity .15s !important;
+  transition: opacity .15s .05s !important;
 }
 }
 @media not (-moz-platform: macos) {
@@ -5198,21 +5252,14 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
   content: "";
   width: 16px;
   height: 16px;
-  background-image: var(--avatar-image-url);
-}
-
-#appMenu-fxa-status2:not([fxastatus="signedin"], [fxastatus="unverified"], [fxastatus="login-failed"])::before {
-  content: "";
-  width: 16px;
-  height: 16px;
   background-image: url("chrome://browser/skin/fxa/avatar-empty.svg");
-  margin-inline-start: -2px;
-  margin-inline-end: 9px;
-  -moz-context-properties: fill;
-  fill: currentColor;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
   scale: .75;
 @media -moz-pref("gwfox.fsi") {
-  scale: 1;
+  scale: .95;
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='1 1 18 18' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 2C7.79086 2 6 3.79086 6 6C6 8.20914 7.79086 10 10 10C12.2091 10 14 8.20914 14 6C14 3.79086 12.2091 2 10 2ZM7 6C7 4.34315 8.34315 3 10 3C11.6569 3 13 4.34315 13 6C13 7.65685 11.6569 9 10 9C8.34315 9 7 7.65685 7 6ZM5.00873 11C3.90315 11 3 11.8869 3 13C3 14.6912 3.83281 15.9663 5.13499 16.7966C6.41697 17.614 8.14526 18 10 18C11.8547 18 13.583 17.614 14.865 16.7966C16.1672 15.9663 17 14.6912 17 13C17 11.8956 16.1045 11 15 11L5.00873 11ZM4 13C4 12.4467 4.44786 12 5.00873 12L15 12C15.5522 12 16 12.4478 16 13C16 14.3088 15.3777 15.2837 14.3274 15.9534C13.2568 16.636 11.7351 17 10 17C8.26489 17 6.74318 16.636 5.67262 15.9534C4.62226 15.2837 4 14.3088 4 13Z'/%3E%3C/svg%3E");
 }
 }
