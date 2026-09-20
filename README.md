@@ -53,7 +53,7 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.msc` | Enable macOS-style tab close button | |
 | `gwfox.twc` | Enable theme-styled window controls | Windows/Linux |
 | `gwfox.twc.ac` | Auto-collapse window controls | |
-| `gwfox.fxa` | Replace app menu icon with user profile picture | Requires sign-in |
+| `gwfox.fxa` | Replace app menu icon with avatar | Requires sign-in |
 | `gwfox.fsi` | Enable [FluentUI System Icons](https://github.com/microsoft/fluentui-system-icons) | |
 
 
