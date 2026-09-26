@@ -18,7 +18,6 @@
   --bs2: 0 5px 15px rgba(0, 0, 0, .25), inset 0 0 0 .5px rgba(0, 0, 0, .78), 0 0 0 .5px rgba(0, 0, 0, .2);
   --bf1: none;
   --bf2: none;
-  --bf3: none;
   --in-content-box-border-color: light-dark(rgba(0, 0, 0, .2), rgba(225, 225, 225, .2)) !important;
   --border-color-interactive: var(--in-content-box-border-color) !important;
   --newtab-background-color-secondary: transparent !important;
@@ -44,30 +43,26 @@
   --newtab-primary-action-background: var(--color-accent-primary) !important;
   --button-text-color-primary: #fff !important;
   --border-color: rgba(105, 105, 105, .2) !important;
-  @media -moz-pref("gwfox.blur") {
-  --bf2: blur(15px);
-  --bf3: blur(30px);
-  --bg4: light-dark(rgba(255, 255, 255, .75), rgba(25, 25, 25, .75));
-  --bg5: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 15, .75));
-  --bg6: light-dark(rgba(255, 255, 255, .6), rgba(15, 15, 15, .6));
-  @media (-moz-mac-tahoe-theme) {
-  --bg4: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .55));
-  }
-  }
-  @media (-moz-mac-tahoe-theme) {
+@media -moz-pref("gwfox.blur") {
+  --bf2: blur(30px);
+  --bg4: light-dark(rgba(250, 250, 250, .85), rgba(25, 25, 25, .85));
+  --bg5: light-dark(rgba(250, 250, 250, .75), rgba(15, 15, 15, .75));
+  --bg6: light-dark(rgba(250, 250, 250, .6), rgba(15, 15, 15, .6));
+}
+@media (-moz-mac-tahoe-theme) {
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .34), 0 0 0 .5px rgba(0, 0, 0, .12);
-  }
-  @media (-moz-platform: windows) {
+}
+@media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
   --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(205, 205, 205, .15);
-  }
-  @media (-moz-platform: linux) {
+}
+@media (-moz-platform: linux) {
   --bs1: 0 2px 15px rgba(0, 0, 0, .2), 0 0 0 1px rgba(0, 0, 0, .058);
-  }
-  @media not -moz-pref("gwfox.atbc") {
+}
+@media not -moz-pref("gwfox.atbc") {
   --in-content-page-background: light-dark(#fff, #191919) !important;
   --newtab-background-color: light-dark(#fff, #191919) !important;
-  }
+}
 }
 
 .toggle-button {
@@ -91,12 +86,8 @@
   border-radius: 12px !important;
   background-color: light-dark(rgba(255, 255, 255, 1), rgba(25, 25, 25, 1)) !important;
 @media -moz-pref("gwfox.blur") {
-  background-color: light-dark(rgba(255, 255, 255, .75), rgba(35, 35, 35, .75)) !important;
+  background-color: light-dark(rgba(250, 250, 250, .85), rgba(25, 25, 25, .85)) !important;
   backdrop-filter: blur(30px);
-@media (-moz-mac-tahoe-theme) {
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(35, 35, 35, .55)) !important;
-  backdrop-filter: blur(15px);
-}
 }
 }
 
@@ -151,7 +142,74 @@ body { background-color: #191919 !important; } }
 }
 }
 
-@-moz-document url-prefix("about:"), regexp("chrome:\/\/(?!devtools).*") {
+@-moz-document regexp(".*\\.pdf") {
+#viewsManager, #editorCommentsSidebar {
+  --header-bg: transparent !important;
+  box-shadow: var(--bs1) !important;
+@media (prefers-color-scheme: light) {
+  border: none !important;
+}
+}
+.horizontalToolbarSeparator {
+  border-top: 1px solid rgba(105, 105, 105, .2) !important;
+}
+.doorHangerRight {
+  border-radius: 8px !important;
+&::before, &::after {
+  display: none !important;
+}
+}
+.toolbarButton {
+  border-radius: 8px !important;
+  background-color: transparent !important;
+&:not([disabled]) {
+&:hover {
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+}
+&[open], &:hover:active {
+  background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
+}
+}
+&.labeled {
+  border-radius: 6px !important;
+}
+}
+.dropdownToolbarButton {
+  clip-path: inset(0 round 8px);
+  background-color: transparent !important;
+&:hover {
+  background-color: light-dark(rgba(70, 70, 70, .05), rgba(170, 170, 170, .1)) !important;
+}
+> select {
+  background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
+}
+}
+.toolbarField {
+  border-radius: 8px !important;
+  border: none !important;
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+}
+#editorCommentsSidebar {
+& #editorCommentsSidebarListContainer {
+& #editorCommentsSidebarList {
+& .sidebarComment {
+  background-color: light-dark(rgba(70, 70, 70, .05), rgba(170, 170, 170, .1)) !important;
+  border-color: transparent !important;
+}
+}
+}
+}
+@media (prefers-color-scheme: dark) {
+.pdfViewer, #outerContainer {
+  background-color: #282828 !important;
+}
+#viewsManager, #toolbarContainer, #secondaryToolbar, .doorHangerRight {
+  background-color: #191919 !important;
+}
+}
+}
+
+@-moz-document url-prefix("about:"), regexp("chrome:\/\/(?!devtools).*"), regexp(".*\\.pdf") {
 input[type="search"] {
   background-color: light-dark(rgba(85, 85, 85, .1), rgba(190, 190, 190, .1)) !important;
   border-color: transparent !important;
@@ -305,12 +363,9 @@ panel-list {
   box-shadow: var(--bs1) !important;
   padding: 6px !important;
   background-color: var(--bg4) !important;
-  backdrop-filter: var(--bf3) !important;
+  backdrop-filter: var(--bf2) !important;
 @media (-moz-platform: windows) {
   box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
-}
-@media (-moz-mac-tahoe-theme) {
-  backdrop-filter: var(--bf2) !important;
 }
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   --panel-item-border-radius: 8px;
@@ -506,7 +561,7 @@ body {
   background-color: rgba(15, 15, 15, .7) !important;
   border-radius: 12px !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, .1) !important;
-  backdrop-filter: var(--bf3) !important;
+  backdrop-filter: var(--bf2) !important;
   outline: none !important;
   border: none !important;
   fill: rgba(255, 255, 255, .7) !important;
@@ -864,10 +919,7 @@ button {
 }
 
 .modalOverlayOuter, .confirmation-dialog, .tile, .context-menu-button.icon, .search-inner-wrapper {
-  backdrop-filter: var(--bf3) !important;
-@media (-moz-mac-tahoe-theme) {
   backdrop-filter: var(--bf2) !important;
-}
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   backdrop-filter: var(--bf1) !important;
@@ -881,15 +933,12 @@ button {
 
 .customize-menu {
   background-color: var(--bg4) !important;
-  backdrop-filter: var(--bf3) !important;
+  backdrop-filter: var(--bf2) !important;
   box-shadow: var(--bs1) !important;
   margin: 16px 16px 0 0 !important;
   height: calc(100% - 16px) !important;
   padding-inline: 12px !important;
   min-height: unset !important;
-@media (-moz-mac-tahoe-theme) {
-  backdrop-filter: var(--bf2) !important;
-}
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
@@ -910,7 +959,7 @@ button {
   align-items: center !important;
 > .wallpapers-reset {
   font-size: 0 !important;
-  width: 32px !important; 
+  width: 32px !important;
   height: 16px !important;
   background: light-dark(rgba(0, 0, 0, .08), rgba(255, 255, 255, .08)) !important;
   border-radius: 12px !important;
@@ -947,11 +996,8 @@ button {
 }
 
 .context-menu, .contentSearchSuggestionTable, .location-input-wrapper, .weatherInfoLink, .weatherNotAvailable, .personalize-button {
-  backdrop-filter: var(--bf3) !important;
-  background-color: var(--bg4) !important;
-@media (-moz-mac-tahoe-theme) {
   backdrop-filter: var(--bf2) !important;
-}
+  background-color: var(--bg4) !important;
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
