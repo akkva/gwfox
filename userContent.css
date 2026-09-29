@@ -215,9 +215,22 @@ body { background-color: #191919 !important; } }
 }
 .dialog {
 & .mainContainer {
-& textarea {
-  background-color: light-dark(rgba(70, 70, 70, .05), rgba(170, 170, 170, .2)) !important;
+& textarea, & #addSignatureDescInput, & #addSignatureTypeContainer, & #addSignatureDrawContainer, & #addSignatureImageContainer {
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   border-color: transparent !important;      
+}
+}
+}
+#addSignatureDialog {
+& .mainContainer {
+& [role="tablist"] {
+& > [role="tab"] {
+  border: none !important;
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+&:hover {
+  background-color: light-dark(rgba(70, 70, 70, .2), rgba(170, 170, 170, .3)) !important;
+}
+}
 }
 }
 }
