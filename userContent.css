@@ -197,7 +197,7 @@ body { background-color: #191919 !important; } }
 & #editorCommentsSidebarListContainer {
 & #editorCommentsSidebarList {
 & .sidebarComment {
-  background-color: light-dark(rgba(70, 70, 70, .05), rgba(170, 170, 170, .1)) !important;
+  background-color: light-dark(rgba(70, 70, 70, .05), rgba(170, 170, 170, .2)) !important;
   border-color: transparent !important;
 }
 }
@@ -216,7 +216,7 @@ body { background-color: #191919 !important; } }
 .dialog {
 & .mainContainer {
 & textarea {
-  background-color: light-dark(rgba(70, 70, 70, .05), rgba(170, 170, 170, .1)) !important;
+  background-color: light-dark(rgba(70, 70, 70, .05), rgba(170, 170, 170, .2)) !important;
   border-color: transparent !important;      
 }
 }
