@@ -213,6 +213,57 @@ body { background-color: #191919 !important; } }
 }
 }
 }
+.dialog {
+& .mainContainer {
+& textarea {
+  background-color: light-dark(rgba(70, 70, 70, .05), rgba(170, 170, 170, .1)) !important;
+  border-color: transparent !important;      
+}
+}
+}
+.annotationEditorLayer :is(.freeTextEditor, .inkEditor, .stampEditor, .highlightEditor, .signatureEditor), .textLayer {
+& .editToolbar {
+& .buttons {
+& > :not(.divider) {
+&:hover {
+  border-radius: 8px !important;
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+  outline: none !important;
+}
+&:active {
+  background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
+}
+}
+}
+}
+}
+:is(.annotationLayer, .annotationEditorLayer) {
+& .annotationCommentButton {
+  background-color: light-dark(#fff, #282828) !important;
+@media -moz-pref("gwfox.blur") {
+  background-color: var(--bg4) !important;
+  backdrop-filter: var(--bf2) !important;
+}
+&::before {
+  background-color: light-dark(#555, #ddd) !important;
+}
+&:hover, &.selected {
+  background-color: var(--comment-button-selected-bg) !important;
+&::before {
+  background-color: #fff !important;
+}
+}
+}
+}
+.annotationEditorLayer :is(.freeTextEditor, .inkEditor, .stampEditor, .highlightEditor, .signatureEditor), .textLayer {
+& .editToolbar {
+  background-color: light-dark(#fff, #282828) !important;
+@media -moz-pref("gwfox.blur") {
+  background-color: var(--bg4) !important;
+  backdrop-filter: var(--bf2) !important;
+}
+}
+}
 .pdfViewer, #outerContainer {
   background-color: light-dark(#ccc, #191919) !important;
 }
@@ -220,7 +271,7 @@ body { background-color: #191919 !important; } }
   background-color: light-dark(#fff, #282828) !important;
   border: none !important;
 }
-#editorCommentsSidebar, #secondaryToolbar, .doorHangerRight, dialog {
+#editorCommentsSidebar, #secondaryToolbar, .doorHangerRight, dialog, .commentPopup {
   background-color: light-dark(#fff, #282828) !important;
 @media -moz-pref("gwfox.blur") {
   background-color: var(--bg4) !important;
@@ -236,7 +287,7 @@ dialog, .doorHangerRight, #viewsManager, #editorCommentsSidebar {
 dialog::backdrop {
   background-color: transparent !important;
 }
-#secondaryToolbar, #editorCommentsSidebar, #editorSignatureParamsToolbar, #editorHighlightParamsToolbar, #editorFreeTextParamsToolbar, #editorInkParamsToolbar, #editorStampParamsToolbar, dialog {
+#secondaryToolbar, #editorCommentsSidebar, #editorSignatureParamsToolbar, #editorHighlightParamsToolbar, #editorFreeTextParamsToolbar, #editorInkParamsToolbar, #editorStampParamsToolbar, dialog, .commentPopup {
 @media -moz-pref("gwfox.blur") {
   backdrop-filter: var(--bf2) !important;
 }
