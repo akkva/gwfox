@@ -43,6 +43,11 @@
   --newtab-primary-action-background: var(--color-accent-primary) !important;
   --button-text-color-primary: #fff !important;
   --border-color: rgba(105, 105, 105, .2) !important;
+  --button-background-color-hover: var(--bg1) !important;
+  --button-background-color-active: var(--bg2) !important;
+  --button-border-color: transparent !important;
+  --input-search-border-radius: 8px !important;
+  --border-radius-medium: 8px !important;
 @media -moz-pref("gwfox.blur") {
   --bf2: blur(30px);
   --bg4: light-dark(rgba(255, 255, 255, .75), rgba(25, 25, 25, .75));
@@ -67,6 +72,29 @@
   --in-content-page-background: light-dark(#fff, #191919) !important;
   --newtab-background-color: light-dark(#fff, #191919) !important;
 }
+}
+
+nav {
+  --page-nav-button-border-radius: 12px !important;
+  --page-nav-button-border-radius-focused: 12px !important;
+}
+
+moz-segmented-control {
+  border-radius: 12px !important;
+}
+
+button {
+  --panel-item-button-border-radius: 6px !important;
+@media (-moz-platform: macos) and (not (-moz-mac-tahoe-theme)) {
+  --panel-item-button-border-radius: 5px !important;
+}
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  --panel-item-button-border-radius: 8px !important;
+}
+}
+
+.select-wrapper, .button-background, sidebar-tab-row {
+  border-radius: 8px !important;
 }
 
 .toggle-button {
@@ -99,6 +127,33 @@
 }
 }
 
+panel-list {
+  --panel-separator-color: rgba(105, 105, 105, .2) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: var(--bs1) !important;
+  padding: 6px !important;
+  background-color: var(--bg4) !important;
+  backdrop-filter: var(--bf2) !important;
+@media (-moz-platform: windows) {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
+}
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 12px !important;
+}
+@media -moz-pref("gwfox.ac") {
+  --button-background-color-menu-hover: color-mix(in srgb, var(--bg0) 80%, transparent) !important;
+  --button-background-color-menu-active: color-mix(in srgb, var(--bg0) 90%, transparent) !important;
+  --button-text-color-menu-hover: #fff !important;
+  --button-text-color-menu-active: #fff !important;
+}
+}
+
+panel-item {
+  --panel-item-button-margin: 0 !important;
+  --panel-item-button-padding: 5px !important;
+}
+
 @media (prefers-color-scheme: dark) {
 :root {
   --text-color-accent-primary-selected: #fff !important;
@@ -110,21 +165,17 @@
   --color-gray-90: #191919 !important;
 }
 }
-
 :root[dialogroot] {
 @media not -moz-pref("gwfox.atbc") {
   --background-color-canvas: #191919 !important;
 }
 }
-
 .home-section .section .sponsored-checkbox:checked:hover {
   background-color: #436ee3 !important;
 }
-
 @-moz-document url-prefix("about:") {
 @media not -moz-pref("gwfox.atbc") {
 body { background-color: #191919 !important; } }
-
 * {
   --toolbar-button-foreground-active: color-mix(in srgb, var(--bg0) 90%, #000) !important;
   --primary-color: color-mix(in srgb, var(--bg0) 90%, #000) !important;
@@ -141,18 +192,49 @@ body { background-color: #191919 !important; } }
   --input-text-background-color: #282828 !important;
 }
 }
-
 #migrationWizardDialog {
 @media not -moz-pref("gwfox.atbc") {
   background: #191919 !important;
 }
 }
 }
+@media not (-moz-platform: linux) {
+panel-list {
+  box-shadow: var(--bs2) !important;
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1.5px !important;
+}
+@media (-moz-platform: windows) {
+panel-list {
+  outline: none !important;
+}
+}
+}
+@media (-moz-platform: linux) {
+panel-list {
+  border: 1px solid rgba(255, 255, 255, .06) !important;
+}
+}
 }
 
 @-moz-document regexp(".*\\.pdf") {
+.editToolbar {
+  --editor-toolbar-fg-color: light-dark(#000, #fff) !important;
+}
+#editorCommentsSidebarCount {
+  --comment-count-bg-color: var(--bg1) !important;
+}
+#editorCommentsSidebarCloseButton {
+  --button-comment-color: light-dark(#000, #fff) !important;
+  --button-comment-hover-color: light-dark(#000, #fff) !important;
+  --button-comment-active-color: light-dark(#000, #fff) !important;
+}
 #viewsManager {
   --header-bg: transparent !important;
+  border-radius: 8px !important;
+}
+#viewsManagerStatusActionButton, .popupMenu, .popupMenu > button {
+  border-radius: 8px !important;
 }
 .horizontalToolbarSeparator {
   border-top: 1px solid rgba(105, 105, 105, .2) !important;
@@ -164,6 +246,9 @@ body { background-color: #191919 !important; } }
 }
 }
 .toolbarButton {
+  --toolbar-icon-bg-color: light-dark(#000, #fff) !important;
+  --toolbar-icon-hover-bg-color: light-dark(#000, #fff) !important;
+  --toggled-btn-color: light-dark(#000, #fff) !important;
   border-radius: 8px !important;
   background-color: transparent !important;
 &:not([disabled]) {
@@ -179,7 +264,8 @@ body { background-color: #191919 !important; } }
 }
 }
 .dropdownToolbarButton {
-  clip-path: inset(0 round 8px);
+  border-radius: 8px !important;
+  border: none !important;
   background-color: transparent !important;
 &:hover {
   background-color: light-dark(rgba(70, 70, 70, .05), rgba(170, 170, 170, .1)) !important;
@@ -314,7 +400,6 @@ input[type="search"] {
   outline-style: solid !important;
   outline-color: transparent !important;
   outline-width: 18px !important;
-
 &:is(:focus-visible, [focused]) {
   outline-color: var(--focus-outline-color) !important;
   outline-width: 3px !important;
@@ -322,21 +407,18 @@ input[type="search"] {
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
 }
-
 #searchInput[focused] { 
   outline-color: var(--focus-outline-color) !important;
   outline-width: 3px !important;
   outline-offset: -1px !important;
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
-
 search-addons > search-textbox[focused] {
   outline-color: var(--focus-outline-color) !important;
   outline-width: 3px !important;
   outline-offset: -1px !important;
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
-
 search-textbox {
   background: light-dark(rgba(85, 85, 85, .1), rgba(190, 190, 190, .1)) !important;
   border-color: transparent !important;
@@ -344,7 +426,6 @@ search-textbox {
   outline-color: transparent !important;
   outline-width: 18px !important;
 }
-
 input[type="checkbox"]:not(.reveal-password-checkbox) {
   appearance: none !important;
   background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
@@ -364,7 +445,6 @@ input[type="checkbox"]:not(.reveal-password-checkbox) {
   &:hover:active { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important; }
 }
 }
-
 input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]) {
   appearance: none !important;
   background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
@@ -383,7 +463,6 @@ input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]) {
   &:hover:active { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important; }
 }
 }
-
 .checkbox-check {
   appearance: none !important;
   background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
@@ -403,7 +482,6 @@ input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]) {
   &:hover:active { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important; }
 }
 }
-
 .radio-check {
   appearance: none !important;
   background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
@@ -451,48 +529,6 @@ table {
 }
 }
 
-@-moz-document url-prefix("about:newtab"), url-prefix("about:home"), url-prefix("about:addons") {
-panel-list {
-  --panel-item-border-radius: 4px;
-  --panel-item-background-color: color-mix(in srgb, var(--bg0) 80%, transparent);
-  --panel-item-color: #fff;
-  border: none !important;
-  border-radius: 6px !important;
-  box-shadow: var(--bs1) !important;
-  padding: 6px !important;
-  background-color: var(--bg4) !important;
-  backdrop-filter: var(--bf2) !important;
-@media (-moz-platform: windows) {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
-}
-@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  --panel-item-border-radius: 8px;
-  border-radius: 12px !important;
-}
-}
-@media (prefers-color-scheme: dark) {
-@media not (-moz-platform: linux) {
-panel-list {
-  box-shadow: var(--bs2) !important;
-  outline: 1px solid rgba(235, 235, 235, .2) !important;
-  outline-offset: -1.5px !important;
-}
-
-@media (-moz-platform: windows) {
-panel-list {
-  outline: none !important;
-}
-}
-}
-
-@media (-moz-platform: linux) {
-panel-list {
-  border: 1px solid rgba(255, 255, 255, .06) !important;
-}
-}
-}
-}
-
 @-moz-document url-prefix("about:opentabs") {
 :root { background: transparent !important; }
 .sticky-header { background: transparent !important; }
@@ -514,7 +550,6 @@ sidebar-tab-row {
 
 @-moz-document url-prefix("about:firefoxview") {
 * { --fxview-border: transparent !important; }
-
 .card-container {
   background: light-dark(rgba(85, 85, 85, .1), rgba(190, 190, 190, .1)) !important;
   box-shadow: none !important;
@@ -523,15 +558,6 @@ sidebar-tab-row {
 
 @-moz-document url-prefix("about:addons") {
 ::after { content: none !important; }
-button:not(.toggle-button) {
- border-radius: 6px !important;
-@media -moz-pref("gwfox.ac") {
-&:is(:hover, :active) {
-  background-color: color-mix(in srgb, var(--bg0) 80%, transparent) !important;
-  color: #fff !important;
-}
-}
-}
 .card {
   border: none !important;
   box-shadow: none !important;
@@ -566,8 +592,10 @@ moz-message-bar {
   --background-color-canvas: light-dark(#fff, #191919) !important;
 }
 }
+#setting-control-noFxaSignIn,
 #backup-toggle-scheduled-button,
 #setting-control-verifiedManage,
+#setting-control-rejectReSignIn,
 #setting-control-syncChangeOptions,
 #setting-control-dohAdvancedButton,
 #setting-control-showUpdateHistory,
@@ -598,7 +626,7 @@ moz-box-item {
 treecol, .tree-columnpicker-button {
   box-shadow: none !important;
 }
-.container, #input, #blockAiGroup, listheader {
+.container, #input:not(.toggle-button), #blockAiGroup, listheader {
   border: none !important;
 }
 input:not([type="checkbox"], [type="radio"], [type="button"]) {
@@ -642,7 +670,6 @@ input:not([type="checkbox"], [type="radio"], [type="button"]) {
 
 @-moz-document url-prefix("about:privatebrowsing") {
 :root { --in-content-page-background: transparent !important; }
-
 body {
   --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
   background-repeat: no-repeat;
@@ -651,11 +678,9 @@ body {
   background-attachment: fixed;
   background-image: repeating-linear-gradient(-45deg, #68249a 0 250px, #202020 0 500px) !important;
 }
-
 .container {
   margin-top: -40px !important;
 }
-
 .search-handoff-button {
   background-color: rgba(15, 15, 15, .7) !important;
   border-radius: 12px !important;
@@ -671,21 +696,17 @@ body {
 }
 }
 }
-
 .search-handoff-button.disabled {
   opacity: 1 !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, .1) !important;
   fill: rgba(255, 255, 255, .6) !important;
 }
-
 .fake-textbox {
   color: #fff !important;
 }
-
 .search-handoff-button.disabled .fake-textbox {
   color: #999 !important;
 }
-
 .logo {
   background: url("chrome://browser/skin/privateBrowsing.svg") no-repeat center center !important;
   background-size: 76px !important;
@@ -694,11 +715,9 @@ body {
   -moz-context-properties: fill;
   fill: #b9b9b9;
 }
-
 .wordmark {
   fill: #b9b9b9 !important;
 }
-
 .info, .info-border, .promo-visible, .promo-dismiss {
   display: none !important;
 }
@@ -712,18 +731,15 @@ body {
   background-image: var(--newtab-wallpaper, ""), repeating-linear-gradient(-45deg, var(--newtab-wallpaper-color, "") 0 250px, #191919 0 500px) !important;
 }
 }
-
 button {
   font-weight: normal !important;
 }
-
 *[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"] {
   background-image: url("resource://builtin-themes/alpenglow/background-noodles-left.svg") !important;
 @media (prefers-color-scheme: dark) {
   background-image: url("resource://builtin-themes/alpenglow/background-noodles-left-dark.svg") !important;
 }
 }
-
 @keyframes panel-grow {
 0% {
   transform: scale(.92);
@@ -732,43 +748,9 @@ button {
   transform: scale(1);
 }
 }
-
-.context-menu {
-  border-radius: 6px !important;
-  padding: 6px !important;
-  box-shadow: var(--bs1) !important;
-  margin-top: -15px !important;
-@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  border-radius: 12px !important;
+.open-customization-button, .add-button {
+  clip-path: inset(0 round 50px);
 }
-@media (-moz-platform: windows) {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .17) !important;
-}
-}
-
-.context-menu > ul {
-  padding: 0 !important;
-}
-
-.context-menu > ul > li > a,
-.context-menu > ul > li > button {
-  border-radius: 4px !important;
-  padding: 6px 12px !important;
-@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  border-radius: 8px !important;
-}
-@media -moz-pref("gwfox.ac") {
-&:is(:focus, :hover) {
-  background: color-mix(in srgb, var(--bg0) 80%, transparent) !important;
-  color: #fff !important;
-}
-}
-}
-
-.context-menu > ul > li.separator {
-  border-bottom: 1px solid light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1)) !important;
-}
-
 .topsite-form .form-wrapper input[type=text] {
   border: none !important;
   background: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
@@ -776,325 +758,185 @@ button {
   outline-color: transparent !important;
   outline-width: 18px !important;
 }
-
 .topsite-form .form-wrapper input[type=text]:focus {
   outline-color: var(--focus-outline-color) !important;
   outline-width: 3px !important;
   outline-offset: -1px !important;
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
-
 .divider {
   border-top: 1px solid light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1)) !important;
 @media (-moz-platform: windows) and (prefers-color-scheme: dark) {
   margin-inline: 1px !important;
 }
 }
-
 .outer-wrapper.only-search {
   display: flex !important;
   padding-block: 0 !important;
 }
-
 .search-inner-wrapper {
-  border-radius: 12px !important;
-  box-shadow: 0 2px 25px rgba(0, 0, 0, .05) !important;
-  transition: background .5s !important;
-  z-index: 1;
+  max-width: 680px !important;
 }
-
 .search-handoff-button {
-  border: none !important;
-  box-shadow: none !important;
   border-radius: 12px !important;
-  background-color: transparent !important;
-}
-
-.search-wrapper input {
   border: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-  background-color: transparent !important;
+  transition: background .5s !important;
 }
-
 .contentSearchSuggestionTable {
   border-radius: 6px !important;
 }
-
 .contentSearchSuggestionTable .contentSearchHeader,
 .contentSearchSuggestionTable .contentSearchSettingsButton {
   border-color: transparent !important;
 }
-
 .contentSearchSuggestionTable .contentSearchOneOffsTable {
   border-top: none !important;
   background-color: transparent !important;
 }
-
 .contentSearchSuggestionTable .contentSearchSuggestionRow.selected {
   background: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
 }
-
 .contentSearchSuggestionTable .contentSearchSuggestionRow.selected:active {
   background: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
 }
-
 .contentSearchSuggestionTable .contentSearchOneOffItem {
   border: none !important;
   border-radius: 6px !important;
   margin: 5px !important;
   width: 32px !important;
 }
-
 .search-button {
   border-radius: 0 12px 12px 0 !important;
   background-color: transparent !important;
   transition: background .5s !important;
 }
-
 .search-button:hover {
   background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .2)) !important;
   transition: background .5s !important;
 }
-
-
 .search-button:focus {
   border: none !important;
   box-shadow: none !important;
   background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .1)) !important;
   transition: background .5s !important;
 }
-
 .icon-wrapper {
   width: 32px !important;
   height: 32px !important;
 }
-
-.customize-menu {
-  border-radius: 8px !important;
-@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  border-radius: 12px !important;
-}
-}
-
 .context-menu-button {
   fill: #000 !important;
 }
-
 .lightWallpaper .top-site-outer .title {
   color: #000 !important;
 }
-
 .darkWallpaper .top-site-outer .title {
   color: #fff !important;
 }
-
 @media not (prefers-color-scheme: dark) {
 .darkWallpaper .context-menu {
   color-scheme: light !important;
 }
-
 :has(body[style*="18c7861f-0c9d-48d4-a98c-fb8999e331bd.avif"]) {
-.personalize-button:not(:hover, :active),
 .context-menu-button,
 .top-site-outer:not(:hover, :active, .active),
 .logo-and-wordmark .wordmark, .icon.icon-pin-small {
   color-scheme: light !important;
 }
-
 .top-site-outer .title {
   color: #000 !important;
 }
 }
 }
-
-.top-site-outer {
-  width: 95px !important;
-}
-
 .tile {
   border-radius: 16px !important;
   width: 68px !important;
   height: 68px !important;
-  box-shadow: 0 2px 25px rgba(0, 0, 0, .05) !important;
   border: none !important;
   transition: background .5s !important;
 }
-
 .top-site-outer, .top-site-button,
 .top-site-icon:not(.search-topsite) {
   background-color: transparent !important;
 }
-
 .context-menu-button {
-  inset-inline-end: -12px !important;
+  inset-inline-end: -17.5px !important;
   inset-block-start: -5px !important;
 }
-
 .top-site-outer .top-site-inner > a {
   padding: unset !important;
 }
-
-.edit-topsites .modal {
-  width: 100% !important;
-}
-
-.edit-topsites .topsite-form {
-  display: flex !important;
-  flex-direction: column !important;
-  padding: var(--space-xlarge) !important;
-  gap: var(--space-xlarge) !important;
-}
-
-.edit-topsites .topsite-form .form-input-container {
-  max-width: none !important;
-  padding: 0 !important;
-}
-
-.edit-topsites .topsite-form .form-wrapper input[type=text] {
-  width: 368px !important;
-  --border-radius-small: 8px !important;
-}
-
-.edit-topsites .topsite-form .top-site-outer {
-  margin-block-start: var(--space-large) !important;
-}
-
-.edit-topsites .topsite-form .topsite-form-footer {
-  padding: 0 !important;
-}
-
 .context-menu-button.icon {
   border-radius: 50px !important;
-  box-shadow: 0 2px 25px rgba(0, 0, 0, .05) !important;
 }
-
-[data-l10n-id="newtab-custom-recent-toggle"],
-.contentSearchSuggestionTable .contentSearchHeader,
-.wallpaper-attribution, .logo-and-wordmark,
-.icon.icon-pin-small, .card-outer,
-.section-title-container,
-.customize-menu .close-button-wrapper {
+.ds-highlights, .icon.icon-pin-small, .customize-menu .close-button-wrapper, .wallpaper-attribution {
   display: none !important;
 }
-
 .top-site-outer:hover .icon.icon-pin-small {
   display: inline-block !important;
-  inset-inline-start: 16px !important;
-  inset-block-start: 5px !important;
+  inset-inline-start: 6px !important;
+  inset-block-start: 10px !important;
 }
-
 .wallpaper-input:checked {
   outline-color: transparent !important;
 }
-
 .wallpaper-list .wallpaper-input:checked {
   outline-color: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
 }
-
 .wallpaper-input:checked, .wallpaper-input.selected {
   box-shadow: none !important;
 }
-
+.edit-topsites-wrapper .top-site-inner > .top-site-button > .tile {
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+.fields-and-preview .top-site-outer .title .title-label {
+  color: light-dark(#000, #fff) !important;
+}
 .confirmation-dialog::backdrop,
 .modalOverlayOuter::backdrop,
 .modal-overlay, .modalOverlayOuter {
   background: none !important;
 }
-
 .modalOverlayOuter, .confirmation-dialog {
-  border-radius: 6px !important;
+  border-radius: 12px !important;
   border: none !important;
   animation: panel-grow 250ms ease-out;
   background-color: var(--bg4) !important;
-@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  border-radius: 12px !important;
-}
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
 }
 }
 }
-
-.modalOverlayOuter, .confirmation-dialog, .tile, .context-menu-button.icon, .search-inner-wrapper {
-  backdrop-filter: var(--bf2) !important;
-@media (-moz-platform: linux) {
-@media not -moz-pref("gwfox.bms") {
-  backdrop-filter: var(--bf1) !important;
-}
-}
-}
-
 .modalOverlayOuter, .contentSearchSuggestionTable, .confirmation-dialog {
   box-shadow: var(--bs1) !important;
 }
-
 .customize-menu {
   background-color: var(--bg4) !important;
   backdrop-filter: var(--bf2) !important;
   box-shadow: var(--bs1) !important;
-  margin: 16px 16px 0 0 !important;
-  height: calc(100% - 16px) !important;
-  padding-inline: 12px !important;
+  width: 418px !important;
+  height: 514px !important;
+  padding-top: 20px !important;
   min-height: unset !important;
+  border-radius: 12px !important;
+  inset-block: auto 22px !important;
+  inset-inline: auto 22px !important;
+  transform: scale(0) !important;
+  transform-origin: bottom right !important;
+&:is(.customize-animate-enter, .customize-animate-enter-done) {
+  transform: scale(1) !important;
+}
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
   backdrop-filter: var(--bf1) !important;
 }
 }
-:has(.category.wallpaper-list) {
-.category-header, .category-list, ~ * {
-  display: none !important;
 }
-}
-}
-
-.category-header {
-  display: flex !important;
-  flex-direction: row-reverse !important;
-  justify-content: flex-end !important;
-  align-items: center !important;
-> .wallpapers-reset {
-  font-size: 0 !important;
-  width: 32px !important;
-  height: 16px !important;
-  background: light-dark(rgba(0, 0, 0, .08), rgba(255, 255, 255, .08)) !important;
-  border-radius: 12px !important;
-  position: relative !important;
-  outline: 1px solid light-dark(rgba(0, 0, 0, .6), rgba(255, 255, 255, .18)) !important;
-  outline-offset: -1px !important;
-  cursor: auto !important;
-  order: -1;
-&::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 12px;
-  height: 12px;
-  background: light-dark(rgba(0, 0, 0, .6), rgba(255, 255, 255, .18));
-  border-radius: 50%;
-}
-:root:has(body[style*="background"]) & {
-  background: var(--color-accent-primary) !important;
-  outline: none !important;
-&:hover { background: var(--color-accent-primary-hover) !important; }
-&:active { background: var(--color-accent-primary-active) !important; }
-&::before {
-  transform: translateX(16px);
-  background: white;
-}
-}
-}
-> [data-l10n-id="newtab-wallpaper-title"] {
-  order: -1;
-  margin-inline-start: 7.5px;
-}
-}
-
-.context-menu, .contentSearchSuggestionTable, .location-input-wrapper, .weatherInfoLink, .weatherNotAvailable, .personalize-button {
+.context-menu, .contentSearchSuggestionTable {
   backdrop-filter: var(--bf2) !important;
   background-color: var(--bg4) !important;
 @media (-moz-platform: linux) {
@@ -1104,112 +946,88 @@ button {
 }
 }
 }
-
-.wallpaper-list.category {
-  margin: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  inset-inline-start: 0 !important;
-  padding: 30px !important;
-  transition: none !important;
-  animation: panel-grow 250ms ease-out;
-@media not (-moz-platform: linux) {
-@media -moz-pref("gwfox.blur") {
-  padding: 15px !important;
-}
-}
-@media (-moz-platform: linux) and -moz-pref("gwfox.bms") and -moz-pref("gwfox.blur") {
-  padding: 15px !important;
-}
-}
-
-.weatherCard, .weatherInfoLink, .personalize-button {
-  border-radius: var(--border-radius-medium) !important;
-}
-
-.weatherCard {
-  box-shadow: none !important;
-  padding: 15px !important;
-}
-
-.weatherSponsorText {
-  display: none;
-}
-
-.weatherButtonContextMenuWrapper {
-  background: none !important;
-  box-shadow: none !important;
-  margin-left: 10px;
-  margin-top: 10px;
-&:not(:has(.context-menu)) {
-  visibility: collapse;
-.weatherCard:hover & {
-  visibility: visible;
-}
-}
-> .weatherButtonContextMenu {
-  min-height: 24px !important;
-  min-width: 24px !important;
-  max-height: 24px !important;
-  max-width: 24px !important;
-  border-radius: 50px !important;
-}
-&::after {
-  content: none !important;
-}
-> panel-list {
-  inset-block-start: 80px !important;
-}
-}
-
-*+button {
-  border-radius: var(--panel-item-border-radius) !important;
-@media -moz-pref("gwfox.ac") {
-&:hover {
-  background-color: var(--panel-item-background-color) !important;
-  color: var(--panel-item-color) !important;
-}
-}
-}
-
-.location-input-wrapper input {
-  border: none !important;
-  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
-}
-
+moz-visual-picker-item[value="default-theme@mozilla.org"] .theme-preview {
+  background-image: linear-gradient(96deg, #dce6f7 39.84%, #aec7ef 101.72%) !important;
 @media (prefers-color-scheme: dark) {
-@media not (-moz-platform: linux) {
-.modalOverlayOuter, .confirmation-dialog, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
-  box-shadow: var(--bs2) !important;
-  outline: 1px solid rgba(235, 235, 235, .2) !important;
-  outline-offset: -1.5px !important;
+  background-image: linear-gradient(96deg, #1f3745 39.84%, #0a2332 101.72%) !important;
 }
-
-@media (-moz-platform: windows) {
-.modalOverlayOuter, .confirmation-dialog, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
+}
+.appearance-section.section > h2 {
+  display: none !important;
+}
+moz-box-button {
+  border: none !important;
+}
+.button {
+  border-radius: 12px !important;
+  background-color: var(--bg1) !important;
+&:hover {
+  background-color: var(--bg2) !important;
+}
+&:active {
+  background-color: var(--bg3) !important;
+}
+}
+.divider {
+  margin-inline: 2px !important;
+}
+.external-link {
+  font-size: 0 !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 32px !important;
+  fill: #fff !important;
+  background-position: center !important;
+  background-color: var(--button-background-color-primary) !important;
+&:hover {
+  background-color: var(--button-background-color-primary-hover) !important;
+}
+&:active {
+  background-color: var(--button-background-color-primary-active) !important;
+}
+}
+.manage-settings-footer {
+  padding: 10px !important;
+  inset-inline-start: 366px !important;
+}
+#wallpapers-toggle, #shortcuts-toggle, #weather-toggle, .category-header, .category-list, .appearance-section.section > theme-picker, moz-box-button, .manage-settings-footer, .divider {
+.customize-menu:has(.category.wallpaper-list, #themes-management-panel .themes-mgmt-panel, .widgets-mgmt-panel, .sections-mgmt-panel) & {
+  opacity: 0;
+  transform: translateX(80px);
+}
+.customize-menu:not(:has(.customize-menu-content.subpanel-open)) & {
+  opacity: 1;
+  transition: opacity 350ms ease, transform 150ms ease;
+}
+}
+.wallpaper-list.category.wallpaper-list-enter {
+  transition: none !important;
+  animation: panel-grow 250ms ease;
+}
+.wallpaper-list.category.wallpaper-list-exit {
+  opacity: 0;
+  transition: opacity 250ms ease, inset-inline-start 500ms ease !important;
+}
+.themes-mgmt-panel.themes-mgmt-panel-enter, .widgets-mgmt-panel.widgets-mgmt-panel-enter, .sections-mgmt-panel.sections-mgmt-panel-enter {
+  animation: panel-grow 250ms ease;
+}
+.themes-mgmt-panel.themes-mgmt-panel-exit, .widgets-mgmt-panel.widgets-mgmt-panel-exit, .sections-mgmt-panel.sections-mgmt-panel-exit {
+  opacity: 0;
+  transition: opacity 250ms ease, transform 500ms ease !important;
+}
+.weather-widget, .focus-timer, .clocks-widget, .crossword, .lists {
+&:is(:hover, :focus-within) {
   outline: none !important;
 }
-.context-menu {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15) !important;
 }
-}
-}
-
-@media (-moz-platform: linux) {
-.modalOverlayOuter, .confirmation-dialog, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
-  border: 1px solid rgba(255, 255, 255, .06) !important;
-}
-}
-}
-
-.search-inner-wrapper, .tile, .context-menu-button.icon, .location-input-wrapper, .weatherInfoLink, .weatherNotAvailable, .weatherButtonContextMenu, .personalize-button {
+.search-handoff-button, .tile, .context-menu-button.icon, .weather-widget, .focus-timer, .clocks-widget, .crossword, .lists, :is(.ds-card-grid, .widgets-row-ad-cell) .sections-card-ui, .urlbar-background {
   background-color: var(--bg1) !important;
   box-shadow: none !important;
 &:hover { background-color: var(--bg2) !important; }
 &:active { background-color: var(--bg3) !important; }
-@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper") {
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.user.enabled") {
   background-color: var(--bg4) !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, .1) !important;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, .1) !important;
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
   background-color: light-dark(#fff, #36363a) !important;
@@ -1233,13 +1051,121 @@ button {
 }
 }
 }
-
+.modalOverlayOuter, .confirmation-dialog, .tile, .context-menu-button.icon, .search-handoff-button, .weather-widget, .focus-timer, .clocks-widget, .crossword, .lists, :is(.ds-card-grid, .widgets-row-ad-cell) .sections-card-ui, .urlbar-background {
+  backdrop-filter: var(--bf2) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  backdrop-filter: var(--bf1) !important;
+}
+}
+}
+.urlbar[in-page] {
+.urlbar-background {
+  clip-path: none !important;
+  border: none !important;
+  inset: 0 !important;
+}
+.urlbar-input-container {
+  outline: none !important;
+}
+.urlbarView {
+  margin-top: 10px !important;
+  padding: 5px !important;
+  box-shadow: var(--bs1) !important;
+  background-color: var(--bg4) !important;
+  backdrop-filter: var(--bf2) !important;
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  backdrop-filter: var(--bf1) !important;
+}
+}
 @media (prefers-color-scheme: dark) {
+@media not (-moz-platform: linux) {
+  box-shadow: var(--bs2) !important;
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1.5px !important;
+@media (-moz-platform: windows) {
+  outline: none !important;
+}
+}
+@media (-moz-platform: linux) {
+  border: 1px solid rgba(255, 255, 255, .06) !important;
+}
+}
+}
+.urlbarView-row:is([selected], [menu-trigger], [row-selectable]:not([selected]):hover) {
+  background-color: var(--bg1) !important;
+@media -moz-pref("gwfox.ac") {
+  color: #fff !important;
+  background-color: color-mix(in srgb, var(--bg0) 80%, transparent) !important;
+}
+}
+.urlbar-go-button, .urlbarView-button-result-menu {
+  background-color: var(--bg1) !important;
+&:hover { background-color: var(--bg2) !important; }
+&:active { background-color: var(--bg3) !important; }
+}
+.urlbarView-button-result-menu {
+  fill: light-dark(#000, #fff) !important;
+@media -moz-pref("gwfox.ac") {
+  fill: #fff !important;
+}
+}
+.urlbarView-url, .urlbarView-bottom-label {
+@media -moz-pref("gwfox.ac") {
+.urlbarView-row:is([selected], [menu-trigger], [row-selectable]:not([selected]):hover) & {
+  color: #fff !important;
+}
+}
+}
+.urlbarView-background {
+  display: none !important;
+}
+*:not(panel-list) {
+  border-radius: 12px !important;
+}
+.searchmode-switcher {
+  --button-background-color-muted: transparent !important;
+  --button-background-color-muted-hover: var(--bg1) !important;
+  --button-background-color-muted-active: var(--bg1) !important;
+  --button-background-color-muted-selected: var(--bg1) !important;
+  margin-inline-start: -25px !important;
+  clip-path: inset(0 0 0 25px round 10px);
+> .searchmode-switcher-content {
+&::before {
+  content: url("chrome://global/skin/icons/search-glass.svg");
+  -moz-context-properties: fill;
+  fill: light-dark(#000, #fff);
+  margin-block-start: 2px;
+}
+}
+}
+}
+@media (prefers-color-scheme: dark) {
+@media not (-moz-platform: linux) {
+.modalOverlayOuter, .confirmation-dialog, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
+  box-shadow: var(--bs2) !important;
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1.5px !important;
+}
+@media (-moz-platform: windows) {
+.modalOverlayOuter, .confirmation-dialog, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
+  outline: none !important;
+}
+.context-menu {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .15) !important;
+}
+}
+}
+@media (-moz-platform: linux) {
+.modalOverlayOuter, .confirmation-dialog, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
+  border: 1px solid rgba(255, 255, 255, .06) !important;
+}
+}
 .lightWallpaper .context-menu {
   color-scheme: dark !important;
 }
-
-.lightWallpaper .tile, .lightWallpaper .context-menu-button.icon {
+.lightWallpaper .search-handoff-button, .lightWallpaper .tile, .lightWallpaper .context-menu-button.icon {
   background-color: #141618 !important;
 @media -moz-pref("gwfox.blur") {
   background-color: rgba(15, 15, 15, .7) !important;
@@ -1250,8 +1176,7 @@ button {
 }
 }
 }
-
-.lightWallpaper .tile:hover, .lightWallpaper .context-menu-button.icon:hover {
+.lightWallpaper .search-handoff-button:hover, .lightWallpaper .tile:hover, .lightWallpaper .context-menu-button.icon:hover {
   background-color: #1e2022 !important;
 @media -moz-pref("gwfox.blur") {
   background-color: rgba(15, 15, 15, .75) !important;
@@ -1262,8 +1187,7 @@ button {
 }
 }
 }
-
-.lightWallpaper .tile:active, .lightWallpaper .context-menu-button.icon:active {
+.lightWallpaper .search-handoff-button:active, .lightWallpaper .tile:active, .lightWallpaper .context-menu-button.icon:active {
   background-color: #282a2c !important;
 @media -moz-pref("gwfox.blur") {
   background-color: rgba(15, 15, 15, .6) !important;
@@ -1274,14 +1198,13 @@ button {
 }
 }
 }
-
 .context-menu-button {
   fill: #fff !important;
 }
 }
 
 @media (prefers-color-scheme: light) {
-.darkWallpaper .tile, .darkWallpaper .context-menu-button.icon {
+.darkWallpaper .search-handoff-button, .darkWallpaper .tile, .darkWallpaper .context-menu-button.icon {
   background-color: #fff !important;
 @media -moz-pref("gwfox.blur") {
   background-color: rgba(255, 255, 255, .7) !important;
@@ -1292,8 +1215,7 @@ button {
 }
 }
 }
-
-.darkWallpaper .tile:hover, .darkWallpaper .context-menu-button.icon:hover {
+.darkWallpaper .search-handoff-button:hover, .darkWallpaper .tile:hover, .darkWallpaper .context-menu-button.icon:hover {
   background-color: #fafafa !important;
 @media -moz-pref("gwfox.blur") {
   background-color: rgba(255, 255, 255, .75) !important;
@@ -1304,8 +1226,7 @@ button {
 }
 }
 }
-
-.darkWallpaper .tile:active, .darkWallpaper .context-menu-button.icon:active {
+.darkWallpaper .search-handoff-button:active, .darkWallpaper .tile:active, .darkWallpaper .context-menu-button.icon:active {
   background-color: #f5f5f5 !important;
 @media -moz-pref("gwfox.blur") {
   background-color: rgba(255, 255, 255, .6) !important;

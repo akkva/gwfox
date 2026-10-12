@@ -1,7 +1,7 @@
 <div align="center">
 <picture>
-<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/02407e6d-07a9-4d76-a402-1978d2f0e7f0">
-<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/a98fcf5b-43c1-4081-818a-1bb95052cf07">
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/8fd7b69a-d500-420c-abc6-212e19c13902">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/bd9bc023-fa80-4cf2-9e14-7c8230bcf29f">
 <img alt="Preview">
 </picture>
 </div>
@@ -15,14 +15,12 @@
 | :--- | :--- | :--- |
 | `toolkit.legacyUserProfileCustomizations.stylesheets` | true | Required |
 | `svg.context-properties.content.enabled` | true | Required |
-| `browser.newtabpage.activity-stream.nova.enabled` | false | Required |
-| `browser.nova.enabled` | false | Required |
-| `widget.windows.mica` | true | Windows¹ |
+| `browser.newtabpage.activity-stream.nova.enabled` | true | Required |
+| `browser.nova.enabled` | true | Required |
+| `widget.windows.mica` | true | Windows |
 | `widget.windows.mica.toplevel-backdrop` | 2 | Windows |
 | `widget.gtk.rounded-bottom-corners.enabled` | true | Linux |
 | `widget.macos.native-context-menus` | false | macOS |
-
-> ¹ Windows: Requires enabling "System theme — auto" in Firefox Add-ons manager.
 
 > [!IMPORTANT]
 > Required for East Asian (CJK) input: Enable "Address Bar: show results during IME composition" in `Settings` > `Firefox Labs`.
