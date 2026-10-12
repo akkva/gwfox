@@ -4338,10 +4338,11 @@ img[src="chrome://global/skin/icons/more.svg"] {
 
 .titlebar-buttonbox-container {
   position: fixed !important;
-  top: 27px !important;
+  top: 25px !important;
   left: calc(var(--buttonbox-left) + (350px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
   z-index: 10;
 @media (-moz-platform: windows) {
+  top: 23px !important;
   left: calc(var(--buttonbox-left) + (348px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 &::after {
@@ -4360,12 +4361,15 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 @media not (-moz-platform: macos) {
 @media -moz-pref("gwfox.mwc") {
-  top: 10px !important;
+  top: 8px !important;
+@media (-moz-platform: windows) {
+  top: 6px !important;
+}
 }
 @media not -moz-pref("gwfox.mwc") {
-  top: 22px !important;
+  top: 18px !important;
 @media (-moz-platform: linux) {
-  top: 21px !important;
+  top: 19px !important;
 }
 }
 }
@@ -4582,7 +4586,10 @@ img[src="chrome://global/skin/icons/more.svg"] {
 #forward-button,
 #sidebar-button {
   position: fixed !important;
-  top: 10px;
+  top: 8px;
+@media (-moz-platform: windows) {
+  top: 6px;
+}
 }
 
 #sidebar-button {
