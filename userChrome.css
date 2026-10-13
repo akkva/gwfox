@@ -469,8 +469,10 @@ split-view-footer {
   width: 0 !important;
   height: 0 !important;
   padding: 0 !important;
-  opacity: 0 !important;
-  pointer-events: none;
+#fxa-avatar-image {
+  width: 0 !important;
+  height: 0 !important;
+}
 }
 
 #scrollbutton-up, #scrollbutton-down {
