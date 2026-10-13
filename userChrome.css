@@ -695,6 +695,17 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 }
 }
 
+#appMenu-profiles-button {
+@media not -moz-pref("gwfox.icons") {
+.toolbarbutton-icon {
+  display: none !important;
+}
+.toolbarbutton-text {
+  margin-inline-start: -6px !important;
+}
+}
+}
+
 #profile-icon-image {
   border: none !important;
   fill: var(--chrome-content-separator-color) !important;
@@ -4625,8 +4636,11 @@ img[src="chrome://global/skin/icons/more.svg"] {
 #nav-bar-overflow-button,
 #unified-extensions-button {
   position: fixed !important;
-  bottom: 16px;
+  bottom: 14px;
   scale: .9;
+@media (-moz-platform: windows) {
+  bottom: 12px;
+}
 }
 
 #PanelUI-menu-button {
