@@ -2008,7 +2008,7 @@ tab-group[collapsed] & {
 }
 }
 
-:root:has(tab-group .tabbrowser-tab:first-of-type:is(:hover, [selected])) .tab-group-label::after {
+tab-group:has(.tabbrowser-tab:first-of-type:is(:hover, [selected])) .tab-group-label::after {
   content: none;
 }
 
@@ -4127,7 +4127,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 }
 @media not -moz-pref("sidebar.verticalTabs") {
-:root:has(#TabsToolbar:hover):not(:has(:is(.tabbrowser-tab, #alltabs-button, #new-tab-button, #tabs-newtab-button, .tab-group-label):hover)) & {
+:root:has(#TabsToolbar:hover, #PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open]):not(:has(:is(.tabbrowser-tab, #alltabs-button, #new-tab-button, #tabs-newtab-button, .tab-group-label):hover)) & {
   opacity: 1;
   transition: opacity .15s .25s !important;
 }
