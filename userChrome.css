@@ -3192,6 +3192,10 @@ richlistitem {
   opacity: 1 !important;
 }
 
+.titlebar-button > .toolbarbutton-icon {
+  border-radius: 50px !important;
+}
+
 .toolbarbutton-1:-moz-window-inactive,
 #PersonalToolbar:-moz-window-inactive {
   opacity: .65;
