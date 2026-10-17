@@ -151,7 +151,7 @@
 }
 
 :root[customtitlebar] {
-@media (-moz-windows-mica) {
+@media (-moz-windows-mica) and (not -moz-pref("gwfox.atbc")) {
   --toolbar-background-color: light-dark(var(--color-white-alpha-60), var(--color-white-alpha-20)) !important;
   background-color: transparent !important;
 @media -moz-pref("widget.windows.mica.toplevel-backdrop", 2) {
@@ -1339,9 +1339,21 @@ tab-split-view-wrapper {
   margin-top: -8px !important;
 }
 }
+&[collapsed] {
+.tabbrowser-tab[selected]:not(tab-split-view-wrapper *) {
+#tabbrowser-tabs[overflow] & {
+  min-width: 124px !important;
+}
+}
+tab-split-view-wrapper[hasactivetab] {
+#tabbrowser-tabs[overflow] & {
+  min-width: 219px !important;
+}
+}
+}
 }
 tab-group > .tabbrowser-tab {
-  transition: all .25s !important;
+  transition: max-width .25s, min-width .25s !important;
 }
 .tab-stack {
   margin-inline: 1px !important;
@@ -1779,6 +1791,9 @@ tab-split-view-wrapper {
   padding: 0 !important;
   margin-inline: 3px !important;
   background-color: transparent !important;
+&:hover {
+  background-color: var(--bgcolor-hover) !important;
+}
 .tab-background {
   background: transparent !important;
   transition: none !important;
