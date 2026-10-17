@@ -740,6 +740,7 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 
 #urlbar {
   -moz-window-dragging: no-drag;
+  --urlbar-joint-background-shadow-margin: 150px;
 &[popover-open] {
   position: fixed !important;
   top: 20vh !important;
@@ -767,39 +768,16 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 @media (-moz-mac-tahoe-theme) {
   border-bottom: 1px solid light-dark(rgba(105, 105, 105, .15), rgba(105, 105, 105, .3)) !important;
 }
-@media (-moz-platform: windows) {
-  padding-inline: 10px !important;
-}
 }
 .urlbarView {
-  translate: -50% 0 !important;
-  margin-inline: 0 !important;
-  margin-inline-end: -5.5px !important;
+  inset-inline-start: -50% !important;
+  inset-inline-end: 50% !important;
   padding: 10px !important;
   color: light-dark(#000, #fff) !important;
   animation: panel-grow 250ms ease-out;
   transform-origin: top center;
-@media (-moz-platform: linux) {
-  margin-inline-end: -7px !important;
-  margin-top: -3.5px !important;
-}
-@media (-moz-platform: windows) {
-  margin-top: 0 !important;
-  width: calc(100% + 16px) !important;
-  background: var(--bg4) !important;
-  backdrop-filter: var(--bf2) !important;
-  box-shadow: var(--bs1) !important;
-  border-radius: var(--br2);
-  border-start-start-radius: 0;
-  border-start-end-radius: 0;
-  clip-path: inset(0 -200px -200px -200px);
-@media -moz-pref("gwfox.blur") {
-  background-image: linear-gradient(to bottom, var(--bg4), transparent 60px) !important;
-}
-}
 }
 .urlbarView-background {
-@media not (-moz-platform: windows) {
   border: none !important;
   background: var(--bg4) !important;
   backdrop-filter: var(--bf2) !important;
@@ -816,9 +794,8 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
   backdrop-filter: var(--bf1) !important;
 }
 }
-}
 @media (-moz-platform: windows) {
-  display: none !important;
+  box-shadow: 0 15px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17) !important;
 }
 }
 .urlbarView-results[wrap]
@@ -881,10 +858,6 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
   -moz-context-properties: fill, fill-opacity;
   fill: currentColor;
   fill-opacity: .65;
-@media (-moz-platform: windows) {
-  padding-inline-start: 40px !important;
-  background-position: left 14px bottom 16px;
-}
 @media -moz-pref("gwfox.fsi") {
   background-image: var(--search-glass);
 }
@@ -1050,9 +1023,6 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
   height: unset !important;
 @media -moz-pref("gwfox.blur") {
   background-image: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--bg4) 85%, transparent) 40px) !important;
-@media (-moz-platform: windows) {
-  background-image: linear-gradient(to bottom, transparent, var(--bg4) 40px) !important;
-}
 }
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: var(--br3) !important;
@@ -1062,9 +1032,6 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
   background: var(--bg2) !important;
   backdrop-filter: var(--bf1) !important;
 }
-}
-@media (-moz-platform: windows) {
-  box-shadow: 0 45px 65px rgba(0, 0, 0, .05), 0 0 0 1px rgba(0, 0, 0, .17) !important;
 }
 }
 @media -moz-pref("gwfox.urlbar") and -moz-pref("sidebar.verticalTabs") and (not -moz-pref("sidebar.visibility", "expand-on-hover")) {
@@ -1285,12 +1252,6 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
   max-height: 50px !important;
 #urlbar[popover-open] & {
   background-image: none !important;
-@media (-moz-platform: windows) {
-  box-shadow: var(--bs1) !important;
-@media (prefers-color-scheme: dark) {
-  box-shadow: var(--bs2) !important;
-}
-}
 }
 }
 .urlbar-input-container {
@@ -2688,13 +2649,7 @@ panel#feature-callout,
 @media (-moz-platform: windows) {
 #urlbar[popover-open] .urlbarView-background {
   outline: none !important;
-  box-shadow: none !important;
-}
-#urlbar[popover-open] .urlbarView {
-  box-shadow: var(--bs2) !important;
-}
-#urlbar[popover-open] .urlbar-background {
-  box-shadow: 0 45px 65px rgba(0, 0, 0, .05), 0 0 0 1px rgba(205, 205, 205, .15) !important;
+  box-shadow: 0 15px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(205, 205, 205, .15) !important;
 }
 }
 }
