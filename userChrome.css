@@ -2919,15 +2919,16 @@ toolbarbutton {
   background-image: url("chrome://global/skin/icons/search-glass.svg") !important;
   background-repeat: no-repeat !important;
   background-size: 12px !important;
-  background-position: left 5px bottom 5px !important;
+  background-position: left 5px bottom 6px !important;
   -moz-context-properties: fill, fill-opacity;
-  fill: currentColor;
+  fill: light-dark(#000, #fff);
   fill-opacity: .65;
 @media -moz-pref("gwfox.fsi") {
   background-image: var(--search-glass) !important;
 }
 &::placeholder {
   font-size: 12.5px !important;
+  color: color-mix(in srgb, light-dark(#000, #fff) 40%, transparent) !important;
 }
 &:focus {
   outline-color: var(--focus-outline-color) !important;
