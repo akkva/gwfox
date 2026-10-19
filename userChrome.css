@@ -2925,6 +2925,7 @@ toolbarbutton {
   fill-opacity: .65;
 @media -moz-pref("gwfox.fsi") {
   background-image: var(--search-glass) !important;
+  background-position: left 5px bottom 6.5px !important;
 }
 &::placeholder {
   font-size: 12.5px !important;
