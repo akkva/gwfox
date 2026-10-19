@@ -48,6 +48,7 @@
   --button-border-color: transparent !important;
   --input-search-border-radius: 8px !important;
   --border-radius-medium: 8px !important;
+  --text-color: light-dark(#000, #fff) !important;
 @media -moz-pref("gwfox.blur") {
   --bf2: blur(30px);
   --bg4: light-dark(rgba(255, 255, 255, .75), rgba(25, 25, 25, .75));
