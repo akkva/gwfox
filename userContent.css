@@ -105,14 +105,16 @@ button {
   --toggle-dot-background-color-on-pressed: #fff !important;
 }
 
-#download {
-  color: #fff !important;
-  background-color: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
-&:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #fff)) !important; }
-}
-
 #screenshots-cancel-button, #download, #cancel, #copy {
   outline-color: light-dark(color-mix(in srgb, var(--bg0) 55%, transparent), color-mix(in srgb, var(--bg0) 45%, #555)) !important;
+}
+
+#cancel, #copy, #download {
+  border: none !important;
+  color: #fff !important;
+  background-color: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
+&:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 90%, #fff)) !important; }
+&:active { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 90%, #000)) !important; }
 }
 
 #buttons-container {
