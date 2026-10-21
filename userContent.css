@@ -52,11 +52,13 @@
 @media -moz-pref("gwfox.blur") {
   --bf2: blur(30px);
   --bg4: light-dark(rgba(255, 255, 255, .75), rgba(25, 25, 25, .75));
-  --bg5: light-dark(rgba(255, 255, 255, .75), rgba(15, 15, 15, .75));
-  --bg6: light-dark(rgba(255, 255, 255, .6), rgba(15, 15, 15, .6));
+  --bg5: light-dark(rgba(255, 255, 255, .85), rgba(25, 25, 25, .85));
+  --bg6: light-dark(rgba(255, 255, 255, .65), rgba(25, 25, 25, .65));
 @media (-moz-mac-tahoe-theme) {
   --bf2: blur(10px);
   --bg4: light-dark(rgba(255, 255, 255, .55), rgba(75, 75, 75, .55));
+  --bg5: light-dark(rgba(255, 255, 255, .65), rgba(75, 75, 75, .65));
+  --bg6: light-dark(rgba(255, 255, 255, .45), rgba(75, 75, 75, .45));
 }
 }
 @media (-moz-mac-tahoe-theme) {
@@ -1171,7 +1173,10 @@ moz-box-button {
 .lightWallpaper .search-handoff-button, .lightWallpaper .tile, .lightWallpaper .context-menu-button.icon {
   background-color: #141618 !important;
 @media -moz-pref("gwfox.blur") {
-  background-color: rgba(15, 15, 15, .7) !important;
+  background-color: rgba(25, 25, 25, .75) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: rgba(75, 75, 75, .55) !important;
+}
 }
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
@@ -1182,7 +1187,10 @@ moz-box-button {
 .lightWallpaper .search-handoff-button:hover, .lightWallpaper .tile:hover, .lightWallpaper .context-menu-button.icon:hover {
   background-color: #1e2022 !important;
 @media -moz-pref("gwfox.blur") {
-  background-color: rgba(15, 15, 15, .75) !important;
+  background-color: rgba(25, 25, 25, .85) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: rgba(75, 75, 75, .65) !important;
+}
 }
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
@@ -1193,7 +1201,10 @@ moz-box-button {
 .lightWallpaper .search-handoff-button:active, .lightWallpaper .tile:active, .lightWallpaper .context-menu-button.icon:active {
   background-color: #282a2c !important;
 @media -moz-pref("gwfox.blur") {
-  background-color: rgba(15, 15, 15, .6) !important;
+  background-color: rgba(25, 25, 25, .65) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: rgba(75, 75, 75, .45) !important;
+}
 }
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
@@ -1210,7 +1221,10 @@ moz-box-button {
 .darkWallpaper .search-handoff-button, .darkWallpaper .tile, .darkWallpaper .context-menu-button.icon {
   background-color: #fff !important;
 @media -moz-pref("gwfox.blur") {
-  background-color: rgba(255, 255, 255, .7) !important;
+  background-color: rgba(255, 255, 255, .75) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: rgba(255, 255, 255, .55) !important;
+}
 }
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
@@ -1221,7 +1235,10 @@ moz-box-button {
 .darkWallpaper .search-handoff-button:hover, .darkWallpaper .tile:hover, .darkWallpaper .context-menu-button.icon:hover {
   background-color: #fafafa !important;
 @media -moz-pref("gwfox.blur") {
-  background-color: rgba(255, 255, 255, .75) !important;
+  background-color: rgba(255, 255, 255, .85) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: rgba(255, 255, 255, .65) !important;
+}
 }
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
@@ -1232,7 +1249,10 @@ moz-box-button {
 .darkWallpaper .search-handoff-button:active, .darkWallpaper .tile:active, .darkWallpaper .context-menu-button.icon:active {
   background-color: #f5f5f5 !important;
 @media -moz-pref("gwfox.blur") {
-  background-color: rgba(255, 255, 255, .6) !important;
+  background-color: rgba(255, 255, 255, .65) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: rgba(255, 255, 255, .45) !important;
+}
 }
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
