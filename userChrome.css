@@ -4353,9 +4353,9 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 }
 @media not -moz-pref("gwfox.mwc") {
-  top: 18px !important;
-@media (-moz-platform: linux) {
   top: 19px !important;
+@media (-moz-platform: linux) {
+  top: 20px !important;
 }
 }
 }
