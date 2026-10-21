@@ -235,11 +235,6 @@
 }
 }
 }
-@media -moz-pref("sidebar.verticalTabs") and (-moz-platform: macos) {
-:root:has([sidebar-shown]) & {
-  margin-top: -2px !important;
-}
-}
 }
 
 #tabbrowser-tabbox {
@@ -3292,7 +3287,7 @@ menuitem[type="radio"][disabled] .menu-icon {
 @media -moz-pref("sidebar.verticalTabs") {
 .titlebar-buttonbox-container {
   order: -1 !important;
-  margin-block-start: 15px !important;
+  margin-block-start: 17px !important;
   margin-inline-start: 10px !important;
 }
 .titlebar-button {
@@ -4327,11 +4322,13 @@ img[src="chrome://global/skin/icons/more.svg"] {
 
 .titlebar-buttonbox-container {
   position: fixed !important;
-  top: 25px !important;
+  top: 24.5px !important;
   left: calc(var(--buttonbox-left) + (350px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
   z-index: 10;
+@media (-moz-mac-tahoe-theme) {
+  top: 23.5px !important;
+}
 @media (-moz-platform: windows) {
-  top: 23px !important;
   left: calc(var(--buttonbox-left) + (348px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 &::after {
