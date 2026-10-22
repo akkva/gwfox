@@ -456,7 +456,8 @@ split-view-footer {
 .private-browsing-indicator-with-label,
 #reset-pbm-toolbar-button, .sharing-icon,
 #firefox-view-button, #wrapper-firefox-view-button,
-#userContext-icons, #userContext-label {
+#userContext-icons, #userContext-label,
+#wrapper-fxa-toolbar-menu-button {
   display: none !important;
 }
 
