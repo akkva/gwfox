@@ -1596,11 +1596,51 @@ tab-split-view-wrapper & {
 }
 }
 
+/* container indicator: dot when gwfox.container is 0 or unset */
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
   height: 5px !important;
   width: 5px !important;
   margin: 0 !important;
   border-radius: 5px !important;
+  /* hide the indicator of tabs hidden inside collapsed groups */
+  tab-group[collapsed] .tabbrowser-tab:not([selected], [busy]) & {
+    visibility: hidden !important;
+}
+}
+
+/* container indicator: line (1) or fill (2-5) */
+@media -moz-pref("gwfox.container", 1) or -moz-pref("gwfox.container", 2) or -moz-pref("gwfox.container", 3) or -moz-pref("gwfox.container", 4) or -moz-pref("gwfox.container", 5) {
+  .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background {
+    position: relative !important;
+}
+
+  .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+    --container-fill-width: 15%;
+    --container-fill-opacity: 35%;
+    position: absolute !important;
+    inset-block: 0 !important;
+    inset-inline-start: 0 !important;
+    width: var(--container-fill-width) !important;
+    height: auto !important;
+    margin: 0 !important;
+    border-radius: inherit !important;
+    pointer-events: none;
+    background: linear-gradient(to right, color-mix(in srgb, var(--identity-fill-color, var(--identity-tab-color)) var(--container-fill-opacity), transparent) 60%, transparent) !important;
+
+    @media -moz-pref("gwfox.container", 3) { --container-fill-width: 50%; }
+    @media -moz-pref("gwfox.container", 4) { --container-fill-width: 75%; }
+    @media -moz-pref("gwfox.container", 5) {
+      --container-fill-width: 100%;
+      background: color-mix(in srgb, var(--identity-fill-color, var(--identity-tab-color)) var(--container-fill-opacity), transparent) !important;
+}
+    @media -moz-pref("gwfox.container", 1) {
+      width: 3px !important;
+      inset-block: 6px !important;
+      inset-inline-start: 2px !important;
+      border-radius: 3px !important;
+      background: var(--identity-fill-color, var(--identity-tab-color)) !important;
+}
+}
 }
 
 .tabbrowser-tab:active:not(:has(.tab-icon-overlay:active, .tab-audio-button:active, .tab-close-button:active)) {

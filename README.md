@@ -81,3 +81,4 @@ And change it to:
 | Preference | Description | Values |
 | :--- | :--- | :--- |
 | `gwfox.sidebar` | Set sidebar width | `1` (narrow), `3` (wide), or `otherwise` (default) |
+| `gwfox.container` | Set container tab indicator | `1` (line), `2` (15% fill), `3` (50% fill), `4` (75% fill), `5` (full fill), or `otherwise` (dot) |
