@@ -2382,6 +2382,10 @@ window[role="dialog"] {
 }
 }
 
+.downloadProgress {
+  background-color: var(--button-bgcolor) !important;
+}
+
 /* misc */
 
 @-moz-document url("chrome://browser/content/browser.xhtml") {
