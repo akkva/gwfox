@@ -852,7 +852,7 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
   background-repeat: no-repeat;
   background-position: left 21px bottom 16px;
   -moz-context-properties: fill, fill-opacity;
-  fill: currentColor;
+  fill: light-dark(#000, #fff);
   fill-opacity: .65;
 @media -moz-pref("gwfox.fsi") {
   background-image: var(--search-glass);
