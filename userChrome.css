@@ -1923,6 +1923,7 @@ tab-group[collapsed] & {
 @media not -moz-pref("sidebar.visibility", "expand-on-hover") {
 #tabbrowser-tabs[expanded] & {
   --tab-min-height: 41px;
+  --tab-pinned-min-width: 50px !important;
   --tab-height-with-margin-padding: calc(var(--tab-min-height) + (2 * var(--tab-margin-block)));
   margin-inline: 2px;
 @media (-moz-platform: macos) {
