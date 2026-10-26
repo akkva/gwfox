@@ -2960,6 +2960,7 @@ toolbarbutton {
   border-radius: 6px !important;
   padding-inline-start: 22px !important;
   padding-inline-end: 75px !important;
+  color: light-dark(#000, #fff) !important;
   background-image: url("chrome://global/skin/icons/search-glass.svg") !important;
   background-repeat: no-repeat !important;
   background-size: 12px !important;
