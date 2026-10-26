@@ -1084,7 +1084,10 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 }
 
 .urlbarView-result-menu {
-  background-color: var(--bg2) !important;
+  background-color: var(--bg4) !important;
+  backdrop-filter: var(--bf2) !important;
+  box-shadow: var(--bs1) !important;
+  border: none !important;
 }
 
 .searchmode-switcher {
@@ -2681,7 +2684,7 @@ panel#feature-callout,
 @media not (-moz-platform: linux) {
 #urlbar[popover-open] .urlbar-background,
 #urlbar[popover-open] .urlbarView-background,
-.dialogBox, .findbar-container {
+.dialogBox, .findbar-container, .urlbarView-result-menu {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1.5px !important;
   box-shadow: var(--bs2) !important;
@@ -2697,7 +2700,7 @@ panel#feature-callout,
 @media (-moz-platform: linux) {
 #urlbar[popover-open] .urlbar-background,
 #urlbar[popover-open] .urlbarView-background,
-.dialogBox, .findbar-container {
+.dialogBox, .findbar-container, .urlbarView-result-menu {
   border: 1px solid rgba(255, 255, 255, .06) !important;
 }
 @media -moz-pref("gwfox.bms") {
@@ -3130,7 +3133,7 @@ toolbarbutton:-moz-window-inactive {
 
 #urlbar[popover-open] .urlbar-background,
 #urlbar[popover-open] .urlbarView,
-.findbar-container, .dialogBox {
+.findbar-container, .dialogBox, .urlbarView-result-menu {
   outline: none !important;
 }
 
