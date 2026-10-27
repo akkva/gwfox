@@ -296,6 +296,11 @@
 :root:has(#sidebar-container:hover) & {
   -moz-window-dragging: unset;
 }
+@media -moz-pref("gwfox.atbc") {
+#tabbrowser-tabpanels.letterboxing &:not(.responsive-mode):has(> .browserStack:not(.exclude-letterboxing)) {
+  background-color: var(--toolbar-background-color) !important;
+}
+}
 }
 
 #tabbrowser-tabpanels {
