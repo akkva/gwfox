@@ -512,11 +512,11 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 
 #downloads-indicator-progress-outer {
   background: none !important;
-  outline: 1.5px solid light-dark(#525252, #c9c9cb);
+  outline: 1.5px solid light-dark(#000, #fff);
   outline-offset: -3px;
   border-radius: 50%;
 @media -moz-pref("gwfox.fsi") {
-  outline: 1px solid currentColor;
+  outline: 1px solid light-dark(#000, #fff);
 }
 }
 
