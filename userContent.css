@@ -18,8 +18,7 @@
   --bs2: 0 5px 15px rgba(0, 0, 0, .25), inset 0 0 0 .5px rgba(0, 0, 0, .78), 0 0 0 .5px rgba(0, 0, 0, .2);
   --bf1: none;
   --bf2: none;
-  --in-content-box-border-color: transparent !important;
-  --border-color-interactive: transparent !important;
+  --border-color-interactive: light-dark(rgba(0, 0, 0, .2), rgba(225, 225, 225, .2)) !important;
   --newtab-background-color-secondary: transparent !important;
   --background-color-overlay: transparent !important;
   --focus-outline-color: light-dark(color-mix(in srgb, var(--bg0) 55%, transparent), color-mix(in srgb, var(--bg0) 45%, #555)) !important;
@@ -49,6 +48,7 @@
   --button-border-color: transparent !important;
   --input-search-border-radius: 8px !important;
   --border-radius-medium: 8px !important;
+  --button-border-radius: 8px !important;
   --text-color: light-dark(#000, #fff) !important;
   --color-gray-05: #fff !important;
 @media -moz-pref("gwfox.blur") {
@@ -622,6 +622,7 @@ moz-message-bar {
   --box-border: none !important;
   --box-group-border: none !important;
   --promo-background-color: var(--bg1) !important;
+  --border-color-interactive: transparent !important;
 @media not -moz-pref("gwfox.atbc") {
   --background-color-canvas: light-dark(#fff, #191919) !important;
 }
