@@ -101,6 +101,17 @@ button {
   border-radius: 8px !important;
 }
 
+.button-background:not([type="primary"], [type="icon ghost"], [type="destructive"], [type="ghost"]) {
+  background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
+button:hover > & {
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+}
+button:hover:active:not(:disabled) > &,
+button:is([aria-expanded="true"], [aria-pressed="true"], [aria-selected="true"]):not(:hover, :disabled) > & {
+  background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
+}
+}
+
 .toggle-button {
   --toggle-background-color-pressed: var(--color-accent-primary) !important;
   --toggle-background-color-pressed-hover: var(--color-accent-primary-hover) !important;
