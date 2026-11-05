@@ -637,8 +637,10 @@ dialog, .dialogBox {
   border-radius: 12px !important;
   border: none !important;
   animation: panel-grow 250ms ease-out;
-  background-color: light-dark(#fff, #2e2e2e) !important;
   box-shadow: var(--bs1) !important;
+@media not -moz-pref("gwfox.atbc") {
+  background-color: light-dark(#fff, #2e2e2e) !important;
+}
 @media (prefers-color-scheme: dark) {
 @media not (-moz-platform: linux) {
   box-shadow: var(--bs2) !important;
