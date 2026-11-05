@@ -66,6 +66,9 @@
 @media (-moz-mac-tahoe-theme) {
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .34), 0 0 0 .5px rgba(0, 0, 0, .12);
 }
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  --button-border-radius: 10px !important;
+}
 @media (-moz-platform: windows) {
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
   --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(205, 205, 205, .15);
@@ -101,6 +104,9 @@ button {
 
 .select-wrapper, .button-background, sidebar-tab-row {
   border-radius: 8px !important;
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 10px !important;
+}
 }
 
 .button-background:not([type="primary"], [type="icon ghost"], [type="destructive"], [type="ghost"]) {
