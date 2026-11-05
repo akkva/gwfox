@@ -8,9 +8,9 @@
 * { --bg0: #007aff; }
 
 :root {
-  --bg1: light-dark(rgba(70, 70, 70, .08), rgba(170, 170, 170, .08));
-  --bg2: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .15));
-  --bg3: light-dark(rgba(70, 70, 70, .2), rgba(170, 170, 170, .2));
+  --bg1: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15));
+  --bg2: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2));
+  --bg3: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3));
   --bg4: light-dark(rgba(255, 255, 255, 1), rgba(25, 25, 25, 1));
   --bg5: light-dark(#fafafa, #1e2022);
   --bg6: light-dark(#f5f5f5, #282a2c);
@@ -18,9 +18,10 @@
   --bs2: 0 5px 15px rgba(0, 0, 0, .25), inset 0 0 0 .5px rgba(0, 0, 0, .78), 0 0 0 .5px rgba(0, 0, 0, .2);
   --bf1: none;
   --bf2: none;
-  --in-content-box-border-color: light-dark(rgba(0, 0, 0, .2), rgba(225, 225, 225, .2)) !important;
-  --border-color-interactive: var(--in-content-box-border-color) !important;
+  --in-content-box-border-color: transparent !important;
+  --border-color-interactive: transparent !important;
   --newtab-background-color-secondary: transparent !important;
+  --background-color-overlay: transparent !important;
   --focus-outline-color: light-dark(color-mix(in srgb, var(--bg0) 55%, transparent), color-mix(in srgb, var(--bg0) 45%, #555)) !important;
   --in-content-focus-outline-color: var(--focus-outline-color) !important;
   --color-accent-primary: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
@@ -75,6 +76,7 @@
 @media not -moz-pref("gwfox.atbc") {
   --in-content-page-background: light-dark(#fff, #191919) !important;
   --newtab-background-color: light-dark(#fff, #191919) !important;
+  --background-color-box: light-dark(#fff, #2e2e2e) !important;
 }
 }
 
@@ -102,14 +104,20 @@ button {
 }
 
 .button-background:not([type="primary"], [type="icon ghost"], [type="destructive"], [type="ghost"]) {
-  background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
+  background-color: var(--bg1) !important;
 button:hover > & {
-  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+  background-color: var(--bg2) !important;
 }
 button:hover:active:not(:disabled) > &,
 button:is([aria-expanded="true"], [aria-pressed="true"], [aria-selected="true"]):not(:hover, :disabled) > & {
-  background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
+  background-color: var(--bg3) !important;
 }
+}
+
+menulist {
+  background-color: var(--bg1) !important;
+&:hover { background-color: var(--bg2) !important; }
+&:is(:active, [open]) { background-color: var(--bg3) !important; }
 }
 
 .toggle-button {
@@ -169,6 +177,15 @@ panel-list {
 panel-item {
   --panel-item-button-margin: 0 !important;
   --panel-item-button-padding: 5px !important;
+}
+
+@keyframes panel-grow {
+0% {
+  transform: scale(.92);
+}
+100% {
+  transform: scale(1);
+}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -535,7 +552,7 @@ th {
  border: none !important;
 }
 td {
-  border: .5px solid var(--in-content-box-border-color) !important;
+  border: .5px solid light-dark(rgba(0, 0, 0, .2), rgba(225, 225, 225, .2)) !important;
 }
 table {
   border-radius: 0 !important;
@@ -607,6 +624,26 @@ moz-message-bar {
   --promo-background-color: var(--bg1) !important;
 @media not -moz-pref("gwfox.atbc") {
   --background-color-canvas: light-dark(#fff, #191919) !important;
+}
+}
+dialog, .dialogBox {
+  border-radius: 12px !important;
+  border: none !important;
+  animation: panel-grow 250ms ease-out;
+  background-color: light-dark(#fff, #2e2e2e) !important;
+  box-shadow: var(--bs1) !important;
+@media (prefers-color-scheme: dark) {
+@media not (-moz-platform: linux) {
+  box-shadow: var(--bs2) !important;
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1.5px !important;
+@media (-moz-platform: windows) {
+  outline: none !important;
+}
+}
+@media (-moz-platform: linux) {
+  border: 1px solid rgba(255, 255, 255, .06) !important;
+}
 }
 }
 #setting-control-noFxaSignIn,
@@ -755,14 +792,6 @@ button {
   background-image: url("resource://builtin-themes/alpenglow/background-noodles-left.svg") !important;
 @media (prefers-color-scheme: dark) {
   background-image: url("resource://builtin-themes/alpenglow/background-noodles-left-dark.svg") !important;
-}
-}
-@keyframes panel-grow {
-0% {
-  transform: scale(.92);
-}
-100% {
-  transform: scale(1);
 }
 }
 .open-customization-button, .add-button {
