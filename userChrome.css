@@ -487,7 +487,12 @@ split-view-footer {
 }
 
 button {
-  --panel-item-button-margin: 0 3px !important;
+  --panel-item-button-margin: 0 4px !important;
+  --panel-item-button-padding: 5px !important;
+  --panel-item-button-border-radius: 7px !important;
+@media (-moz-platform: windows) {
+  --panel-item-button-padding: 7px !important;
+}
 }
 
 button, menulist {
@@ -819,7 +824,10 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 }
 .urlbarView-row {
   fill: light-dark(#000, #fff) !important;
-  border-radius: var(--br2) !important;
+  border-radius: 10px !important;
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 12px !important;
+}
 @media -moz-pref("gwfox.ac") {
 &:is([selected], [menu-trigger], [row-selectable]:not([selected]):hover) {
   fill: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
