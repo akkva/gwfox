@@ -838,6 +838,7 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 .urlbarView-button-result-menu {
   background-color: var(--button-bgcolor) !important;
   fill: light-dark(#000, #fff) !important;
+  border-radius: 50px !important;
 &:hover { background-color: var(--button-hover-bgcolor) !important; }
 &:active { background-color: var(--button-active-bgcolor) !important; }
 @media -moz-pref("gwfox.ac") {
@@ -3881,6 +3882,12 @@ img[src="chrome://global/skin/icons/more.svg"] {
   opacity: 0;
   pointer-events: none;
 }
+}
+}
+
+.tools-and-extensions {
+&[orientation="horizontal"] {
+  gap: 5px !important;
 }
 }
 
