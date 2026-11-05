@@ -621,6 +621,7 @@ moz-message-bar {
 }
 
 @-moz-document url-prefix("about:preferences") {
+moz-visual-picker-item { --border-color-interactive: transparent !important; }
 * {
   --card-border: none !important;
   --card-box-shadow: none !important;
@@ -628,7 +629,6 @@ moz-message-bar {
   --box-border: none !important;
   --box-group-border: none !important;
   --promo-background-color: var(--bg1) !important;
-  --border-color-interactive: transparent !important;
 @media not -moz-pref("gwfox.atbc") {
   --background-color-canvas: light-dark(#fff, #191919) !important;
 }
