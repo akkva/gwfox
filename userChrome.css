@@ -486,6 +486,10 @@ split-view-footer {
 }
 }
 
+button {
+  --panel-item-button-margin: 0 3px !important;
+}
+
 button, menulist {
   --button-background-color: var(--button-bgcolor) !important;
   border: none !important;
@@ -1792,6 +1796,12 @@ tab-group[collapsed] > .tab-group-label-container & {
   box-shadow: none !important;
 }
 
+.tab-group-overflow-count-container {
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+  margin-inline-start: 5px !important;
+}  
+}
+
 tab-split-view-wrapper {
   padding: 0 !important;
   margin-inline: 3px !important;
@@ -2205,6 +2215,19 @@ panel-list {
 @keyframes air-timer {
   0%, 75% { --urlbar-flash-show: 1; }
   100% { --urlbar-flash-show: 0; }
+}
+
+#trustpanel-graphic-section, #appMenu-fxa-sign-in-promo {
+  background-color: var(--button-bgcolor) !important;
+  border: none !important;
+}
+
+#appMenu-nova-switch-device-promo {
+  --promo-background-color: var(--button-bgcolor) !important;
+}
+
+.message, .fxa-menu-sign-in-promo-heading {
+  color: light-dark(#000, #fff) !important;
 }
 
 #sanitizeEverythingWarningBox, #trustpanel-blocker-section,
@@ -2747,6 +2770,13 @@ panel#feature-callout,
   box-shadow: 0 3px 8px rgba(0, 0, 0, .35) !important;
   background-color: rgba(0, 0, 0, .85) !important;
   margin-top: 28px !important;
+&:focus {
+  outline: 2px solid var(--bg0) !important;
+}
+}
+
+.ctrlTab-preview:focus > .ctrlTab-preview-inner {
+  border-color: var(--bg0) !important;
 }
 
 .ctrlTab-canvas {
@@ -5485,10 +5515,12 @@ tab-split-view-wrapper & {
 }
 }
 &:hover {
-  background-color: var(--button-hover-bgcolor) !important;
+  background-color: var(--bgcolor-hover) !important;
 }
 &:active {
-  background-color: var(--button-active-bgcolor) !important;
+  background-color: var(--bgcolor-active) !important;
+  transform: scale(.95);
+  transition: transform .1s ease;
 }
 @media (-moz-platform: windows) {
   margin: 7.5px 8px 0 -4px !important;

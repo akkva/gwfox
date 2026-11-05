@@ -49,6 +49,7 @@
   --input-search-border-radius: 8px !important;
   --border-radius-medium: 8px !important;
   --text-color: light-dark(#000, #fff) !important;
+  --color-gray-05: #fff !important;
 @media -moz-pref("gwfox.blur") {
   --bf2: blur(30px);
   --bg4: light-dark(rgba(255, 255, 255, .75), rgba(25, 25, 25, .75));
@@ -127,7 +128,7 @@ button {
   backdrop-filter: blur(30px);
 @media (-moz-mac-tahoe-theme) {
   backdrop-filter: blur(10px);
-  background-color: light-dark(rgba(255, 255, 255, .55), rgba(75, 75, 75, .55));
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(75, 75, 75, .55)) !important;
 }
 }
 }
@@ -809,21 +810,6 @@ button {
   border-radius: 6px !important;
   margin: 5px !important;
   width: 32px !important;
-}
-.search-button {
-  border-radius: 0 12px 12px 0 !important;
-  background-color: transparent !important;
-  transition: background .5s !important;
-}
-.search-button:hover {
-  background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .2)) !important;
-  transition: background .5s !important;
-}
-.search-button:focus {
-  border: none !important;
-  box-shadow: none !important;
-  background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .1)) !important;
-  transition: background .5s !important;
 }
 .icon-wrapper {
   width: 32px !important;
