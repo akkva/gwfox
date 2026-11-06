@@ -1224,6 +1224,10 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 
 #urlbar-zoom-button {
   background: var(--button-hover-bgcolor) !important;
+  padding: 5px 7px !important;
+  font-size: 0.9em !important;
+  color: light-dark(#000, #fff) !important;
+  border-radius: var(--br2) !important;
   order: -1;
 :root:not([taskbartab]):has(#tabbrowser-tabs[orient="vertical"][expanded], #tabbrowser-tabs[orient="horizontal"]) & {
 @media not -moz-pref("sidebar.visibility", "expand-on-hover") {
@@ -5469,7 +5473,7 @@ tab-split-view-wrapper & {
 &:-moz-window-inactive {
   fill-opacity: 0.5;
 }
-.urlbar-input, .urlbar-background, .urlbar-page-action, .identity-box-button, #notification-popup-box,
+.urlbar-input, .urlbar-background, .urlbar-page-action, #urlbar-zoom-button, .identity-box-button, #notification-popup-box,
 #identity-permission-box, #trust-icon-container, #identity-box, .urlbar-go-button, #urlbar-revert-button-container, .searchmode-switcher {
   opacity: 0 !important;
   transition: opacity .25s .5s !important;
@@ -5481,7 +5485,7 @@ tab-split-view-wrapper & {
 #urlbar {
   fill: transparent !important;
   transition: fill .25s 0s !important;
-.urlbar-input, .urlbar-background, .urlbar-page-action, .identity-box-button, #notification-popup-box,
+.urlbar-input, .urlbar-background, .urlbar-page-action, #urlbar-zoom-button, .identity-box-button, #notification-popup-box,
 #identity-permission-box, #trust-icon-container, #identity-box, .urlbar-go-button, #urlbar-revert-button-container, .searchmode-switcher {
   opacity: 1 !important;
   transition: opacity .25s 0s !important;
@@ -5494,7 +5498,7 @@ tab-split-view-wrapper & {
 #urlbar {
   fill: transparent !important;
   transition: none !important;
-.urlbar-input, .urlbar-background, .urlbar-page-action, .identity-box-button, #notification-popup-box,
+.urlbar-input, .urlbar-background, .urlbar-page-action, #urlbar-zoom-button, .identity-box-button, #notification-popup-box,
 #identity-permission-box, #trust-icon-container, #identity-box, .urlbar-go-button, #urlbar-revert-button-container, .searchmode-switcher {
   opacity: 1 !important;
   transition: none !important;
