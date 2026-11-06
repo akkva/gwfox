@@ -21,6 +21,7 @@
   --border-color-interactive: light-dark(rgba(0, 0, 0, .2), rgba(225, 225, 225, .2)) !important;
   --newtab-background-color-secondary: transparent !important;
   --background-color-overlay: transparent !important;
+  --background-color-box: transparent !important;
   --focus-outline-color: light-dark(color-mix(in srgb, var(--bg0) 55%, transparent), color-mix(in srgb, var(--bg0) 45%, #555)) !important;
   --in-content-focus-outline-color: var(--focus-outline-color) !important;
   --color-accent-primary: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
@@ -79,8 +80,12 @@
 @media not -moz-pref("gwfox.atbc") {
   --in-content-page-background: light-dark(#fff, #191919) !important;
   --newtab-background-color: light-dark(#fff, #191919) !important;
-  --background-color-box: light-dark(#fff, #2e2e2e) !important;
+  --background-color-canvas: light-dark(#fff, #191919) !important;
 }
+}
+
+:root[dialogroot] {
+  --background-color-canvas: transparent !important;
 }
 
 nav {
@@ -124,6 +129,20 @@ menulist {
   background-color: var(--bg1) !important;
 &:hover { background-color: var(--bg2) !important; }
 &:is(:active, [open]) { background-color: var(--bg3) !important; }
+}
+
+menupopup {
+  --panel-border-color: transparent !important;
+@media (-moz-platform: linux) {
+  --panel-background-color: light-dark(#fff, #282828) !important;
+  --panel-border-radius: 8px !important;
+  --panel-box-shadow-margin: 18px !important;
+  --panel-box-shadow: 0 2px 15px rgba(0, 0, 0, .2), 0 0 0 1px light-dark(rgba(0, 0, 0, .058), rgba(55, 55, 55, 1)) !important;
+  --menuitem-border-radius: 7px !important;
+}
+@media not (-moz-platform: linux) {
+  appearance: menupopup !important;
+}
 }
 
 .toggle-button {
@@ -178,6 +197,11 @@ panel-list {
   --button-text-color-menu-hover: #fff !important;
   --button-text-color-menu-active: #fff !important;
 }
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background-color: light-dark(#fff, #36363a) !important;
+}
+}
 }
 
 panel-item {
@@ -205,11 +229,6 @@ panel-item {
   --color-gray-90: #191919 !important;
 }
 }
-:root[dialogroot] {
-@media not -moz-pref("gwfox.atbc") {
-  --background-color-canvas: #191919 !important;
-}
-}
 .home-section .section .sponsored-checkbox:checked:hover {
   background-color: #436ee3 !important;
 }
@@ -228,7 +247,6 @@ body { background-color: #191919 !important; } }
 @media not -moz-pref("gwfox.atbc") {
   --fxview-background-color: #191919 !important;
   --in-content-page-background: #191919 !important;
-  --background-color-canvas: #191919 !important;
   --input-text-background-color: #282828 !important;
 }
 }
@@ -253,6 +271,9 @@ panel-list {
 @media (-moz-platform: linux) {
 panel-list {
   border: 1px solid rgba(255, 255, 255, .06) !important;
+@media -moz-pref("gwfox.bms") {
+  border: 1px solid rgba(45, 45, 45, 1) !important;
+}
 }
 }
 }
@@ -629,18 +650,14 @@ moz-visual-picker-item { --border-color-interactive: transparent !important; }
   --box-border: none !important;
   --box-group-border: none !important;
   --promo-background-color: var(--bg1) !important;
-@media not -moz-pref("gwfox.atbc") {
-  --background-color-canvas: light-dark(#fff, #191919) !important;
 }
-}
-dialog, .dialogBox {
+#migrationWizardDialog, .dialogBox {
   border-radius: 12px !important;
   border: none !important;
   animation: panel-grow 250ms ease-out;
+  background-color: var(--bg4) !important;
+  backdrop-filter: var(--bf2) !important;
   box-shadow: var(--bs1) !important;
-@media not -moz-pref("gwfox.atbc") {
-  background-color: light-dark(#fff, #2e2e2e) !important;
-}
 @media (prefers-color-scheme: dark) {
 @media not (-moz-platform: linux) {
   box-shadow: var(--bs2) !important;
@@ -652,6 +669,12 @@ dialog, .dialogBox {
 }
 @media (-moz-platform: linux) {
   border: 1px solid rgba(255, 255, 255, .06) !important;
+@media -moz-pref("gwfox.bms") {
+  border: 1px solid rgba(45, 45, 45, 1) !important;
+}
+@media not -moz-pref("gwfox.bms") {
+  background-color: light-dark(#fff, #36363a) !important;
+}
 }
 }
 }
@@ -1130,6 +1153,9 @@ moz-box-button {
 }
 @media (-moz-platform: linux) {
   border: 1px solid rgba(255, 255, 255, .06) !important;
+@media -moz-pref("gwfox.bms") {
+  border: 1px solid rgba(45, 45, 45, 1) !important;
+}
 }
 }
 }
@@ -1200,6 +1226,9 @@ moz-box-button {
 @media (-moz-platform: linux) {
 .modalOverlayOuter, .confirmation-dialog, .contentSearchSuggestionTable, .customize-menu, .context-menu, .confirmation-dialog {
   border: 1px solid rgba(255, 255, 255, .06) !important;
+@media -moz-pref("gwfox.bms") {
+  border: 1px solid rgba(45, 45, 45, 1) !important;
+}
 }
 }
 .lightWallpaper .context-menu {
