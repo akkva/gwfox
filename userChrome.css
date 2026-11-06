@@ -140,7 +140,7 @@
   translate: none !important;
 }
 #vertical-tabs {
-  padding-block-start: 0 !important;
+  translate: none !important;
 }
 }
 
@@ -3756,12 +3756,27 @@ img[src="chrome://global/skin/icons/more.svg"] {
 #sidebar {
   box-shadow: none !important;
   background-color: var(--bgcolor-hover) !important;
+  border-radius: 0 0 var(--br2) var(--br2) !important;
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+  margin-block-start: 0 !important;
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  margin-block-start: -.5px !important;
+}
+@media (-moz-gtk-theme-family: breeze) {
+  margin-block-start: .5px !important;
+}
+}
+:root:has([panel-has-custom-header]) & {
   border-radius: var(--br2) !important;
+}
 }
 
 #sidebar-container {
   -moz-window-dragging: drag;
   border: none !important;
+@media not -moz-pref("sidebar.visibility", "expand-on-hover") {
+  view-transition-name: none !important;
+}
 &[sidebar-launcher-expanded] {
   width: 240px !important;
 @media -moz-pref("gwfox.sidebar", 1) {
@@ -3773,6 +3788,33 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 }
 
+#sidebar-panel-header {
+  padding-inline: 0 !important;
+}
+
+.sidebar-panel-heading {
+  background-color: var(--bgcolor-hover) !important;
+  border-radius: var(--br2) var(--br2) 0 0 !important;
+  margin-block: -11px !important;
+  padding-block: 10px !important;
+@media (-moz-platform: windows) {
+  margin-block: -12px !important;
+}
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  margin-block: -14.5px !important;
+}
+@media (-moz-gtk-theme-family: breeze) {
+  margin-block: -13.5px !important;
+}
+> h4 {
+  padding-inline-start: 15px !important;
+}
+}
+
+[data-l10n-id="sidebar-panel-header-close-button"] {
+  padding-inline-end: 13px !important;
+}
+
 #sidebar-box {
   -moz-window-dragging: no-drag;
   min-width: 280px !important;
@@ -3782,9 +3824,6 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 @media not -moz-pref("gwfox.noborder") {
   margin-block-end: 6px !important;
-@media (-moz-platform: linux) {
-  margin-block-end: 0 !important;
-}
 }
 }
 
