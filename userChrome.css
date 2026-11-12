@@ -1414,6 +1414,7 @@ tab-group > .tabbrowser-tab,
 #tabs-newtab-button,
 #vertical-tabs-newtab-button {
   font-size: 13px !important;
+  margin-block: 0 !important;
 &:hover {
   background: var(--bgcolor-hover) !important;
 }
@@ -3835,7 +3836,6 @@ img[src="chrome://global/skin/icons/more.svg"] {
   width: 10px !important;
   visibility: var(--dp, visible);
   margin-inline: auto !important;
-  margin-block-start: 15px !important;
   border-radius: 10px !important;
   border-top: none !important;
   border-color: transparent !important;
