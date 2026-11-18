@@ -160,6 +160,23 @@
 }
 }
 
+:root[mini-window] {
+#urlbar[popover-open] {
+  top: 12px !important;
+  margin-top: 0 !important;
+  width: 60vw !important;
+.urlbar-input-container {
+  margin-top: -12px !important;
+}
+.urlbarView {
+  margin-top: -8px !important;
+:root[uidensity="compact"] & {
+  margin-top: -7px !important;
+}
+}
+}
+}
+
 #fullscr-toggler {
   display: none !important;
 }
@@ -256,6 +273,9 @@
 @media -moz-pref("gwfox.blur") {
   backdrop-filter: blur(0);
 }
+:root[mini-window] & {
+ padding: 0 !important;
+}
 }
 
 .browserContainer {
@@ -295,6 +315,9 @@
 }
 :root:has(#sidebar-container:hover) & {
   -moz-window-dragging: unset;
+}
+:root[mini-window] & {
+  border-radius: 0 !important;
 }
 @media -moz-pref("gwfox.atbc") {
 #tabbrowser-tabpanels.letterboxing &:not(.responsive-mode):has(> .browserStack:not(.exclude-letterboxing)) {
@@ -379,7 +402,7 @@ split-view-footer {
 }
 
 @media not -moz-pref("sidebar.verticalTabs") {
-:root:not([chromehidden~="toolbar"], [popup-window], [taskbartab]) {
+:root:not([chromehidden~="toolbar"], [popup-window], [taskbartab], [mini-window]) {
 .titlebar-spacer, #nav-bar:not([customizing]) toolbarspring, #wrapper-customizableui-special-spring3, #customizableui-special-spring3 {
   visibility: collapse;
 }
@@ -742,7 +765,7 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 }
 }
 @media not -moz-pref("sidebar.verticalTabs") {
-:root:not([taskbartab]) & {
+:root:not([taskbartab], [mini-window]) & {
   max-width: 219px !important;
 }
 }
@@ -933,7 +956,7 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 }
 }
 @media -moz-pref("gwfox.urlbar") or (not -moz-pref("sidebar.verticalTabs")) {
-:root:not([taskbartab]):has(#tabbrowser-tabs[orient="vertical"][expanded], #tabbrowser-tabs[orient="horizontal"]) & {
+:root:not([taskbartab], [mini-window]):has(#tabbrowser-tabs[orient="vertical"][expanded], #tabbrowser-tabs[orient="horizontal"]) & {
 @media not -moz-pref("sidebar.visibility", "expand-on-hover") {
 &:not(:has(#identity-box[pageproxystate="valid"].extensionPage)) {
 &:not(:hover, [open], :has(*[open])) {
@@ -2449,7 +2472,7 @@ tree {
   height: 35px !important;
   border-radius: var(--br2) !important;
 }
-#main-window {
+#main-window:not([mini-window]) {
   min-width: 721px !important;
 @media (-moz-platform: macos) {
   appearance: -moz-sidebar !important;
@@ -2460,7 +2483,7 @@ tree {
 }
 }
 }
-@media (max-width: 721px) {
+:root:not([mini-window]) @media (max-width: 721px) {
 @media not -moz-pref("sidebar.verticalTabs") {
 .tabbrowser-tab:not([selected], tab-split-view-wrapper *), tab-split-view-wrapper:not(:has(.tabbrowser-tab[selected])), .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #PlacesChevron, #sidebar-button, #alltabs-button, #widget-overflow-mainView *), tab-group > *:not(.tabbrowser-tab[selected]) {
   display: none !important;
@@ -3945,7 +3968,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 /* tweak */
 
 @media -moz-pref("gwfox.toolbar") {
-:root:not([inDOMFullscreen], [customizing], [chromehidden~="toolbar"], [popup-window], [taskbartab]) {
+:root:not([inDOMFullscreen], [customizing], [chromehidden~="toolbar"], [popup-window], [taskbartab], [mini-window]) {
 .browserStack, #tabbrowser-tabbox {
   transition: margin-top .25s .05s;
 :root[sidebar-expand-on-hover] & {
@@ -5493,7 +5516,7 @@ tab-split-view-wrapper & {
 }
 
 @media -moz-pref("gwfox.urlbar.ac") and (not -moz-pref("sidebar.verticalTabs")) {
-:root:not([taskbartab]) {
+:root:not([taskbartab], [mini-window]) {
 #urlbar-container {
   transition: max-width .25s .5s !important;
   max-width: 32px !important;
@@ -6318,6 +6341,14 @@ menupopup[needsgutter] {
 }
 }
 
+#context-use-mini-window::before,
+#context_openTabInMiniWindow::before {
+  content: url("chrome://browser/content/miniwindow/assets/mini-window.svg") !important;
+@media -moz-pref("gwfox.fsi") {
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='1 1 18 18' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 8C2 6.34315 3.34315 5 5 5H15C16.6569 5 18 6.34315 18 8V11C18 12.6569 16.6569 14 15 14H5C3.34315 14 2 12.6569 2 11V8ZM5 6C3.89543 6 3 6.89543 3 8V11C3 12.1046 3.89543 13 5 13H15C16.1046 13 17 12.1046 17 11V8C17 6.89543 16.1046 6 15 6H5ZM9 9.5C9 9.22386 9.22386 9 9.5 9H14C14.2761 9 14.5 9.22386 14.5 9.5C14.5 9.77614 14.2761 10 14 10H9.5C9.22386 10 9 9.77614 9 9.5ZM8 9.5C8 10.3284 7.32843 11 6.5 11C5.67157 11 5 10.3284 5 9.5C5 8.67157 5.67157 8 6.5 8C7.32843 8 8 8.67157 8 9.5Z'/%3E%3C/svg%3E") !important;
+}
+}
+
 #context_sendTabToDevice::before,
 #context-sendpagetodevice::before,
 #context-sendlinktodevice::before {
@@ -6759,8 +6790,21 @@ list-style-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox=
   list-style-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 10C4 6.68629 6.68629 4 10 4C11.7766 4 13.3732 4.77191 14.4723 6H12.5C12.2239 6 12 6.22386 12 6.5C12 6.77614 12.2239 7 12.5 7H15.5C15.7761 7 16 6.77614 16 6.5V3.5C16 3.22386 15.7761 3 15.5 3C15.2239 3 15 3.22386 15 3.5V5.10109C13.7299 3.80499 11.9591 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17C13.866 17 17 13.866 17 10C17 9.8191 16.9931 9.6397 16.9796 9.46207C16.9587 9.18673 16.7185 8.98049 16.4431 9.00144C16.1678 9.02239 15.9615 9.26258 15.9825 9.53793C15.9941 9.69034 16 9.84443 16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10Z'/%3E%3C/svg%3E") !important;
 }
 
-#stop-button {
+#stop-button, #mini-window-close-button {
   list-style-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.08859 4.21569L4.14645 4.14645C4.32001 3.97288 4.58944 3.9536 4.78431 4.08859L4.85355 4.14645L10 9.293L15.1464 4.14645C15.32 3.97288 15.5894 3.9536 15.7843 4.08859L15.8536 4.14645C16.0271 4.32001 16.0464 4.58944 15.9114 4.78431L15.8536 4.85355L10.707 10L15.8536 15.1464C16.0271 15.32 16.0464 15.5894 15.9114 15.7843L15.8536 15.8536C15.68 16.0271 15.4106 16.0464 15.2157 15.9114L15.1464 15.8536L10 10.707L4.85355 15.8536C4.67999 16.0271 4.41056 16.0464 4.21569 15.9114L4.14645 15.8536C3.97288 15.68 3.9536 15.4106 4.08859 15.2157L4.14645 15.1464L9.293 10L4.14645 4.85355C3.97288 4.67999 3.9536 4.41056 4.08859 4.21569L4.14645 4.14645L4.08859 4.21569Z'/%3E%3C/svg%3E") !important;
+}
+
+#mini-window-restore-button {
+  list-style-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 4C4.89543 4 4 4.89543 4 6V14C4 15.1046 4.89543 16 6 16H14C15.1046 16 16 15.1046 16 14V11.5C16 11.2239 16.2239 11 16.5 11C16.7761 11 17 11.2239 17 11.5V14C17 15.6569 15.6569 17 14 17H6C4.34315 17 3 15.6569 3 14V6C3 4.34315 4.34315 3 6 3H8.5C8.77614 3 9 3.22386 9 3.5C9 3.77614 8.77614 4 8.5 4H6ZM11 3.5C11 3.22386 11.2239 3 11.5 3H16.5C16.7761 3 17 3.22386 17 3.5V8.5C17 8.77614 16.7761 9 16.5 9C16.2239 9 16 8.77614 16 8.5V4.70711L11.8536 8.85355C11.6583 9.04882 11.3417 9.04882 11.1464 8.85355C10.9512 8.65829 10.9512 8.34171 11.1464 8.14645L15.2929 4H11.5C11.2239 4 11 3.77614 11 3.5Z'/%3E%3C/svg%3E") !important;
+}
+
+#mini-window-audio-button {
+&[soundplaying] {
+  list-style-image: var(--audio) !important;
+}
+&[muted] {
+  list-style-image: var(--audio-muted) !important;
+}
 }
 
 #home-button {
