@@ -4276,7 +4276,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 
 @media -moz-pref("gwfox.urlbar") and -moz-pref("sidebar.verticalTabs") {
 @media not -moz-pref("sidebar.visibility", "expand-on-hover") {
-:root:not([inDOMFullscreen], [customizing], [chromehidden~="toolbar"], [popup-window], [taskbartab]) {
+:root:not([inDOMFullscreen], [customizing], [chromehidden~="toolbar"], [popup-window], [taskbartab], [mini-window]) {
 #navigator-toolbox {
   display: grid;
   grid-template-columns: minmax(auto, 0) auto;
@@ -5508,6 +5508,9 @@ tab-split-view-wrapper & {
 #tabbrowser-tabbox {
 @media not -moz-pref("gwfox.noborder") {
   padding-inline-start: var(--pd1) !important;
+}
+:root[mini-window] & {
+  padding-inline-start: 0 !important;
 }
 }
 }
