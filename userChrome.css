@@ -161,6 +161,9 @@
 }
 
 :root[mini-window] {
+#urlbar-container:has(#urlbar[popover-open]) {
+  background: none;
+}
 #urlbar[popover-open] {
   top: 12px !important;
   margin-top: 0 !important;
