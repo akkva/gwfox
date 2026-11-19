@@ -4314,6 +4314,10 @@ img[src="chrome://global/skin/icons/more.svg"] {
   margin-top: 34px !important;
 }
 
+sidebar-main {
+  position: relative;
+}
+
 #urlbar-container {
   position: fixed !important;
   left: 4px !important;
@@ -5275,6 +5279,7 @@ tab-split-view-wrapper & {
 #sidebar-container {
   height: calc(100% - 12px) !important;
   width: 240px !important;
+  display: flex !important;
   position: fixed !important;
   top: -28px;
   left: calc(var(--sidebar-left) + (351px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
