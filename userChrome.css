@@ -523,7 +523,7 @@ button, menulist {
   border: none !important;
 }
 
-.button-background:not([type="primary"]) {
+.button-background:not([type="primary"], [type="default"]) {
 button:hover > & {
   background-color: var(--bgcolor-hover) !important;
 }
@@ -2385,9 +2385,6 @@ toolbarseparator[orient="vertical"] {
 @media -moz-pref("gwfox.blur") {
   box-shadow: var(--bs1) !important;
 }
-#window-modal-dialog > .dialogOverlay > &:not(.spotlightBox) {
-  margin-top: 80px !important;
-}
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: var(--br3) !important;
 }
@@ -2397,6 +2394,12 @@ toolbarseparator[orient="vertical"] {
   backdrop-filter: var(--bf1) !important;
   background: var(--bg2) !important;
 }
+}
+#window-modal-dialog > .dialogOverlay > &:not(.spotlightBox) {
+  margin-top: 80px !important;
+}
+:not(.content-prompt-dialog) > .dialogOverlay > &:not(.spotlightBox) {
+  margin-top: 15px !important;
 }
 }
 
