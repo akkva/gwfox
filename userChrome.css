@@ -1335,6 +1335,9 @@ tab-group {
 &:hover {
   background-color: color-mix(in srgb, var(--tab-group-color) 20%, transparent) !important;
   outline: .5px solid color-mix(in srgb, var(--tab-group-color) 30%, transparent) !important;
+#tabbrowser-tabs[movingtab] & {
+  outline: none !important;
+}
 }
 }
 }
