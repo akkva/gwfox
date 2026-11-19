@@ -4074,7 +4074,13 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 }
 }
-:root:has(#sidebar-container:not([hidden])):has(#sidebar-box:not([hidden])) & {
+:root:not([sidebar-expand-on-hover]):has(#tabbrowser-tabs[expanded]):has(#sidebar-container:not([hidden])):has(#sidebar-box:not([hidden])) & {
+  margin-top: 0 !important;
+.browserStack {
+  margin-top: 0 !important;
+}
+}
+:root[sidebar-expand-on-hover]:has(#sidebar-box:not([hidden])) & {
   margin-top: 0 !important;
 .browserStack {
   margin-top: 0 !important;
