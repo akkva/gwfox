@@ -296,8 +296,14 @@
 :root:not([inDOMFullscreen]) #tabbrowser-tabbox[sidebar-shown] & {
 @media -moz-pref("sidebar.position_start") {
   border-start-start-radius: var(--br2) !important;
+  transition: border-start-start-radius .25s .25s;
 @media (-moz-platform: windows) {
   border-start-start-radius: 6px !important;
+}
+@media -moz-pref("gwfox.urlbar") and (not -moz-pref("sidebar.visibility", "expand-on-hover")) {
+:root:not(:has(#sidebar-box:not([hidden])), :has(:is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open])) & {
+  border-start-start-radius: 0 !important;
+}
 }
 :root:has(.split-view-panel) & {
 [column="0"] &, [column="1"] & {
@@ -5281,7 +5287,8 @@ tab-split-view-wrapper & {
   width: 240px !important;
   display: flex !important;
   position: fixed !important;
-  top: -28px;
+  margin-top: 0 !important;
+  top: 6px;
   left: calc(var(--sidebar-left) + (351px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
   z-index: 9;
   border-radius: var(--br2) !important;
@@ -5297,7 +5304,7 @@ tab-split-view-wrapper & {
 @media (-moz-platform: windows) {
   border-radius: 6px !important;
   height: calc(100% - 9px) !important;
-  top: -29px;
+  top: 5px;
   left: calc(var(--sidebar-left) + (349px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 @media (-moz-platform: linux) {
