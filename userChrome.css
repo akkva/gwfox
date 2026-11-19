@@ -175,6 +175,11 @@
 }
 }
 }
+#tabbrowser-tabbox {
+@media -moz-pref("gwfox.blur") {
+  backdrop-filter: blur(0);
+}
+}
 }
 
 #fullscr-toggler {
@@ -221,7 +226,7 @@
   overflow: unset !important;
 }
 
-:root:not([inDOMFullscreen], [chromehidden~="toolbar"], [popup-window], [taskbartab]) {
+:root:not([inDOMFullscreen], [chromehidden~="toolbar"], [popup-window], [taskbartab], [mini-window]) {
 .titlebar-buttonbox-container {
 @media not -moz-pref("sidebar.verticalTabs") {
 @media (-moz-platform: macos) {
@@ -5641,41 +5646,6 @@ tab-split-view-wrapper & {
 @media -moz-pref("gwfox.fsi") {
   content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 3.5,7.5 A 0.5,0.5 0 0 0 3,8 0.5,0.5 0 0 0 3.5,8.5 h 9 A 0.5,0.5 0 0 0 13,8 0.5,0.5 0 0 0 12.5,7.5 Z'/%3E%3C/svg%3E") !important;
 }
-@media -moz-pref("gwfox.twc.ac") {
-  max-width: 0 !important;
-  margin-inline-end: -32px !important;
-  transition: .25s;
-@media (-moz-gtk-csd-reversed-placement) {
-  margin-inline-end: -40px !important;
-}
-@media -moz-pref("sidebar.verticalTabs") and -moz-pref("gwfox.urlbar") {
-  max-width: 32px !important;
-  margin-inline-end: 8px !important;
-}
-.titlebar-buttonbox-container:hover & {
-  max-width: 32px !important;
-  margin-inline-end: 8px !important;
-@media (-moz-gtk-csd-reversed-placement) {
-  margin-inline-end: -2px !important;
-@media -moz-pref("sidebar.verticalTabs") and -moz-pref("gwfox.urlbar") {
-  margin-inline-end: 8px !important;
-}
-}
-}
-}
-}
-
-.titlebar-max, .titlebar-restore {
-@media -moz-pref("gwfox.twc.ac") {
-  max-width: 0 !important;
-  transition: .25s;
-@media -moz-pref("sidebar.verticalTabs") and -moz-pref("gwfox.urlbar") {
-  max-width: 32px !important;
-}
-.titlebar-buttonbox-container:hover & {
-  max-width: 32px !important;
-}
-}
 }
 
 .titlebar-max {
@@ -5698,10 +5668,37 @@ tab-split-view-wrapper & {
   content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 3.5,3.01 a 0.5,0.5 0 0 0 -0.35,0.15 0.5,0.5 0 0 0 0,0.71 l 4.13,4.14 -4.14,4.13 a 0.5,0.5 0 0 0 0,0.71 0.5,0.5 0 0 0 0.71,0 L 8,8.71 12.14,12.85 a 0.5,0.5 0 0 0 0.71,0 0.5,0.5 0 0 0 0,-0.71 L 8.7,8 12.83,3.86 a 0.5,0.5 0 0 0 0,-0.71 0.5,0.5 0 0 0 -0.71,0 L 7.99,7.29 3.85,3.15 A 0.5,0.5 0 0 0 3.5,3.01 Z'/%3E%3C/svg%3E") !important;
 }
 }
+
+:root:not([taskbartab], [mini-window]) {
+@media -moz-pref("gwfox.twc.ac") and (not -moz-pref("sidebar.verticalTabs")) {
+.titlebar-min {
+  max-width: 0 !important;
+  margin-inline-end: -32px !important;
+  transition: .25s;
+@media (-moz-gtk-csd-reversed-placement) {
+  margin-inline-end: -40px !important;
+}
+.titlebar-buttonbox-container:hover & {
+  max-width: 32px !important;
+  margin-inline-end: 8px !important;
+@media (-moz-gtk-csd-reversed-placement) {
+  margin-inline-end: -2px !important;
+}
+}
+}
+.titlebar-max, .titlebar-restore {
+  max-width: 0 !important;
+  transition: .25s;
+.titlebar-buttonbox-container:hover & {
+  max-width: 32px !important;
+}
+}
+}
+}
 }
 
 @media -moz-pref("gwfox.newtab") {
-:root:not([inDOMFullscreen], [chromehidden~="toolbar"], [popup-window], [customizing], [taskbartab]) {
+:root:not([inDOMFullscreen], [chromehidden~="toolbar"], [popup-window], [customizing], [taskbartab], [mini-window]) {
 .browserContainer {
   background: light-dark(rgba(255, 255, 255, .3), rgba(255, 255, 255, .1)) !important;
 }
