@@ -3801,6 +3801,12 @@ img[src="chrome://global/skin/icons/more.svg"] {
   box-shadow: none !important;
   background-color: var(--bgcolor-hover) !important;
   border-radius: 0 0 var(--br2) var(--br2) !important;
+@media (-moz-platform: windows) {
+  border-radius: 0 0 6px 6px !important;
+}
+@media -moz-pref("gwfox.noborder") {
+  border-radius: 0 !important;
+}
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
   margin-block-start: 0 !important;
 @media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
@@ -3843,6 +3849,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
   padding-block: 10px !important;
 @media (-moz-platform: windows) {
   margin-block: -12px !important;
+  border-radius: 6px 6px 0 0 !important;
 }
 @media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   margin-block: -14.5px !important;
@@ -3868,6 +3875,9 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 @media not -moz-pref("gwfox.noborder") {
   margin-block-end: 6px !important;
+@media (-moz-platform: windows) {
+  margin-block-end: 4px !important;
+}
 }
 }
 
