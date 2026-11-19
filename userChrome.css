@@ -4074,16 +4074,20 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 }
 }
-:root:not([sidebar-expand-on-hover]):has(#tabbrowser-tabs[expanded]):has(#sidebar-container:not([hidden])):has(#sidebar-box:not([hidden])) & {
+@media -moz-pref("sidebar.visibility", "expand-on-hover") or (not -moz-pref("gwfox.urlbar")) {
+:root:has(#sidebar-container:not([hidden])):has(#sidebar-box:not([hidden])) & {
   margin-top: 0 !important;
 .browserStack {
   margin-top: 0 !important;
 }
 }
-:root[sidebar-expand-on-hover]:has(#sidebar-box:not([hidden])) & {
+}
+@media -moz-pref("gwfox.urlbar") and (not -moz-pref("sidebar.visibility", "expand-on-hover")) {
+:root:has(#tabbrowser-tabs[expanded]):has(#sidebar-container:not([hidden])):has(#sidebar-box:not([hidden])) & {
   margin-top: 0 !important;
 .browserStack {
   margin-top: 0 !important;
+}
 }
 }
 @media -moz-pref("gwfox.urlbar") and (not (-moz-platform: macos)) {
