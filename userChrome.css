@@ -305,7 +305,7 @@
 @media (-moz-platform: windows) {
   border-start-start-radius: 6px !important;
 }
-@media -moz-pref("gwfox.urlbar") and (not -moz-pref("sidebar.visibility", "expand-on-hover")) {
+@media -moz-pref("gwfox.urlbar") and -moz-pref("sidebar.verticalTabs") and (not -moz-pref("sidebar.visibility", "expand-on-hover")) {
 :root:not(:has(#sidebar-box:not([hidden])), :has(:is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open])) & {
   border-start-start-radius: 0 !important;
 }
