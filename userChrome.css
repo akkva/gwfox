@@ -498,6 +498,7 @@ split-view-footer {
 .private-browsing-indicator-with-label,
 #reset-pbm-toolbar-button, .sharing-icon,
 #firefox-view-button, #wrapper-firefox-view-button,
+#mini-window-button, #wrapper-mini-window-button,
 #userContext-icons, #userContext-label,
 #wrapper-fxa-toolbar-menu-button {
   display: none !important;
@@ -2866,6 +2867,7 @@ panel#feature-callout,
 screenshots-buttons {
   --screenshots-icon-background-color: var(--bg0) !important;
   top: 10px !important;
+  padding: 10px 5px !important;
   border-radius: 12px !important;
   background-color: light-dark(rgba(255, 255, 255, 1), rgba(25, 25, 25, 1)) !important;
 @media -moz-pref("gwfox.blur") {
@@ -2886,6 +2888,10 @@ screenshots-preview {
   padding: 0 !important;
 }
 
+.mini-window-chooser {
+  padding-inline: 5px !important;
+}
+
 #full-page, #visible-page {
   fill: light-dark(#000, #fff) !important;
   color: light-dark(#000, #fff) !important;
@@ -2893,16 +2899,9 @@ screenshots-preview {
   background-position: center top 5px !important;
   padding: 36px 5px 5px !important;
   background-color: var(--button-bgcolor) !important;
+  margin-inline: 5px !important;
 &:hover { background-color: var(--button-hover-bgcolor) !important; }
 &:active { background-color: var(--button-active-bgcolor) !important; }
-}
-
-#full-page {
-  margin-inline-end: 5px !important;
-}
-
-#visible-page {
-  margin-inline-start: 5px !important;
 }
 
 .browserContainer > findbar {
