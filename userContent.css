@@ -84,6 +84,12 @@
 }
 }
 
+dialog {
+  --button-background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .25)) !important;
+  --button-background-color-hover: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .3)) !important;
+  --button-background-color-active: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .2)) !important;
+}
+
 :root[dialogroot] {
   --background-color-canvas: transparent !important;
 }
@@ -979,6 +985,11 @@ button {
 }
 .modalOverlayOuter, .contentSearchSuggestionTable, .confirmation-dialog {
   box-shadow: var(--bs1) !important;
+}
+.modal {
+  --button-background-color-ghost: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .25)) !important;
+  --button-background-color-ghost-hover: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .3)) !important;
+  --button-background-color-ghost-active: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .2)) !important;
 }
 .customize-menu {
   background-color: var(--bg4) !important;
