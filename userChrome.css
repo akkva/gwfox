@@ -2434,6 +2434,10 @@ window[role="dialog"] {
 }
 }
 
+dialog[inbrowserwindow]:not([inClearOnShutdown]) #sanitizeDialogClose {
+  display: none !important;
+}
+
 #editBookmarkPanelContent > input,
 #editBookmarkPanelContent > hbox > input {
   appearance: none !important;
@@ -2870,6 +2874,31 @@ screenshots-preview {
 
 #preview-image-container {
   padding: 0 !important;
+}
+
+#full-page, #visible-page {
+  fill: #000 !important;
+  color: #000 !important;
+  background-size: 26px 26px !important;
+  background-position: center top 5px !important;
+  padding: 36px 5px 5px !important;
+  background-color: var(--button-bgcolor) !important;
+&:hover { background-color: var(--button-hover-bgcolor) !important; }
+&:active { background-color: var(--button-active-bgcolor) !important; }
+}
+
+#full-page {
+  margin-inline-end: 5px !important;
+}
+
+#visible-page {
+  margin-inline-start: 5px !important;
+}
+
+[data-l10n-id="screenshots-component-cancel-button"] {
+  background-image: url(chrome://global/skin/icons/close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .browserContainer > findbar {
@@ -7778,6 +7807,10 @@ menupopup > menu:-moz-locale-dir(rtl)::after {
 
 [src="chrome://browser/skin/history.svg"] {
   content: var(--history);
+}
+
+[src="chrome://global/skin/icons/close.svg"] {
+  content: var(--close) !important;
 }
 
 [src="chrome://global/skin/icons/highlights.svg"] {
