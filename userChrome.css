@@ -2434,8 +2434,18 @@ window[role="dialog"] {
 }
 }
 
-dialog[inbrowserwindow]:not([inClearOnShutdown]) #sanitizeDialogClose {
+dialog[inbrowserwindow]:not([inClearOnShutdown]) {
+#sanitizeDialogClose {
   display: none !important;
+}
+#titleText {
+  grid-column: 1 !important;
+  text-align: left !important;
+}
+}
+
+#sanitizeDurationChoice {
+  outline: none !important;
 }
 
 #editBookmarkPanelContent > input,
@@ -2877,8 +2887,8 @@ screenshots-preview {
 }
 
 #full-page, #visible-page {
-  fill: #000 !important;
-  color: #000 !important;
+  fill: light-dark(#000, #fff) !important;
+  color: light-dark(#000, #fff) !important;
   background-size: 26px 26px !important;
   background-position: center top 5px !important;
   padding: 36px 5px 5px !important;
@@ -2893,12 +2903,6 @@ screenshots-preview {
 
 #visible-page {
   margin-inline-start: 5px !important;
-}
-
-[data-l10n-id="screenshots-component-cancel-button"] {
-  background-image: url(chrome://global/skin/icons/close.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .browserContainer > findbar {
@@ -7835,6 +7839,14 @@ menupopup > menu:-moz-locale-dir(rtl)::after {
 
 [src="chrome://global/skin/icons/performance.svg"] {
   content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 7.99 2 C 4.12 2 1 5.12 1 8.99 1 10.02 1.23 11.05 1.68 11.98 c 0.08 0.16 0.25 0.26 0.42 0.26 0.05 0 0.13 -0.01 0.18 -0.04 l 0 -0 c 0.12 -0.06 0.21 -0.16 0.24 -0.27 0.04 -0.1 0.04 -0.24 -0.02 -0.35 C 2.12 10.77 1.92 9.89 1.92 8.99 1.92 5.63 4.63 2.92 7.99 2.92 c 3.35 0 6.07 2.72 6.07 6.07 -0 0.9 -0.21 1.79 -0.6 2.6 a 0.25 0.25 0 0 0 0 0 c -0.04 0.08 -0.06 0.15 -0.06 0.21 -0 0.04 0.02 0.12 0.03 0.16 0.03 0.07 0.06 0.09 0.09 0.13 0.04 0.04 0.08 0.08 0.15 0.11 0.07 0.03 0.13 0.04 0.18 0.05 0.05 0 0.09 0.01 0.16 -0.01 0.03 -0.01 0.11 -0.05 0.14 -0.07 0.03 -0.03 0.09 -0.09 0.13 -0.18 v -0 C 14.75 11.05 14.97 10.02 14.97 8.99 14.97 5.12 11.85 2 7.99 2 Z m 3.26 5.23 c -0 -0 -0.01 0 -0.03 0 a 0.25 0.25 0 0 0 -0 0 c -0.11 0.01 -0.21 0.07 -0.27 0.16 L 8.66 11 c -0.03 0.04 -0.08 0.06 -0.13 0.05 -0.18 -0.06 -0.36 -0.08 -0.54 -0.09 a 0.25 0.25 0 0 0 -0 0 c -0.59 0 -1.03 0.22 -1.31 0.54 -0.29 0.33 -0.44 0.77 -0.44 1.21 0 0.44 0.14 0.88 0.44 1.21 0.29 0.32 0.73 0.54 1.32 0.54 a 0.25 0.25 0 0 0 0 0 c 0.29 -0 0.57 -0.11 0.83 -0.25 h 0 a 0.25 0.25 0 0 0 0.01 -0 0.25 0.25 0 0 0 0 -0 0.25 0.25 0 0 0 0 0 0.25 0.25 0 0 0 0.24 -0.24 v 0.1 C 9.21 13.96 9.34 13.84 9.44 13.7 a 0.25 0.25 0 0 0 0 -0.01 c 0.39 -0.58 0.39 -1.36 -0 -1.95 a 0.25 0.25 0 0 0 -0.01 -0.01 C 9.39 11.66 9.33 11.59 9.27 11.53 9.23 11.49 9.23 11.43 9.25 11.39 L 11.55 7.78 c 0.05 -0.07 0.07 -0.17 0.05 -0.27 -0.02 -0.09 -0.08 -0.17 -0.16 -0.22 -0.06 -0.04 -0.12 -0.06 -0.19 -0.06 -0 -0 -0 -0 -0.01 -0 z'/%3E%3C/svg%3E") !important;
+}
+
+[data-l10n-id="screenshots-component-cancel-button"] {
+  background-image: url(chrome://global/skin/icons/close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-context-properties: fill, fill-opacity;
+  fill: light-dark(#000, #fff);
 }
 }
 
