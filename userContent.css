@@ -640,6 +640,9 @@ moz-message-bar {
 #prefs[has-visible-prefs] > .add > th::before {
   border: none !important;
 }
+#prefs > tr.odd {
+  background-color: var(--bg1) !important;
+}
 }
 
 @-moz-document url-prefix("about:preferences") {
