@@ -44,7 +44,7 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.ac` | Enable accent color | Edit `--bg0` in CSS to customize |
 | `gwfox.atbc` | [Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/) compatibility | |
 | `gwfox.newtab` | Enable New Tab transparency | Requires `allow_transparent_browser` |
-| `gwfox.noborder` | Remove window borders | |
+| `gwfox.noborder` | Remove main window borders | |
 | `gwfox.bms` | Enable main window transparency | Linux |
 | `gwfox.icons` | Add menu icons | |
 | `gwfox.mwc` | Enable macOS-style window controls  | Windows/Linux |
@@ -54,27 +54,8 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.fxa` | Replace app menu icon with avatar | Requires sign-in |
 | `gwfox.fsi` | Enable [FluentUI System Icons](https://github.com/microsoft/fluentui-system-icons) | |
 
-
 > [!NOTE]
-> * When `gwfox.urlbar` is enabled, the collapsed sidebar expands in an Arc-like hover mode, which you can trigger from the left.
-> * For `gwfox.urlbar.ac`: If you want it to trigger only when the window size is reduced, you can manually modify `userChrome.css`.
-
-<details>
-<summary><b>Click to expand steps</b></summary>
-<br>
-
-Search for the following line in your `userChrome.css`:
-```css
-@media -moz-pref("gwfox.urlbar.ac") and (not -moz-pref("sidebar.verticalTabs")) {
-```
-And change it to:
-```css
-@media -moz-pref("gwfox.urlbar.ac") and (not -moz-pref("sidebar.verticalTabs")) and (width < 1500px) {
-```
-*Feel free to adjust `1500px` to any value that fits your needs.*
-</details>
-
----
+> When `gwfox.urlbar` is enabled, the collapsed sidebar expands in an Arc-like hover mode, which you can trigger from the left.
 
 ### Numerical Setting
 
