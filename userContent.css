@@ -27,7 +27,7 @@
   --focus-outline-color: light-dark(color-mix(in srgb, var(--bg0) 55%, transparent), color-mix(in srgb, var(--bg0) 45%, #555)) !important;
   --in-content-focus-outline-color: var(--focus-outline-color) !important;
   --color-accent-primary: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
-  --color-accent-primary-hover: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #fff)) !important;
+  --color-accent-primary-hover: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #666)) !important;
   --color-accent-primary-active: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important;
   --color-accent-primary-selected: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
   --button-background-color-primary: var(--color-accent-primary) !important;
@@ -523,7 +523,7 @@ input[type="checkbox"]:not(.reveal-password-checkbox) {
   fill: #fff;
   stroke: #fff;
   border: none !important;
-  &:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #fff)) !important; }
+  &:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #666)) !important; }
   &:hover:active { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important; }
 }
 }
@@ -541,7 +541,7 @@ input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]) {
   -moz-context-properties: fill;
   fill: #fff;
   border: none !important;
-  &:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #fff)) !important; }
+  &:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #666)) !important; }
   &:hover:active { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important; }
 }
 }
@@ -560,7 +560,7 @@ input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]) {
   fill: #fff;
   stroke: #fff;
   border: none !important;
-  &:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #fff)) !important; }
+  &:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #666)) !important; }
   &:hover:active { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important; }
 }
 }
@@ -578,7 +578,7 @@ input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]) {
   -moz-context-properties: fill;
   fill: #fff;
   border: none !important;
-  &:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #fff)) !important; }
+  &:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #666)) !important; }
   &:hover:active { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important; }
 }
 }
@@ -587,7 +587,7 @@ input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]) {
 @-moz-document url-prefix("about:") {
 :root {
   --link-color: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
-  --link-color-hover: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #fff)) !important;
+  --link-color-hover: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #666)) !important;
   --link-color-active: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important;
   --link-color-visited: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
   --border-color-deemphasized: light-dark(rgba(50, 50, 50, .15), rgba(225, 225, 225, .15)) !important;
