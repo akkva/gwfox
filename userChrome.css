@@ -55,6 +55,7 @@
   --background-color-box: light-dark(rgba(155, 155, 155, .2), rgba(195, 195, 195, .2)) !important;
   --in-content-box-border-color: transparent !important;
   --sidebar-background-color: transparent !important;
+  --sidebar-box-border: transparent !important;
   --urlbarView-action-button-background-color: var(--button-bgcolor) !important;
   --urlbarView-hover-background: var(--button-hover-bgcolor) !important;
   --urlbarView-highlight-background: var(--button-hover-bgcolor) !important;
@@ -545,6 +546,13 @@ button:hover > & {
 button:hover:active:not(:disabled) > &,
 button:is([aria-expanded="true"], [aria-pressed="true"], [aria-selected="true"]):not(:hover, :disabled) > & {
   background-color: var(--bgcolor-active) !important;
+}
+}
+
+.button-background {
+& img, &[type~="icon"]:not(.labelled) {
+  fill: light-dark(#000, #fff) !important;
+  stroke: light-dark(#000, #fff) !important;
 }
 }
 
@@ -2229,6 +2237,18 @@ panel[type="arrow"] {
 }
 }
 
+panel[type="autocomplete-richlistbox"] {
+@media not (-moz-platform: linux) {
+  --panel-box-shadow-margin: 0 !important;
+  --panel-border-color: transparent !important;
+  --panel-background-color: light-dark(#fff, #191919) !important;
+  appearance: menupopup !important;
+@media -moz-pref("gwfox.blur") {
+  --panel-background-color: transparent !important;
+}
+}
+}
+
 panel-list {
 @media -moz-pref("gwfox.ac") {
   --button-background-color-menu-hover: color-mix(in srgb, var(--bg0) 80%, transparent) !important;
@@ -2279,8 +2299,20 @@ panel-list {
   border: none !important;
 }
 
-#appMenu-nova-switch-device-promo {
+#appMenu-nova-switch-device-promo, .import-history-promo {
   --promo-background-color: var(--button-bgcolor) !important;
+}
+
+.pinned-tabs-promo {
+  --promo-background-color: var(--bgcolor) !important;
+  --promo-border-color: var(--button-bgcolor) !important;
+  --promo-heading-text-color: light-dark(#000, #fff) !important;
+img {
+  fill: light-dark(#000, #fff) !important;
+}
+.icon-foxy {
+  display: none !important;
+}
 }
 
 .message, .fxa-menu-sign-in-promo-heading {
@@ -3332,12 +3364,16 @@ richlistitem {
   opacity: .65;
 }
 
-menupopup, panel[type="arrow"], .toolbar-menupopup {
+menupopup, panel:is([type="arrow"], [type="autocomplete-richlistbox"]), .toolbar-menupopup {
   --panel-box-shadow: var(--bs1) !important;
   --panel-box-shadow-margin: 18px !important;
   --panel-background-color: var(--bg2) !important;
   --panel-border-color: transparent !important;
   --menuitem-border-radius: var(--br2) !important;
+  --panel-border-radius: var(--br2) !important;
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  --panel-border-radius: var(--br3) !important;
+}
 @media -moz-pref("gwfox.bms") {
   --panel-background-color: light-dark(rgba(255, 255, 255, 1), rgba(25, 25, 25, 1)) !important;
 }
@@ -3446,11 +3482,6 @@ menuitem[type="radio"][disabled] .menu-icon {
 }
 @media -moz-pref("gwfox.urlbar") and -moz-pref("sidebar.verticalTabs") {
 :root:has(#tabbrowser-tabs[expanded]) & {
-  top: 10px;
-}
-}
-@media -moz-pref("sidebar.visibility", "hide-sidebar") {
-:root:has(#tabbrowser-tabs[orient="vertical"]:not([expanded])) & {
   top: 10px;
 }
 }
@@ -6030,6 +6061,7 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
 #appMenu-new-tab-button2 {list-style-image: url("chrome://browser/skin/new-tab.svg")}
 #appMenu-new-window-button2 {list-style-image: url("chrome://browser/skin/window.svg")}
 #appMenu-new-private-window-button2 {list-style-image: url("chrome://browser/skin/privateBrowsing.svg")}
+#appMenu-tab-groups-button {list-style-image: url("chrome://browser/skin/tabbrowser/tab-groups.svg")}
 #appMenu-fullscreen-button2 {list-style-image: url("data:image/svg+xml,%3Csvg width='12' height='12' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 7.5,9 H 4 A 1,1 0 0 1 3,8 V 4.5 M 4.5,3 H 8 a 1,1 0 0 1 1,1 v 3.5 z'/%3E%3C/svg%3E") !important}
 #appMenu-fullscreen-button2[checked] {list-style-image: url("data:image/svg+xml,%3Csvg width='12' height='12' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 6,10.5 V 7 A 1,1 0 0 0 5,6 H 1.5 m 9,0 H 7 A 1,1 0 0 1 6,5 V 1.5 Z'/%3E%3C/svg%3E") !important}
 
@@ -6050,6 +6082,7 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
 #appMenu-settings-button {list-style-image: var(--settings)}
 #appMenu-new-tab-button2 {list-style-image: var(--newtabs)}
 #appMenu-new-window-button2 {list-style-image: var(--window)}
+#appMenu-tab-groups-button {list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5C1 3.89543 1.89543 3 3 3H11C12.1046 3 13 3.89543 13 5V9C13 10.1046 12.1046 11 11 11H3C1.89543 11 1 10.1046 1 9V5ZM3 4C2.44772 4 2 4.44772 2 5V9C2 9.55228 2.44772 10 3 10H11C11.5523 10 12 9.55228 12 9V5C12 4.44772 11.5523 4 11 4H3ZM3.26563 12C3.61143 12.5978 4.25778 13 4.99806 13H10.9981C13.2072 13 14.9981 11.2092 14.9981 9.00001V7.00001C14.9981 6.25973 14.5959 5.61339 13.9981 5.26758V9.00001C13.9981 10.6569 12.6549 12 10.9981 12H3.26563ZM4.5 6.5C4.22386 6.5 4 6.72386 4 7C4 7.27614 4.22386 7.5 4.5 7.5H9.5C9.77614 7.5 10 7.27614 10 7C10 6.72386 9.77614 6.5 9.5 6.5H4.5Z'/%3E%3C/svg%3E")}
 #appMenu-empty-profiles-button, #appMenu-create-profile-button {list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0.5 0.5 19 19' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 6,5.5 C 6,5.22 6.22,5 6.5,5 h 7 C 13.78,5 14,5.22 14,5.5 14,5.78 13.78,6 13.5,6 h -7 C 6.22,6 6,5.78 6,5.5 Z M 6.5,7 C 6.22,7 6,7.22 6,7.5 6,7.78 6.22,8 6.5,8 h 7 C 13.78,8 14,7.78 14,7.5 14,7.22 13.78,7 13.5,7 Z M 6,3 C 4.34,3 3,4.34 3,6 v 8 c 0,1.66 1.34,3 3,3 h 8 c 1.66,0 3,-1.34 3,-3 V 6 C 17,4.34 15.66,3 14,3 Z m 10,7 C 12,10.18 8,10.09 4,10 V 6 C 4,4.9 4.9,4 6,4 h 8 c 1.1,0 2,0.9 2,2 z M 4,11 h 12 v 3 c 0,1.1 -0.9,2 -2,2 H 6 C 4.9,16 4,15.1 4,14 Z'/%3E%3C/svg%3E")}
 #appMenu-new-private-window-button2 {list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0.5 0.5 19 19' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.49805 3.00098C4.11734 3.00098 2.99805 4.12026 2.99805 5.50098V14.501C2.99805 15.8817 4.11733 17.001 5.49805 17.001H14.498C15.8788 17.001 16.998 15.8817 16.998 14.501V7.00098H17.001V6.00098H16.998V5.50098C16.998 4.12026 15.8788 3.00098 14.498 3.00098H5.49805ZM15.998 5.50098V6.00098H14.7086L15.853 4.85658C15.946 5.05181 15.998 5.27031 15.998 5.50098ZM15.1471 4.14827L13.2944 6.00098H10.4659L12.4659 4.00098H14.498C14.7305 4.00098 14.9507 4.05387 15.1471 4.14827ZM11.0517 4.00098L9.05171 6.00098H6.22328L8.22328 4.00098H11.0517ZM6.80907 4.00098L4.80907 6.00098H3.99805V5.50098C3.99805 4.67255 4.66962 4.00098 5.49805 4.00098H6.80907ZM3.99805 8.22621L5.22328 7.00098H8.05171L3.99805 11.0546V8.22621ZM9.46592 7.00098H12.2944L4.14534 15.15C4.05094 14.9536 3.99805 14.7335 3.99805 14.501V12.4689L9.46592 7.00098ZM13.7086 7.00098H15.998V7.53992L7.53699 16.001H5.49805C5.26738 16.001 5.04888 15.9489 4.85365 15.8559L13.7086 7.00098ZM15.998 8.95414V11.7826L11.7796 16.001H8.95121L15.998 8.95414ZM15.998 13.1968V14.501C15.998 15.3294 15.3265 16.001 14.498 16.001H13.1938L15.998 13.1968Z'/%3E%3C/svg%3E")}
 }
