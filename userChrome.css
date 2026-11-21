@@ -720,7 +720,7 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 }
 
 @media -moz-pref("gwfox.fxa") {
-:root[fxastatus=signedin] #PanelUI-menu-button .toolbarbutton-icon {
+:root:not([privatebrowsingmode])[fxastatus=signedin] #PanelUI-menu-button .toolbarbutton-icon {
   list-style-image: none !important;
   background-image: var(--avatar-image-url);
   background-size: cover;
@@ -4837,6 +4837,9 @@ sidebar-main {
   list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 12.8 3.09 C 9.6 3.11 6.38 3.11 3.17 3.1 L 3.18 3.11 C 2.48 3.11 2.46 4.36 3.17 4.36 C 6.42 4.37 9.68 4.38 12.93 4.35 C 13.64 4.25 13.47 3.09 12.8 3.09 z M 12.8 7.34 C 9.6 7.36 6.38 7.35 3.17 7.35 L 3.18 7.36 C 2.48 7.36 2.46 8.61 3.17 8.61 C 6.42 8.62 9.68 8.63 12.93 8.6 C 13.64 8.49 13.47 7.34 12.8 7.34 z M 12.8 11.59 C 9.6 11.61 6.38 11.6 3.17 11.6 L 3.18 11.61 C 2.48 11.61 2.46 12.86 3.17 12.86 C 6.42 12.87 9.68 12.88 12.93 12.85 C 13.64 12.74 13.47 11.59 12.8 11.59 z'/%3E%3C/svg%3E") !important;
 @media -moz-pref("gwfox.fsi") {
   list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 3.5 3.94 C 3.5 3.7 3.67 3.5 3.87 3.5 h 8.26 c 0.2 0 0.37 0.2 0.37 0.44 0 0.25 -0.17 0.45 -0.37 0.45 H 3.87 C 3.67 4.39 3.5 4.19 3.5 3.94 Z m 0 3.56 C 3.5 7.25 3.67 7.06 3.87 7.06 h 8.26 c 0.2 0 0.37 0.19 0.37 0.44 0 0.25 -0.17 0.44 -0.37 0.44 H 3.87 C 3.67 7.94 3.5 7.75 3.5 7.5 Z m 0 3.56 c 0 -0.25 0.17 -0.44 0.37 -0.44 h 8.26 c 0.2 0 0.37 0.2 0.37 0.44 0 0.24 -0.17 0.44 -0.37 0.44 H 3.87 C 3.67 11.5 3.5 11.3 3.5 11.06 Z'/%3E%3C/svg%3E") !important;
+}
+& .toolbarbutton-icon {
+  fill: light-dark(#000, #fff);
 }
 }
 
