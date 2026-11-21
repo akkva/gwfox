@@ -8,11 +8,12 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 :root {
-  --bg0: #007aff;
+  --bg0: light-dark(#007aff, color-mix(in srgb, #007aff, transparent 25%));
   --bg1: light-dark(#f5f6f6, #383838);
   --bg2: light-dark(#fff, #454545);
   --bg3: light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1));
   --bg4: light-dark(rgba(255, 255, 255, 1), rgba(25, 25, 25, 1));
+  --bg5: light-dark(color-mix(in srgb, var(--bg0) 55%, #ccc), color-mix(in srgb, var(--bg0) 45%, #555));
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .28), 0 0 0 .5px rgba(0, 0, 0, .05);
   --bs2: 0 5px 15px rgba(0, 0, 0, .25), inset 0 0 0 .5px rgba(0, 0, 0, .78), 0 0 0 .5px rgba(0, 0, 0, .2);
   --br1: 6px;
@@ -21,6 +22,7 @@
   --bf1: none;
   --bf2: none;
   --pd1: 6px;
+  --sc: #fff;
   --bgcolor: light-dark(rgba(255, 255, 255, .4), rgba(170, 170, 170, .15));
   --bgcolor-hover: light-dark(rgba(255, 255, 255, .5), rgba(170, 170, 170, .2));
   --bgcolor-active: light-dark(rgba(255, 255, 255, .6), rgba(170, 170, 170, .3));
@@ -127,6 +129,8 @@
   --bgcolor-active: var(--button-active-bgcolor);
 }
 &:-moz-window-inactive {
+  --bg5: color-mix(in srgb, #777, transparent 75%);
+  --sc: #000;
   --toolbar-bgcolor: var(--toolbox-bgcolor-inactive) !important;
   --toolbar-background-color: var(--toolbox-background-color-inactive) !important;
 }
@@ -2699,6 +2703,14 @@ input[type="checkbox"] {
 }
 }
 
+::-moz-selection {
+  background-color: var(--bg5);
+  color: var(--sc);
+@media (prefers-color-scheme: dark) {
+  color: #fff;
+}
+}
+
 treechildren::-moz-tree-row {
   outline: none !important;
   border-radius: 2px !important;
@@ -3140,9 +3152,13 @@ toolbarbutton {
   box-shadow: none !important;
 }
 &[status=notfound] {
+  --bg5: rgba(255, 0, 0, .5);
   background-color: rgba(255, 0, 0, .1) !important;
 &:focus {
   outline-color: rgba(255, 0, 0, .5) !important;
+}
+&:-moz-window-inactive {
+  --bg5: rgba(255, 0, 0, .1);
 }
 }
 }
