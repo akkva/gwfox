@@ -495,14 +495,12 @@ split-view-footer {
 /* button */
 
 .toggle-button { --toggle-dot-background-color-on-pressed: #fff !important; }
+.private-browsing-indicator-with-label, .private-browsing-indicator-button,
 #blocked-permissions-container, #picture-in-picture-button,
-.private-browsing-indicator-with-label,
-.private-browsing-indicator-button,
-#reset-pbm-toolbar-button, .sharing-icon,
 #firefox-view-button, #wrapper-firefox-view-button,
 #mini-window-button, #wrapper-mini-window-button,
-#userContext-icons, #userContext-label,
-#wrapper-fxa-toolbar-menu-button {
+#wrapper-fxa-toolbar-menu-button, .sharing-icon,
+#userContext-icons, #userContext-label {
   display: none !important;
 }
 
