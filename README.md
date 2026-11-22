@@ -9,7 +9,7 @@
 ## Installation
 
 1. Move the theme files into your profile's `chrome` folder.
-2. Configure `about:config` with these preferences:
+2. Set the following preferences in `about:config`:
 
 | Preference | Value | Platform / Notes |
 | :--- | :--- | :--- |
@@ -25,7 +25,7 @@
 > [!IMPORTANT]
 > Required for East Asian (CJK) input: Enable "Address Bar: show results during IME composition" under `Settings` > `Firefox Labs`.
 
-3. Restart Firefox to apply changes.
+3. Restart Firefox.
 
 ---
 
