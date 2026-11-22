@@ -195,7 +195,7 @@
   border-start-start-radius: 6px !important;
 }
 @media -moz-pref("gwfox.urlbar") and -moz-pref("sidebar.verticalTabs") and (not -moz-pref("sidebar.visibility", "expand-on-hover")) {
-:root:not(:has(#sidebar-box:not([hidden])), :has(:is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
+:root:not(:has(.split-view-panel), :has(#sidebar-box:not([hidden])), :has(:is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
   border-start-start-radius: 0 !important;
 }
 }
@@ -326,7 +326,7 @@
   border-start-start-radius: 6px !important;
 }
 @media -moz-pref("gwfox.urlbar") and -moz-pref("sidebar.verticalTabs") and (not -moz-pref("sidebar.visibility", "expand-on-hover")) {
-:root:not(:has(#sidebar-box:not([hidden])), :has(:is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
+:root:not(:has(.split-view-panel), :has(#sidebar-box:not([hidden])), :has(:is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
   border-start-start-radius: 0 !important;
 }
 }
@@ -380,6 +380,7 @@
   border: none !important;
   background: none !important;
   margin-inline: 1.5px !important;
+  width: 4px !important;
   z-index: 9;
 @media (-moz-platform: windows) {
   margin-inline: .5px !important;
@@ -469,6 +470,10 @@ split-view-footer {
   anchor-name: --urlbar;
   margin-inline-start: 4px !important;
   margin-inline-end: auto !important;
+@media (max-width: 721px) {
+  margin-inline-start: auto !important;
+  min-width: 300px !important;
+}
 }
 
 #urlbar-container ~ :not(#urlbar-container ~ :not([hidden]) ~ *), #wrapper-urlbar-container ~ :not(#wrapper-urlbar-container ~ :not([hidden]) ~ *) {
@@ -1404,7 +1409,7 @@ tab-group > .tabbrowser-tab {
 .tab-stack {
   margin-inline: 1px !important;
 }
-&:not([movingtab]) .tabbrowser-tab[selected]:not([pinned]) {
+&:not([movingtab]) .tabbrowser-tab[selected]:not([pinned], tab-split-view-wrapper *) {
   position: sticky !important;
   left: 0;
   right: 0;
@@ -2567,9 +2572,9 @@ tree {
 }
 }
 }
-:root:not([mini-window]) @media (max-width: 721px) {
-@media not -moz-pref("sidebar.verticalTabs") {
-.tabbrowser-tab:not([selected], tab-split-view-wrapper *), tab-split-view-wrapper:not(:has(.tabbrowser-tab[selected])), .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #PlacesChevron, #sidebar-button, #alltabs-button, #widget-overflow-mainView *), tab-group > *:not(.tabbrowser-tab[selected]) {
+@media (max-width: 721px) and (not -moz-pref("sidebar.verticalTabs")) {
+:root:not([mini-window]) {
+.tabbrowser-tab, tab-split-view-wrapper, .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #PlacesChevron, #sidebar-button, #alltabs-button, #widget-overflow-mainView *), tab-group > *:not(.tabbrowser-tab[selected]) {
   display: none !important;
 }
 tab-group {
