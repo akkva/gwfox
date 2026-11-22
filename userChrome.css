@@ -2574,20 +2574,14 @@ tree {
 }
 @media (max-width: 721px) and (not -moz-pref("sidebar.verticalTabs")) {
 :root:not([mini-window]) {
-.tabbrowser-tab, tab-split-view-wrapper, .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #PlacesChevron, #sidebar-button, #alltabs-button, #widget-overflow-mainView *), tab-group > *:not(.tabbrowser-tab[selected]) {
+#tabbrowser-arrowscrollbox, #pinned-tabs-container {
   display: none !important;
 }
-tab-group {
-  --tab-group-color: transparent !important;
-&[hasactivetab] {
-  min-width: 100% !important;
+&:not([customizing]) .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #PanelUI-menu-button, #nav-bar-overflow-button, #unified-extensions-button, #PlacesChevron, #sidebar-button, #alltabs-button, #widget-overflow-mainView *) {
+  display: none !important;
 }
-}
-#scrollbutton-up, #scrollbutton-down {
-  visibility: collapse;
-}
-:root[customizing] #tabbrowser-tabs {
-  visibility: collapse;
+&[customizing] #urlbar-container {
+  display: none !important;
 }
 }
 }
