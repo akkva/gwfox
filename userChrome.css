@@ -13,7 +13,7 @@
   --bg2: light-dark(#fff, #454545);
   --bg3: light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1));
   --bg4: light-dark(rgba(255, 255, 255, 1), rgba(25, 25, 25, 1));
-  --bg5: light-dark(color-mix(in srgb, var(--bg0) 55%, #ccc), color-mix(in srgb, var(--bg0) 45%, #555));
+  --bg5: light-dark(color-mix(in srgb, var(--bg0) 25%, #fff), color-mix(in srgb, var(--bg0) 55%, #222));
   --bs1: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .28), 0 0 0 .5px rgba(0, 0, 0, .05);
   --bs2: 0 5px 15px rgba(0, 0, 0, .25), inset 0 0 0 .5px rgba(0, 0, 0, .78), 0 0 0 .5px rgba(0, 0, 0, .2);
   --br1: 6px;
@@ -22,7 +22,6 @@
   --bf1: none;
   --bf2: none;
   --pd1: 6px;
-  --sc: #fff;
   --bgcolor: light-dark(rgba(255, 255, 255, .4), rgba(170, 170, 170, .15));
   --bgcolor-hover: light-dark(rgba(255, 255, 255, .5), rgba(170, 170, 170, .2));
   --bgcolor-active: light-dark(rgba(255, 255, 255, .6), rgba(170, 170, 170, .3));
@@ -129,8 +128,7 @@
   --bgcolor-active: var(--button-active-bgcolor);
 }
 &:-moz-window-inactive {
-  --bg5: color-mix(in srgb, #777, transparent 75%);
-  --sc: #000;
+  --bg5: color-mix(in srgb, #aaa, transparent 75%);
   --toolbar-bgcolor: var(--toolbox-bgcolor-inactive) !important;
   --toolbar-background-color: var(--toolbox-background-color-inactive) !important;
 }
@@ -186,6 +184,20 @@
 #tabbrowser-tabbox {
 @media -moz-pref("gwfox.blur") {
   backdrop-filter: blur(0);
+}
+}
+}
+
+:root[inFullscreen] .browserContainer {
+@media -moz-pref("gwfox.noborder") and -moz-pref("sidebar.position_start") {
+  border-start-start-radius: var(--br2) !important;
+@media (-moz-platform: windows) {
+  border-start-start-radius: 6px !important;
+}
+@media -moz-pref("gwfox.urlbar") and -moz-pref("sidebar.verticalTabs") and (not -moz-pref("sidebar.visibility", "expand-on-hover")) {
+:root:not(:has(#sidebar-box:not([hidden])), :has(:is(#vertical-spacer, #PersonalToolbar):hover, :is(#PersonalToolbar .bookmark-item, #PersonalToolbar #PlacesChevron)[open]), :has(.toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #sidebar-button, #firefox-view-button, #tabs-newtab-button, #vertical-tabs-newtab-button):is(:hover, [open]))) & {
+  border-start-start-radius: 0 !important;
+}
 }
 }
 }
@@ -2705,10 +2717,6 @@ input[type="checkbox"] {
 
 ::-moz-selection {
   background-color: var(--bg5);
-  color: var(--sc);
-@media (prefers-color-scheme: dark) {
-  color: #fff;
-}
 }
 
 treechildren::-moz-tree-row {
@@ -5947,7 +5955,6 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
 .urlbarView-row & {
   color: light-dark(#3e3f40, #c4c4c5) !important;
 }
-
 .urlbarView-row:is([selected], [menu-trigger], [row-selectable]:not([selected]):hover) & {
   color: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
 }
@@ -5956,6 +5963,9 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
 .urlbarView-row:is([selected], [menu-trigger], [row-selectable]:not([selected]):hover) {
   color: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
   background-color: var(--urlbarView-hover-background) !important;
+.urlbarView-type-icon {
+  fill: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
+}
 }
 
 .urlbarView-row[has-action]:is([type="switchtab"], [type="remotetab"], [type="clipboard"]) {
@@ -5968,7 +5978,6 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
   background-color: var(--button-bgcolor) !important;
 }
 }
-
 > .urlbarView-row-inner:hover > .urlbarView-no-wrap > .urlbarView-action {
   color: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
 }
