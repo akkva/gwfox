@@ -23,7 +23,7 @@
 | `widget.macos.native-context-menus` | false | macOS |
 
 > [!IMPORTANT]
-> Required for East Asian (CJK) input: Enable "Address Bar: show results during IME composition" in `Settings` > `Firefox Labs`.
+> Required for East Asian (CJK) input: Enable "Address Bar: show results during IME composition" under `Settings` > `Firefox Labs`.
 
 3. Restart Firefox to apply changes.
 
@@ -37,29 +37,29 @@ Create these preferences in `about:config` to modify the UI:
 
 | Preference | Description | Notes |
 | :--- | :--- | :--- |
-| `gwfox.urlbar` | Move address bar to sidebar | Not for hover-expand mode |
-| `gwfox.toolbar` | Auto-hide bookmarks toolbar | |
-| `gwfox.urlbar.ac` | Auto-collapse address bar | For horizontal tabs |
-| `gwfox.blur` | Add acrylic effect to floating panel | |
-| `gwfox.ac` | Enable accent color | Edit `--bg0` in CSS to customize |
+| `gwfox.urlbar` | Move the address bar to the sidebar | Not for hover-expand mode |
+| `gwfox.toolbar` | Auto-hide the bookmarks toolbar | |
+| `gwfox.urlbar.ac` | Auto-collapse the address bar | For horizontal tabs |
+| `gwfox.blur` | Add an acrylic effect to floating panels | |
+| `gwfox.ac` | Apply the accent color to the menu | Customize via `--bg0` in CSS |
 | `gwfox.atbc` | [Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/) compatibility | |
 | `gwfox.newtab` | Enable New Tab transparency | Requires `allow_transparent_browser` |
-| `gwfox.noborder` | Remove main window borders | |
+| `gwfox.noborder` | Remove the main window borders | |
 | `gwfox.bms` | Enable main window transparency | Linux |
-| `gwfox.icons` | Add menu icons | |
-| `gwfox.mwc` | Enable macOS-style window controls  | Windows/Linux |
-| `gwfox.msc` | Enable macOS-style tab close button | |
+| `gwfox.icons` | Add icons to the menu | |
+| `gwfox.mwc` | Enable macOS-style window controls | Windows/Linux |
+| `gwfox.msc` | Enable a macOS-style tab close button | |
 | `gwfox.twc` | Enable theme-styled window controls | Windows/Linux |
 | `gwfox.twc.ac` | Auto-collapse window controls | |
 | `gwfox.fxa` | Replace app menu icon with avatar | Requires sign-in |
-| `gwfox.fsi` | Enable [FluentUI System Icons](https://github.com/microsoft/fluentui-system-icons) | |
+| `gwfox.fsi` | Enable [Fluent System Icons](https://github.com/microsoft/fluentui-system-icons) | |
 
 > [!NOTE]
-> When `gwfox.urlbar` is enabled, the collapsed sidebar expands in an Arc-like hover mode, which you can trigger from the left.
+> When `gwfox.urlbar` is enabled, the sidebar stays hidden while collapsed and expands into a full floating sidebar when hovering over the left edge, similar to Arc.
 
-### Numerical Setting
+### Numerical Settings
 
 | Preference | Description | Values |
 | :--- | :--- | :--- |
-| `gwfox.sidebar` | Set sidebar width | `1` (narrow), `3` (wide), or `otherwise` (default) |
-| `gwfox.container` | Set container tab indicator | `1` (line), `2` (15% fill), `3` (50% fill), `4` (75% fill), `5` (full fill), or `otherwise` (dot) |
+| `gwfox.sidebar` | Set the sidebar width | `1` (narrow), `3` (wide), or any other value (default) |
+| `gwfox.container` | Set the container tab indicator | `1` (line), `2` (15% fill), `3` (50% fill), `4` (75% fill), `5` (full fill), or any other value (dot, default) |
