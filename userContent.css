@@ -294,6 +294,10 @@ panel-list {
 }
 
 @-moz-document regexp(".*\\.pdf") {
+.popupMenu {
+  background: var(--bg4) !important;
+  backdrop-filter: var(--bf2) !important;
+}
 .editToolbar {
   --editor-toolbar-fg-color: light-dark(#000, #fff) !important;
 }
