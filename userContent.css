@@ -22,7 +22,6 @@
   --border-color-interactive: light-dark(rgba(0, 0, 0, .2), rgba(225, 225, 225, .2)) !important;
   --newtab-background-color-secondary: transparent !important;
   --background-color-overlay: transparent !important;
-  --background-color-box: transparent !important;
   --focus-outline-color: light-dark(color-mix(in srgb, var(--bg0) 55%, transparent), color-mix(in srgb, var(--bg0) 45%, #555)) !important;
   --in-content-focus-outline-color: var(--focus-outline-color) !important;
   --color-accent-primary: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
@@ -92,6 +91,7 @@ dialog {
   --button-background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .25)) !important;
   --button-background-color-hover: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .3)) !important;
   --button-background-color-active: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .2)) !important;
+  --background-color-box: transparent !important;
 }
 
 :root[dialogroot] {
