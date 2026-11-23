@@ -107,6 +107,10 @@ moz-segmented-control {
   border-radius: 12px !important;
 }
 
+moz-message-bar {
+  display: none !important;
+}
+
 button {
   --panel-item-button-border-radius: 6px !important;
 @media (-moz-platform: macos) and (not (-moz-mac-tahoe-theme)) {
