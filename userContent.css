@@ -517,7 +517,7 @@ dialog::backdrop {
   --button-secondary-hover-bg-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .3)) !important;
   --button-secondary-active-bg-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .2)) !important;
 }
-.commentPopup {
+.commentPopup, .divider {
   --divider-color: var(--border-color) !important;
 }
 }
