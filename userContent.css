@@ -479,6 +479,12 @@ dialog::backdrop {
   backdrop-filter: var(--bf2) !important;
 }
 }
+#editorCommentParamsToolbar {
+  margin-block-start: 3px !important;
+}
+#editorSignatureParamsToolbar, #editorHighlightParamsToolbar, #editorFreeTextParamsToolbar, #editorInkParamsToolbar, #editorStampParamsToolbar, #secondaryToolbar {
+  margin-block-start: 5px !important;
+}
 #toolbarContainer {
   background-color: transparent !important;
   box-shadow: none !important;
