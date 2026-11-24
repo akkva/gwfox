@@ -526,6 +526,21 @@ dialog::backdrop {
 .commentPopup, .divider {
   --divider-color: var(--border-color) !important;
 }
+#viewsManager {
+& #viewsManagerHeader {
+& #viewsManagerStatus {
+& #viewsManagerStatusAction {
+& #viewsManagerStatusActionLabelContainer > button {
+  background-color: #fff !important;
+  border-radius: 6px !important;
+&::before {
+  border-radius: 4px !important;
+}
+}
+}
+}
+}
+}
 input[type="checkbox"]:not(.reveal-password-checkbox) {
   appearance: none !important;
   background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
