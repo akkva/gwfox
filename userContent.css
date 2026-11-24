@@ -346,9 +346,15 @@ panel-list {
 &:not([disabled]) {
 &:hover {
   background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(255, 255, 255, .2)) !important;
+}
 }
 &[open], &:hover:active {
   background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(70, 70, 70, .15), rgba(255, 255, 255, .3)) !important;
+}
 }
 }
 &.labeled {
@@ -361,15 +367,24 @@ panel-list {
   background-color: transparent !important;
 &:hover {
   background-color: light-dark(rgba(70, 70, 70, .05), rgba(170, 170, 170, .1)) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(70, 70, 70, .05), rgba(255, 255, 255, .1)) !important;
+}
 }
 > select {
   background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(70, 70, 70, .15), rgba(255, 255, 255, .3)) !important;
+}
 }
 }
 .toolbarField {
   border-radius: 8px !important;
   border: none !important;
   background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(255, 255, 255, .2)) !important;
+}
 }
 #editorCommentsSidebar {
 & #editorCommentsSidebarListContainer {
@@ -377,6 +392,9 @@ panel-list {
 & .sidebarComment {
   background-color: light-dark(rgba(70, 70, 70, .05), rgba(170, 170, 170, .2)) !important;
   border-color: transparent !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(70, 70, 70, .05), rgba(255, 255, 255, .2)) !important;
+}
 }
 }
 }
@@ -384,9 +402,15 @@ panel-list {
 & #editorCommentsSidebarCloseButton {
 &:hover {
   background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(255, 255, 255, .2)) !important;
+}
 }
 &:active {
   background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(70, 70, 70, .15), rgba(255, 255, 255, .3)) !important;
+}
 }
 }
 }
@@ -395,7 +419,10 @@ panel-list {
 & .mainContainer {
 & textarea, & #addSignatureDescInput, & #addSignatureTypeContainer, & #addSignatureDrawContainer, & #addSignatureImageContainer {
   background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
-  border-color: transparent !important;      
+  border-color: transparent !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(255, 255, 255, .2)) !important;
+}
 }
 }
 }
@@ -405,8 +432,14 @@ panel-list {
 & > [role="tab"] {
   border: none !important;
   background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(255, 255, 255, .2)) !important;
+}
 &:hover {
   background-color: light-dark(rgba(70, 70, 70, .2), rgba(170, 170, 170, .3)) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(70, 70, 70, .2), rgba(255, 255, 255, .3)) !important;
+}
 }
 }
 }
@@ -420,9 +453,15 @@ panel-list {
   border-radius: 8px !important;
   background-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
   outline: none !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(70, 70, 70, .1), rgba(255, 255, 255, .2)) !important;
+}
 }
 &:active {
   background-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .3)) !important;
+@media (-moz-mac-tahoe-theme) {
+  background-color: light-dark(rgba(70, 70, 70, .15), rgba(255, 255, 255, .3)) !important;
+}
 }
 }
 }
@@ -469,6 +508,9 @@ dialog, .doorHangerRight, #viewsManager, #editorCommentsSidebar {
   border: none !important;
 @media (prefers-color-scheme: dark) {
   box-shadow: 0 5px 15px rgba(0, 0, 0, .35), inset 0 0 0 1px rgba(255, 255, 255, .15), 0 0 0 1px rgba(0, 0, 0, .8) !important;
+@media (-moz-mac-tahoe-theme) {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .35), inset 0 0 0 1px rgba(255, 255, 255, .15), 0 0 0 1px rgba(0, 0, 0, .5) !important;
+}
 }
 }
 dialog::backdrop {
@@ -522,6 +564,11 @@ dialog::backdrop {
   --button-secondary-bg-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .25)) !important;
   --button-secondary-hover-bg-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .3)) !important;
   --button-secondary-active-bg-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .2)) !important;
+@media (-moz-mac-tahoe-theme) {
+  --button-secondary-bg-color: light-dark(rgba(70, 70, 70, .12), rgba(255, 255, 255, .25)) !important;
+  --button-secondary-hover-bg-color: light-dark(rgba(70, 70, 70, .1), rgba(255, 255, 255, .3)) !important;
+  --button-secondary-active-bg-color: light-dark(rgba(70, 70, 70, .15), rgba(255, 255, 255, .2)) !important;
+}
 }
 .commentPopup, .divider {
   --divider-color: var(--border-color) !important;
@@ -540,6 +587,10 @@ dialog::backdrop {
 }
 }
 }
+}
+#addSignatureTypeInput::placeholder {
+  color: light-dark(#555, #fff) !important;
+  opacity: 0.4;
 }
 input[type="checkbox"]:not(.reveal-password-checkbox) {
   appearance: none !important;
