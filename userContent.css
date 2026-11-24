@@ -93,6 +93,7 @@ dialog {
   --button-background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .25)) !important;
   --button-background-color-hover: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .3)) !important;
   --button-background-color-active: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .2)) !important;
+  --button-background-color-primary-disabled: var(--focus-outline-color) !important;
   --background-color-box: transparent !important;
 }
 
@@ -159,6 +160,11 @@ menupopup {
 @media not (-moz-platform: linux) {
   appearance: menupopup !important;
 }
+}
+
+#textbox-contextmenu {
+  --panel-background-color: light-dark(#fff, #282828) !important;
+  border-radius: 8px !important;
 }
 
 ::-moz-selection {
