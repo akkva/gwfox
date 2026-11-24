@@ -520,9 +520,28 @@ dialog::backdrop {
 .commentPopup, .divider {
   --divider-color: var(--border-color) !important;
 }
+input[type="checkbox"]:not(.reveal-password-checkbox) {
+  appearance: none !important;
+  background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
+  border-radius: 4px !important;
+  border: none !important;
+  &:checked {
+  background-color: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
+  background-image: url("chrome://devtools/skin/images/check.svg") !important;
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-context-properties: fill, stroke;
+  fill: #fff;
+  stroke: #fff;
+  border: none !important;
+  &:hover { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #fff), color-mix(in srgb, var(--bg0) 80%, #666)) !important; }
+  &:hover:active { background-color: light-dark(color-mix(in srgb, var(--bg0) 90%, #000), color-mix(in srgb, var(--bg0) 80%, #000)) !important; }
+}
+}
 }
 
-@-moz-document url-prefix("about:"), regexp("chrome:\/\/(?!devtools).*"), regexp(".*\\.pdf.*") {
+@-moz-document url-prefix("about:"), regexp("chrome:\/\/(?!devtools).*") {
 input[type="search"] {
   background-color: light-dark(rgba(85, 85, 85, .1), rgba(190, 190, 190, .1)) !important;
   border-color: transparent !important;
