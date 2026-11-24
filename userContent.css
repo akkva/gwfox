@@ -299,7 +299,7 @@ panel-list {
 }
 }
 
-@-moz-document regexp(".*\\.pdf") {
+@-moz-document regexp(".*\\.pdf.*") {
 #viewerContainer {
   inset: 0 !important;
 .pdfViewer {
@@ -522,7 +522,7 @@ dialog::backdrop {
 }
 }
 
-@-moz-document url-prefix("about:"), regexp("chrome:\/\/(?!devtools).*"), regexp(".*\\.pdf") {
+@-moz-document url-prefix("about:"), regexp("chrome:\/\/(?!devtools).*"), regexp(".*\\.pdf.*") {
 input[type="search"] {
   background-color: light-dark(rgba(85, 85, 85, .1), rgba(190, 190, 190, .1)) !important;
   border-color: transparent !important;
