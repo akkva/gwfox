@@ -44,6 +44,7 @@
   --newtab-primary-action-background: var(--color-accent-primary) !important;
   --button-text-color-primary: #fff !important;
   --border-color: rgba(105, 105, 105, .2) !important;
+  --separator-color: rgba(105, 105, 105, .2) !important;
   --button-background-color-hover: var(--bg1) !important;
   --button-background-color-active: var(--bg2) !important;
   --button-border-color: transparent !important;
@@ -52,6 +53,7 @@
   --button-border-radius: 8px !important;
   --text-color: light-dark(#000, #fff) !important;
   --color-gray-05: #fff !important;
+  --toolbarbutton-icon-fill: light-dark(#000, #fff) !important;
 @media -moz-pref("gwfox.blur") {
   --bf2: blur(30px);
   --bg4: light-dark(rgba(255, 255, 255, .75), rgba(25, 25, 25, .75));
@@ -298,6 +300,12 @@ panel-list {
 }
 
 @-moz-document regexp(".*\\.pdf") {
+#viewerContainer {
+  inset: 0 !important;
+.pdfViewer {
+  margin-top: 32px !important;
+}
+}
 .popupMenu {
   background: var(--bg4) !important;
   backdrop-filter: var(--bf2) !important;
@@ -317,7 +325,7 @@ panel-list {
   --header-bg: transparent !important;
   border-radius: 8px !important;
 }
-#viewsManagerStatusActionButton, .popupMenu, .popupMenu > button {
+#viewsManagerStatusActionButton, #editorCommentsSidebar, .popupMenu, .popupMenu > button {
   border-radius: 8px !important;
 }
 .horizontalToolbarSeparator {
@@ -450,10 +458,6 @@ panel-list {
 .pdfViewer, #outerContainer {
   background-color: light-dark(#ccc, #191919) !important;
 }
-#viewsManager, #toolbarContainer {
-  background-color: light-dark(#fff, #282828) !important;
-  border: none !important;
-}
 #editorCommentsSidebar, #secondaryToolbar, .doorHangerRight, dialog, .commentPopup {
   background-color: light-dark(#fff, #282828) !important;
 @media -moz-pref("gwfox.blur") {
@@ -474,6 +478,47 @@ dialog::backdrop {
 @media -moz-pref("gwfox.blur") {
   backdrop-filter: var(--bf2) !important;
 }
+}
+#toolbarContainer {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+#toolbarViewerLeft {
+&::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: light-dark(#fff, #282828);
+  border-bottom: 1px solid light-dark(rgba(0, 0, 0, .1), rgba(255, 255, 255, .1));
+  pointer-events: none;
+@media -moz-pref("gwfox.blur") {
+  background-color: var(--bg4);
+  backdrop-filter: var(--bf2);
+}
+}
+}
+#outerContainer {
+&.viewsManagerOpen {
+& #viewsManager {
+  height: calc(100vh - 55px) !important;
+  background-color: light-dark(#fff, #282828) !important;
+@media -moz-pref("gwfox.blur") {
+  background-color: var(--bg4) !important;
+  backdrop-filter: var(--bf2) !important;
+}
+}
+}
+}
+.secondaryButton {
+  --button-secondary-bg-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .25)) !important;
+  --button-secondary-hover-bg-color: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .3)) !important;
+  --button-secondary-active-bg-color: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .2)) !important;
+}
+.commentPopup {
+  --divider-color: var(--border-color) !important;
 }
 }
 
