@@ -178,7 +178,7 @@
   margin-inline: calc(-1 * var(--urlbar-margin-inline)) !important;
   margin-top: 6px !important;
   padding: 8px !important;
-  border-radius: var(--br3) !important;
+  border-radius: var(--br2) !important;
   background-color: var(--bg4) !important;
   backdrop-filter: var(--bf2) !important;
   box-shadow: var(--bs1) !important;
@@ -186,6 +186,12 @@
   animation-duration: 180ms !important;
 @media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
   border-radius: var(--br3) !important;
+}
+@media (-moz-platform: linux) {
+@media not -moz-pref("gwfox.bms") {
+  background: var(--bg2) !important;
+  backdrop-filter: var(--bf1) !important;
+}
 }
 @media (prefers-color-scheme: dark) {
 @media not (-moz-platform: linux) {
@@ -896,6 +902,7 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
   background: var(--bg4) !important;
   backdrop-filter: var(--bf2) !important;
   box-shadow: var(--bs1) !important;
+  border-radius: var(--br2) !important;
 @media -moz-pref("gwfox.blur") {
   background-image: linear-gradient(to bottom, var(--bg4), transparent 60px) !important;
 }
