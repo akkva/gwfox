@@ -95,6 +95,7 @@ dialog {
   --button-background-color-active: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .2)) !important;
   --button-background-color-primary-disabled: var(--focus-outline-color) !important;
   --background-color-box: transparent !important;
+  --text-secondary-color: light-dark(#000, #fff) !important;
 }
 
 :root[dialogroot] {
@@ -245,6 +246,17 @@ panel-item {
 }
 }
 
+@keyframes panel-in {
+0% {
+  transform: translateY(-30px);
+  opacity: 0;
+}
+100% {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+
 @media (prefers-color-scheme: dark) {
 :root {
   --text-color-accent-primary-selected: #fff !important;
@@ -312,9 +324,16 @@ panel-list {
   margin-top: 32px !important;
 }
 }
+.newBadge {
+  display: none;
+}
 .popupMenu {
   background: var(--bg4) !important;
   backdrop-filter: var(--bf2) !important;
+@media (-moz-platform: linux) and (not -moz-pref("gwfox.bms")) {
+  background-color: light-dark(#fff, #36363a) !important;
+  backdrop-filter: var(--bf1) !important;
+}
 }
 .editToolbar {
   --editor-toolbar-fg-color: light-dark(#000, #fff) !important;
@@ -329,7 +348,22 @@ panel-list {
 }
 #viewsManager {
   --header-bg: transparent !important;
+  position: fixed !important;
+  inset-block: 47px 9px !important;
+  inset-inline: 6px auto !important;
+  height: auto !important;
   border-radius: 8px !important;
+  background-color: light-dark(#fff, #282828) !important;
+  animation: panel-in .35s !important;
+  transition: none !important;
+@media -moz-pref("gwfox.blur") {
+  background-color: var(--bg4) !important;
+  backdrop-filter: var(--bf2) !important;
+}
+@media (-moz-platform: linux) and (not -moz-pref("gwfox.bms")) {
+  background-color: light-dark(#fff, #36363a) !important;
+  backdrop-filter: var(--bf1) !important;
+}
 }
 #viewsManagerStatusActionButton, #editorCommentsSidebar, .popupMenu, .popupMenu > button {
   border-radius: 8px !important;
@@ -480,6 +514,10 @@ panel-list {
   background-color: var(--bg4) !important;
   backdrop-filter: var(--bf2) !important;
 }
+@media (-moz-platform: linux) and (not -moz-pref("gwfox.bms")) {
+  background-color: light-dark(#fff, #36363a) !important;
+  backdrop-filter: var(--bf1) !important;
+}
 &::before {
   background-color: light-dark(#555, #ddd) !important;
 }
@@ -498,18 +536,25 @@ panel-list {
   background-color: var(--bg4) !important;
   backdrop-filter: var(--bf2) !important;
 }
+@media (-moz-platform: linux) and (not -moz-pref("gwfox.bms")) {
+  background-color: light-dark(#fff, #36363a) !important;
+  backdrop-filter: var(--bf1) !important;
+}
 }
 }
 .pdfViewer, #outerContainer {
   background-color: light-dark(#ccc, #191919) !important;
 }
-#editorCommentsSidebar, #secondaryToolbar, .doorHangerRight, dialog, .commentPopup {
+#editorUndoBar, #editorCommentsSidebar, #secondaryToolbar, .doorHangerRight, dialog, .commentPopup {
   background-color: light-dark(#fff, #282828) !important;
 @media -moz-pref("gwfox.blur") {
   background-color: var(--bg4) !important;
 }
+@media (-moz-platform: linux) and (not -moz-pref("gwfox.bms")) {
+  background-color: light-dark(#fff, #36363a) !important;
 }
-dialog, .doorHangerRight, #viewsManager, #editorCommentsSidebar {
+}
+dialog, .doorHangerRight, #viewsManager, #editorCommentsSidebar, #editorUndoBar, .editToolbar {
   box-shadow: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .28), 0 0 0 .5px rgba(0, 0, 0, .05) !important;
   border: none !important;
 @media (prefers-color-scheme: dark) {
@@ -519,19 +564,27 @@ dialog, .doorHangerRight, #viewsManager, #editorCommentsSidebar {
 }
 }
 }
-dialog::backdrop {
+dialog {
+  animation: panel-grow .25s !important;
+&::backdrop {
   background-color: transparent !important;
 }
-#secondaryToolbar, #editorCommentsSidebar, #editorSignatureParamsToolbar, #editorHighlightParamsToolbar, #editorFreeTextParamsToolbar, #editorInkParamsToolbar, #editorStampParamsToolbar, dialog, .commentPopup {
+}
+#editorUndoBar, #secondaryToolbar, #editorCommentsSidebar, #editorSignatureParamsToolbar, #editorHighlightParamsToolbar, #editorFreeTextParamsToolbar, #editorInkParamsToolbar, #editorStampParamsToolbar, dialog, .commentPopup {
 @media -moz-pref("gwfox.blur") {
   backdrop-filter: var(--bf2) !important;
+}
+@media (-moz-platform: linux) and (not -moz-pref("gwfox.bms")) {
+  backdrop-filter: var(--bf1) !important;
 }
 }
 #editorCommentParamsToolbar {
   margin-block-start: 3px !important;
+  animation: panel-in .25s !important;
 }
 #editorSignatureParamsToolbar, #editorHighlightParamsToolbar, #editorFreeTextParamsToolbar, #editorInkParamsToolbar, #editorStampParamsToolbar, #secondaryToolbar {
   margin-block-start: 5px !important;
+  animation: panel-in .25s !important;
 }
 #toolbarContainer {
   background-color: transparent !important;
@@ -552,17 +605,9 @@ dialog::backdrop {
   background-color: var(--bg4);
   backdrop-filter: var(--bf2);
 }
-}
-}
-#outerContainer {
-&.viewsManagerOpen {
-& #viewsManager {
-  height: calc(100vh - 55px) !important;
-  background-color: light-dark(#fff, #282828) !important;
-@media -moz-pref("gwfox.blur") {
-  background-color: var(--bg4) !important;
-  backdrop-filter: var(--bf2) !important;
-}
+@media (-moz-platform: linux) and (not -moz-pref("gwfox.bms")) {
+  background-color: light-dark(#fff, #36363a) !important;
+  backdrop-filter: var(--bf1) !important;
 }
 }
 }
@@ -595,8 +640,13 @@ dialog::backdrop {
 }
 }
 #addSignatureTypeInput::placeholder {
-  color: light-dark(#555, #fff) !important;
   opacity: 0.4;
+}
+#editorUndoBar {
+  --message-bar-icon-color: var(--bg0) !important;
+#editorUndoBarUndoButton{
+  border: none !important;
+}
 }
 input[type="checkbox"]:not(.reveal-password-checkbox) {
   appearance: none !important;
