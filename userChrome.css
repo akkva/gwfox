@@ -164,27 +164,63 @@
 }
 
 :root[mini-window] {
-#urlbar-container:has(#urlbar[popover-open]) {
-  background: none;
-}
-#urlbar[popover-open] {
-  top: 12px !important;
-  margin-top: 0 !important;
-  width: 60vw !important;
-.urlbar-input-container {
-  margin-top: -12px !important;
-}
-.urlbarView {
-  margin-top: -8px !important;
-:root[uidensity="compact"] & {
-  margin-top: -7px !important;
-}
-}
-}
 #tabbrowser-tabbox {
 @media -moz-pref("gwfox.blur") {
   backdrop-filter: blur(0);
 }
+}
+.browserContainer {
+  border: none !important;
+  box-shadow: .5px .5px 2px #00000026 !important;
+}
+.urlbarView {
+  width: calc(var(--urlbar-width) + 2 * var(--urlbar-margin-inline)) !important;
+  margin-inline: calc(-1 * var(--urlbar-margin-inline)) !important;
+  margin-top: 6px !important;
+  padding: 8px !important;
+  border-radius: var(--br3) !important;
+  background-color: var(--bg4) !important;
+  backdrop-filter: var(--bf2) !important;
+  box-shadow: var(--bs1) !important;
+  animation-name: panel-in !important;
+  animation-duration: 180ms !important;
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: var(--br3) !important;
+}
+@media (prefers-color-scheme: dark) {
+@media not (-moz-platform: linux) {
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1.5px !important;
+  box-shadow: var(--bs2) !important;
+@media (-moz-platform: windows) {
+  outline: none !important;
+  box-shadow: 0 15px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(205, 205, 205, .15) !important;
+}
+}
+@media (-moz-platform: linux) {
+  border: 1px solid rgba(255, 255, 255, .06) !important;
+}
+}
+}
+.urlbarView-background {
+  display: none !important;
+}
+.urlbar-background {
+  inset: 0 !important;
+  clip-path: none !important;
+}
+#urlbar-container {
+  background: none;
+}
+.urlbar-input-container {
+  padding: 0 !important;
+  margin: 0 !important;
+#urlbar[popover-open] & {
+  margin-inline: 1px !important;
+}
+}
+#urlbar:not([focused], [open]) .urlbar-input {
+  text-align: center !important;
 }
 }
 
@@ -802,6 +838,9 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
   margin-top: 6.5px !important;
   border-radius: var(--br2);
   background: var(--bgcolor-hover);
+@media (-moz-platform: windows) {
+  margin-top: 7px !important;  
+}
 @media -moz-pref("gwfox.urlbar") and -moz-pref("sidebar.verticalTabs") and (not -moz-pref("sidebar.visibility", "expand-on-hover")) {
   max-height: 32px !important;
   min-height: 32px !important;
@@ -817,7 +856,7 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 #urlbar {
   -moz-window-dragging: no-drag;
   --urlbar-joint-background-shadow-margin: 150px;
-&[popover-open] {
+:root:not([mini-window]) &[popover-open] {
   position: fixed !important;
   top: 20vh !important;
   left: 50% !important;
@@ -830,8 +869,7 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
   animation: panel-grow 250ms ease-out;
   transform-origin: bottom center;
   z-index: 3;
-.urlbar-input,
-.urlbar-input::placeholder {
+.urlbar-input, .urlbar-input::placeholder {
   font-size: 21px !important;
 }
 .urlbar-input-container {
@@ -873,57 +911,18 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 @media (-moz-platform: windows) {
   box-shadow: 0 15px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17) !important;
 }
-}
-.urlbarView-results[wrap]
-> .urlbarView-row[has-url]:not([type="switchtab"], [type="remotetab"], [sponsored], [restyled-search])
-> .urlbarView-row-inner
-> .urlbarView-row-body
-> .urlbarView-row-body-top {
-  display: flex !important;
-> .urlbarView-row-body-top-no-wrap {
-  display: flex !important;
-  align-items: baseline !important;
-  flex: 1 1 calc(100% - var(--urlbarView-url-flex-basis)) !important;
-  min-width: 0 !important;
-  max-width: max-content !important;
+@media (prefers-color-scheme: dark) {
+@media not (-moz-platform: linux) {
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1.5px !important;
+  box-shadow: var(--bs2) !important;
+@media (-moz-platform: windows) {
+  outline: none !important;
+  box-shadow: 0 15px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(205, 205, 205, .15) !important;
 }
 }
-.urlbarView-row {
-  fill: light-dark(#000, #fff) !important;
-  border-radius: 10px !important;
-@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
-  border-radius: 12px !important;
-}
-@media -moz-pref("gwfox.ac") {
-&:is([selected], [menu-trigger], [row-selectable]:not([selected]):hover) {
-  fill: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
-}
-}
-}
-.urlbarView-row[has-url] .urlbarView-title-separator {
-  display: flex !important;
-}
-.urlbarView-action, .urlbarView-switchToTab-accessory {
-.urlbarView-row:is([type="switchtab"], [type="remotetab"], [type="clipboard"]) & {
-  border: none !important;
-  background-color: var(--button-bgcolor) !important;
-}
-}
-.urlbarView-button-result-menu {
-  background-color: var(--button-bgcolor) !important;
-  fill: light-dark(#000, #fff) !important;
-  border-radius: 50px !important;
-&:hover { background-color: var(--button-hover-bgcolor) !important; }
-&:active { background-color: var(--button-active-bgcolor) !important; }
-@media -moz-pref("gwfox.ac") {
-  fill: #fff !important;
-}
-}
-.urlbarView-press-tab-label, .urlbarView-title, .urlbarView-action {
-  color: light-dark(#000, #fff) !important;
-@media -moz-pref("gwfox.ac") {
-.urlbarView-row:is([selected], [menu-trigger], [row-selectable]:not([selected]):hover) & {
-  color: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
+@media (-moz-platform: linux) {
+  border: 1px solid rgba(255, 255, 255, .06) !important;
 }
 }
 }
@@ -957,6 +956,9 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
   padding-inline: 1px !important;
 }
 }
+}
+&:-moz-window-inactive {
+:not(.urlbar-background) { opacity: .78; }
 }
 &:has(#identity-box[pageproxystate="valid"].extensionPage) {
 .urlbar-page-action,
@@ -1071,9 +1073,6 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 }
 }
 }
-&:-moz-window-inactive {
-*:not(.urlbar-background) { opacity: .78; }
-}
 }
 
 .urlbar-background {
@@ -1096,7 +1095,7 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
   outline-offset: -1px !important;
   transition: outline-color .3s cubic-bezier(.8, 0, 0, .8), outline-width .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
-#urlbar[popover-open] & {
+:root:not([mini-window]) #urlbar[popover-open] & {
   background: var(--bg4) !important;
   backdrop-filter: var(--bf2) !important;
   box-shadow: var(--bs1) !important;
@@ -1111,6 +1110,20 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
 @media not -moz-pref("gwfox.bms") {
   background: var(--bg2) !important;
   backdrop-filter: var(--bf1) !important;
+}
+}
+@media (prefers-color-scheme: dark) {
+@media not (-moz-platform: linux) {
+  outline: 1px solid rgba(235, 235, 235, .2) !important;
+  outline-offset: -1.5px !important;
+  box-shadow: var(--bs2) !important;
+@media (-moz-platform: windows) {
+  outline: none !important;
+  box-shadow: 0 15px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(205, 205, 205, .15) !important;
+}
+}
+@media (-moz-platform: linux) {
+  border: 1px solid rgba(255, 255, 255, .06) !important;
 }
 }
 }
@@ -1172,6 +1185,76 @@ moz-button, #nav-bar .toolbarbutton-1, #TabsToolbar .toolbarbutton-1, #tabs-newt
   backdrop-filter: var(--bf2) !important;
   box-shadow: var(--bs1) !important;
   border: none !important;
+  border-radius: var(--br2) !important;
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: var(--br3) !important;
+}
+}
+
+.urlbarView-results[wrap]
+> .urlbarView-row[has-url]:not([type="switchtab"], [type="remotetab"], [sponsored], [restyled-search])
+> .urlbarView-row-inner
+> .urlbarView-row-body
+> .urlbarView-row-body-top {
+  display: flex !important;
+> .urlbarView-row-body-top-no-wrap {
+  display: flex !important;
+  align-items: baseline !important;
+  flex: 1 1 calc(100% - var(--urlbarView-url-flex-basis)) !important;
+  min-width: 0 !important;
+  max-width: max-content !important;
+}
+}
+
+.urlbarView-row {
+  fill: light-dark(#000, #fff) !important;
+  border-radius: 10px !important;
+@media (-moz-mac-tahoe-theme) or (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+  border-radius: 12px !important;
+}
+@media -moz-pref("gwfox.ac") {
+&:is([selected], [menu-trigger], [row-selectable]:not([selected]):hover) {
+  fill: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
+}
+}
+}
+
+.urlbarView-row[has-url] .urlbarView-title-separator {
+  display: flex !important;
+}
+
+.urlbarView-title-separator {
+  color: light-dark(#000, #fff) !important;
+.urlbarView-row:is([selected], [menu-trigger], [row-selectable]:not([selected]):hover) & {
+  color: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
+}
+}
+
+.urlbarView-action, .urlbarView-switchToTab-accessory {
+.urlbarView-row:is([type="switchtab"], [type="remotetab"], [type="clipboard"]) & {
+  border: none !important;
+  background-color: var(--button-bgcolor) !important;
+}
+}
+
+.urlbarView-button-result-menu {
+  background-color: var(--button-bgcolor) !important;
+  fill: light-dark(#000, #fff) !important;
+  border-radius: 50px !important;
+&:hover { background-color: var(--button-hover-bgcolor) !important; }
+&:active { background-color: var(--button-active-bgcolor) !important; }
+@media -moz-pref("gwfox.ac") {
+  fill: #fff !important;
+}
+}
+
+.urlbarView-press-tab-label, .urlbarView-title, .urlbarView-action {
+  color: light-dark(#000, #fff) !important;
+@media -moz-pref("gwfox.ac") {
+.urlbarView-row:is([selected], [menu-trigger], [row-selectable]:not([selected]):hover) & {
+  color: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
+}
+}
 }
 
 .searchmode-switcher {
@@ -2299,6 +2382,11 @@ panel-list {
   100% { transform: scale(1); }
 }
 
+@keyframes panel-in {
+  0% { transform: translateY(-30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
 @keyframes slide-in {
   0%, 30% { translate: 100%; opacity: 0; }
   100% { translate: 0; opacity: 1; }
@@ -2835,24 +2923,13 @@ panel#feature-callout,
 
 @media (prefers-color-scheme: dark) {
 @media not (-moz-platform: linux) {
-#urlbar[popover-open] .urlbar-background,
-#urlbar[popover-open] .urlbarView-background,
 .dialogBox, .findbar-container, .urlbarView-result-menu {
   outline: 1px solid rgba(235, 235, 235, .2) !important;
   outline-offset: -1.5px !important;
   box-shadow: var(--bs2) !important;
 }
-@media (-moz-platform: windows) {
-#urlbar[popover-open] .urlbarView-background {
-  outline: none !important;
-  box-shadow: 0 15px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(205, 205, 205, .15) !important;
 }
-}
-}
-
 @media (-moz-platform: linux) {
-#urlbar[popover-open] .urlbar-background,
-#urlbar[popover-open] .urlbarView-background,
 .dialogBox, .findbar-container, .urlbarView-result-menu {
   border: 1px solid rgba(255, 255, 255, .06) !important;
 }
@@ -2871,7 +2948,6 @@ panel#feature-callout,
 }
 }
 }
-
 #identity-box:hover {
   background: rgba(170, 170, 170, .5) !important;
 }
