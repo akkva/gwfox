@@ -132,7 +132,7 @@ button {
 }
 }
 
-.button-background:not([type="primary"], [type="icon ghost"], [type="destructive"], [type="ghost"]) {
+.button-background:not([type="primary"], [type="icon ghost"], [type="destructive"], [type="ghost"], [type="muted"]) {
   background-color: var(--bg1) !important;
 button:hover > & {
   background-color: var(--bg2) !important;
