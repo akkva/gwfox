@@ -6071,6 +6071,9 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
 &:hover {
   color: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
   background-color: var(--urlbarView-hover-background) !important;
+img {
+  fill: light-dark(color-mix(in srgb, var(--bg0) 20%, #fff), color-mix(in srgb, var(--bg0) 40%, #fff)) !important;
+}
 }
 &[data-action^="tabgroup-"] {
   color: light-dark(#3e3f40, #c4c4c5) !important;
