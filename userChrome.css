@@ -1501,9 +1501,9 @@ tab-split-view-wrapper[hasactivetab] {
 }
 }
 }
-}
-tab-group > .tabbrowser-tab {
+.tabbrowser-tab {
   transition: max-width .25s, min-width .25s !important;
+}
 }
 .tab-stack {
   margin-inline: 1px !important;
@@ -1513,6 +1513,7 @@ tab-group > .tabbrowser-tab {
   left: 0;
   right: 0;
   z-index: 9;
+  min-width: 225px !important;
 @media -moz-pref("gwfox.achromatic") {
   position: unset !important;
 @media -moz-pref("gwfox.atbc") {
@@ -2228,15 +2229,11 @@ tab-split-view-wrapper & {
   background-position: right center;
   background-repeat: no-repeat;
 }
-tab-group[collapsed] & {
+tab-group[collapsed] &, tab-group:has(.tabbrowser-tab:first-of-type:is(:hover, [selected])) & {
 &::after {
   content: none;
 }
 }
-}
-
-tab-group:has(.tabbrowser-tab:first-of-type:is(:hover, [selected])) .tab-group-label::after {
-  content: none;
 }
 
 tab-group[label="​"] .tab-group-label {
@@ -4415,7 +4412,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 &:has(#PersonalToolbar:not([collapsed])) #tabbrowser-tabbox {
   margin-top: -28px !important;
 }
-&:has(#PersonalToolbar:not([collapsed])):has(#PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open], #PersonalToolbar #PlacesChevron[open], #TabsToolbar:hover):not(:has(:is(.tabbrowser-tab, #alltabs-button, #new-tab-button, #tabs-newtab-button, .tab-group-label, .titlebar-buttonbox-container):hover)) #tabbrowser-tabbox {
+&:has(#PersonalToolbar:not([collapsed])):has(#PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open], #PersonalToolbar #PlacesChevron[open], #TabsToolbar:hover):not(:has(:is(.tabbrowser-tab, #alltabs-button, #new-tab-button, #tabs-newtab-button, tab-group, .titlebar-buttonbox-container):hover)) #tabbrowser-tabbox {
   margin-top: 0 !important;
   transition: margin-top .25s .25s;
 .browserStack {
@@ -4504,7 +4501,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 }
 @media not -moz-pref("sidebar.verticalTabs") {
-:root:has(#TabsToolbar:hover, #PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open]):not(:has(:is(.tabbrowser-tab, #alltabs-button, #new-tab-button, #tabs-newtab-button, .tab-group-label):hover)) & {
+:root:has(#TabsToolbar:hover, #PersonalToolbar:hover, #PersonalToolbar .bookmark-item[open]):not(:has(:is(.tabbrowser-tab, #alltabs-button, #new-tab-button, #tabs-newtab-button, tab-group):hover)) & {
   opacity: 1;
   transition: opacity .15s .25s !important;
 }
@@ -5931,7 +5928,7 @@ tab-split-view-wrapper & {
   transition: opacity .15s .25s !important;
 }
 @media not -moz-pref("sidebar.verticalTabs") {
-:root:is(:has(#tabbrowser-tabs[movingtab]), :has(#TabsToolbar:hover):not(:has(:is(.tabbrowser-tab, #alltabs-button, #new-tab-button, #tabs-newtab-button, .tab-group-label, .titlebar-buttonbox-container):hover))) & {
+:root:is(:has(#tabbrowser-tabs[movingtab]), :has(#TabsToolbar:hover):not(:has(:is(.tabbrowser-tab, #alltabs-button, #new-tab-button, #tabs-newtab-button, tab-group, .titlebar-buttonbox-container):hover))) & {
   opacity: 1;
   transition: opacity .15s .25s !important;
 }
