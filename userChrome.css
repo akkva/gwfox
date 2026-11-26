@@ -122,7 +122,7 @@
   --bg1: light-dark(rgba(245, 245, 246, .76), rgba(40, 40, 44, .76));
 }
 }
-@media -moz-pref("gwfox.atbc") {
+@media -moz-pref("gwfox.atbc") or -moz-pref("gwfox.achromatic") {
   --bgcolor: var(--button-bgcolor);
   --bgcolor-hover: var(--button-hover-bgcolor);
   --bgcolor-active: var(--button-active-bgcolor);
@@ -134,6 +134,9 @@
 }
 &:is([theme-in-app], :not([lwtheme])) {
   --chrome-content-separator-color: light-dark(#a2c1f2, #0f2837) !important;
+@media -moz-pref("gwfox.atbc") or -moz-pref("gwfox.achromatic") {
+  --chrome-content-separator-color: transparent !important;
+}
 }
 }
 
@@ -1510,9 +1513,21 @@ tab-group > .tabbrowser-tab {
   left: 0;
   right: 0;
   z-index: 9;
+@media -moz-pref("gwfox.achromatic") {
+  position: unset !important;
+@media -moz-pref("gwfox.atbc") {
+  position: sticky !important;
+}
+}
 }
 .tabbrowser-tab:not(tab-split-view-wrapper *)[selected] .tab-background {
   backdrop-filter: blur(10px);
+@media -moz-pref("gwfox.achromatic") {
+  backdrop-filter: none;
+@media -moz-pref("gwfox.atbc") {
+  backdrop-filter: blur(10px);
+}
+}
 }
 }
 &[orient="vertical"] {
@@ -1622,7 +1637,7 @@ tab-group > .tabbrowser-tab,
 @media (prefers-color-scheme: dark) {
   box-shadow: 0 0 5px rgba(255, 255, 255, .05), 1px 1px 1px -1px rgba(255, 255, 255, .1), -1px -.5px 1px -.5px rgba(255, 255, 255, .1) !important;
 }
-@media -moz-pref("gwfox.atbc") {
+@media -moz-pref("gwfox.atbc") or -moz-pref("gwfox.achromatic") {
   background: var(--button-active-bgcolor) !important;
   box-shadow: none !important;
 }
@@ -2087,7 +2102,7 @@ tab-group[collapsed] & {
 @media (prefers-color-scheme: dark) {
   box-shadow: 0 0 5px rgba(255, 255, 255, .05), 1px 1px 1px -1px rgba(255, 255, 255, .1), -1px -.5px 1px -.5px rgba(255, 255, 255, .1) !important;
 }
-@media -moz-pref("gwfox.atbc") {
+@media -moz-pref("gwfox.atbc") or -moz-pref("gwfox.achromatic") {
   background: var(--button-active-bgcolor) !important;
   box-shadow: none !important;
 }
