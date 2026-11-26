@@ -37,12 +37,13 @@ Create these preferences in `about:config` to modify the UI:
 
 | Preference | Description | Notes |
 | :--- | :--- | :--- |
+| `gwfox.achromatic` | Disable main window gradient in default theme | |
 | `gwfox.urlbar` | Move the address bar to the sidebar | Not for hover-expand mode |
 | `gwfox.toolbar` | Auto-hide the bookmarks toolbar | |
 | `gwfox.urlbar.ac` | Auto-collapse the address bar | For horizontal tabs |
 | `gwfox.blur` | Add an acrylic effect to floating panels | |
 | `gwfox.ac` | Apply the accent color to the menu | Customize via `--bg0` in CSS |
-| `gwfox.atbc` | [Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/) compatibility | |
+| `gwfox.atbc` | Enable [Adaptive Tab Bar Colour](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/) compatibility | |
 | `gwfox.newtab` | Enable New Tab transparency | Requires `allow_transparent_browser` |
 | `gwfox.noborder` | Remove the main window borders | |
 | `gwfox.bms` | Enable main window transparency | Linux |
