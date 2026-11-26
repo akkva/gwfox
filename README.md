@@ -41,9 +41,9 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.toolbar` | Auto-hide the bookmarks toolbar | |
 | `gwfox.urlbar.ac` | Auto-collapse the address bar | Horizontal tabs only |
 | `gwfox.blur` | Add an acrylic effect to floating panels | |
-| `gwfox.ac` | Apply the accent color to the menu | Customize the accent color via `--bg0` in CSS |
+| `gwfox.ac` | Apply the accent color to the menu | Customize via `--bg0` in CSS |
 | `gwfox.atbc` | Enable [ATBC](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/) compatibility | |
-| `gwfox.newtab` | Enable transparency on the New Tab page | Requires `allow_transparent_browser` |
+| `gwfox.newtab` | Make the New Tab transparent | Requires `allow_transparent_browser` |
 | `gwfox.noborder` | Remove the main window border | |
 | `gwfox.bms` | Enable transparency for the main window | Linux only |
 | `gwfox.icons` | Add icons to the menu | |
@@ -51,7 +51,7 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.msc` | Enable a macOS-style tab close button | |
 | `gwfox.twc` | Enable theme-styled window controls | Windows/Linux |
 | `gwfox.twc.ac` | Auto-collapse window controls | |
-| `gwfox.fxa` | Use the user's avatar for the app menu icon | Requires sign-in |
+| `gwfox.fxa` | Use the avatar as the app menu icon | Requires sign-in |
 | `gwfox.fsi` | Enable [Fluent System Icons](https://github.com/microsoft/fluentui-system-icons) | |
 | `gwfox.achromatic` | Disable the main window gradient | Default theme only |
 
