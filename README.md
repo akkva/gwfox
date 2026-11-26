@@ -53,7 +53,7 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.twc.ac` | Auto-collapse window controls | |
 | `gwfox.fxa` | Use the avatar as the app menu icon | Requires sign-in |
 | `gwfox.fsi` | Enable [Fluent System Icons](https://github.com/microsoft/fluentui-system-icons) | |
-| `gwfox.achromatic` | Disable the main window gradient | Default theme only |
+| `gwfox.achromatic` | Disable the main window tint | Default theme only |
 
 > [!NOTE]
 > When `gwfox.urlbar` is enabled, the sidebar stays hidden while collapsed and expands into a full floating sidebar when hovering over the left edge, similar to Arc.
