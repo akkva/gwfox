@@ -40,11 +40,11 @@ Create these preferences in `about:config` to modify the UI:
 | `gwfox.urlbar` | Move the address bar to the sidebar | Not available in hover-expand mode |
 | `gwfox.toolbar` | Auto-hide the bookmarks toolbar | |
 | `gwfox.urlbar.ac` | Auto-collapse the address bar | Horizontal tabs only |
-| `gwfox.blur` | Add an acrylic effect to floating panels | |
+| `gwfox.blur` | Apply an acrylic effect to floating panels | |
 | `gwfox.ac` | Apply the accent color to the menu | Customize via `--bg0` in CSS |
 | `gwfox.atbc` | Enable [ATBC](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/) compatibility | |
 | `gwfox.newtab` | Make the New Tab transparent | Requires `allow_transparent_browser` |
-| `gwfox.noborder` | Remove the main window border | |
+| `gwfox.noborder` | Disable the main window border | |
 | `gwfox.bms` | Enable transparency for the main window | Linux only |
 | `gwfox.icons` | Add icons to the menu | |
 | `gwfox.mwc` | Enable macOS-style window controls | Windows/Linux |
