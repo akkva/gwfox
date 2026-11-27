@@ -42,6 +42,7 @@
   --brand-color-accent-hover: var(--color-accent-primary-hover) !important;
   --brand-color-accent-active: var(--color-accent-primary-active) !important;
   --newtab-primary-action-background: var(--color-accent-primary) !important;
+  --button-background-color-primary-disabled: var(--focus-outline-color) !important;
   --button-text-color-primary: #fff !important;
   --border-color: rgba(105, 105, 105, .2) !important;
   --separator-color: rgba(105, 105, 105, .2) !important;
@@ -93,7 +94,6 @@ dialog {
   --button-background-color: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .25)) !important;
   --button-background-color-hover: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .3)) !important;
   --button-background-color-active: light-dark(rgba(70, 70, 70, .15), rgba(170, 170, 170, .2)) !important;
-  --button-background-color-primary-disabled: var(--focus-outline-color) !important;
   --background-color-box: transparent !important;
   --text-secondary-color: light-dark(#000, #fff) !important;
 }
