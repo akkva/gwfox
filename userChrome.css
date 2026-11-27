@@ -5249,6 +5249,7 @@ tab-group {
 tab-split-view-wrapper {
   margin-inline-start: 8px !important;
   width: 205px !important;
+  height: 32px;
 @media -moz-pref("gwfox.sidebar", 1) {
   width: 155px !important;
 }
@@ -5267,6 +5268,16 @@ tab-split-view-wrapper {
 .tab-close-button {
 @media not -moz-pref("gwfox.msc") {
   display: none !important;
+}
+}
+&:not([hasactivetab]) {
+  height: 32px;
+  transition: height .25s !important;
+[collapsed] & {
+  display: block !important;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 }
 }
