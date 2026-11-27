@@ -54,6 +54,7 @@
   --focus-outline-color: light-dark(color-mix(in srgb, var(--bg0) 55%, transparent), color-mix(in srgb, var(--bg0) 45%, #555)) !important;
   --in-content-box-background: light-dark(rgba(155, 155, 155, .2), rgba(195, 195, 195, .2)) !important;
   --background-color-box: light-dark(rgba(155, 155, 155, .2), rgba(195, 195, 195, .2)) !important;
+  --button-background-color-primary-disabled: var(--focus-outline-color) !important;
   --in-content-box-border-color: transparent !important;
   --sidebar-background-color: transparent !important;
   --sidebar-box-border: transparent !important;
@@ -1460,16 +1461,8 @@ tab-group {
   border-radius: var(--br2) !important;
   background-color: color-mix(in srgb, var(--tab-group-color) 20%, transparent) !important;
   outline: .5px solid color-mix(in srgb, var(--tab-group-color) 30%, transparent) !important;
-&[collapsed]:not([hasactivetab]) {
-  background-color: transparent !important;
-  outline: none !important;
-&:hover {
-  background-color: color-mix(in srgb, var(--tab-group-color) 20%, transparent) !important;
-  outline: .5px solid color-mix(in srgb, var(--tab-group-color) 30%, transparent) !important;
 #tabbrowser-tabs[movingtab] & {
   outline: none !important;
-}
-}
 }
 }
 &[orient="horizontal"] {
@@ -1576,15 +1569,25 @@ tab-split-view-wrapper {
 }
 }
 }
-tab-group > .tabbrowser-tab {
+&:not([movingtab]) tab-group {
+> .tabbrowser-tab {
   max-height: 42px;
   transition: max-height .25s !important;
 [collapsed] & {
 &:not([selected], [busy]) {
   display: block !important;
-  padding-block: 0 !important;
   max-height: 0;
-  transition: all .25s !important;
+}
+}
+}
+> tab-split-view-wrapper:not([hasactivetab]) {
+  height: 70px;
+  transition: height .25s !important;
+[collapsed] & {
+  display: block !important;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 }
 }
@@ -2236,8 +2239,8 @@ tab-group[collapsed] &, tab-group:has(.tabbrowser-tab:first-of-type:is(:hover, [
 }
 }
 
-tab-group[label="​"] .tab-group-label {
-  padding-left: 23px !important;
+tab-group[collapsed][label="​"]:not([hasactivetab]) {
+  width: 36px !important;
 }
 
 .tab-group-label-container {
