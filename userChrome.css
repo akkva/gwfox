@@ -4443,7 +4443,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 }
 }
-&:has(#tabbrowser-tabs[movingtab]):has(#PersonalToolbar:not([collapsed])) #tabbrowser-tabbox {
+&:has(#tabbrowser-tabs[movingtab]):has(#PersonalToolbar:not([collapsed])):not(:has(tab-split-view-wrapper)) #tabbrowser-tabbox {
   margin-top: 0 !important;
 .browserStack {
   margin-top: -28px;
