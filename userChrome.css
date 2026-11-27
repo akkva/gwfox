@@ -1469,6 +1469,12 @@ tab-group {
   display: flex !important;
   height: 32px !important;
   margin: 6px 3.5px 0 3.5px !important;
+.tabbrowser-tab:not([selected], :hover) + tab-split-view-wrapper:not([hasactivetab], :hover) .tabbrowser-tab:first-child {
+  background-image: linear-gradient(to bottom, var(--toolbarbutton-icon-fill) 0%, var(--toolbarbutton-icon-fill) 100%);
+  background-size: 1px 30%;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
 .tabbrowser-tab {
   margin-top: -6px !important;
 }
