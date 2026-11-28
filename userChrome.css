@@ -115,6 +115,9 @@
   --bs1: 0 45px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(0, 0, 0, .17);
   --bs2: 0 45px 65px rgba(0, 0, 0, .45), 0 0 0 1px rgba(205, 205, 205, .15);
 }
+@media (-moz-gtk-theme-family: breeze) {
+  --pd1: 4px;
+}
 @media (-moz-platform: linux) {
   --bg1: light-dark(#f5f6f6, #28282c);
   --bg2: light-dark(#fff, #36363a);
@@ -358,7 +361,7 @@
   outline: none !important;
   border-radius: var(--br2) !important;
   box-shadow: .5px .5px 3px #00000026 !important;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   border-radius: 6px !important;
 }
 }
@@ -368,7 +371,7 @@
 @media -moz-pref("sidebar.position_start") {
   border-start-start-radius: var(--br2) !important;
   transition: border-start-start-radius .25s .25s;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   border-start-start-radius: 6px !important;
 }
 @media -moz-pref("gwfox.urlbar") and -moz-pref("sidebar.verticalTabs") and (not -moz-pref("sidebar.visibility", "expand-on-hover")) {
@@ -379,7 +382,7 @@
 :root:has(.split-view-panel) & {
 [column="0"] &, [column="1"] & {
   border-radius: var(--br2) !important;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   border-radius: 6px !important;
 }
 }
@@ -428,7 +431,7 @@
   margin-inline: 1.5px !important;
   width: 4px !important;
   z-index: 9;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-inline: .5px !important;
 }
 }
@@ -1575,8 +1578,8 @@ tab-split-view-wrapper {
 &:not([movingtab]) tab-group {
 > .tabbrowser-tab {
   max-height: 42px;
-  transition: max-height .25s !important;
-[collapsed] & {
+  transition: max-height .25s;
+tab-group[collapsed] & {
 &:not([selected], [busy]) {
   display: block !important;
   max-height: 0;
@@ -1585,9 +1588,9 @@ tab-split-view-wrapper {
 }
 > tab-split-view-wrapper:not([hasactivetab]) {
   height: 70px;
-  transition: height .25s !important;
-[collapsed] & {
-  display: block !important;
+  transition: height .25s;
+tab-group[collapsed] & {
+  display: flex !important;
   height: 0;
   opacity: 0;
   pointer-events: none;
@@ -4004,7 +4007,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
   box-shadow: none !important;
   background-color: var(--bgcolor-hover) !important;
   border-radius: 0 0 var(--br2) var(--br2) !important;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   border-radius: 0 0 6px 6px !important;
 }
 @media -moz-pref("gwfox.noborder") {
@@ -4050,7 +4053,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
   border-radius: var(--br2) var(--br2) 0 0 !important;
   margin-block: -11px !important;
   padding-block: 10px !important;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-block: -12px !important;
   border-radius: 6px 6px 0 0 !important;
 }
@@ -4078,7 +4081,7 @@ img[src="chrome://global/skin/icons/more.svg"] {
 }
 @media not -moz-pref("gwfox.noborder") {
   margin-block-end: 6px !important;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-block-end: 4px !important;
 }
 }
@@ -4251,12 +4254,12 @@ img[src="chrome://global/skin/icons/more.svg"] {
   margin-top: -28px !important;
 @media -moz-pref("gwfox.urlbar") {
   margin-top: -39px !important;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -41px !important;
 }
 @media -moz-pref("gwfox.noborder") {
   margin-top: -45px !important;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -47px !important;
 }
 }
@@ -4272,12 +4275,12 @@ img[src="chrome://global/skin/icons/more.svg"] {
   transition: margin-top .25s .25s;
 @media -moz-pref("gwfox.urlbar") {
   margin-top: -39px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -41px;
 }
 @media -moz-pref("gwfox.noborder") {
   margin-top: -45px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -47px;
 }
 }
@@ -4292,12 +4295,12 @@ img[src="chrome://global/skin/icons/more.svg"] {
   margin-top: 0 !important;
 .browserStack {
   margin-top: -39px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -41px;
 }
 @media -moz-pref("gwfox.noborder") {
   margin-top: -45px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -47px;
 }
 }
@@ -4328,12 +4331,12 @@ img[src="chrome://global/skin/icons/more.svg"] {
   margin-top: -28px;
 @media -moz-pref("gwfox.urlbar") {
   margin-top: -39px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -41px;
 }
 @media -moz-pref("gwfox.noborder") {
   margin-top: -45px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -47px;
 }
 }
@@ -4352,12 +4355,12 @@ img[src="chrome://global/skin/icons/more.svg"] {
 &:has(#PersonalToolbar[collapsed]) #tabbrowser-tabbox {
 @media -moz-pref("gwfox.urlbar") {
   margin-top: -39px !important;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -41px !important;
 }
 @media -moz-pref("gwfox.noborder") {
   margin-top: -45px !important;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -47px !important;
 }
 }
@@ -4373,13 +4376,13 @@ img[src="chrome://global/skin/icons/more.svg"] {
 .browserStack {
 @media -moz-pref("gwfox.urlbar") {
   margin-top: -39px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -41px;
 }
 }
 @media -moz-pref("gwfox.noborder") {
   margin-top: -45px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -47px;
 }
 }
@@ -4392,13 +4395,13 @@ img[src="chrome://global/skin/icons/more.svg"] {
 .browserStack {
 @media -moz-pref("gwfox.urlbar") {
   margin-top: -39px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -41px;
 }
 }
 @media -moz-pref("gwfox.noborder") {
   margin-top: -45px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   margin-top: -47px;
 }
 }
@@ -4741,7 +4744,7 @@ sidebar-main {
 @media (-moz-mac-tahoe-theme) {
   top: 23.5px !important;
 }
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   left: calc(var(--buttonbox-left) + (348px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 &::after {
@@ -4761,7 +4764,7 @@ sidebar-main {
 @media not (-moz-platform: macos) {
 @media -moz-pref("gwfox.mwc") {
   top: 8px !important;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   top: 6px !important;
 }
 }
@@ -4989,35 +4992,35 @@ sidebar-main {
 #sidebar-button {
   position: fixed !important;
   top: 8px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   top: 6px;
 }
 }
 
 #sidebar-button {
   left: calc(var(--sidebar-btn-left) + (423px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   left: calc(var(--sidebar-btn-left) + (421px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 }
 
 #back-button {
   left: calc(var(--back-btn-left) + (481px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   left: calc(var(--back-btn-left) + (479px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 }
 
 #forward-button {
   left: calc(var(--forward-btn-left) + (515px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   left: calc(var(--forward-btn-left) + (513px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 }
 
 #reload-button, #stop-button {
   left: calc(var(--reload-btns-left) + (549px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   left: calc(var(--reload-btns-left) + (547px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 }
@@ -5029,35 +5032,35 @@ sidebar-main {
   position: fixed !important;
   bottom: 14px;
   scale: .9;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   bottom: 12px;
 }
 }
 
 #PanelUI-menu-button {
   left: calc(var(--menu-btn-left) + (397px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   left: calc(var(--menu-btn-left) + (395px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 }
 
 #nav-bar-overflow-button {
   left: calc(var(--overflow-btn-left) + (435px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   left: calc(var(--overflow-btn-left) + (433px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 }
 
 #unified-extensions-button {
   left: calc(var(--ext-btn-left) + (472px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   left: calc(var(--ext-btn-left) + (470px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 }
 
 #downloads-button {
   left: calc(var(--dl-btn-left) + (509px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   left: calc(var(--dl-btn-left) + (507px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
 }
 }
@@ -5255,7 +5258,7 @@ tab-group {
 tab-split-view-wrapper {
   margin-inline-start: 8px !important;
   width: 205px !important;
-  height: 32px;
+  max-height: 32px !important;
 @media -moz-pref("gwfox.sidebar", 1) {
   width: 155px !important;
 }
@@ -5264,26 +5267,10 @@ tab-split-view-wrapper {
 }
 .tabbrowser-tab {
   margin-inline-start: -8px !important;
-@media (-moz-platform: linux) {
-  margin-inline-start: 0 !important;
-}
-.tab-content {
-  width: 75% !important;
-}
 }
 .tab-close-button {
 @media not -moz-pref("gwfox.msc") {
-  display: none !important;
-}
-}
-&:not([hasactivetab]) {
-  height: 32px;
-  transition: height .25s !important;
-[collapsed] & {
-  display: block !important;
-  height: 0;
-  opacity: 0;
-  pointer-events: none;
+  margin-inline-end: 5px !important;
 }
 }
 }
@@ -5488,7 +5475,7 @@ tab-split-view-wrapper & {
 #urlbar:not([open]) {
   top: 55px !important;
   left: calc(var(--urlbar-left) + (360px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1))) !important;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   left: calc(var(--urlbar-left) + (358px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1))) !important;
 }
 }
@@ -5539,11 +5526,15 @@ tab-split-view-wrapper & {
 :root:has(.titlebar-buttonbox-container:hover) & {
   transition: left cubic-bezier(.27, 1.182, .57, .982) .35s 0s;
 }
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   border-radius: 6px !important;
   height: calc(100% - 9px) !important;
   top: 5px;
   left: calc(var(--sidebar-left) + (349px * var(--urlbar-flash-show, 0) * var(--hover-lock, 1)));
+}
+@media (-moz-gtk-theme-family: breeze) {
+  top: 4px;
+  height: calc(100% - 8px) !important;
 }
 @media (-moz-platform: linux) {
 @media not -moz-pref("gwfox.bms") {
@@ -5615,7 +5606,7 @@ tab-split-view-wrapper & {
   --hover-lock: 0;
 .titlebar-buttonbox-container {
   --buttonbox-left: 5px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   --buttonbox-left: 3px;
 }
 @media not (-moz-platform: macos) {
@@ -5627,7 +5618,7 @@ tab-split-view-wrapper & {
 @media -moz-pref("gwfox.sidebar", 3) {
   --buttonbox-left: 198px;
 }
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   --buttonbox-left: 166px;
 @media -moz-pref("gwfox.sidebar", 1) {
   --buttonbox-left: 116px;
@@ -5642,13 +5633,13 @@ tab-split-view-wrapper & {
 
 #reload-button, #stop-button, #back-button, #forward-button, #sidebar-button {
   --nav-btns-left: 78px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   --nav-btns-left: 76px;
 }
 @media not (-moz-platform: macos) {
 @media not -moz-pref("gwfox.mwc") {
   --nav-btns-left: 6px;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   --nav-btns-left: 4px;
 }
 }
@@ -5668,7 +5659,7 @@ tab-split-view-wrapper & {
   --back-btn-left: 65px;
 @media -moz-pref("gwfox.sidebar", 1) { --back-btn-left: 50px; }
 @media -moz-pref("gwfox.sidebar", 3) { --back-btn-left: 95px; }
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   --back-btn-left: 63px;
 @media -moz-pref("gwfox.sidebar", 1) { --back-btn-left: 48px; }
 @media -moz-pref("gwfox.sidebar", 3) { --back-btn-left: 93px; }
@@ -5686,7 +5677,7 @@ tab-split-view-wrapper & {
   --forward-btn-left: 98px;
 @media -moz-pref("gwfox.sidebar", 1) { --forward-btn-left: 83px; }
 @media -moz-pref("gwfox.sidebar", 3) { --forward-btn-left: 128px; }
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   --forward-btn-left: 96px;
 @media -moz-pref("gwfox.sidebar", 1) { --forward-btn-left: 81px; }
 @media -moz-pref("gwfox.sidebar", 3) { --forward-btn-left: 126px; }
@@ -5704,7 +5695,7 @@ tab-split-view-wrapper & {
   --reload-btns-left: 131px;
 @media -moz-pref("gwfox.sidebar", 1) { --reload-btns-left: -343px; }
 @media -moz-pref("gwfox.sidebar", 3) { --reload-btns-left: 161px; }
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   --reload-btns-left: 129px;
 @media -moz-pref("gwfox.sidebar", 1) { --reload-btns-left: -341px; }
 @media -moz-pref("gwfox.sidebar", 3) { --reload-btns-left: 159px; }
@@ -5717,7 +5708,7 @@ tab-split-view-wrapper & {
   --bottom-btns-left: 52px;
 @media -moz-pref("gwfox.sidebar", 1) { --bottom-btns-left: 28px; }
 @media -moz-pref("gwfox.sidebar", 3) { --bottom-btns-left: 67px; }
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   --bottom-btns-left: 50px;
 @media -moz-pref("gwfox.sidebar", 1) { --bottom-btns-left: 26px; }
 @media -moz-pref("gwfox.sidebar", 3) { --bottom-btns-left: 65px; }
@@ -5746,7 +5737,7 @@ tab-split-view-wrapper & {
 
 #urlbar:not([open]) {
   --urlbar-left: 15px !important;
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows) or (-moz-gtk-theme-family: breeze) {
   --urlbar-left: 13px !important;
 }
 }
