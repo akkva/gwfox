@@ -1787,6 +1787,11 @@ tab-split-view-wrapper & {
 :root[sidebar-expand-on-hover] & {
   display: none !important;
 }
+@media -moz-pref("gwfox.urlbar") and -moz-pref("gwfox.msc") {
+:root[sidebar-expand-on-hover] & {
+  display: flex !important;
+}
+}
 }
 }
 
